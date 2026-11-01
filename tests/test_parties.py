@@ -52,6 +52,85 @@ class PartyOffersTests(unittest.TestCase):
     def test_changed_source_hash_fails(self):
         self.fails(lambda d: d['sources'][0].update(sha256='0' * 64))
 
+    def extracted_text(self, mutate=lambda text, source: text):
+        """Simulate another Poppler version without changing retained evidence."""
+        sources = {s['file']: s for s in self.original['sources']}
+        def run(command, **kwargs):
+            source = sources[Path(command[-2]).name]
+            self.assertEqual('-raw' in command, source.get('text_mode') == 'raw')
+            text = (ROOT / 'sources' / source['text_file']).read_text(encoding='utf-8')
+            Path(command[-1]).write_text(mutate(text, source), encoding='utf-8')
+        return patch.object(parties.subprocess, 'run', side_effect=run)
+
+    def test_extraction_layout_can_differ_without_rewriting_provenance(self):
+        # Observed Poppler 24 vs 26 differences include dot-leader spacing,
+        # line breaks and merged words elsewhere in the document. Only quoted
+        # evidence must match, on the same page, in both independent readings.
+        def layout(text, source):
+            pages = text.split('\f')
+            pages[0] += '\nDifferent extraction layout on the cover\n'
+            return '\f'.join(pages).replace(' ', '  ').replace('\n', '\n\n')
+        before = {s[key]: (ROOT / 'sources' / s[key]).read_bytes()
+                  for s in self.original['sources'] for key in ('file', 'text_file')}
+        with self.extracted_text(layout):
+            self.assertEqual(parties.validate(ROOT), self.original)
+        for name, raw in before.items():
+            self.assertEqual((ROOT / 'sources' / name).read_bytes(), raw)
+
+    def test_quote_must_be_in_fresh_pdf_extraction(self):
+        p = self.original['parties'][0]
+        def remove_quote(text, source):
+            pages = text.split('\f')
+            if source['id'] == p['source_id']:
+                pages[p['pdf_page']-1] = 'No supporting words on this page.'
+            return '\f'.join(pages)
+        with self.extracted_text(remove_quote):
+            with self.assertRaisesRegex(AssertionError, 'cited PDF page'):
+                parties.validate(ROOT)
+
+    def test_fresh_pdf_quote_on_another_page_is_not_evidence(self):
+        p = self.original['parties'][0]
+        def move_page(text, source):
+            if source['id'] != p['source_id']:
+                return text
+            pages = text.split('\f')
+            pages[0], pages[p['pdf_page']-1] = pages[p['pdf_page']-1], pages[0]
+            return '\f'.join(pages)
+        with self.extracted_text(move_page):
+            with self.assertRaisesRegex(AssertionError, 'cited PDF page'):
+                parties.validate(ROOT)
+
+    def test_quote_must_still_be_in_retained_transcript(self):
+        d = copy.deepcopy(self.original)
+        d['parties'][0]['excerpt'] = 'A fabricated manifesto promise.'
+        p = d['parties'][0]
+        def insert_quote(text, source):
+            pages = text.split('\f')
+            if source['id'] == p['source_id']:
+                pages[p['pdf_page']-1] += p['excerpt']
+            return '\f'.join(pages)
+        with self.extracted_text(insert_quote), patch.object(parties, 'load', return_value=d):
+            with self.assertRaisesRegex(AssertionError, 'cited retained text page'):
+                parties.validate(ROOT)
+
+    def test_invalid_page_numbers_fail_closed(self):
+        with self.extracted_text():
+            for page in (0, -1, 10000, True, '17'):
+                with self.subTest(page=page):
+                    self.fails(lambda d: d['parties'][0].update(pdf_page=page))
+
+    def test_raw_pdf_and_transcript_byte_changes_fail_hash_check(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            shutil.copytree(ROOT / 'sources', root / 'sources')
+            for key in ('file', 'text_file'):
+                path = root / 'sources' / self.original['sources'][0][key]
+                raw = path.read_bytes()
+                path.write_bytes(raw + b'\n')  # Even cosmetic retained-byte drift fails.
+                with self.subTest(key=key), self.assertRaisesRegex(AssertionError, 'Source hash changed'):
+                    parties.validate(root)
+                path.write_bytes(raw)
+
     def test_unequal_missing_evidence_fails(self):
         self.fails(lambda d: d['parties'][0].update(costing='Zero'))
 
