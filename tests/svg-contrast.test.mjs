@@ -24,6 +24,8 @@ test('SVG measurement passes solid dark text and fails low contrast, overlap and
     await render('black');
     await page.locator('text').evaluate(node => { node.style.stroke = 'white'; node.style.strokeWidth = '8px'; node.style.paintOrder = 'fill stroke'; });
     await assert.rejects(checkSVGContrast(page, []), /unsupported text stroke/);
+    await render('black', '<path d="M54 50.00H312" stroke="#394b55" stroke-width="60"/><circle cx="100" cy="50" r="10" fill="#394b55"/>');
+    await assert.rejects(checkSVGContrast(page, []), /unsupported SVG path/);
     await render('black', '<path d="M10 20H200" stroke="white"/>');
     await assert.rejects(checkSVGContrast(page, []), /unsupported SVG path/);
     await page.setContent('<body style="background:white"><svg><path d="M10 20H200" stroke="white"/></svg></body>');

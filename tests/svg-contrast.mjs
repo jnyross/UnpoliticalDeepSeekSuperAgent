@@ -41,8 +41,14 @@ export async function checkSVGContrast(page, incomplete) {
     // Only the generator's horizontal tick grid is exempt from data-mark contrast.
     // New paths must not silently escape measurement as decorative geometry.
     const paths = [...svg.querySelectorAll('path')];
-    if (paths.length > 3 || paths.some(path => !/^M54 -?\d+\.\d{2}H312$/.test(path.getAttribute('d') || '')
-      || !['rgb(57, 75, 85)', 'rgb(181, 185, 188)'].includes(getComputedStyle(path).stroke))) supported.push('unsupported SVG path');
+    if (paths.length > 3 || paths.some(path => {
+      const paint = getComputedStyle(path);
+      return !/^M54 -?\d+\.\d{2}H312$/.test(path.getAttribute('d') || '')
+        || !['rgb(57, 75, 85)', 'rgb(181, 185, 188)'].includes(paint.stroke)
+        || paint.strokeWidth !== '1px' || paint.transform !== 'none' || paint.filter !== 'none'
+        || paint.opacity !== '1' || paint.strokeOpacity !== '1' || paint.strokeDasharray !== 'none'
+        || paint.markerStart !== 'none' || paint.markerMid !== 'none' || paint.markerEnd !== 'none';
+    })) supported.push('unsupported SVG path');
     if (Number(node instanceof SVGPolylineElement ? style.strokeOpacity : style.fillOpacity) !== 1) supported.push('transparent foreground');
     return { text: node.textContent, kind: node.tagName, foreground: node instanceof SVGPolylineElement ? style.stroke : style.fill, background, supported };
   }));
