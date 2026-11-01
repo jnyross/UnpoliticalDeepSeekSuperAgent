@@ -22,10 +22,16 @@ jobs:
           cache: npm
       - name: Install build dependencies
         run: python -m pip install -r requirements.txt
+      - name: Test release discovery fixtures
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validate workflow configuration
+        run: |
+          go install github.com/rhysd/actionlint/cmd/actionlint@v1.7.7
+          "$(go env GOPATH)/bin/actionlint"
       - name: Verify generated output
         run: python scripts/build.py --check
       - name: Check source data and site
-        run: python scripts/check.py --self-test && python scripts/check_history.py --self-test && python scripts/check.py
+        run: python scripts/check.py --self-test && python scripts/check_history.py --self-test && python -m unittest discover -s tests -p 'test_*.py' && python scripts/check.py
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Browser, no-JavaScript, size, overflow and WCAG checks

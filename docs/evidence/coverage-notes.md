@@ -2,10 +2,10 @@
 
 ## Before
 
-Baseline revision: `e640d8ea5d966b0cdd54580b7f9e8140fed18810`.
-The actual static application at this revision was served locally by the existing
-Playwright capture harness. Its home-page bytes also matched production at
-https://unpoliticaldeepseeksuperagent.vercel.app/ before changes.
+Baseline revision: `3d2a973` (the complete SHA is in the baseline capture report).
+After integrating concurrent upstream work, the actual static application from
+that revision was served locally by the existing Playwright capture harness.
+This baseline includes the upstream ten-year answers but has no full history page.
 
 - [Before, mobile](coverage-before-index-html-mobile.png)
 - [Before, desktop](coverage-before-index-html-desktop.png)

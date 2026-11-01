@@ -1,0 +1,68 @@
+{
+  "source": {
+    "file": "trends.xlsx",
+    "url": "https://assets.publishing.service.gov.uk/media/6a574aac822fbe6b8245c955/July_PSS_2026_Chapter_4.xlsx",
+    "sha256": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c",
+    "publication": "Public spending statistics: July 2026",
+    "published": "2026-07-16",
+    "date": "2026-07-29",
+    "downloaded": "2026-11-01",
+    "release_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2026"
+  },
+  "points": [
+    {
+      "year": "2015-16",
+      "status": "outturn",
+      "health_real": {
+        "value": 192.1,
+        "sheet": "4_3",
+        "cell": "N20",
+        "row": "7. Health",
+        "unit": "GBP billion, 2025-26 prices",
+        "scope": "Public sector expenditure on services: health",
+        "geography": "United Kingdom"
+      },
+      "tme_gdp": {
+        "value": 40.8,
+        "sheet": "4_4",
+        "cell": "N27",
+        "row": "Total Managed Expenditure(8)",
+        "unit": "percent of GDP",
+        "scope": "Total Managed Expenditure, excluding temporary effects of public-sector banks",
+        "geography": "United Kingdom"
+      }
+    },
+    {
+      "year": "2025-26",
+      "status": "outturn",
+      "health_real": {
+        "value": 257.5,
+        "sheet": "4_3",
+        "cell": "X20",
+        "row": "7. Health",
+        "unit": "GBP billion, 2025-26 prices",
+        "scope": "Public sector expenditure on services: health",
+        "geography": "United Kingdom"
+      },
+      "tme_gdp": {
+        "value": 44.3,
+        "sheet": "4_4",
+        "cell": "X27",
+        "row": "Total Managed Expenditure(8)",
+        "unit": "percent of GDP",
+        "scope": "Total Managed Expenditure, excluding temporary effects of public-sector banks",
+        "geography": "United Kingdom"
+      }
+    }
+  ],
+  "health_change": 65.4,
+  "health_percent": 34.0447683498178,
+  "gdp_change": 3.5,
+  "formulas": {
+    "health_change": "latest health_real - baseline health_real",
+    "health_percent": "(latest health_real / baseline health_real - 1) * 100",
+    "gdp_change": "latest tme_gdp - baseline tme_gdp"
+  },
+  "deflator": "(1) Real terms figures are  the nominal figures adjusted  to 2025-26 price levels using GDP deflators from the Office for National Statistics (released 30 June 2026).",
+  "gdp_vintage": "(1) GDP for all years are consistent with the latest figures from the Office for National Statistics (published 30 June 2026)."
+}

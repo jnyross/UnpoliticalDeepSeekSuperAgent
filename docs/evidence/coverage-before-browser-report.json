@@ -1,13 +1,13 @@
 {
-  "capturedAt": "2026-11-01T22:08:21.038Z",
-  "revision": "e640d8ea5d966b0cdd54580b7f9e8140fed18810",
+  "capturedAt": "2026-11-01T22:21:43.112Z",
+  "revision": "3d2a973bf1f99053a024f90738b7c2380030bedd",
   "mode": "baseline-capture-only",
   "browser": "Chromium",
   "pages": [
     {
       "path": "index.html",
-      "bytes": 11393,
-      "sha256": "72db0de6730d574dc07bdfd9eb715aed79cb3729883d29e7fa37aff3b0db3295",
+      "bytes": 14986,
+      "sha256": "fe3d0b4b7588e0f8e0672835843988d7952ece4cce9ff602daae199de2341b2d",
       "viewports": [
         {
           "viewport": {
