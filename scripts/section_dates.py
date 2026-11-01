@@ -19,7 +19,11 @@ def annotate(files, root, spending, comparison):
     esc = html.escape
 
     def note(source_ids, period, manifests, family=None):
-        dates = '; '.join(f"{s.get('publication', 'Source')}: published {s.get('published', s.get('date', 'not supplied'))}, source updated {s.get('date', 'not supplied')}" for s in manifests)
+        dates = '; '.join(
+            (f"{s.get('publication', 'Source')}: snapshot as of {s['as_of']}; publication/update dates not supplied"
+             if 'as_of' in s else
+             f"{s.get('publication', 'Source')}: published {s.get('published', 'not supplied')}, source updated {s.get('date', 'not supplied')}")
+            for s in manifests)
         if family:
             e = calendar['entries'][family]
             next_date = e['next_release']

@@ -36,6 +36,8 @@ class SectionDatesTests(unittest.TestCase):
             for header in headers:
                 self.assertIn(header+'<div class="section-dates">', page, name)
         self.assertEqual(pages['parties.html'].count('2024 election manifesto'), 13)
+        self.assertNotIn('published 2024-07-09', pages['parties.html'])
+        self.assertIn('snapshot as of 2024-07-09; publication/update dates not supplied', pages['parties.html'])
         self.assertIn('Data period: 2015-16 to 2025-26', pages['index.html'])
         for view in ('cash', 'real', 'gdp'):
             self.assertNotIn('Data period: 2003-04 to 2025-26; fixed TME', pages[f'history-{view}.html'])
