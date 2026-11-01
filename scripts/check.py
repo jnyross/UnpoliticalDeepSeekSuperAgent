@@ -295,13 +295,18 @@ def validate(root):
     pages = sorted((root / "site").rglob("*.html"))
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
     for path in pages:
-        page_manifest = (json.loads((root / 'sources/history-manifest.json').read_text())
-                         if path.name in ('history.html', 'history-cash.html', 'history-real.html', 'history-gdp.html') else manifest)
+        page_manifest = manifest
+        if path.name == 'parties.html':
+            page_manifest = json.loads((root / 'sources/party-offers.json').read_text())['roster']
+        elif path.name in ('history.html', 'history-cash.html', 'history-real.html', 'history-gdp.html'):
+            page_manifest = json.loads((root / 'sources/history-manifest.json').read_text())
         page = validate_page(path, page_manifest, banned)
         if path == root / "site/index.html":
             validate_published_data(page, data)
     from check_comparisons import validate as validate_comparisons
     validate_comparisons(root)
+    from parties import validate as validate_parties
+    validate_parties(root)
     print(f"PASS: source hash; independent raw values, labels, locators, year and status; "
           f"reconciliation and cross-table checks; {len(pages)} static pages; banned words")
 

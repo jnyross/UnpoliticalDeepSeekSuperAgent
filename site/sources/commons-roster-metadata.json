@@ -1,0 +1,12 @@
+{
+  "file": "commons-roster-2024-07-09.json",
+  "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+  "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+  "as_of": "2024-07-09",
+  "date": "2024-07-09",
+  "downloaded": "2026-11-01",
+  "publication": "State of the parties (Commons)",
+  "publisher": "UK Parliament",
+  "scope": "House of Commons; parties with at least one MP, plus independent MPs and Speaker",
+  "locator": "items[].value.party and items[].value.total"
+}

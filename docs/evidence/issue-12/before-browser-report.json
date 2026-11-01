@@ -1,0 +1,135 @@
+{
+  "capturedAt": "2026-11-01T22:36:25.403Z",
+  "revision": "bdfef04edcaf6c39788fea1168721b2ca995b832",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "path": "history-cash.html",
+      "bytes": 121182,
+      "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-history-cash-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-history-cash-html-desktop.png",
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "history-gdp.html",
+      "bytes": 120398,
+      "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-history-gdp-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-history-gdp-html-desktop.png",
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "history-real.html",
+      "bytes": 122337,
+      "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-history-real-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-history-real-html-desktop.png",
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "history.html",
+      "bytes": 120316,
+      "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-history-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-history-html-desktop.png",
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "index.html",
+      "bytes": 15098,
+      "sha256": "2d2a1f7b5e99a688b09011ddff0dcee6aee6603d91b73c924ae52c8cfec78a73",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-index-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-index-html-desktop.png",
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

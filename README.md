@@ -4,14 +4,18 @@ A static, source-linked page showing UK spending by area and ten-year answers on
 real health spending and Total Managed Expenditure as a share of GDP. It uses 2025-26, the latest
 full year in HM Treasury's **Public spending statistics: July 2026**. The table labels
 this year **outturn**, not forecast. This foundation is not the full product and does
-not claim rubric levels. A separate history page now shows spending overall and by area
-from the retained PESA historical tables. Tax, borrowing, debt stocks and party plans remain
-future work. See [product specification](docs/product-spec.md),
+not claim rubric levels. A separate history page shows spending overall and by area
+from the retained PESA historical tables. Tax, borrowing and debt stocks remain future work.
+The party page adds a historical 2024 election-offer snapshot, using the Commons roster
+dated 9 July 2024; it is not a current roster or a record of implemented policy.
+See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
 ## Setup
 
-Python 3.11+ and Node.js 22+ are required for the complete checks:
+Python 3.11+, Node.js 22+ and Poppler's `pdftotext` are required for the complete checks
+(`sudo apt-get install poppler-utils` on Debian/Ubuntu). PDF text is re-extracted to
+verify each retained party quote against its source document:
 
 ```sh
 python3 -m venv .venv
@@ -63,9 +67,11 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 Do not paste a token into shell history; Actions supplies `github.token`. The job needs
 only `contents: read` for checkout and `issues: write` to list/create update issues.
 It needs no repository write, pull-request, deployment or external secret permissions.
-The checked-in [inventory](config/release-sources.json) covers HMT Public Spending Statistics (both latest spending and trend attachments)
-and PESA functional history. PESA's year-dependent attachment title uses an anchored
-`attachment_title_pattern`; exact-title sources retain `attachment_title` matching. The official GOV.UK collection discovers
+The checked-in [inventory](config/release-sources.json) covers HMT Public Spending
+Statistics, PESA functional history, the historical Commons roster and all retained
+party manifestos (see the limited party-discovery scope below). PESA's year-dependent
+attachment title uses an anchored `attachment_title_pattern`; exact-title sources
+retain `attachment_title` matching. The official GOV.UK collection discovers
 new publication slugs, not just changes to the retained URL. The retained release is
 also checked for date revisions and changed workbook bytes (SHA-256), even at an
 unchanged attachment URL. Only releases published on or after the retained publication
@@ -116,6 +122,40 @@ manual keyboard, screen-reader or user-test evidence. CI runs these checks on ev
 Serve `site/` with any static HTTP server (for example `python3 -m http.server 8000
 --directory site`). There is no client-side JavaScript. Vercel serves the committed
 `site/` directory unchanged, with no build step; see [configuration](vercel.json).
+
+## Party-offer snapshot
+
+`parties.html` covers every party with an MP in Parliament's **9 July 2024**
+Commons roster, in alphabetical order, with one selected qualitative fiscal offer
+from its 2024 election manifesto. This is historical, not today's roster or plans.
+Independent MPs and the Speaker are identified separately, not treated as parties.
+The page publishes shared field limits and distinguishes party claims from independent
+assessment. Costings and independent assessments not supplied in this dataset are
+explicitly unavailable, not zero or a claim that none exist elsewhere. It does not
+claim full costed-plan coverage or any people-based rubric level.
+
+The open JSON contains the summary, exact supporting excerpt, PDF page, source URL,
+download date and hash. Some party-issued documents are retained from the British
+Manifesto Archive where party hosting was unavailable; hosting is labelled per source.
+Party documents retain their own copyright and are not claimed to be OGL licensed.
+The retained PDF is reopened with `pdftotext` during validation rather than trusting
+only an editable transcript.
+
+The same refresh command above checks all retained party/roster URLs. A changed
+manifesto stops the staged build for evidence review rather than silently updating a
+curated claim. Review a changed document, update its hash, transcript and supported
+excerpt in `sources/party-offers.json`, then rerun the full checks; do not just accept
+a new hash. Adding a new election or roster date is an explicit dataset update.
+Scheduled party discovery detects revisions at these retained URLs only: it does not
+find new manifesto URLs, new elections or changes to today's roster. It must not be
+read as proof of current party-policy coverage or complete release discovery.
+
+Browser checks can also run against the deployed site, comparing returned HTML hashes
+with local output before no-JavaScript, mobile and axe checks:
+
+```sh
+LIVE_URL=https://unpoliticaldeepseeksuperagent.vercel.app EVIDENCE_DIR=/tmp/live-evidence npm run test:browser
+```
 
 ## Data and methods
 
