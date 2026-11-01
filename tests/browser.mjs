@@ -37,7 +37,7 @@ const server = createServer(async (request, response) => {
   }
 });
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-const baseURL = `http://127.0.0.1:${server.address().port}`;
+const baseURL = process.env.LIVE_URL || `http://127.0.0.1:${server.address().port}`;
 const report = {
   capturedAt: new Date().toISOString(),
   ...(process.env.EVIDENCE_REVISION
@@ -64,14 +64,33 @@ try {
       page.on('pageerror', error => errors.push(error.message));
       const response = await page.goto(`${baseURL}/${relative}`, { waitUntil: 'networkidle' });
       assert.equal(response.status(), 200);
+      if (process.env.LIVE_URL) assert.equal(createHash('sha256').update(await response.body()).digest('hex'), pageReport.sha256, `${relative}: deployed HTML differs from tested local output`);
       const screenshot = `${label}-${relative.replace(/[^a-z0-9-]/gi, '-')}-${viewport.name}.png`;
       await page.screenshot({ path: path.join(output, screenshot), fullPage: true });
+      await page.screenshot({ path: path.join(output, screenshot.replace('.png', '-viewport.png')), fullPage: false });
       const result = { viewport, screenshot, states: [] };
       pageReport.viewports.push(result);
       const content = await page.locator('main').textContent();
       if (!captureOnly) {
         assert.ok(content.trim().length > 100, `${relative}: substantive core content`);
+        if (relative === 'parties.html') {
+          const offers = JSON.parse(await readFile(path.join(root, 'data/party-offers.json'), 'utf8'));
+          const cards = page.locator('.party-offer');
+          assert.equal(await cards.count(), offers.parties.length, 'Every roster party has one template');
+          await cards.first().screenshot({ path: path.join(output, `${label}-party-template-${viewport.name}.png`) });
+          const fields = await cards.evaluateAll(nodes => nodes.map(node => [...node.querySelectorAll('dt')].map(dt => dt.textContent.trim())));
+          assert.ok(fields[0].length >= 8, 'Party template records scope, baseline, year, status and evidence');
+          fields.forEach(field => assert.deepEqual(field, fields[0], 'Identical fields and order for every party'));
+        }
         assert.deepEqual(errors, [], `${relative}: browser errors`);
+        const colours = await page.locator('body, body *').evaluateAll(nodes => [...new Set(nodes.flatMap(node => {
+          const style = getComputedStyle(node);
+          return [style.color, style.backgroundColor, style.borderTopColor, style.outlineColor];
+        }))]);
+        for (const colour of colours) {
+          const channels = colour.match(/[\d.]+/g)?.slice(0, 3).map(Number);
+          assert.ok(channels && Math.max(...channels) - Math.min(...channels) <= 50, `${relative}: non-neutral palette colour ${colour}`);
+        }
         const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: { width: viewport.width, height: viewport.height } });
         const plain = await noJS.newPage();
         await plain.goto(`${baseURL}/${relative}`);

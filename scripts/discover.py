@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Read-only official release discovery; only --open-issues writes (GitHub issues)."""
+"""Read-only release/revision checks; only --open-issues writes (GitHub issues).
+
+Collection adapters discover new release links. Retained-URL snapshots only detect
+revisions at inventory URLs, including explicitly identified archive-hosted copies;
+they cannot discover new manifesto URLs or advance a historical roster's date.
+"""
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -10,23 +15,39 @@ import re
 import subprocess
 import sys
 import urllib.request
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTICE = 'This is by an automated agent, not a human.'
 
 
+DEFAULT_HOSTS = ('www.gov.uk', 'assets.publishing.service.gov.uk')
+
+
+def allowed_url(url, hosts):
+    parsed = urlsplit(url)
+    return (parsed.scheme == 'https' and parsed.hostname in hosts and
+            parsed.port in (None, 443) and not parsed.username and not parsed.password)
+
+
 class OfficialRedirect(urllib.request.HTTPRedirectHandler):
+    def __init__(self, hosts=DEFAULT_HOSTS):
+        super().__init__()
+        self.hosts = hosts
+
     def redirect_request(self, req, fp, code, msg, headers, newurl):
-        if not newurl.startswith(('https://www.gov.uk/', 'https://assets.publishing.service.gov.uk/')):
+        if not allowed_url(newurl, self.hosts):
             raise ValueError('Redirected outside official hosts')
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def fetch(url):
-    if not url.startswith(('https://www.gov.uk/', 'https://assets.publishing.service.gov.uk/')):
+def fetch(url, hosts=DEFAULT_HOSTS):
+    if not allowed_url(url, hosts):
         raise ValueError('Not an allowed official URL: ' + url)
-    with urllib.request.build_opener(OfficialRedirect()).open(url, timeout=60) as response:
-        if not response.url.startswith(('https://www.gov.uk/', 'https://assets.publishing.service.gov.uk/')):
+    # Publisher/archive CDNs reject urllib's default user agent, even for public PDFs.
+    request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0', 'Accept': '*/*'})
+    with urllib.request.build_opener(OfficialRedirect(hosts)).open(request, timeout=60) as response:
+        if not allowed_url(response.url, hosts):
             raise ValueError('Redirected outside official hosts')
         return response.read()
 
@@ -35,9 +56,90 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def discover(source, root=ROOT, get=fetch):
-    """Collection links discover new slugs; the retained release is also checked for revisions."""
-    baseline = json.loads((root / source['manifest']).read_text())
+def source_baseline(source, root):
+    manifest = json.loads((root / source['manifest']).read_text())
+    if source.get('selector') == 'roster':
+        return manifest['roster']
+    if 'source_id' in source:
+        matches = [s for s in manifest['sources'] if s['id'] == source['source_id']]
+        if len(matches) != 1:
+            raise ValueError('Expected exactly one source matching ' + source['source_id'])
+        return matches[0]
+    return manifest
+
+
+def roster_semantics(raw):
+    """Only consumed party identity and seat totals; ignore API timestamps/presentation."""
+    items = json.loads(raw)['items']
+    if not isinstance(items, list) or not items:
+        raise ValueError('Empty or invalid party roster')
+    rows = []
+    for item in items:
+        value = item['value']
+        party = value['party']
+        row = dict(id=party['id'], name=party['name'], total=value['total'],
+                   independent=party['isIndependentParty'])
+        if (type(row['id']) is not int or not isinstance(row['name'], str) or
+                not row['name'] or type(row['total']) is not int or row['total'] < 0 or
+                type(row['independent']) is not bool):
+            raise ValueError('Invalid party identity or seat total')
+        rows.append(row)
+    if len({r['id'] for r in rows}) != len(rows):
+        raise ValueError('Duplicate party in roster')
+    return json.dumps(sorted(rows, key=lambda row: row['id']), sort_keys=True).encode()
+
+
+def discover_snapshot(source, root, get=None):
+    """Detect revisions at retained URLs only, not newly published plans or rosters."""
+    baseline = source_baseline(source, root)
+    hosts = source['allowed_hosts']
+    if (not isinstance(hosts, list) or not hosts or
+            any(not isinstance(h, str) or not re.fullmatch(r'[a-z0-9.-]+', h) for h in hosts)):
+        raise ValueError('Expected explicit official allowed_hosts')
+    url = baseline['url']
+    if not allowed_url(url, hosts):
+        raise ValueError('Not an allowed official URL: ' + url)
+    raw = fetch(url, hosts=hosts) if get is None else get(url)
+    sha = digest(raw)
+    normalization = source.get('normalization')
+    semantic_sha = None
+    if normalization:
+        if normalization != 'parliament-party-roster':
+            raise ValueError('Unknown snapshot normalization: ' + normalization)
+        snapshot = Path(baseline['file'])
+        snapshot = ((root / source['manifest']).parent / snapshot if len(snapshot.parts) == 1
+                    else root / snapshot)
+        retained = snapshot.read_bytes()
+        if digest(retained) != baseline['sha256']:
+            raise ValueError('Retained snapshot does not match manifest hash')
+        semantic_sha = digest(roster_semantics(raw))
+        if semantic_sha == digest(roster_semantics(retained)):
+            return []
+    elif sha == baseline['sha256']:
+        return []
+    evidence = dict(source=source['id'], release_url=url, attachment_url=url,
+                    sha256=sha, discovery_scope='retained-url-revision',
+                    updated='not supplied by retained URL',
+                    refresh_command='python3 scripts/build.py --refresh')
+    if baseline.get('hosting'):
+        evidence['hosting'] = baseline['hosting']
+    if semantic_sha:
+        evidence['semantic_sha256'] = semantic_sha
+    # A roster's incidental timestamps must not make repeated identical semantic changes
+    # open different issues. Keep the byte hash as evidence, not as its identity.
+    identity = dict(source=source['id'], url=url, sha256=semantic_sha or sha)
+    key = digest(json.dumps(identity, sort_keys=True).encode())
+    return [dict(key=key, evidence=evidence, baseline=baseline)]
+
+
+def discover(source, root=ROOT, get=None):
+    """Dispatch explicit discovery scopes; only collection adapters find new releases."""
+    if source['adapter'] == 'retained-url-snapshot':
+        return discover_snapshot(source, root, get)
+    if source['adapter'] != 'govuk-collection-attachment':
+        raise ValueError('Unknown adapter: ' + source['adapter'])
+    get = get or fetch
+    baseline = source_baseline(source, root)
     collection = json.loads(get(source['collection_api']))
     documents = collection['links']['documents']
     if not documents:
@@ -90,27 +192,34 @@ def open_updates(updates, repo, run=gh):
             continue
         e = update['evidence']; b = update['baseline']
         slug = e['release_url'].rsplit('/', 1)[-1]
+        retained = e.get('discovery_scope') == 'retained-url-revision'
+        scope = ('Only the retained URL was checked for a revision. This does not discover new '
+                 'publication URLs, newly published plans, or a later roster date.' if retained else
+                 'Collection links and the retained release were checked for releases and revisions.')
+        command = (e['refresh_command'] if retained else
+                   f'.venv/bin/python scripts/build.py --refresh --release {slug}')
         body = f'''{NOTICE}
 
 A source release or revision needs a data update review. Deployed data have NOT changed.
+{scope}
 
-## Discovered official evidence
+## Discovered source evidence
 ```json
 {json.dumps(e, indent=2)}
 ```
 
 ## Retained baseline
-Release: {b['release_url']}
-Source updated: {b['date']}
+Release: {b.get('release_url', b.get('url'))}
+Source updated/downloaded: {b.get('date', b.get('downloaded', 'not supplied'))}
 SHA-256: `{b['sha256']}`
 
 Review the official publication and accounting scope, then refresh with:
 ```sh
-.venv/bin/python scripts/build.py --refresh --release {slug}
+{command}
 ```
 Inspect the changed-file report and source/data diff, run all documented checks,
 and submit the validated update in a PR. A changed format must not bypass validation.
-The command above is the spending adapter; future families must document their own refresh command.
+Retained-URL checks cannot establish whether a newer publication exists elsewhere.
 
 {marker}
 '''
@@ -141,10 +250,10 @@ def main():
     for source in inventory:
         source_id = source.get('id', 'unknown') if isinstance(source, dict) else 'unknown'
         try:
-            if source['adapter'] != 'govuk-collection-attachment':
-                raise ValueError('Unknown adapter: ' + source['adapter'])
             updates = discover(source)
-            result = dict(id=source_id, updates=updates, issues=[])
+            scope = ('retained-url-revision' if source['adapter'] == 'retained-url-snapshot'
+                     else 'collection-releases-and-revisions')
+            result = dict(id=source_id, discovery_scope=scope, updates=updates, issues=[])
             report['sources'].append(result)
             if args.open_issues and updates:
                 result['issues'] = open_updates(updates, args.repo)

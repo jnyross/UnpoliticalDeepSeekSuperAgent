@@ -1,0 +1,60 @@
+{
+  "capturedAt": "2026-11-01T22:28:30.029Z",
+  "revision": "c2ce8c0cb142cda31c19a0d4b5320bf5542b9c37",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "path": "history.html",
+      "bytes": 120140,
+      "sha256": "51716245cbc5e68cc11605b8f0fd38c21ed3ed18a35034a21ee3308ac6e75f33",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-history-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-history-html-desktop.png",
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "index.html",
+      "bytes": 15098,
+      "sha256": "2d2a1f7b5e99a688b09011ddff0dcee6aee6603d91b73c924ae52c8cfec78a73",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-index-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-index-html-desktop.png",
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

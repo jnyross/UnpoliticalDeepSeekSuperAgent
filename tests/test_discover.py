@@ -310,28 +310,198 @@ class DiscoveryFixture(unittest.TestCase):
                 self.assertTrue(result['errors'][0]['error'])
 
 
+class SnapshotTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.source = dict(id='party-roster', adapter='retained-url-snapshot',
+                           manifest='party-offers.json', selector='roster',
+                           allowed_hosts=['members-api.parliament.uk'],
+                           normalization='parliament-party-roster')
+        self.url = 'https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09'
+        self.roster = {'items': [self.row(15, 'Labour', 411), self.row(4, 'Conservative', 121)],
+                       'timestamp': '2026-01-01', 'links': []}
+        self.raw = json.dumps(self.roster).encode()
+        self.baseline = dict(url=self.url, file='roster.json', sha256=discover.digest(self.raw),
+                             downloaded='2026-01-01')
+        (self.root / 'roster.json').write_bytes(self.raw)
+        self.save_manifest()
+        self.network = mock.patch.object(discover.urllib.request.OpenerDirector, 'open',
+                                         side_effect=AssertionError('Unexpected network request'))
+        self.network.start()
+        self.addCleanup(self.network.stop)
+
+    def row(self, identifier, name, total):
+        return {'value': {'party': {'id': identifier, 'name': name,
+                                    'isIndependentParty': False, 'backgroundColour': 'ff0000'},
+                          'total': total}, 'links': []}
+
+    def save_manifest(self):
+        (self.root / 'party-offers.json').write_text(json.dumps({'roster': self.baseline}))
+
+    def check(self, raw=None):
+        get = mock.Mock(return_value=self.raw if raw is None else raw)
+        result = discover.discover(self.source, root=self.root, get=get)
+        get.assert_called_once_with(self.url)
+        return result
+
+    def test_semantically_unchanged_roster_ignores_time_order_links_and_presentation(self):
+        before = (self.root / 'party-offers.json').read_bytes()
+        changed = copy.deepcopy(self.roster)
+        changed['timestamp'] = '2026-02-01'
+        changed['items'].reverse()
+        changed['items'][0]['value']['party']['backgroundColour'] = '000000'
+        changed['links'] = [{'rel': 'self', 'href': 'changed metadata'}]
+        self.assertEqual(self.check(json.dumps(changed).encode()), [])
+        self.assertEqual((self.root / 'party-offers.json').read_bytes(), before)
+
+    def test_roster_identity_membership_and_seat_changes_are_detected(self):
+        for mutate in (lambda r: r['items'].append(self.row(44, 'Green Party', 4)),
+                       lambda r: r['items'].pop(),
+                       lambda r: r['items'][0]['value'].update(total=412),
+                       lambda r: r['items'][0]['value']['party'].update(name='Renamed'),
+                       lambda r: r['items'][0]['value']['party'].update(isIndependentParty=True)):
+            changed = copy.deepcopy(self.roster)
+            mutate(changed)
+            update, = self.check(json.dumps(changed).encode())
+            self.assertEqual(update['evidence']['discovery_scope'], 'retained-url-revision')
+            self.assertIn('semantic_sha256', update['evidence'])
+            # API timestamp changes do not generate a different deduplication key.
+            changed['timestamp'] = '2027-01-01'
+            again, = self.check(json.dumps(changed).encode())
+            self.assertEqual(update['key'], again['key'])
+
+    def test_invalid_roster_and_changed_schema_fail_closed(self):
+        for value in ({}, {'items': []}, {'items': [self.row(1, 'A', 2)] * 2},
+                      {'items': [self.row(1, 'A', -1)]}, {'items': [{'value': {}}]}):
+            with self.subTest(value=value), self.assertRaises((ValueError, KeyError)):
+                self.check(json.dumps(value).encode())
+        with self.assertRaises(ValueError):
+            self.check(b'not json')
+        (self.root / 'roster.json').write_bytes(b'tampered')
+        with self.assertRaisesRegex(ValueError, 'manifest hash'):
+            self.check()
+
+    def test_generic_plan_hash_revisions_and_source_selector(self):
+        self.source.pop('selector')
+        self.source.pop('normalization')
+        self.source['source_id'] = 'plan'
+        (self.root / 'party-offers.json').write_text(json.dumps({'sources': [dict(self.baseline, id='plan')]}))
+        self.assertEqual(self.check(), [])
+        update, = self.check(b'revised PDF bytes')
+        self.assertEqual(update['evidence']['sha256'], discover.digest(b'revised PDF bytes'))
+        self.assertNotIn('semantic_sha256', update['evidence'])
+        self.assertEqual(self.check(b'revised PDF bytes'), [update])
+        run = mock.Mock(side_effect=['[[]]', 'https://github.com/owner/repo/issues/1'])
+        discover.open_updates([update], 'owner/repo', run=run)
+        body = run.call_args.args[run.call_args.args.index('--body') + 1]
+        self.assertIn('does not discover new', body)
+        self.assertNotIn('--release', body)
+        for sources in ([], [dict(self.baseline, id='plan')] * 2):
+            (self.root / 'party-offers.json').write_text(json.dumps({'sources': sources}))
+            with self.assertRaisesRegex(ValueError, 'exactly one source'):
+                self.check()
+
+    def test_snapshot_source_hosts_are_exact_https_and_checked_before_fetch(self):
+        for url in ('https://members-api.parliament.uk.evil.example/data',
+                    'https://example.org/data', 'http://members-api.parliament.uk/data',
+                    'https://user@members-api.parliament.uk/data',
+                    'https://members-api.parliament.uk:8080/data'):
+            self.baseline['url'] = url
+            self.save_manifest()
+            get = mock.Mock()
+            with self.subTest(url=url), self.assertRaisesRegex(ValueError, 'official URL'):
+                discover.discover(self.source, root=self.root, get=get)
+            get.assert_not_called()
+        handler = discover.OfficialRedirect(self.source['allowed_hosts'])
+        request = discover.urllib.request.Request(self.url)
+        with self.assertRaisesRegex(ValueError, 'Redirected outside official hosts'):
+            handler.redirect_request(request, None, 302, 'Found', {}, 'https://www.gov.uk/data')
+        self.assertEqual(handler.redirect_request(request, None, 302, 'Found', {}, self.url).full_url, self.url)
+
+    def test_fetch_checks_inventory_hosts_at_initial_redirect_and_final_response(self):
+        hosts = self.source['allowed_hosts']
+        with mock.patch.object(discover.urllib.request, 'build_opener') as build:
+            with self.assertRaisesRegex(ValueError, 'official URL'):
+                discover.fetch('https://example.org/data', hosts=hosts)
+            build.assert_not_called()
+            response = mock.MagicMock()
+            response.__enter__.return_value = response
+            response.url = 'https://example.org/redirected'
+            build.return_value.open.return_value = response
+            with self.assertRaisesRegex(ValueError, 'Redirected outside official hosts'):
+                discover.fetch(self.url, hosts=hosts)
+            response.read.assert_not_called()
+            response.url = self.url
+            response.read.return_value = self.raw
+            self.assertEqual(discover.fetch(self.url, hosts=hosts), self.raw)
+
+    def test_main_dispatches_snapshot_adapter_and_reports_limited_scope(self):
+        config = self.root / 'config/release-sources.json'
+        config.parent.mkdir()
+        config.write_text(json.dumps([self.source]))
+        report = self.root / 'report.json'
+        real_discover = discover.discover
+        with mock.patch.object(discover, 'ROOT', self.root), \
+             mock.patch.object(discover, 'discover', side_effect=lambda s: real_discover(s, self.root, lambda u: self.raw)), \
+             mock.patch('sys.argv', ['discover.py', '--report', str(report)]), \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(discover.main(), 0)
+        result = json.loads(report.read_text())
+        self.assertEqual(result['errors'], [])
+        self.assertEqual(result['sources'], [dict(id=self.source['id'], updates=[], issues=[],
+                                                  discovery_scope='retained-url-revision')])
+
+    def test_snapshot_fetch_failures_propagate(self):
+        with self.assertRaisesRegex(OSError, 'offline'):
+            discover.discover(self.source, root=self.root, get=mock.Mock(side_effect=OSError('offline')))
+
+
 class InventoryTests(unittest.TestCase):
+    def test_every_retained_party_source_and_roster_is_registered_once(self):
+        inventory = json.loads((ROOT / 'config/release-sources.json').read_text())
+        manifest_path = 'sources/party-offers.json'
+        retained = json.loads((ROOT / manifest_path).read_text())
+        entries = [s for s in inventory if s['manifest'] == manifest_path]
+        rosters = [s for s in entries if s.get('selector') == 'roster']
+        self.assertEqual(len(rosters), 1)
+        self.assertEqual(rosters[0]['normalization'], 'parliament-party-roster')
+        plans = [s for s in entries if 'source_id' in s]
+        self.assertCountEqual([s['source_id'] for s in plans], [s['id'] for s in retained['sources']])
+        self.assertEqual(len(entries), len(retained['sources']) + 1)
+        for entry in entries:
+            self.assertEqual(entry['adapter'], 'retained-url-snapshot')
+            baseline = discover.source_baseline(entry, ROOT)
+            # Exact inventory hosts are intentionally not a wildcard or all-party allowlist.
+            self.assertEqual(entry['allowed_hosts'], [discover.urlsplit(baseline['url']).hostname])
+
     def test_inventory_covers_every_source_manifest_consumed_by_site_data(self):
         inventory = json.loads((ROOT / 'config/release-sources.json').read_text())
         self.assertTrue(inventory)
         self.assertEqual(len({s['id'] for s in inventory}), len(inventory))
         manifests = []
         for entry in inventory:
-            self.assertEqual(entry['adapter'], 'govuk-collection-attachment')
             manifest_path = ROOT / entry['manifest']
             self.assertTrue(manifest_path.is_file(), entry['manifest'])
-            manifest = json.loads(manifest_path.read_text())
-            self.assertRegex(manifest['release_url'].removeprefix('https://www.gov.uk'),
-                             '^' + entry['release_path_pattern'] + '$')
+            manifest = discover.source_baseline(entry, ROOT)
+            if entry['adapter'] == 'govuk-collection-attachment':
+                self.assertRegex(manifest['release_url'].removeprefix('https://www.gov.uk'),
+                                 '^' + entry['release_path_pattern'] + '$')
+            else:
+                self.assertEqual(entry['adapter'], 'retained-url-snapshot')
+                self.assertTrue(discover.allowed_url(manifest['url'], entry['allowed_hosts']))
+                self.assertRegex(manifest['sha256'], r'^[0-9a-f]{64}$')
             manifests.append(manifest)
         consumed = []
 
         def sources(value):
             if isinstance(value, dict):
-                for key, child in value.items():
-                    if key == 'source' and isinstance(child, dict) and 'release_url' in child:
-                        consumed.append(child)
-                    else:
+                if 'sha256' in value and ('release_url' in value or 'url' in value):
+                    if value not in consumed:
+                        consumed.append(value)
+                else:
+                    for child in value.values():
                         sources(child)
             elif isinstance(value, list):
                 for child in value:

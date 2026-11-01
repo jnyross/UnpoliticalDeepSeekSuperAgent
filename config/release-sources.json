@@ -6,5 +6,140 @@
     "collection_api": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
     "release_path_pattern": "/government/statistics/public-spending-statistics-release-[a-z]+-[0-9]{4}",
     "attachment_title": "Public sector spending"
+  },
+  {
+    "id": "hmt-spending-trends",
+    "adapter": "govuk-collection-attachment",
+    "manifest": "sources/trends-manifest.json",
+    "collection_api": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+    "release_path_pattern": "/government/statistics/public-spending-statistics-release-[a-z]+-[0-9]{4}",
+    "attachment_title": "Trends in public spending"
+  },
+  {
+    "id": "party-roster",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "selector": "roster",
+    "allowed_hosts": [
+      "members-api.parliament.uk"
+    ],
+    "normalization": "parliament-party-roster"
+  },
+  {
+    "id": "party-offers-alliance",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "alliance",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-conservative",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "conservative",
+    "allowed_hosts": [
+      "public.conservatives.com"
+    ]
+  },
+  {
+    "id": "party-offers-dup",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "dup",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-green",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "green",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-labour",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "labour",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-libdem",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "libdem",
+    "allowed_hosts": [
+      "www.libdems.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-plaid",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "plaid",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-reform",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "reform",
+    "allowed_hosts": [
+      "assets.nationbuilder.com"
+    ]
+  },
+  {
+    "id": "party-offers-snp",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "snp",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-sinnfein",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "sinnfein",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-sdlp",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "sdlp",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-tuv",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "tuv",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
+  },
+  {
+    "id": "party-offers-uup",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_id": "uup",
+    "allowed_hosts": [
+      "www.manifestos.org.uk"
+    ]
   }
 ]
