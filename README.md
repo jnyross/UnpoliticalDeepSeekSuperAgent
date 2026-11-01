@@ -4,7 +4,8 @@ A static, source-linked page showing UK spending by area and ten-year answers on
 real health spending and Total Managed Expenditure as a share of GDP. It uses 2025-26, the latest
 full year in HM Treasury's **Public spending statistics: July 2026**. The table labels
 this year **outturn**, not forecast. This foundation is not the full product and does
-not claim rubric levels: tax, borrowing, debt stocks, history and party plans remain
+not claim rubric levels. A separate history page now shows spending overall and by area
+from the retained PESA historical tables. Tax, borrowing, debt stocks and party plans remain
 future work. See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
@@ -25,7 +26,9 @@ npx playwright install --with-deps chromium
 .venv/bin/python scripts/build.py --refresh
 ```
 
-This downloads the official release metadata and Chapter 4 and 5 workbooks, retains their
+This downloads the official release metadata and spending-statistics Chapter 4 and 5
+workbooks, and refreshes the separately versioned PESA Chapter 4 history workbook
+and metadata. It retains their
 URLs, publication/update/download dates and SHA-256, parses the latest fiscal column,
 validates it independently, then replaces the committed generated files. Failed
 network requests, missing cells, changed formats or failed validation leave the last
@@ -40,6 +43,8 @@ For a new release, use the **same command** with its GOV.UK publication slug:
 ```
 
 Use a release which contains the **Public sector spending** workbook attachment.
+Historical refresh is separately pinned to PESA 2026 Chapter 4, so changing the
+latest-year `--release` never silently substitutes a different historical vintage.
 The year is derived from the workbook, not a configured figure. If its layout or
 accounting definitions change, validation deliberately stops; update and review the
 parser/checks rather than silently interpreting a new schema.
@@ -58,8 +63,9 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 Do not paste a token into shell history; Actions supplies `github.token`. The job needs
 only `contents: read` for checkout and `issues: write` to list/create update issues.
 It needs no repository write, pull-request, deployment or external secret permissions.
-The checked-in [inventory](config/release-sources.json) currently covers the site's only
-source family, HMT Public Spending Statistics. The official GOV.UK collection discovers
+The checked-in [inventory](config/release-sources.json) covers HMT Public Spending Statistics (both latest spending and trend attachments)
+and PESA functional history. PESA's year-dependent attachment title uses an anchored
+`attachment_title_pattern`; exact-title sources retain `attachment_title` matching. The official GOV.UK collection discovers
 new publication slugs, not just changes to the retained URL. The retained release is
 also checked for date revisions and changed workbook bytes (SHA-256), even at an
 unchanged attachment URL. Only releases published on or after the retained publication
@@ -94,6 +100,7 @@ review tasks; it does not claim a year of timely updates or people-review eviden
 ```sh
 .venv/bin/python scripts/build.py --check
 .venv/bin/python scripts/check.py --self-test
+.venv/bin/python scripts/check_history.py --self-test
 npm run test:browser
 ```
 
@@ -121,6 +128,17 @@ Serve `site/` with any static HTTP server (for example `python3 -m http.server 8
   TME includes accounting adjustments and is distinct from expenditure on services.
 
 - [Retained official source](sources/manifest.json) and workbook in `sources/`.
+- [Historical source manifest](sources/history-manifest.json) identifies the retained
+  PESA 2026 Chapter 4 workbook, with 23 annual outturn years, 2003-04 to 2025-26.
+  [History JSON](site/data/history.json) and [CSV](site/data/history.csv) retain all
+  cash, real and GDP-share source cells. [History page](site/history.html) shows all
+  years by area and the fixed decade grid from the latest overview year back to 1945-46.
+  Unavailable years are explicitly missing, not zero. The historical source is
+  not spliced with the separate July 2026 latest-year workbook. Important source definition breaks
+  are shown beside the tables. Published real values use 2025-26 prices and the ONS
+  GDP deflators of 30 June 2026; GDP shares use that date's ONS GDP series.
+  The independent history checker reopens all three raw tables, checks every cell,
+  reconciles each year and verifies cash equals real in the base year.
 - [Generated open JSON](site/data/spending.json) includes fiscal year, status, unit,
   geography, scope, raw cell locators and complete source provenance.
 - [Generated CSV](site/data/spending.csv) provides each displayed input value.
