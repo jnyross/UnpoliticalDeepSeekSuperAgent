@@ -181,10 +181,17 @@ def validate_page(path, expected):
         require(row in page.rows, f'Comparison HTML source row missing or changed: {row}')
     for link in ('sources/trends.xlsx', 'data/comparisons.json', 'sources/trends-manifest.json'):
         require(link in page.links, f'Missing comparison source download: {link}')
-    # Existing implied questions: headline total, biggest area, and health per £100.
-    for question in ('Where public money goes', 'Spending by area', 'What is in these totals?'):
-        require(question in page.text, f'Missing existing question/topic: {question}')
-    require('goes on health' in page.text, 'Missing existing health-share answer')
+    # The six existing answers are mostly inferred from prose, not question headings.
+    # Their exact amounts/source rows are already independently checked by check.py.
+    for answer in ('Where public money goes', 'Spending by area', 'What is in these totals?',
+                   'Social protection is the largest area of spending.',
+                   'Of each £100 spent on services,', 'goes on health',
+                   'Old-age pensions were', 'Defence was', 'Check the source',
+                   'None of the numbers on this page are forecasts: all are labelled outturn in this release.'):
+        require(answer in page.text, f'Missing existing question/answer: {answer}')
+    require(re.search(r'In \d{4}-\d{2}, central government debt interest was £[\d,.]+ billion '
+                      r'\(outturn, not a forecast\)\.', page.text),
+            'Missing debt-interest answer with year and status')
 
 
 def validate(root):

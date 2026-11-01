@@ -1,0 +1,69 @@
+{
+  "capturedAt": "2026-11-01T22:14:56.520Z",
+  "revision": "1565ed1d8689d98aa7985a6bbd3a5eff3539141d",
+  "mode": "automated-checks",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 14986,
+      "sha256": "fe3d0b4b7588e0f8e0672835843988d7952ece4cce9ff602daae199de2341b2d",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-index-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-index-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

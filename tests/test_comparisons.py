@@ -62,7 +62,12 @@ class ComparisonTests(unittest.TestCase):
                             'scope': 'Total Managed Expenditure, excluding temporary effects of public-sector banks'}})
         self.save_data()
         self.html = '''<h1>Where public money goes</h1><h2>Spending by area</h2>
-<h2>What is in these totals?</h2><p>£10 goes on health</p>
+<h2>What is in these totals?</h2><p>Of each £100 spent on services, £10 goes on health</p>
+<p>Social protection is the largest area of spending.</p>
+<p>Old-age pensions were £20 billion. Defence was £10 billion.</p>
+<p>In 2025-26, central government debt interest was £5.0 billion (outturn, not a forecast).</p>
+<h2>Check the source</h2>
+<p>None of the numbers on this page are forecasts: all are labelled outturn in this release.</p>
 <h3>Has health spending gone up or down after inflation?</h3>
 <p><strong>Health spending went up by 50.0%</strong> from 2015-16 to 2025-26.
 It went from £100.0 billion to £150.0 billion, a change of £50.0 billion in 2025-26 prices.</p>
@@ -156,12 +161,28 @@ That is a change of 5.0 percentage points.</p>
                               ('2015-16 (outturn)', '2015-16 (forecast)'),
                               ('Has health spending gone up or down after inflation?', ''),
                               ('Is total spending a bigger or smaller share of the economy?', ''),
-                              ('Spending by area', ''), ('goes on health', '')]:
+                              ('Spending by area', ''), ('goes on health', ''),
+                              ('Social protection is the largest area of spending.', ''),
+                              ('Old-age pensions were', ''), ('Defence was', ''),
+                              ('central government debt interest was', ''),
+                              ('None of the numbers on this page are forecasts:', ''),
+                              ('Check the source', '')]:
             with self.subTest(before=before):
                 self.html = original.replace(before, after)
                 self.save_html()
                 with self.assertRaises(checker.ValidationError):
                     checker.validate(self.root)
+
+    def test_hidden_content_does_not_mask_or_supply_answers(self):
+        self.html = ('<head><meta charset="utf-8"><style>ignored</style></head>'
+                     '<div aria-hidden="true"><span>hidden chart</span></div>' + self.html)
+        self.save_html()
+        checker.validate(self.root)
+        self.html = self.html.replace('<strong>Health spending went up by 50.0%</strong>',
+                                      '<strong hidden>Health spending went up by 50.0%</strong>')
+        self.save_html()
+        with self.assertRaisesRegex(checker.ValidationError, 'missing or changed answer'):
+            checker.validate(self.root)
 
     def test_download_mutations(self):
         (self.root / 'site/sources/trends.xlsx').write_bytes(b'wrong download')
