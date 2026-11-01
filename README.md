@@ -1,6 +1,7 @@
 # UnpoliticalAF — UK public spending
 
-A static, source-linked first page showing UK spending by area in 2025-26, the latest
+A static, source-linked page showing UK spending by area and ten-year answers on
+real health spending and Total Managed Expenditure as a share of GDP. It uses 2025-26, the latest
 full year in HM Treasury's **Public spending statistics: July 2026**. The table labels
 this year **outturn**, not forecast. This foundation is not the full product and does
 not claim rubric levels: tax, borrowing, debt stocks, history and party plans remain
@@ -24,7 +25,7 @@ npx playwright install --with-deps chromium
 .venv/bin/python scripts/build.py --refresh
 ```
 
-This downloads the official release metadata and Chapter 5 workbook, retains their
+This downloads the official release metadata and Chapter 4 and 5 workbooks, retains their
 URLs, publication/update/download dates and SHA-256, parses the latest fiscal column,
 validates it independently, then replaces the committed generated files. Failed
 network requests, missing cells, changed formats or failed validation leave the last
@@ -66,6 +67,14 @@ Serve `site/` with any static HTTP server (for example `python3 -m http.server 8
 `site/` directory unchanged, with no build step; see [configuration](vercel.json).
 
 ## Data and methods
+
+- Chapter 4 Tables 4.3 and 4.4 supply the latest year and exactly ten years earlier.
+  We use Treasury's published real health figures in 2025-26 prices (ONS GDP deflators,
+  30 June 2026) and TME shares of GDP from the same vintage, not a spliced series.
+  Missing exact baselines, changed units/status or definitions fail the build.
+  Derived changes use rounded official inputs, so are approximate. Inputs, cell
+  locators and formulas are downloadable as `data/comparisons.json` and CSV.
+  TME includes accounting adjustments and is distinct from expenditure on services.
 
 - [Retained official source](sources/manifest.json) and workbook in `sources/`.
 - [Generated open JSON](site/data/spending.json) includes fiscal year, status, unit,

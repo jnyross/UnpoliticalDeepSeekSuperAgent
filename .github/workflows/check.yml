@@ -25,7 +25,7 @@ jobs:
       - name: Verify generated output
         run: python scripts/build.py --check
       - name: Check source data and site
-        run: python scripts/check.py --self-test && python scripts/check.py
+        run: python scripts/check.py --self-test && python -m unittest discover -s tests -p 'test_*.py' && python scripts/check.py
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Browser, no-JavaScript, size, overflow and WCAG checks
