@@ -282,6 +282,8 @@ def validate(root):
         validate_data(data, manifest, workbook)
     finally:
         workbook.close()
+    from check_history import validate as validate_history
+    validate_history(root)
     banned_path = Path(__file__).resolve().parent / "banned-words.txt"
     require((root / "site/banned-words.txt").read_bytes() == banned_path.read_bytes(),
             "Published banned-word list differs from the enforced list")
@@ -293,7 +295,9 @@ def validate(root):
     pages = sorted((root / "site").rglob("*.html"))
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
     for path in pages:
-        page = validate_page(path, manifest, banned)
+        page_manifest = (json.loads((root / 'sources/history-manifest.json').read_text())
+                         if path.name == 'history.html' else manifest)
+        page = validate_page(path, page_manifest, banned)
         if path == root / "site/index.html":
             validate_published_data(page, data)
     print(f"PASS: source hash; independent raw values, labels, locators, year and status; "
