@@ -84,5 +84,6 @@ Serve `site/` with any static HTTP server (for example `python3 -m http.server 8
 
 Contains public sector information licensed under the
 [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-No owner/funding/contact facts or people evidence are invented. The code repository
-remains private; downloadable source and data are served as part of the site.
+No owner/funding/contact facts or people evidence are invented. The owner made the
+code repository public on 1 November 2026; downloadable source and data are also
+served as part of the site.
