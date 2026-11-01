@@ -160,7 +160,10 @@ def discover(source, root=ROOT, get=None):
         updated = meta['public_updated_at'][:10]
         if path != baseline['release_url'].removeprefix('https://www.gov.uk') and published < baseline['published']:
             continue
-        matches = [a for a in meta['details']['attachments'] if a['title'] == source['attachment_title']]
+        title_pattern = source.get('attachment_title_pattern')
+        matches = [a for a in meta['details']['attachments']
+                   if (re.fullmatch(title_pattern, a['title']) if title_pattern
+                       else a['title'] == source['attachment_title'])]
         if len(matches) != 1:
             raise ValueError('Expected exactly one data attachment at ' + meta_url)
         attachment = matches[0]['url']

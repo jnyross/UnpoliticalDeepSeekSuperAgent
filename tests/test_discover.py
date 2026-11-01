@@ -86,6 +86,19 @@ class DiscoveryFixture(unittest.TestCase):
         self.responses[self.attachment] = b'revised workbook'
         return self.check()[0]
 
+    def test_versioned_attachment_title_pattern(self):
+        self.source['attachment_title_pattern'] = r'PESA [0-9]{4} Chapter 4 Tables'
+        self.metadata['details']['attachments'][0]['title'] = 'PESA 2027 Chapter 4 Tables'
+        self.assertEqual(self.check(), [])
+        self.metadata['details']['attachments'][0]['title'] = 'PESA 2027 Chapter 5 Tables'
+        with self.assertRaises(ValueError):
+            self.check()
+        self.metadata['details']['attachments'] = [
+            {'title': 'PESA 2027 Chapter 4 Tables', 'url': self.attachment},
+            {'title': 'PESA 2028 Chapter 4 Tables', 'url': self.attachment}]
+        with self.assertRaises(ValueError):
+            self.check()
+
     def test_redirect_handler_rejects_external_hosts_before_following(self):
         handler = discover.OfficialRedirect()
         request = discover.urllib.request.Request(self.meta_url)

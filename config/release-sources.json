@@ -141,5 +141,13 @@
     "allowed_hosts": [
       "www.manifestos.org.uk"
     ]
+  },
+  {
+    "id": "hmt-pesa-functional-history",
+    "adapter": "govuk-collection-attachment",
+    "manifest": "sources/history-manifest.json",
+    "collection_api": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+    "release_path_pattern": "/government/statistics/public-expenditure-statistical-analyses-[0-9]{4}",
+    "attachment_title_pattern": "PESA [0-9]{4} Chapter 4 Tables"
   }
 ]

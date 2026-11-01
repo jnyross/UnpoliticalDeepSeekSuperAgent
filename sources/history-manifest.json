@@ -1,0 +1,28 @@
+{
+  "file": "history.xlsx",
+  "url": "https://assets.publishing.service.gov.uk/media/6a5772e09e63154454413700/PESA_2026_CP_Chapter_4_tables.xlsx",
+  "sha256": "50ae80d95c4e542c34a17dfa8bc302858ca6508b6753e27bb31920cec9bb75c4",
+  "publication": "Public Expenditure Statistical Analyses 2026, Chapter 4",
+  "published": "2026-07-16",
+  "date": "2026-07-16",
+  "workbook_vintage": "2026-07-16",
+  "downloaded": "2026-11-01",
+  "release_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2026",
+  "metadata_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+  "metadata_file": "history-release.json",
+  "metadata_sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+  "workbook_modified": "2026-07-08T10:55:39Z",
+  "sheets": {
+    "cash": "4_2",
+    "real": "4_3",
+    "gdp": "4_4"
+  },
+  "geography": "United Kingdom",
+  "scope": "Public sector expenditure on services",
+  "status": "outturn",
+  "years": "2003-04 to 2025-26",
+  "real_base_year": "2025-26",
+  "deflator": "ONS GDP deflators released 30 June 2026",
+  "gdp_source": "ONS GDP published 30 June 2026",
+  "next_release": "No next release date is announced in the retained release metadata."
+}

@@ -282,6 +282,8 @@ def validate(root):
         validate_data(data, manifest, workbook)
     finally:
         workbook.close()
+    from check_history import validate as validate_history
+    validate_history(root)
     banned_path = Path(__file__).resolve().parent / "banned-words.txt"
     require((root / "site/banned-words.txt").read_bytes() == banned_path.read_bytes(),
             "Published banned-word list differs from the enforced list")
@@ -296,6 +298,8 @@ def validate(root):
         page_manifest = manifest
         if path.name == 'parties.html':
             page_manifest = json.loads((root / 'sources/party-offers.json').read_text())['roster']
+        elif path.name == 'history.html':
+            page_manifest = json.loads((root / 'sources/history-manifest.json').read_text())
         page = validate_page(path, page_manifest, banned)
         if path == root / "site/index.html":
             validate_published_data(page, data)
