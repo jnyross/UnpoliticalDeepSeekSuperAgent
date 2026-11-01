@@ -101,6 +101,25 @@ try {
         assert.ok(noJSDimensions.document <= noJSDimensions.viewport && noJSDimensions.body <= noJSDimensions.viewport, `${relative}: horizontal overflow without JavaScript`);
         result.noJavaScriptContentMatches = true;
         result.noJavaScriptDimensions = noJSDimensions;
+        if (/^history-(cash|real|gdp)\.html$/.test(relative)) {
+          // Exercise native view links with scripting disabled, preserving the area.
+          const axisSize = await plain.locator('svg text').first().evaluate(node => {
+            const matrix = node.getScreenCTM();
+            return parseFloat(getComputedStyle(node).fontSize) * matrix.a;
+          });
+          assert.ok(axisSize >= 12, `${relative}: chart axis labels too small: ${axisSize}px`);
+          const current = relative.match(/^history-(cash|real|gdp)/)[1];
+          for (const view of ['cash', 'real', 'gdp'].filter(view => view !== current)) {
+            await plain.locator(`#health a[href="history-${view}.html#health"]`).click();
+            assert.ok(plain.url().endsWith(`history-${view}.html#health`));
+            assert.ok(await plain.locator('#health h2').isVisible());
+            assert.ok(await plain.locator('#health figcaption').isVisible());
+            await plain.locator('#health summary').click();
+            assert.ok(await plain.locator('#health table').isVisible());
+            await plain.goto(`${baseURL}/${relative}`);
+          }
+          result.noJavaScriptViewSwitches = true;
+        }
         await noJS.close();
         const checkState = async name => {
           const dimensions = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth, body: document.body.scrollWidth }));

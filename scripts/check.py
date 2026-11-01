@@ -298,7 +298,7 @@ def validate(root):
         page_manifest = manifest
         if path.name == 'parties.html':
             page_manifest = json.loads((root / 'sources/party-offers.json').read_text())['roster']
-        elif path.name == 'history.html':
+        elif path.name in ('history.html', 'history-cash.html', 'history-real.html', 'history-gdp.html'):
             page_manifest = json.loads((root / 'sources/history-manifest.json').read_text())
         page = validate_page(path, page_manifest, banned)
         if path == root / "site/index.html":

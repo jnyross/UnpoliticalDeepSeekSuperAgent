@@ -177,8 +177,29 @@ LIVE_URL=https://unpoliticaldeepseeksuperagent.vercel.app EVIDENCE_DIR=/tmp/live
   not spliced with the separate July 2026 latest-year workbook. Important source definition breaks
   are shown beside the tables. Published real values use 2025-26 prices and the ONS
   GDP deflators of 30 June 2026; GDP shares use that date's ONS GDP series.
+  [Cash charts](site/history-cash.html), [real charts](site/history-real.html) and
+  [GDP-share charts](site/history-gdp.html) cover the same 22 series and 23 years.
+  Native links preserve the chosen area without JavaScript; each chart has a data table.
+  Axes include a marked zero, negative receipts remain negative, and missing points
+  break the line. Scales differ across areas and views. No values are interpolated.
   The independent history checker reopens all three raw tables, checks every cell,
   reconciles each year and verifies cash equals real in the base year.
+  Real amounts are the Treasury's official published transformation, not a new
+  independently estimated deflator series: `real_t = nominal_t × D_2025-26 / D_t`,
+  where `D` is the ONS GDP deflator released 30 June 2026, as identified in
+  `4_3!A28` and `4_1!B51` of the hash-pinned workbook. At the base year the
+  multiplier is exactly one, so all 22 functional rows and the three aggregate
+  nominal/real pairs must match exactly at published precision (zero tolerance).
+  Changed base-year values of £0.1bn fail, including every generated annual series.
+  Both cash and real functional areas reconcile to TES within £0.6bn
+  (12 independently rounded amounts × £0.05bn); TES plus adjustments reconciles
+  to TME within £0.15bn (three amounts × £0.05bn). All 23 overlapping TME years
+  must also match Table 4.1 in cash, real and GDP share within £0.1bn or 0.1
+  percentage point (two rounded amounts). No cross-vintage totals are equated.
+  Mutation tests exercise base-year changes, these bounds and rejection just
+  beyond them. The build runs this independent checker before publishing, so
+  failures leave last-good generated output untouched. This verifies the
+  base-year identity, not a recalculation of every non-base-year deflator.
 - [Generated open JSON](site/data/spending.json) includes fiscal year, status, unit,
   geography, scope, raw cell locators and complete source provenance.
 - [Generated CSV](site/data/spending.csv) provides each displayed input value.

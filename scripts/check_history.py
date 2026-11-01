@@ -117,15 +117,42 @@ def validate_workbook(workbook):
             for col in range(2, 25):
                 number(sheet.cell(row, col).value, f'{title}!{sheet.cell(row, col).coordinate}')
     cash, real = workbook['4_2'], workbook['4_3']
-    for col in range(2, 25):
-        gap = abs(sum(cash.cell(r, col).value for r in AREA_ROWS) - cash.cell(25, col).value)
-        require(gap <= CASH_ROUNDING_TOLERANCE + 1e-9,
-                f'History cash {YEARS[col-2]}: area total exceeds £0.6bn rounding tolerance ({gap})')
-        gap = abs(cash.cell(25, col).value + cash.cell(26, col).value - cash.cell(27, col).value)
-        require(gap <= 0.15 + 1e-9, f'History cash {YEARS[col-2]}: TES + adjustments differs from TME')
+    for view, sheet in [('cash', cash), ('real', real)]:
+        for col in range(2, 25):
+            gap = abs(sum(sheet.cell(r, col).value for r in AREA_ROWS) - sheet.cell(25, col).value)
+            require(gap <= CASH_ROUNDING_TOLERANCE + 1e-9,
+                    f'History {view} {YEARS[col-2]}: area total exceeds £0.6bn rounding tolerance ({gap})')
+            gap = abs(sheet.cell(25, col).value + sheet.cell(26, col).value - sheet.cell(27, col).value)
+            require(gap <= 0.15 + 1e-9,
+                    f'History {view} {YEARS[col-2]}: TES + adjustments differs from TME')
+    # Both tables publish the same base-year inputs to £0.1bn. At D_base /
+    # D_base = 1 the rounded amounts must be identical, not merely within £0.1bn.
     for row in RAW_LABELS:
         require(cash.cell(row, 24).value == real.cell(row, 24).value,
                 f'History real base-year amount differs from cash at X{row}')
+    aggregate = workbook['4_1']
+    require(aggregate['M4'].value == 'Total Managed Expenditure (3)', 'Aggregate TME scope changed')
+    require('Outturn' in aggregate['B3'].value and '2025-26' in aggregate['B3'].value,
+            'Aggregate TME outturn boundary changed')
+    for cell, expected in [('M5', 'Nominal\n£ billion'), ('N5', 'Real terms (1)\n£ billion'),
+                           ('O5', 'Per cent\nof GDP (2)')]:
+        require(aggregate[cell].value == expected, f'Aggregate {cell}: units changed')
+    for col in range(2, 25):
+        year = YEARS[col-2]
+        aggregate_row = col + 22
+        require(aggregate.cell(aggregate_row, 2).value == year, 'Aggregate TME year changed')
+        for sheet, aggregate_col in [('4_2', 13), ('4_3', 14), ('4_4', 15)]:
+            left = number(workbook[sheet].cell(27, col).value, f'{sheet} TME {year}')
+            right = number(aggregate.cell(aggregate_row, aggregate_col).value, f'4_1 TME {year}')
+            # Two separately rounded £0.1bn (or 0.1 percentage point) totals.
+            require(abs(left - right) <= 0.1 + 1e-9,
+                    f'History cross-table TME {year}: {sheet} differs from 4_1')
+    for nominal_col, real_col in [(3, 4), (9, 10), (13, 14)]:
+        require(number(aggregate.cell(46, nominal_col).value, '4_1 nominal base-year') ==
+                number(aggregate.cell(46, real_col).value, '4_1 real base-year'),
+                'Aggregate real base-year amount differs from nominal')
+    require('2025-26 price levels' in aggregate['B51'].value and
+            '30 June 2026' in aggregate['B51'].value, 'Aggregate deflator base/vintage changed')
     require('2025-26 price levels' in real['A28'].value and '30 June 2026' in real['A28'].value,
             'Real price base or deflator vintage changed')
     require('30 June 2026' in workbook['4_4']['A28'].value, 'GDP vintage changed')
@@ -342,7 +369,7 @@ def validate(root):
     finally:
         workbook.close()
     print('PASS: independent history SHA/source copies, every annual/fixed JSON/CSV/HTML observation, '
-          'year, units, status, locators, notes, base year and cash reconciliation')
+          'year, units, status, locators, notes, base-year identity, cash/real reconciliation and cross-table TME')
 
 
 class MutationTests(unittest.TestCase):
@@ -493,9 +520,79 @@ class MutationTests(unittest.TestCase):
     def test_real_base_year(self):
         workbook = openpyxl.load_workbook(self.root / 'sources/history.xlsx', data_only=True)
         self.addCleanup(workbook.close)
-        workbook['4_3']['X20'] = 9999
-        with self.assertRaisesRegex(ValidationError, 'base-year'):
+        for row in RAW_LABELS:
+            with self.subTest(row=row):
+                cell = workbook['4_3'].cell(row, 24)
+                original = cell.value
+                cell.value = original + 0.1
+                with self.assertRaisesRegex(ValidationError, 'base-year'):
+                    validate_workbook(workbook)
+                cell.value = original
+
+    def test_exported_base_year(self):
+        # Every generated series is linked to the validated raw base-year pair.
+        for row in range(22):
+            with self.subTest(row=row):
+                self.mutate_json(lambda d: d['series'][row]['values'][-1].update(
+                    real_gbp_billion=d['series'][row]['values'][-1]['real_gbp_billion'] + 0.1))
+
+    def test_real_reconciliation_boundaries(self):
+        workbook = openpyxl.load_workbook(self.root / 'sources/history.xlsx', data_only=True)
+        self.addCleanup(workbook.close)
+        real = workbook['4_3']
+        original = real['B6'].value
+        real['B6'] = real['B25'].value - sum(real.cell(r, 2).value for r in AREA_ROWS if r != 6) + 0.6
+        validate_workbook(workbook)
+        real['B6'] = real['B6'].value + 0.1
+        with self.assertRaisesRegex(ValidationError, 'real.*rounding'):
             validate_workbook(workbook)
+        real['B6'] = original
+        real['B26'] = real['B27'].value - real['B25'].value + 0.15
+        validate_workbook(workbook)
+        real['B26'] = real['B26'].value + 0.01
+        with self.assertRaisesRegex(ValidationError, 'real.*adjustments'):
+            validate_workbook(workbook)
+
+    def test_aggregate_base_year(self):
+        workbook = openpyxl.load_workbook(self.root / 'sources/history.xlsx', data_only=True)
+        self.addCleanup(workbook.close)
+        for coordinate in ('D46', 'J46', 'N46'):
+            with self.subTest(cell=coordinate):
+                cell = workbook['4_1'][coordinate]
+                original = cell.value
+                cell.value = original + 0.1
+                with self.assertRaisesRegex(ValidationError, 'base-year'):
+                    validate_workbook(workbook)
+                cell.value = original
+
+    def test_aggregate_schema(self):
+        workbook = openpyxl.load_workbook(self.root / 'sources/history.xlsx', data_only=True)
+        self.addCleanup(workbook.close)
+        for coordinate, value, message in [('M5', 'GBP million', 'units'),
+                                           ('B3', 'Forecast from 2025-26', 'outturn'),
+                                           ('B24', '2002-03', 'year'),
+                                           ('B51', '2024-25 prices', 'deflator')]:
+            with self.subTest(cell=coordinate):
+                cell = workbook['4_1'][coordinate]
+                original = cell.value
+                cell.value = value
+                with self.assertRaisesRegex(ValidationError, message):
+                    validate_workbook(workbook)
+                cell.value = original
+
+    def test_cross_table_tme_boundary(self):
+        workbook = openpyxl.load_workbook(self.root / 'sources/history.xlsx', data_only=True)
+        self.addCleanup(workbook.close)
+        for coordinate in ('M24', 'N24', 'O24'):
+            with self.subTest(cell=coordinate):
+                cell = workbook['4_1'][coordinate]
+                original = cell.value
+                cell.value = original + 0.1
+                validate_workbook(workbook)
+                cell.value = original + 0.2
+                with self.assertRaisesRegex(ValidationError, 'cross-table'):
+                    validate_workbook(workbook)
+                cell.value = original
 
 
 def main():
