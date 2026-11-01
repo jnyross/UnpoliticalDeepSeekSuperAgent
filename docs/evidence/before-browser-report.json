@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-11-01T21:08:39.814Z",
+  "revision": "f5886d8514eaaa5c46b55646cef35243a7ece04e",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 354,
+      "sha256": "2a191bf8bafd38be7c2dd8435d3e78ceaa48e51120e41cafcd9247e9c4701908",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "before-index-html-mobile.png",
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "before-index-html-desktop.png",
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

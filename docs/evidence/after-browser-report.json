@@ -1,0 +1,70 @@
+{
+  "capturedAt": "2026-11-01T21:13:57.462Z",
+  "baseRevision": "f5886d8514eaaa5c46b55646cef35243a7ece04e",
+  "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
+  "mode": "automated-checks",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 11393,
+      "sha256": "72db0de6730d574dc07bdfd9eb715aed79cb3729883d29e7fa37aff3b0db3295",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-index-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-index-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

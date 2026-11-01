@@ -1,0 +1,12 @@
+{
+  "name": "unpolitical-static-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:browser": "node tests/browser.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.0",
+    "playwright": "1.56.1"
+  }
+}

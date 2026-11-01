@@ -1,0 +1,102 @@
+{
+  "year": "2025-26",
+  "status": "outturn",
+  "unit": "GBP million",
+  "geography": "United Kingdom",
+  "scope": "Public sector expenditure on services",
+  "rows": [
+    {
+      "label": "Total general public services",
+      "value": 165504,
+      "cell": "G20"
+    },
+    {
+      "label": "Total defence",
+      "value": 65418,
+      "cell": "G27"
+    },
+    {
+      "label": "Total public order and safety",
+      "value": 55720,
+      "cell": "G37"
+    },
+    {
+      "label": "Total economic affairs",
+      "value": 93959,
+      "cell": "G56"
+    },
+    {
+      "label": "Total environment protection",
+      "value": 19157,
+      "cell": "G64"
+    },
+    {
+      "label": "Total housing and community amenities",
+      "value": 22470,
+      "cell": "G74"
+    },
+    {
+      "label": "Total health",
+      "value": 257542,
+      "cell": "G79"
+    },
+    {
+      "label": "Total recreation, culture and religion",
+      "value": 15053,
+      "cell": "G87"
+    },
+    {
+      "label": "Total education",
+      "value": 125721,
+      "cell": "G99"
+    },
+    {
+      "label": "Total social protection",
+      "value": 407270,
+      "cell": "G121"
+    },
+    {
+      "label": "Total EU transactions",
+      "value": -166,
+      "cell": "G130"
+    }
+  ],
+  "total": {
+    "label": "Public sector expenditure on services",
+    "value": 1227648,
+    "cell": "G131"
+  },
+  "adjustment": {
+    "label": "Accounting adjustments",
+    "value": 132474,
+    "cell": "G132"
+  },
+  "tme": {
+    "label": "Total Managed Expenditure (11)",
+    "value": 1360122,
+    "cell": "G133"
+  },
+  "extras": [
+    {
+      "label": "of which: pensions",
+      "value": 154858,
+      "cell": "G107"
+    },
+    {
+      "label": "of which: central government debt interest",
+      "value": 96946,
+      "cell": "G15"
+    }
+  ],
+  "health_share": 20.978488947972057,
+  "source": {
+    "file": "spending.xlsx",
+    "url": "https://assets.publishing.service.gov.uk/media/6a574acd2cbe5d1c179a64fd/July_PSS_2026_Chapter_5.xlsx",
+    "sha256": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+    "publication": "Public spending statistics: July 2026",
+    "published": "2026-07-16",
+    "date": "2026-07-29",
+    "downloaded": "2026-11-01",
+    "release_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2026"
+  }
+}
