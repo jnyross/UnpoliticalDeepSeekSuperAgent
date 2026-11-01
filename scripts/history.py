@@ -184,6 +184,7 @@ def history_render(d):
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>UK spending history | UnpoliticalAF</title><meta name="description" content="23 years of UK functional spending with cash, real and GDP-share values and explicit historical gaps."><style>{css}</style></head><body><a class="skip" href="#main">Skip to content</a>
 <header><a href="index.html">UnpoliticalAF · latest spending</a></header><main id="main">
 <h1>UK spending over time</h1><p>23 full fiscal years, 2003-04 to 2025-26. These are outturn figures: recorded spending that can still be revised. A fiscal year runs from April to March.</p>
+<p><a href="history-cash.html#services-total">See the spending charts: cash, inflation-adjusted and GDP share</a>. Switch views beside each chart; no JavaScript is needed.</p>
 <p>Each table shows three views side by side: <strong>cash</strong>, <strong>real spending at 2025-26 prices</strong> and <strong>share of GDP</strong>. GDP measures the size of the economy. Real figures use ONS GDP deflators released 30 June 2026. GDP shares use ONS GDP published 30 June 2026. We use the Treasury’s published views, not a new calculation.</p>
 <p>{esc(d['vintage_note'])} The <a href="index.html">latest overview</a> covers {d['latest_overview_year']}. Its figures are not appended to these tables.</p>
 <p>{esc(d['limitations'])}</p><nav aria-label="Spending areas">{contents} · <a href="#fixed-decades">Fixed ten-year snapshots</a></nav>
@@ -214,6 +215,7 @@ def history_outputs(root):
                     p['gdp_percent'], *[p['cells'].get(v, '') for v in VIEWS],
                     p['missing_reason'] or '', d['source']['workbook_vintage'],
                     d['source']['sha256'], selection])
-    return {'history.html': history_render(d).encode(),
+    from history_charts import chart_outputs
+    return {**chart_outputs(d), 'history.html': history_render(d).encode(),
             'data/history.json': (json.dumps(d, indent=2, ensure_ascii=False)+'\n').encode(),
             'data/history.csv': stream.getvalue().encode()}
