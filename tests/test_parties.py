@@ -2,7 +2,6 @@
 import copy
 import json
 from pathlib import Path
-import shutil
 import sys
 import tempfile
 import unittest
@@ -52,84 +51,83 @@ class PartyOffersTests(unittest.TestCase):
     def test_changed_source_hash_fails(self):
         self.fails(lambda d: d['sources'][0].update(sha256='0' * 64))
 
-    def extracted_text(self, mutate=lambda text, source: text):
-        """Simulate another Poppler version without changing retained evidence."""
-        sources = {s['file']: s for s in self.original['sources']}
-        def run(command, **kwargs):
-            source = sources[Path(command[-2]).name]
-            self.assertEqual('-raw' in command, source.get('text_mode') == 'raw')
-            text = (ROOT / 'sources' / source['text_file']).read_text(encoding='utf-8')
-            Path(command[-1]).write_text(mutate(text, source), encoding='utf-8')
-        return patch.object(parties.subprocess, 'run', side_effect=run)
+    def test_changed_transcript_hash_fails(self):
+        self.fails(lambda d: d['sources'][0].update(text_sha256='0' * 64))
 
-    def test_extraction_layout_can_differ_without_rewriting_provenance(self):
-        # Observed Poppler 24 vs 26 differences include dot-leader spacing,
-        # line breaks and merged words elsewhere in the document. Only quoted
-        # evidence must match, on the same page, in both independent readings.
-        def layout(text, source):
-            pages = text.split('\f')
-            pages[0] += '\nDifferent extraction layout on the cover\n'
-            return '\f'.join(pages).replace(' ', '  ').replace('\n', '\n\n')
-        before = {s[key]: (ROOT / 'sources' / s[key]).read_bytes()
-                  for s in self.original['sources'] for key in ('file', 'text_file')}
-        with self.extracted_text(layout):
+    def test_invalid_page_fails(self):
+        for page in (0, -1, True, '1', 100000):
+            with self.subTest(page=page):
+                self.fails(lambda d: d['parties'][0].update(pdf_page=page))
+
+    def test_poppler_layout_variance_passes_with_direct_page_checks(self):
+        run = parties.subprocess.run
+        calls = []
+
+        def reflow(command, **kwargs):
+            result = run(command, **kwargs)
+            calls.append(command)
+            out = Path(command[-1])
+            # Deliberately differ from the retained bytes: new wrapping, spacing,
+            # page decorations, and unrelated surrounding text are not evidence changes.
+            text = out.read_text()
+            out.write_text('Different page header\n' + '\n  '.join(text.split()) + '\n\f')
+            return result
+
+        with patch.object(parties.subprocess, 'run', side_effect=reflow):
             self.assertEqual(parties.validate(ROOT), self.original)
-        for name, raw in before.items():
-            self.assertEqual((ROOT / 'sources' / name).read_bytes(), raw)
+        self.assertEqual(len(calls), len(self.original['parties']))
+        sources = {s['id']: s for s in self.original['sources']}
+        for command, party in zip(calls, self.original['parties']):
+            self.assertEqual(command[1:5], ['-f', str(party['pdf_page']), '-l', str(party['pdf_page'])])
+            source = sources[party['source_id']]
+            self.assertEqual(Path(command[-2]).name, source['file'])
+            self.assertEqual('-raw' in command, source.get('text_mode') == 'raw')
 
-    def test_quote_must_be_in_fresh_pdf_extraction(self):
-        p = self.original['parties'][0]
-        def remove_quote(text, source):
-            pages = text.split('\f')
-            if source['id'] == p['source_id']:
-                pages[p['pdf_page']-1] = 'No supporting words on this page.'
-            return '\f'.join(pages)
-        with self.extracted_text(remove_quote):
-            with self.assertRaisesRegex(AssertionError, 'cited PDF page'):
+    def test_regenerated_page_must_independently_support_quote(self):
+        run = parties.subprocess.run
+
+        def missing_quote(command, **kwargs):
+            result = run(command, **kwargs)
+            Path(command[-1]).write_text('No source quote on this PDF page.\n\f')
+            return result
+
+        with patch.object(parties.subprocess, 'run', side_effect=missing_quote):
+            with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
                 parties.validate(ROOT)
 
-    def test_fresh_pdf_quote_on_another_page_is_not_evidence(self):
-        p = self.original['parties'][0]
-        def move_page(text, source):
-            if source['id'] != p['source_id']:
-                return text
-            pages = text.split('\f')
-            pages[0], pages[p['pdf_page']-1] = pages[p['pdf_page']-1], pages[0]
-            return '\f'.join(pages)
-        with self.extracted_text(move_page):
-            with self.assertRaisesRegex(AssertionError, 'cited PDF page'):
-                parties.validate(ROOT)
+    def test_changed_quote_words_or_punctuation_fail(self):
+        run = parties.subprocess.run
+        quote = self.original['parties'][0]['excerpt']
+        for changed in (quote.replace(' ', ' invented ', 1), quote.replace(' ', ', ', 1)):
+            with self.subTest(changed=changed):
+                def changed_quote(command, **kwargs):
+                    result = run(command, **kwargs)
+                    Path(command[-1]).write_text(changed + '\n\f')
+                    return result
+                with patch.object(parties.subprocess, 'run', side_effect=changed_quote):
+                    with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+                        parties.validate(ROOT)
 
-    def test_quote_must_still_be_in_retained_transcript(self):
+    def test_rehashed_forged_transcript_is_not_pdf_evidence(self):
         d = copy.deepcopy(self.original)
-        d['parties'][0]['excerpt'] = 'A fabricated manifesto promise.'
-        p = d['parties'][0]
-        def insert_quote(text, source):
-            pages = text.split('\f')
-            if source['id'] == p['source_id']:
-                pages[p['pdf_page']-1] += p['excerpt']
-            return '\f'.join(pages)
-        with self.extracted_text(insert_quote), patch.object(parties, 'load', return_value=d):
-            with self.assertRaisesRegex(AssertionError, 'cited retained text page'):
-                parties.validate(ROOT)
-
-    def test_invalid_page_numbers_fail_closed(self):
-        with self.extracted_text():
-            for page in (0, -1, 10000, True, '17'):
-                with self.subTest(page=page):
-                    self.fails(lambda d: d['parties'][0].update(pdf_page=page))
-
-    def test_raw_pdf_and_transcript_byte_changes_fail_hash_check(self):
+        party = d['parties'][0]
+        source = next(s for s in d['sources'] if s['id'] == party['source_id'])
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            shutil.copytree(ROOT / 'sources', root / 'sources')
-            for key in ('file', 'text_file'):
-                path = root / 'sources' / self.original['sources'][0][key]
-                raw = path.read_bytes()
-                path.write_bytes(raw + b'\n')  # Even cosmetic retained-byte drift fails.
-                with self.subTest(key=key), self.assertRaisesRegex(AssertionError, 'Source hash changed'):
+            base = root / 'sources'
+            base.mkdir()
+            for path in (ROOT / 'sources').iterdir():
+                if path.is_file() and path.name != source['text_file']:
+                    (base / path.name).symlink_to(path)
+            transcript = (ROOT / 'sources' / source['text_file']).read_text().split('\f')
+            party['excerpt'] = 'An invented promise unsupported by the retained PDF.'
+            transcript[party['pdf_page'] - 1] += '\n' + party['excerpt']
+            forged = base / source['text_file']
+            forged.write_text('\f'.join(transcript))
+            source['text_sha256'] = parties.digest(forged)
+            with patch.object(parties, 'load', return_value=d):
+                with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
                     parties.validate(root)
-                path.write_bytes(raw)
 
     def test_unequal_missing_evidence_fails(self):
         self.fails(lambda d: d['parties'][0].update(costing='Zero'))

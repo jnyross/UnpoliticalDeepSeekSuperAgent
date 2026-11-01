@@ -1,0 +1,813 @@
+{
+  "source": {
+    "file": "income.xlsx",
+    "url": "https://obr.uk/docs/sodugn2q20l901oy19v1cz5e/PSF_aggregates_databank_Oct_EFO.xlsx",
+    "download_url": "https://obr.uk/download/public-finances-databank-october-2026-efo/",
+    "sha256": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+    "publication": "Public finances databank – October 2026 EFO",
+    "published": "2026-10-28",
+    "date": "2026-10-28",
+    "downloaded": "2026-11-01",
+    "release_url": "https://obr.uk/data/",
+    "metadata_file": "income-release.txt",
+    "metadata_sha256": "86c0c89c2a930e675c04e05aa76748a6f910b623a9ca5775bbb11b265bbfafe6",
+    "geography": "United Kingdom",
+    "scope": "UK public sector, OBR public finances definitions",
+    "next_release": "No next release date is announced on the retained OBR data page; databanks are normally updated around two working days after the monthly public finance release."
+  },
+  "geography": "United Kingdom",
+  "year": "2025-26",
+  "status": "outturn",
+  "unit": "GBP billion, cash",
+  "scope": "UK public sector, OBR public finances definitions",
+  "records": [
+    {
+      "id": "receipt-c",
+      "label": "VAT (net of VAT refunds)",
+      "kind": "tax-type",
+      "value_gbp_billion": 180.326,
+      "cells": [
+        "Receipts (£bn)!C33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "CTRU"
+    },
+    {
+      "id": "receipt-d",
+      "label": "VAT refunds",
+      "kind": "tax-type",
+      "value_gbp_billion": 30.5,
+      "cells": [
+        "Receipts (£bn)!D33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "AHGO"
+    },
+    {
+      "id": "receipt-e",
+      "label": "Fuel duties",
+      "kind": "tax-type",
+      "value_gbp_billion": 24.559,
+      "cells": [
+        "Receipts (£bn)!E33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "CUDG"
+    },
+    {
+      "id": "receipt-f",
+      "label": "Stamp duty land tax (includes Scottish LBTT and ATED)",
+      "kind": "tax-type",
+      "value_gbp_billion": 16.627,
+      "cells": [
+        "Receipts (£bn)!F33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "MM9F"
+    },
+    {
+      "id": "receipt-g",
+      "label": "Stamp taxes on shares",
+      "kind": "tax-type",
+      "value_gbp_billion": 4.735,
+      "cells": [
+        "Receipts (£bn)!G33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "BKST"
+    },
+    {
+      "id": "receipt-h",
+      "label": "Tobacco duties",
+      "kind": "tax-type",
+      "value_gbp_billion": 7.468,
+      "cells": [
+        "Receipts (£bn)!H33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "GTAO"
+    },
+    {
+      "id": "receipt-i",
+      "label": "Alcohol duties",
+      "kind": "tax-type",
+      "value_gbp_billion": 12.432,
+      "cells": [
+        "Receipts (£bn)!I33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "MF6V"
+    },
+    {
+      "id": "receipt-j",
+      "label": "Vehicle excise duties",
+      "kind": "tax-type",
+      "value_gbp_billion": 9.031,
+      "cells": [
+        "Receipts (£bn)!J33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "EKED + CDDZ"
+    },
+    {
+      "id": "receipt-k",
+      "label": "Air passenger duty",
+      "kind": "tax-type",
+      "value_gbp_billion": 4.616,
+      "cells": [
+        "Receipts (£bn)!K33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "CWAA"
+    },
+    {
+      "id": "receipt-l",
+      "label": "Insurance premium tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 9.039,
+      "cells": [
+        "Receipts (£bn)!L33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "CWAD"
+    },
+    {
+      "id": "receipt-m",
+      "label": "Climate change levy and carbon price floor",
+      "kind": "tax-type",
+      "value_gbp_billion": 1.74,
+      "cells": [
+        "Receipts (£bn)!M33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "LSNT"
+    },
+    {
+      "id": "receipt-n",
+      "label": "Environmental levies (Renewables Obligation and Contracts for Difference)",
+      "kind": "tax-type",
+      "value_gbp_billion": 11.797,
+      "cells": [
+        "Receipts (£bn)!N33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "AHGP"
+    },
+    {
+      "id": "receipt-o",
+      "label": "Emissions trading scheme",
+      "kind": "tax-type",
+      "value_gbp_billion": 2.122,
+      "cells": [
+        "Receipts (£bn)!O33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "M98G"
+    },
+    {
+      "id": "receipt-p",
+      "label": "Diverted profits tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 0.604,
+      "cells": [
+        "Receipts (£bn)!P33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "N43V"
+    },
+    {
+      "id": "receipt-q",
+      "label": "Pay as your earn (PAYE) income tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 280.513,
+      "cells": [
+        "Receipts (£bn)!Q33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "MS6W"
+    },
+    {
+      "id": "receipt-r",
+      "label": "Self assessed (SA) income tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 54.071,
+      "cells": [
+        "Receipts (£bn)!R33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "LISB"
+    },
+    {
+      "id": "receipt-s",
+      "label": "Other income tax",
+      "kind": "tax-type",
+      "value_gbp_billion": -5.246,
+      "cells": [
+        "Receipts (£bn)!S33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "MF6X"
+    },
+    {
+      "id": "receipt-t",
+      "label": "Capital gains tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 24.31,
+      "cells": [
+        "Receipts (£bn)!T33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "MS62"
+    },
+    {
+      "id": "receipt-u",
+      "label": "Onshore corporation tax (includes Bank Surcharge and EGL)",
+      "kind": "tax-type",
+      "value_gbp_billion": 97.798,
+      "cells": [
+        "Receipts (£bn)!U33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "CPSC"
+    },
+    {
+      "id": "receipt-v",
+      "label": "Offshore corporation tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 1.794,
+      "cells": [
+        "Receipts (£bn)!V33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "CPSB"
+    },
+    {
+      "id": "receipt-w",
+      "label": "Petroleum revenue tax",
+      "kind": "tax-type",
+      "value_gbp_billion": -0.443,
+      "cells": [
+        "Receipts (£bn)!W33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "ACCJ"
+    },
+    {
+      "id": "receipt-x",
+      "label": "Energy profits levy",
+      "kind": "tax-type",
+      "value_gbp_billion": 2.756,
+      "cells": [
+        "Receipts (£bn)!X33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JIS6"
+    },
+    {
+      "id": "receipt-y",
+      "label": "Bank levy",
+      "kind": "tax-type",
+      "value_gbp_billion": 1.515,
+      "cells": [
+        "Receipts (£bn)!Y33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "KIH3"
+    },
+    {
+      "id": "receipt-z",
+      "label": "Licence fee receipts",
+      "kind": "tax-type",
+      "value_gbp_billion": 3.91,
+      "cells": [
+        "Receipts (£bn)!Z33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "DH7A"
+    },
+    {
+      "id": "receipt-aa",
+      "label": "Inheritance tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 8.466,
+      "cells": [
+        "Receipts (£bn)!AA33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "ACCH"
+    },
+    {
+      "id": "receipt-ab",
+      "label": "National insurance contributions (NICs)",
+      "kind": "tax-type",
+      "value_gbp_billion": 204.429,
+      "cells": [
+        "Receipts (£bn)!AB33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "AIIH"
+    },
+    {
+      "id": "receipt-ac",
+      "label": "Council tax",
+      "kind": "tax-type",
+      "value_gbp_billion": 50.444,
+      "cells": [
+        "Receipts (£bn)!AC33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "NMHM"
+    },
+    {
+      "id": "interest-dividends",
+      "label": "Interest and dividend receipts",
+      "kind": "non-tax-type",
+      "value_gbp_billion": 40.646,
+      "cells": [
+        "Receipts (£bn)!AD33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2L+JW2M"
+    },
+    {
+      "id": "operating-surplus",
+      "label": "Gross operating surplus",
+      "kind": "non-tax-type",
+      "value_gbp_billion": 82.91,
+      "cells": [
+        "Receipts (£bn)!AE33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2K"
+    },
+    {
+      "id": "mixed-other-receipts",
+      "label": "Other public sector taxes and receipts (mixed source line)",
+      "kind": "mixed",
+      "value_gbp_billion": 67.843,
+      "cells": [
+        "Receipts (£bn)!AF33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "residual"
+    },
+    {
+      "id": "receipts",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1231.312,
+      "cells": [
+        "Receipts (£bn)!AG33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "taxes",
+      "label": "National accounts taxes",
+      "kind": "total",
+      "value_gbp_billion": 1104.686,
+      "cells": [
+        "Receipts (£bn)!AH33"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "GCSU"
+    },
+    {
+      "id": "tme",
+      "label": "Total Managed Expenditure",
+      "kind": "spending",
+      "value_gbp_billion": 1365.598,
+      "cells": [
+        "Aggregates (£bn)!D87"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "KX5Q"
+    },
+    {
+      "id": "borrowing",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 134.286,
+      "cells": [
+        "Aggregates (£bn)!O87"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "debt",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 2916.8,
+      "cells": [
+        "Aggregates (£bn)!X87"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2026",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
+    },
+    {
+      "id": "other-taxes",
+      "label": "Other taxes (residual, not separately named here)",
+      "kind": "tax-type",
+      "value_gbp_billion": 64.773,
+      "cells": [
+        "Receipts (£bn)!AH33",
+        "Receipts (£bn)!C33",
+        "Receipts (£bn)!D33",
+        "Receipts (£bn)!E33",
+        "Receipts (£bn)!F33",
+        "Receipts (£bn)!G33",
+        "Receipts (£bn)!H33",
+        "Receipts (£bn)!I33",
+        "Receipts (£bn)!J33",
+        "Receipts (£bn)!K33",
+        "Receipts (£bn)!L33",
+        "Receipts (£bn)!M33",
+        "Receipts (£bn)!N33",
+        "Receipts (£bn)!O33",
+        "Receipts (£bn)!P33",
+        "Receipts (£bn)!Q33",
+        "Receipts (£bn)!R33",
+        "Receipts (£bn)!S33",
+        "Receipts (£bn)!T33",
+        "Receipts (£bn)!U33",
+        "Receipts (£bn)!V33",
+        "Receipts (£bn)!W33",
+        "Receipts (£bn)!X33",
+        "Receipts (£bn)!Y33",
+        "Receipts (£bn)!Z33",
+        "Receipts (£bn)!AA33",
+        "Receipts (£bn)!AB33",
+        "Receipts (£bn)!AC33"
+      ],
+      "formula": "taxes - sum(receipt-c through receipt-ac)",
+      "operands": [
+        "taxes",
+        "receipt-c",
+        "receipt-d",
+        "receipt-e",
+        "receipt-f",
+        "receipt-g",
+        "receipt-h",
+        "receipt-i",
+        "receipt-j",
+        "receipt-k",
+        "receipt-l",
+        "receipt-m",
+        "receipt-n",
+        "receipt-o",
+        "receipt-p",
+        "receipt-q",
+        "receipt-r",
+        "receipt-s",
+        "receipt-t",
+        "receipt-u",
+        "receipt-v",
+        "receipt-w",
+        "receipt-x",
+        "receipt-y",
+        "receipt-z",
+        "receipt-aa",
+        "receipt-ab",
+        "receipt-ac"
+      ],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": null
+    },
+    {
+      "id": "non-tax",
+      "label": "Non-tax receipts",
+      "kind": "total",
+      "value_gbp_billion": 126.626,
+      "cells": [
+        "Receipts (£bn)!AG33",
+        "Receipts (£bn)!AH33"
+      ],
+      "formula": "receipts - taxes",
+      "operands": [
+        "receipts",
+        "taxes"
+      ],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": null
+    },
+    {
+      "id": "other-non-tax",
+      "label": "Other non-tax receipts (residual)",
+      "kind": "non-tax-type",
+      "value_gbp_billion": 3.07,
+      "cells": [
+        "Receipts (£bn)!AG33",
+        "Receipts (£bn)!AH33",
+        "Receipts (£bn)!AD33",
+        "Receipts (£bn)!AE33"
+      ],
+      "formula": "non-tax - interest-dividends - operating-surplus",
+      "operands": [
+        "non-tax",
+        "interest-dividends",
+        "operating-surplus"
+      ],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2025-26",
+      "status": "outturn",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": null
+    }
+  ],
+  "checks": [
+    {
+      "name": "Tax breakdown",
+      "formula": "sum(tax-type records) - taxes",
+      "residual_gbp_billion": 0.0,
+      "tolerance_gbp_billion": 1e-06
+    },
+    {
+      "name": "Non-tax breakdown",
+      "formula": "sum(non-tax-type records) - non-tax",
+      "residual_gbp_billion": -0.0,
+      "tolerance_gbp_billion": 1e-06
+    },
+    {
+      "name": "Mixed other line split",
+      "formula": "other-taxes + other-non-tax - mixed-other-receipts",
+      "residual_gbp_billion": -0.0,
+      "tolerance_gbp_billion": 1e-06
+    },
+    {
+      "name": "Spending and receipts",
+      "formula": "tme - receipts - borrowing",
+      "residual_gbp_billion": 0.0,
+      "tolerance_gbp_billion": 1e-06
+    },
+    {
+      "name": "Receipts across sheets",
+      "formula": "Receipts AG - Aggregates C",
+      "residual_gbp_billion": 0.0,
+      "tolerance_gbp_billion": 1e-06
+    },
+    {
+      "name": "Taxes across sheets",
+      "formula": "Receipts AH - Aggregates I",
+      "residual_gbp_billion": 0.0,
+      "tolerance_gbp_billion": 1e-06
+    }
+  ],
+  "notes": [
+    {
+      "cell": "Receipts (£bn)!C40",
+      "text": "Outturn fiscal data consistent with the ONS/HM Treasury Public Sector Finances Statistical Bulletin released on 22 September 2026."
+    },
+    {
+      "cell": "Receipts (£bn)!C41",
+      "text": "Forecast years from 2026-27 are consistent with the OBR Economic and fiscal outlook forecast published October 2026."
+    },
+    {
+      "cell": "Receipts (£bn)!C42",
+      "text": "1 Includes road lorry user charge. 2 Also includes capacity markets, green gas levy and warm home discount. 3 Also includes, residential property developers tax and Pillar 2 taxes"
+    },
+    {
+      "cell": "Glossary!C5",
+      "text": "Revenue relating to activities in the current year, comprising mainly direct and indirect taxes, but also including social security contributions, interest, dividends, capital taxes and profits from trading activities."
+    },
+    {
+      "cell": "Glossary!C6",
+      "text": "The sum of public sector current expenditure, public sector net investment and public sector depreciation. "
+    },
+    {
+      "cell": "Glossary!C11",
+      "text": "The difference between total public sector receipts and expenditure on an accrued basis each year. As the widest measure of borrowing it is a key indicator of the fiscal position. PSNB is the headline measure of 'the deficit'."
+    },
+    {
+      "cell": "Glossary!C14",
+      "text": "A stock measure of the public sector's net liability position i.e. its liabilities minus its liquid assets. It is broadly the stock equivalent of public sector net borrowing, but measured on a cash rather than an accrued basis. It is also the fiscal measure used for the Government's supplementary fiscal target. PSND is the key measure of the country's overall debt."
+    },
+    {
+      "cell": "Glossary!C15",
+      "text": "A measure of the amount of cash which is needed to make up the difference betweeen spending and revenues. This is different from net borrowing as it also includes financial transactions, which will affect the cash position but are not included in net borrowing. Public sector net debt is driven by changes in the public sector net cash requirement."
+    }
+  ],
+  "rounding": "Raw values are retained to 12 decimal places in GBP billion; HTML rounds to 0.1 billion. Source actuals are recorded to 0.001 billion. Reconciliations use unrounded data with 0.000001 billion numeric tolerance, not independently rounded display amounts.",
+  "selection": "Latest complete outturn before the first forecast year stated in Receipts (£bn)!C41.",
+  "reconciliation": "All identities use one OBR workbook vintage and public sector accounting basis. Tax rows C:AC plus the derived other-tax residual equal national accounts taxes. AF is a mixed tax/non-tax line, not a tax type. It is split by residual against the published tax total; the residuals do not identify further individual taxes. The VAT refund row belongs in the published national accounts tax basis: do not subtract it again or treat it as non-tax. Negative tax entries are net receipts or repayments, not missing data. TME less current receipts equals net borrowing on this accrued basis. Debt is not added to annual receipts or borrowing; changes in debt also reflect financial transactions and cash/accrual differences. This workbook is not reconciled to a separate Treasury workbook vintage."
+}

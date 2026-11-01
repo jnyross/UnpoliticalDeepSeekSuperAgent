@@ -471,6 +471,148 @@ class SnapshotTests(unittest.TestCase):
             discover.discover(self.source, root=self.root, get=mock.Mock(side_effect=OSError('offline')))
 
 
+class OBRDatabankTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.source = dict(id='obr-databank', adapter='obr-databank-latest',
+                           manifest='income.json', page_url='https://obr.uk/data/',
+                           download_path_pattern=r'/download/public-finances-databank-[a-z0-9-]+/')
+        self.download = 'https://obr.uk/download/public-finances-databank-october-2026-efo/'
+        self.raw = b'workbook fixture'
+        self.baseline = dict(url='https://obr.uk/docs/retained.xlsx', download_url=self.download,
+                             release_url=self.source['page_url'], published='2026-10-28',
+                             date='2026-10-28', sha256=discover.digest(self.raw))
+        (self.root / 'income.json').write_text(json.dumps(self.baseline))
+        self.responses = {self.source['page_url']: self.page(), self.download: self.raw,
+                          self.baseline['url']: self.raw}
+        self.calls = []
+        patch = mock.patch.object(discover.urllib.request.OpenerDirector, 'open',
+                                  side_effect=AssertionError('Unexpected network request'))
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def page(self, url=None, date='28 October 2026', stamp='123'):
+        url = url or self.download
+        # Real OBR layout has duplicate icon/title anchors and a cachebuster.
+        return (f'<a href="{url}?tmstv={stamp}">xlsx</a>'
+                f'<a href="{url}?tmstv={stamp}">Public finances databank</a>'
+                f'<p>{date} &ndash; 385 KB</p>'
+                '<a href="/download/unrelated/">Unrelated</a> 30 October 2026').encode()
+
+    def get(self, url):
+        self.calls.append(url)
+        value = self.responses[url]
+        if isinstance(value, Exception):
+            raise value
+        return value
+
+    def check(self):
+        return discover.discover(self.source, self.root, self.get)
+
+    def test_unchanged_and_cachebuster_do_not_change_baseline(self):
+        before = (self.root / 'income.json').read_bytes()
+        self.assertEqual(self.check(), [])
+        self.responses[self.source['page_url']] = self.page(stamp='999999')
+        self.assertEqual(self.check(), [])
+        self.assertEqual((self.root / 'income.json').read_bytes(), before)
+
+    def test_new_release_follows_latest_page_and_checks_retained_revision(self):
+        new = self.download.replace('october', 'november')
+        self.responses[self.source['page_url']] = self.page(new, '25 November 2026')
+        self.responses[new] = b'new release'
+        update, = self.check()
+        self.assertEqual(update['evidence']['download_url'], new)
+        self.assertEqual(update['evidence']['published'], '2026-11-25')
+        self.assertEqual(update['evidence']['sha256'], discover.digest(b'new release'))
+        self.assertIn(self.baseline['url'], self.calls)
+        self.responses[self.baseline['url']] = b'revised old workbook'
+        updates = self.check()
+        self.assertEqual(len(updates), 2)
+        self.assertEqual(updates[1]['evidence']['published'], self.baseline['published'])
+        self.assertEqual(self.check(), updates)
+
+    def test_hash_only_and_date_only_revisions(self):
+        self.responses[self.download] = b'revised'
+        update, = self.check()
+        self.assertEqual(update['evidence']['updated'], self.baseline['date'])
+        self.responses[self.download] = self.raw
+        self.responses[self.source['page_url']] = self.page(date='29 October 2026')
+        update, = self.check()
+        self.assertEqual(update['evidence']['updated'], '2026-10-29')
+        self.assertEqual(update['evidence']['sha256'], self.baseline['sha256'])
+
+    def test_repeated_discovery_deduplicates_issues_and_uses_refresh_command(self):
+        self.responses[self.download] = b'revised'
+        update, = self.check()
+        run = mock.Mock(side_effect=['[[]]', 'https://github.com/o/r/issues/1'])
+        discover.open_updates([update], 'o/r', run=run)
+        body = run.call_args.args[run.call_args.args.index('--body') + 1]
+        self.assertIn('latest databank page', body)
+        self.assertIn('python3 scripts/build.py --refresh', body)
+        self.assertNotIn('--release', body)
+        run = mock.Mock(return_value=json.dumps([[{'body': body, 'state': 'closed'}]]))
+        self.assertEqual(discover.open_updates(self.check(), 'o/r', run=run)[0]['status'],
+                         'already reported')
+        self.assertEqual(run.call_count, 1)
+
+    def test_missing_ambiguous_invalid_dates_and_external_links_fail_closed(self):
+        pages = [b'<p>no databank</p>', self.page() + self.page(self.download.replace('october', 'november')),
+                 self.page(date='no date'), self.page(date='32 October 2026'),
+                 self.page(url=self.download.replace('obr.uk', 'evil.example'))]
+        for page in pages:
+            with self.subTest(page=page), self.assertRaises(ValueError):
+                self.responses[self.source['page_url']] = page
+                self.check()
+
+    def test_page_workbook_and_retained_fetch_errors_propagate(self):
+        for url in (self.source['page_url'], self.download):
+            original = self.responses[url]
+            self.responses[url] = OSError('offline')
+            with self.subTest(url=url), self.assertRaisesRegex(OSError, 'offline'):
+                self.check()
+            self.responses[url] = original
+        new = self.download.replace('october', 'november')
+        self.responses[self.source['page_url']] = self.page(new, '25 November 2026')
+        self.responses[new] = b'new'
+        self.responses[self.baseline['url']] = OSError('retained offline')
+        with self.assertRaisesRegex(OSError, 'retained offline'):
+            self.check()
+
+    def test_main_reports_obr_scope_and_fails_on_page_or_download_errors(self):
+        config = self.root / 'config/release-sources.json'
+        config.parent.mkdir()
+        config.write_text(json.dumps([self.source]))
+        report = self.root / 'report.json'
+        real_discover = discover.discover
+        for failure in (None, OSError('offline'), b'<p>changed schema</p>'):
+            self.responses[self.source['page_url']] = self.page() if failure is None else failure
+            with mock.patch.object(discover, 'ROOT', self.root), \
+                 mock.patch.object(discover, 'discover', side_effect=lambda s: real_discover(s, self.root, self.get)), \
+                 mock.patch('sys.argv', ['discover.py', '--report', str(report)]), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(discover.main(), 0 if failure is None else 1)
+            result = json.loads(report.read_text())
+            if failure is None:
+                self.assertEqual(result['sources'], [dict(id=self.source['id'], updates=[], issues=[],
+                                      discovery_scope='latest-page-releases-and-revisions')])
+                self.assertEqual(result['errors'], [])
+            else:
+                self.assertEqual(result['sources'], [])
+                self.assertEqual(result['errors'][0]['source'], self.source['id'])
+                self.assertTrue(result['errors'][0]['error'])
+
+    def test_official_redirects_allow_only_obr_https_hosts(self):
+        handler = discover.OfficialRedirect(('obr.uk', 'www.obr.uk'))
+        request = discover.urllib.request.Request(self.download)
+        for url in ('https://evil.example/a', 'https://obr.uk.evil.example/a', 'http://obr.uk/a'):
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                handler.redirect_request(request, None, 302, 'Found', {}, url)
+        self.assertEqual(handler.redirect_request(request, None, 302, 'Found', {},
+                                                 self.baseline['url']).full_url, self.baseline['url'])
+
+
 class InventoryTests(unittest.TestCase):
     def test_every_retained_party_source_and_roster_is_registered_once(self):
         inventory = json.loads((ROOT / 'config/release-sources.json').read_text())
@@ -501,6 +643,12 @@ class InventoryTests(unittest.TestCase):
             if entry['adapter'] == 'govuk-collection-attachment':
                 self.assertRegex(manifest['release_url'].removeprefix('https://www.gov.uk'),
                                  '^' + entry['release_path_pattern'] + '$')
+            elif entry['adapter'] == 'obr-databank-latest':
+                self.assertEqual(manifest['release_url'], entry['page_url'])
+                self.assertTrue(discover.allowed_url(manifest['url'], ('obr.uk', 'www.obr.uk')))
+                self.assertRegex(discover.urlsplit(manifest['download_url']).path,
+                                 '^' + entry['download_path_pattern'] + '$')
+                self.assertRegex(manifest['sha256'], r'^[0-9a-f]{64}$')
             else:
                 self.assertEqual(entry['adapter'], 'retained-url-snapshot')
                 self.assertTrue(discover.allowed_url(manifest['url'], entry['allowed_hosts']))

@@ -1,0 +1,98 @@
+{
+  "before": {
+    "capturedAt": "2026-11-01T23:38:39.803Z",
+    "revision": "462c62ace62505b8d052f4ed0496e109f7d906e0",
+    "mode": "baseline-capture-only",
+    "browser": "Chromium",
+    "pages": [
+      {
+        "path": "index.html",
+        "bytes": 15241,
+        "sha256": "1677dc1c2208781924f0acea2663ef557a22488cc31fbe395ff5bfefb2f06c0f",
+        "viewports": [
+          {
+            "viewport": {
+              "name": "mobile",
+              "width": 360,
+              "height": 800
+            },
+            "screenshot": "before-index-html-mobile.png",
+            "states": []
+          },
+          {
+            "viewport": {
+              "name": "desktop",
+              "width": 1280,
+              "height": 900
+            },
+            "screenshot": "before-index-html-desktop.png",
+            "states": []
+          }
+        ]
+      }
+    ],
+    "browserVersion": "141.0.7390.37",
+    "passed": true
+  },
+  "after": {
+    "capturedAt": "2026-11-01T23:49:12.389Z",
+    "revision": "05a9593ca2ef3a8d16b12c247c4d8c29aeead600",
+    "mode": "baseline-capture-only",
+    "browser": "Chromium",
+    "pages": [
+      {
+        "path": "income.html",
+        "bytes": 17342,
+        "sha256": "c63ade2f7b541c863bff1e09b6e5cddd2cf3507c40e187b22ff379f4ecba3b45",
+        "viewports": [
+          {
+            "viewport": {
+              "name": "mobile",
+              "width": 360,
+              "height": 800
+            },
+            "screenshot": "after-income-html-mobile.png",
+            "states": []
+          },
+          {
+            "viewport": {
+              "name": "desktop",
+              "width": 1280,
+              "height": 900
+            },
+            "screenshot": "after-income-html-desktop.png",
+            "states": []
+          }
+        ]
+      },
+      {
+        "path": "index.html",
+        "bytes": 15349,
+        "sha256": "5ff81a2c21b7644d389d46de5947ca974f13740a459735de9fe87a8ce734c9f1",
+        "viewports": [
+          {
+            "viewport": {
+              "name": "mobile",
+              "width": 360,
+              "height": 800
+            },
+            "screenshot": "after-index-html-mobile.png",
+            "states": []
+          },
+          {
+            "viewport": {
+              "name": "desktop",
+              "width": 1280,
+              "height": 900
+            },
+            "screenshot": "after-index-html-desktop.png",
+            "states": []
+          }
+        ]
+      }
+    ],
+    "browserVersion": "141.0.7390.37",
+    "passed": true
+  },
+  "scenario": "Home page at top, same default light theme, Chromium, 360x800 and 1280x900. Income page is new and has no pre-existing equivalent."
+}

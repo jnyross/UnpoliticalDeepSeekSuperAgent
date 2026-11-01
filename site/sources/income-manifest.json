@@ -1,0 +1,16 @@
+{
+  "file": "income.xlsx",
+  "url": "https://obr.uk/docs/sodugn2q20l901oy19v1cz5e/PSF_aggregates_databank_Oct_EFO.xlsx",
+  "download_url": "https://obr.uk/download/public-finances-databank-october-2026-efo/",
+  "sha256": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+  "publication": "Public finances databank – October 2026 EFO",
+  "published": "2026-10-28",
+  "date": "2026-10-28",
+  "downloaded": "2026-11-01",
+  "release_url": "https://obr.uk/data/",
+  "metadata_file": "income-release.txt",
+  "metadata_sha256": "86c0c89c2a930e675c04e05aa76748a6f910b623a9ca5775bbb11b265bbfafe6",
+  "geography": "United Kingdom",
+  "scope": "UK public sector, OBR public finances definitions",
+  "next_release": "No next release date is announced on the retained OBR data page; databanks are normally updated around two working days after the monthly public finance release."
+}
