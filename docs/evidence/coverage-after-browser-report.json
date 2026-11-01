@@ -1,6 +1,6 @@
 {
-  "capturedAt": "2026-11-01T22:17:14.622Z",
-  "baseRevision": "e640d8ea5d966b0cdd54580b7f9e8140fed18810",
+  "capturedAt": "2026-11-01T22:23:00.118Z",
+  "baseRevision": "80129177d05341c5775e28b9879a0e69957d1246",
   "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
   "mode": "automated-checks",
   "browser": "Chromium",
@@ -86,8 +86,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11556,
-      "sha256": "710aae241120002b25f603f64b7429e94aea02fab984cedc7626f4eaa5d8f1d6",
+      "bytes": 15098,
+      "sha256": "2d2a1f7b5e99a688b09011ddff0dcee6aee6603d91b73c924ae52c8cfec78a73",
       "viewports": [
         {
           "viewport": {
