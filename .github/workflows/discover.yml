@@ -6,8 +6,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+  pull-requests: write
 
 concurrency:
   group: official-release-discovery
@@ -16,20 +17,111 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Discover and open deduplicated update issues
-        run: python scripts/discover.py --open-issues --report discovery-report.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Discover and persist deduplicated revision notices
+        id: discovery
+        continue-on-error: true
+        run: python scripts/discover.py --open-issues --write-revision-status --report discovery-report.json
         env:
           GH_TOKEN: ${{ github.token }}
+      # Known notices must reach the site even if another source or GitHub issue lookup failed.
+      # Build only retained data: never --refresh in the discovery workflow.
+      - name: Install validation dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          sudo apt-get update && sudo apt-get install -y poppler-utils
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Rebuild and validate notices against retained data
+        run: |
+          EVIDENCE_DIR=test-results/discovery EVIDENCE_LABEL=before node tests/browser.mjs --capture-only
+          python scripts/build.py
+          python scripts/build.py --check
+          python -m unittest discover -s tests -p 'test_*.py' -v
+          python scripts/check.py --self-test
+          python scripts/check_history.py --self-test
+          python scripts/check.py
+          EVIDENCE_DIR=test-results/discovery EVIDENCE_LABEL=after npm run test:browser
+      - name: Retain before and after notice evidence
+        id: evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: revision-notice-browser-evidence
+          path: test-results/discovery
+          if-no-files-found: error
+      - name: Publish validated notices through a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          EVIDENCE_URL: ${{ steps.evidence.outputs.artifact-url }}
+        run: |
+          set -euo pipefail
+          git add -- sources/revision-status.json site
+          if git diff --cached --quiet; then
+            echo 'No revision-notice changes to publish.'
+            exit 0
+          fi
+          baseline=$(git rev-parse HEAD)
+          branch="automation/revision-notices-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git config user.name 'jnyross-agent'
+          git config user.email '351176923+jnyross-agent@users.noreply.github.com'
+          git commit -m 'Publish persistent source revision notices'
+          head=$(git rev-parse HEAD)
+          git push origin "$branch"
+          pr=$(gh pr create --base main --head "$branch" \
+            --title 'Publish source revision notices' \
+            --body 'This is by an automated agent, not a human.
+
+          Publishes persistent discovery evidence and rebuilt static notices only; retained source data are unchanged. Discovery errors do not dismiss existing notices. Validated offline rebuild, deterministic output, discovery/unit fixtures, source/site checks, and browser checks in this workflow. GitHub-token PRs do not trigger another CI run, so these checks run before PR creation. Merges without bypassing branch protection.')
+          gh pr edit "$pr" --body "$(gh pr view "$pr" --json body --jq .body)
+
+          Before: $EVIDENCE_URL (before-* screenshots at baseline $baseline).
+          After: $EVIDENCE_URL (after-* screenshots at head $head).
+          These are automated browser checks, not people-review evidence."
+          # No human review is required by this repository. Never bypass protection:
+          # a protected branch that requires additional checks leaves a visible failed job/PR.
+          count=$(gh pr view "$pr" --json statusCheckRollup --jq '.statusCheckRollup | length')
+          pending=false
+          if [ "$count" -gt 0 ]; then
+            status=0
+            checks=$(gh pr checks "$pr" --json bucket --jq '.[].bucket') || status=$?
+            if [ "$status" -ne 0 ] && [ "$status" -ne 8 ]; then
+              echo 'PR checks failed; refusing to merge.'
+              exit 1
+            fi
+            if [[ "$checks" == *fail* || "$checks" == *cancel* ]]; then
+              echo 'PR checks failed or cancelled; refusing to merge.'
+              exit 1
+            fi
+            if [[ "$checks" == *pending* ]]; then pending=true; fi
+          fi
+          if [ "$pending" = true ]; then
+            gh pr merge "$pr" --auto --merge --match-head-commit "$head" --delete-branch
+          else
+            gh pr merge "$pr" --merge --match-head-commit "$head" --delete-branch
+          fi
       - name: Retain release discovery evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: release-discovery
-          path: discovery-report.json
+          path: |
+            discovery-report.json
+            sources/revision-status.json
           if-no-files-found: warn
+      - name: Surface discovery failures after preserving known notices
+        if: always() && steps.discovery.outcome == 'failure'
+        run: exit 1

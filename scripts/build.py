@@ -17,6 +17,7 @@ import openpyxl
 from history import history_outputs, refresh_history
 import comparisons
 import parties
+import section_dates
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT = 'public-spending-statistics-release-july-2026'
@@ -100,6 +101,7 @@ def outputs(root):
     files={'data/comparisons.json':(json.dumps(comparison,indent=2,ensure_ascii=False)+'\n').encode(),'data/comparisons.csv':comparison_csv.getvalue().encode(),'index.html':render(d,comparison).encode(),'data/spending.json':(json.dumps(d,indent=2,ensure_ascii=False)+'\n').encode(),'data/spending.csv':stream.getvalue().encode(),'banned-words.txt':(ROOT/'scripts/banned-words.txt').read_bytes()}
     files.update(parties.outputs(root))
     files.update(history_outputs(root))
+    section_dates.annotate(files, root, d, comparison)
     for p in (root/'sources').iterdir(): files['sources/'+p.name]=p.read_bytes()
     return files
 
@@ -125,6 +127,14 @@ def main():
             (stage/'sources/trends.xlsx').write_bytes(trends_raw)
             (stage/'sources/trends-manifest.json').write_text(json.dumps(trends_manifest,indent=2)+'\n')
             parties.refresh(stage)
+            import release_calendar
+            release_calendar.refresh(stage)
+        status_path = stage/'sources/revision-status.json'
+        if status_path.exists():
+            from discover import load_revision_status, reconcile_revision_status
+            inventory = json.loads((ROOT/'config/release-sources.json').read_text())
+            state = reconcile_revision_status(load_revision_status(status_path), inventory, [], stage, None)
+            status_path.write_text(json.dumps(state, indent=2)+'\n')
         files=outputs(stage)
         for name,content in files.items():
             dest=stage/'site'/name; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_bytes(content)
@@ -137,6 +147,8 @@ def main():
             # All network, parsing and validation work completes before touching last-good output.
             for name,content in files.items():
                 dest=ROOT/'site'/name; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_bytes(content)
+            if status_path.exists():
+                shutil.copyfile(status_path, ROOT/'sources/revision-status.json')
             if args.refresh:
                 for f in (stage/'sources').iterdir(): shutil.copyfile(f,ROOT/'sources'/f.name)
 if __name__=='__main__': main()

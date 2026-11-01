@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-01",
+  "retrieved": "2026-11-01",
+  "entries": {
+    "spending": {
+      "next_release": null,
+      "checked_at": "2026-11-01",
+      "retrieved": "2026-11-01",
+      "date_precision": null,
+      "file": "calendar-hmt-spending-guidance.json",
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-guidance",
+      "sha256": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+      "title": "Public spending statistics: July 2026",
+      "published_at": "2026-07-16T09:30:07+01:00",
+      "updated_at": "2026-07-29T14:20:18+01:00",
+      "status": "cadence_only",
+      "source_ids": [
+        "hmt-public-spending",
+        "hmt-spending-trends"
+      ],
+      "publication_date": "2026-07-16",
+      "updated_date": "2026-07-29",
+      "source_text": "Further updates will take place in November, February and April. Most series in PESA are only published annually.",
+      "locator": "details.body, section 16.3 (PESA and the public spending statistics releases)",
+      "timing_note": "Treasury guidance names November, February and April, but gives no exact next release date. No future HMT statistics entry was returned by the retained official upcoming-statistics search.",
+      "limitation": "Month names are general guidance, without a day or explicit year; do not convert cadence to an announced date. The collection includes May and December releases too.",
+      "evidence": [
+        {
+          "file": "calendar-hmt-spending-collection.json",
+          "url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+          "retrieved": "2026-11-01",
+          "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+          "title": "HMT Public Spending Statistics",
+          "published_at": "2013-07-11T00:00:00+01:00",
+          "updated_at": "2026-07-16T09:30:06+01:00"
+        },
+        {
+          "file": "calendar-hmt-spending-release.json",
+          "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026",
+          "retrieved": "2026-11-01",
+          "sha256": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+          "title": "Public Spending Statistics release: July 2026",
+          "published_at": "2026-07-16T09:30:00+01:00",
+          "updated_at": "2026-07-29T14:20:18+01:00"
+        },
+        {
+          "file": "calendar-hmt-spending-bulletin.json",
+          "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-july-2026",
+          "retrieved": "2026-11-01",
+          "sha256": "8452602720730f76ad078f9d1327256b2af9aba6ef2c7ed84b835c2dda6dc3d4",
+          "title": "Public spending statistics: July 2026",
+          "published_at": "2026-07-16T09:30:07+01:00",
+          "updated_at": "2026-07-29T14:20:18+01:00"
+        },
+        {
+          "file": "calendar-hmt-spending-guidance.json",
+          "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-guidance",
+          "retrieved": "2026-11-01",
+          "sha256": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+          "title": "Public spending statistics: Guidance",
+          "published_at": "2026-07-16T09:30:07+01:00",
+          "updated_at": "2026-07-29T14:20:18+01:00"
+        },
+        {
+          "file": "calendar-hmt-upcoming.json",
+          "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&filter_organisations=hm-treasury&count=1000",
+          "retrieved": "2026-11-01",
+          "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+          "total_results": 0
+        },
+        {
+          "file": "calendar-spending-upcoming.json",
+          "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&q=public%20spending&count=1000",
+          "retrieved": "2026-11-01",
+          "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+          "total_results": 0
+        }
+      ]
+    },
+    "history": {
+      "next_release": null,
+      "checked_at": "2026-11-01",
+      "retrieved": "2026-11-01",
+      "date_precision": null,
+      "file": "calendar-hmt-pesa-release.json",
+      "url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+      "sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "title": "Public Expenditure Statistical Analyses 2026, Chapter 4",
+      "published_at": "2026-07-16T10:34:00+01:00",
+      "updated_at": "2026-07-16T10:34:00+01:00",
+      "status": "not_announced",
+      "source_ids": [
+        "hmt-pesa-functional-history"
+      ],
+      "publication_date": "2026-07-16",
+      "updated_date": "2026-07-16",
+      "source_text": "The PESA command paper is an annual release, containing plans data for the Spending Review period, alongside the data contained in this release.",
+      "locator": "calendar-hmt-spending-guidance.json: details.body, section 2; publication date from PESA release first_published_at",
+      "timing_note": "PESA is annual. No exact next release date is announced in the retained official metadata or upcoming-statistics search.",
+      "limitation": "Annual frequency is not a scheduled 2027 publication date. A quarterly PSS update is not necessarily an update to PESA Chapter 4.",
+      "evidence": [
+        {
+          "file": "calendar-hmt-pesa-release.json",
+          "url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+          "retrieved": "2026-11-01",
+          "sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+          "title": "Public Expenditure Statistical Analyses 2026",
+          "published_at": "2026-07-16T10:34:00+01:00",
+          "updated_at": "2026-07-16T10:34:00+01:00"
+        },
+        {
+          "file": "calendar-hmt-pesa-collection.json",
+          "url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+          "retrieved": "2026-11-01",
+          "sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+          "title": "HMT Public Expenditure Statistical Analyses (PESA)",
+          "published_at": "2013-07-17T00:00:00+01:00",
+          "updated_at": "2026-07-16T10:34:51+01:00"
+        },
+        {
+          "file": "calendar-hmt-spending-guidance.json",
+          "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-guidance",
+          "retrieved": "2026-11-01",
+          "sha256": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+          "title": "Public spending statistics: Guidance",
+          "published_at": "2026-07-16T09:30:07+01:00",
+          "updated_at": "2026-07-29T14:20:18+01:00"
+        },
+        {
+          "file": "calendar-hmt-upcoming.json",
+          "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&filter_organisations=hm-treasury&count=1000",
+          "retrieved": "2026-11-01",
+          "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+          "total_results": 0
+        },
+        {
+          "file": "calendar-pesa-upcoming.json",
+          "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&q=public%20expenditure%20statistical%20analyses&count=1000",
+          "retrieved": "2026-11-01",
+          "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+          "total_results": 0
+        }
+      ]
+    },
+    "parties": {
+      "next_release": null,
+      "checked_at": "2026-11-01",
+      "retrieved": "2026-11-01",
+      "date_precision": null,
+      "file": "commons-roster-2024-07-09.json",
+      "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+      "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "status": "dated_snapshot",
+      "title": "2024 general election manifestos and dated Commons party roster",
+      "source_ids": [
+        "party-roster",
+        "party-offers-alliance",
+        "party-offers-conservative",
+        "party-offers-dup",
+        "party-offers-green",
+        "party-offers-labour",
+        "party-offers-libdem",
+        "party-offers-plaid",
+        "party-offers-reform",
+        "party-offers-snp",
+        "party-offers-sinnfein",
+        "party-offers-sdlp",
+        "party-offers-tuv",
+        "party-offers-uup"
+      ],
+      "as_of": "2024-07-09",
+      "publication_date": "2024",
+      "publication_date_precision": "year",
+      "source_text": null,
+      "timing_note": "The roster is a fixed snapshot dated 9 July 2024. Manifestos are 2024 documents (year precision). No next release date is established for these fixed snapshots.",
+      "limitation": "The dated Parliament endpoint and retained manifesto documents do not provide a forward publication calendar. This is not evidence that no party has announced any newer plan; no comprehensive new-plan search was performed. Several party-authored PDFs are archive copies, not publisher-hosted official calendar evidence.",
+      "roster": {
+        "file": "commons-roster-2024-07-09.json",
+        "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+        "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+        "as_of": "2024-07-09",
+        "date": "2024-07-09",
+        "downloaded": "2026-11-01",
+        "publication": "State of the parties (Commons)",
+        "publisher": "UK Parliament",
+        "scope": "House of Commons; parties with at least one MP, plus independent MPs and Speaker",
+        "locator": "items[].value.party and items[].value.total"
+      },
+      "manifesto_snapshots": [
+        {
+          "source_id": "alliance",
+          "file": "manifesto-2024-alliance.pdf",
+          "sha256": "dfdbd70aa71316989f8e10657a29a6b2123705721416e271a71c219c9e050693",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/alliance/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "conservative",
+          "file": "manifesto-2024-conservative.pdf",
+          "sha256": "dd077291a0962017a4a1e05c615f211dcfec03391cb26f4850bc5d2a0bdbc4d0",
+          "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored PDF downloaded from the publisher or its publishing CDN."
+        },
+        {
+          "source_id": "dup",
+          "file": "manifesto-2024-dup.pdf",
+          "sha256": "2d0439bd6cbdf2b842b4e1e9c0557807444856678e2e249e09f5c115e8f8eefa",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/dup/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "green",
+          "file": "manifesto-2024-green.pdf",
+          "sha256": "4cfa29bd877b1b0ed46528684349eb6fb9bdeaaa5451897a5cace43f062f8537",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/green/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "labour",
+          "file": "manifesto-2024-labour.pdf",
+          "sha256": "2385a7e51e17b93cd48e7ffb5c86f4c357cbc679f759aa480304ec0f777d5147",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/labour/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "libdem",
+          "file": "manifesto-2024-libdem.pdf",
+          "sha256": "a1192e502647dd99a8bc1b13d9a06cf171b60e4084615c1c809ea6d73bb7b714",
+          "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/For_a_Fair_Deal_-_Liberal_Democrat_Manifesto_2024.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored PDF downloaded from the publisher or its publishing CDN."
+        },
+        {
+          "source_id": "plaid",
+          "file": "manifesto-2024-plaid.pdf",
+          "sha256": "e00bf848cef0fcf655f4741598bce812a3e73d4b0a317f0f1c4da338c4e52fed",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/plaid/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "reform",
+          "file": "manifesto-2024-reform.pdf",
+          "sha256": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+          "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf?1718625371",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored PDF downloaded from the publisher or its publishing CDN."
+        },
+        {
+          "source_id": "snp",
+          "file": "manifesto-2024-snp.pdf",
+          "sha256": "82a5b60680c2e7eb6f304c78555b5d8019100ee6b58115dcdd67d7133ca82715",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/snp/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "sinnfein",
+          "file": "manifesto-2024-sinnfein.pdf",
+          "sha256": "507df8544f8a1a265af521c0bf93e445ea52eb6488cb785350a1cd5f5c08ece0",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/sinnfein/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "sdlp",
+          "file": "manifesto-2024-sdlp.pdf",
+          "sha256": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/sdlp/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "tuv",
+          "file": "manifesto-2024-tuv.pdf",
+          "sha256": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/tuv/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        },
+        {
+          "source_id": "uup",
+          "file": "manifesto-2024-uup.pdf",
+          "sha256": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+          "url": "https://www.manifestos.org.uk/manifestos/2024/uup/manifesto.pdf",
+          "published": "2024",
+          "publication_date_precision": "year",
+          "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used."
+        }
+      ],
+      "evidence": [
+        {
+          "file": "commons-roster-2024-07-09.json",
+          "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+          "retrieved": "2026-11-01",
+          "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No exact future release date was found for either Treasury data family. Null dates must not be replaced with inferred recurrence dates or automated check times.",
+    "Official search results are a dated lookup, not a guarantee about unindexed announcements or future changes.",
+    "This evidence meets the specification fallback, but does not establish the literal Context L4 requirement of a scheduled date for every section."
+  ]
+}

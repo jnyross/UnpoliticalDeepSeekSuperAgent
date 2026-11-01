@@ -16,7 +16,10 @@ FIELDS = [('offer', 'Selected official offer'), ('excerpt', 'Party source excerp
           ('status', 'Status'), ('costing', 'Costing'), ('assessment', 'Independent assessment')]
 
 def normal(text):
-    return ' '.join(text.replace('\u00ad', '').split())
+    # Only typographic equivalents: never discard punctuation, digits or word boundaries.
+    ligatures = str.maketrans({'ﬀ': 'ff', 'ﬁ': 'fi', 'ﬂ': 'fl', 'ﬃ': 'ffi',
+                              'ﬄ': 'ffl', 'ﬅ': 'st', 'ﬆ': 'st'})
+    return ' '.join(text.translate(ligatures).replace('\u00ad', '').split())
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -43,6 +46,7 @@ def validate(root):
         assert p['seats'] == entries[p['id']]['total'], 'Roster count mismatch'
     sources = {s['id']: s for s in d['sources']}
     assert len(sources) == len(d['sources']) == len(d['parties'])
+    pdf_pages = {}
     for s in sources.values():
         assert len(s['publication'].split()) <= 35 and len(s['hosting'].split()) <= 30, 'Source label too long'
         assert len(s['url']) <= 2000, 'Source URL too long'
@@ -53,7 +57,11 @@ def validate(root):
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / 'text.txt'
             subprocess.run(['pdftotext', *(['-raw'] if s.get('text_mode') == 'raw' else []), str(base / s['file']), str(out)], check=True, capture_output=True)
-            assert out.read_bytes() == (base / s['text_file']).read_bytes(), 'PDF text differs'
+            # Poppler versions differ in spacing, dot leaders and overlapping text
+            # reading order. Whole-document byte equality is not portable evidence.
+            # Keep both file hashes above; verify the quote independently against
+            # the freshly extracted cited page below, not just the saved transcript.
+            pdf_pages[s['id']] = out.read_text(encoding='utf-8').split('\f')
     expected_keys = {'id','name','seats','source_id','locator','pdf_page', *LIMITS}
     for p in d['parties']:
         assert len(p['name'].split()) <= 15 and len(p['locator'].split()) <= 15, 'Party/source label too long'
@@ -61,8 +69,13 @@ def validate(root):
         for key, limit in LIMITS.items():
             assert isinstance(p[key],str) and 0 < len(p[key].split()) <= limit, 'Length limit: ' + key
         source = sources[p['source_id']]
-        pages = (base / source['text_file']).read_text().split('\f')
-        assert normal(p['excerpt']) in normal(pages[p['pdf_page']-1]), 'Excerpt not on cited PDF page: ' + p['name']
+        pages = (base / source['text_file']).read_text(encoding='utf-8').split('\f')
+        fresh_pages = pdf_pages[source['id']]
+        page = p['pdf_page']
+        assert type(page) is int and 1 <= page <= min(len(pages), len(fresh_pages)), 'Invalid PDF page: ' + p['name']
+        quote = normal(p['excerpt'])
+        assert quote in normal(pages[page-1]), 'Excerpt not on cited transcript page: ' + p['name']
+        assert quote in normal(fresh_pages[page-1]), 'Excerpt not on cited PDF page: ' + p['name']
         assert p['status'] == d['status'], 'Status differs'
         assert p['costing'] == d['costing'] and p['assessment'] == d['assessment'], 'Missing-data treatment differs'
     assert all(s['url'].startswith('https://') for s in d['sources'])

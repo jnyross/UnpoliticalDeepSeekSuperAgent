@@ -86,6 +86,126 @@ class DiscoveryFixture(unittest.TestCase):
         self.responses[self.attachment] = b'revised workbook'
         return self.check()[0]
 
+    def status(self, updates, state=None):
+        return discover.reconcile_revision_status(
+            state or {'schema_version': 1, 'notices': []}, [self.source],
+            [dict(id=self.source['id'], updates=updates)], root=self.root,
+            checked_at='2026-11-01T00:00:00+00:00')
+
+    def test_revision_state_unchanged_has_no_notices(self):
+        self.assertEqual(self.status(self.check()), dict(schema_version=1, notices=[]))
+
+    def test_revision_state_persists_revised_hash_and_first_detection(self):
+        update = self.changed()
+        state = self.status([update])
+        notice, = state['notices']
+        self.assertEqual(notice['baseline_sha256'], self.baseline['sha256'])
+        self.assertEqual(notice['baseline_url'], self.baseline['release_url'])
+        self.assertEqual(notice['evidence'], update['evidence'])
+        again = discover.reconcile_revision_status(state, [self.source],
+                    [dict(id=self.source['id'], updates=[update])], root=self.root,
+                    checked_at='2026-11-02T00:00:00+00:00')
+        self.assertEqual(again, state)
+        self.assertEqual(self.status([], state), state)  # Even a successful unchanged check.
+
+    def test_revision_state_failed_lookup_preserves_notices_and_reports_failure(self):
+        state = self.status([self.changed()])
+        status = self.root / 'sources/revision-status.json'
+        status.write_text(json.dumps(state))
+        config = self.root / 'config/release-sources.json'
+        config.parent.mkdir()
+        config.write_text(json.dumps([self.source]))
+        report = self.root / 'report.json'
+        with mock.patch.object(discover, 'ROOT', self.root), \
+             mock.patch.object(discover, 'discover', side_effect=OSError('offline')), \
+             mock.patch('sys.argv', ['discover.py', '--write-revision-status', '--report', str(report)]), \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(discover.main(), 1)
+        self.assertEqual(json.loads(status.read_text()), state)
+        result = json.loads(report.read_text())
+        self.assertEqual(result['revision_status'], state)
+        self.assertEqual(result['errors'], [dict(source=self.source['id'], error='offline')])
+
+    def test_revision_state_only_matching_updated_hash_clears(self):
+        update = self.changed()
+        state = self.status([update])
+        manifest = self.root / self.source['manifest']
+        # Advancing to some other workbook must not dismiss the recorded revision.
+        manifest.write_text(json.dumps(dict(self.baseline, sha256=discover.digest(b'other revision'))))
+        self.assertEqual(self.status([], state), state)
+        # Nor does an identical hash in a different publication establish incorporation.
+        manifest.write_text(json.dumps(dict(self.baseline, sha256=update['evidence']['sha256'],
+                                           release_url='https://www.gov.uk/other')))
+        self.assertEqual(self.status([], state), state)
+        manifest.write_text(json.dumps(dict(self.baseline, sha256=update['evidence']['sha256'])))
+        self.assertEqual(self.status([], state)['notices'], [])
+        self.assertEqual(len(state['notices']), 1)  # Pure reconciliation, no mutation.
+
+    def test_revision_state_clears_only_matching_notice_not_other_revised_hashes(self):
+        first = self.changed()
+        self.responses[self.attachment] = b'further revision'
+        second, = self.check()
+        state = self.status([first, second])
+        (self.root / self.source['manifest']).write_text(json.dumps(
+            dict(self.baseline, sha256=first['evidence']['sha256'])))
+        remaining = self.status([], state)['notices']
+        self.assertEqual([n['key'] for n in remaining], [second['key']])
+
+    def test_date_only_revision_requires_correct_updated_baseline(self):
+        self.metadata['public_updated_at'] = '2026-08-02T08:00:00Z'
+        state = self.status(self.check())
+        self.assertEqual(len(state['notices']), 1)
+        self.assertEqual(self.status([], state), state)
+        (self.root / self.source['manifest']).write_text(json.dumps(
+            dict(self.baseline, date='2026-08-02')))
+        self.assertEqual(self.status([], state)['notices'], [])
+
+    def test_main_persists_revised_notice_even_when_issue_creation_fails(self):
+        config = self.root / 'config/release-sources.json'
+        config.parent.mkdir()
+        config.write_text(json.dumps([self.source]))
+        status = self.root / 'sources/revision-status.json'
+        report = self.root / 'report.json'
+        update = self.changed()
+        before = (self.root / self.source['manifest']).read_bytes()
+        for failure in (False, True):
+            with self.subTest(github_failure=failure), \
+                 mock.patch.object(discover, 'ROOT', self.root), \
+                 mock.patch.object(discover, 'discover', return_value=[update]), \
+                 mock.patch.object(discover, 'open_updates', side_effect=OSError('GitHub offline') if failure else None,
+                                   return_value=[]), \
+                 mock.patch('sys.argv', ['discover.py', '--write-revision-status', '--open-issues',
+                                         '--repo', 'owner/repo', '--report', str(report)]), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(discover.main(), int(failure))
+            result = json.loads(report.read_text())
+            self.assertEqual(json.loads(status.read_text()), result['revision_status'])
+            self.assertEqual(result['revision_status']['notices'][0]['evidence'], update['evidence'])
+            self.assertEqual((self.root / self.source['manifest']).read_bytes(), before)
+
+    def test_revision_state_opt_in_and_malformed_state_preservation(self):
+        config = self.root / 'config/release-sources.json'
+        config.parent.mkdir()
+        config.write_text(json.dumps([self.source]))
+        status = self.root / 'sources/revision-status.json'
+        report = self.root / 'report.json'
+        update = self.changed()
+        with mock.patch.object(discover, 'ROOT', self.root), \
+             mock.patch.object(discover, 'discover', return_value=[update]), \
+             mock.patch('sys.argv', ['discover.py', '--report', str(report)]), \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(discover.main(), 0)
+        self.assertFalse(status.exists())
+        self.assertEqual(len(json.loads(report.read_text())['revision_status']['notices']), 1)
+        status.write_text('{corrupt state')
+        with mock.patch.object(discover, 'ROOT', self.root), \
+             mock.patch.object(discover, 'discover', return_value=[update]), \
+             mock.patch('sys.argv', ['discover.py', '--write-revision-status', '--report', str(report)]), \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(discover.main(), 1)
+        self.assertEqual(status.read_text(), '{corrupt state')
+        self.assertEqual(json.loads(report.read_text())['errors'][0]['source'], 'revision-status')
+
     def test_versioned_attachment_title_pattern(self):
         self.source['attachment_title_pattern'] = r'PESA [0-9]{4} Chapter 4 Tables'
         self.metadata['details']['attachments'][0]['title'] = 'PESA 2027 Chapter 4 Tables'

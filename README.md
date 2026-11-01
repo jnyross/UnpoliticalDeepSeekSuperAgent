@@ -65,8 +65,9 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
 Do not paste a token into shell history; Actions supplies `github.token`. The job needs
-only `contents: read` for checkout and `issues: write` to list/create update issues.
-It needs no repository write, pull-request, deployment or external secret permissions.
+`contents: write`, `issues: write` and `pull-requests: write`: it opens update issues,
+then publishes changed revision notices through a validated PR without refreshing figures.
+The default Actions token is used; branch protection is not bypassed.
 The checked-in [inventory](config/release-sources.json) covers HMT Public Spending
 Statistics, PESA functional history, the historical Commons roster and all retained
 party manifestos (see the limited party-discovery scope below). PESA's year-dependent
@@ -85,12 +86,31 @@ concurrent runs from creating duplicates. Run local issue-writing discovery only
 no workflow is active. The inventory baseline advances only with an explicitly reviewed
 refresh commit, never when discovery notices a release.
 
-Discovery never writes `sources/` or `site/`. Network, schema or GitHub failures fail
-the job and are recorded in `discovery-report.json`, retained as an Actions artifact;
-other source families can still be checked. The last good deployed data stay intact.
-A successful unchanged run records zero updates. Re-run failed jobs after inspecting
-the error; do not replace a missing source with guessed data. The report is operational
-evidence, not generated site content; it is not committed.
+Default discovery is read-only. `--write-revision-status` retains notices in
+`sources/revision-status.json`; an offline rebuild places them beside the affected
+sections. Notices survive failed lookups and unchanged checks. Only publication of
+the observed revised hash (and release URL/date where relevant) clears them: dismissing
+an update issue does not. A different, unrelated baseline does not erase a warning.
+The scheduled workflow validates and publishes notice changes through a PR, including
+Before/After browser evidence. It never refreshes the data automatically. Network,
+schema or GitHub errors are retained in `discovery-report.json` and fail the job after
+known notices have been preserved; other families can still be checked. Daily polling
+can only show revisions after detection and deployment, not at the instant a publisher
+changes bytes. Never claim continuous real-time revision coverage.
+
+### Section dates and official release evidence
+
+Every spending section, history chart/table and party offer carries its data period
+and source publication/update dates. `sources/release-calendar.json` links retained,
+hash-checked official GOV.UK publication, guidance, collection and upcoming-statistics
+responses. As checked on 1 November 2026, no exact next HMT spending/PESA release date
+was announced there. Treasury gives November/February/April cadence for spending
+updates and annual PESA publication, not an exact next date. Fixed 2024 party/roster
+snapshots have no scheduled next release. The UI says so rather than inventing dates.
+This is a remaining Context level 4 limitation, not evidence that its quoted check passes.
+Release dates, data years, source updates and monitoring times are distinct.
+A source refresh verifies calendar evidence too; changed evidence stops for a new
+reviewed interpretation instead of silently carrying forward a stale schedule.
 
 When adding history, deflators, GDP, party rosters or plans, register **every consumed
 source family** with its retained manifest, official discovery endpoint, adapter and
