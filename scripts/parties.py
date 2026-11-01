@@ -49,11 +49,6 @@ def validate(root):
         for name, h in [('file','sha256'), ('text_file','text_sha256')]:
             assert Path(s[name]).name == s[name], 'Source must be flat'
             assert digest(base / s[name]) == s[h], 'Source hash changed: ' + s[name]
-        # Reopen the PDF, rather than trusting a separately edited text transcript.
-        with tempfile.TemporaryDirectory() as tmp:
-            out = Path(tmp) / 'text.txt'
-            subprocess.run(['pdftotext', *(['-raw'] if s.get('text_mode') == 'raw' else []), str(base / s['file']), str(out)], check=True, capture_output=True)
-            assert out.read_bytes() == (base / s['text_file']).read_bytes(), 'PDF text differs'
     expected_keys = {'id','name','seats','source_id','locator','pdf_page', *LIMITS}
     for p in d['parties']:
         assert len(p['name'].split()) <= 15 and len(p['locator'].split()) <= 15, 'Party/source label too long'
@@ -62,7 +57,18 @@ def validate(root):
             assert isinstance(p[key],str) and 0 < len(p[key].split()) <= limit, 'Length limit: ' + key
         source = sources[p['source_id']]
         pages = (base / source['text_file']).read_text().split('\f')
-        assert normal(p['excerpt']) in normal(pages[p['pdf_page']-1]), 'Excerpt not on cited PDF page: ' + p['name']
+        page = p['pdf_page']
+        assert type(page) is int and 1 <= page <= len(pages), 'Invalid PDF page: ' + p['name']
+        assert normal(p['excerpt']) in normal(pages[page-1]), 'Excerpt not on cited transcript page: ' + p['name']
+        # Retained transcripts remain hash-checked evidence, not a substitute for the
+        # PDF. Poppler versions can change layout elsewhere in the document; check
+        # the actual cited page independently, preserving quote words and punctuation.
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'page.txt'
+            subprocess.run(['pdftotext', '-f', str(page), '-l', str(page),
+                            *(['-raw'] if source.get('text_mode') == 'raw' else []),
+                            str(base / source['file']), str(out)], check=True, capture_output=True)
+            assert normal(p['excerpt']) in normal(out.read_text(encoding='utf-8')), 'Excerpt not on cited PDF page: ' + p['name']
         assert p['status'] == d['status'], 'Status differs'
         assert p['costing'] == d['costing'] and p['assessment'] == d['assessment'], 'Missing-data treatment differs'
     assert all(s['url'].startswith('https://') for s in d['sources'])

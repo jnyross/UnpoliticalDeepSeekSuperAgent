@@ -2,7 +2,6 @@
 import copy
 import json
 from pathlib import Path
-import shutil
 import sys
 import tempfile
 import unittest
@@ -51,6 +50,84 @@ class PartyOffersTests(unittest.TestCase):
 
     def test_changed_source_hash_fails(self):
         self.fails(lambda d: d['sources'][0].update(sha256='0' * 64))
+
+    def test_changed_transcript_hash_fails(self):
+        self.fails(lambda d: d['sources'][0].update(text_sha256='0' * 64))
+
+    def test_invalid_page_fails(self):
+        for page in (0, -1, True, '1', 100000):
+            with self.subTest(page=page):
+                self.fails(lambda d: d['parties'][0].update(pdf_page=page))
+
+    def test_poppler_layout_variance_passes_with_direct_page_checks(self):
+        run = parties.subprocess.run
+        calls = []
+
+        def reflow(command, **kwargs):
+            result = run(command, **kwargs)
+            calls.append(command)
+            out = Path(command[-1])
+            # Deliberately differ from the retained bytes: new wrapping, spacing,
+            # page decorations, and unrelated surrounding text are not evidence changes.
+            text = out.read_text()
+            out.write_text('Different page header\n' + '\n  '.join(text.split()) + '\n\f')
+            return result
+
+        with patch.object(parties.subprocess, 'run', side_effect=reflow):
+            self.assertEqual(parties.validate(ROOT), self.original)
+        self.assertEqual(len(calls), len(self.original['parties']))
+        sources = {s['id']: s for s in self.original['sources']}
+        for command, party in zip(calls, self.original['parties']):
+            self.assertEqual(command[1:5], ['-f', str(party['pdf_page']), '-l', str(party['pdf_page'])])
+            source = sources[party['source_id']]
+            self.assertEqual(Path(command[-2]).name, source['file'])
+            self.assertEqual('-raw' in command, source.get('text_mode') == 'raw')
+
+    def test_regenerated_page_must_independently_support_quote(self):
+        run = parties.subprocess.run
+
+        def missing_quote(command, **kwargs):
+            result = run(command, **kwargs)
+            Path(command[-1]).write_text('No source quote on this PDF page.\n\f')
+            return result
+
+        with patch.object(parties.subprocess, 'run', side_effect=missing_quote):
+            with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+                parties.validate(ROOT)
+
+    def test_changed_quote_words_or_punctuation_fail(self):
+        run = parties.subprocess.run
+        quote = self.original['parties'][0]['excerpt']
+        for changed in (quote.replace(' ', ' invented ', 1), quote.replace(' ', ', ', 1)):
+            with self.subTest(changed=changed):
+                def changed_quote(command, **kwargs):
+                    result = run(command, **kwargs)
+                    Path(command[-1]).write_text(changed + '\n\f')
+                    return result
+                with patch.object(parties.subprocess, 'run', side_effect=changed_quote):
+                    with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+                        parties.validate(ROOT)
+
+    def test_rehashed_forged_transcript_is_not_pdf_evidence(self):
+        d = copy.deepcopy(self.original)
+        party = d['parties'][0]
+        source = next(s for s in d['sources'] if s['id'] == party['source_id'])
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            base = root / 'sources'
+            base.mkdir()
+            for path in (ROOT / 'sources').iterdir():
+                if path.is_file() and path.name != source['text_file']:
+                    (base / path.name).symlink_to(path)
+            transcript = (ROOT / 'sources' / source['text_file']).read_text().split('\f')
+            party['excerpt'] = 'An invented promise unsupported by the retained PDF.'
+            transcript[party['pdf_page'] - 1] += '\n' + party['excerpt']
+            forged = base / source['text_file']
+            forged.write_text('\f'.join(transcript))
+            source['text_sha256'] = parties.digest(forged)
+            with patch.object(parties, 'load', return_value=d):
+                with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+                    parties.validate(root)
 
     def test_unequal_missing_evidence_fails(self):
         self.fails(lambda d: d['parties'][0].update(costing='Zero'))

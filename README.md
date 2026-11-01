@@ -5,7 +5,9 @@ real health spending and Total Managed Expenditure as a share of GDP. It uses 20
 full year in HM Treasury's **Public spending statistics: July 2026**. The table labels
 this year **outturn**, not forecast. This foundation is not the full product and does
 not claim rubric levels. A separate history page shows spending overall and by area
-from the retained PESA historical tables. Tax, borrowing and debt stocks remain future work.
+from the retained PESA historical tables. The income page shows tax types, other receipts,
+borrowing and the debt stock from the OBR public finances databank, with the source's
+own period and forecast labels. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
 See [product specification](docs/product-spec.md),
@@ -32,7 +34,9 @@ npx playwright install --with-deps chromium
 
 This downloads the official release metadata and spending-statistics Chapter 4 and 5
 workbooks, and refreshes the separately versioned PESA Chapter 4 history workbook
-and metadata. It retains their
+and metadata. It also downloads the latest public finances databank linked on the
+OBR data page. Income data keep their own vintage: they are not forced to match
+the PESA spending tables. It retains their
 URLs, publication/update/download dates and SHA-256, parses the latest fiscal column,
 validates it independently, then replaces the committed generated files. Failed
 network requests, missing cells, changed formats or failed validation leave the last
@@ -68,7 +72,7 @@ Do not paste a token into shell history; Actions supplies `github.token`. The jo
 only `contents: read` for checkout and `issues: write` to list/create update issues.
 It needs no repository write, pull-request, deployment or external secret permissions.
 The checked-in [inventory](config/release-sources.json) covers HMT Public Spending
-Statistics, PESA functional history, the historical Commons roster and all retained
+Statistics, PESA functional history, the OBR public finances databank, the historical Commons roster and all retained
 party manifestos (see the limited party-discovery scope below). PESA's year-dependent
 attachment title uses an anchored `attachment_title_pattern`; exact-title sources
 retain `attachment_title` matching. The official GOV.UK collection discovers
@@ -97,7 +101,10 @@ source family** with its retained manifest, official discovery endpoint, adapter
 refresh instructions. Families sharing a publication can share one entry; distinct
 publishers need their own adapter plus unchanged/new/repeated/error fixtures. The
 current adapter supports GOV.UK collections with one named workbook attachment; do
-not pretend ONS, OBR, Parliament or party sites use that schema. Extend the inventory
+not pretend ONS, Parliament or party sites use that schema. The OBR adapter reads
+the latest databank link and publication date on its data page, then checks the
+workbook hash. It also checks the retained workbook when the latest link moves;
+per-request cache timestamps are excluded from release identity. Extend the inventory
 coverage test along with the source pipeline. This schedule notices releases and opens
 review tasks; it does not claim a year of timely updates or people-review evidence.
 
