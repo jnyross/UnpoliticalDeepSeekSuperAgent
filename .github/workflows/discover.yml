@@ -1,0 +1,35 @@
+name: Discover official releases
+
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: official-release-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Discover and open deduplicated update issues
+        run: python scripts/discover.py --open-issues --report discovery-report.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Retain release discovery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-discovery
+          path: discovery-report.json
+          if-no-files-found: warn

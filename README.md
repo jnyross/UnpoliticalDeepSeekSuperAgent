@@ -41,8 +41,52 @@ For a new release, use the **same command** with its GOV.UK publication slug:
 Use a release which contains the **Public sector spending** workbook attachment.
 The year is derived from the workbook, not a configured figure. If its layout or
 accounting definitions change, validation deliberately stops; update and review the
-parser/checks rather than silently interpreting a new schema. This foundation does
-not yet discover releases on a schedule.
+parser/checks rather than silently interpreting a new schema.
+
+## Scheduled release discovery
+
+[Discover official releases](.github/workflows/discover.yml) runs daily at 07:23 UTC
+(GitHub may delay scheduled runs), or on demand with `workflow_dispatch`:
+
+```sh
+python3 scripts/discover.py                         # read-only, no GitHub token needed
+GH_TOKEN=… python3 scripts/discover.py --open-issues --repo owner/repo
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+Do not paste a token into shell history; Actions supplies `github.token`. The job needs
+only `contents: read` for checkout and `issues: write` to list/create update issues.
+It needs no repository write, pull-request, deployment or external secret permissions.
+The checked-in [inventory](config/release-sources.json) currently covers the site's only
+source family, HMT Public Spending Statistics. The official GOV.UK collection discovers
+new publication slugs, not just changes to the retained URL. The retained release is
+also checked for date revisions and changed workbook bytes (SHA-256), even at an
+unchanged attachment URL. Only releases published on or after the retained publication
+are candidates; superseded older releases are not update tasks for this latest-year page.
+
+Each new release/revision opens an issue containing official links, dates, attachment
+hash, retained baseline and the refresh/review command. Stable evidence markers are
+checked against **all pages of open and closed issues**; closing an issue records a
+review decision and does not cause it to reopen. A serialized workflow prevents
+concurrent runs from creating duplicates. Run local issue-writing discovery only when
+no workflow is active. The inventory baseline advances only with an explicitly reviewed
+refresh commit, never when discovery notices a release.
+
+Discovery never writes `sources/` or `site/`. Network, schema or GitHub failures fail
+the job and are recorded in `discovery-report.json`, retained as an Actions artifact;
+other source families can still be checked. The last good deployed data stay intact.
+A successful unchanged run records zero updates. Re-run failed jobs after inspecting
+the error; do not replace a missing source with guessed data. The report is operational
+evidence, not generated site content; it is not committed.
+
+When adding history, deflators, GDP, party rosters or plans, register **every consumed
+source family** with its retained manifest, official discovery endpoint, adapter and
+refresh instructions. Families sharing a publication can share one entry; distinct
+publishers need their own adapter plus unchanged/new/repeated/error fixtures. The
+current adapter supports GOV.UK collections with one named workbook attachment; do
+not pretend ONS, OBR, Parliament or party sites use that schema. Extend the inventory
+coverage test along with the source pipeline. This schedule notices releases and opens
+review tasks; it does not claim a year of timely updates or people-review evidence.
 
 ## Reproduce and check without network access
 

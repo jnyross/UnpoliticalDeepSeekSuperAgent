@@ -1,0 +1,10 @@
+[
+  {
+    "id": "hmt-public-spending",
+    "adapter": "govuk-collection-attachment",
+    "manifest": "sources/manifest.json",
+    "collection_api": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+    "release_path_pattern": "/government/statistics/public-spending-statistics-release-[a-z]+-[0-9]{4}",
+    "attachment_title": "Public sector spending"
+  }
+]
