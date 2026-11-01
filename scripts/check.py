@@ -296,7 +296,7 @@ def validate(root):
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
     for path in pages:
         page_manifest = (json.loads((root / 'sources/history-manifest.json').read_text())
-                         if path.name == 'history.html' else manifest)
+                         if path.name in ('history.html', 'history-cash.html', 'history-real.html', 'history-gdp.html') else manifest)
         page = validate_page(path, page_manifest, banned)
         if path == root / "site/index.html":
             validate_published_data(page, data)

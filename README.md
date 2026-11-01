@@ -137,6 +137,11 @@ Serve `site/` with any static HTTP server (for example `python3 -m http.server 8
   not spliced with the separate July 2026 latest-year workbook. Important source definition breaks
   are shown beside the tables. Published real values use 2025-26 prices and the ONS
   GDP deflators of 30 June 2026; GDP shares use that date's ONS GDP series.
+  [Cash charts](site/history-cash.html), [real charts](site/history-real.html) and
+  [GDP-share charts](site/history-gdp.html) cover the same 22 series and 23 years.
+  Native links preserve the chosen area without JavaScript; each chart has a data table.
+  Axes include a marked zero, negative receipts remain negative, and missing points
+  break the line. Scales differ across areas and views. No values are interpolated.
   The independent history checker reopens all three raw tables, checks every cell,
   reconciles each year and verifies cash equals real in the base year.
   Real amounts are the Treasury's official published transformation, not a new
