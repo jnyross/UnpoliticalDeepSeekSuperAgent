@@ -1,0 +1,5 @@
+year,status,measure,value,unit,scope,geography,sheet,cell
+2015-16,outturn,health_real,192.1,"GBP billion, 2025-26 prices",Public sector expenditure on services: health,United Kingdom,4_3,N20
+2015-16,outturn,tme_gdp,40.8,percent of GDP,"Total Managed Expenditure, excluding temporary effects of public-sector banks",United Kingdom,4_4,N27
+2025-26,outturn,health_real,257.5,"GBP billion, 2025-26 prices",Public sector expenditure on services: health,United Kingdom,4_3,X20
+2025-26,outturn,tme_gdp,44.3,percent of GDP,"Total Managed Expenditure, excluding temporary effects of public-sector banks",United Kingdom,4_4,X27

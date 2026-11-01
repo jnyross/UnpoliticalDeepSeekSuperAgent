@@ -296,6 +296,8 @@ def validate(root):
         page = validate_page(path, manifest, banned)
         if path == root / "site/index.html":
             validate_published_data(page, data)
+    from check_comparisons import validate as validate_comparisons
+    validate_comparisons(root)
     print(f"PASS: source hash; independent raw values, labels, locators, year and status; "
           f"reconciliation and cross-table checks; {len(pages)} static pages; banned words")
 
