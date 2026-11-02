@@ -227,6 +227,9 @@ actual revision warning, section coverage and remaining Context L4 limitations.
 The [wave-seven incremental follow-up](docs/evidence/context-w7/README.md) checks the
 added IFS source and current deployed notices, with verified official calendar
 alternatives; it does not rerun the historical 22-source audit or claim L4.
+The [wave-eight follow-up](docs/evidence/context-w8/README.md) records the three later
+source additions, an unavailable archive lookup and the observed childcare-source
+byte warning, preserving the exact next-date and revision-coverage limitations.
 
 ### Section dates and official release evidence
 

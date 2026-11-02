@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "before",
+    "root": "/tmp/context-w8-before-site",
+    "width": 360,
+    "height": 800,
+    "party_id": 7,
+    "section_dates": "Data period: 2024 election manifesto and costing. Published 2024. Source updated not supplied. Published 2024-05-23. Source updated not supplied.\n\nThis is a fixed past snapshot. No next release date is announced.",
+    "revision_notices": 0,
+    "notice_cards": [
+      {
+        "party_id": "17",
+        "links": [
+          "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme"
+        ]
+      }
+    ],
+    "document_overflow": false,
+    "card_bounds": {
+      "x": 20,
+      "y": 0.203125,
+      "width": 320,
+      "height": 2049.59375
+    }
+  },
+  {
+    "stage": "before",
+    "root": "/tmp/context-w8-before-site",
+    "width": 1280,
+    "height": 900,
+    "party_id": 7,
+    "section_dates": "Data period: 2024 election manifesto and costing. Published 2024. Source updated not supplied. Published 2024-05-23. Source updated not supplied.\n\nThis is a fixed past snapshot. No next release date is announced.",
+    "revision_notices": 0,
+    "notice_cards": [
+      {
+        "party_id": "17",
+        "links": [
+          "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme"
+        ]
+      }
+    ],
+    "document_overflow": false,
+    "card_bounds": {
+      "x": 174,
+      "y": 0.484375,
+      "width": 932,
+      "height": 1092.078125
+    }
+  }
+]
