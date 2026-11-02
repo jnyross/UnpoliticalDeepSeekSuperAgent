@@ -39,6 +39,19 @@ jobs:
           sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Test release discovery fixtures
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validate append-only release timing ledger and JSON report
+        env:
+          BASE_REVISION: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          set -euo pipefail
+          : > /tmp/release-timing-previous.jsonl
+          if [ -n "$BASE_REVISION" ] && [[ ! "$BASE_REVISION" =~ ^0+$ ]]; then
+            git cat-file -e "$BASE_REVISION^{commit}"
+            if git cat-file -e "$BASE_REVISION:measurements/release-timing.jsonl" 2>/dev/null; then
+              git show "$BASE_REVISION:measurements/release-timing.jsonl" > /tmp/release-timing-previous.jsonl
+            fi
+          fi
+          python scripts/release_timing.py report --ledger measurements/release-timing.jsonl --previous-ledger /tmp/release-timing-previous.jsonl
       - name: Validate workflow configuration
         run: |
           go install github.com/rhysd/actionlint/cmd/actionlint@v1.7.7

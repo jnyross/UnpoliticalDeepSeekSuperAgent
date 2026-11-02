@@ -1,0 +1,124 @@
+name: Measure deployed release timing
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Token-driven discovery merges do not reliably emit another Actions push run.
+  workflow_run:
+    workflows: [Discover official releases]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Serialize all ledger writers, including discovery. Never cancel a partially
+# completed persistence operation. Checkout main after obtaining this lock.
+concurrency:
+  group: release-evidence-persistence
+  cancel-in-progress: false
+
+jobs:
+  measure:
+    # Never execute a PR/fork snapshot or consume upstream artifacts with write access.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.head_repository.full_name == github.repository &&
+      (github.event.workflow_run.event == 'schedule' || github.event.workflow_run.event == 'workflow_dispatch'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          sudo apt-get update && sudo apt-get install -y poppler-utils
+      # Only observe the checked-out site. Never refresh, rebuild or discover here.
+      - name: Verify every deployed site file and record live observations
+        env:
+          EVIDENCE_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          for attempt in {1..8}; do
+            if python scripts/release_timing.py observe \
+              --ledger measurements/release-timing.jsonl \
+              --revision "$(git rev-parse HEAD)" \
+              --evidence-url "$EVIDENCE_URL" \
+              --live-url https://unpoliticaldeepseeksuperagent.vercel.app; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 8 ]; then
+              echo "Live verification attempt $attempt failed; retrying in 45 seconds."
+              sleep 45
+            fi
+          done
+          echo 'Live output could not be verified within eight attempts; refusing to publish.'
+          exit 1
+      - name: Validate unit fixtures and append-only ledger report
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py' -v
+          python scripts/release_timing.py report --ledger measurements/release-timing.jsonl > release-timing-report.json
+      - name: Persist validated measurements through a measurement-only pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          EVIDENCE_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          git add -- measurements/release-timing.jsonl
+          if git diff --cached --quiet; then
+            echo 'No new measurement: source version and site fingerprint already observed.'
+            exit 0
+          fi
+          branch="automation/deployment-timing-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git config user.name 'jnyross-agent'
+          git config user.email '351176923+jnyross-agent@users.noreply.github.com'
+          git commit -m 'Record verified deployed release timing'
+          head=$(git rev-parse HEAD)
+          git push origin "$branch"
+          pr=$(gh pr create --base main --head "$branch" \
+            --title 'Record verified deployed release timing' \
+            --body "This is by an automated agent, not a human.
+
+          Measurement-only change: append-only release timing ledger; no refresh, discovery, generated-site change or scoring bot. Every local site file was fetched from the live site and matched exact bytes before live success was recorded. Unit fixtures and the ledger report passed before PR creation. Evidence: $EVIDENCE_URL
+
+          This starts prospective evidence collection, not a Freshness L4 claim or proof of historical first-live time. GitHub-token PRs may not trigger CI; this workflow validates before creating the PR and never bypasses branch protection or failed checks.")
+          count=$(gh pr view "$pr" --json statusCheckRollup --jq '.statusCheckRollup | length')
+          pending=false
+          if [ "$count" -gt 0 ]; then
+            status=0
+            checks=$(gh pr checks "$pr" --json bucket --jq '.[].bucket') || status=$?
+            if [ "$status" -ne 0 ] && [ "$status" -ne 8 ]; then
+              echo 'PR checks failed; refusing to merge.'
+              exit 1
+            fi
+            if [[ "$checks" == *fail* || "$checks" == *cancel* ]]; then
+              echo 'PR checks failed or cancelled; refusing to merge.'
+              exit 1
+            fi
+            if [[ "$checks" == *pending* ]]; then pending=true; fi
+          fi
+          if [ "$pending" = true ]; then
+            gh pr merge "$pr" --auto --merge --match-head-commit "$head" --delete-branch
+          else
+            gh pr merge "$pr" --merge --match-head-commit "$head" --delete-branch
+          fi
+      - name: Retain deployment measurement evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-release-timing
+          path: |
+            measurements/release-timing.jsonl
+            release-timing-report.json
+          if-no-files-found: warn
