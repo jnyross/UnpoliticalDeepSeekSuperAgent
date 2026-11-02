@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-11-02T01:52:28.198Z",
+  "baseRevision": "32595b84443fce9f6e0070e896170784f53d92aa",
+  "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T01:52:28.211Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "parties.html",
+      "bytes": 25719,
+      "sha256": "82ad325209ddc507645e7c964d08beacc9b66061ffd4ba09e69d52f975642d9a",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:45839/parties.html",
+          "screenshot": "before-parties-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T01:52:31.247Z",
+  "passed": true
+}
