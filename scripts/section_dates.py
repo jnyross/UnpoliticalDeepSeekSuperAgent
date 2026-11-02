@@ -88,7 +88,9 @@ def annotate(files, root, spending, comparison):
             def income_stamp(match):
                 section = match['section']
                 period = income['year']
-                if section in ('borrowing-debt', 'sources'):
+                if section in ('forecasts', 'sources') and income.get('forecast_years'):
+                    period += ' outturn; ' + income['forecast_years'][0] + ' to ' + income['forecast_years'][-1] + ' forecast; debt at each end-March'
+                elif section == 'borrowing-debt':
                     period += '; debt at ' + debt_period
                 return match[0] + note(source_ids, period, [source],
                                        'income' if release else None, schedule=schedule)

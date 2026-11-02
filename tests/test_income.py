@@ -56,6 +56,29 @@ class WorkbookTests(unittest.TestCase):
                     checker.validate_workbook(self.workbook)
                 target.value = original
 
+    def test_forecast_source_mutations(self):
+        mutations = [(checker.RECEIPTS, 'B39', '2032-33'),
+                     (checker.AGGREGATES, 'B93', '2030-31'),
+                     (checker.AGGREGATES, 'C95', 'Forecast years from 2026-27; November 2026'),
+                     (checker.RECEIPTS, 'AG34', None),
+                     (checker.AGGREGATES, 'O93', float('nan')),
+                     (checker.AGGREGATES, 'X88', True)]
+        for sheet, cell, value in mutations:
+            with self.subTest(sheet=sheet, cell=cell):
+                target = self.workbook[sheet][cell]
+                original = target.value
+                target.value = value
+                with self.assertRaises(checker.ValidationError):
+                    checker.validate_workbook(self.workbook)
+                target.value = original
+        for sheet, cell in [(checker.RECEIPTS, 'AG34'), (checker.AGGREGATES, 'O93')]:
+            target = self.workbook[sheet][cell]
+            original = target.value
+            target.value += 1
+            with self.assertRaises(checker.ValidationError):
+                checker.validate_workbook(self.workbook)
+            target.value = original
+
     def test_borrowing_source_rounding_boundary(self):
         s = self.workbook[checker.AGGREGATES]
         s['O87'] = s['D87'].value - s['C87'].value + checker.BORROWING_ROUNDING
@@ -133,6 +156,38 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaises(checker.ValidationError):
             checker.validate_data(self.data, self.manifest, self.workbook)
 
+    def test_forecast_transition_and_export_provenance(self):
+        forecasts = [r for r in self.data['records'] if r['status'] == 'forecast']
+        self.assertEqual(len(forecasts), 18)
+        self.assertEqual(self.data['forecast_years'], checker.FORECAST_YEARS)
+        self.assertEqual(self.data['records'][-1]['period'], 'end-March 2032')
+        for record in forecasts:
+            for field, value in [('status', 'outturn'), ('period', '2025-26'),
+                                 ('cells', ['Aggregates (£bn)!V88']), ('ons_code', 'wrong')]:
+                changed = copy.deepcopy(self.original)
+                target = next(r for r in changed['records'] if r['id'] == record['id'])
+                target[field] = value
+                with self.subTest(record=record['id'], field=field):
+                    with self.assertRaises(checker.ValidationError):
+                        checker.validate_data(changed, self.manifest, self.workbook)
+        for mutate in (lambda d: d['forecast_years'].pop(),
+                       lambda d: d['forecast_source_note'].update(text='November 2026'),
+                       lambda d: d['forecast_source_note'].update(cell='Receipts (£bn)!C40')):
+            self.data = copy.deepcopy(self.original)
+            self.assert_invalid(mutate)
+
+    def test_forecast_html_style_status_semantics(self):
+        raw = (ROOT / 'site/income.html').read_text(encoding='utf-8')
+        for before, after in [('class="forecast"', 'class="outturn"'),
+                              ('border-top:2px dashed', 'border-top:2px solid'),
+                              ('2031-32<br><strong>Forecast', '2031-32<br><strong>Outturn'),
+                              ('scope="row"', ''),
+                              ('forecast-summary', 'no-summary')]:
+            with self.subTest(before=before):
+                self.assertIn(before, raw)
+                with self.assertRaises(checker.ValidationError):
+                    checker.validate_html(raw.replace(before, after), self.data)
+
     def test_top_level_metadata(self):
         for field, value in [('year', '2026-27'), ('status', 'forecast'),
                              ('geography', 'England'), ('unit', 'GBP million'),
@@ -173,14 +228,17 @@ class PublicationTests(unittest.TestCase):
         raw = (ROOT / 'site/data/income.csv').read_text(encoding='utf-8')
         checker.validate_csv(raw, self.data)
         rows = list(csv.reader(io.StringIO(raw)))
-        for col in range(len(rows[0])):
-            with self.subTest(column=rows[0][col]):
-                changed = copy.deepcopy(rows)
-                changed[1][col] = '99999'
-                stream = io.StringIO()
-                csv.writer(stream).writerows(changed)
-                with self.assertRaises(checker.ValidationError):
-                    checker.validate_csv(stream.getvalue(), self.data)
+        forecast_index = next(i for i, row in enumerate(rows[1:], 1)
+                              if row[rows[0].index('status')] == 'forecast')
+        for row_index in (1, forecast_index):
+            for col in range(len(rows[0])):
+                with self.subTest(row=row_index, column=rows[0][col]):
+                    changed = copy.deepcopy(rows)
+                    changed[row_index][col] = '99999'
+                    stream = io.StringIO()
+                    csv.writer(stream).writerows(changed)
+                    with self.assertRaises(checker.ValidationError):
+                        checker.validate_csv(stream.getvalue(), self.data)
         with self.assertRaises(checker.ValidationError):
             checker.validate_csv(raw + raw.splitlines()[1] + '\n', self.data)
 

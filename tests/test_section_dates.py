@@ -35,6 +35,10 @@ class SectionDatesTests(unittest.TestCase):
         import re
         pages = self.render()
         for name, page in pages.items():
+            if name == 'corrections.html':
+                # Ledger policy is not a fiscal data release: do not invent a vintage.
+                self.assertNotIn('class="section-dates"', page)
+                continue
             headers = re.findall(r'<(?:section|article)\b[^>]*>\s*<h2\b[^>]*>.*?</h2>', page, re.S)
             for header in headers:
                 self.assertIn(header+'<div class="section-dates">', page, name)
@@ -49,7 +53,7 @@ class SectionDatesTests(unittest.TestCase):
         import re
         page = self.render()['income.html']
         sections = dict(re.findall(r'<section id="([^"]+)">(.*?)</section>', page, re.S))
-        self.assertEqual(set(sections), {'tax', 'non-tax', 'borrowing-debt', 'sources'})
+        self.assertEqual(set(sections), {'forecasts', 'tax', 'non-tax', 'borrowing-debt', 'sources'})
         for section, body in sections.items():
             stamp = body.split('<div class="section-dates">')[1].split('</div>')[0]
             self.assertIn('Data period: 2025-26', stamp)
@@ -59,7 +63,9 @@ class SectionDatesTests(unittest.TestCase):
             self.assertIn('https://obr.uk/data/', stamp)
             self.assertIn('sources/income-release.txt', stamp)
             self.assertEqual('debt at end-March 2026' in stamp,
-                             section in ('borrowing-debt', 'sources'))
+                             section == 'borrowing-debt')
+            self.assertEqual('2026-27 to 2031-32 forecast; debt at each end-March' in stamp,
+                             section in ('forecasts', 'sources'))
 
     def test_independent_party_evidence_dates_and_revision_notices_are_local(self):
         notice = {'source': 'party-evidence-rf-economic-battle-lines',
@@ -101,7 +107,7 @@ class SectionDatesTests(unittest.TestCase):
                       'first_detected_at': '2026-11-02T00:00:00Z',
                       'evidence': {'release_url': url}}
             pages = self.render([notice])
-            self.assertEqual(pages['income.html'].count(f'<strong>{label}</strong>'), 4)
+            self.assertEqual(pages['income.html'].count(f'<strong>{label}</strong>'), 5)
             self.assertIn('These figures still use the saved data, not the changed source.', pages['income.html'])
             for name, page in pages.items():
                 if name != 'income.html':

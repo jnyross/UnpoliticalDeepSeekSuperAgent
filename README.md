@@ -7,7 +7,12 @@ this year **outturn**, not forecast. This foundation is not the full product and
 not claim rubric levels. A separate history page shows spending overall and by area
 from the retained PESA historical tables. The income page shows tax types, other receipts,
 borrowing and the debt stock from the OBR public finances databank, with the source's
-own period and forecast labels. Debt is not debt interest; borrowing is not tax.
+own period and forecast labels. The income page pairs the latest outturn with all
+forecast years from that same workbook for receipts, borrowing and year-end debt.
+Forecast rows have dashed borders and explicit status text, with the OBR forecast
+vintage note and databank date beside the table. These are cash amounts, not a
+price-adjusted time-series chart. The existing history charts retain cash, real and
+GDP-share views. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
 The [Coverage L4 evidence audit](docs/research/coverage-l4/ni-devolved-feasibility.md)
@@ -17,6 +22,10 @@ plans; the other ten parties remain explicitly unavailable here. This is partial
 coverage, not a claim to Coverage L4. Unlike plans are not ranked or added together.
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
+
+Manual accessibility testing prerequisites (not performed results):
+[protocols, page/state inventory and blank records](docs/evidence/access/manual/README.md).
+Completing these materials does not award Accessibility L4.
 
 ## Setup
 
@@ -109,6 +118,37 @@ known notices have been preserved; other families can still be checked. Daily po
 can only show revisions after detection and deployment, not at the instant a publisher
 changes bytes. Never claim continuous real-time revision coverage.
 
+### Prospective release and deployment timing
+
+The append-only [measurement ledger](measurements/release-timing.jsonl) records
+retained source baselines, newly discovered versions, discovery errors and verified
+live snapshots. Discovery includes it in its existing validated PR and evidence
+artifact, even when another source reports an error. A separate
+[deployment-only workflow](.github/workflows/deployment-timing.yml) runs on main
+pushes, manual dispatch or completion of trusted main-branch release discovery
+(including token-driven notice merges), fetches **every local site file** from production and
+requires exact byte equality before recording live success. It performs no source
+refresh or discovery. Bounded retries allow deployment propagation; failure is not
+silently treated as success. Validated changes go through a measurement-only PR
+by `jnyross-agent`, without bypassing failed checks or branch protection.
+Source-version/site-fingerprint deduplication makes ledger-only merges a no-op
+rather than an endless series of measurement PRs.
+
+```sh
+python scripts/release_timing.py report --ledger measurements/release-timing.jsonl
+# Observe a completed discovery run (use its real public Actions run URL):
+python scripts/release_timing.py observe --ledger measurements/release-timing.jsonl \
+  --discovery discovery-report.json --revision "$(git rev-parse HEAD)" \
+  --evidence-url https://github.com/OWNER/REPO/actions/runs/RUN_ID
+```
+
+This is forward-looking evidence, **not a Freshness L4 claim**. Historical first-live
+times remain unknown; date-only publications yield uncertainty bounds, not invented
+midnight publication times or exact delays. CI validates the ledger's hash chain
+and unchanged historical prefix against the base revision. See
+[release timing methods and commands](docs/release-timing.md) for live verification,
+append-only validation, error handling and interpretation limits.
+
 ### Section dates and official release evidence
 
 Every spending/income section, history chart/table and party offer carries its data period
@@ -135,6 +175,44 @@ workbook hash. It also checks the retained workbook when the latest link moves;
 per-request cache timestamps are excluded from release identity. Extend the inventory
 coverage test along with the source pipeline. This schedule notices releases and opens
 review tasks; it does not claim a year of timely updates or people-review evidence.
+
+## Public corrections log
+
+Every page links to `/corrections.html`, which works without JavaScript. Its retained
+source is `sources/corrections.json`; the same JSON is published for download. The
+initial log is honestly empty, not invented past events or people-review evidence.
+Routine new features and source refreshes are not corrections.
+
+Append a verified error with `id` (stable lowercase hyphenated name), `date` (ISO date
+the fix was applied), `page` (site-relative HTML path), `error`, `correction`, and
+`source` (this repository's public commit or pull-request URL). Prefer full immutable
+commit URLs. Verify that the change supports the error and fix: URL syntax is not
+proof of a claim. Apply the same evidence standard for every party. Keep date order.
+To correct an entry, append a new one naming its ID; never edit or delete the old one.
+Rebuild with `.venv/bin/python scripts/build.py` and commit source and output.
+
+```sh
+.venv/bin/python scripts/corrections.py --base origin/main
+.venv/bin/python -m unittest discover -s tests -p 'test_corrections.py' -v
+```
+
+CI compares entries against the PR base (or pre-push revision on main), rejecting
+changed, reordered or dropped entries. First introduction is allowed only when the
+verified base commit has no log. Invalid bases fail closed. Synthetic test fixtures
+exercise nonempty logs; they are not published as real events. This Git-history guard
+is not tamper-proof storage: changes to CI or repository history can defeat it.
+Actual opposing political reviewers and published responses remain absent; this
+work does not award Impartiality L4.
+
+## Comprehension testing preparation
+
+The versioned [eight-question testing kit](docs/comprehension-kit/README.md)
+contains a neutral participant sheet, separate source-derived answer key, frozen
+page revision, timed facilitator protocol and empty anonymous results template.
+Run `python3 scripts/comprehension_kit.py` to check coverage, data consistency and
+the pinned revision. CI also exercises stale-input and answer mutations. No real
+participant tests or results exist; this prerequisite does not award Comprehension L4.
+The kit is documentation only and does not alter live pages.
 
 ## Reproduce and check without network access
 

@@ -1,0 +1,54 @@
+{
+  "startedAt": "2026-11-02T01:40:38.316Z",
+  "target": "local-generated-output",
+  "timeoutMs": 300000,
+  "discoveredPages": [
+    "history-cash.html",
+    "history-gdp.html",
+    "history-real.html",
+    "history.html",
+    "income.html",
+    "index.html",
+    "parties.html"
+  ],
+  "selectedPages": [
+    "income.html"
+  ],
+  "completed": true,
+  "passed": true,
+  "expected": [
+    {
+      "page": "income.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "income.html",
+      "viewport": "desktop"
+    }
+  ],
+  "results": [
+    {
+      "page": "income.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T01:40:38.318Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T01:40:44.800Z",
+      "evidence": "income.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "income.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T01:40:44.809Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T01:40:51.551Z",
+      "evidence": "income.html/desktop/after-browser-report.json"
+    }
+  ],
+  "finishedAt": "2026-11-02T01:40:51.554Z"
+}
