@@ -5,8 +5,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from corrections_page import render
 
-
-METADATA = {'publication': 'UnpoliticalAF corrections log', 'file': 'corrections.json'}
+METADATA = dict(publication='UnpoliticalAF corrections log', file='corrections.json',
+                date='2026-11-02', date_basis='Test snapshot date.',
+                evidence_url='https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/pull/1')
 
 
 class CorrectionsPageTests(unittest.TestCase):

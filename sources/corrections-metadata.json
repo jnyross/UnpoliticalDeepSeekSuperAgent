@@ -1,4 +1,8 @@
 {
   "publication": "UnpoliticalAF corrections log",
-  "file": "corrections.json"
+  "file": "corrections.json",
+  "date": "2026-11-02",
+  "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "date_basis": "Date of this retained log snapshot, not an official data release or the date of an error.",
+  "evidence_url": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/commit/eec99c1cc01d887b08fbfd33e84c522aa47bc679"
 }

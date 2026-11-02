@@ -229,9 +229,9 @@ def validate_page(path, manifest, banned):
     require(isinstance(manifest, dict) and bool(manifest.get('publication', '').strip()),
             f"{path}: missing source publication metadata")
     require(manifest["publication"] in text, f"{path}: missing source publication")
-    if path.name != 'corrections.html' or 'date' in manifest:
-        require(any(form in text for form in date_forms(manifest["date"])),
-                f"{path}: missing source publication/update date")
+    require(bool(manifest.get('date')), f"{path}: missing data date metadata")
+    require(any(form in text for form in date_forms(manifest["date"])),
+            f"{path}: missing source publication/update date")
     for word in banned:
         require(not re.search(r"(?<!\w)" + re.escape(word) + r"(?!\w)", text, re.I),
                 f"{path}: banned evaluative wording: {word}")
@@ -309,7 +309,10 @@ def validate(root):
     pages = sorted((root / "site").rglob("*.html"))
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
     require((root / 'site/about.html').is_file(), 'Missing project disclosures')
-    corrections_metadata = json.loads((root / 'sources/corrections-metadata.json').read_text())
+    import corrections
+    corrections_metadata = corrections.load_metadata(
+        root / 'sources/corrections-metadata.json',
+        corrections.load(root / 'sources/corrections.json'))
     require(corrections_metadata.get('publication') == 'UnpoliticalAF corrections log' and
             corrections_metadata.get('file') == 'corrections.json',
             'Corrections metadata must name the local corrections log')
