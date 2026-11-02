@@ -68,7 +68,7 @@ class PolicyListingFixture(unittest.TestCase):
         self.assertEqual(first[0]['key'], repeated[0]['key'])
         self.assertEqual(first[0]['evidence']['listing_sha256'], repeated[0]['evidence']['listing_sha256'])
         github = mock.Mock(return_value=json.dumps([[dict(state='closed', body='<!-- source-release:' + first[0]['key'] + ' -->')]]))
-        self.assertEqual(discover.open_updates(repeated, 'owner/repo', run=github)[0]['status'], 'already reported')
+        self.assertEqual(discover.open_updates(repeated, 'owner/repo', run=github, receipt_path=self.root / 'receipts.json')[0]['status'], 'already reported')
         self.assertEqual(github.call_count, 1)
 
     def test_relative_links_tracking_html_and_whitespace_are_semantically_unchanged(self):

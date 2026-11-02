@@ -1,0 +1,16 @@
+test_create_url_accepts_canonical_repository_casing (test_issue_delivery.DeliveryTests.test_create_url_accepts_canonical_repository_casing) ... ok
+test_different_repository_does_not_share_receipt (test_issue_delivery.DeliveryTests.test_different_repository_does_not_share_receipt) ... ok
+test_failed_success_receipt_retains_pending_and_prevents_second_write (test_issue_delivery.DeliveryTests.test_failed_success_receipt_retains_pending_and_prevents_second_write) ... ok
+test_immediate_repeat_stale_list_creates_once (test_issue_delivery.DeliveryTests.test_immediate_repeat_stale_list_creates_once) ... ok
+test_invalid_create_response_retains_uncertain_receipt (test_issue_delivery.DeliveryTests.test_invalid_create_response_retains_uncertain_receipt) ... ok
+test_list_failure_does_not_reserve_and_next_attempt_can_create (test_issue_delivery.DeliveryTests.test_list_failure_does_not_reserve_and_next_attempt_can_create) ... ok
+test_malformed_receipt_fails_closed_without_github_call (test_issue_delivery.DeliveryTests.test_malformed_receipt_fails_closed_without_github_call) ... ok
+test_receipt_save_failure_before_write_cannot_create (test_issue_delivery.DeliveryTests.test_receipt_save_failure_before_write_cannot_create) ... ok
+test_receipt_serializes_concurrent_processes_and_survives_restart (test_issue_delivery.DeliveryTests.test_receipt_serializes_concurrent_processes_and_survives_restart) ... ok
+test_repository_case_preserves_successful_and_uncertain_receipts (test_issue_delivery.DeliveryTests.test_repository_case_preserves_successful_and_uncertain_receipts) ... ok
+test_timeout_after_remote_create_refuses_blind_repeat_then_reconciles (test_issue_delivery.DeliveryTests.test_timeout_after_remote_create_refuses_blind_repeat_then_reconciles) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.410s
+
+OK
