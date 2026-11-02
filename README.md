@@ -193,6 +193,16 @@ is not tamper-proof storage: changes to CI or repository history can defeat it.
 Actual opposing political reviewers and published responses remain absent; this
 work does not award Impartiality L4.
 
+## Comprehension testing preparation
+
+The versioned [eight-question testing kit](docs/comprehension-kit/README.md)
+contains a neutral participant sheet, separate source-derived answer key, frozen
+page revision, timed facilitator protocol and empty anonymous results template.
+Run `python3 scripts/comprehension_kit.py` to check coverage, data consistency and
+the pinned revision. CI also exercises stale-input and answer mutations. No real
+participant tests or results exist; this prerequisite does not award Comprehension L4.
+The kit is documentation only and does not alter live pages.
+
 ## Reproduce and check without network access
 
 ```sh
