@@ -29,6 +29,7 @@ def require(condition, message):
 
 WORKBOOK_SHA = '16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459'
 YEAR = '2025-26'
+FORECAST_YEARS = ['2026-27', '2027-28', '2028-29', '2029-30', '2030-31', '2031-32']
 UNIT = 'GBP billion, cash'
 GEOGRAPHY = 'United Kingdom'
 RECEIPTS = 'Receipts (£bn)'
@@ -99,10 +100,27 @@ def validate_workbook(workbook):
           BORROWING_ROUNDING, 'Compatible spending minus receipts equals borrowing')
 
 
+    # Independently fix this retained vintage's full coverage and semantic boundary.
+    for sheet, start in ((r, 34), (a, 88)):
+        years = [c.value for c in sheet['B'] if isinstance(c.value, str)
+                 and re.fullmatch(r'\d{4}-\d{2}', c.value) and c.value >= FORECAST_YEARS[0]]
+        exact(years, FORECAST_YEARS, 'Complete forecast source coverage')
+        for offset, period in enumerate(FORECAST_YEARS):
+            require(sheet.cell(start + offset, 2).value == period, 'Forecast source row changed')
+    for offset, period in enumerate(FORECAST_YEARS):
+        rr, ar = 34 + offset, 88 + offset
+        for sheet, address in ((r, f'AG{rr}'), (a, f'C{ar}'), (a, f'D{ar}'), (a, f'O{ar}'), (a, f'X{ar}')):
+            number(sheet[address].value, f'Forecast {period} {address}')
+        close(r[f'AG{rr}'].value, a[f'C{ar}'].value, ARITHMETIC_TOLERANCE, f'Forecast {period} receipts')
+        close(a[f'D{ar}'].value - r[f'AG{rr}'].value, a[f'O{ar}'].value,
+              ARITHMETIC_TOLERANCE, f'Forecast {period} borrowing')
+
+
 SCOPE = 'UK public sector, OBR public finances definitions'
 CSV_COLUMNS = ['id', 'label', 'kind', 'value_gbp_billion', 'unit', 'geography',
                'scope', 'period', 'status', 'cells', 'ons_code', 'formula', 'operands',
-               'source_publication', 'source_published', 'source_url', 'source_sha256']
+               'source_publication', 'source_published', 'source_url', 'source_sha256',
+               'source_status_cell', 'source_status_note']
 ROUNDING = 'Raw values are retained to 12 decimal places in GBP billion; HTML rounds to 0.1 billion. Source actuals are recorded to 0.001 billion. Reconciliations use unrounded data with 0.000001 billion numeric tolerance, not independently rounded display amounts.'
 SELECTION = 'Latest complete outturn before the first forecast year stated in Receipts (£bn)!C41.'
 RECONCILIATION = 'All identities use one OBR workbook vintage and public sector accounting basis. Tax rows C:AC plus the derived other-tax residual equal national accounts taxes. AF is a mixed tax/non-tax line, not a tax type. It is split by residual against the published tax total; the residuals do not identify further individual taxes. The VAT refund row belongs in the published national accounts tax basis: do not subtract it again or treat it as non-tax. Negative tax entries are net receipts or repayments, not missing data. TME less current receipts equals net borrowing on this accrued basis. Debt is not added to annual receipts or borrowing; changes in debt also reflect financial transactions and cash/accrual differences. This workbook is not reconciled to a separate Treasury workbook vintage.'
@@ -149,6 +167,16 @@ def expected_records(workbook):
                       status='outturn', unit=UNIT, geography=GEOGRAPHY, ons_code=None)
         records.append(record)
         lookup[ident] = record
+    for offset, period in enumerate(FORECAST_YEARS):
+        for ident, label, kind, sheet, address in [
+            ('receipts', 'Public sector current receipts', 'total', RECEIPTS, f'AG{34+offset}'),
+            ('borrowing', 'Public sector net borrowing', 'borrowing', AGGREGATES, f'O{88+offset}'),
+            ('debt', 'Public sector net debt', 'stock', AGGREGATES, f'X{88+offset}')]:
+            records.append(dict(id=f'forecast-{ident}-{period}', label=label, kind=kind,
+                cells=[f'{sheet}!{address}'], value_gbp_billion=round(number(workbook[sheet][address].value, address), 12),
+                formula=None, operands=[], scope=SCOPE, status='forecast', unit=UNIT,
+                geography=GEOGRAPHY, period='end-March ' + str(int(period[:4])+1) if ident == 'debt' else period,
+                ons_code=workbook[sheet][re.sub(r'\d+', '5', address)].value))
     return records
 
 
@@ -199,7 +227,8 @@ def validate_data(data, manifest, workbook):
              for cell in cells]
     wanted = dict(source=manifest, geography=GEOGRAPHY, year=YEAR, status='outturn', unit=UNIT,
                   scope=SCOPE, records=expected, checks=checks, notes=notes, rounding=ROUNDING,
-                  selection=SELECTION, reconciliation=RECONCILIATION)
+                  selection=SELECTION, reconciliation=RECONCILIATION,
+                  forecast_years=FORECAST_YEARS, forecast_source_note=dict(cell=f'{RECEIPTS}!C41', text=workbook[RECEIPTS]['C41'].value))
     exact(data, wanted, 'Income JSON')
 
 
@@ -252,6 +281,9 @@ class IncomeHTML(HTMLParser):
         self.row = None
         self.cell = None
         self.caption = None
+        self.summary_row_classes = []
+        self.semantic_errors = []
+        self.in_summary = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -263,12 +295,17 @@ class IncomeHTML(HTMLParser):
             return
         self.text.append(' ')
         if tag == 'table':
+            self.in_summary = attrs.get('class') == 'forecast-summary'
             self.table = {'caption': '', 'rows': []}
         elif tag == 'caption':
             self.caption = []
         elif tag == 'tr':
+            if self.in_summary and attrs.get('class'):
+                self.summary_row_classes.append(attrs['class'])
             self.row = []
         elif tag in ('td', 'th'):
+            if tag == 'th' and attrs.get('scope') not in ('row', 'col'):
+                self.semantic_errors.append('Table header lacks scope')
             self.cell = []
         elif tag == 'br' and self.cell is not None:
             self.cell.append(' ')
@@ -307,7 +344,20 @@ def validate_html(raw, data):
     parser = IncomeHTML()
     parser.feed(raw)
     records = {r['id']: r for r in data['records']}
-    tables = []
+    summary_rows = [['Fiscal year / status', 'Receipts £bn', 'Borrowing £bn', 'Net debt £bn', 'Debt date / source cells']]
+    for period in [YEAR] + FORECAST_YEARS:
+        forecast = period != YEAR
+        selected = [records[f'forecast-{i}-{period}' if forecast else i] for i in ('receipts', 'borrowing', 'debt')]
+        summary_rows.append([period + (' Forecast' if forecast else ' Outturn (recorded)')]
+            + [f'{r["value_gbp_billion"]:,.1f}' for r in selected]
+            + [f'end-March {int(period[:4])+1} ' + '; '.join(r['cells'][0] for r in selected)])
+    tables = [dict(caption='Latest outturn and OBR forecasts · United Kingdom · cash £ billion', rows=summary_rows)]
+    exact(parser.summary_row_classes, ['outturn'] + ['forecast'] * len(FORECAST_YEARS), 'Forecast row style/status')
+    require(not parser.semantic_errors, 'Semantic table headers require scope')
+    require('.forecast-summary .forecast>*{border-top:2px dashed #555;border-bottom:2px dashed #555;' in raw,
+            'Forecast dashed row styling missing')
+    require('.forecast-summary .outturn>*{border-top:2px solid #555;border-bottom:2px solid #555}' in raw,
+            'Outturn solid row styling missing')
     groups = [('Tax types in ' + YEAR, [r for r in data['records'] if r['kind'] == 'tax-type'] + [records['taxes']]),
               ('Non-tax receipts in ' + YEAR, [r for r in data['records'] if r['kind'] == 'non-tax-type'] + [records['non-tax']]),
               ('Annual flows and the year-end debt stock', [records[i] for i in ('receipts', 'taxes', 'non-tax', 'tme', 'borrowing', 'debt')])]
@@ -333,6 +383,10 @@ def validate_html(raw, data):
                'Borrowing is not tax. Debt is a stock.', 'They are not forecasts.',
                'Net borrowing uses the accrued basis', 'Debt is a stock at a point in time.',
                'VAT refund row', 'Do not take refunds off a second time.',
+                'Which numbers are forecasts?', 'forecasts, not recorded results',
+                'Forecast source and date:', data['forecast_source_note']['text'],
+                data['forecast_source_note']['cell'], data['source']['published'],
+                'The tax breakdown below stays on the latest outturn.',
                data['source']['publication'], data['source']['sha256'], data['source']['metadata_sha256'],
                ROUNDING, RECONCILIATION]
     for phrase in phrases:

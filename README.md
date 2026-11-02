@@ -7,7 +7,12 @@ this year **outturn**, not forecast. This foundation is not the full product and
 not claim rubric levels. A separate history page shows spending overall and by area
 from the retained PESA historical tables. The income page shows tax types, other receipts,
 borrowing and the debt stock from the OBR public finances databank, with the source's
-own period and forecast labels. Debt is not debt interest; borrowing is not tax.
+own period and forecast labels. The income page pairs the latest outturn with all
+forecast years from that same workbook for receipts, borrowing and year-end debt.
+Forecast rows have dashed borders and explicit status text, with the OBR forecast
+vintage note and databank date beside the table. These are cash amounts, not a
+price-adjusted time-series chart. The existing history charts retain cash, real and
+GDP-share views. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
 See [product specification](docs/product-spec.md),

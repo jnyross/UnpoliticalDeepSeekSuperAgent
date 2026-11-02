@@ -105,14 +105,14 @@ def _extract(workbook, source):
     assert receipts['C41'].value == aggregates['C95'].value
     records = []
 
-    def raw(ident, label, kind, sheet, cell, period=None):
+    def raw(ident, label, kind, sheet, cell, period=None, status='outturn'):
         value = workbook[sheet][cell].value
         assert isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value), f'Missing/non-numeric: {sheet}!{cell}'
         col = re.match(r'[A-Z]+', cell)[0]
         code = workbook[sheet][f'{col}5'].value
         record = dict(id=ident, label=label, kind=kind, value_gbp_billion=round(value, 12),
             cells=[f'{sheet}!{cell}'], formula=None, operands=[], scope=SCOPE,
-            period=period or year, status='outturn', unit=UNIT, geography='United Kingdom',
+            period=period or year, status=status, unit=UNIT, geography='United Kingdom',
             ons_code=code)
         records.append(record)
         return record
@@ -173,11 +173,34 @@ def _extract(workbook, source):
         assert abs(check['residual_gbp_billion']) <= TOLERANCE, check
         check['residual_gbp_billion'] = round(check['residual_gbp_billion'], 12)
         check['tolerance_gbp_billion'] = TOLERANCE
+    # Keep legacy outturn IDs intact; append explicit period-qualified forecast IDs.
+    forecast_rows = [(c.row, c.value) for c in receipts['B']
+                     if isinstance(c.value, str) and re.fullmatch(r'\d{4}-\d{2}', c.value)
+                     and int(c.value[:4]) >= first_forecast]
+    forecast_years = [period for _, period in forecast_rows]
+    assert forecast_years, 'No forecast years in source'
+    assert [int(p[:4]) for p in forecast_years] == list(range(first_forecast, first_forecast + len(forecast_years))), 'Forecast years missing or unordered'
+    aggregate_years = [c.value for c in aggregates['B']
+                       if isinstance(c.value, str) and re.fullmatch(r'\d{4}-\d{2}', c.value)
+                       and int(c.value[:4]) >= first_forecast]
+    assert aggregate_years == forecast_years, 'Forecast coverage differs across sheets'
+    for frow, period in forecast_rows:
+        arow = next(c.row for c in aggregates['B'] if c.value == period)
+        for ident, label, kind, sheet, cell in [
+                ('receipts', 'Public sector current receipts', 'total', RECEIPTS, f'AG{frow}'),
+                ('borrowing', 'Public sector net borrowing', 'borrowing', AGGREGATES, f'O{arow}'),
+                ('debt', 'Public sector net debt', 'stock', AGGREGATES, f'X{arow}')]:
+            raw(f'forecast-{ident}-{period}', label, kind, sheet, cell,
+                'end-March ' + str(int(period[:4]) + 1) if ident == 'debt' else period,
+                status='forecast')
+        assert abs(receipts[f'AG{frow}'].value - aggregates[f'C{arow}'].value) <= TOLERANCE, 'Forecast receipts differ across sheets'
+        assert abs(aggregates[f'D{arow}'].value - receipts[f'AG{frow}'].value - aggregates[f'O{arow}'].value) <= TOLERANCE, 'Forecast borrowing identity differs'
     notes = [dict(cell=f'{sheet}!{cell}', text=workbook[sheet][cell].value)
              for sheet, cells in [(RECEIPTS, ['C40', 'C41', 'C42']),
                  ('Glossary', ['C5', 'C6', 'C11', 'C14', 'C15'])] for cell in cells]
     return dict(source=source, geography='United Kingdom', year=year, status='outturn',
         unit=UNIT, scope=SCOPE, records=records, checks=checks, notes=notes,
+        forecast_years=forecast_years, forecast_source_note=dict(cell=f'{RECEIPTS}!C41', text=note),
         rounding='Raw values are retained to 12 decimal places in GBP billion; HTML rounds to 0.1 billion. Source actuals are recorded to 0.001 billion. Reconciliations use unrounded data with 0.000001 billion numeric tolerance, not independently rounded display amounts.',
         selection='Latest complete outturn before the first forecast year stated in Receipts (£bn)!C41.',
         reconciliation='All identities use one OBR workbook vintage and public sector accounting basis. Tax rows C:AC plus the derived other-tax residual equal national accounts taxes. AF is a mixed tax/non-tax line, not a tax type. It is split by residual against the published tax total; the residuals do not identify further individual taxes. The VAT refund row belongs in the published national accounts tax basis: do not subtract it again or treat it as non-tax. Negative tax entries are net receipts or repayments, not missing data. TME less current receipts equals net borrowing on this accrued basis. Debt is not added to annual receipts or borrowing; changes in debt also reflect financial transactions and cash/accrual differences. This workbook is not reconciled to a separate Treasury workbook vintage.')
@@ -206,13 +229,25 @@ def render(data):
     non_tax = [r for r in data['records'] if r['kind'] == 'non-tax-type']
     note_html = ''.join(f'<li>{esc(n["text"])} <small>({esc(n["cell"])})</small></li>' for n in data['notes'])
     checks = ''.join(f'<li>{esc(c["name"])}: {esc(c["formula"])} = {c["residual_gbp_billion"]:g} £bn (tolerance {c["tolerance_gbp_billion"]:g} £bn).</li>' for c in data['checks'])
+    summary_rows = []
+    for period in [data['year']] + data['forecast_years']:
+        forecast = period in data['forecast_years']
+        ids = [f'forecast-{ident}-{period}' if forecast else ident for ident in ('receipts', 'borrowing', 'debt')]
+        status = 'Forecast' if forecast else 'Outturn (recorded)'
+        cells = '; '.join(records[i]['cells'][0] for i in ids)
+        summary_rows.append(f'<tr class="{"forecast" if forecast else "outturn"}"><th scope="row">{esc(period)}<br><strong>{status}</strong></th>'
+            + ''.join(f'<td>{records[i]["value_gbp_billion"]:,.1f}</td>' for i in ids)
+            + f'<td>end-March {int(period[:4])+1}<br><small>{esc(cells)}</small></td></tr>')
+    summary = '<table class="forecast-summary"><caption>Latest outturn and OBR forecasts · United Kingdom · cash £ billion</caption><thead><tr><th scope="col">Fiscal year / status</th><th scope="col">Receipts £bn</th><th scope="col">Borrowing £bn</th><th scope="col">Net debt £bn</th><th scope="col">Debt date / source cells</th></tr></thead><tbody>' + ''.join(summary_rows) + '</tbody></table>'
+    css += '.forecast-summary th:first-child{width:22%}.forecast-summary th:nth-child(2),.forecast-summary th:nth-child(3),.forecast-summary th:nth-child(4){width:16%}.forecast-summary th:last-child{width:30%}.forecast-summary .forecast>*{border-top:2px dashed #555;border-bottom:2px dashed #555;background:#f0f0ee}.forecast-summary .forecast>*:first-child{border-left:2px dashed #555}.forecast-summary .forecast>*:last-child{border-right:2px dashed #555}.forecast-summary .outturn>*{border-top:2px solid #555;border-bottom:2px solid #555}'
     income_tax = sum(records[i]['value_gbp_billion'] for i in ['receipt-q', 'receipt-r', 'receipt-s'])
     return f'''<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>UK tax, receipts, borrowing and debt | UnpoliticalAF</title><meta name="description" content="Actual UK tax types, non-tax receipts, annual borrowing and debt stock with official OBR source cells."><style>{css}</style></head><body><a class="skip" href="#main">Skip to content</a><header><a href="index.html">UnpoliticalAF · latest spending</a> · <a href="history.html">Spending history</a></header><main id="main"><h1>UK tax, receipts, borrowing and debt</h1>
 <p>In {data['year']}, the UK public sector took in <strong>{amount('receipts')}</strong>. Of this, {amount('taxes')} was tax and {amount('non-tax')} was non-tax income. These are <strong>outturn</strong> figures: recorded results that can still change. They are not forecasts.</p>
 <p>Spending was {amount('tme')}. The gap was <strong>{amount('borrowing')} of net borrowing</strong>. Debt stood at <strong>{amount('debt')}</strong> at end-March {int(data['year'][:4])+1}.</p>
-<nav aria-label="Income sections"><a href="#tax">Tax types</a> · <a href="#non-tax">Non-tax income</a> · <a href="#borrowing-debt">Borrowing and debt</a> · <a href="#sources">Check the source</a></nav>
+<nav aria-label="Income sections"><a href="#forecasts">Outturn and forecasts</a> · <a href="#tax">Tax types</a> · <a href="#non-tax">Non-tax income</a> · <a href="#borrowing-debt">Borrowing and debt</a> · <a href="#sources">Check the source</a></nav>
 <p>All figures cover the United Kingdom public sector, not just central government. Cash means pounds at the time, not adjusted for price rises. A fiscal year runs from April to March. All sums on this page use the same OBR release. They do not use the separate Treasury spending page.</p>
+<section id="forecasts"><h2>Which numbers are forecasts?</h2><p>The first row is the latest outturn: a recorded result. All dashed rows are <strong>forecasts, not recorded results</strong>. These are the OBR’s forecasts, not a promise of what will happen. They can change.</p><p>Forecast source and date: Office for Budget Responsibility (OBR). <strong>{esc(data['forecast_source_note']['text'])}</strong> <small>({esc(data['forecast_source_note']['cell'])}; also Aggregates (£bn)!C95)</small>. Outturn source and date: {esc(data['notes'][0]['text'])} Both sets come from <a href="{esc(source['release_url'])}">{esc(source['publication'])}</a>, published {source['published']}.</p>{summary}<p>Receipts and borrowing are flows over each fiscal year. Debt is the stock at the end of that year, not annual debt interest. These cash amounts are not adjusted for price rises. This is a source summary table, not a trend chart. The tax breakdown below stays on the latest outturn.</p></section>
 <section id="tax"><h2>Which taxes bring in income?</h2><p>Income tax brought in £{income_tax:,.1f} billion. We add PAYE, self assessed and other income tax (rows Q, R and S below). National Insurance brought in {amount('receipt-ab')}; VAT net of refunds brought in {amount('receipt-c')}. The full list below keeps the source tax types. NICs are part of the tax total here.</p>
 {table('Tax types in ' + data['year'], taxes + [records['taxes']])}
 <p>VAT has two rows in this source. Its national accounts tax total includes the VAT refund row. Do not take refunds off a second time. A minus sign means net repayments or a tax adjustment, not a missing figure.</p>
@@ -226,7 +261,7 @@ def render(data):
 <p>On this source basis, receipts plus net borrowing equal Total Managed Expenditure (TME). TME is not the same as spending on services. We do not mix these OBR sums with a separate Treasury release. <a href="index.html">See the spending page and its own scope</a>.</p></section>
 <section id="sources"><h2>Check these numbers</h2><p><a href="{esc(source['release_url'])}">{esc(source['publication'])}</a>, Office for Budget Responsibility. Published {source['published']}; source date {source['date']}; downloaded {source['downloaded']}. {esc(source['next_release'])}</p>
 <p><a href="data/income.csv">Download CSV</a> · <a href="data/income.json">Download JSON with cell references and formulas</a> · <a href="sources/income.xlsx">Retained official OBR workbook</a> · <a href="{esc(source['download_url'])}">Official download</a> · <a href="sources/income-manifest.json">Source manifest</a> · <a href="sources/income-release.txt">Retained release page</a></p>
-<p>The tables give exact sheet names and cell codes. All rows are {data['year']} outturn, except debt which is the stock at year end. The workbook has forecasts too; none are used on this page. We select the latest complete year before the first forecast year in the source note.</p>
+<p>The tables give exact sheet names and cell codes. The breakdown tables use {data['year']} outturn. The summary also shows every forecast year in the workbook, from {data['forecast_years'][0]} to {data['forecast_years'][-1]}. Each debt row is a stock at year end. We select the latest complete outturn before the first forecast year in the source note; forecasts retain that note’s own vintage.</p>
 <p>{esc(data['rounding'])}</p><p>{esc(data['reconciliation'])}</p><h3>Checks on the source basis</h3><ul>{checks}</ul><h3>Source notes and definitions</h3><ul>{note_html}</ul><p>Workbook SHA-256: <code>{source['sha256']}</code></p><p>Release page SHA-256: <code>{source['metadata_sha256']}</code></p></section>
 </main><footer>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Source: Office for Budget Responsibility, using ONS/HM Treasury public finances data.</footer></body></html>'''
 
@@ -237,11 +272,14 @@ def outputs(root):
     stream = io.StringIO()
     columns = ['id', 'label', 'kind', 'value_gbp_billion', 'unit', 'geography',
                'scope', 'period', 'status', 'cells', 'ons_code', 'formula', 'operands',
-               'source_publication', 'source_published', 'source_url', 'source_sha256']
+               'source_publication', 'source_published', 'source_url', 'source_sha256',
+               'source_status_cell', 'source_status_note']
     writer = csv.DictWriter(stream, columns, lineterminator='\n')
     writer.writeheader()
     for record in data['records']:
-        writer.writerow({**record, 'cells': '; '.join(record['cells']),
+        status_note = data['forecast_source_note'] if record['status'] == 'forecast' else data['notes'][0]
+        writer.writerow({**record, 'source_status_cell': status_note['cell'],
+            'source_status_note': status_note['text'], 'cells': '; '.join(record['cells']),
             'operands': '; '.join(record['operands']),
             **{'source_' + field: data['source'][field] for field in ['publication', 'published', 'url', 'sha256']}})
     return {'income.html': render(data).encode(),

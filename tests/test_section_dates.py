@@ -49,7 +49,7 @@ class SectionDatesTests(unittest.TestCase):
         import re
         page = self.render()['income.html']
         sections = dict(re.findall(r'<section id="([^"]+)">(.*?)</section>', page, re.S))
-        self.assertEqual(set(sections), {'tax', 'non-tax', 'borrowing-debt', 'sources'})
+        self.assertEqual(set(sections), {'forecasts', 'tax', 'non-tax', 'borrowing-debt', 'sources'})
         for section, body in sections.items():
             stamp = body.split('<div class="section-dates">')[1].split('</div>')[0]
             self.assertIn('Data period: 2025-26', stamp)
@@ -59,7 +59,9 @@ class SectionDatesTests(unittest.TestCase):
             self.assertIn('https://obr.uk/data/', stamp)
             self.assertIn('sources/income-release.txt', stamp)
             self.assertEqual('debt at end-March 2026' in stamp,
-                             section in ('borrowing-debt', 'sources'))
+                             section == 'borrowing-debt')
+            self.assertEqual('2026-27 to 2031-32 forecast; debt at each end-March' in stamp,
+                             section in ('forecasts', 'sources'))
 
     def test_income_release_metadata_hash_and_path_are_checked(self):
         def changed(sources):
@@ -84,7 +86,7 @@ class SectionDatesTests(unittest.TestCase):
                       'first_detected_at': '2026-11-02T00:00:00Z',
                       'evidence': {'release_url': url}}
             pages = self.render([notice])
-            self.assertEqual(pages['income.html'].count(f'<strong>{label}</strong>'), 4)
+            self.assertEqual(pages['income.html'].count(f'<strong>{label}</strong>'), 5)
             self.assertIn('These figures still use the saved data, not the changed source.', pages['income.html'])
             for name, page in pages.items():
                 if name != 'income.html':
