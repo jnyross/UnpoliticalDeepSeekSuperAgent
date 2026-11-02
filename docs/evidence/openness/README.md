@@ -6,7 +6,8 @@
 - Baseline overview HTML SHA-256: `af6c7e48c3472b36b7190091f32489f4c95cc317be4cb6ffdb74d368bc891cfa` (git blob `e60221f853637945f7ea38e9c1891791cff8195b`). Captured from immutable git bytes, not reconstructed HTML.
 - After overview HTML SHA-256: `a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df`.
 - After About HTML SHA-256: `e99b3253340aaffb8e02393c9de36f1f6a688160875d36c720637c09ec5d2076`.
-- Changed source revision, committed by the parent agent during verification: `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
+- Full-suite source revision: `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
+- Final source revision after the independently merged party evidence update: `bccc773f0c8fe477391da8796ae5bd160c51b806`. Only the party HTML changed; the other eight HTML hashes were independently confirmed identical to the full-suite source. The captured upstream baseline overview is also byte-identical at newer upstream `bef1b41105878baa454067099aaf62bd0f15f954`, so the matched footer screenshots remain current.
 - After evidence identifies working-tree bytes; the baseline commit is not claimed to contain the new implementation.
 
 ## Actual screenshots
@@ -40,6 +41,12 @@ See [commands and methodology](<TOOLING.md>), [footer capture script](<capture-f
 
 `npm ci`: exit 0; five packages installed, six audited, zero vulnerabilities. Playwright 1.56.1 / Chromium 141.0.7390.37.
 
-`EVIDENCE_DIR=/tmp/openness-browser-merged npm run test:browser`: **exit 0**, completed **18/18 page/viewport checks** (nine HTML pages, including Corrections, × 360×800 and 1280×900), with **26/26 state checks** passed. Final post-merge run: `2026-11-02T02:11:59.705Z`–`2026-11-02T02:17:15.515Z`. All checked axe violations arrays are empty; SVG contrast checks completed; no-JavaScript main content matched and document/body widths fit the viewport. Expanded disclosure states were checked on the history pages. Every tested HTML SHA-256 was independently verified against source revision `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
+`EVIDENCE_DIR=/tmp/openness-browser-merged npm run test:browser`: **exit 0**, completed **18/18 page/viewport checks** (nine HTML pages, including Corrections, × 360×800 and 1280×900), with **26/26 state checks** passed. Historical full-site post-merge run: `2026-11-02T02:11:59.705Z`–`2026-11-02T02:17:15.515Z`. All checked axe violations arrays are empty; SVG contrast checks completed; no-JavaScript main content matched and document/body widths fit the viewport. Expanded disclosure states were checked on the history pages. Every tested HTML SHA-256 was independently verified against source revision `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
 
 The committed [compact browser summary](<browser-summary.json>) preserves per-page SHA-256 hashes, byte counts, viewport dimensions, no-JavaScript checks, state completion, axe results, and contrast completion. The [summary verification script](<summarize-browser.mjs>) checks suite completion and every tested HTML hash against the named source commit before writing the compact result. Full temporary runner output and screenshots remain under `/tmp/openness-browser-merged` and are intentionally not duplicated here. Earlier pre-merge eight-page evidence has been superseded by this complete nine-page run and refreshed before/after screenshots; the anonymous GitHub evidence was retained without a redundant rerun.
+
+### Final party-only supplement
+
+After the later party-evidence merge, `CHECK_PAGE=parties.html EVIDENCE_DIR=/tmp/openness-party-final npm run test:browser` completed **exit 0**, **2/2 viewport checks and 2/2 state checks passed**, from `2026-11-02T02:19:21.331Z` to `2026-11-02T02:19:37.673Z`. This is a separate supplemental run, **not a single combined 20-check suite**. The tested party HTML SHA-256 is `b4881520465ee60643f25d5349183d4adbfb8c3baf0a745bc1064a7b5d1b9e8e`, independently verified against final source `bccc773f0c8fe477391da8796ae5bd160c51b806`. Both mobile and desktop axe checks report no violations; contrast checks completed; JavaScript-disabled content matched and widths fit.
+
+[Compact final party supplement](<browser-parties-final.json>) records the two results, final source identity, the eight unchanged HTML hashes independently compared against both the previous full-suite hashes and final committed source, and the baseline overview identity check against newer upstream. Thus final output is covered by the historical 18-check full-site suite for the eight unchanged pages plus the separate two-check supplement for the changed party page. Full supplemental output remains under `/tmp/openness-party-final`.

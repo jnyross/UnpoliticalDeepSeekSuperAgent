@@ -1,0 +1,126 @@
+{
+  "command": "CHECK_PAGE=parties.html EVIDENCE_DIR=/tmp/openness-party-final npm run test:browser",
+  "sourceRevision": "bccc773f0c8fe477391da8796ae5bd160c51b806",
+  "startedAt": "2026-11-02T02:19:21.331Z",
+  "finishedAt": "2026-11-02T02:19:37.673Z",
+  "completed": true,
+  "passed": true,
+  "exitCode": 0,
+  "pageViewportChecks": 2,
+  "coverageNote": "Separate supplemental run after the historical 18-check full suite, not one combined 20-check run.",
+  "priorFullSuiteSourceRevision": "86bb51b462f8da2dcb24d7e291d9de181ea13978",
+  "unchangedHtml": [
+    {
+      "page": "about.html",
+      "sha256": "e99b3253340aaffb8e02393c9de36f1f6a688160875d36c720637c09ec5d2076",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "corrections.html",
+      "sha256": "5b7ed661a8b92e285a80b66354e0887b87ff44ff0f43ddfa250a9b9f263c1d76",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "history-cash.html",
+      "sha256": "425b5ed32f401540069b60a5018f76b8d993909345ecc4fbf1b7c7a06cb6b8fd",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "history-gdp.html",
+      "sha256": "83be434f6eb29040c943fa7b61cc6336186a7dd26946e65b86ccd93753a53c32",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "history-real.html",
+      "sha256": "cfbf5396ec9435b1402e71a3ee720c3c2a235c22c00ac79a4d137d06cb271a5f",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "history.html",
+      "sha256": "417d1565ae31bf121a6d6362e5968c4aa3999afdfa920f3b5911fc849d2c0046",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "income.html",
+      "sha256": "c998064cd63f3fa9b9f74c218c7074147e2a7c6e81847ef9696c194792d8c767",
+      "matchesPriorTestedAndFinalSource": true
+    },
+    {
+      "page": "index.html",
+      "sha256": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
+      "matchesPriorTestedAndFinalSource": true
+    }
+  ],
+  "baselineOverviewIdentity": {
+    "capturedRevision": "f6be6658f64f7f14b5a4b93aa0fdea761a273b95",
+    "latestUpstreamRevision": "bef1b41105878baa454067099aaf62bd0f15f954",
+    "sha256": "af6c7e48c3472b36b7190091f32489f4c95cc317be4cb6ffdb74d368bc891cfa",
+    "matches": true
+  },
+  "results": [
+    {
+      "page": "parties.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "b4881520465ee60643f25d5349183d4adbfb8c3baf0a745bc1064a7b5d1b9e8e",
+      "bytes": 29563,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "parties.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "b4881520465ee60643f25d5349183d4adbfb8c3baf0a745bc1064a7b5d1b9e8e",
+      "bytes": 29563,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    }
+  ]
+}
