@@ -1,0 +1,13 @@
+{
+  "url": "https://www.sinnfein.ie/",
+  "allowed_hosts": [
+    "www.sinnfein.ie"
+  ],
+  "started_utc": "2026-11-02T10:21:28.396361+00:00",
+  "method": "GET",
+  "transport": "scripts.discover.fetch (urllib, 60-second timeout, exact-host redirect guard)",
+  "result": "error",
+  "error_type": "ValueError",
+  "error": "Redirected outside official hosts",
+  "finished_utc": "2026-11-02T10:21:29.013960+00:00"
+}

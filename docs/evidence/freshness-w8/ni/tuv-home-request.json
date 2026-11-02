@@ -1,0 +1,19 @@
+{
+  "url": "https://tuv.org.uk/",
+  "allowed_hosts": [
+    "tuv.org.uk"
+  ],
+  "started_utc": "2026-11-02T10:21:28.399931+00:00",
+  "method": "GET",
+  "transport": "scripts.discover.fetch (urllib, 60-second timeout, exact-host redirect guard)",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "bytes": 6320,
+  "finished_utc": "2026-11-02T10:21:28.536936+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "tuv-home-error.html",
+  "response_sha256": "6982ac62722399ec63ba44ef58ff432fdef223b3c251c45df69b10ddfef4102f",
+  "retained_file": "tuv-home-response-text.txt",
+  "retained_sha256": "27f56d4ca31be8679ed5f9fa8387ab89339f21006706d93360c2907f41fb0e10"
+}

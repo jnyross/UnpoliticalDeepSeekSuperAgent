@@ -52,12 +52,26 @@
   },
   {
     "id": "party-offers-dup",
-    "adapter": "retained-url-snapshot",
+    "adapter": "retained-url-and-publication-listing",
     "manifest": "sources/party-offers.json",
     "source_id": "dup",
     "allowed_hosts": [
       "www.manifestos.org.uk"
-    ]
+    ],
+    "listing_url": "https://mydup.com/policies/policy-consultations",
+    "listing_allowed_hosts": [
+      "mydup.com",
+      "s3.eu-west-1.amazonaws.com"
+    ],
+    "container_tag": "ul",
+    "container_class": "accordion-controls",
+    "link_path_pattern": "/my-dup/(?:resource-thumbnails/|resources1/)?[^/]+\\.(?i:pdf)",
+    "link_title_label": "Policy document (publisher title not extracted)",
+    "listing_scope": "official-publication-listing-review",
+    "listing_baseline": {
+      "file": "docs/evidence/freshness-w8/party-offers-dup-baseline.json",
+      "sha256": "501d0a2c86ca5478c616c11acbf272b664c7fa80f1e2a8e5f9a6f14f259d05a5"
+    }
   },
   {
     "id": "party-offers-green",
@@ -114,12 +128,25 @@
   },
   {
     "id": "party-offers-snp",
-    "adapter": "retained-url-snapshot",
+    "adapter": "retained-url-and-publication-listing",
     "manifest": "sources/party-offers.json",
     "source_id": "snp",
     "allowed_hosts": [
       "www.manifestos.org.uk"
-    ]
+    ],
+    "listing_url": "https://www.snp.org/manifesto/",
+    "listing_allowed_hosts": [
+      "www.snp.org",
+      "s3-eu-west-2.amazonaws.com"
+    ],
+    "section_id": "primary",
+    "section_end_id": "footer",
+    "link_path_pattern": "/www\\.snp\\.org/uploads/[0-9]{4}/[0-9]{2}/[^/]+\\.(?i:pdf)",
+    "listing_scope": "official-publication-listing-review",
+    "listing_baseline": {
+      "file": "docs/evidence/freshness-w8/party-offers-snp-baseline.json",
+      "sha256": "a3ba67c0aec218fdfc25eafd4b8857fe0fc848d02e4c8f667d9ac500d0bc2049"
+    }
   },
   {
     "id": "party-offers-sinnfein",
@@ -197,13 +224,27 @@
   },
   {
     "id": "party-evidence-rf-two-child-2024",
-    "adapter": "retained-url-snapshot",
+    "adapter": "retained-url-and-publication-listing",
     "manifest": "sources/party-offers.json",
     "source_collection": "evidence_sources",
     "source_id": "rf-two-child-2024",
     "allowed_hosts": [
       "www.resolutionfoundation.org"
-    ]
+    ],
+    "listing_url": "https://www.resolutionfoundation.org/publications/?theme=social-security",
+    "listing_allowed_hosts": [
+      "www.resolutionfoundation.org"
+    ],
+    "container_tag": "div",
+    "container_class": "infinite-post-wrap",
+    "link_parent_tag": "h2",
+    "link_parent_class": "entry-title",
+    "link_path_pattern": "/publications/[a-z0-9-]+/",
+    "listing_scope": "official-publication-listing-review",
+    "listing_baseline": {
+      "file": "docs/evidence/freshness-w8/party-evidence-rf-two-child-2024-baseline.json",
+      "sha256": "ae304a6c530317779de7d05f656517864b4e21c9d80b491f234ead61b39c0d35"
+    }
   },
   {
     "id": "party-evidence-ifs-june2024-opening-remarks",
@@ -241,6 +282,8 @@
     "manifest": "sources/party-offers.json",
     "source_collection": "evidence_sources",
     "source_id": "de-childcare-2024",
-    "allowed_hosts": ["www.education-ni.gov.uk"]
+    "allowed_hosts": [
+      "www.education-ni.gov.uk"
+    ]
   }
 ]

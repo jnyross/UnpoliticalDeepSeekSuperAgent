@@ -1,0 +1,18 @@
+{
+  "request_url": "https://ifs.org.uk/election-2024",
+  "retrieved_at_utc": "2026-11-02T10:21:52.927777+00:00",
+  "method": "GET",
+  "user_agent": "UK-public-finance-source-discovery/1.0 (bounded public evidence research)",
+  "timeout_seconds": 18,
+  "max_response_bytes": 1500000,
+  "status": 403,
+  "final_url": "https://ifs.org.uk/election-2024",
+  "headers": {
+    "Date": "Mon, 02 Nov 2026 10:21:53 GMT",
+    "Content-Type": "text/html; charset=UTF-8"
+  },
+  "bytes": 5535,
+  "sha256": "ffbd075abf71b079e7ee043ea64978353f6ac78e851daa9d5925683d11cd179b",
+  "truncated": false,
+  "response_retention": "Original raw bytes hashed then discarded; only safe extracted evidence retained. sha256 is the original response hash, not a fragment hash."
+}

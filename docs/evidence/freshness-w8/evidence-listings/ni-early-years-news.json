@@ -1,0 +1,21 @@
+{
+  "request_url": "https://www.education-ni.gov.uk/news?f%5B0%5D=topic%3A410199",
+  "retrieved_at_utc": "2026-11-02T10:23:55.960352+00:00",
+  "method": "GET",
+  "user_agent": "UK-public-finance-source-discovery/1.0 (bounded public evidence research)",
+  "timeout_seconds": 18,
+  "max_response_bytes": 1500000,
+  "status": 200,
+  "final_url": "https://www.education-ni.gov.uk/news?f%5B0%5D=topic%3A410199",
+  "headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "last-modified": "Mon, 02 Nov 2026 09:56:59 GMT",
+    "cache-control": "max-age=60, must-revalidate, public, stale-if-error=180, stale-while-revalidate=180",
+    "etag": "\"1793613419\"",
+    "Date": "Mon, 02 Nov 2026 10:23:56 GMT"
+  },
+  "bytes": 73189,
+  "sha256": "951d47353276bdf00457c246671b9e15bdac211e103afa41d72bc214c3084b26",
+  "truncated": false,
+  "response_retention": "Original raw bytes hashed then discarded; only safe extracted evidence retained. sha256 is the original response hash, not a fragment hash."
+}

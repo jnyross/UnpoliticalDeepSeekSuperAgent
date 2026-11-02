@@ -1,0 +1,19 @@
+{
+  "request_url": "https://fullfact.org/economy/feed/",
+  "retrieved_at_utc": "2026-11-02T10:22:44.756138+00:00",
+  "method": "GET",
+  "user_agent": "UK-public-finance-source-discovery/1.0 (bounded public evidence research)",
+  "timeout_seconds": 18,
+  "max_response_bytes": 1500000,
+  "status": 404,
+  "final_url": "https://fullfact.org/economy/feed/",
+  "headers": {
+    "Date": "Mon, 02 Nov 2026 10:22:45 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "ETag": "\"68227a62-2230\""
+  },
+  "bytes": 8752,
+  "sha256": "1aa60588b89bdc8b4b8c3788672790fb609656e95eff9e3b52ff634f436d9dfe",
+  "truncated": false,
+  "response_retention": "Original raw bytes hashed then discarded; only safe extracted evidence retained. sha256 is the original response hash, not a fragment hash."
+}

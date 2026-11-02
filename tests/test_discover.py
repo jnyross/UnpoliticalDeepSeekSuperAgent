@@ -867,7 +867,9 @@ class InventoryTests(unittest.TestCase):
         self.assertCountEqual([(s.get('source_collection', 'sources'), s['source_id']) for s in plans], expected)
         self.assertEqual(len(entries), len(expected) + 1)
         for entry in entries:
-            expected_adapter = ('parliament-current-roster' if entry.get('selector') == 'roster' else
+            expected_adapter = ('retained-url-and-publication-listing' if entry['id'] in (
+                                'party-offers-dup', 'party-offers-snp', 'party-evidence-rf-two-child-2024') else
+                                'parliament-current-roster' if entry.get('selector') == 'roster' else
                                 'retained-url-and-policy-listing' if entry.get('source_id') == 'libdem'
                                 and entry.get('source_collection', 'sources') == 'sources' else
                                 'retained-url-snapshot')
@@ -896,7 +898,7 @@ class InventoryTests(unittest.TestCase):
                 self.assertRegex(manifest['sha256'], r'^[0-9a-f]{64}$')
             else:
                 self.assertIn(entry['adapter'], ('retained-url-snapshot', 'parliament-current-roster',
-                                                 'retained-url-and-policy-listing'))
+                                                 'retained-url-and-policy-listing', 'retained-url-and-publication-listing'))
                 self.assertTrue(discover.allowed_url(manifest['url'], entry['allowed_hosts']))
                 self.assertRegex(manifest['sha256'], r'^[0-9a-f]{64}$')
             manifests.append(manifest)

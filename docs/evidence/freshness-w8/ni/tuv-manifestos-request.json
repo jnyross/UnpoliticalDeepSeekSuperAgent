@@ -1,0 +1,39 @@
+{
+  "url": "https://tuv.org.uk/manifestos/",
+  "allowed_hosts": [
+    "tuv.org.uk"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:11.276924+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "response_headers": {
+    "Date": "Mon, 02 Nov 2026 10:22:11 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+    "referrer-policy": "same-origin",
+    "Server-Timing": "cfEdge;dur=11,cfOrigin;dur=0",
+    "x-frame-options": "SAMEORIGIN",
+    "Speculation-Rules": "\"/cdn-cgi/speculation\"",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=fJj4KKhDNPgo1ZhSdH3oZEfb4AK3GgE1ASDZiyUuuR1Q1A%2BF5TXIB0joof9vqgel1qx5PL84Z%2BAUYbwinQ0GILXBPH1dNYdjFnYFkfKC1ljHDtdwdt8g8oZUPKjUmuMrQTS9x2p2fNj6\"}]}",
+    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "expect-ct": "max-age=86400, enforce",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "Server": "cloudflare",
+    "CF-RAY": "a5426aa8fbbcc58e-WAW",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "bytes": 6320,
+  "finished_utc": "2026-11-02T10:22:11.377106+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "tuv-manifestos.html",
+  "response_sha256": "c013d4863c6d0e00f27abe5ea06215c3bc7adad275c70987eed36871541eb962",
+  "retained_file": "tuv-manifestos-response-text.txt",
+  "retained_sha256": "ac1589f4bacf7280b4f2fae6ac4ed266d49e5f15b68f3dd805d657e0811f1c56"
+}

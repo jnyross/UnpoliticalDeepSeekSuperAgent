@@ -48,6 +48,20 @@ class ReleaseTimingFixture(unittest.TestCase):
         patch.start()
         self.addCleanup(patch.stop)
 
+    def test_publication_candidates_measure_listing_not_unfetched_document(self):
+        for scope in ('official-policy-listing-review', 'official-publication-listing-review'):
+            with self.subTest(scope=scope):
+                candidate = dict(self.baseline, discovery_scope=scope,
+                                 listing_url='https://publisher.invalid/publications/',
+                                 listing_sha256=timing.sha(b'canonical listing fixture'))
+                version = timing.version('invented-source', candidate)
+                self.assertEqual(version['release_url'], candidate['listing_url'])
+                self.assertEqual(version['attachment_url'], candidate['listing_url'])
+                self.assertEqual(version['sha256'], candidate['listing_sha256'])
+                self.assertIsNone(version['vintage'])
+                self.assertIsNone(version['publication_at'])
+                self.assertIsNone(version['original_publication'])
+
     def write_bytes(self, relative, raw):
         path = self.root / relative
         path.parent.mkdir(parents=True, exist_ok=True)

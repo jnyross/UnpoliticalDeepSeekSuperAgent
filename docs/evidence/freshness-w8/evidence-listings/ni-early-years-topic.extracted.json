@@ -1,0 +1,344 @@
+{
+  "original_response_sha256": "5487d6c7b3b65e6f87a539065120769e32d7ad5050551c14996c11b4fe97e49c",
+  "html_title": [
+    "Early years education and learning | Department of Education",
+    "Department of Education",
+    "Share on Facebook",
+    "Share on X",
+    "Share by email"
+  ],
+  "links": [
+    {
+      "url": "#main-content",
+      "title": "Skip to main content"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk",
+      "title": "Department of Education @import url(https://fonts.googleapis.com/css2?family=Libre+Bodoni%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&amp;display=swap); @import url(https://fonts.googleapis.com/css2?family=Libre+Franklin%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap); .svg-logo-txt-sm {font-family: \"Libre Franklin\", sans-serif; letter-spacing: -0.2px; white-space: nowrap; font-size: 14px;} .svg-logo-txt-lg {font-family: \"Libre Bodoni\", Georgia; font-size: 40px; letter-spacing: -1.5px; white-space: nowrap;} Department of Education"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk",
+      "title": "Home"
+    },
+    {
+      "url": "/topics",
+      "title": "Topics"
+    },
+    {
+      "url": "/publications",
+      "title": "Publications"
+    },
+    {
+      "url": "/consultations",
+      "title": "Consultations"
+    },
+    {
+      "url": "/contact",
+      "title": "Contact"
+    },
+    {
+      "url": "/translations?url=",
+      "title": "Translate this page"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ar&u=",
+      "title": "Arabic — عربي"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=zh-cn&u=",
+      "title": "Chinese (Simplified) — 中文简体"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=zh-tw&u=",
+      "title": "Chinese (Traditional) — 中文繁體"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=nl&u=",
+      "title": "Dutch — Nederlands"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=tl&u=",
+      "title": "Filipino — Filipino"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=fr&u=",
+      "title": "French — Français"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=de&u=",
+      "title": "German — Deutsch"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=hu&u=",
+      "title": "Hungarian — Magyar"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ga&u=",
+      "title": "Irish — Gaeilge"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=it&u=",
+      "title": "Italian — Italiano"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=lv&u=",
+      "title": "Latvian — Latviešu"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=lt&u=",
+      "title": "Lithuanian — Lietuvių kalba"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=pl&u=",
+      "title": "Polish — Polski"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=pt&u=",
+      "title": "Portuguese — Português"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ro&u=",
+      "title": "Romanian — Română"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ru&u=",
+      "title": "Russian — Русский"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=sk&u=",
+      "title": "Slovak — Slovenčina"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=es&u=",
+      "title": "Spanish — Español"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=uk&u=",
+      "title": "Ukrainian — Українська"
+    },
+    {
+      "url": "/topics/support-and-development",
+      "title": "Support and development"
+    },
+    {
+      "url": "/articles/ministers-decisions-pre-school-settings-requesting-transition-september-2025",
+      "title": "Minister’s Decisions on Pre-School Settings Requesting Transition from September 2025"
+    },
+    {
+      "url": "/articles/early-years-education",
+      "title": "Early years education"
+    },
+    {
+      "url": "/articles/learning-learn",
+      "title": "Learning to Learn"
+    },
+    {
+      "url": "/articles/irish-medium-pre-school-research",
+      "title": "Irish Medium Pre-School Research"
+    },
+    {
+      "url": "/articles/guidance-induction-and-transition-pre-school-education-and-year-1-primary-school",
+      "title": "Guidance on induction and transition in pre-school education and Year 1 of primary school"
+    },
+    {
+      "url": "/articles/guidance-pre-school-education-providers",
+      "title": "Guidance for pre-school education providers"
+    },
+    {
+      "url": "/articles/curricular-guidance",
+      "title": "Curricular guidance"
+    },
+    {
+      "url": "/articles/qualifications-early-years-specialists",
+      "title": "Qualifications for early years specialists"
+    },
+    {
+      "url": "/articles/sure-start",
+      "title": "Sure Start"
+    },
+    {
+      "url": "/articles/de-pathway-fund",
+      "title": "The DE Pathway Fund"
+    },
+    {
+      "url": "/articles/pre-school-education-places",
+      "title": "Pre-School Education Places"
+    },
+    {
+      "url": "/articles/review-pre-school-admissions-arrangements",
+      "title": "Review of Pre-School Admissions Arrangements"
+    },
+    {
+      "url": "/articles/pre-school-review-2004-fresh-start-early-years",
+      "title": "Pre-school Review 2004 - A fresh start for early years"
+    },
+    {
+      "url": "/articles/investing-early-learning-1998",
+      "title": "Investing in Early Learning (1998)"
+    },
+    {
+      "url": "/articles/getting-ready-learn-grtl-getting-ready-toddler-3-review",
+      "title": "Getting Ready to Learn (GRtL) & Getting Ready for Toddler (3+ Review)"
+    },
+    {
+      "url": "/articles/pre-school-education-programme-standardisation",
+      "title": "Pre-School Education Programme - Standardisation"
+    },
+    {
+      "url": "/articles/executive-early-learning-and-childcare-strategy",
+      "title": "Executive Early Learning and Childcare Strategy"
+    },
+    {
+      "url": "/articles/origins-pre-school-education-northern-ireland",
+      "title": "Origins of Pre-School Education in Northern Ireland"
+    },
+    {
+      "url": "/articles/applying-funded-pre-school-place-202627",
+      "title": "Applying for a funded pre-school place – 2026/27"
+    },
+    {
+      "url": "/articles/ministers-decisions-pre-school-settings-requesting-transition-september-2026",
+      "title": "Minister’s Decisions on Pre-School Settings Requesting Transition from September 2026"
+    },
+    {
+      "url": "/articles/ministers-decision-pre-school-settings-which-have-requested-transition",
+      "title": "Ministers Decision on Pre-School Settings which have Requested Transition"
+    },
+    {
+      "url": "/articles/pre-school-standardisation-programme-cohort-three-tranche-one-consultation",
+      "title": "Pre-School Standardisation Programme – Cohort Three, Tranche One Consultation"
+    },
+    {
+      "url": "/articles/pre-school-standardisation-programme-cohort-three-tranche-two-consultation",
+      "title": "Pre-School Standardisation Programme – Cohort Three, Tranche Two Consultation"
+    },
+    {
+      "url": "/articles/pre-school-standardisation-programme-cohort-three-tranche-three-consultation",
+      "title": "Pre-School Standardisation Programme – Cohort Three, Tranche Three Consultation"
+    },
+    {
+      "url": "/publications/northern-ireland-childcare-subsidy-scheme-nicss-administrative-data",
+      "title": "Northern Ireland Childcare Subsidy Scheme (NICSS) Administrative Data Published 11 September 2026"
+    },
+    {
+      "url": "/publications/written-ministerial-statement-early-learning-and-childcare-strategy-consultation-analysis",
+      "title": "Written Ministerial Statement - Early Learning and Childcare Strategy - Consultation Analysis Published 25 June 2026"
+    },
+    {
+      "url": "/publications?f%5B0%5D=topic%3A410199",
+      "title": "See all publications in this topic"
+    },
+    {
+      "url": "/consultations/consultation-draft-executive-elc-strategy",
+      "title": "Consultation on the draft Executive ELC Strategy Published 17 December 2025 Consultation closed"
+    },
+    {
+      "url": "/consultations/consultation-review-pre-school-admission-socially-disadvantaged-circumstances-criterion",
+      "title": "Consultation on Review of Pre-School Admission Socially Disadvantaged Circumstances Criterion Published 19 April 2021 Consultation closed"
+    },
+    {
+      "url": "/consultations?f%5B0%5D=topic%3A410199",
+      "title": "See all consultations in this topic"
+    },
+    {
+      "url": "/news/education-minister-announces-new-round-funding-support-early-years",
+      "title": "Education Minister announces new round of funding to support early years Published 26 November 2024"
+    },
+    {
+      "url": "/news/have-your-say-future-childcare-northern-ireland",
+      "title": "Have your say on the future of childcare in Northern Ireland Published 19 November 2024"
+    },
+    {
+      "url": "/news?f%5B0%5D=topic%3A410199",
+      "title": "See all news in this topic"
+    },
+    {
+      "url": "/articles/freedom-information-education",
+      "title": "Freedom of Information (FOI)"
+    },
+    {
+      "url": "/articles/de-publication-scheme",
+      "title": "Publication Scheme"
+    },
+    {
+      "url": "/articles/foieir-disclosure-log",
+      "title": "Disclosure Log"
+    },
+    {
+      "url": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.education-ni.gov.uk%2Ftopics%2Fearly-years-education-and-learning&amp;src=sdkpreparse",
+      "title": "Share on Facebook (external link opens in a new window / tab)"
+    },
+    {
+      "url": "https://x.com/intent/post?text=Early%20years%20education%20and%20learning%20https%3A%2F%2Fwww.education-ni.gov.uk%2Ftopics%2Fearly-years-education-and-learning",
+      "title": "Share on X (external link opens in a new window / tab)"
+    },
+    {
+      "url": "mailto:?subject=Shared%20from%20www.education-ni.gov.uk&body=Early%20years%20education%20and%20learning%0Ahttps%3A%2F%2Fwww.education-ni.gov.uk%2Ftopics%2Fearly-years-education-and-learning",
+      "title": "Share by email (external link opens in a new window / tab)"
+    },
+    {
+      "url": "/articles/crown-copyright-education",
+      "title": "Crown copyright"
+    },
+    {
+      "url": "/articles/terms-and-conditions-education",
+      "title": "Terms and Conditions"
+    },
+    {
+      "url": "/articles/using-website-education",
+      "title": "Privacy"
+    },
+    {
+      "url": "/articles/cookies-education",
+      "title": "Cookies"
+    },
+    {
+      "url": "/articles/accessibility-statement-education-educationuk",
+      "title": "Accessibility"
+    },
+    {
+      "url": "https://www.northernireland.gov.uk/",
+      "title": "The Northern Ireland Executive"
+    },
+    {
+      "url": "https://www.executiveoffice-ni.gov.uk/",
+      "title": "The Executive Office"
+    },
+    {
+      "url": "https://www.daera-ni.gov.uk/",
+      "title": "Department of Agriculture, Environment and Rural Affairs"
+    },
+    {
+      "url": "https://www.communities-ni.gov.uk/",
+      "title": "Department for Communities"
+    },
+    {
+      "url": "/",
+      "title": "Department for Education"
+    },
+    {
+      "url": "https://www.economy-ni.gov.uk/",
+      "title": "Department for the Economy"
+    },
+    {
+      "url": "https://www.finance-ni.gov.uk/",
+      "title": "Department of Finance"
+    },
+    {
+      "url": "https://www.infrastructure-ni.gov.uk/",
+      "title": "Department for Infrastructure"
+    },
+    {
+      "url": "https://www.health-ni.gov.uk/",
+      "title": "Department for Health"
+    },
+    {
+      "url": "https://www.justice-ni.gov.uk/",
+      "title": "Department of Justice"
+    },
+    {
+      "url": "https://www.nidirect.gov.uk/",
+      "title": "nidirect.gov.uk — the official government website for Northern Ireland citizens"
+    }
+  ]
+}

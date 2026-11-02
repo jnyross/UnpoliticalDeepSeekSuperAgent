@@ -1,0 +1,19 @@
+{
+  "url": "https://www.uup.org/",
+  "allowed_hosts": [
+    "www.uup.org"
+  ],
+  "started_utc": "2026-11-02T10:21:28.401405+00:00",
+  "method": "GET",
+  "transport": "scripts.discover.fetch (urllib, 60-second timeout, exact-host redirect guard)",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "bytes": 5626,
+  "finished_utc": "2026-11-02T10:21:28.819900+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "uup-home-error.html",
+  "response_sha256": "410aab7f4a4bc76b3abf7453e00c8961fd4065c919d646de6f44825d752f13de",
+  "retained_file": "uup-home-response-text.txt",
+  "retained_sha256": "766be4bcbef0163ad3da498967e1872fbcc6d356acd857b017bff4542faa9ff1"
+}

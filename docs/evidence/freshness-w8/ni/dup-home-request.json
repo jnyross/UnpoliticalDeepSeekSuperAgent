@@ -1,0 +1,17 @@
+{
+  "url": "https://mydup.com/",
+  "allowed_hosts": [
+    "mydup.com"
+  ],
+  "started_utc": "2026-11-02T10:21:28.395036+00:00",
+  "method": "GET",
+  "transport": "scripts.discover.fetch (urllib, 60-second timeout, exact-host redirect guard)",
+  "result": "success",
+  "bytes": 72384,
+  "finished_utc": "2026-11-02T10:21:29.080569+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "dup-home.html",
+  "response_sha256": "7fb9546dc72d07ed642819c3990cdcdb1beaf4551b9a191aa2387d8a9c62211c",
+  "retained_file": "dup-home-response-text.txt",
+  "retained_sha256": "a245bb434e55f5a2f07f33ed7585e50f21443646ae57a43591d8efb84e997ce1"
+}

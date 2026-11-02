@@ -1,0 +1,154 @@
+<div id="primary" class="page-wrap">
+
+						<main class="site-content">
+							
+	<article id="post-22250" class="post-22250 post type-post status-publish format-standard has-post-thumbnail hentry tag-john-swinney tag-manifesto tag-snp tag-snp26">
+
+		<section class="media-overlay media-overlay--image">
+			<div class="media-overlay__container bg-img lazyload js"
+			 data-imageid="34038"
+			 data-sizes="auto"
+			 data-bgset="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-400x267.jpg 400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-300x200.jpg 300w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-768x512.jpg 768w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-1536x1024.jpg 1536w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-2048x1366.jpg 2048w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-200x133.jpg 200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-600x400.jpg 600w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-800x533.jpg 800w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-1000x667.jpg 1000w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-1200x800.jpg 1200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-1400x934.jpg 1400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-1800x1200.jpg 1800w"
+			 data-parent-fit="cover"
+			 style="background-image: url('https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/260416-Manifesto-Launch-Glasgow-Baad-35-400x267.jpg'); background-position: 50% 50%"></div>	</section>
+		
+		<div class="page-content content">
+			<div class="content__body">
+
+				<header class="content__header">
+    <div class="container-fluid">
+        <div class="content__header-container">
+                            <h1 class="content__title content__offset">SNP 2026 Manifesto: Always on Scotland&#8217;s side</h1>                                        <div class="content__author">
+                    <span class="byline"> <span class="author-avatar"><a class="url fn n" href="https://www.snp.org/author/thesnp/"><img alt="" src="https://www.snp.org/app/themes/snp/dist/images/avatar.svg" class="avatar avatar-96" height="96" width="96"/></a></span> by <span class="author vcard"><a class="url fn n" href="https://www.snp.org/author/thesnp/">the SNP</a></span></span>                </div>
+                        
+        </div>
+    </div>
+</header>
+				<div class="content__wrapper">
+					<div class="content__share-wrapper">
+    <div class="content__share-box">
+        <div class="content__share content__share--aside">
+            <div class="content__share-label-container">
+                <span class="content__share-label">Share this article:</span> <svg class="svg-icon svg-icon--share" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-share"></use></svg> <span class="content__share-count">1073</span>
+            </div>
+            <div class="share-links"><div class="share-links__item"><a href="https://www.facebook.com/sharer/sharer.php?t=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&u=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Facebook Share</span> <svg class="svg-icon svg-icon--facebook" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-facebook"></use></svg></a></div><div class="share-links__item"><a href="https://twitter.com/intent/tweet?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&via=theSNP" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Twitter Share</span> <svg class="svg-icon svg-icon--twitter" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-twitter"></use></svg></a></div><div class="share-links__item"><a href="https://wa.me/?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side%20https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Whatsapp Share</span> <svg class="svg-icon svg-icon--whatsapp" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-whatsapp"></use></svg></a></div><div class="share-links__item"><a href="https://www.facebook.com/dialog/send?link=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&redirect_uri=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&app_id=417374788788156&display=popup" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Facebook Messenger Share</span> <svg class="svg-icon svg-icon--messenger" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-messenger"></use></svg></a></div><div class="share-links__item"><a href="javascript:window.print()" class="share-links__link js-print" rel="noopener nofollow noreferrer"><span class="sr-only">Print Share</span> <svg class="svg-icon svg-icon--printer" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-printer"></use></svg></a></div><div class="share-links__item"><a href="mailto:?subject=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&body=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F" class="share-links__link " rel="noopener nofollow noreferrer"><span class="sr-only">Email Share</span> <svg class="svg-icon svg-icon--mail" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-mail"></use></svg></a></div><div class="share-links__item"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&title=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&source=https%3A%2F%2Fwww.snp.org" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Linkedin Share</span> <svg class="svg-icon svg-icon--linkedin" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-linkedin"></use></svg></a></div><div class="share-links__item"><a href="https://www.snp.org/manifesto/" class="share-links__link js-copy" rel="noopener nofollow noreferrer"><span class="sr-only">Link Share</span> <svg class="svg-icon svg-icon--link" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-link"></use></svg></a></div></div>        </div>
+    </div>
+</div>    <div class="content__meta-wrapper">
+        <div class="container-fluid">
+            <div class="content__meta d-flex">
+                <div><svg class="svg-icon svg-icon--news-clock" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-news-clock"></use></svg> <span class="sr-only">Posted on</span> <time class="entry-date published" datetime="2026-04-16T09:00:12+01:00">16 April, 2026</time><time class="updated" datetime="2026-05-04T11:03:37+01:00">4 May, 2026</time></div>
+                <div><svg class="svg-icon svg-icon--calendar" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-calendar"></use></svg> 7 months ago</div>
+                <div><svg class="svg-icon svg-icon--read" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-read"></use></svg> 2 min read</div>
+            </div>
+        </div>
+    </div>
+<div class="content__article-body">
+    <div class="sections">
+                    <section class="section section--text">
+    <div class="container-fluid">
+        <div class="m-text m-block m-block--offset-lg m-block--sm wysiwyg-ce">
+            <p class="p1">We are firmly focused on what matters most to the people of Scotland &#8211; tackling the cost of living crisis, improving the performance of our NHS and taking our enormous energy wealth into our own hands.</p>
+<p class="p1">On May 7th choose a Scottish Government that works for Scotland. Choose an SNP government that, day in and day out, is always on Scotland’s side.</p>
+<p class="p1">Your first SNP vote at this election will deliver an SNP Government. It delivers a better NHS, GP walk-in clinics, help with the cost of living, the first-time buyers’ deposit, a growing economy, and a massive increase in childcare that leaves no one behind.</p>
+<p class="p1">Your second SNP vote delivers independence. It secures a majority that will lay the path to a referendum. A referendum that we will win.</p>
+<p class="p1"><strong>On May 7th choose a Scottish Government that works for Scotland. Choose an SNP government that is always on Scotland’s side.</strong></p>
+        </div>
+    </div>
+</section><section class="section section--text">
+    <div class="container-fluid">
+        <div class="m-text m-block m-block--offset-lg m-block--sm wysiwyg-ce">
+            <h2>Read the SNP&#8217;s 2026 Manifesto:</h2>
+        </div>
+    </div>
+</section><section class="section section--button ">
+    <div class="container-fluid">
+        <div class="m-button m-block m-block--lg m-block--offset-lg">
+            <a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-05-0120SNP20The20Scottish20Parliament20Election2020262072pp20COMPLETE20no-crops.pdf" class="btn btn-primary font-weight-medium more-rounded">Download the SNP Manifesto here</a>
+        </div>
+    </div>
+</section><section class="section section--image-full section--wide ">
+            <figure class="m-image">
+            		<div class="image-container content-ratio" style="padding-bottom:25%">
+			<img width="1800" height="450" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload attachment-snp-1800 size-snp-1800" alt="Edinburgh skyline with Holyrood park" decoding="async" fetchpriority="high" sizes="(max-width: 1800px) 100vw, 1800px" data-src="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1800x450.jpg" data-srcset="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1800x450.jpg 1800w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-300x75.jpg 300w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-768x192.jpg 768w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1024x256.jpg 1024w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-200x50.jpg 200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-400x100.jpg 400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-600x150.jpg 600w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-800x200.jpg 800w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1000x250.jpg 1000w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1200x300.jpg 1200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1400x350.jpg 1400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472-1536x384.jpg 1536w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2018/08/30082018-scotland-must-have-a-role-in-future-uk-trade-talks-1-e1679993557472.jpg 2000w" />		</div>                            <div class="container-fluid">
+                    <div class="caption">
+                                            </div>
+                </div>
+                    </figure>
+    </section><section class="section section--text">
+    <div class="container-fluid">
+        <div class="m-text m-block m-block--offset-lg m-block--sm wysiwyg-ce">
+            <p>The manifesto is available in <a href="https://issuu.com/hinksbrandwise/docs/snp_the_scottish_parliament_election_2026_big_prin">large print</a>.</p>
+<p>It is available in an <a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/SNP-manifesto_ER_20.04.26.pdf">easy read version</a>.</p>
+<p>It is available in a <a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/SNP-2026-Manifesto-Plain-Text.pdf">plain text version</a>.</p>
+<p>It is available in an <a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/05/SNP-2026-Manifesto-Audio-Version.mp3">audio version</a>.</p>
+<p>It is also available as a <a href="https://www.youtube.com/watch?v=JJSlE9BqOlM">BSL video version</a>.</p>
+<p>If you would like to request the manifesto in Braille, <a href="mailto:hello@snp.org">please email us.</a></p>
+        </div>
+    </div>
+</section><section class="section section--image-full section--wide ">
+            <figure class="m-image">
+            		<div class="image-container content-ratio" style="padding-bottom:37%">
+			<img width="1800" height="675" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload attachment-snp-1800 size-snp-1800" alt="Lerwick" decoding="async" sizes="(max-width: 1800px) 100vw, 1800px" data-src="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-1800x675.jpg" data-srcset="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-1800x675.jpg 1800w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-300x113.jpg 300w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-768x288.jpg 768w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-1024x384.jpg 1024w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-200x75.jpg 200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-400x150.jpg 400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-600x225.jpg 600w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-800x300.jpg 800w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-1000x375.jpg 1000w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-1200x450.jpg 1200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372-1400x525.jpg 1400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2019/07/lerwick-e1563799257372.jpg 2000w" />		</div>                            <div class="container-fluid">
+                    <div class="caption">
+                                            </div>
+                </div>
+                    </figure>
+    </section><section class="section section--text">
+    <div class="container-fluid">
+        <div class="m-text m-block m-block--offset-lg m-block--sm wysiwyg-ce">
+            <h2>What we&#8217;ll do for your part of Scotland:</h2>
+<ul>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-CENTRAL-SCOTLAND-4pp.pdf">Central Scotland and Lothians West</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27b-SNP-EDINBURGH-4pp.pdf">Edinburgh and Lothians East</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27b-SNP-GLASGOW-6pp.pdf">Glasgow</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-24c-SNP-HIGHLANDS-and-ISLANDS-8pp-2.pdf">Highlands &amp; Islands</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-MID-SCOTLAND-FIFE-6pp.pdf">Mid Scotland &amp; Fife</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-NORTH-EAST-8pp.pdf">North East Scotland</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-24-SNP-SOUTH-of-SCOTLAND-6pp.pdf">South of Scotland</a></li>
+<li><a href="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-WEST-of-SCOTLAND-4pp.pdf">West of Scotland</a></li>
+</ul>
+<p class="p1">On May 7th choose a Scottish Government that works for Scotland. Choose an SNP government that, day in and day out, is always on Scotland’s side.</p>
+<p class="p1">Your first SNP vote at this election will deliver an SNP Government. It delivers a better NHS, GP walk-in clinics, help with the cost of living, the first-time buyers’ deposit, a growing economy, and a massive increase in childcare that leaves no one behind.</p>
+<p class="p1">Your second SNP vote delivers independence. It secures a majority that will lay the path to a referendum. A referendum that we will win.</p>
+        </div>
+    </div>
+</section><section class="section section--media-blockquote section--wide ">
+    <div class="m-blockquote m-blockquote--left">
+        <blockquote>
+            On May 7th choose a Scottish Government that works for Scotland. Choose an SNP government that, day in and day out, is always on Scotland’s side.        </blockquote>
+                    <cite class="m-blockquote__meta">
+                John Swinney            </cite>
+                            <div class="m-blockquote__meta m-blockquote__subheading">
+                            </div>
+            </div>
+                        <figure class="m-image">
+                		<div class="image-container content-ratio" style="padding-bottom:100%">
+			<img width="1492" height="1492" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload attachment-snp-1800 size-snp-1800" alt="" decoding="async" loading="lazy" sizes="(max-width: 1492px) 100vw, 1492px" data-src="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar.jpg" data-srcset="https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar.jpg 1492w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-300x300.jpg 300w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-1024x1024.jpg 1024w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-150x150.jpg 150w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-768x768.jpg 768w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-200x200.jpg 200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-400x400.jpg 400w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-600x600.jpg 600w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-800x800.jpg 800w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-1000x1000.jpg 1000w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-1200x1200.jpg 1200w, https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2025/10/avatar-1400x1400.jpg 1400w" />		</div>                                    <div class="container-fluid">
+                        <div class="caption">
+                                                    </div>
+                    </div>
+                            </figure>
+            </section>        
+            </div>
+</div>				</div>
+
+				
+<div class="content__share content__share--wide">
+    <div class="container-fluid">
+        <div class="content__share-container">
+            <div class="content__share-label-container">
+                <span class="content__share-label">Share the message</span> <svg class="svg-icon svg-icon--share" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-share"></use></svg> <span class="content__share-count">1073</span>
+            </div>
+            <div class="share-links"><div class="share-links__item"><a href="https://www.facebook.com/sharer/sharer.php?t=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&u=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Facebook Share</span> <svg class="svg-icon svg-icon--facebook" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-facebook"></use></svg></a></div><div class="share-links__item"><a href="https://twitter.com/intent/tweet?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&via=theSNP" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Twitter Share</span> <svg class="svg-icon svg-icon--twitter" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-twitter"></use></svg></a></div><div class="share-links__item"><a href="https://wa.me/?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side%20https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Whatsapp Share</span> <svg class="svg-icon svg-icon--whatsapp" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-whatsapp"></use></svg></a></div><div class="share-links__item"><a href="https://www.facebook.com/dialog/send?link=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&redirect_uri=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&app_id=417374788788156&display=popup" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Facebook Messenger Share</span> <svg class="svg-icon svg-icon--messenger" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-messenger"></use></svg></a></div><div class="share-links__item"><a href="javascript:window.print()" class="share-links__link js-print" rel="noopener nofollow noreferrer"><span class="sr-only">Print Share</span> <svg class="svg-icon svg-icon--printer" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-printer"></use></svg></a></div><div class="share-links__item"><a href="mailto:?subject=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&body=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F" class="share-links__link " rel="noopener nofollow noreferrer"><span class="sr-only">Email Share</span> <svg class="svg-icon svg-icon--mail" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-mail"></use></svg></a></div><div class="share-links__item"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&title=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&source=https%3A%2F%2Fwww.snp.org" class="share-links__link js-share" rel="noopener nofollow noreferrer"><span class="sr-only">Linkedin Share</span> <svg class="svg-icon svg-icon--linkedin" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-linkedin"></use></svg></a></div><div class="share-links__item"><a href="https://www.snp.org/manifesto/" class="share-links__link js-copy" rel="noopener nofollow noreferrer"><span class="sr-only">Link Share</span> <svg class="svg-icon svg-icon--link" viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#sprite-link"></use></svg></a></div></div>        </div>
+    </div>
+</div>
+			</div>
+		</div>
+
+	</article>
+
+	
+						</main>
+
+						<vue-supporter-journey></vue-supporter-journey>
+<footer id="footer" class="site-footer">

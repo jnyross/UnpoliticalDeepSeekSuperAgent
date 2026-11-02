@@ -1,0 +1,17 @@
+{
+  "url": "https://mydup.com/policies-consultations",
+  "allowed_hosts": [
+    "mydup.com"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:11.221976+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "success",
+  "bytes": 67291,
+  "finished_utc": "2026-11-02T10:22:11.961823+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "dup-consultations.html",
+  "response_sha256": "344cdc3820564f4cf0cde1102c23d368ca19a4d05a7e0b1ccad4e702a9f5ad00",
+  "retained_file": "dup-consultations-response-text.txt",
+  "retained_sha256": "ab947a9c50c5b656a7a2f911399b8771b9f6393cb73c414ca3419fcb9101eb06"
+}
