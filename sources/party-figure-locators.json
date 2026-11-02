@@ -1,0 +1,47 @@
+{
+  "conservative": [],
+  "labour": [
+    {
+      "pdf_page": 127,
+      "table": "Public Services",
+      "row_label": "Total",
+      "column": "REVENUE",
+      "value": "7,350",
+      "row_value_text": "Total 7,350",
+      "year": "2028-29",
+      "period": "2028-29",
+      "unit": "GBP million",
+      "unit_locator": "£M"
+    },
+    {
+      "pdf_page": 127,
+      "table": "Public Services",
+      "row_label": "Total including Barnett consequentials",
+      "column": "POLICIES FUNDED (2028-29)",
+      "value": "4,835",
+      "row_value_text": "Total including Barnett consequentials 4,835",
+      "year": "2028-29",
+      "period": "2028-29",
+      "unit": "GBP million",
+      "unit_locator": "£M"
+    }
+  ],
+  "libdem-buyback-2024": [],
+  "reform": [
+    {
+      "pdf_page": 25,
+      "table": "SAVINGS PLEDGES",
+      "row_label": "Slash wasteful Government spending",
+      "column": "Annualised Savings Over 5 Year",
+      "value": "£50",
+      "row_value_text": "Slash wasteful Government spending Save £5 in 100 incl govt depts. quangos, £50 commissions",
+      "year": null,
+      "period": "Annualised Savings Over 5 Year",
+      "unit": "GBP billion",
+      "unit_locator": "£ billions"
+    }
+  ],
+  "rf-two-child-2024": [],
+  "sdlp": [],
+  "uup": []
+}

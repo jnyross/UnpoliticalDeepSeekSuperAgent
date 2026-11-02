@@ -23,6 +23,17 @@ selected two-child-limit pledge with Resolution Foundation's 2024-25 Great Brita
 estimate and assessment, explicitly not a party costing or complete UK total. Reform, SDLP and UUP show checked party cash claims with assessment gaps still explicit.
 The remaining three parties still lack a checked cost for the selected offer. This is
 partial coverage, not a claim to Coverage L4; unlike plans are not ranked or added together.
+The deterministic build also publishes a [financial-figure trace](site/data/party-figure-audit.json)
+for every displayed party cash/rate quote occurrence, including duplicates. It joins
+native page/text-block locators to a complete consumed-source URL/date/SHA-256 manifest,
+with scope, baseline, year and status retained. Verified supplemental publisher tables
+are checked against the raw PDF, not treated as replacements for the quotes. The
+[curated native table locators](sources/party-figure-locators.json) and
+[source research](docs/accuracy-source-research.md) distinguish genuine table rows
+from prose-only evidence. This trace does **not** claim Accuracy L2: several sources
+lack a verified matching table/row, and annual claims do not establish a fiscal year.
+No displayed claims or party-page layout were changed to evade those gaps.
+
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
