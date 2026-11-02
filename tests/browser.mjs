@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import { checkSVGContrast } from './svg-contrast.mjs';
+import { checkAnswerNavigation } from './answer-navigation.mjs';
 
 const root = path.resolve(process.env.SITE_DIR || 'site');
 const label = process.env.EVIDENCE_LABEL || 'after';
@@ -128,6 +129,12 @@ try {
         assert.ok(noJSDimensions.document <= noJSDimensions.viewport && noJSDimensions.body <= noJSDimensions.viewport, `${relative}: horizontal overflow without JavaScript`);
         result.noJavaScriptContentMatches = true;
         result.noJavaScriptDimensions = noJSDimensions;
+        if (relative === 'index.html') {
+          result.answerNavigation = [
+            await checkAnswerNavigation({ page, baseURL, javaScriptEnabled: true }),
+            await checkAnswerNavigation({ page: plain, baseURL, javaScriptEnabled: false }),
+          ];
+        }
         if (/^history-(cash|real|gdp)\.html$/.test(relative)) {
           // Exercise native view links with scripting disabled, preserving the area.
           const axisSize = await plain.locator('svg text').first().evaluate(node => {
