@@ -1,0 +1,32 @@
+{
+  "requested_at": "2026-11-02T06:29:35.061859+00:00",
+  "received_at": "2026-11-02T06:29:35.695394+00:00",
+  "method": "GET",
+  "client": "scripts/discover.py fetch (urllib)",
+  "url": "https://www.libdems.org.uk/members/make-policy",
+  "allowed_hosts": [
+    "www.libdems.org.uk"
+  ],
+  "response_file": "docs/evidence/freshness-w6/libdem-policy-listing-response.html",
+  "response_sha256": "f5430edfe347424f31d5d884e506412a3c5f2897fc75b8ee3299c2d68f003c67",
+  "canonical_baseline": {
+    "file": "docs/evidence/freshness-w6/libdem-policy-listing-baseline.json",
+    "sha256": "8b639f9ea39f4c78807624b04e1c07644ed409a20dae36f5a8ac0aba4a877718"
+  },
+  "link_count": 14,
+  "selector": {
+    "id": "party-offers-libdem",
+    "listing_url": "https://www.libdems.org.uk/members/make-policy",
+    "allowed_hosts": [
+      "www.libdems.org.uk"
+    ],
+    "section_id": "policy-papers",
+    "section_end_id": "register-for-conference",
+    "link_path_pattern": "/conference/papers/[a-z0-9/-]+",
+    "listing_baseline": {
+      "file": "docs/evidence/freshness-w6/libdem-policy-listing-baseline.json",
+      "sha256": "8b639f9ea39f4c78807624b04e1c07644ed409a20dae36f5a8ac0aba4a877718"
+    }
+  },
+  "scope": "Only /conference/papers/ links between #policy-papers and #register-for-conference; excludes PDFs, motions and other party news. Listing evidence only, not a historical manifesto revision or a content/costings check."
+}

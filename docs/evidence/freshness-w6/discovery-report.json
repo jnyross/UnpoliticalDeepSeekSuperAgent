@@ -1,0 +1,217 @@
+{
+  "checked_at": "2026-11-02T06:31:54.247428+00:00",
+  "sources": [
+    {
+      "id": "obr-public-finances-databank",
+      "discovery_scope": "latest-page-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-public-spending",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-spending-trends",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-roster",
+      "discovery_scope": "current-roster-and-retained-revisions",
+      "updates": [
+        {
+          "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+          "evidence": {
+            "source": "party-roster",
+            "release_url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+            "attachment_url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+            "sha256": "0625fdec6ea3df7aa9f9c2a30f68354036ab6db6f2546c5a4dd5646d2a62b6d6",
+            "semantic_sha256": "34794b6722b3fa54a56433cc954dc55228e32f9cb06254f2b3454b678e634068",
+            "discovery_scope": "current-roster-comparison",
+            "as_of": "2026-11-02",
+            "updated": "2026-11-02",
+            "refresh_command": "python3 scripts/build.py --refresh"
+          },
+          "baseline": {
+            "file": "commons-roster-2024-07-09.json",
+            "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+            "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+            "as_of": "2024-07-09",
+            "date": "2024-07-09",
+            "downloaded": "2026-11-01",
+            "publication": "State of the parties (Commons)",
+            "publisher": "UK Parliament",
+            "scope": "House of Commons; parties with at least one MP, plus independent MPs and Speaker",
+            "locator": "items[].value.party and items[].value.total"
+          }
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "party-offers-alliance",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-conservative",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-dup",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-green",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-labour",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-libdem",
+      "discovery_scope": "official-policy-listing-and-retained-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-plaid",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-reform",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-snp",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-sinnfein",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-sdlp",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-tuv",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-uup",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-pesa-functional-history",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-rf-economic-battle-lines",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-fullfact-buybacks",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-libdem-buyback-2024",
+      "discovery_scope": "retained-url-revision",
+      "updates": [
+        {
+          "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+          "evidence": {
+            "source": "party-evidence-libdem-buyback-2024",
+            "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+            "discovery_scope": "retained-url-revision",
+            "updated": "not supplied by retained URL",
+            "refresh_command": "python3 scripts/build.py --refresh",
+            "hosting": "Publisher website; retained HTML response"
+          },
+          "baseline": {
+            "id": "libdem-buyback-2024",
+            "file": "libdem-buyback-2024.raw.html.txt",
+            "url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "downloaded": "2026-11-02",
+            "published": "2024-05-31",
+            "publication": "Share Buyback Tax scheme",
+            "publisher": "Liberal Democrats",
+            "kind": "official",
+            "licence": "Party publisher copyright; not Open Government Licence.",
+            "sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+            "text_file": "libdem-buyback-2024.txt",
+            "text_sha256": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+            "text_mode": "html-blocks-v1",
+            "hosting": "Publisher website; retained HTML response"
+          }
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-rf-two-child-2024",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    }
+  ],
+  "errors": [],
+  "revision_status": {
+    "schema_version": 1,
+    "notices": [
+      {
+        "source": "party-evidence-libdem-buyback-2024",
+        "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+        "first_detected_at": "2026-11-02T06:03:43.089472+00:00",
+        "evidence": {
+          "source": "party-evidence-libdem-buyback-2024",
+          "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      }
+    ]
+  }
+}

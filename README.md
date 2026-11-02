@@ -102,8 +102,16 @@ then publishes changed revision notices through a validated PR without refreshin
 The default Actions token is used; branch protection is not bypassed.
 The checked-in [inventory](config/release-sources.json) covers HMT Public Spending
 Statistics, PESA functional history, the OBR public finances databank, the historical Commons roster and all retained
-party manifestos and the consumed historical costing/assessment pages (see the limited
-party-discovery scope below). HTML evidence is watched for raw-byte changes at its saved
+party manifestos and the consumed historical costing/assessment pages. The roster also
+checks today's dated Commons API snapshot, deduplicating composition changes by party/seat
+semantics rather than the daily URL or API timestamp. A current snapshot is a review
+candidate, not a revision of the explicitly historical 2024 roster; it never silently
+updates the site. The Liberal Democrat adapter also watches new/retitled conference-paper
+links within the official adopted-policy listing, against a retained 14-link baseline.
+It does not fetch paper contents, infer publication dates or claim reviewed costings.
+Both adapters retain their original historical-URL revision checks. Other party sources
+remain retained-URL monitors, NOT new-plan discovery. See the
+[wave-six coverage and operational limits](docs/evidence/freshness-w6/README.md). HTML evidence is watched for raw-byte changes at its saved
 URL; this can also flag presentation-only changes, and does not discover new analyses. PESA's year-dependent
 attachment title uses an anchored `attachment_title_pattern`; exact-title sources
 retain `attachment_title` matching. The official GOV.UK collection discovers

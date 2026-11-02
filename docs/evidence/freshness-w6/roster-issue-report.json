@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-11-02T06:25:04.486051+00:00",
+  "request": {
+    "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+    "started_at": "2026-11-02T06:21:56.768428+00:00",
+    "finished_at": "2026-11-02T06:21:56.828271+00:00",
+    "sha256": "0625fdec6ea3df7aa9f9c2a30f68354036ab6db6f2546c5a4dd5646d2a62b6d6",
+    "semantic_sha256": "34794b6722b3fa54a56433cc954dc55228e32f9cb06254f2b3454b678e634068"
+  },
+  "updates": [
+    {
+      "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+      "evidence": {
+        "source": "party-roster",
+        "release_url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+        "attachment_url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+        "sha256": "0625fdec6ea3df7aa9f9c2a30f68354036ab6db6f2546c5a4dd5646d2a62b6d6",
+        "semantic_sha256": "34794b6722b3fa54a56433cc954dc55228e32f9cb06254f2b3454b678e634068",
+        "discovery_scope": "current-roster-comparison",
+        "as_of": "2026-11-02",
+        "updated": "snapshot as of 2026-11-02",
+        "refresh_command": "python3 scripts/build.py --refresh"
+      },
+      "baseline": {
+        "file": "commons-roster-2024-07-09.json",
+        "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+        "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+        "as_of": "2024-07-09",
+        "date": "2024-07-09",
+        "downloaded": "2026-11-01",
+        "publication": "State of the parties (Commons)",
+        "publisher": "UK Parliament",
+        "scope": "House of Commons; parties with at least one MP, plus independent MPs and Speaker",
+        "locator": "items[].value.party and items[].value.total"
+      }
+    }
+  ],
+  "issues": [
+    {
+      "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+      "status": "opened",
+      "url": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/59"
+    }
+  ],
+  "repeat_issues": [
+    {
+      "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+      "status": "opened",
+      "url": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/60"
+    }
+  ],
+  "revalidated_issues": [
+    {
+      "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+      "status": "already reported"
+    }
+  ]
+}

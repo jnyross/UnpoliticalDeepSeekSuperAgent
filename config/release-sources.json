@@ -24,7 +24,7 @@
   },
   {
     "id": "party-roster",
-    "adapter": "retained-url-snapshot",
+    "adapter": "parliament-current-roster",
     "manifest": "sources/party-offers.json",
     "selector": "roster",
     "allowed_hosts": [
@@ -79,7 +79,15 @@
   },
   {
     "id": "party-offers-libdem",
-    "adapter": "retained-url-snapshot",
+    "adapter": "retained-url-and-policy-listing",
+    "listing_url": "https://www.libdems.org.uk/members/make-policy",
+    "section_id": "policy-papers",
+    "section_end_id": "register-for-conference",
+    "link_path_pattern": "/conference/papers/[a-z0-9/-]+",
+    "listing_baseline": {
+      "file": "docs/evidence/freshness-w6/libdem-policy-listing-baseline.json",
+      "sha256": "8b639f9ea39f4c78807624b04e1c07644ed409a20dae36f5a8ac0aba4a877718"
+    },
     "manifest": "sources/party-offers.json",
     "source_id": "libdem",
     "allowed_hosts": [
