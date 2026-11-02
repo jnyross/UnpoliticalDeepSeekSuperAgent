@@ -1,0 +1,125 @@
+{
+  "id": "obr-databanks-year",
+  "requested_url": "https://obr.uk/public-finances-databank-2026-27/",
+  "started_at": "2026-11-02T08:25:05.136135+00:00",
+  "method": "GET",
+  "redirects": [],
+  "status": 200,
+  "body_file": "obr-databanks-year.body",
+  "sha256": "0a8589c10fe3b069bc7858c76153fdd6bd5c7145868ecbbca0917a34278aa2ae",
+  "error": null,
+  "request_headers": {
+    "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+    "Accept-encoding": "identity"
+  },
+  "final_url": "https://obr.uk/public-finances-databank-2026-27/",
+  "response_headers": [
+    [
+      "Date",
+      "Mon, 02 Nov 2026 08:25:05 GMT"
+    ],
+    [
+      "Content-Type",
+      "text/html; charset=UTF-8"
+    ],
+    [
+      "Transfer-Encoding",
+      "chunked"
+    ],
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "Server",
+      "cloudflare"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding,Cookie"
+    ],
+    [
+      "Last-Modified",
+      "Wed, 27 May 2026 11:50:50 GMT"
+    ],
+    [
+      "Link",
+      "<https://obr.uk/wp-json/>; rel=\"https://api.w.org/\""
+    ],
+    [
+      "Link",
+      "<https://obr.uk/wp-json/wp/v2/pages/24768>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\""
+    ],
+    [
+      "Link",
+      "<https://obr.uk/?p=24768>; rel=shortlink"
+    ],
+    [
+      "X-Dlm-No-Waypoints",
+      "true"
+    ],
+    [
+      "X-Powered-By",
+      "WP Engine"
+    ],
+    [
+      "X-Cacheable",
+      "YES:15552000.000"
+    ],
+    [
+      "Cache-Control",
+      "max-age=15552000, must-revalidate"
+    ],
+    [
+      "X-Cache",
+      "MISS"
+    ],
+    [
+      "X-Cache-Group",
+      "normal"
+    ],
+    [
+      "Age",
+      "237101"
+    ],
+    [
+      "cf-cache-status",
+      "HIT"
+    ],
+    [
+      "set-cookie",
+      "__cf_bm=6BQ.N07LPDmd0zmGycAiu.40YYWPccIzgKDGwcVR32w-1793607905.2115273-1.0.1.1-U0vpWvcqeNw8fhi8U2adWcTRzlxeywABA7x.LlCiHndHdbDE5s50Zo_kBkHzjba8OGxKhBTGjVM8wXDqg6nkxOv1jpOStvMPUDnkr0NgnsuSiXcLmAfeobygBGjbZl6R; HttpOnly; SameSite=None; Secure; Path=/; Domain=obr.uk; Expires=Mon, 02 Nov 2026 08:55:05 GMT"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000; includeSubDomains; preload"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "X-Frame-Options",
+      "DENY"
+    ],
+    [
+      "X-XSS-Protection",
+      "1; mode=block"
+    ],
+    [
+      "CF-RAY",
+      "a541bf1f89f15763-HEL"
+    ],
+    [
+      "alt-svc",
+      "h3=\":443\"; ma=86400"
+    ]
+  ],
+  "truncated": false,
+  "bytes": 94465,
+  "finished_at": "2026-11-02T08:25:05.292611+00:00"
+}

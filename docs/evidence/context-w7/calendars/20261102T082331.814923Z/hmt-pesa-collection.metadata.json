@@ -1,0 +1,133 @@
+{
+  "id": "hmt-pesa-collection",
+  "requested_url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+  "started_at": "2026-11-02T08:23:31.952427+00:00",
+  "method": "GET",
+  "redirects": [],
+  "status": 200,
+  "body_file": "hmt-pesa-collection.body",
+  "sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+  "error": null,
+  "request_headers": {
+    "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+    "Accept-encoding": "identity"
+  },
+  "final_url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+  "response_headers": [
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "Content-Length",
+      "21934"
+    ],
+    [
+      "Content-Type",
+      "application/json; charset=utf-8"
+    ],
+    [
+      "Server",
+      "nginx"
+    ],
+    [
+      "Access-Control-Allow-Origin",
+      "*"
+    ],
+    [
+      "Cache-Control",
+      "max-age=300, public"
+    ],
+    [
+      "Etag",
+      "W/\"bab32764830a7a7e53d3faaf621f7494\""
+    ],
+    [
+      "Permissions-Policy",
+      "interest-cohort=()"
+    ],
+    [
+      "Referrer-Policy",
+      "strict-origin-when-cross-origin"
+    ],
+    [
+      "Via",
+      "1.1 router, 1.1 varnish"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "X-Frame-Options",
+      "SAMEORIGIN"
+    ],
+    [
+      "X-Permitted-Cross-Domain-Policies",
+      "none"
+    ],
+    [
+      "X-Request-Id",
+      "9e4a0692-0bf8-4874-a1c2-5d4439cbe132"
+    ],
+    [
+      "X-Runtime",
+      "0.006396"
+    ],
+    [
+      "X-Xss-Protection",
+      "0"
+    ],
+    [
+      "Fastly-Backend-Name",
+      "origin"
+    ],
+    [
+      "Accept-Ranges",
+      "bytes"
+    ],
+    [
+      "Age",
+      "0"
+    ],
+    [
+      "Date",
+      "Mon, 02 Nov 2026 08:23:32 GMT"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000; preload"
+    ],
+    [
+      "Server-Timing",
+      "cacheMiss"
+    ],
+    [
+      "X-Served-By",
+      "cache-bma-essb1270022-BMA"
+    ],
+    [
+      "X-Cache",
+      "MISS"
+    ],
+    [
+      "X-Cache-Hits",
+      "0"
+    ],
+    [
+      "X-Timer",
+      "S1793607812.995140,VS0,VE48"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding"
+    ],
+    [
+      "alt-svc",
+      "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+    ]
+  ],
+  "truncated": false,
+  "bytes": 21934,
+  "finished_at": "2026-11-02T08:23:32.046218+00:00"
+}

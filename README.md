@@ -196,6 +196,9 @@ unknown/error or changed calendar needs investigation; source updates are record
 separately as findings, not errors. A successful lookup is only point-in-time evidence.
 The [wave-six audit](docs/evidence/context-w6/README.md) records the 22-source result,
 actual revision warning, section coverage and remaining Context L4 limitations.
+The [wave-seven incremental follow-up](docs/evidence/context-w7/README.md) checks the
+added IFS source and current deployed notices, with verified official calendar
+alternatives; it does not rerun the historical 22-source audit or claim L4.
 
 ### Section dates and official release evidence
 

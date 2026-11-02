@@ -1,0 +1,1116 @@
+{
+  "captured_at": "2026-11-02T08:23:32.589054+00:00",
+  "scope": "bounded official calendar alternatives, not source audit",
+  "request_count": 8,
+  "records": [
+    {
+      "id": "hmt-announcements",
+      "requested_url": "https://www.gov.uk/government/statistics/announcements?organisations%5B%5D=hm-treasury",
+      "started_at": "2026-11-02T08:23:31.816279+00:00",
+      "method": "GET",
+      "redirects": [
+        {
+          "observed_at": "2026-11-02T08:23:31.932271+00:00",
+          "url": "https://www.gov.uk/government/statistics/announcements?organisations%5B%5D=hm-treasury",
+          "status": 301,
+          "location": "https://www.gov.uk/search/statistics-announcements?organisations%5B%5D=hm-treasury",
+          "headers": [
+            [
+              "Connection",
+              "close"
+            ],
+            [
+              "Content-Length",
+              "99"
+            ],
+            [
+              "Content-Type",
+              "text/html; charset=utf-8"
+            ],
+            [
+              "Server",
+              "nginx"
+            ],
+            [
+              "Cache-Control",
+              "max-age=1800, public"
+            ],
+            [
+              "Expires",
+              "Mon, 02 Nov 2026 08:53:31 UTC"
+            ],
+            [
+              "Location",
+              "/search/statistics-announcements?organisations%5B%5D=hm-treasury"
+            ],
+            [
+              "Permissions-Policy",
+              "interest-cohort=()"
+            ],
+            [
+              "X-Content-Type-Options",
+              "nosniff"
+            ],
+            [
+              "Fastly-Backend-Name",
+              "origin"
+            ],
+            [
+              "Accept-Ranges",
+              "bytes"
+            ],
+            [
+              "Age",
+              "0"
+            ],
+            [
+              "Date",
+              "Mon, 02 Nov 2026 08:23:31 GMT"
+            ],
+            [
+              "Via",
+              "1.1 varnish"
+            ],
+            [
+              "Strict-Transport-Security",
+              "max-age=31536000; preload"
+            ],
+            [
+              "Server-Timing",
+              "cacheMiss"
+            ],
+            [
+              "X-Served-By",
+              "cache-bma-essb1270029-BMA"
+            ],
+            [
+              "X-Cache",
+              "MISS"
+            ],
+            [
+              "X-Cache-Hits",
+              "0"
+            ],
+            [
+              "X-Timer",
+              "S1793607812.893592,VS0,VE37"
+            ],
+            [
+              "alt-svc",
+              "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+            ]
+          ]
+        },
+        {
+          "observed_at": "2026-11-02T08:23:32.140034+00:00",
+          "url": "https://www.gov.uk/search/statistics-announcements?organisations%5B%5D=hm-treasury",
+          "status": 302,
+          "location": "https://www.gov.uk/search/research-and-statistics?content_store_document_type=upcoming_statistics&organisations%5B%5D=hm-treasury&public_timestamp%5Bfrom%5D&public_timestamp%5Bto%5D",
+          "headers": [
+            [
+              "Connection",
+              "close"
+            ],
+            [
+              "Content-Length",
+              "0"
+            ],
+            [
+              "Content-Type",
+              "text/html; charset=utf-8"
+            ],
+            [
+              "Server",
+              "nginx"
+            ],
+            [
+              "Cache-Control",
+              "no-cache"
+            ],
+            [
+              "Content-Security-Policy",
+              "default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.google.co.uk analytics.google.com *.analytics.google.com www.google.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com https://i.ytimg.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.google.co.uk analytics.google.com *.analytics.google.com www.google.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-knYgA5BGQWjzmWWtv6uQBw=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.google.co.uk analytics.google.com *.analytics.google.com www.google.com lux.speedcurve.com beacon.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; frame-ancestors 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk; report-uri https://csp-reporter.publishing.service.gov.uk/report"
+            ],
+            [
+              "Location",
+              "https://www.gov.uk/search/research-and-statistics?content_store_document_type=upcoming_statistics&organisations%5B%5D=hm-treasury&public_timestamp%5Bfrom%5D&public_timestamp%5Bto%5D"
+            ],
+            [
+              "Permissions-Policy",
+              "interest-cohort=()"
+            ],
+            [
+              "Via",
+              "1.1 router, 1.1 varnish"
+            ],
+            [
+              "X-Content-Type-Options",
+              "nosniff"
+            ],
+            [
+              "X-Frame-Options",
+              "ALLOWALL"
+            ],
+            [
+              "X-Request-Id",
+              "92f27bb4-70fa-42e9-96a8-46d5899291d3"
+            ],
+            [
+              "X-Runtime",
+              "0.000879"
+            ],
+            [
+              "Fastly-Backend-Name",
+              "origin"
+            ],
+            [
+              "Accept-Ranges",
+              "bytes"
+            ],
+            [
+              "Date",
+              "Mon, 02 Nov 2026 08:23:32 GMT"
+            ],
+            [
+              "Strict-Transport-Security",
+              "max-age=31536000; preload"
+            ],
+            [
+              "X-Served-By",
+              "cache-bma-essb1270075-BMA"
+            ],
+            [
+              "X-Cache",
+              "MISS"
+            ],
+            [
+              "X-Cache-Hits",
+              "0"
+            ],
+            [
+              "X-Timer",
+              "S1793607812.959365,VS0,VE179"
+            ],
+            [
+              "alt-svc",
+              "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+            ]
+          ]
+        }
+      ],
+      "status": 200,
+      "body_file": "hmt-announcements.body",
+      "sha256": "471a95fa9fee36d1169d978b0871bd8388ce3e50f0dfc0c37839fd797dfc5050",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://www.gov.uk/search/research-and-statistics?content_store_document_type=upcoming_statistics&organisations%5B%5D=hm-treasury&public_timestamp%5Bfrom%5D&public_timestamp%5Bto%5D",
+      "response_headers": [
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Content-Length",
+          "754376"
+        ],
+        [
+          "Content-Type",
+          "text/html; charset=utf-8"
+        ],
+        [
+          "Server",
+          "nginx"
+        ],
+        [
+          "Cache-Control",
+          "max-age=300, public"
+        ],
+        [
+          "Content-Security-Policy",
+          "default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.google.co.uk analytics.google.com *.analytics.google.com www.google.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com https://i.ytimg.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.google.co.uk analytics.google.com *.analytics.google.com www.google.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-er/KgqHVHXvXZWzzH+vtpw=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.google.co.uk analytics.google.com *.analytics.google.com www.google.com lux.speedcurve.com beacon.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; frame-ancestors 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk; report-uri https://csp-reporter.publishing.service.gov.uk/report"
+        ],
+        [
+          "Etag",
+          "W/\"471a95fa9fee36d1169d978b0871bd83\""
+        ],
+        [
+          "Link",
+          "</assets/finder-frontend/application-535437c47613ff66b80a2fcdf3bb3f5d373e7226a77764febf246d40a619bc6b.js>; rel=modulepreload; as=script; nopush,</assets/finder-frontend/govuk_publishing_components/vendor/lux/lux-measurer-d66192b1b665d415e1874e49a48138b7ae339548aa6cdb8687c7f9933e72b969.js>; rel=preload; as=script; nopush,</assets/finder-frontend/govuk_publishing_components/rum-custom-data-b9e1806d1da2fa8ef1855d01aa71ba5eb0afc010dd2c4de3672cc7c7a39b0c8c.js>; rel=modulepreload; as=script; nopush,</assets/finder-frontend/govuk_publishing_components/rum-loader-a65b10e18ceeba3bd8a2eac507c7f2c513cdc82f35097df903fdea87f1dc2e33.js>; rel=preload; as=script; nopush,</assets/finder-frontend/govuk_publishing_components/load-analytics-d5c92d4ce9f98141170a466427da86ca1ff62f234637bf0776121e6df57b3b67.js>; rel=modulepreload; as=script; nopush,</assets/finder-frontend/application-e6db6f9c0c3dd56561b70a6dd8e0887661b2de6633b95ff50594b7fb97e31f7c.css>; rel=preload; as=style; nopush"
+        ],
+        [
+          "Permissions-Policy",
+          "interest-cohort=()"
+        ],
+        [
+          "Via",
+          "1.1 router, 1.1 varnish"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "ALLOWALL"
+        ],
+        [
+          "X-Request-Id",
+          "de62565e-fa75-4d6f-8b2a-f1f4fd83cb61"
+        ],
+        [
+          "X-Runtime",
+          "0.077575"
+        ],
+        [
+          "Fastly-Backend-Name",
+          "origin"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Age",
+          "0"
+        ],
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; preload"
+        ],
+        [
+          "Server-Timing",
+          "cacheMiss"
+        ],
+        [
+          "X-Served-By",
+          "cache-bma-essb1270071-BMA"
+        ],
+        [
+          "X-Cache",
+          "MISS"
+        ],
+        [
+          "X-Cache-Hits",
+          "0"
+        ],
+        [
+          "X-Timer",
+          "S1793607812.164895,VS0,VE222"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 754376,
+      "finished_at": "2026-11-02T08:23:32.587041+00:00"
+    },
+    {
+      "id": "hmt-announcements-api",
+      "requested_url": "https://www.gov.uk/api/search.json?filter_format=statistics_announcement&filter_organisations=hm-treasury&count=100",
+      "started_at": "2026-11-02T08:23:31.818665+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "hmt-announcements-api.body",
+      "sha256": "0233a332681369db8f91a515b50cd35f05073681a437fb3317c03547becf377b",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://www.gov.uk/api/search.json?filter_format=statistics_announcement&filter_organisations=hm-treasury&count=100",
+      "response_headers": [
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Content-Length",
+          "140532"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Server",
+          "nginx"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Permissions-Policy",
+          "interest-cohort=()"
+        ],
+        [
+          "Via",
+          "1.1 router, 1.1 varnish"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "Fastly-Backend-Name",
+          "origin"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Age",
+          "0"
+        ],
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; preload"
+        ],
+        [
+          "Server-Timing",
+          "cacheMiss"
+        ],
+        [
+          "X-Served-By",
+          "cache-bma-essb1270033-BMA"
+        ],
+        [
+          "X-Cache",
+          "MISS"
+        ],
+        [
+          "X-Cache-Hits",
+          "0"
+        ],
+        [
+          "X-Timer",
+          "S1793607812.893157,VS0,VE109"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 140532,
+      "finished_at": "2026-11-02T08:23:32.024028+00:00"
+    },
+    {
+      "id": "pesa-announcements-api",
+      "requested_url": "https://www.gov.uk/api/search.json?filter_format=statistics_announcement&q=public%20expenditure%20statistical%20analyses&count=100",
+      "started_at": "2026-11-02T08:23:31.820336+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "pesa-announcements-api.body",
+      "sha256": "4e8ebd4784305139f23bf61b4fabf06fd8be8a6771dc8d413f0a8f62ee5b8003",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://www.gov.uk/api/search.json?filter_format=statistics_announcement&q=public%20expenditure%20statistical%20analyses&count=100",
+      "response_headers": [
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Content-Length",
+          "335227"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Server",
+          "nginx"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Permissions-Policy",
+          "interest-cohort=()"
+        ],
+        [
+          "Via",
+          "1.1 router, 1.1 varnish"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "Fastly-Backend-Name",
+          "origin"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Age",
+          "0"
+        ],
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; preload"
+        ],
+        [
+          "Server-Timing",
+          "cacheMiss"
+        ],
+        [
+          "X-Served-By",
+          "cache-bma-essb1270054-BMA"
+        ],
+        [
+          "X-Cache",
+          "MISS"
+        ],
+        [
+          "X-Cache-Hits",
+          "0"
+        ],
+        [
+          "X-Timer",
+          "S1793607812.892818,VS0,VE369"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 335227,
+      "finished_at": "2026-11-02T08:23:32.302864+00:00"
+    },
+    {
+      "id": "hmt-spending-collection",
+      "requested_url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+      "started_at": "2026-11-02T08:23:31.822073+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "hmt-spending-collection.body",
+      "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+      "response_headers": [
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Content-Length",
+          "55956"
+        ],
+        [
+          "Content-Type",
+          "application/json; charset=utf-8"
+        ],
+        [
+          "Server",
+          "nginx"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Cache-Control",
+          "max-age=300, public"
+        ],
+        [
+          "Etag",
+          "W/\"3dccf60170db1f2133028f7137c081fd\""
+        ],
+        [
+          "Permissions-Policy",
+          "interest-cohort=()"
+        ],
+        [
+          "Referrer-Policy",
+          "strict-origin-when-cross-origin"
+        ],
+        [
+          "Via",
+          "1.1 router, 1.1 varnish"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "SAMEORIGIN"
+        ],
+        [
+          "X-Permitted-Cross-Domain-Policies",
+          "none"
+        ],
+        [
+          "X-Request-Id",
+          "b65a4ae7-6b9d-432c-a9a8-c6d88dbc877d"
+        ],
+        [
+          "X-Runtime",
+          "0.009095"
+        ],
+        [
+          "X-Xss-Protection",
+          "0"
+        ],
+        [
+          "Fastly-Backend-Name",
+          "origin"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Age",
+          "0"
+        ],
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:31 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; preload"
+        ],
+        [
+          "Server-Timing",
+          "cacheHit"
+        ],
+        [
+          "X-Served-By",
+          "cache-bma-essb1270034-BMA"
+        ],
+        [
+          "X-Cache",
+          "HIT"
+        ],
+        [
+          "X-Cache-Hits",
+          "0"
+        ],
+        [
+          "X-Timer",
+          "S1793607812.893551,VS0,VE48"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 55956,
+      "finished_at": "2026-11-02T08:23:31.951793+00:00"
+    },
+    {
+      "id": "hmt-pesa-collection",
+      "requested_url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+      "started_at": "2026-11-02T08:23:31.952427+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "hmt-pesa-collection.body",
+      "sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+      "response_headers": [
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Content-Length",
+          "21934"
+        ],
+        [
+          "Content-Type",
+          "application/json; charset=utf-8"
+        ],
+        [
+          "Server",
+          "nginx"
+        ],
+        [
+          "Access-Control-Allow-Origin",
+          "*"
+        ],
+        [
+          "Cache-Control",
+          "max-age=300, public"
+        ],
+        [
+          "Etag",
+          "W/\"bab32764830a7a7e53d3faaf621f7494\""
+        ],
+        [
+          "Permissions-Policy",
+          "interest-cohort=()"
+        ],
+        [
+          "Referrer-Policy",
+          "strict-origin-when-cross-origin"
+        ],
+        [
+          "Via",
+          "1.1 router, 1.1 varnish"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "SAMEORIGIN"
+        ],
+        [
+          "X-Permitted-Cross-Domain-Policies",
+          "none"
+        ],
+        [
+          "X-Request-Id",
+          "9e4a0692-0bf8-4874-a1c2-5d4439cbe132"
+        ],
+        [
+          "X-Runtime",
+          "0.006396"
+        ],
+        [
+          "X-Xss-Protection",
+          "0"
+        ],
+        [
+          "Fastly-Backend-Name",
+          "origin"
+        ],
+        [
+          "Accept-Ranges",
+          "bytes"
+        ],
+        [
+          "Age",
+          "0"
+        ],
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; preload"
+        ],
+        [
+          "Server-Timing",
+          "cacheMiss"
+        ],
+        [
+          "X-Served-By",
+          "cache-bma-essb1270022-BMA"
+        ],
+        [
+          "X-Cache",
+          "MISS"
+        ],
+        [
+          "X-Cache-Hits",
+          "0"
+        ],
+        [
+          "X-Timer",
+          "S1793607812.995140,VS0,VE48"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 21934,
+      "finished_at": "2026-11-02T08:23:32.046218+00:00"
+    },
+    {
+      "id": "obr-data",
+      "requested_url": "https://obr.uk/data/",
+      "started_at": "2026-11-02T08:23:32.024595+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "obr-data.body",
+      "sha256": "150b6b9307cd6b164753f9e0f8163877d4e2c3a6653576544f121f7b7ba9be13",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://obr.uk/data/",
+      "response_headers": [
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Content-Type",
+          "text/html; charset=UTF-8"
+        ],
+        [
+          "Transfer-Encoding",
+          "chunked"
+        ],
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Server",
+          "cloudflare"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding,Cookie"
+        ],
+        [
+          "Last-Modified",
+          "Wed, 28 Oct 2026 16:33:40 GMT"
+        ],
+        [
+          "Link",
+          "<https://obr.uk/wp-json/>; rel=\"https://api.w.org/\""
+        ],
+        [
+          "Link",
+          "<https://obr.uk/wp-json/wp/v2/pages/3534>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\""
+        ],
+        [
+          "Link",
+          "<https://obr.uk/?p=3534>; rel=shortlink"
+        ],
+        [
+          "X-Dlm-No-Waypoints",
+          "true"
+        ],
+        [
+          "X-Powered-By",
+          "WP Engine"
+        ],
+        [
+          "X-Cacheable",
+          "SHORT"
+        ],
+        [
+          "cache-control",
+          "max-age=600, must-revalidate"
+        ],
+        [
+          "X-Cache",
+          "MISS"
+        ],
+        [
+          "X-Cache-Group",
+          "normal"
+        ],
+        [
+          "X-XSS-Protection",
+          "1; mode=block"
+        ],
+        [
+          "cf-cache-status",
+          "REVALIDATED"
+        ],
+        [
+          "set-cookie",
+          "__cf_bm=ZTu39dMOgcAUWRC.OvN5avzm3r5GXf9XsTUYwbkdXPE-1793607812.1778274-1.0.1.1-_ABo2bIixAebBSJX2j88owR5Iz3YLpER4CxT9UD70flizvTvZzoTB.tORybSo3L4McbR4doFvokCAnkBlmjGaACRMiWQzQj62GItSP0Sdh7DXrRgBr.GBVsX3uVJmuVH; HttpOnly; SameSite=None; Secure; Path=/; Domain=obr.uk; Expires=Mon, 02 Nov 2026 08:53:32 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; includeSubDomains; preload"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "DENY"
+        ],
+        [
+          "CF-RAY",
+          "a541bcda198cf693-HEL"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\"; ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 106129,
+      "finished_at": "2026-11-02T08:23:32.337757+00:00"
+    },
+    {
+      "id": "obr-home",
+      "requested_url": "https://obr.uk/",
+      "started_at": "2026-11-02T08:23:32.046611+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "obr-home.body",
+      "sha256": "7510d326b0ed7c371c1cfa5960f6a72232a2c13698f21cde23cf55995359031b",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://obr.uk/",
+      "response_headers": [
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Content-Type",
+          "text/html; charset=UTF-8"
+        ],
+        [
+          "Transfer-Encoding",
+          "chunked"
+        ],
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "Server",
+          "cloudflare"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding"
+        ],
+        [
+          "Vary",
+          "Accept-Encoding,Cookie"
+        ],
+        [
+          "Last-Modified",
+          "Wed, 28 Oct 2026 17:34:53 GMT"
+        ],
+        [
+          "Link",
+          "<https://obr.uk/wp-json/>; rel=\"https://api.w.org/\""
+        ],
+        [
+          "Link",
+          "<https://obr.uk/wp-json/wp/v2/pages/17045>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\""
+        ],
+        [
+          "Link",
+          "<https://obr.uk/>; rel=shortlink"
+        ],
+        [
+          "X-Dlm-No-Waypoints",
+          "true"
+        ],
+        [
+          "X-Powered-By",
+          "WP Engine"
+        ],
+        [
+          "X-Cacheable",
+          "SHORT"
+        ],
+        [
+          "cache-control",
+          "max-age=600, must-revalidate"
+        ],
+        [
+          "X-Cache",
+          "MISS"
+        ],
+        [
+          "X-Cache-Group",
+          "normal"
+        ],
+        [
+          "Age",
+          "355"
+        ],
+        [
+          "cf-cache-status",
+          "HIT"
+        ],
+        [
+          "set-cookie",
+          "__cf_bm=VabCDPZompwsfWah3kwN3xMgtkONPFJx19Emn5eLHfk-1793607812.1767771-1.0.1.1-9wL9yadxut_Fl2d1QNpLv4P1vT1n.7M8am_SBxBIWV91936qvkdQlNSIWRM9lBJy59MOTRp5mxLjvQBzv1idYNrLkteD2dxLCUkjhr_qgdT9HToh5Q46AkvhKKY_K9dC; HttpOnly; SameSite=None; Secure; Path=/; Domain=obr.uk; Expires=Mon, 02 Nov 2026 08:53:32 GMT"
+        ],
+        [
+          "Strict-Transport-Security",
+          "max-age=31536000; includeSubDomains; preload"
+        ],
+        [
+          "X-Content-Type-Options",
+          "nosniff"
+        ],
+        [
+          "X-Frame-Options",
+          "DENY"
+        ],
+        [
+          "X-XSS-Protection",
+          "1; mode=block"
+        ],
+        [
+          "CF-RAY",
+          "a541bcda1e372fc6-HEL"
+        ],
+        [
+          "alt-svc",
+          "h3=\":443\"; ma=86400"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 153878,
+      "finished_at": "2026-11-02T08:23:32.234674+00:00"
+    },
+    {
+      "id": "ons-psf-calendar",
+      "requested_url": "https://www.ons.gov.uk/releasecalendar?query=public%20sector%20finances&release-type=type-upcoming",
+      "started_at": "2026-11-02T08:23:32.235313+00:00",
+      "method": "GET",
+      "redirects": [],
+      "status": 200,
+      "body_file": "ons-psf-calendar.body",
+      "sha256": "d3af87d2eb251c657c603aff0fc4417d783505ec612cb95540605ebb5b80fd0a",
+      "error": null,
+      "request_headers": {
+        "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+        "Accept-encoding": "identity"
+      },
+      "final_url": "https://www.ons.gov.uk/releasecalendar?query=public%20sector%20finances&release-type=type-upcoming",
+      "response_headers": [
+        [
+          "Date",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "Content-Type",
+          "text/html; charset=UTF-8"
+        ],
+        [
+          "Transfer-Encoding",
+          "chunked"
+        ],
+        [
+          "Connection",
+          "close"
+        ],
+        [
+          "x-frame-options",
+          "SAMEORIGIN"
+        ],
+        [
+          "allow",
+          "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+        ],
+        [
+          "strict-transport-security",
+          "max-age=31536000; includeSubDomains"
+        ],
+        [
+          "x-xss-protection",
+          "1"
+        ],
+        [
+          "last-modified",
+          "Mon, 02 Nov 2026 08:23:32 GMT"
+        ],
+        [
+          "cf-cache-status",
+          "MISS"
+        ],
+        [
+          "set-cookie",
+          "__cf_bm=qY0Gg1w.vWC0s3z.gFVhmVsnabR2ZpQQmZW_R7b5C.8-1793607812.2732038-1.0.1.1-LAaC7qPLzJa.fH22L8Ez2nM6LgjereMWLGp1RyA58rWm4grrBLqdYUx0DIUai_ypi7V8YPNKUhgvZqpK8Y0M5Yi1MSuaQCOb4znWndx0zo9lyYfh4mBrJYGdltpu.vFS; HttpOnly; SameSite=None; Secure; Path=/; Domain=ons.gov.uk; Expires=Mon, 02 Nov 2026 08:53:32 GMT"
+        ],
+        [
+          "set-cookie",
+          "_cfuvid=Ul4l9B60bNgVihs1WzRXJGVUB2UO7ec2HYPPkl_Te1Q-1793607812.2732038-1.0.1.1-oa4DaKuZPf_WqNKnidbx5H0IoH6xGw3gZ3PsgsVE3Qg; HttpOnly; SameSite=None; Secure; Path=/; Domain=ons.gov.uk"
+        ],
+        [
+          "Vary",
+          "accept-encoding"
+        ],
+        [
+          "Server",
+          "cloudflare"
+        ],
+        [
+          "CF-RAY",
+          "a541bcdabe4c7e5e-HEL"
+        ]
+      ],
+      "truncated": false,
+      "bytes": 62425,
+      "finished_at": "2026-11-02T08:23:32.417056+00:00"
+    }
+  ]
+}

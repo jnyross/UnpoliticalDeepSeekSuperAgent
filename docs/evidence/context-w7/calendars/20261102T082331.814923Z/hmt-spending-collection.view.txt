@@ -1,0 +1,1399 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/collections/national-statistics-release",
+  "content_id": "5eb7e38b-7631-11e4-a3cb-005056011aef",
+  "description": "Public spending statistics which present analyses of public spending against budgeting and expenditure on services frameworks.",
+  "details": {
+    "body": "<div class=\"govspeak\"><p>These analyses cover public spending by department, function and economic category.</p>\n</div>",
+    "change_history": [
+      {
+        "note": "Public Spending Statistics release: July 2026 added.",
+        "public_timestamp": "2026-07-16T08:30:06Z"
+      },
+      {
+        "note": "Public Spending Statistics release: May 2026 added.",
+        "public_timestamp": "2026-05-21T08:30:08Z"
+      },
+      {
+        "note": "Public Spending Statistics release: February 2026 added.",
+        "public_timestamp": "2026-02-26T09:30:11Z"
+      },
+      {
+        "note": "Public Spending Statistics release: December 2025 added.",
+        "public_timestamp": "2025-12-18T09:30:07Z"
+      },
+      {
+        "note": "Public Spending Statistics release: July 2025 added.",
+        "public_timestamp": "2025-07-17T08:30:04Z"
+      },
+      {
+        "note": "Updated with: 'Public Spending Statistics release: May 2025'",
+        "public_timestamp": "2025-05-30T08:30:08Z"
+      },
+      {
+        "note": "Updated with: Public Spending Statistics release: February 2025",
+        "public_timestamp": "2025-02-28T09:30:07Z"
+      },
+      {
+        "note": "Public Spending Statistics release: November 2024 added.",
+        "public_timestamp": "2024-11-28T09:30:24Z"
+      },
+      {
+        "note": "Public Spending Statistics release: July 2024 added.\r\n",
+        "public_timestamp": "2024-07-23T08:30:01Z"
+      },
+      {
+        "note": "Public Spending Statistics release: May 2024 added",
+        "public_timestamp": "2024-05-17T08:30:05Z"
+      },
+      {
+        "note": "Public Spending Statistics release: February 2024 added",
+        "public_timestamp": "2024-02-28T09:30:08Z"
+      },
+      {
+        "note": "Public Spending Statistics release: November 2023 added",
+        "public_timestamp": "2023-11-10T09:30:17Z"
+      },
+      {
+        "note": "Public Spending Statistics release: July 2023 added",
+        "public_timestamp": "2023-07-19T08:30:17Z"
+      },
+      {
+        "note": "Public Spending Statistics release: May 2023 added",
+        "public_timestamp": "2023-05-11T08:31:09Z"
+      },
+      {
+        "note": "Public Spending Statistics release: February 2023 added",
+        "public_timestamp": "2023-02-28T09:30:04Z"
+      },
+      {
+        "note": "Public Spending Statistics release: November 2022 added",
+        "public_timestamp": "2022-11-16T09:30:02Z"
+      },
+      {
+        "note": "Public Spending Statistics release: July 2022 added",
+        "public_timestamp": "2022-07-20T08:30:07Z"
+      },
+      {
+        "note": "Public Spending Statistics release: May 2022 added",
+        "public_timestamp": "2022-05-19T08:30:06Z"
+      },
+      {
+        "note": "Updated with: Public Spending Statistics release: February 2022.",
+        "public_timestamp": "2022-02-25T09:30:00Z"
+      },
+      {
+        "note": "Public Spending Statistics release: November 2021 added",
+        "public_timestamp": "2021-11-17T09:30:08Z"
+      },
+      {
+        "note": "Public Spending Statistics release: July 2021 added",
+        "public_timestamp": "2021-07-20T08:30:06Z"
+      },
+      {
+        "note": "Public Spending Statistics release: May 2021 added",
+        "public_timestamp": "2021-05-07T08:30:00Z"
+      },
+      {
+        "note": "Added Public Spending Statistics release: February 2021",
+        "public_timestamp": "2021-02-25T09:30:06Z"
+      },
+      {
+        "note": "Updated with: Public Spending Statistics release: July 2020.",
+        "public_timestamp": "2020-07-17T08:30:03Z"
+      },
+      {
+        "note": "Added: Public Spending Statistics release: May 2020.",
+        "public_timestamp": "2020-05-07T08:30:03Z"
+      },
+      {
+        "note": "Updated with 'Public Spending Statistics release: February 2020'.",
+        "public_timestamp": "2020-02-28T09:30:16Z"
+      },
+      {
+        "note": "Updated with 'Public Spending Statistics release: November 2019'.",
+        "public_timestamp": "2019-11-19T09:30:06Z"
+      },
+      {
+        "note": "Updated with: 'Public Spending Statistics release: July 2019'",
+        "public_timestamp": "2019-07-18T08:30:02Z"
+      },
+      {
+        "note": "Updated with: 'Public Spending Statistics release: May 2019'.",
+        "public_timestamp": "2019-05-02T08:30:05Z"
+      },
+      {
+        "note": "Updated with 'Public Spending Statistics release: February 2019'. ",
+        "public_timestamp": "2019-02-28T09:30:09Z"
+      },
+      {
+        "note": "Updated with Public Spending Statistics release: November 2018.\r\n",
+        "public_timestamp": "2018-11-20T09:30:04Z"
+      },
+      {
+        "note": "Updated with 'Public Spending Statistics release: July 2018'. ",
+        "public_timestamp": "2018-07-19T08:30:12Z"
+      },
+      {
+        "note": "Updated with Public Spending Statistics release: May 2018.",
+        "public_timestamp": "2018-05-01T08:30:05Z"
+      },
+      {
+        "note": "Updated with Public Spending Statistics release: February 2018\r\n",
+        "public_timestamp": "2018-02-28T09:30:19Z"
+      },
+      {
+        "note": "Updated with public spending statistics release: November 2017",
+        "public_timestamp": "2017-11-09T09:30:46Z"
+      },
+      {
+        "note": "July 2017 statistics added.",
+        "public_timestamp": "2017-07-19T09:48:18Z"
+      },
+      {
+        "note": "Updated with Public Spending Statistics release: May 2017",
+        "public_timestamp": "2017-05-03T08:30:07Z"
+      },
+      {
+        "note": "Updated with Public Spending Statistics release: February 2017",
+        "public_timestamp": "2017-02-28T09:30:32Z"
+      },
+      {
+        "note": "Updated: Public Spending Statistics release: November 2016",
+        "public_timestamp": "2016-11-17T09:30:27Z"
+      },
+      {
+        "note": "Updated: Public Spending Statistics release: July 2016",
+        "public_timestamp": "2016-07-20T08:30:34Z"
+      },
+      {
+        "note": "Updated with Public Spending Statistics release: April 2016",
+        "public_timestamp": "2016-04-28T08:30:19Z"
+      },
+      {
+        "note": "february 2016 statistics added",
+        "public_timestamp": "2016-02-26T09:30:35Z"
+      },
+      {
+        "note": "November release added",
+        "public_timestamp": "2015-11-05T09:30:23Z"
+      },
+      {
+        "note": "July 2015 statistics added",
+        "public_timestamp": "2015-07-16T08:30:35Z"
+      },
+      {
+        "note": "Figures for Feb 15 added",
+        "public_timestamp": "2015-02-27T09:30:29Z"
+      },
+      {
+        "note": "added November release",
+        "public_timestamp": "2014-11-20T09:30:50Z"
+      },
+      {
+        "note": "Added Public Spending Statistics release: July 2014",
+        "public_timestamp": "2014-07-15T08:33:13Z"
+      },
+      {
+        "note": "Public Spending Statistics for April 2014 added",
+        "public_timestamp": "2014-04-30T08:32:15Z"
+      },
+      {
+        "note": "February 2014 statistics added",
+        "public_timestamp": "2014-02-28T09:32:20Z"
+      },
+      {
+        "note": "added Country and regional analysis: 2013",
+        "public_timestamp": "2013-11-21T09:31:09Z"
+      },
+      {
+        "note": "added Public Spending Statistics release: October 2013",
+        "public_timestamp": "2013-10-31T09:29:07Z"
+      },
+      {
+        "note": "First published.",
+        "public_timestamp": "2013-07-10T23:00:00Z"
+      }
+    ],
+    "collection_groups": [
+      {
+        "body": "<div class=\"govspeak\">\n</div>",
+        "documents": [
+          "f7e22280-f730-4099-9037-f86075ee0c59",
+          "a8f7d7cf-25c6-45bb-b52e-26eca96ec17c",
+          "0e818c39-da37-4a76-ac21-020c1155a5d3",
+          "12280d81-2636-44cd-b7aa-ac7f7405d8c5",
+          "c5c9c292-190d-41d9-be17-ab69f70bc343",
+          "562f2d8a-1bc0-484c-9fd6-c2d3e2ee419c",
+          "7a436a12-4157-4285-afd4-2d08e1e2f73a",
+          "959e4d8a-afc3-4f95-a758-8fa8ed03f8e6",
+          "6c2ce3fc-484d-40fd-9913-2e76fcdf22cb",
+          "69d93c76-1b93-4bb8-998b-721164254756",
+          "0cd42b75-f182-49e8-8135-370df8fb7501",
+          "40337c58-cf88-42b0-890a-2ef7e8c253d6",
+          "a3572487-f907-4da5-b481-8af85e10b9da",
+          "1f7935aa-a1d8-43c1-ab41-06838b44e26d",
+          "f6bcb25f-8c63-4ce2-9848-712d9afd36cc",
+          "5ab04937-ffef-4b8c-adce-91dc19b01c51",
+          "8aa492f4-fadc-41aa-a5f9-2b0c534a58b9",
+          "a367bae6-fce1-43ea-8e07-3f556d0705e5",
+          "6893e7be-bdf5-40d6-bf24-8d412217298f",
+          "3ed473d7-a6ab-4e51-b6e3-afa45ede5cb6",
+          "cdc4c4c0-cd6b-4f54-87c4-0c8c08b407da",
+          "17a0bd4c-fea8-4842-b923-88967fa07d9e",
+          "a1c5f7d8-38ea-4c6b-a2d3-617061a3bda7",
+          "3da1db1a-ff9a-4a11-83b4-905edd58d071",
+          "ff641183-af4e-49ac-b5cc-8253fa7e5889",
+          "e002919b-1531-46f4-8400-84da7ee2c3ae",
+          "606a59ac-9145-4fc0-99de-80e7fa7858a8",
+          "a5270e2b-3056-485b-8cd8-599c3a0dccf1",
+          "cdb168a9-7568-4086-a802-83acf692b92b",
+          "13b17896-8ba5-4670-bfd9-ed55cc6e1026",
+          "2d087858-92ca-4e4e-bcbf-3a42140646b3",
+          "5a31de10-4145-4347-873b-012df6633ffd",
+          "6d5de576-5ed2-4351-8171-9ff1f2f71b04",
+          "97d66818-1165-471e-bc4b-061fa9f3f87c",
+          "501731da-e00a-4d94-af8c-78819e67ce8f",
+          "6f353853-dabc-4465-88d6-013c5bc9e15b",
+          "2410fe1b-8027-4fd1-aab9-811805ceb0f8",
+          "e377c9d9-854c-4409-928d-1ffc86c505e7",
+          "bbc4d746-bbc0-49a3-920c-2194f8024b49",
+          "ed274c80-be84-4ebe-a2f7-609ab4cf94fc",
+          "6db231b5-28c8-4fd0-a153-62d49bbe2325",
+          "a6a68a3c-92db-4c74-8d48-4b9dba37c558",
+          "9c3ab9aa-76df-4edc-a185-e7c45ea36fd3",
+          "6ce4373c-48de-49c4-9588-06adccaebddf",
+          "a7676e3e-62c5-46ae-84d5-354182967804",
+          "9fcdfb6c-e3db-4aac-aa4e-2b1960aa3deb",
+          "29686790-edae-403a-8a9d-c685f6317506",
+          "60541c9f-7631-11e4-a3cb-005056011aef",
+          "5fa96b0d-7631-11e4-a3cb-005056011aef",
+          "5f52e676-7631-11e4-a3cb-005056011aef",
+          "5f19a86c-7631-11e4-a3cb-005056011aef",
+          "5ee3de72-7631-11e4-a3cb-005056011aef",
+          "5ebcd3e1-7631-11e4-a3cb-005056011aef",
+          "5e38d3bc-7631-11e4-a3cb-005056011aef",
+          "5e2a2108-7631-11e4-a3cb-005056011aef",
+          "5e29811d-7631-11e4-a3cb-005056011aef",
+          "5e298091-7631-11e4-a3cb-005056011aef",
+          "5e38d0cc-7631-11e4-a3cb-005056011aef",
+          "5dffddd3-7631-11e4-a3cb-005056011aef",
+          "5dffde7e-7631-11e4-a3cb-005056011aef",
+          "5dffdd7b-7631-11e4-a3cb-005056011aef",
+          "5dffde2c-7631-11e4-a3cb-005056011aef"
+        ],
+        "title": "Documents"
+      }
+    ],
+    "emphasised_organisations": [
+      "1994e0e4-bd19-4966-bbd7-f293d6e90a6b"
+    ],
+    "first_public_at": "2013-07-11T00:00:00.000+01:00",
+    "political": false
+  },
+  "document_type": "document_collection",
+  "first_published_at": "2013-07-11T00:00:00+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/collections/national-statistics-release",
+        "api_url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+        "base_path": "/government/collections/national-statistics-release",
+        "content_id": "5eb7e38b-7631-11e4-a3cb-005056011aef",
+        "document_type": "document_collection",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-16T08:30:06Z",
+        "schema_name": "document_collection",
+        "title": "HMT Public Spending Statistics",
+        "web_url": "https://www.gov.uk/government/collections/national-statistics-release",
+        "withdrawn": false
+      }
+    ],
+    "documents": [
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2026",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2026",
+        "content_id": "f7e22280-f730-4099-9037-f86075ee0c59",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-29T13:20:18Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2026",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2026",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2026",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2026",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2026",
+        "content_id": "a8f7d7cf-25c6-45bb-b52e-26eca96ec17c",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-05-21T08:30:08Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2026",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2026",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2026",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2026",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2026",
+        "content_id": "0e818c39-da37-4a76-ac21-020c1155a5d3",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-02-26T09:30:11Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2026",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2026",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-december-2025",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-december-2025",
+        "base_path": "/government/statistics/public-spending-statistics-release-december-2025",
+        "content_id": "12280d81-2636-44cd-b7aa-ac7f7405d8c5",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-12-18T09:30:07Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: December 2025",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-december-2025",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2025",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2025",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2025",
+        "content_id": "c5c9c292-190d-41d9-be17-ab69f70bc343",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-16T08:29:02Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2025",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2025",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2025",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2025",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2025",
+        "content_id": "562f2d8a-1bc0-484c-9fd6-c2d3e2ee419c",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-05-30T08:30:08Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2025",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2025",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2025",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2025",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2025",
+        "content_id": "7a436a12-4157-4285-afd4-2d08e1e2f73a",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-02-28T09:30:07Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2025",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2025",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2024",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2024",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2024",
+        "content_id": "959e4d8a-afc3-4f95-a758-8fa8ed03f8e6",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2024-11-28T09:30:24Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2024",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2024",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2024",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2024",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2024",
+        "content_id": "6c2ce3fc-484d-40fd-9913-2e76fcdf22cb",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-16T08:29:02Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2024",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2024",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2024",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2024",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2024",
+        "content_id": "69d93c76-1b93-4bb8-998b-721164254756",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2024-05-17T08:30:05Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2024",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2024",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2024",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2024",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2024",
+        "content_id": "0cd42b75-f182-49e8-8135-370df8fb7501",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2024-02-28T09:30:08Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2024",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2024",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2023",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2023",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2023",
+        "content_id": "40337c58-cf88-42b0-890a-2ef7e8c253d6",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2023-11-10T09:30:17Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2023",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2023",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2023",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2023",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2023",
+        "content_id": "a3572487-f907-4da5-b481-8af85e10b9da",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2023-07-19T08:30:16Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2023",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2023",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2023",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2023",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2023",
+        "content_id": "1f7935aa-a1d8-43c1-ab41-06838b44e26d",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2023-05-11T08:31:07Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2023",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2023",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2023",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2023",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2023",
+        "content_id": "f6bcb25f-8c63-4ce2-9848-712d9afd36cc",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2023-02-28T09:30:04Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2023",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2023",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2022",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2022",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2022",
+        "content_id": "5ab04937-ffef-4b8c-adce-91dc19b01c51",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2022-11-24T15:39:01Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2022",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2022",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2022",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2022",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2022",
+        "content_id": "8aa492f4-fadc-41aa-a5f9-2b0c534a58b9",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2022-07-20T08:30:07Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2022",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2022",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2022",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2022",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2022",
+        "content_id": "a367bae6-fce1-43ea-8e07-3f556d0705e5",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2022-05-19T08:30:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2022",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2022",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2022",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2022",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2022",
+        "content_id": "6893e7be-bdf5-40d6-bf24-8d412217298f",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2022-02-25T09:30:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2022",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2022",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2021",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2021",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2021",
+        "content_id": "3ed473d7-a6ab-4e51-b6e3-afa45ede5cb6",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2021-11-17T09:30:08Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2021",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2021",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2021",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2021",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2021",
+        "content_id": "cdc4c4c0-cd6b-4f54-87c4-0c8c08b407da",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2021-10-27T12:02:02Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2021",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2021",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2021",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2021",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2021",
+        "content_id": "17a0bd4c-fea8-4842-b923-88967fa07d9e",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2021-05-07T08:30:01Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2021",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2021",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2021",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2021",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2021",
+        "content_id": "a1c5f7d8-38ea-4c6b-a2d3-617061a3bda7",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2021-02-25T09:30:11Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2021",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2021",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2020",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2020",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2020",
+        "content_id": "3da1db1a-ff9a-4a11-83b4-905edd58d071",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2020-11-18T09:30:04Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2020",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2020",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2020",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2020",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2020",
+        "content_id": "ff641183-af4e-49ac-b5cc-8253fa7e5889",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2020-07-17T08:30:03Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2020",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2020",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2020",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2020",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2020",
+        "content_id": "e002919b-1531-46f4-8400-84da7ee2c3ae",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2020-05-07T08:30:02Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2020",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2020",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2020",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2020",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2020",
+        "content_id": "606a59ac-9145-4fc0-99de-80e7fa7858a8",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2020-02-28T09:30:16Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2020",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2020",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2019",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2019",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2019",
+        "content_id": "a5270e2b-3056-485b-8cd8-599c3a0dccf1",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-11-19T09:30:06Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2019",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2019",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2019",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2019",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2019",
+        "content_id": "cdb168a9-7568-4086-a802-83acf692b92b",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-08-02T15:53:05Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2019",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2019",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2019",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2019",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2019",
+        "content_id": "13b17896-8ba5-4670-bfd9-ed55cc6e1026",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-05-02T08:30:05Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2019",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2019",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2019",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2019",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2019",
+        "content_id": "2d087858-92ca-4e4e-bcbf-3a42140646b3",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-02-28T09:30:09Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2019",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2019",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2018",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2018",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2018",
+        "content_id": "5a31de10-4145-4347-873b-012df6633ffd",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2018-11-20T09:30:04Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2018",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2018",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2018",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2018",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2018",
+        "content_id": "6d5de576-5ed2-4351-8171-9ff1f2f71b04",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-02-08T09:30:04Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2018",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2018",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2018",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2018",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2018",
+        "content_id": "97d66818-1165-471e-bc4b-061fa9f3f87c",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2018-05-01T08:30:06Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2018",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2018",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2018",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2018",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2018",
+        "content_id": "501731da-e00a-4d94-af8c-78819e67ce8f",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2018-02-28T09:30:20Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2018",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2018",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2017",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2017",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2017",
+        "content_id": "6f353853-dabc-4465-88d6-013c5bc9e15b",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2017-11-09T09:30:44Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2017",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2017",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2017",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2017",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2017",
+        "content_id": "2410fe1b-8027-4fd1-aab9-811805ceb0f8",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2017-07-20T12:07:24Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2017",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2017",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-may-2017",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-may-2017",
+        "base_path": "/government/statistics/public-spending-statistics-release-may-2017",
+        "content_id": "e377c9d9-854c-4409-928d-1ffc86c505e7",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2017-05-03T08:30:06Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: May 2017",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-may-2017",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2017",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2017",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2017",
+        "content_id": "bbc4d746-bbc0-49a3-920c-2194f8024b49",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2017-02-28T09:30:31Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2017",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2017",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2016",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2016",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2016",
+        "content_id": "ed274c80-be84-4ebe-a2f7-609ab4cf94fc",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2016-11-17T09:30:27Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2016",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2016",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2016",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2016",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2016",
+        "content_id": "6db231b5-28c8-4fd0-a153-62d49bbe2325",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2016-07-21T13:13:10Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2016",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2016",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-april-2016",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-april-2016",
+        "base_path": "/government/statistics/public-spending-statistics-release-april-2016",
+        "content_id": "a6a68a3c-92db-4c74-8d48-4b9dba37c558",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2016-04-28T08:30:19Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: April 2016",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-april-2016",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2016",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2016",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2016",
+        "content_id": "9c3ab9aa-76df-4edc-a185-e7c45ea36fd3",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2016-02-26T09:30:35Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2016",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2016",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2015",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2015",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2015",
+        "content_id": "6ce4373c-48de-49c4-9588-06adccaebddf",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2015-11-05T09:30:23Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2015",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2015",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2015",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2015",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2015",
+        "content_id": "a7676e3e-62c5-46ae-84d5-354182967804",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2015-08-21T08:38:24Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2015",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2015",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-april-2015",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-april-2015",
+        "base_path": "/government/statistics/public-spending-statistics-release-april-2015",
+        "content_id": "9fcdfb6c-e3db-4aac-aa4e-2b1960aa3deb",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2015-04-30T08:30:21Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: April 2015",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-april-2015",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2015",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2015",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2015",
+        "content_id": "29686790-edae-403a-8a9d-c685f6317506",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2015-02-27T09:30:29Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2015",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2015",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-november-2014",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-november-2014",
+        "base_path": "/government/statistics/public-spending-statistics-release-november-2014",
+        "content_id": "60541c9f-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2014-11-20T09:30:50Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: November 2014",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-november-2014",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2014",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2014",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2014",
+        "content_id": "5fa96b0d-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2014-08-01T08:31:17Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2014",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2014",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-april-2014",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-april-2014",
+        "base_path": "/government/statistics/public-spending-statistics-release-april-2014",
+        "content_id": "5f52e676-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2014-04-30T08:32:15Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: April 2014",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-april-2014",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-february-2014",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-february-2014",
+        "base_path": "/government/statistics/public-spending-statistics-release-february-2014",
+        "content_id": "5f19a86c-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2014-02-28T09:32:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2014",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-february-2014",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/country-and-regional-analysis-2013",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/country-and-regional-analysis-2013",
+        "base_path": "/government/statistics/country-and-regional-analysis-2013",
+        "content_id": "5ee3de72-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-12-09T12:23:24Z",
+        "schema_name": "publication",
+        "title": "Country and regional analysis: 2013",
+        "web_url": "https://www.gov.uk/government/statistics/country-and-regional-analysis-2013",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-october-2013",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-october-2013",
+        "base_path": "/government/statistics/public-spending-statistics-release-october-2013",
+        "content_id": "5ebcd3e1-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-10-31T09:28:10Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: October 2013",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-october-2013",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2013",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2013",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2013",
+        "content_id": "5e38d3bc-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-07-11T14:46:20Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2013",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2013",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-april-2013",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-april-2013",
+        "base_path": "/government/statistics/national-statistics-release-april-2013",
+        "content_id": "5e2a2108-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-04-30T08:30:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: April 2013",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-april-2013",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-february-2013",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-february-2013",
+        "base_path": "/government/statistics/national-statistics-release-february-2013",
+        "content_id": "5e29811d-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-04-25T14:27:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2013",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-february-2013",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-october-2012",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-october-2012",
+        "base_path": "/government/statistics/national-statistics-release-october-2012",
+        "content_id": "5e298091-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-04-25T14:15:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: October 2012",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-october-2012",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-spending-statistics-release-july-2012",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2012",
+        "base_path": "/government/statistics/public-spending-statistics-release-july-2012",
+        "content_id": "5e38d0cc-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-07-08T11:56:26Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: July 2012",
+        "web_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2012",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-april-2012",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-april-2012",
+        "base_path": "/government/statistics/national-statistics-release-april-2012",
+        "content_id": "5dffddd3-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2012-04-19T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: April 2012",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-april-2012",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-february-2012",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-february-2012",
+        "base_path": "/government/statistics/national-statistics-release-february-2012",
+        "content_id": "5dffde7e-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2012-02-19T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2012",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-february-2012",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-october-2011",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-october-2011",
+        "base_path": "/government/statistics/national-statistics-release-october-2011",
+        "content_id": "5dffdd7b-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2011-10-28T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: October 2011",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-october-2011",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/national-statistics-release-february-2011",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/national-statistics-release-february-2011",
+        "base_path": "/government/statistics/national-statistics-release-february-2011",
+        "content_id": "5dffde2c-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2011-02-18T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Spending Statistics release: February 2011",
+        "web_url": "https://www.gov.uk/government/statistics/national-statistics-release-february-2011",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+        "api_url": "https://www.gov.uk/api/content/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+        "base_path": "/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+        "content_id": "591c83aa-3b74-437d-a342-612bddd97572",
+        "details": {
+          "current": false,
+          "ended_on": "2015-05-08T00:00:00+00:00",
+          "started_on": "2010-05-12T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
+        "web_url": "https://www.gov.uk/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "D15",
+        "api_path": "/api/content/government/organisations/hm-treasury",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
+        "base_path": "/government/organisations/hm-treasury",
+        "content_id": "1994e0e4-bd19-4966-bbd7-f293d6e90a6b",
+        "details": {
+          "acronym": "HMT",
+          "brand": "hm-treasury",
+          "default_news_image": {
+            "high_resolution_url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a7908e352b4/s960_HMT_buiding_plaque.jpg",
+            "url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a79051c9235/s300_HMT_buiding_plaque.jpg"
+          },
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "HM Treasury",
+        "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
+        "withdrawn": false
+      }
+    ],
+    "original_primary_publishing_organisation": [
+      {
+        "analytics_identifier": "D15",
+        "api_path": "/api/content/government/organisations/hm-treasury",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
+        "base_path": "/government/organisations/hm-treasury",
+        "content_id": "1994e0e4-bd19-4966-bbd7-f293d6e90a6b",
+        "details": {
+          "acronym": "HMT",
+          "brand": "hm-treasury",
+          "default_news_image": {
+            "high_resolution_url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a7908e352b4/s960_HMT_buiding_plaque.jpg",
+            "url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a79051c9235/s300_HMT_buiding_plaque.jpg"
+          },
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "HM Treasury",
+        "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "D15",
+        "api_path": "/api/content/government/organisations/hm-treasury",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
+        "base_path": "/government/organisations/hm-treasury",
+        "content_id": "1994e0e4-bd19-4966-bbd7-f293d6e90a6b",
+        "details": {
+          "acronym": "HMT",
+          "brand": "hm-treasury",
+          "default_news_image": {
+            "high_resolution_url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a7908e352b4/s960_HMT_buiding_plaque.jpg",
+            "url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a79051c9235/s300_HMT_buiding_plaque.jpg"
+          },
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "HM Treasury",
+        "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
+        "withdrawn": false
+      }
+    ],
+    "taxons": [
+      {
+        "api_path": "/api/content/government/government-spending",
+        "api_url": "https://www.gov.uk/api/content/government/government-spending",
+        "base_path": "/government/government-spending",
+        "content_id": "f3caf326-fe33-410f-b7f4-553f4011c81e",
+        "details": {
+          "internal_name": "Government spending (level 2)",
+          "notes_for_editors": "",
+          "visible_to_departmental_editors": false
+        },
+        "document_type": "taxon",
+        "links": {
+          "parent_taxons": [
+            {
+              "api_path": "/api/content/government/government-efficiency-transparency-and-accountability",
+              "api_url": "https://www.gov.uk/api/content/government/government-efficiency-transparency-and-accountability",
+              "base_path": "/government/government-efficiency-transparency-and-accountability",
+              "content_id": "f3f4b5d3-49c4-487b-bd5b-be75f11ec8c5",
+              "details": {
+                "internal_name": "Government efficiency, transparency and accountability [PA] (level 2)",
+                "notes_for_editors": "",
+                "visible_to_departmental_editors": false
+              },
+              "document_type": "taxon",
+              "links": {
+                "parent_taxons": [
+                  {
+                    "api_path": "/api/content/government/all",
+                    "api_url": "https://www.gov.uk/api/content/government/all",
+                    "base_path": "/government/all",
+                    "content_id": "e48ab80a-de80-4e83-bf59-26316856a5f9",
+                    "description": "",
+                    "details": {
+                      "internal_name": "Government",
+                      "notes_for_editors": "",
+                      "visible_to_departmental_editors": true
+                    },
+                    "document_type": "taxon",
+                    "links": {
+                      "root_taxon": [
+                        {
+                          "api_path": "/api/content/",
+                          "api_url": "https://www.gov.uk/api/content/",
+                          "base_path": "/",
+                          "content_id": "f3bbdec2-0e62-4520-a7fd-6ffd5d36e03a",
+                          "document_type": "homepage",
+                          "links": {},
+                          "locale": "en",
+                          "public_updated_at": "2026-02-18T13:00:23Z",
+                          "schema_name": "homepage",
+                          "title": "GOV.UK homepage",
+                          "web_url": "https://www.gov.uk/",
+                          "withdrawn": false
+                        }
+                      ]
+                    },
+                    "locale": "en",
+                    "phase": "live",
+                    "public_updated_at": "2018-09-16T20:29:39Z",
+                    "schema_name": "taxon",
+                    "title": "Government",
+                    "web_url": "https://www.gov.uk/government/all",
+                    "withdrawn": false
+                  }
+                ]
+              },
+              "locale": "en",
+              "phase": "live",
+              "public_updated_at": "2018-08-17T15:32:41Z",
+              "schema_name": "taxon",
+              "title": "Government efficiency, transparency and accountability",
+              "web_url": "https://www.gov.uk/government/government-efficiency-transparency-and-accountability",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "phase": "live",
+        "public_updated_at": "2018-08-17T15:32:41Z",
+        "schema_name": "taxon",
+        "title": "Government spending",
+        "web_url": "https://www.gov.uk/government/government-spending",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-07-16T09:30:06+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1784114204.175-10.13.21.168-2779",
+  "publishing_scheduled_at": "2026-07-16T09:30:00+01:00",
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": 7,
+  "schema_name": "document_collection",
+  "title": "HMT Public Spending Statistics",
+  "updated_at": "2026-09-02T16:51:11+01:00",
+  "withdrawn_notice": {}
+}

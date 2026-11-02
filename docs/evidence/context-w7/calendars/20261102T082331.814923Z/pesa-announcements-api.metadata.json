@@ -1,0 +1,101 @@
+{
+  "id": "pesa-announcements-api",
+  "requested_url": "https://www.gov.uk/api/search.json?filter_format=statistics_announcement&q=public%20expenditure%20statistical%20analyses&count=100",
+  "started_at": "2026-11-02T08:23:31.820336+00:00",
+  "method": "GET",
+  "redirects": [],
+  "status": 200,
+  "body_file": "pesa-announcements-api.body",
+  "sha256": "4e8ebd4784305139f23bf61b4fabf06fd8be8a6771dc8d413f0a8f62ee5b8003",
+  "error": null,
+  "request_headers": {
+    "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+    "Accept-encoding": "identity"
+  },
+  "final_url": "https://www.gov.uk/api/search.json?filter_format=statistics_announcement&q=public%20expenditure%20statistical%20analyses&count=100",
+  "response_headers": [
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "Content-Length",
+      "335227"
+    ],
+    [
+      "Content-Type",
+      "application/json"
+    ],
+    [
+      "Server",
+      "nginx"
+    ],
+    [
+      "Access-Control-Allow-Origin",
+      "*"
+    ],
+    [
+      "Permissions-Policy",
+      "interest-cohort=()"
+    ],
+    [
+      "Via",
+      "1.1 router, 1.1 varnish"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "Fastly-Backend-Name",
+      "origin"
+    ],
+    [
+      "Accept-Ranges",
+      "bytes"
+    ],
+    [
+      "Age",
+      "0"
+    ],
+    [
+      "Date",
+      "Mon, 02 Nov 2026 08:23:32 GMT"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000; preload"
+    ],
+    [
+      "Server-Timing",
+      "cacheMiss"
+    ],
+    [
+      "X-Served-By",
+      "cache-bma-essb1270054-BMA"
+    ],
+    [
+      "X-Cache",
+      "MISS"
+    ],
+    [
+      "X-Cache-Hits",
+      "0"
+    ],
+    [
+      "X-Timer",
+      "S1793607812.892818,VS0,VE369"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding"
+    ],
+    [
+      "alt-svc",
+      "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+    ]
+  ],
+  "truncated": false,
+  "bytes": 335227,
+  "finished_at": "2026-11-02T08:23:32.302864+00:00"
+}
