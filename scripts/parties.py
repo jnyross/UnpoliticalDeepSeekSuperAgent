@@ -207,4 +207,7 @@ def render(d):
 
 def outputs(root):
     d = validate(root)
-    return {'parties.html':render(d).encode(), 'data/party-offers.json':(json.dumps(d,indent=2,ensure_ascii=False)+'\n').encode()}
+    import party_audit
+    return {'parties.html':render(d).encode(),
+            'data/party-offers.json':(json.dumps(d,indent=2,ensure_ascii=False)+'\n').encode(),
+            'data/party-figure-audit.json': party_audit.output(root, d)}
