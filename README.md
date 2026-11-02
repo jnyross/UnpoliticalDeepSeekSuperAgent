@@ -37,7 +37,16 @@ are checked against the raw PDF, not treated as replacements for the quotes. The
 [source research](docs/accuracy-source-research.md) distinguish genuine table rows
 from prose-only evidence. This trace does **not** claim Accuracy L2: several sources
 lack a verified matching table/row, and annual claims do not establish a fiscal year.
-No displayed claims or party-page layout were changed to evade those gaps.
+[Wave-seven archive research](docs/research/accuracy-w7/conservative/README.md)
+now supplies the native Conservative welfare row: £12,000m in 2029-30, exactly £12bn.
+The original prose year qualification and independent assessment stay unchanged.
+[Other alternatives](docs/research/accuracy-w7/alternatives/README.md) include the
+retained Lib Dem £1,420m 2028-29 row: it remains an explicitly **unmatched** related
+supplement to the £1.4bn release, never rounded into an exact match. The trace now
+has 22 financial occurrences, 15 still without matching table evidence. Cross-source
+supplements name the actual retained evidence source; currency conversions use exact
+decimal equality and fiscal columns are checked in order. No displayed claims or
+party-page layout were changed to evade those gaps.
 
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).

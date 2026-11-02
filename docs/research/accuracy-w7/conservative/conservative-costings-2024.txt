@@ -1,0 +1,237 @@
+ Costings
+Document
+                                                Costings Document
+
+
+
+
+INTRODUCTION
+The fiscal implications of the new policy commitments in
+our manifesto are shown in the tables below. They cover
+the five-year forecast period commencing in the fiscal year
+beginning next April, which is the period that will be used in
+the first fiscal event of the new Parliament.
+Across the forecast period, the measures in the manifesto
+are fully funded. In 2029-30, which will be the target year for
+the fiscal mandate and the supplementary target (commonly
+referred to as the “fiscal rules”) in the first fiscal event of the
+new parliament, the manifesto reduces borrowing.
+These tables do not include the positive indirect effects
+which are likely to accrue from the measures in the
+manifesto, for example the cuts to National Insurance which
+the OBR have previously scored as having a positive impact
+on growth.
+Costings Document
+
+
+
+
+Table 1: Tax Cuts
+The table below sets out the tax cuts that our manifesto offers for working people, including
+working parents and the self-employed, and pensioners.
+
+£ million                 Footnotes           2025-26         2026-27           2027-28        2028-29    2029-30
+
+Tax measures
+Employee NICs:
+halve                          1, 2              4,650             4,750              9,700     10,000     10,300
+
+Self-employed
+NICs: abolish                   1, 3                417              883               1,250     1,667      2,600
+
+Triple Lock Plus                1, 4               800             1,400              2,000      2,200      2,400
+
+HICBC: end the
+single-earner penalty 1, 5                             0             954               1,063      1,179      1,316
+
+Stamp duty for
+first-time buyers:
+abolish                        1, 6                320               400                475        555        590
+
+CGT on sales to
+tenants: suspend 1, 7                              20               20                    0         0          0
+		                                              _____            _____                _____     _____      _____
+		                                               6,207            8,407               14,488     15,601     17,206
+
+
+
+
+1   Conservative Party estimates          4   Introduce a new age-related
+    based on Treasury costings.               allowance for those at or above
+                                              state pension age and increase it
+2 Reduce from 8% to 7% effective              in line with the higher of inflation,
+  April 2025, and to 6% effective             earnings or 2.5%.
+  April 2027. See also HMRC, Direct
+  Effects of Illustrative Tax Changes,    5 Move to a combined household
+  January 2024. This compares with          income threshold of £120,000
+  12% at the start of the year.             from April 2026.
+3   Reduce from 6% to 5% in April         6 Permanently abolish SDLT for first
+    2025; to 4% in April 2026; to 3%        time buyers up to £425,000.
+    in April 2027; and to 2% in April
+    2028. Full abolition in April 2029.   7   Two-year exemption for capital
+    See also HMRC, Direct Effects of          gains on sales of residential
+    Illustrative Tax Changes, January         property to tenants.
+    2024.
+                                                                                                 Costings Document
+
+
+
+
+Table 2: Welfare Reform and Tackling the Tax Gap
+The table below sets out the taxpayer money that we would save by reforming the welfare
+system and cracking down on tax avoidance and evasion.
+
+
+£ million                  Footnotes     2025-26        2026-27           2027-28        2028-29        2029-30
+
+Welfare reform                   1           4,000           8,000           10,000         11,000         12,000
+
+Tackling tax gap 2                           2,000          3,000              4,000        5,000          6,000
+		                                           _____          _____              _____        _____          _____
+		                                           6,000          11,000           14,000         16,000         18,000
+
+
+
+
+1   On 8 June 2024, the Conservative     •   Continuing to clamp down             2 On 25 May 2024, the
+    Party set out its plans to deliver       on fraud, building on the              Conservative Party set out its
+    £12 billion a year of welfare            cumulative scored savings of           plans to raise £6 billion a year
+    savings by the end of the                £7.7 billion since 2019 through        by the end of the Parliament
+    Parliament. Key measures include:        measures we have taken to              by tackling tax avoidance and
+                                             tackle fraud in the welfare            evasion. Key measures include
+    •   Reforming the disability             system.                                hiring additional HMRC staff,
+        benefits system to halt the                                                 investing in labour-saving
+        unsustainable rise in claims     £12 billion is a reasonable                technology such as AI, and
+                                         estimate. If we brought the                focusing particularly on problem
+    •   Tightening up how the benefits   number of working age people
+        system assesses capability for                                              issues like umbrella companies
+                                         claiming benefits for a health             and regulation of the tax advice
+        work                             condition or disability back to the        market.
+    •   Overhauling the fit note         level it was before the pandemic,
+        process so that people are       by the end of the decade we                 This number is consistent with the
+        not being signed off sick as a   would spend £34.6 billion less              Conservative government’s record
+        default                          than currently forecast. Even if            on tackling tax avoidance and
+                                         we simply maintained the overall            evasion. Since 2010, the OBR has
+    •   Introducing tougher sanctions    number of working age people                scored £94.8 billion of revenue
+        so people who refuse to          claiming benefits for a health              raisers through Tackling the Tax
+        take up suitable jobs after 12   condition or disability at its current      Gap measures at fiscal events,
+        months on benefits can have      level, spending would be more               averaging £6.7 billion for each of
+        their cases closed and their     than £14 billion lower by the end of        the 14 years.
+        benefits removed entirely        the decade than currently forecast.
+    •   Accelerating the rollout of
+        Universal Credit
+Costings Document
+
+
+
+
+Table 3: Spending Measures
+The table below sets out the cost of our manifesto spending measures, together with some
+offsetting cost savings. The net increase in spending across the period is approximately £1
+billion.
+
+£ million             Footnotes   2025-26     2026-27     2027-28     2028-29     2029-30
+Defence to 2.5%
+GDP by 2030              1, 2        1,400      2,300       3,400       4,500       5,700
+Of which: R&D            1, 2       (1,000)     (1,200)     (1,400)    (1,600)     (1,800)
+Less: Civil Service
+headcount                1, 2        (400)      (1,100)    (2,000)     (2,900)     (3,900)
+Help to Buy               1           665         940            0           0           0
+250 new/modernised
+GP surgeries              1            118         123         153        183          180
+50 new CDCs               1             28          76         144        372         580
+Pharmacy First            1             20          49        250         250         250
+Mental health             1           246         329         462         595         729
+Less: savings 							
+on consultancy spend 1 (598) (607) (618) (630) (640)
+Less: 5,500 fewer
+NHS managers              1           (110)      (220)       (330)       (440)       (550)
+100k young
+apprenticeships           1           232         396         560         722         886
+Less: savings on
+low value degrees         1          (204)       (504)       (806)       (903)       (910)
+8,000 additional
+police officers          1, 3         435          561        764         779          818
+Less: visa charges       1, 4        (600)       (500)       (400)       (380)       (360)
+National Service         1, 5         300         300         300         500       1,000
+Farming budget:
+indexation               1, 6          120         185         251        330          411
+Less: quango
+efficiencies             1, 7         (172)       (491)       (810)     (1,129)     (1,274)
+Other measures           1, 8         349           (1)      (435)       (635)       (615)
+		                                 _____       _____       _____       _____       _____
+		                                    827         635         (517)      (385)        505
+                                                                                              Costings Document
+
+
+
+
+Table 3: Spending Measures             4 Approximately £200 million of           criminal law pupillages and
+Additional Notes                         the gain is accounted for by the        licensing police officers for
+                                         additional student Immigration          specialist roles; extending the
+1 Conservative Party estimates           Health Surcharge in each year.          Plan for Towns to 30 more towns
+  based on Treasury costings and         Other gains assumed to diminish         at an annual cost of £60 million;
+  publicly-available information.        over time as immigration levels         creation of 15 new special free
+2 See also Cabinet Office Policy         fall.                                   schools (approximately £250
+  Paper, Defending Britain, 23 April   5 Net of funding from the UK Shared       million within the forecast period);
+  2024 and Statement to House            Prosperity Fund.                        and extending the PE and Sport
+  of Commons by the Secretary of                                                 Premium to secondary schools
+                                       6 UK-wide.                                and funding School Games
+  State for Defence, Hansard 24
+  April 2024, vol 748 col 939.         7 Targeted savings quantum                Organisers at a combined annual
+                                         proportionate to ambitions already      cost of approximately £125 million;
+3 Assuming recruitment of 2,000
+                                         set in relation to the Civil Service.   and extending Family Hubs to all
+  officers in Year 1 and each of the
+  three subsequent years. Takes        8 Includes continuation of the £2         local authorities (approximately
+  into account non-salary costs          bus fare cap (over £300 million         £120 million per annum). These
+  including recruitment costs.           per annum); a £100 million law          costs are offset by delivery of the
+                                         & order package including               savings identified in the Shapps-
+                                         expanding offender electronic           Williams rail reform plan.
+                                         monitoring, match funding for
+Costings Document
+
+
+
+
+Table 4: Overall Summary
+The table below draws together the conclusions of the tables above and illustrates the net
+Exchequer impact. There is a cost in the first year but subsequent years are all positive.
+Over the period, the cumulative reduction in borrowing is slightly in excess of £2 billion,
+demonstrating that this is a prudent and fully costed programme.
+
+
+£ million		                                   2025-26         2026-27             2027-28    2028-29          2029-30
+
+Exchequer gains / (costs)
+Tax reductions		                                 (6,207)         (8,407)          (14,488)      (15,601)        (17,206)
+
+Welfare & Tax Gap		                               6,000           11,000           14,000       16,000           18,000
+
+Spending measures, net                             (827)           (635)              517           385            (505)
+		                                               _____            _____            _____         _____           _____
+			                                              (1,034)           1,957               29           785              289
+
+
+
+
+Additional Notes
+The figures set out here are stated         See also House of Commons Library         wholly subject to fiscal circumstances.
+in nominal terms, following standard        Note CBP7386, The Barnett Formula         These are explicitly described and
+practice in Treasury fiscal publications.   and Fiscal Devolution, 29 May 2024.       set out in the manifesto as long-term
+References to “Treasury costings”           The result is Barnett consequentials      ambitions. They do not represent
+denote official costings received by        worth £2.4 billion across the forecast    spending commitments and so
+ministers in the course of normal           period, divided between the devolved      are not included in these costings.
+government business prior to                governments as follows:                   Where commitments relate to
+the dissolution of parliament and           • £1.2 billion for Scotland;              existing government programmes,
+commencement of the pre-election                                                      it is assumed that these are funded
+period on 30 May.                           • £0.7 billion for Wales; and             from within existing departmental
+                                            • £0.4 billion for Northern Ireland.      baselines.
+The Barnett formula has been
+applied where relevant, using the           The manifesto contains some
+population percentages employed in          ambitions, such as the abolition of
+the Treasury’s Statement of Funding         National Insurance Contributions,
+Policy, Tenth Edition, November 2023.       which are long-term in nature and
+Promoted by Alan Mabbutt on behalf of the Conservative and Unionist Party, both at 4 Matthew Parker Street, London, SW1H 9HQ.
+               Printed by Paragon, Park House, Lower Ground Floor, 16-18 Finsbury Circus, London, EC2M 7EB.
+

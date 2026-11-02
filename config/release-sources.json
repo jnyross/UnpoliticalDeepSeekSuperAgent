@@ -214,5 +214,25 @@
     "allowed_hosts": [
       "ifs.org.uk"
     ]
+  },
+  {
+    "id": "party-evidence-conservative-costings-2024",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "conservative-costings-2024",
+    "allowed_hosts": [
+      "web.archive.org"
+    ]
+  },
+  {
+    "id": "party-evidence-libdem-costings-2024",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "libdem-costings-2024",
+    "allowed_hosts": [
+      "www.libdems.org.uk"
+    ]
   }
 ]

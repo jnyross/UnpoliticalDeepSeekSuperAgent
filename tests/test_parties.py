@@ -140,7 +140,7 @@ class PartyOffersTests(unittest.TestCase):
 
     def test_independent_sources_have_separate_register(self):
         self.assertEqual(len(self.original['sources']), 13)
-        self.assertEqual(len(self.original['evidence_sources']), 5)
+        self.assertEqual(len(self.original['evidence_sources']), 7)
         self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 9)
         self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 2)
 

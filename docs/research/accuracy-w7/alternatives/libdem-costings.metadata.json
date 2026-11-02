@@ -1,0 +1,19 @@
+{
+  "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/Funding_a_Fair_Deal_-_Liberal_Democrat_Manifesto_Costings_2024.pdf",
+  "final_url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/Funding_a_Fair_Deal_-_Liberal_Democrat_Manifesto_Costings_2024.pdf",
+  "retrieved_at": "2026-11-02T08:23:44.801713+00:00",
+  "sha256": "378f7ccaafcd18eea51a86b422db98462602f22fabd1418d48180a46a5f68ff3",
+  "bytes": 3303719,
+  "content_type": "application/pdf",
+  "http_status": 200,
+  "publication": "Funding a Fair Deal: Liberal Democrat Manifesto Costings 2024",
+  "publisher": "Liberal Democrats",
+  "publication_year": "2024",
+  "publication_date_precision": "year",
+  "publication_date_note": "Exact publication day not established from this PDF; embedded PDF creation date 2024-06-09 is not asserted as publication date.",
+  "pdf_creation_date": "2024-06-09T13:14:21Z",
+  "text_file": "libdem-costings.txt",
+  "extraction": "pdftotext -layout",
+  "locator": {"physical_page": 6, "printed_page": "5", "table": "REVENUE", "column": "£m 2028-29", "row": "18 Introduce a 4% tax on share buybacks", "value": "1,420", "units": "£m", "year": "2028-29"},
+  "scope_note": "Physical page 7 / printed 6 note 18 confirms FTSE-100 listed companies. Exact 4% policy-rate match; £1420m in 2028-29 is supplemental only, not exact match to release £1.4bn annually with no named fiscal year."
+}

@@ -4,6 +4,7 @@ Native prose locators remain valid evidence but do not pass the table/row rubric
 The audit includes repeated occurrences so a changed displayed claim cannot hide.
 """
 import json
+from decimal import Decimal
 from pathlib import Path
 import re
 import subprocess
@@ -38,15 +39,18 @@ def audit(root, data):
     # A table citation is additional evidence, not a replacement quote. Check its
     # headings, row, column and amount on the actual retained PDF, independently.
     for source_id, tables in native.items():
-        source = sources[source_id]
         for table in tables:
-            assert set(table) == {'pdf_page', 'table', 'row_label', 'column', 'value', 'year', 'period', 'unit', 'unit_locator', 'row_value_text'}
+            assert set(table) - {'evidence_source_id', 'column_value_series'} == {'pdf_page', 'table', 'row_label', 'column', 'value', 'year', 'period', 'unit', 'unit_locator', 'row_value_text'}
+            evidence_source_id = table.get('evidence_source_id', source_id)
+            assert evidence_source_id in sources, 'Unknown supplemental evidence source'
+            source = sources[evidence_source_id]
             assert type(table['pdf_page']) is int and table['pdf_page'] > 0
             assert table['year'] is None or re.fullmatch(r'\d{4}-\d{2}', table['year'])
             with tempfile.TemporaryDirectory() as tmp:
                 out = Path(tmp) / 'table.txt'
                 subprocess.run(['pdftotext', '-layout', '-f', str(table['pdf_page']), '-l', str(table['pdf_page']), str(root / 'sources' / source['file']), str(out)], check=True, capture_output=True)
-                text = parties.normal(out.read_text())
+                layout = out.read_text()
+                text = parties.normal(layout)
             assert table['unit'] in ('GBP million', 'GBP billion', 'percent')
             for key in ('table', 'row_label', 'column', 'value', 'period', 'unit_locator'):
                 assert table[key] and parties.normal(table[key]) in text, f'Table {key} not on PDF page: {source_id}'
@@ -56,6 +60,16 @@ def audit(root, data):
             assert span in text, 'Native row/value span not on PDF page'
             assert parties.normal(table['row_label']) in span, 'Row label not in native span'
             assert parties.normal(table['value']) in span, 'Amount not in native row span'
+            if 'column_value_series' in table:
+                series = table['column_value_series']
+                assert series and list(series) == sorted(series), 'Unordered fiscal columns'
+                headers = [re.findall(r'\b\d{4}-\d{2}\b', line) for line in layout.splitlines() if table['column'] in line]
+                assert list(series) in headers, 'Complete fiscal column sequence not on PDF page'
+                rows = [line for line in layout.splitlines() if parties.normal(table['row_label']) in parties.normal(line)]
+                amounts = [re.findall(r'\b\d{1,3}(?:,\d{3})+\b', line) for line in rows]
+                assert list(series.values()) in amounts, 'Complete amount sequence not in native row'
+                assert table['year'] == table['column'], 'Supplement year differs from fiscal column'
+                assert series[table['column']] == table['value'], 'Amount belongs to another fiscal column'
             if table['year']:
                 assert table['year'] in text, 'Table year not on PDF page'
     figures = []
@@ -83,8 +97,10 @@ def audit(root, data):
                 def same_value(table):
                     # Currency scale is stated in the native column/period. Do not
                     # attach a cash-total row to a rate or a different amount.
-                    digits = lambda value: re.sub(r'[^0-9.]', '', value)
-                    return digits(amount) == digits(table['value']) and unit == table['unit']
+                    scales = {'GBP': 1, 'GBP million': 10**6, 'GBP billion': 10**9, 'GBP trillion': 10**12, 'percent': 1}
+                    number = lambda value: Decimal(re.sub(r'[^0-9.]', '', value))
+                    return ((unit == 'percent') == (table['unit'] == 'percent') and
+                            number(amount) * scales[unit] == number(table['value']) * scales[table['unit']])
                 tables = [table for table in native.get(source_id, []) if same_value(table)]
                 figures.append({'party_id': party['id'], 'party': party['name'], 'field': field, 'unit': unit,
                                 'figure': match.group().strip(), 'quote_offset': match.start(),
@@ -92,6 +108,7 @@ def audit(root, data):
                                 'native_locator': locator, 'period_and_year': party['year'],
                                 'scope': party['scope'], 'baseline': party['baseline'], 'status': party['status'],
                                 'supplemental_source_tables': tables,
+                                'unmatched_supplemental_source_tables': [table for table in native.get(source_id, []) if not same_value(table)],
                                 'table_row_available': bool(tables),
                                 'limitation': None if tables else 'The cited native evidence is prose, not a publisher table/row. No matching table is verified here.'})
     return {'schema_version': 1, 'scope': 'Displayed financial amounts and tax rates in the historical party template; repeated quotes are separate occurrences. Not an audit of all site figures.',

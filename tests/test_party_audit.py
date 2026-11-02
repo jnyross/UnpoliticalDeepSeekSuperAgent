@@ -90,7 +90,7 @@ class PartyAuditTests(unittest.TestCase):
         self.assertEqual([m.group() for m in party_audit.financial_matches(text, 'reform')],
                          ['£35m', '£2 trillion', '20 per cent', '4%'])
         self.assertEqual(self.report['occurrences'], 22)
-        self.assertEqual(self.report['occurrences_without_source_table'], 17)
+        self.assertEqual(self.report['occurrences_without_source_table'], 15)
 
     def test_wrong_scale_is_not_matched_to_supplement(self):
         data = copy.deepcopy(self.data)
@@ -109,6 +109,48 @@ class PartyAuditTests(unittest.TestCase):
             native['labour'][0]['value'] = '4,835'
             path.write_text(json.dumps(native))
             with self.assertRaisesRegex(AssertionError, 'Amount not in native row span'):
+                party_audit.audit(root, self.data)
+
+    def test_conservative_archive_matches_exact_billions_without_rewriting_year(self):
+        figures = [f for f in self.report['figures'] if f['source_id'] == 'conservative']
+        self.assertEqual(len(figures), 2)
+        for f in figures:
+            self.assertEqual(f['figure'], '£12 billion')
+            table = f['supplemental_source_tables'][0]
+            self.assertEqual(table['evidence_source_id'], 'conservative-costings-2024')
+            self.assertEqual((table['value'], table['unit'], table['year']), ('12,000', 'GBP million', '2029-30'))
+            self.assertIn('no fiscal year', f['period_and_year'])
+
+    def test_libdem_1420_is_not_rounded_into_1400(self):
+        f = next(f for f in self.report['figures'] if f['source_id'] == 'libdem-buyback-2024')
+        self.assertFalse(f['table_row_available'])
+        self.assertEqual(f['supplemental_source_tables'], [])
+        self.assertEqual(f['unmatched_supplemental_source_tables'][0]['value'], '1,420')
+
+    def test_wrong_supplement_source_or_fiscal_column_fails(self):
+        for mutate, message in [(lambda t: t.update(evidence_source_id='invented'), 'Unknown supplemental'),
+                                 (lambda t: t.update(value='11,000'), 'another fiscal column')]:
+            with self.subTest(message=message), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                shutil.copytree(ROOT / 'sources', root / 'sources')
+                path = root / 'sources/party-figure-locators.json'
+                native = json.loads(path.read_text())
+                mutate(native['conservative'][0])
+                path.write_text(json.dumps(native))
+                with self.assertRaisesRegex(AssertionError, message):
+                    party_audit.audit(root, self.data)
+
+    def test_shifted_partial_fiscal_series_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            shutil.copytree(ROOT / 'sources', root / 'sources')
+            path = root / 'sources/party-figure-locators.json'
+            native = json.loads(path.read_text())
+            native['conservative'][0].update(
+                column_value_series={'2025-26': '8,000', '2026-27': '10,000', '2027-28': '11,000', '2028-29': '12,000'},
+                column='2028-29', year='2028-29', period='2028-29')
+            path.write_text(json.dumps(native))
+            with self.assertRaisesRegex(AssertionError, 'Complete fiscal column sequence'):
                 party_audit.audit(root, self.data)
 
     def test_invalid_download_date_fails(self):
