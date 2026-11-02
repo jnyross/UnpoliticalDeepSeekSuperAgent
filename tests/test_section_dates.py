@@ -35,8 +35,8 @@ class SectionDatesTests(unittest.TestCase):
         import re
         pages = self.render()
         for name, page in pages.items():
-            if name == 'corrections.html':
-                # Ledger policy is not a fiscal data release: do not invent a vintage.
+            # Project disclosures and ledger policy have no fiscal data vintage.
+            if name in ('about.html', 'corrections.html'):
                 self.assertNotIn('class="section-dates"', page)
                 continue
             headers = re.findall(r'<(?:section|article)\b[^>]*>\s*<h2\b[^>]*>.*?</h2>', page, re.S)

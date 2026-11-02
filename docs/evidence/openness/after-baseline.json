@@ -1,0 +1,30 @@
+{
+  "capturedAt": "2026-11-02T02:11:52.970Z",
+  "baselineSha": null,
+  "baseRevision": "4be67dabe81701f602104b7133b2ad08ba5c7ba0",
+  "htmlSha256": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
+  "source": "working-tree site/index.html",
+  "javaScriptEnabled": false,
+  "browserVersion": "141.0.7390.37",
+  "scenario": "Footer scrolled into view; exact viewport screenshot, not full-page",
+  "screenshots": [
+    {
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "screenshot": "docs/evidence/openness/after-mobile.png",
+      "footerText": "Corrections and report an error\n\nAbout this project and methods · Report an error on GitHub (sign-in needed to submit)\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "docs/evidence/openness/after-desktop.png",
+      "footerText": "Corrections and report an error\n\nAbout this project and methods · Report an error on GitHub (sign-in needed to submit)\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+    }
+  ]
+}

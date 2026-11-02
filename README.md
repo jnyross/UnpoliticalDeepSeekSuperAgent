@@ -303,6 +303,18 @@ with local output before no-JavaScript, mobile and axe checks:
 LIVE_URL=https://unpoliticaldeepseeksuperagent.vercel.app EVIDENCE_DIR=/tmp/live-evidence npm run test:browser
 ```
 
+## Project disclosures and error reports
+
+Every generated page links to [About this project](site/about.html) and the public
+[GitHub error-report form](https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new).
+A GitHub sign-in is required to submit; reports can be read without an account.
+Do not include private information. The disclosure page distinguishes verified repository
+ownership and automated maintenance from the still unconfirmed site operator/legal
+publisher and funding statement. It does not claim Openness L3.
+The generator reuses the site's existing styles and adds static footer links to every
+HTML output; CI checks those links, the login notice, local destinations and mutations
+that remove them, as well as the normal reading-grade and browser checks.
+
 ## Data and methods
 
 - Chapter 4 Tables 4.3 and 4.4 supply the latest year and exactly ten years earlier.

@@ -33,6 +33,8 @@ class ChartTests(unittest.TestCase):
         from section_dates import annotate
         annotate(outputs, ROOT, json.loads((ROOT/'site/data/spending.json').read_text()),
                  json.loads((ROOT/'site/data/comparisons.json').read_text()))
+        from disclosures import add_project_links
+        add_project_links(outputs)
         for view, (field, title, unit) in VIEWS.items():
             # Global footer navigation is added after the chart renderer/annotations.
             page = outputs[f'history-{view}.html'].decode().replace(
