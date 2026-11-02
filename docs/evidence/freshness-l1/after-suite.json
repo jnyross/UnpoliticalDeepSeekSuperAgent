@@ -1,0 +1,56 @@
+{
+  "startedAt": "2026-11-02T04:45:37.616Z",
+  "target": "local-generated-output",
+  "timeoutMs": 300000,
+  "discoveredPages": [
+    "about.html",
+    "corrections.html",
+    "history-cash.html",
+    "history-gdp.html",
+    "history-real.html",
+    "history.html",
+    "income.html",
+    "index.html",
+    "parties.html"
+  ],
+  "selectedPages": [
+    "corrections.html"
+  ],
+  "completed": true,
+  "passed": true,
+  "expected": [
+    {
+      "page": "corrections.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "corrections.html",
+      "viewport": "desktop"
+    }
+  ],
+  "results": [
+    {
+      "page": "corrections.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T04:45:37.619Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T04:45:41.282Z",
+      "evidence": "corrections.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "corrections.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T04:45:41.287Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T04:45:44.995Z",
+      "evidence": "corrections.html/desktop/after-browser-report.json"
+    }
+  ],
+  "finishedAt": "2026-11-02T04:45:44.997Z"
+}

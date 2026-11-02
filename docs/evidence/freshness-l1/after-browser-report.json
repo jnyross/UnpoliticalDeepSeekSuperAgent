@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-11-02T04:47:41.695Z",
+  "revision": "a857b80da9f571ed43ca037582720ddfda6b8f1e",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T04:47:41.696Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "corrections.html",
+      "bytes": 4852,
+      "sha256": "f6c418da2f3c66ae9ed67d6fbb8f36b186199ef03437b412dafe958480d29396",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:37007/corrections.html",
+          "screenshot": "after-corrections-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:37007/corrections.html",
+          "screenshot": "after-corrections-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T04:47:43.809Z",
+  "passed": true
+}
