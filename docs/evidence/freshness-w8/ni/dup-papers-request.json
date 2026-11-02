@@ -1,0 +1,17 @@
+{
+  "url": "https://mydup.com/policies/policy-consultations",
+  "allowed_hosts": [
+    "mydup.com"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:36.536744+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "success",
+  "bytes": 85152,
+  "finished_utc": "2026-11-02T10:22:37.159458+00:00",
+  "retained_response_form": "exact selected HTML fragment, not full response",
+  "response_file_not_retained": "dup-papers.html",
+  "response_sha256": "b072990a6b6a7d864930307f53d4d7889ca5ce86847d095532eed6372f0a92f5",
+  "retained_file": "dup-papers-fragment.html",
+  "retained_sha256": "65d208607fe362418170bb2b595b8b1a5dcf3c79838603053d507dda5894604e"
+}

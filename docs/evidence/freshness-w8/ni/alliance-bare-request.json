@@ -1,0 +1,13 @@
+{
+  "url": "https://allianceparty.org/manifestos",
+  "allowed_hosts": [
+    "allianceparty.org"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:36.540467+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "error",
+  "error_type": "URLError",
+  "error": "<urlopen error [Errno -5] No address associated with hostname>",
+  "finished_utc": "2026-11-02T10:22:36.614970+00:00"
+}

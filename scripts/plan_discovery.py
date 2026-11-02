@@ -1,4 +1,4 @@
-"""Review-only discovery of links in a precisely bounded official policy listing.
+"""Review-only discovery of links in a precisely bounded official publication listing.
 
 This does not fetch plan content, identify costings, revise a historical manifesto,
 advance a roster, or decide whether a paper belongs in the site's data. The baseline
@@ -23,17 +23,37 @@ def _allowed(url, hosts):
 
 
 def _settings(source):
-    hosts = source['allowed_hosts']
+    hosts = source.get('listing_allowed_hosts', source['allowed_hosts'])
     if (not isinstance(hosts, list) or not hosts or
             any(not isinstance(h, str) or not re.fullmatch(r'[a-z0-9.-]+', h) for h in hosts)):
         raise ValueError('Expected explicit official allowed_hosts')
     if not _allowed(source['listing_url'], hosts):
         raise ValueError('Not an allowed official listing URL')
-    for field in ('section_id', 'section_end_id', 'link_path_pattern'):
-        if not isinstance(source[field], str) or not source[field]:
-            raise ValueError('Missing listing selector: ' + field)
-    if source['section_id'] == source['section_end_id']:
-        raise ValueError('Listing section boundaries must differ')
+    if 'container_tag' in source:
+        if source['container_tag'] not in ('main', 'section', 'div', 'article', 'ul'):
+            raise ValueError('Invalid publication container tag')
+        if not re.fullmatch(r'[a-zA-Z0-9_-]+', source.get('container_class', '')):
+            raise ValueError('Expected explicit publication container class')
+        if 'section_id' in source or 'section_end_id' in source:
+            raise ValueError('Choose one publication boundary strategy')
+    else:
+        for field in ('section_id', 'section_end_id'):
+            if not isinstance(source[field], str) or not source[field]:
+                raise ValueError('Missing listing selector: ' + field)
+        if source['section_id'] == source['section_end_id']:
+            raise ValueError('Listing section boundaries must differ')
+    if 'link_parent_tag' in source:
+        if source['link_parent_tag'] not in ('h2', 'h3', 'h4', 'h5') or not re.fullmatch(
+                r'[a-zA-Z0-9_-]+', source.get('link_parent_class', '')):
+            raise ValueError('Invalid publication title selector')
+    if 'link_title_label' in source and (not isinstance(source['link_title_label'], str)
+                                           or not source['link_title_label'].strip()):
+        raise ValueError('Invalid explicit untitled-link label')
+    if not isinstance(source['link_path_pattern'], str) or not source['link_path_pattern']:
+        raise ValueError('Missing link path pattern')
+    if source.get('listing_scope', 'official-policy-listing-review') not in (
+            'official-policy-listing-review', 'official-publication-listing-review'):
+        raise ValueError('Unknown publication listing scope')
     re.compile(source['link_path_pattern'])
 
 
@@ -42,12 +62,12 @@ def _link(source, href, title):
     parts = urlsplit(url)
     if not re.fullmatch(source['link_path_pattern'], parts.path):
         return None
-    if not _allowed(url, source['allowed_hosts']):
+    if not _allowed(url, source.get('listing_allowed_hosts', source['allowed_hosts'])):
         raise ValueError('Policy link outside allowed official hosts: ' + url)
     # These explicitly path-selected publication links have no query identity.
     # Ignore fragments/tracking queries and whitespace-only presentation changes.
     url = urlunsplit((parts.scheme, parts.netloc, parts.path, '', ''))
-    title = ' '.join(title.split())
+    title = source.get('link_title_label', ' '.join(title.split()))
     if not title:
         raise ValueError('Policy link has no readable title')
     return dict(url=url, title=title)
@@ -63,25 +83,40 @@ class PolicyListing(HTMLParser):
         self.href = None
         self.title = []
         self.ignored = 0
+        self.container_depth = 0
+        self.in_title_region = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         marker = attrs.get('id')
-        if marker == self.source['section_id']:
-            if self.started:
-                raise ValueError('Duplicate policy listing start marker')
-            self.started = True
-        if marker == self.source['section_end_id']:
-            if self.ended or not self.started:
-                raise ValueError('Invalid policy listing end marker')
-            if self.href is not None:
-                raise ValueError('Unclosed policy listing link')
-            self.ended = True
+        if 'container_tag' in self.source:
+            if tag == self.source['container_tag']:
+                selected = self.source['container_class'] in attrs.get('class', '').split()
+                if selected:
+                    if self.started:
+                        raise ValueError('Duplicate publication listing container')
+                    self.started = True
+                    self.container_depth = 1
+                elif self.started and not self.ended:
+                    self.container_depth += 1
+        else:
+            if marker == self.source['section_id']:
+                if self.started:
+                    raise ValueError('Duplicate policy listing start marker')
+                self.started = True
+            if marker == self.source['section_end_id']:
+                if self.ended or not self.started:
+                    raise ValueError('Invalid policy listing end marker')
+                if self.href is not None:
+                    raise ValueError('Unclosed policy listing link')
+                self.ended = True
         if not self.started or self.ended:
             return
         if tag in ('script', 'style'):
             self.ignored += 1
-        if tag == 'a' and not self.ignored:
+        if tag == self.source.get('link_parent_tag'):
+            self.in_title_region = self.source['link_parent_class'] in attrs.get('class', '').split()
+        if tag == 'a' and not self.ignored and (not self.source.get('link_parent_tag') or self.in_title_region):
             if self.href is not None:
                 raise ValueError('Nested policy listing links')
             self.href = attrs.get('href')
@@ -92,6 +127,15 @@ class PolicyListing(HTMLParser):
     def handle_endtag(self, tag):
         if not self.started or self.ended:
             return
+        if tag == self.source.get('container_tag'):
+            self.container_depth -= 1
+            if self.container_depth == 0:
+                if self.href is not None:
+                    raise ValueError('Unclosed publication listing link')
+                self.ended = True
+                return
+        if tag == self.source.get('link_parent_tag'):
+            self.in_title_region = False
         if tag in ('script', 'style'):
             self.ignored = max(0, self.ignored - 1)
         if tag == 'a' and self.href is not None:
@@ -163,7 +207,7 @@ def discover_listing(source, root, get=None):
     if get is None:
         # Import lazily to avoid a circular import with discover's adapter dispatcher.
         import discover
-        raw = discover.fetch(source['listing_url'], hosts=source['allowed_hosts'])
+        raw = discover.fetch(source['listing_url'], hosts=source.get('listing_allowed_hosts', source['allowed_hosts']))
     else:
         raw = get(source['listing_url'])
     current = parse_listing(source, raw)
@@ -177,11 +221,12 @@ def discover_listing(source, root, get=None):
                         attachment_url=link['url'], title=link['title'],
                         listing_url=source['listing_url'], listing_sha256=semantic_sha,
                         sha256=semantic_sha, response_sha256=_digest(raw),
-                        discovery_scope='official-policy-listing-review',
+                        hash_scope='canonical-listing-links-and-labels-not-document-bytes',
+                        discovery_scope=source.get('listing_scope', 'official-policy-listing-review'),
                         change='title-changed' if link['url'] in old_by_url else 'new-link',
                         updated='not supplied by retained URL', review_only=True,
-                        review_note='Listing evidence only; not a revision of a historical manifesto. '
-                                    'Review adoption, publication date, costings and coverage before any data update.',
+                        review_note='Listing evidence only; not a revision of the retained historical source. '
+                                    'Review scope, publication date, content and coverage before any data update.',
                         refresh_command='# Review publication and retain approved evidence; do not auto-refresh historical snapshots')
         identity = dict(source=source['id'], url=link['url'], title=link['title'])
         key = _digest(json.dumps(identity, sort_keys=True).encode())

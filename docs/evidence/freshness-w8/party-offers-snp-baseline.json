@@ -1,0 +1,48 @@
+{
+  "links": [
+    {
+      "title": "South of Scotland",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-24-SNP-SOUTH-of-SCOTLAND-6pp.pdf"
+    },
+    {
+      "title": "Highlands & Islands",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-24c-SNP-HIGHLANDS-and-ISLANDS-8pp-2.pdf"
+    },
+    {
+      "title": "Central Scotland and Lothians West",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-CENTRAL-SCOTLAND-4pp.pdf"
+    },
+    {
+      "title": "Mid Scotland & Fife",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-MID-SCOTLAND-FIFE-6pp.pdf"
+    },
+    {
+      "title": "North East Scotland",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-NORTH-EAST-8pp.pdf"
+    },
+    {
+      "title": "West of Scotland",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27-SNP-WEST-of-SCOTLAND-4pp.pdf"
+    },
+    {
+      "title": "Edinburgh and Lothians East",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27b-SNP-EDINBURGH-4pp.pdf"
+    },
+    {
+      "title": "Glasgow",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-04-27b-SNP-GLASGOW-6pp.pdf"
+    },
+    {
+      "title": "Download the SNP Manifesto here",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/2026-05-0120SNP20The20Scottish20Parliament20Election2020262072pp20COMPLETE20no-crops.pdf"
+    },
+    {
+      "title": "plain text version",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/SNP-2026-Manifesto-Plain-Text.pdf"
+    },
+    {
+      "title": "easy read version",
+      "url": "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/SNP-manifesto_ER_20.04.26.pdf"
+    }
+  ]
+}

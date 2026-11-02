@@ -1,0 +1,39 @@
+{
+  "url": "https://tuv.org.uk/wp-sitemap.xml",
+  "allowed_hosts": [
+    "tuv.org.uk"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:36.545617+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "response_headers": {
+    "Date": "Mon, 02 Nov 2026 10:22:36 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+    "referrer-policy": "same-origin",
+    "Server-Timing": "cfEdge;dur=11,cfOrigin;dur=0",
+    "x-frame-options": "SAMEORIGIN",
+    "Speculation-Rules": "\"/cdn-cgi/speculation\"",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gQOtrVrCZdhXdMzw6RYcTPMnfpFNrUw1PurZGyAOf20khcKtYCj6gm9p0%2BfazEIr0Ad5W57Ad7Srpe6VsO%2BSeS0%2F2F43fWDogjmV0A9dzO98vou5%2Bm1ywX1Xir4k%2FjoA5qIwgKP6OTGW\"}]}",
+    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "expect-ct": "max-age=86400, enforce",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "Server": "cloudflare",
+    "CF-RAY": "a5426b46ee0bb601-WAW",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "bytes": 6320,
+  "finished_utc": "2026-11-02T10:22:36.800027+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "tuv-sitemap.html",
+  "response_sha256": "3a02e7f55646f50df6a48f9654fabec31cb9ba5d527d3c513812617de62c37a7",
+  "retained_file": "tuv-sitemap-response-text.txt",
+  "retained_sha256": "e1d67ebdc1be37d7f1cf5841bf9b6b24d6153d8d6b76d704afba685ff0a4ac4f"
+}

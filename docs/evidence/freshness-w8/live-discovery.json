@@ -1,0 +1,351 @@
+{
+  "checked_at": "2026-11-02T10:33:00.052096+00:00",
+  "sources": [
+    {
+      "id": "obr-public-finances-databank",
+      "discovery_scope": "latest-page-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-public-spending",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-spending-trends",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-roster",
+      "discovery_scope": "current-roster-and-retained-revisions",
+      "updates": [
+        {
+          "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+          "evidence": {
+            "source": "party-roster",
+            "release_url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+            "attachment_url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2026-11-02",
+            "sha256": "0625fdec6ea3df7aa9f9c2a30f68354036ab6db6f2546c5a4dd5646d2a62b6d6",
+            "semantic_sha256": "34794b6722b3fa54a56433cc954dc55228e32f9cb06254f2b3454b678e634068",
+            "discovery_scope": "current-roster-comparison",
+            "as_of": "2026-11-02",
+            "updated": "2026-11-02",
+            "refresh_command": "python3 scripts/build.py --refresh"
+          },
+          "baseline": {
+            "file": "commons-roster-2024-07-09.json",
+            "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+            "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+            "as_of": "2024-07-09",
+            "date": "2024-07-09",
+            "downloaded": "2026-11-01",
+            "publication": "State of the parties (Commons)",
+            "publisher": "UK Parliament",
+            "scope": "House of Commons; parties with at least one MP, plus independent MPs and Speaker",
+            "locator": "items[].value.party and items[].value.total"
+          }
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "party-offers-alliance",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-conservative",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-green",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-labour",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-libdem",
+      "discovery_scope": "official-policy-listing-and-retained-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-plaid",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-reform",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-snp",
+      "discovery_scope": "official-publication-listing-and-retained-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-sinnfein",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-sdlp",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-tuv",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-uup",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-pesa-functional-history",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-rf-economic-battle-lines",
+      "discovery_scope": "retained-url-revision",
+      "updates": [
+        {
+          "key": "e3dffc2fc765eee8c89d3e5306057e2aed415773e734624bca9d64ef89ee1f71",
+          "evidence": {
+            "source": "party-evidence-rf-economic-battle-lines",
+            "release_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+            "attachment_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+            "sha256": "48e31168aa930c9e1e12edd21ffb0a2a3719099451cf1a565f4ea831c293d3b7",
+            "discovery_scope": "retained-url-revision",
+            "updated": "not supplied by retained URL",
+            "refresh_command": "python3 scripts/build.py --refresh",
+            "hosting": "Publisher website; retained HTML response"
+          },
+          "baseline": {
+            "id": "rf-economic-battle-lines",
+            "file": "rf-economic-battle-lines.raw.html.txt",
+            "url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+            "sha256": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+            "downloaded": "2026-11-02",
+            "retrieved_at": "2026-11-02T01:35:50.023717+00:00",
+            "published": "2024-06-14",
+            "publication": "The economic battle lines in the manifestos",
+            "publisher": "Resolution Foundation",
+            "kind": "independent",
+            "licence": "Publisher copyright; not Open Government Licence.",
+            "text_file": "rf-economic-battle-lines.txt",
+            "text_sha256": "94d3c0486213cf9bb5d45d37293d1356725e16405bc7058ddeb75d74e42e2551",
+            "text_mode": "html-blocks-v1",
+            "hosting": "Publisher website; retained HTML response"
+          }
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-fullfact-buybacks",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-libdem-buyback-2024",
+      "discovery_scope": "retained-url-revision",
+      "updates": [
+        {
+          "key": "fab3d37e65fee9481e48aacca62d7f77eda571040c1d75946fbad1a67f5412dc",
+          "evidence": {
+            "source": "party-evidence-libdem-buyback-2024",
+            "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "sha256": "aa449d4c06b7663e7ee33d67e357ac352eec64a0aca1bf3a5779f1eeaa329dda",
+            "discovery_scope": "retained-url-revision",
+            "updated": "not supplied by retained URL",
+            "refresh_command": "python3 scripts/build.py --refresh",
+            "hosting": "Publisher website; retained HTML response"
+          },
+          "baseline": {
+            "id": "libdem-buyback-2024",
+            "file": "libdem-buyback-2024.raw.html.txt",
+            "url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "downloaded": "2026-11-02",
+            "published": "2024-05-31",
+            "publication": "Share Buyback Tax scheme",
+            "publisher": "Liberal Democrats",
+            "kind": "official",
+            "licence": "Party publisher copyright; not Open Government Licence.",
+            "sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+            "text_file": "libdem-buyback-2024.txt",
+            "text_sha256": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+            "text_mode": "html-blocks-v1",
+            "hosting": "Publisher website; retained HTML response"
+          }
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-rf-two-child-2024",
+      "discovery_scope": "official-publication-listing-and-retained-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-ifs-june2024-opening-remarks",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-libdem-costings-2024",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-evidence-de-childcare-2024",
+      "discovery_scope": "retained-url-revision",
+      "updates": [
+        {
+          "key": "77583ceaaff77882b4571a42ff56cbcfe5c743be4da37736df5be9b5142ce9e6",
+          "evidence": {
+            "source": "party-evidence-de-childcare-2024",
+            "release_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+            "attachment_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+            "sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+            "discovery_scope": "retained-url-revision",
+            "updated": "not supplied by retained URL",
+            "refresh_command": "python3 scripts/build.py --refresh",
+            "hosting": "Official government department website"
+          },
+          "baseline": {
+            "id": "de-childcare-2024",
+            "kind": "official",
+            "publisher": "Department of Education (Northern Ireland)",
+            "file": "de-childcare-2024.raw.html.txt",
+            "text_file": "de-childcare-2024.txt",
+            "text_mode": "html-blocks-v1",
+            "sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+            "text_sha256": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+            "url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+            "publication": "Education Minister announces \u00a325million package of measures for early learning and childcare in Northern Ireland",
+            "published": "2024-05-23",
+            "downloaded": "2026-11-02",
+            "retrieved_at": "2026-11-02T08:49:49.500138+00:00",
+            "hosting": "Official government department website",
+            "licence": "Crown copyright; see publisher terms"
+          }
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "errors": [
+    {
+      "source": "party-offers-dup",
+      "error": "Duplicate publication listing container"
+    },
+    {
+      "source": "party-evidence-conservative-costings-2024",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ],
+  "revision_status": {
+    "schema_version": 1,
+    "notices": [
+      {
+        "source": "party-evidence-de-childcare-2024",
+        "baseline_sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+        "baseline_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+        "key": "77583ceaaff77882b4571a42ff56cbcfe5c743be4da37736df5be9b5142ce9e6",
+        "first_detected_at": "2026-11-02T10:33:00.052096+00:00",
+        "evidence": {
+          "source": "party-evidence-de-childcare-2024",
+          "release_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+          "attachment_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+          "sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Official government department website"
+        }
+      },
+      {
+        "source": "party-evidence-libdem-buyback-2024",
+        "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+        "first_detected_at": "2026-11-02T06:03:43.089472+00:00",
+        "evidence": {
+          "source": "party-evidence-libdem-buyback-2024",
+          "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      },
+      {
+        "source": "party-evidence-libdem-buyback-2024",
+        "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "key": "fab3d37e65fee9481e48aacca62d7f77eda571040c1d75946fbad1a67f5412dc",
+        "first_detected_at": "2026-11-02T10:33:00.052096+00:00",
+        "evidence": {
+          "source": "party-evidence-libdem-buyback-2024",
+          "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "sha256": "aa449d4c06b7663e7ee33d67e357ac352eec64a0aca1bf3a5779f1eeaa329dda",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      },
+      {
+        "source": "party-evidence-rf-economic-battle-lines",
+        "baseline_sha256": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+        "baseline_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+        "key": "e3dffc2fc765eee8c89d3e5306057e2aed415773e734624bca9d64ef89ee1f71",
+        "first_detected_at": "2026-11-02T10:33:00.052096+00:00",
+        "evidence": {
+          "source": "party-evidence-rf-economic-battle-lines",
+          "release_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+          "attachment_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+          "sha256": "48e31168aa930c9e1e12edd21ffb0a2a3719099451cf1a565f4ea831c293d3b7",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      }
+    ]
+  }
+}

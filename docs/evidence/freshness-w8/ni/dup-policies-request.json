@@ -1,0 +1,17 @@
+{
+  "url": "https://mydup.com/policies",
+  "allowed_hosts": [
+    "mydup.com"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:11.219373+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "success",
+  "bytes": 67291,
+  "finished_utc": "2026-11-02T10:22:11.640137+00:00",
+  "retained_response_form": "exact selected HTML fragment, not full response",
+  "response_file_not_retained": "dup-policies.html",
+  "response_sha256": "8697d26b98cf31864c71e6890b4be9475965bead50d8ef85b949b7d0f976c15e",
+  "retained_file": "dup-policies-fragment.html",
+  "retained_sha256": "8f8ee960b39cefb8d11e73365b0584c9f84120514b6c0b61c36512debc3513ff"
+}

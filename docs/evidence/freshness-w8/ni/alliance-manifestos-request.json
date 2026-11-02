@@ -1,0 +1,41 @@
+{
+  "url": "https://www.allianceparty.org/manifestos",
+  "allowed_hosts": [
+    "www.allianceparty.org"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:11.225283+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "response_headers": {
+    "Date": "Mon, 02 Nov 2026 10:22:11 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Content-Length": "5708",
+    "Connection": "close",
+    "Accept-Ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+    "Cf-Mitigated": "challenge",
+    "Server": "cloudflare",
+    "Critical-Ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+    "Cross-Origin-Embedder-Policy": "require-corp",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Cross-Origin-Resource-Policy": "same-origin",
+    "Origin-Agent-Cluster": "?1",
+    "Permissions-Policy": "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*",
+    "Referrer-Policy": "same-origin",
+    "Server-Timing": "chlray;desc=\"a5426aa8689a2945\"",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Strict-Transport-Security": "max-age=0; includeSubDomains; preload",
+    "CF-RAY": "a5426aa8689a2945-HEL",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "bytes": 5708,
+  "finished_utc": "2026-11-02T10:22:11.276461+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "alliance-manifestos.html",
+  "response_sha256": "ad876fc8dfb391153204fb8cfed2546f00b83d5d2c09a800a52df7480c8fdb57",
+  "retained_file": "alliance-manifestos-response-text.txt",
+  "retained_sha256": "766be4bcbef0163ad3da498967e1872fbcc6d356acd857b017bff4542faa9ff1"
+}

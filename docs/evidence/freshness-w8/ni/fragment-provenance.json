@@ -1,0 +1,20 @@
+{
+  "dup-papers": {
+    "response_sha256": "b072990a6b6a7d864930307f53d4d7889ca5ce86847d095532eed6372f0a92f5",
+    "response_bytes": 85152,
+    "fragment_file": "dup-papers-fragment.html",
+    "fragment_sha256": "65d208607fe362418170bb2b595b8b1a5dcf3c79838603053d507dda5894604e",
+    "fragment_is_full_response": false,
+    "links": 14,
+    "baseline_sha256": "b848ebf3d11ec5e02686df1212d084c08cad6661fd13a75c52c8929e9d90480a"
+  },
+  "sinnfein-policies": {
+    "response_sha256": "271629f6cc8e4e7822cfb8a9b1a505b713b22581ec75fc5a4f930e739edefe2f",
+    "response_bytes": 258343,
+    "fragment_file": "sinnfein-policies-fragment.html",
+    "fragment_sha256": "0f76311a6e1c1d183e3532ef97acbe0d513d5ea81be8272a87216cf5fe789435",
+    "fragment_is_full_response": false,
+    "links": 9,
+    "baseline_sha256": "d3c7f0f458ea47817638896d1329ac249d43228d2124a718ec1b00d2b3bf6bde"
+  }
+}

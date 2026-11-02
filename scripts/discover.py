@@ -248,15 +248,36 @@ def discover_current_roster(source, root, get=None, as_of=None):
     return [dict(key=key, evidence=evidence, baseline=baseline)]
 
 
+class PartialDiscoveryError(RuntimeError):
+    def __init__(self, updates, errors):
+        self.updates = updates
+        self.errors = errors
+        super().__init__('; '.join(check + ': ' + error for check, error in errors))
+
+
+def combined_checks(checks):
+    updates, errors = [], []
+    for name, check in checks:
+        try:
+            updates.extend(check())
+        except Exception as exc:
+            errors.append((name, str(exc)))
+    if errors:
+        raise PartialDiscoveryError(updates, errors)
+    return updates
+
+
 def discover(source, root=ROOT, get=None):
     """Dispatch explicit discovery scopes, including dynamic official latest-page links."""
-    if source['adapter'] == 'retained-url-and-policy-listing':
+    if source['adapter'] in ('retained-url-and-policy-listing', 'retained-url-and-publication-listing'):
         try:
             from scripts.plan_discovery import discover_listing
         except ModuleNotFoundError:  # Direct `python scripts/discover.py` execution.
             from plan_discovery import discover_listing
-        return discover_snapshot(source, root, get) + discover_listing(
-            source, root, get or (lambda url: fetch(url, hosts=source['allowed_hosts'])))
+        return combined_checks([
+            ('retained-url', lambda: discover_snapshot(source, root, get)),
+            ('publication-listing', lambda: discover_listing(source, root, get or (
+                lambda url: fetch(url, hosts=source.get('listing_allowed_hosts', source['allowed_hosts'])))))])
     if source['adapter'] == 'parliament-current-roster':
         # Retain the old snapshot revision check as well as checking today's composition.
         return discover_snapshot(source, root, get) + discover_current_roster(source, root, get)
@@ -349,6 +370,10 @@ def _open_updates(updates, repo, run, receipts):
                  'Collection links and the retained release were checked for releases and revisions.')
         if e.get('discovery_scope') == 'latest-page-releases-and-revisions':
             scope = 'The official latest databank page and retained workbook were checked for releases and revisions.'
+        if e.get('discovery_scope') == 'official-publication-listing-review':
+            scope = ('The official publication listing contains a new or retitled document link. '
+                     'This is listing evidence only, NOT a revision of the retained historical source. '
+                     'Review jurisdiction, publication date, content and site relevance before any update.')
         if e.get('discovery_scope') == 'official-policy-listing-review':
             scope = ('The official adopted-policy listing contains a new or retitled link. '
                      'This is listing evidence only, NOT a revision of the historical manifesto. '
@@ -449,7 +474,8 @@ def reconcile_revision_status(state, inventory, results, root=ROOT, checked_at=N
             # A later roster does not mean the explicitly historical roster was revised.
             # Keep the review issue, but never publish a false historical-revision warning.
             if update['evidence'].get('discovery_scope') in (
-                    'current-roster-comparison', 'official-policy-listing-review'):
+                    'current-roster-comparison', 'official-policy-listing-review',
+                    'official-publication-listing-review'):
                 continue
             baseline = update['baseline']
             notice = dict(source=result['id'], baseline_sha256=baseline['sha256'],
@@ -483,13 +509,24 @@ def main():
     for source in inventory:
         source_id = source.get('id', 'unknown') if isinstance(source, dict) else 'unknown'
         try:
-            updates = discover(source)
-            scope = {'retained-url-and-policy-listing': 'official-policy-listing-and-retained-revisions',
+            failed_checks = []
+            try:
+                updates = discover(source)
+            except PartialDiscoveryError as exc:
+                # A failed historical/archive URL must not suppress an independently
+                # verified new-publication candidate, nor masquerade as unchanged.
+                updates = exc.updates
+                failed_checks = [dict(check=check, error=error) for check, error in exc.errors]
+                report['errors'].append(dict(source=source_id, error=str(exc)))
+            scope = {'retained-url-and-publication-listing': 'official-publication-listing-and-retained-revisions',
+                     'retained-url-and-policy-listing': 'official-policy-listing-and-retained-revisions',
                      'parliament-current-roster': 'current-roster-and-retained-revisions',
                      'retained-url-snapshot': 'retained-url-revision',
                      'obr-databank-latest': 'latest-page-releases-and-revisions'}.get(
                          source['adapter'], 'collection-releases-and-revisions')
             result = dict(id=source_id, discovery_scope=scope, updates=updates, issues=[])
+            if failed_checks:
+                result['failed_checks'] = failed_checks
             report['sources'].append(result)
             if args.open_issues and updates:
                 result['issues'] = open_updates(updates, args.repo)

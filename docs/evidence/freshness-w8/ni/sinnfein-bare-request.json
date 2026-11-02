@@ -1,0 +1,17 @@
+{
+  "url": "https://sinnfein.ie/",
+  "allowed_hosts": [
+    "sinnfein.ie"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:11.223821+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "success",
+  "bytes": 247191,
+  "finished_utc": "2026-11-02T10:22:11.972102+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "sinnfein-bare.html",
+  "response_sha256": "4c1878403bcacebaabc7f32e4a509470dc419ca40273327a8517c0809b05adb9",
+  "retained_file": "sinnfein-bare-response-text.txt",
+  "retained_sha256": "b49854a3a350bf1a986986badd080fb2451ef60d6a8259fa0f7261bc700ad945"
+}

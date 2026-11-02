@@ -1,0 +1,36 @@
+{
+  "url": "https://sdlp.ie/manifestos",
+  "allowed_hosts": [
+    "sdlp.ie"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:36.542200+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "response_headers": {
+    "Date": "Mon, 02 Nov 2026 10:22:36 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+    "referrer-policy": "same-origin",
+    "x-frame-options": "SAMEORIGIN",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YSDNOOamsr1gGhVVZB0gUawfNpzu4UbDVjLfPWnNCELovwyNf1xW1FgXwKguagvodDGw%2FR72kq7iy84GqQSLEu0TfT%2BfIi%2BjFC8bgYWw6RTqyCxObu%2FQtrwRjHjTqqW5nqasLCi8\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "vary": "accept-encoding",
+    "Server": "cloudflare",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "CF-RAY": "a5426b471e5e60a4-WAW"
+  },
+  "bytes": 8114,
+  "finished_utc": "2026-11-02T10:22:36.926777+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "sdlp-bare.html",
+  "response_sha256": "eaa5b8c7c43dd18e1d3facfc767c3e4a41fd8b6c14327ba5af0eb0240a3f1ebb",
+  "retained_file": "sdlp-bare-response-text.txt",
+  "retained_sha256": "77cd330f032971526e2b2b0f408bd834f7b9186d9efa63dced67a010768a6625"
+}

@@ -4,3 +4,6 @@ sources/*costings-2024.txt -whitespace
 site/sources/*costings-2024.txt -whitespace
 docs/research/accuracy-w7/** -whitespace
 docs/research/accuracy-w8/** -whitespace
+# Exact publisher excerpts retain their recorded byte hashes.
+docs/evidence/freshness-w8/**/*.html -whitespace
+docs/evidence/freshness-w8/**/*.html.txt -whitespace

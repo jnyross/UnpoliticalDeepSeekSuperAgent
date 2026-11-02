@@ -1,0 +1,21 @@
+{
+  "request_url": "https://www.education-ni.gov.uk/publications?search=childcare",
+  "retrieved_at_utc": "2026-11-02T10:21:53.325224+00:00",
+  "method": "GET",
+  "user_agent": "UK-public-finance-source-discovery/1.0 (bounded public evidence research)",
+  "timeout_seconds": 18,
+  "max_response_bytes": 1500000,
+  "status": 200,
+  "final_url": "https://www.education-ni.gov.uk/publications?search=childcare",
+  "headers": {
+    "cache-control": "max-age=60, must-revalidate, public, stale-if-error=180, stale-while-revalidate=180",
+    "etag": "\"1793612825\"",
+    "last-modified": "Mon, 02 Nov 2026 09:47:05 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "Date": "Mon, 02 Nov 2026 10:21:53 GMT"
+  },
+  "bytes": 82674,
+  "sha256": "2b71708d754daebad690f47149bba9f88db14104c85fbc6af9c92db1095b402d",
+  "truncated": false,
+  "response_retention": "Original raw bytes hashed then discarded; only safe extracted evidence retained. sha256 is the original response hash, not a fragment hash."
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://uup.org/manifestos",
+  "allowed_hosts": [
+    "uup.org"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:36.543844+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "error",
+  "error_type": "URLError",
+  "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'uup.org'. (_ssl.c:1081)>",
+  "finished_utc": "2026-11-02T10:22:36.748633+00:00"
+}

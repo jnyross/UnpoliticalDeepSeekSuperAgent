@@ -1,0 +1,17 @@
+{
+  "url": "https://sinnfein.ie/policies/",
+  "allowed_hosts": [
+    "sinnfein.ie"
+  ],
+  "method": "GET",
+  "started_utc": "2026-11-02T10:22:36.538736+00:00",
+  "transport": "scripts.discover.fetch; urllib; timeout=60; exact-host HTTPS redirect guard",
+  "result": "success",
+  "bytes": 258343,
+  "finished_utc": "2026-11-02T10:22:37.291304+00:00",
+  "retained_response_form": "exact selected HTML fragment, not full response",
+  "response_file_not_retained": "sinnfein-policies.html",
+  "response_sha256": "271629f6cc8e4e7822cfb8a9b1a505b713b22581ec75fc5a4f930e739edefe2f",
+  "retained_file": "sinnfein-policies-fragment.html",
+  "retained_sha256": "0f76311a6e1c1d183e3532ef97acbe0d513d5ea81be8272a87216cf5fe789435"
+}

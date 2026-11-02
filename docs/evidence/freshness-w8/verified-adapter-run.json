@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-11-02T10:36:43.081369+00:00",
+  "sources": [
+    {
+      "id": "party-offers-dup",
+      "adapter": "retained-url-and-publication-listing",
+      "listing_url": "https://mydup.com/policies/policy-consultations",
+      "updates": []
+    },
+    {
+      "id": "party-offers-snp",
+      "adapter": "retained-url-and-publication-listing",
+      "listing_url": "https://www.snp.org/manifesto/",
+      "updates": []
+    },
+    {
+      "id": "party-evidence-rf-two-child-2024",
+      "adapter": "retained-url-and-publication-listing",
+      "listing_url": "https://www.resolutionfoundation.org/publications/?theme=social-security",
+      "updates": []
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-11-02T10:36:46.689684+00:00"
+}

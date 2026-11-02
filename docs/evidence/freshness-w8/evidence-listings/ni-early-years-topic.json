@@ -1,0 +1,21 @@
+{
+  "request_url": "https://www.education-ni.gov.uk/topics/early-years-education-and-learning",
+  "retrieved_at_utc": "2026-11-02T10:23:55.963029+00:00",
+  "method": "GET",
+  "user_agent": "UK-public-finance-source-discovery/1.0 (bounded public evidence research)",
+  "timeout_seconds": 18,
+  "max_response_bytes": 1500000,
+  "status": 200,
+  "final_url": "https://www.education-ni.gov.uk/topics/early-years-education-and-learning",
+  "headers": {
+    "cache-control": "max-age=60, must-revalidate, public, stale-if-error=180, stale-while-revalidate=180",
+    "etag": "\"1793615036\"",
+    "last-modified": "Mon, 02 Nov 2026 10:23:56 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "Date": "Mon, 02 Nov 2026 10:23:57 GMT"
+  },
+  "bytes": 40024,
+  "sha256": "5487d6c7b3b65e6f87a539065120769e32d7ad5050551c14996c11b4fe97e49c",
+  "truncated": false,
+  "response_retention": "Original raw bytes hashed then discarded; only safe extracted evidence retained. sha256 is the original response hash, not a fragment hash."
+}

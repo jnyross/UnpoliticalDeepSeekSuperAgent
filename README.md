@@ -134,9 +134,16 @@ candidate, not a revision of the explicitly historical 2024 roster; it never sil
 updates the site. The Liberal Democrat adapter also watches new/retitled conference-paper
 links within the official adopted-policy listing, against a retained 14-link baseline.
 It does not fetch paper contents, infer publication dates or claim reviewed costings.
-Both adapters retain their original historical-URL revision checks. Other party sources
-remain retained-URL monitors, NOT new-plan discovery. See the
-[wave-six coverage and operational limits](docs/evidence/freshness-w6/README.md). HTML evidence is watched for raw-byte changes at its saved
+DUP policy-consultation PDF pointers (14 retained links), SNP manifesto-page PDF pointers
+(11 national/regional/accessibility links) and the Resolution Foundation social-security
+research listing (25 first-page heading links) also detect new URLs. They are bounded
+publisher listings, not exhaustive catalogs or automatic replacements for UK 2024 offers.
+DUP document titles are explicitly unextracted; no title is invented from an image link.
+Listing fingerprints identify listing links/labels, never unfetched document bytes.
+All combined adapters retain historical-URL revision checks; either subcheck can report
+verified candidates while the other fails, with the error retained and a nonzero exit.
+The 26-entry inventory now has 17 retained-URL-only monitors, NOT all-source new-release
+coverage. See the [wave-eight coverage and operational limits](docs/evidence/freshness-w8/README.md). HTML evidence is watched for raw-byte changes at its saved
 URL; this can also flag presentation-only changes, and does not discover new analyses. PESA's year-dependent
 attachment title uses an anchored `attachment_title_pattern`; exact-title sources
 retain `attachment_title` matching. The official GOV.UK collection discovers

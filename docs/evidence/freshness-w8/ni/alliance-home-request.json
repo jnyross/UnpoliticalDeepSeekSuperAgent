@@ -1,0 +1,19 @@
+{
+  "url": "https://www.allianceparty.org/",
+  "allowed_hosts": [
+    "www.allianceparty.org"
+  ],
+  "started_utc": "2026-11-02T10:21:28.392934+00:00",
+  "method": "GET",
+  "transport": "scripts.discover.fetch (urllib, 60-second timeout, exact-host redirect guard)",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "bytes": 5678,
+  "finished_utc": "2026-11-02T10:21:28.513134+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "alliance-home-error.html",
+  "response_sha256": "2bb630e422f272e4165fd85ed02be634ede895fd3edb241e988417ac35ec63d2",
+  "retained_file": "alliance-home-response-text.txt",
+  "retained_sha256": "766be4bcbef0163ad3da498967e1872fbcc6d356acd857b017bff4542faa9ff1"
+}

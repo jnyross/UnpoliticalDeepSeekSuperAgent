@@ -1,0 +1,521 @@
+{
+  "original_response_sha256": "951d47353276bdf00457c246671b9e15bdac211e103afa41d72bc214c3084b26",
+  "html_title": [
+    "News | Department of Education",
+    "Department of Education"
+  ],
+  "links": [
+    {
+      "url": "#main-content",
+      "title": "Skip to main content"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk",
+      "title": "Department of Education @import url(https://fonts.googleapis.com/css2?family=Libre+Bodoni%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&amp;display=swap); @import url(https://fonts.googleapis.com/css2?family=Libre+Franklin%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap); .svg-logo-txt-sm {font-family: \"Libre Franklin\", sans-serif; letter-spacing: -0.2px; white-space: nowrap; font-size: 14px;} .svg-logo-txt-lg {font-family: \"Libre Bodoni\", Georgia; font-size: 40px; letter-spacing: -1.5px; white-space: nowrap;} Department of Education"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk",
+      "title": "Home"
+    },
+    {
+      "url": "/topics",
+      "title": "Topics"
+    },
+    {
+      "url": "/publications",
+      "title": "Publications"
+    },
+    {
+      "url": "/consultations",
+      "title": "Consultations"
+    },
+    {
+      "url": "/contact",
+      "title": "Contact"
+    },
+    {
+      "url": "/translations?url=",
+      "title": "Translate this page"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ar&u=",
+      "title": "Arabic — عربي"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=zh-cn&u=",
+      "title": "Chinese (Simplified) — 中文简体"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=zh-tw&u=",
+      "title": "Chinese (Traditional) — 中文繁體"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=nl&u=",
+      "title": "Dutch — Nederlands"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=tl&u=",
+      "title": "Filipino — Filipino"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=fr&u=",
+      "title": "French — Français"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=de&u=",
+      "title": "German — Deutsch"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=hu&u=",
+      "title": "Hungarian — Magyar"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ga&u=",
+      "title": "Irish — Gaeilge"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=it&u=",
+      "title": "Italian — Italiano"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=lv&u=",
+      "title": "Latvian — Latviešu"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=lt&u=",
+      "title": "Lithuanian — Lietuvių kalba"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=pl&u=",
+      "title": "Polish — Polski"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=pt&u=",
+      "title": "Portuguese — Português"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ro&u=",
+      "title": "Romanian — Română"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=ru&u=",
+      "title": "Russian — Русский"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=sk&u=",
+      "title": "Slovak — Slovenčina"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=es&u=",
+      "title": "Spanish — Español"
+    },
+    {
+      "url": "https://translate.google.com/translate?hl=en&tab=TT&sl=auto&tl=uk&u=",
+      "title": "Ukrainian — Українська"
+    },
+    {
+      "url": "#main-content",
+      "title": "Admissions (15results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Area planning (46results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Building schools (56results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Child protection and safeguarding (6results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Children and Young People (15results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Children and Young People Issues (43results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Community relations (7results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "CPR in the Curriculum at Key Stage 3 (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Curriculum and assessment (34results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Curriculum and learning (81results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Early years education and learning (21results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Education otherwise than at school (3results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Health and safety in schools (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "International research (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Internet and Wi-fi (7results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Non-teaching staff (4results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Non-teaching staff pay (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Pension Scheme (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Pupil behaviour and school discipline (4results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Pupil health and wellbeing (17results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Pupils and parents (69results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Raising standards and school improvement (11results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Research (3results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "School Enhancement Programme (17results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "School enrolments (14results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "School meals (8results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Schools' estate (36results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Schools' finance (8results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Schools' management (4results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Schools' project planning (57results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Schools and infrastructure (243results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Shared Education (10results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Special educational needs (13results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Statistics (31results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Statistics and research (40results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Support and development (115results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Teacher education review (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Teacher qualifications and registration (3results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Teachers' pay (12results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Teachers' pay and workload settlement 2017/19 (2results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Teachers' terms and conditions (5results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Teaching staff (38results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Transport to school (1results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Types of schools (4results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "Your child's health and safety (6results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2026 (92results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2025 (122results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2024 (80results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2023 (34results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2022 (59results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2021 (96results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2020 (104results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2019 (22results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2018 (23results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2017 (41results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2016 (206results)"
+    },
+    {
+      "url": "#main-content",
+      "title": "2015 (95results)"
+    },
+    {
+      "url": "https://wayback.archive-it.org/11112/20150609100345/http://www.northernireland.gov.uk/index/media-centre/news-departments.htm",
+      "title": "PRONI web archive of the Northern Ireland Executive site"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/statement-education-minister-paul-givan-threatening-emails-schools",
+      "title": "Statement from Education Minister Paul Givan on threatening emails to schools Education Minister Paul Givan has condemned the actions of those who issued a threatening email to schools in Northern... Published 19 October 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-officially-opens-new-ps275-million-building-new-bridge-integrated-college",
+      "title": "Education Minister officially opens new £27.5 million building for New-Bridge Integrated College Education Minister Paul Givan has officially opened a new school building at New-Bridge Integrated College... Published 14 October 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-opens-new-classroom-extension-killyman-primary-school",
+      "title": "Givan opens new classroom extension at Killyman Primary School Education Minister Paul Givan has officially opened new facilities at Killyman Primary School. Improvements include a... Published 8 October 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-confirms-new-build-school-roddensvale",
+      "title": "Education Minister confirms new build school for Roddensvale Education Minister Paul Givan has today announced that plans for a new building for Roddensvale School, Larne will... Published 7 October 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/more-children-benefit-northern-ireland-childcare-subsidy-scheme",
+      "title": "More children to benefit from Northern Ireland Childcare Subsidy Scheme Education Minister Paul Givan has announced a change to the eligibility criteria for the Northern Ireland Childcare... Published 28 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-launches-programme-boost-support-pupils-preparing-post-primary-education",
+      "title": "Givan launches programme to boost support for pupils preparing for post primary education Education Minister Paul Givan has today announced a new initiative to deliver targeted numeracy, literacy and structured... Published 24 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-cuts-first-sod-gaelscoil-ui-neill-coalisland",
+      "title": "Education Minister cuts first sod at Gaelscoil Uí Néill, Coalisland Education Minister Paul Givan has cut the first sod on a £7.7M project at Gaelscoil Uí Néill. Published 23 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-literacy-and-numeracy-outcomes-demonstrate-clear-need-reform",
+      "title": "Givan: Literacy and Numeracy outcomes demonstrate clear need for reform Education Minister Paul Givan today welcomed the publication of Northern Ireland’s first literacy and numeracy... Published 23 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-expresses-disappointment-decision-proceed-industrial-action",
+      "title": "Education Minister expresses disappointment at decision to proceed with industrial action Education Minister Paul Givan has urged teaching unions to continue to engage in negotiations with employers and to... Published 21 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-opens-consultation-plans-prioritise-parental-choice-school-admissions",
+      "title": "Education Minister opens consultation on plans to prioritise parental choice in school admissions Education Minister Paul Givan has launched a public consultation on proposals to make it easier for schools to admit... Published 16 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/teachers-and-pupils-asked-speak-out-about-behaviour-schools",
+      "title": "Teachers and pupils asked to speak out about behaviour in schools Teachers, parents and pupils across Northern Ireland are being asked to have their say on behaviour in schools as... Published 15 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-issues-new-legal-guidelines-guaranteeing-girls-option-wear-trousers-school",
+      "title": "Givan issues new legal guidelines guaranteeing girls the option to wear trousers to school The Education Minister, Paul Givan, has issued revised uniform guidelines requiring all schools to offer girls the... Published 11 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/international-study-signals-need-education-reform",
+      "title": "International study signals need for education reform Northern Ireland's latest performance in the OECD's Programme for International Student Assessment (PISA) has further... Published 8 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-levels-playing-field-pre-school-admissions-hard-working-families",
+      "title": "Givan levels playing field in pre-school admissions for hard working families Today the Education Minister has announced decisive action to level the playing field for hard working families seeking... Published 7 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-launches-enhanced-support-programme-newly-qualified-teachers",
+      "title": "Givan launches enhanced support programme for newly qualified teachers Education Minister Paul Givan has today launched a new online platform and enhanced support programme designed to help... Published 3 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-announces-three-post-primary-school-projects-advance-design-and-planning-stage",
+      "title": "Education Minister announces three post-primary school projects to advance to design and planning stage Education Minister, Paul Givan has announced that three major works projects, previously announced in 2022, but paused... Published 2 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/applications-sought-de-appointed-members-council-curriculum-examinations-assessment-and-council-catholic-maintained-schools-and-its-diocesan-education-committees",
+      "title": "Applications sought for DE appointed members to the Council for the Curriculum, Examinations & Assessment and the Council for Catholic Maintained Schools and its Diocesan Education Committees The Department of Education has launched a combined public appointments competition to appoint four members to the... Published 1 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/education-minister-expresses-hope-industrial-action-can-be-avoided-following-teaching-unions-industrial-action-ballot-results",
+      "title": "Education Minister expresses hope that industrial action can be avoided following Teaching Unions’ Industrial Action Ballot results Education Minister Paul Givan has expressed hope that significant progress made through negotiations over the summer can... Published 1 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-new-way-forward-integrated-education",
+      "title": "Givan: A new way forward for integrated education Education Minister Paul Givan has today published a Department of Education Position Paper on Integrated Education, to... Published 1 September 2026"
+    },
+    {
+      "url": "https://www.education-ni.gov.uk/news/givan-launches-consultation-legislating-mobile-phone-free-schools",
+      "title": "Givan launches consultation on legislating for mobile phone-free schools Education Minister Paul Givan has launched a consultation on legislative proposals to support mobile phone-free schools... Published 27 August 2026"
+    },
+    {
+      "url": "?page=0",
+      "title": "Current page 1"
+    },
+    {
+      "url": "?page=1",
+      "title": "Page 2"
+    },
+    {
+      "url": "?page=2",
+      "title": "Page 3"
+    },
+    {
+      "url": "?page=3",
+      "title": "Page 4"
+    },
+    {
+      "url": "?page=4",
+      "title": "Page 5"
+    },
+    {
+      "url": "?page=1",
+      "title": "Next page next ›"
+    },
+    {
+      "url": "?page=48",
+      "title": "Last page last »"
+    },
+    {
+      "url": "/articles/crown-copyright-education",
+      "title": "Crown copyright"
+    },
+    {
+      "url": "/articles/terms-and-conditions-education",
+      "title": "Terms and Conditions"
+    },
+    {
+      "url": "/articles/using-website-education",
+      "title": "Privacy"
+    },
+    {
+      "url": "/articles/cookies-education",
+      "title": "Cookies"
+    },
+    {
+      "url": "/articles/accessibility-statement-education-educationuk",
+      "title": "Accessibility"
+    },
+    {
+      "url": "https://www.northernireland.gov.uk/",
+      "title": "The Northern Ireland Executive"
+    },
+    {
+      "url": "https://www.executiveoffice-ni.gov.uk/",
+      "title": "The Executive Office"
+    },
+    {
+      "url": "https://www.daera-ni.gov.uk/",
+      "title": "Department of Agriculture, Environment and Rural Affairs"
+    },
+    {
+      "url": "https://www.communities-ni.gov.uk/",
+      "title": "Department for Communities"
+    },
+    {
+      "url": "/",
+      "title": "Department for Education"
+    },
+    {
+      "url": "https://www.economy-ni.gov.uk/",
+      "title": "Department for the Economy"
+    },
+    {
+      "url": "https://www.finance-ni.gov.uk/",
+      "title": "Department of Finance"
+    },
+    {
+      "url": "https://www.infrastructure-ni.gov.uk/",
+      "title": "Department for Infrastructure"
+    },
+    {
+      "url": "https://www.health-ni.gov.uk/",
+      "title": "Department for Health"
+    },
+    {
+      "url": "https://www.justice-ni.gov.uk/",
+      "title": "Department of Justice"
+    },
+    {
+      "url": "https://www.nidirect.gov.uk/",
+      "title": "nidirect.gov.uk — the official government website for Northern Ireland citizens"
+    }
+  ]
+}

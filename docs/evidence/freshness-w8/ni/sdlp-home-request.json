@@ -1,0 +1,19 @@
+{
+  "url": "https://www.sdlp.ie/",
+  "allowed_hosts": [
+    "www.sdlp.ie"
+  ],
+  "started_utc": "2026-11-02T10:21:28.397768+00:00",
+  "method": "GET",
+  "transport": "scripts.discover.fetch (urllib, 60-second timeout, exact-host redirect guard)",
+  "result": "error",
+  "error_type": "HTTPError",
+  "error": "HTTP Error 403: Forbidden",
+  "bytes": 5626,
+  "finished_utc": "2026-11-02T10:21:28.506198+00:00",
+  "retained_response_form": "visible response text excerpt, scripts/styles excluded; not full response",
+  "response_file_not_retained": "sdlp-home-error.html",
+  "response_sha256": "2a6a967c42fc803a6301a450298bb9710d25fd9e4ac0c3a3e9ef6a815a0b7860",
+  "retained_file": "sdlp-home-response-text.txt",
+  "retained_sha256": "766be4bcbef0163ad3da498967e1872fbcc6d356acd857b017bff4542faa9ff1"
+}

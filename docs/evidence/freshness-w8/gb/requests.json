@@ -1,0 +1,93 @@
+[
+  {
+    "url": "https://www.conservatives.com/policies",
+    "started_at": "2026-11-02T10:21:48.291904+00:00",
+    "bytes": 69050,
+    "sha256": "f919be2958b360d609a27243d63f84e7f804c3ff6614a89fe5b679e1322abb35",
+    "links": [
+      "https://policy.conservatives.com/?_gl=1*wwotwi*_ga*MjA0NzYxNjEyNS4xNzQzMTUzMzA3*_ga_ZSQ5GRZY41*czE3NDkyMTEyMzAkbzEyNSRnMSR0MTc0OTIxMTI0NSRqNDUkbDAkaDA.",
+      "https://policy.conservatives.com/",
+      "https://policy.conservatives.com/",
+      "https://policy.conservatives.com/",
+      "https://policy.conservatives.com/",
+      "https://policy.conservatives.com",
+      "https://www.conservativepolicyforum.com/",
+      "/safeguarding-policy"
+    ],
+    "finished_at": "2026-11-02T10:21:48.652071+00:00",
+    "retention": "Full response discarded after hashing; selected links retained in this record"
+  },
+  {
+    "url": "https://www.conservatives.com/",
+    "started_at": "2026-11-02T10:21:48.293714+00:00",
+    "bytes": 48703,
+    "sha256": "d81c0aa670dec468f7a595a21bb246ad9d047251ce2f2a1d828f0e34315ddcb7",
+    "links": [
+      "https://policy.conservatives.com/?_gl=1*wwotwi*_ga*MjA0NzYxNjEyNS4xNzQzMTUzMzA3*_ga_ZSQ5GRZY41*czE3NDkyMTEyMzAkbzEyNSRnMSR0MTc0OTIxMTI0NSRqNDUkbDAkaDA.",
+      "/our-plan-for-britain",
+      "https://policy.conservatives.com/",
+      "/news/conservatives-back-police-officers",
+      "https://www.conservativepolicyforum.com/",
+      "/safeguarding-policy"
+    ],
+    "finished_at": "2026-11-02T10:21:48.476914+00:00",
+    "retention": "Full response discarded after hashing; selected links retained in this record"
+  },
+  {
+    "url": "https://www.reformparty.uk/policies",
+    "started_at": "2026-11-02T10:21:48.295584+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "finished_at": "2026-11-02T10:21:48.434385+00:00"
+  },
+  {
+    "url": "https://www.reformparty.uk/",
+    "started_at": "2026-11-02T10:21:48.297159+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "finished_at": "2026-11-02T10:21:48.436551+00:00"
+  },
+  {
+    "url": "https://greenparty.org.uk/political-programme/",
+    "started_at": "2026-11-02T10:21:48.434448+00:00",
+    "error": "HTTP Error 404: Not Found",
+    "finished_at": "2026-11-02T10:21:48.696786+00:00"
+  },
+  {
+    "url": "https://www.snp.org/manifesto/",
+    "started_at": "2026-11-02T10:21:48.436611+00:00",
+    "bytes": 118949,
+    "sha256": "e952374321293532e8e0651340a93444e9097aaabd76f1f9908831384ccb9b82",
+    "links": [
+      "https://www.facebook.com/sharer/sharer.php?t=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&u=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F",
+      "https://twitter.com/intent/tweet?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&via=theSNP",
+      "https://wa.me/?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side%20https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F",
+      "https://www.facebook.com/dialog/send?link=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&redirect_uri=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&app_id=417374788788156&display=popup",
+      "mailto:?subject=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&body=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F",
+      "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&title=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&source=https%3A%2F%2Fwww.snp.org",
+      "https://www.snp.org/manifesto/",
+      "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/SNP-manifesto_ER_20.04.26.pdf",
+      "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/04/SNP-2026-Manifesto-Plain-Text.pdf",
+      "https://s3-eu-west-2.amazonaws.com/www.snp.org/uploads/2026/05/SNP-2026-Manifesto-Audio-Version.mp3",
+      "https://www.facebook.com/sharer/sharer.php?t=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&u=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F",
+      "https://twitter.com/intent/tweet?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&via=theSNP",
+      "https://wa.me/?text=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side%20https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F",
+      "https://www.facebook.com/dialog/send?link=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&redirect_uri=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&app_id=417374788788156&display=popup",
+      "mailto:?subject=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&body=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F",
+      "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.snp.org%2Fmanifesto%2F&title=SNP%202026%20Manifesto%3A%20Always%20on%20Scotland%27s%20side&source=https%3A%2F%2Fwww.snp.org",
+      "https://www.snp.org/manifesto/",
+      "https://www.snp.org/policies/",
+      "https://www.snp.org/safeguarding-policy/",
+      "https://www.snp.org/sexual-harassment-policy/",
+      "https://www.snp.org/bullying-and-harassment-policy/"
+    ],
+    "finished_at": "2026-11-02T10:21:49.016015+00:00",
+    "retention": "Full response discarded after hashing; selected links retained in this record",
+    "retained_fragment": "docs/evidence/freshness-w8/gb/snp-manifesto-fragment.html.txt",
+    "fragment_provenance": "docs/evidence/freshness-w8/gb/snp-fragment-provenance.json"
+  },
+  {
+    "url": "https://www.partyof.wales/manifesto",
+    "started_at": "2026-11-02T10:21:48.476991+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "finished_at": "2026-11-02T10:21:48.558740+00:00"
+  }
+]

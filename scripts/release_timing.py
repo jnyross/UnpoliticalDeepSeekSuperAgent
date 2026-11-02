@@ -47,6 +47,13 @@ def url(value):
 
 
 def version(source, baseline):
+    if baseline.get('discovery_scope') in ('official-policy-listing-review',
+                                           'official-publication-listing-review'):
+        # The candidate document was NOT downloaded. Record the actual listing
+        # observation, never attribute its semantic hash/date to document bytes.
+        return dict(source=source, release_url=baseline['listing_url'],
+                    attachment_url=baseline['listing_url'], sha256=baseline['listing_sha256'],
+                    vintage=None, original_publication=None, publication_at=None)
     # updated date is the publication of this vintage, not the original release.
     updated = baseline.get('updated', baseline.get('date'))
     if updated == 'not supplied by retained URL':
