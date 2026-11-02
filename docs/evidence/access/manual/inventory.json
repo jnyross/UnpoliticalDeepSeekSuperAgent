@@ -20,7 +20,7 @@
     },
     {
       "path": "corrections.html",
-      "sha256": "9dca7de9cb55a88de3f0fc0ba8992207017d1aab9e50987739b1a09c0543dc81",
+      "sha256": "8e37f8b6700b51caf4892dca333ea90667f66c1aa45119cb73f3067c67651e30",
       "states": [
         "initial"
       ],
@@ -3695,7 +3695,7 @@
     },
     {
       "path": "parties.html",
-      "sha256": "9c5c28e820ec939fd4933d949d15c9027f4d9635ee0142e8e25947a01612de83",
+      "sha256": "39c3698bffa957afac74bfc8a329755875d945e9371bc0db65102a56fdacd448",
       "states": [
         "initial"
       ],

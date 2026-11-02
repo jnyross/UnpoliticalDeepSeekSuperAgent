@@ -13,7 +13,7 @@ from check import validate_page, ValidationError
 
 
 class MetadataTests(unittest.TestCase):
-    def test_retained_empty_snapshot_is_hash_bound(self):
+    def test_retained_snapshot_is_hash_bound(self):
         entries = corrections.load(ROOT / 'sources/corrections.json')
         metadata = corrections.load_metadata(ROOT / 'sources/corrections-metadata.json', entries)
         self.assertRegex(metadata['date'], r'^\d{4}-\d{2}-\d{2}$')
