@@ -1,7 +1,7 @@
 # Facilitator only — answer key
 
 Kit prepared: 2026-11-02 (not a test date).
-Tested page revision: `ce5548ec889aaef824a432e6745033829a8f833a`.
+Tested page revision: `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
 These are source-derived expected answers, not participant responses or results.
 Home page only; Q8 uses the Q3 debt-interest figure.
 

@@ -1,8 +1,8 @@
 {
-  "capturedAt": "2026-11-02T01:46:34.622Z",
+  "capturedAt": "2026-11-02T02:11:52.970Z",
   "baselineSha": null,
-  "baseRevision": "791d8772fa5dcb12524d699f7fea4bc691c30a67",
-  "htmlSha256": "3f8505a495771c5d9fba4b822edeecbefc6253a1b684982e03dd8651556c043f",
+  "baseRevision": "4be67dabe81701f602104b7133b2ad08ba5c7ba0",
+  "htmlSha256": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
   "source": "working-tree site/index.html",
   "javaScriptEnabled": false,
   "browserVersion": "141.0.7390.37",
@@ -15,7 +15,7 @@
         "height": 800
       },
       "screenshot": "docs/evidence/openness/after-mobile.png",
-      "footerText": "About this project and methods · Report an error on GitHub (sign-in needed to submit)\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+      "footerText": "Corrections and report an error\n\nAbout this project and methods · Report an error on GitHub (sign-in needed to submit)\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
     },
     {
       "viewport": {
@@ -24,7 +24,7 @@
         "height": 900
       },
       "screenshot": "docs/evidence/openness/after-desktop.png",
-      "footerText": "About this project and methods · Report an error on GitHub (sign-in needed to submit)\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+      "footerText": "Corrections and report an error\n\nAbout this project and methods · Report an error on GitHub (sign-in needed to submit)\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
     }
   ]
 }

@@ -24,11 +24,13 @@ try {
     const about = footer.getByRole('link', { name: 'About this project and methods' });
     const reportLink = footer.getByRole('link', { name: 'Report an error on GitHub' });
     const reportHref = await reportLink.getAttribute('href');
+    const correctionsHref = file === 'corrections.html' ? null : await footer.locator('a[href="corrections.html"]').getAttribute('href');
+    if (file !== 'corrections.html') assert.equal(correctionsHref, 'corrections.html');
     assert.equal(await about.getAttribute('href'), 'about.html');
     assert.equal(reportHref, 'https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new');
     await about.click(); await page.waitForURL('**/about.html');
     assert.equal(await page.title(), 'About this project | UnpoliticalAF');
-    report.pages.push({ page: file, aboutHref: 'about.html', reportHref, aboutNavigationPassed: true });
+    report.pages.push({ page: file, aboutHref: 'about.html', correctionsHref, reportHref, aboutNavigationPassed: true });
     if (file === 'index.html') await page.screenshot({ path: 'docs/evidence/openness/about-mobile.png', fullPage: true });
     await page.close();
   }

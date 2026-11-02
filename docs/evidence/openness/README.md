@@ -2,11 +2,11 @@
 
 ## Capture identity
 
-- Baseline commit: `791d8772fa5dcb12524d699f7fea4bc691c30a67`.
-- Baseline overview HTML SHA-256: `516c6dabb9b22edbfb023df55052673aa620f7a19e727d587c057fe59d484a4e` (git blob `eb737cf8cf45af9bb7ad365442a7319928042936`). Captured from immutable git bytes, not reconstructed HTML.
-- After overview HTML SHA-256: `3f8505a495771c5d9fba4b822edeecbefc6253a1b684982e03dd8651556c043f`.
-- Corrected after About HTML SHA-256: `53f6f0b9411479aa0441a93800bdc16d1986a8f2d9de99e3d2c9847b918e5b3f`.
-- Changed source revision, committed by the parent agent during verification: `1c17796351652bc65e604695997b13ef8dd71746`.
+- Refreshed upstream baseline commit: `f6be6658f64f7f14b5a4b93aa0fdea761a273b95` (after the independently merged corrections work).
+- Baseline overview HTML SHA-256: `af6c7e48c3472b36b7190091f32489f4c95cc317be4cb6ffdb74d368bc891cfa` (git blob `e60221f853637945f7ea38e9c1891791cff8195b`). Captured from immutable git bytes, not reconstructed HTML.
+- After overview HTML SHA-256: `a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df`.
+- After About HTML SHA-256: `e99b3253340aaffb8e02393c9de36f1f6a688160875d36c720637c09ec5d2076`.
+- Changed source revision, committed by the parent agent during verification: `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
 - After evidence identifies working-tree bytes; the baseline commit is not claimed to contain the new implementation.
 
 ## Actual screenshots
@@ -20,9 +20,9 @@ All footer screenshots use JavaScript disabled and the footer scrolled into view
 
 [Baseline capture metadata](<before-baseline.json>) and [after capture metadata](<after-baseline.json>) record timestamps, browser version, exact HTML hashes, viewport sizes, and visible footer text. [About mobile full-page capture](<about-mobile.png>) uses a 360×800 viewport with JavaScript disabled.
 
-Agent visual inspection of both matching pairs found the original licence-only footer replaced by clearly visible About/methods and error-report links, a sign-in notice, and retained attribution. The new mobile footer wraps within the viewport. Initial About capture exposed an 8px horizontal overflow from the repository slug; the generator was corrected with a targeted link-wrapping rule before final recapture. This is an agent visual inspection, not human/user-test evidence.
+Agent visual inspection of both refreshed matching pairs found the upstream Corrections/report link and licence attribution retained, with clearly visible About/methods and direct GitHub error-report links plus a sign-in notice added. The mobile footer wraps within the viewport. The refreshed About full-page capture is exactly 360px wide and includes the retained Corrections link. An initial pre-merge About capture had exposed an 8px overflow from the repository slug; the generator was corrected with a targeted link-wrapping rule before recapture. This is an agent visual inspection, not human/user-test evidence.
 
-[No-JavaScript navigation report](<no-js-navigation.json>) checks all eight pages: correct footer About and report hrefs, followed by a real click to the About page with JavaScript disabled.
+[No-JavaScript navigation report](<no-js-navigation.json>) checks all nine pages: correct footer About and report hrefs, followed by a real click to the About page with JavaScript disabled. It also asserts the retained Corrections href on the eight non-Corrections pages (the Corrections page has no redundant self-link, matching upstream).
 
 ## Anonymous GitHub access
 
@@ -40,6 +40,6 @@ See [commands and methodology](<TOOLING.md>), [footer capture script](<capture-f
 
 `npm ci`: exit 0; five packages installed, six audited, zero vulnerabilities. Playwright 1.56.1 / Chromium 141.0.7390.37.
 
-`EVIDENCE_DIR=/tmp/openness-browser npm run test:browser`: **exit 0**, completed **16/16 page/viewport checks** (eight HTML pages × 360×800 and 1280×900), with **24/24 state checks** passed. Final run: `2026-11-02T01:49:35.075Z`–`2026-11-02T01:54:42.928Z`. All checked axe violations arrays are empty; SVG contrast checks completed; no-JavaScript main content matched and document/body widths fit the viewport. Expanded disclosure states were checked on the history pages.
+`EVIDENCE_DIR=/tmp/openness-browser-merged npm run test:browser`: **exit 0**, completed **18/18 page/viewport checks** (nine HTML pages, including Corrections, × 360×800 and 1280×900), with **26/26 state checks** passed. Final post-merge run: `2026-11-02T02:11:59.705Z`–`2026-11-02T02:17:15.515Z`. All checked axe violations arrays are empty; SVG contrast checks completed; no-JavaScript main content matched and document/body widths fit the viewport. Expanded disclosure states were checked on the history pages. Every tested HTML SHA-256 was independently verified against source revision `86bb51b462f8da2dcb24d7e291d9de181ea13978`.
 
-The committed [compact browser summary](<browser-summary.json>) preserves per-page SHA-256 hashes, byte counts, viewport dimensions, no-JavaScript checks, state completion, axe results, and contrast completion. Full temporary runner output and screenshots remain under `/tmp/openness-browser` and are intentionally not duplicated here. The earlier pre-fix run failed the About mobile overflow assertion and was canceled; the complete successful rerun above used the corrected output.
+The committed [compact browser summary](<browser-summary.json>) preserves per-page SHA-256 hashes, byte counts, viewport dimensions, no-JavaScript checks, state completion, axe results, and contrast completion. The [summary verification script](<summarize-browser.mjs>) checks suite completion and every tested HTML hash against the named source commit before writing the compact result. Full temporary runner output and screenshots remain under `/tmp/openness-browser-merged` and are intentionally not duplicated here. Earlier pre-merge eight-page evidence has been superseded by this complete nine-page run and refreshed before/after screenshots; the anonymous GitHub evidence was retained without a redundant rerun.

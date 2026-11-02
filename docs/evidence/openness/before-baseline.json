@@ -1,10 +1,12 @@
 {
-  "capturedAt": "2026-11-02T01:45:07.297Z",
-  "baselineSha": "791d8772fa5dcb12524d699f7fea4bc691c30a67",
-  "htmlSha256": "516c6dabb9b22edbfb023df55052673aa620f7a19e727d587c057fe59d484a4e",
-  "source": "git show baselineSha:site/index.html; immutable original HTML served locally",
+  "capturedAt": "2026-11-02T02:09:01.970Z",
+  "baselineSha": "f6be6658f64f7f14b5a4b93aa0fdea761a273b95",
+  "baseRevision": "4be67dabe81701f602104b7133b2ad08ba5c7ba0",
+  "htmlSha256": "af6c7e48c3472b36b7190091f32489f4c95cc317be4cb6ffdb74d368bc891cfa",
+  "source": "git show f6be6658f64f7f14b5a4b93aa0fdea761a273b95:site/index.html",
   "javaScriptEnabled": false,
   "browserVersion": "141.0.7390.37",
+  "scenario": "Footer scrolled into view; exact viewport screenshot, not full-page",
   "screenshots": [
     {
       "viewport": {
@@ -13,7 +15,7 @@
         "height": 800
       },
       "screenshot": "docs/evidence/openness/before-mobile.png",
-      "footerText": "Contains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+      "footerText": "Corrections and report an error\n\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
     },
     {
       "viewport": {
@@ -22,7 +24,7 @@
         "height": 900
       },
       "screenshot": "docs/evidence/openness/before-desktop.png",
-      "footerText": "Contains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+      "footerText": "Corrections and report an error\n\nContains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
     }
   ]
 }
