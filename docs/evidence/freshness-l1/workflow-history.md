@@ -50,4 +50,30 @@ production URL using a disposable ledger and ticket issue URL as evidence. Every
 local site file at `75368b12ba7e76ae25d82748d1c8453e17b74105` matched production bytes;
 observation/report succeeded on 2 November 2026. This was a rehearsal, not persisted
 repository evidence. Existing ledger entries were not replaced with its results.
-The real Actions persistence outcome must be checked after the repair reaches main.
+## Real repaired Actions run
+
+Manual dispatch of the repaired workflow at ticket head `1cde933` ran as
+[41390518791](https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/actions/runs/41390518791).
+It checked out main with full history, verified every production byte, and passed
+the full unit-fixture/report step on Python 3.12. Persistence was **not skipped**:
+it committed 24 real ledger additions at `15e2014` and pushed
+`automation/deployment-timing-41390518791-1`. GitHub then refused `createPullRequest`:
+“GitHub Actions is not permitted to create or approve pull requests.” Thus the run
+failed and those additions are **not** committed-main measurements. Artifacts alone
+do not count. No ledger entries were fabricated or silently imported from a failed
+artifact.
+
+The missing prerequisite is the repository owner's Actions PR-creation permission
+(Settings → Actions → General → Workflow permissions → Allow GitHub Actions to
+create and approve pull requests). The agent also cannot inspect that setting: its
+read-only permissions API request returned HTTP 403. Do not bypass the restriction
+with another credential or a direct-main write. Keep the ticket PR as an incomplete
+draft until permission is supplied and the real path can complete.
+
+After integrating the concurrently merged publication metadata (#51) and context
+work (#52), all 198 unit tests passed in 75.854 seconds, deterministic regeneration
+passed, and corrected-page browser checks passed at mobile/desktop. The single
+shared metadata record retains #51's publication/file fields and adds validated
+date/hash/evidence fields. The initial hash/date evidence remains the real ledger
+introduction, not a fabricated correction. Updated Before captures use main
+`4ad9115`; After captures use UI revision `35d75ef` at identical viewport/theme/state.
