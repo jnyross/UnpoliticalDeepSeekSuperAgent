@@ -76,7 +76,11 @@ def validate(root):
         assert s['kind'] in ('official', 'independent')
         if s['kind'] == 'independent':
             assert s['publisher'] in ('IFS', 'OBR', 'Resolution Foundation', 'Full Fact', 'NAO')
-        assert s['text_mode'] == 'html-blocks-v1'
+        assert s['text_mode'] in ('html-blocks-v1', 'raw'), 'Unknown extra-source text mode'
+        if s['text_mode'] == 'raw':
+            assert s['file'].lower().endswith('.pdf'), 'Raw PDF source must be a PDF'
+        else:
+            assert s['file'].endswith('.raw.html.txt'), 'HTML source must be a text download'
     for s in all_sources.values():
         assert len(s['publication'].split()) <= 35 and len(s['hosting'].split()) <= 30, 'Source label too long'
         assert len(s['url']) <= 2000, 'Source URL too long'
@@ -97,6 +101,7 @@ def validate(root):
             assert 0 < len(ref['locator'].split()) <= 15, 'Evidence locator too long'
             if field == 'assessment':
                 assert s.get('kind') == 'independent', 'Assessment must be independent'
+                assert s['publisher'] in ref['attribution'], 'Assessment publisher attribution differs'
                 assert p[field] == ref['quote'], 'Assessment must be an exact quote'
                 assert 0 < len(ref['attribution'].split()) <= 10
                 assert len((p[field] + ' ' + ref['attribution']).split()) <= LIMITS[field], 'Assessment and attribution too long'
@@ -107,6 +112,7 @@ def validate(root):
                 else:
                     assert ref['source_id'] == p['source_id'] or s['publisher'] == 'Liberal Democrats' and p['source_id'] == 'libdem', 'Cost belongs to another party'
                 assert len((p[field] + ' ' + ref['quote'] + ' ' + ref.get('attribution', '')).split()) <= LIMITS[field], 'Cost and quote too long'
+            assert ('pdf_page' in ref) == s['file'].lower().endswith('.pdf'), 'Evidence locator format differs'
             if 'pdf_page' in ref:
                 page = ref['pdf_page']
                 pages = (base / s['text_file']).read_text().split('\f')

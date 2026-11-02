@@ -48,7 +48,7 @@ class PartyAuditTests(unittest.TestCase):
 
     def test_prose_estimates_are_not_invented_tables(self):
         estimates = [f for f in self.report['figures'] if f['source_id'] == 'rf-two-child-2024']
-        self.assertEqual(len(estimates), 4)
+        self.assertEqual(len(estimates), 5)
         self.assertTrue(all(not f['table_row_available'] and f['limitation'] for f in estimates))
         self.assertFalse(self.report['accuracy_l2_claimed'])
 
@@ -58,6 +58,16 @@ class PartyAuditTests(unittest.TestCase):
         for f in figures:
             self.assertTrue(f['table_row_available'])
             self.assertIsNone(f['supplemental_source_tables'][0]['year'])
+
+    def test_uppercase_nhs_cost_preserves_billions_and_its_actual_row(self):
+        figures = [f for f in self.report['figures'] if f['source_id'] == 'reform']
+        self.assertEqual(len(figures), 1)
+        figure = figures[0]
+        self.assertEqual(figure['figure'], '£17 BILLION')
+        self.assertEqual(figure['unit'], 'GBP billion')
+        self.assertEqual(figure['supplemental_source_tables'][0]['row_label'], 'NHS Pledges')
+        self.assertEqual(figure['supplemental_source_tables'][0]['pdf_page'], 26)
+        self.assertEqual([m.group() for m in party_audit.financial_matches('20 PER CENT', 'tuv')], ['20 PER CENT'])
 
     def test_mutated_source_hash_and_table_row_fail(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -79,8 +89,8 @@ class PartyAuditTests(unittest.TestCase):
         text = '£35m, £2 trillion, 20 per cent, 4%, 7,350 nurses'
         self.assertEqual([m.group() for m in party_audit.financial_matches(text, 'reform')],
                          ['£35m', '£2 trillion', '20 per cent', '4%'])
-        self.assertEqual(self.report['occurrences'], 19)
-        self.assertEqual(self.report['occurrences_without_source_table'], 13)
+        self.assertEqual(self.report['occurrences'], 22)
+        self.assertEqual(self.report['occurrences_without_source_table'], 17)
 
     def test_wrong_scale_is_not_matched_to_supplement(self):
         data = copy.deepcopy(self.data)

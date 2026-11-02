@@ -39,6 +39,18 @@
       "period": "Annualised Savings Over 5 Year",
       "unit": "GBP billion",
       "unit_locator": "£ billions"
+    },
+    {
+      "pdf_page": 26,
+      "table": "COST PLEDGES",
+      "row_label": "NHS Pledges",
+      "column": "Annualised Cost Over 5 Year",
+      "value": "£17",
+      "row_value_text": "NHS Pledges £17",
+      "year": null,
+      "period": "Annualised Cost Over 5 Year",
+      "unit": "GBP billion",
+      "unit_locator": "£ billions"
     }
   ],
   "rf-two-child-2024": [],

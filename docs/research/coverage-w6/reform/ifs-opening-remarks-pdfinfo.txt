@@ -1,0 +1,19 @@
+Title:           Paul Johnson Opening Remarks
+Creator:         Pages
+Producer:        macOS Version 13.5 (Build 22G2074) Quartz PDFContext
+CreationDate:    Mon Jun 24 08:58:51 2024 UTC
+ModDate:         Mon Jun 24 08:58:51 2024 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           9
+Encrypted:       no
+Page size:       595 x 842 pts (A4)
+Page rot:        0
+File size:       96037 bytes
+Optimized:       no
+PDF version:     1.3

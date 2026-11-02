@@ -1,0 +1,12 @@
+{
+  "before": {
+    "revision": "5928df7222106ff80ba9e5fcfd2d5bcb54fe9342",
+    "page": "site/parties.html",
+    "sha256": "3824303c0c1761b3df7c68be7178bde84cdc75ba4e95a38e16256325b195e1b7"
+  },
+  "after": {
+    "revision": "ebc3bdd680118fce768465ec15336b5337ee1187",
+    "page": "site/parties.html",
+    "sha256": "b0fe96d15378b300fe15ade21d0a2cb77fe8cc05467f2aadd3123075177c175b"
+  }
+}

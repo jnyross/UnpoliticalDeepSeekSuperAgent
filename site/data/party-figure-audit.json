@@ -304,6 +304,23 @@
       "text_sha256": "dd2b3cd1773f8e13d73cdfaeea0dfe50395138b82ad22018818670e415fac326",
       "text_mode": "html-blocks-v1",
       "hosting": "Publisher website; retained HTML response"
+    },
+    {
+      "id": "ifs-june2024-opening-remarks",
+      "file": "ifs-june2024-opening-remarks.pdf",
+      "url": "https://ifs.org.uk/sites/default/files/2024-06/Paul%20Johnson%27s%20Opening%20Remarks.pdf",
+      "sha256": "4b1e23d31441a1a073206345451bb2fc81073369cd72ad97496dd112fb56103c",
+      "downloaded": "2026-11-02",
+      "retrieved_at": "2026-11-02T06:05:32.134606+00:00",
+      "published": "2024-06-24",
+      "publication": "General election 2024 manifesto analysis: Opening remarks by Paul Johnson, Director, Institute for Fiscal Studies",
+      "publisher": "IFS",
+      "kind": "independent",
+      "licence": "Publisher copyright; not Open Government Licence.",
+      "text_file": "ifs-june2024-opening-remarks.txt",
+      "text_sha256": "1ddc53618b81e61a07e4eeeb197eaef2fe0e42f9a9719c6822fc876c97642af2",
+      "text_mode": "raw",
+      "hosting": "Publisher website; official PDF"
     }
   ],
   "figures": [
@@ -648,31 +665,31 @@
     {
       "party_id": 1036,
       "party": "Reform UK",
-      "field": "excerpt",
+      "field": "costing",
       "unit": "GBP billion",
-      "figure": "£50 billion",
-      "quote_offset": 15,
-      "quote": "This will save £50 billion per year,",
+      "figure": "£17 BILLION",
+      "quote_offset": 20,
+      "quote": "NHS PLEDGES COSTS = £17 BILLION PA",
       "source_id": "reform",
       "file": "manifesto-2024-reform.pdf",
       "native_locator": {
-        "locator": "PDF page 6",
-        "pdf_page": 6
+        "locator": "PDF page 9; NHS package cost",
+        "pdf_page": 9
       },
-      "period_and_year": "Annual saving; no fiscal year is stated in this passage.",
-      "scope": "UK government departments; efficiency and procurement savings claim, not the whole fiscal plan.",
-      "baseline": "Savings from departmental spending, not total spending. The pledge calls for cuts to waste, bureaucracy and procurement costs while protecting frontline services.",
+      "period_and_year": "Annualised over a five-year electoral term; no fiscal start year or price basis is stated.",
+      "scope": "NHS package and waiting-list target; no geographic split given. IFS disputes the outcome at that cost, not a single staffing measure.",
+      "baseline": "Cost of the party's package, not the whole NHS budget. It includes tax relief, patient vouchers and staffing changes; IFS gives no replacement total.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [
         {
-          "pdf_page": 25,
-          "table": "SAVINGS PLEDGES",
-          "row_label": "Slash wasteful Government spending",
-          "column": "Annualised Savings Over 5 Year",
-          "value": "£50",
-          "row_value_text": "Slash wasteful Government spending Save £5 in 100 incl govt depts. quangos, £50 commissions",
+          "pdf_page": 26,
+          "table": "COST PLEDGES",
+          "row_label": "NHS Pledges",
+          "column": "Annualised Cost Over 5 Year",
+          "value": "£17",
+          "row_value_text": "NHS Pledges £17",
           "year": null,
-          "period": "Annualised Savings Over 5 Year",
+          "period": "Annualised Cost Over 5 Year",
           "unit": "GBP billion",
           "unit_locator": "£ billions"
         }
@@ -683,37 +700,24 @@
     {
       "party_id": 1036,
       "party": "Reform UK",
-      "field": "costing",
+      "field": "assessment",
       "unit": "GBP billion",
-      "figure": "£50 billion",
-      "quote_offset": 15,
-      "quote": "This will save £50 billion per year,",
-      "source_id": "reform",
-      "file": "manifesto-2024-reform.pdf",
+      "figure": "£17 billion",
+      "quote_offset": 67,
+      "quote": "the claim that they could eliminate NHS waiting lists at a cost of £17 billion a year is demonstrably wrong",
+      "source_id": "ifs-june2024-opening-remarks",
+      "file": "ifs-june2024-opening-remarks.pdf",
       "native_locator": {
-        "locator": "PDF page 6",
+        "locator": "PDF page 6; Reform NHS claim",
         "pdf_page": 6
       },
-      "period_and_year": "Annual saving; no fiscal year is stated in this passage.",
-      "scope": "UK government departments; efficiency and procurement savings claim, not the whole fiscal plan.",
-      "baseline": "Savings from departmental spending, not total spending. The pledge calls for cuts to waste, bureaucracy and procurement costs while protecting frontline services.",
+      "period_and_year": "Annualised over a five-year electoral term; no fiscal start year or price basis is stated.",
+      "scope": "NHS package and waiting-list target; no geographic split given. IFS disputes the outcome at that cost, not a single staffing measure.",
+      "baseline": "Cost of the party's package, not the whole NHS budget. It includes tax relief, patient vouchers and staffing changes; IFS gives no replacement total.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "supplemental_source_tables": [
-        {
-          "pdf_page": 25,
-          "table": "SAVINGS PLEDGES",
-          "row_label": "Slash wasteful Government spending",
-          "column": "Annualised Savings Over 5 Year",
-          "value": "£50",
-          "row_value_text": "Slash wasteful Government spending Save £5 in 100 incl govt depts. quangos, £50 commissions",
-          "year": null,
-          "period": "Annualised Savings Over 5 Year",
-          "unit": "GBP billion",
-          "unit_locator": "£ billions"
-        }
-      ],
-      "table_row_available": true,
-      "limitation": null
+      "supplemental_source_tables": [],
+      "table_row_available": false,
+      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
     {
       "party_id": 29,
@@ -782,28 +786,94 @@
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
     {
+      "party_id": 158,
+      "party": "Traditional Unionist Voice",
+      "field": "excerpt",
+      "unit": "percent",
+      "figure": "20%",
+      "quote_offset": 46,
+      "quote": "The National Insurance rate will be raised to 20% for foreign workers. This would incentivise businesses to employ British citizens whose National Insurance rate would stay at 13.8%. Essential foreign health and care workers would be exempt from the tax, as would businesses who employ 5 staff members and under.",
+      "source_id": "tuv",
+      "file": "manifesto-2024-tuv.pdf",
+      "native_locator": {
+        "locator": "PDF page 14; employer immigration tax",
+        "pdf_page": 14
+      },
+      "period_and_year": "Five-year projected revenue; no fiscal start year or price basis is stated.",
+      "scope": "Reform UK proposal quoted in TUV's manifesto; not a Northern Ireland-only revenue total. Health and care staff and small firms are exempt.",
+      "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
+      "status": "2024 election proposal; not current spending or a claim of policy now in force.",
+      "supplemental_source_tables": [],
+      "table_row_available": false,
+      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+    },
+    {
+      "party_id": 158,
+      "party": "Traditional Unionist Voice",
+      "field": "excerpt",
+      "unit": "percent",
+      "figure": "13.8%",
+      "quote_offset": 176,
+      "quote": "The National Insurance rate will be raised to 20% for foreign workers. This would incentivise businesses to employ British citizens whose National Insurance rate would stay at 13.8%. Essential foreign health and care workers would be exempt from the tax, as would businesses who employ 5 staff members and under.",
+      "source_id": "tuv",
+      "file": "manifesto-2024-tuv.pdf",
+      "native_locator": {
+        "locator": "PDF page 14; employer immigration tax",
+        "pdf_page": 14
+      },
+      "period_and_year": "Five-year projected revenue; no fiscal start year or price basis is stated.",
+      "scope": "Reform UK proposal quoted in TUV's manifesto; not a Northern Ireland-only revenue total. Health and care staff and small firms are exempt.",
+      "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
+      "status": "2024 election proposal; not current spending or a claim of policy now in force.",
+      "supplemental_source_tables": [],
+      "table_row_available": false,
+      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+    },
+    {
+      "party_id": 158,
+      "party": "Traditional Unionist Voice",
+      "field": "costing",
+      "unit": "GBP billion",
+      "figure": "£20 billion",
+      "quote_offset": 22,
+      "quote": "could raise more than £20 billion over five years",
+      "source_id": "tuv",
+      "file": "manifesto-2024-tuv.pdf",
+      "native_locator": {
+        "locator": "PDF page 14; projected revenue",
+        "pdf_page": 14
+      },
+      "period_and_year": "Five-year projected revenue; no fiscal start year or price basis is stated.",
+      "scope": "Reform UK proposal quoted in TUV's manifesto; not a Northern Ireland-only revenue total. Health and care staff and small firms are exempt.",
+      "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
+      "status": "2024 election proposal; not current spending or a claim of policy now in force.",
+      "supplemental_source_tables": [],
+      "table_row_available": false,
+      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+    },
+    {
       "party_id": 38,
       "party": "Ulster Unionist Party",
       "field": "costing",
-      "unit": "GBP million",
-      "figure": "£35 million",
-      "quote_offset": 53,
-      "quote": "ensuring a minimum annual investment of no less than £35 million into the Skills Fund.",
-      "source_id": "uup",
-      "file": "manifesto-2024-uup.pdf",
+      "unit": "GBP billion",
+      "figure": "£2.5 billion",
+      "quote_offset": 57,
+      "quote": "Abolishing the two-child limit would cost the Government £2.5 billion in 2024-25",
+      "source_id": "rf-two-child-2024",
+      "file": "rf-two-child-2024.raw.html.txt",
       "native_locator": {
-        "locator": "PDF page 9",
-        "pdf_page": 9
+        "locator": "Opening summary; two-child-limit abolition",
+        "text_line": 66
       },
-      "period_and_year": "Annual investment; no start or end fiscal year is stated in this passage.",
-      "scope": "Northern Ireland Job Skills Fund; training with government, business, trade unions and educational institutions.",
-      "baseline": "Funding equivalent to the UK Apprenticeship Levy paid by Northern Ireland firms, with an annual minimum. This is a proposed fund, not current spending.",
+      "period_and_year": "RF estimate for 2024-25; cash, not a lifetime total. Research published before the election.",
+      "scope": "Selected two-child policy only. Resolution Foundation models Great Britain, not a full UK or party plan cost; Northern Ireland, the benefit cap and bedroom tax excluded.",
+      "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     }
   ],
-  "occurrences": 19,
-  "occurrences_without_source_table": 13
+  "occurrences": 22,
+  "occurrences_without_source_table": 17
 }
