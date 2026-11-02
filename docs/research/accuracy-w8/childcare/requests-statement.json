@@ -1,0 +1,28 @@
+{
+  "file": "june-monitoring-statement-2024-25.pdf",
+  "url": "https://www.finance-ni.gov.uk/sites/default/files/publications/dfp/PUBLIC%20EXPENDITURE%202023-24%20PROVISIONAL%20OUTTURN%20AND%202024-25%20JUNE%20MONITORING.pdf",
+  "final_url": "https://www.finance-ni.gov.uk/sites/default/files/publications/dfp/PUBLIC%20EXPENDITURE%202023-24%20PROVISIONAL%20OUTTURN%20AND%202024-25%20JUNE%20MONITORING.pdf",
+  "status": 200,
+  "headers": {
+    "Connection": "close",
+    "Content-Length": "383125",
+    "content-type": "application/pdf",
+    "last-modified": "Thu, 18 Jul 2024 02:49:22 GMT",
+    "expires": "Tue, 03 Nov 2026 10:25:34 GMT",
+    "cache-control": "max-age=86400",
+    "etag": "W/\"669882b2-5d895\"",
+    "traceresponse": "00-18e433762b0f543edd2ea0bd282fc6c3-324808ad39181874-01",
+    "Accept-Ranges": "bytes",
+    "Age": "0",
+    "Date": "Mon, 02 Nov 2026 10:25:34 GMT",
+    "X-Cache": "MISS, MISS, MISS",
+    "X-Cache-Hits": "0, 0, 0",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=31557600"
+  },
+  "bytes": 383125,
+  "sha256": "afec2f8d028e3aa628d246b20a31771ec2288918697f46187895bedcdfa56a83",
+  "retrieved_utc": "2026-11-02T10:25:34.284961+00:00"
+}

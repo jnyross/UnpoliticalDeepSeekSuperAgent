@@ -3,3 +3,4 @@
 sources/*costings-2024.txt -whitespace
 site/sources/*costings-2024.txt -whitespace
 docs/research/accuracy-w7/** -whitespace
+docs/research/accuracy-w8/** -whitespace

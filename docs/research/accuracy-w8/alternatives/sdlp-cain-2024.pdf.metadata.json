@@ -1,0 +1,24 @@
+{
+  "requested_url": "https://cain.ulst.ac.uk/issues/politics/docs/sdlp/sdlp_2024-07-04_ge_man.pdf",
+  "final_url": "https://cain.ulster.ac.uk/issues/politics/docs/sdlp/sdlp_2024-07-04_ge_man.pdf",
+  "retrieved_at": "2026-11-02T10:23:45.160764+00:00",
+  "http_status": 200,
+  "headers": {
+    "Content-Type": "application/pdf",
+    "Content-Length": "1979594",
+    "Connection": "close",
+    "Date": "Mon, 02 Nov 2026 10:23:44 GMT",
+    "last-modified": "Mon, 29 Jul 2024 16:15:40 GMT",
+    "Server": "nginx",
+    "x-envoy-upstream-service-time": "14",
+    "accept-ranges": "bytes",
+    "etag": "\"1e34ca-61e652c0f6300\"",
+    "X-Cache": "Miss from cloudfront",
+    "Via": "1.1 7a9b9c43feb0aea0b869406fb217b842.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "HEL51-P1",
+    "X-Amz-Cf-Id": "jH2wUkUhOt2azc-CjozXNV6-dOCfati7bYi522fOqEPP8lt5c29dXg=="
+  },
+  "bytes": 1979594,
+  "sha256": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+  "classification": "candidate; not a verified matching table"
+}

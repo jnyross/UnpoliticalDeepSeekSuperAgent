@@ -1,0 +1,24 @@
+{
+  "requested_url": "https://www.resolutionfoundation.org/publications/old-age-tendencies/",
+  "final_url": "https://www.resolutionfoundation.org/publications/old-age-tendencies/",
+  "retrieved_at": "2026-11-02T10:25:45.121891+00:00",
+  "http_status": 200,
+  "headers": {
+    "Server": "nginx",
+    "Date": "Mon, 02 Nov 2026 10:25:44 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Last-Modified": "Mon, 02 Nov 2026 03:42:59 GMT",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "0",
+    "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
+    "Referrer-Policy": "origin-when-cross-origin",
+    "Cross-Origin-Resource-Policy": "same-site",
+    "Permissions-Policy": "geolocation=(self), camera=*, microphone=*, speaker=*, payment=(self), autoplay=*, fullscreen=*"
+  },
+  "bytes": 162797,
+  "sha256": "b63bfe7f14452f1038d873ebf8c0ac903c77f389591369f284206a3491cd562c",
+  "classification": "new candidate inspected; no exact matching native table verified"
+}

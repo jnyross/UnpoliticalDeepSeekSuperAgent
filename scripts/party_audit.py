@@ -40,7 +40,7 @@ def audit(root, data):
     # headings, row, column and amount on the actual retained PDF, independently.
     for source_id, tables in native.items():
         for table in tables:
-            assert set(table) - {'evidence_source_id', 'column_value_series'} == {'pdf_page', 'table', 'row_label', 'column', 'value', 'year', 'period', 'unit', 'unit_locator', 'row_value_text'}
+            assert set(table) - {'evidence_source_id', 'column_value_series', 'value_location'} == {'pdf_page', 'table', 'row_label', 'column', 'value', 'year', 'period', 'unit', 'unit_locator', 'row_value_text'}
             evidence_source_id = table.get('evidence_source_id', source_id)
             assert evidence_source_id in sources, 'Unknown supplemental evidence source'
             source = sources[evidence_source_id]
@@ -52,7 +52,17 @@ def audit(root, data):
                 layout = out.read_text()
                 text = parties.normal(layout)
             assert table['unit'] in ('GBP million', 'GBP billion', 'percent')
-            for key in ('table', 'row_label', 'column', 'value', 'period', 'unit_locator'):
+            location = table.get('value_location', 'column')
+            assert location in ('column', 'row_label'), 'Unknown native value location'
+            if location == 'row_label':
+                # A tax rate can be printed in the policy label, not the cash
+                # column. Never describe that percentage as a £m cell value.
+                assert table['unit'] == 'percent' and table['column'] is None, 'Row-label rates must not claim a cash column'
+                assert 'column_value_series' not in table, 'Row-label rates have no cash series'
+                assert parties.normal(table['value']) in parties.normal(table['row_label']), 'Rate not in native row label'
+            else:
+                assert table['column'] and parties.normal(table['column']) in text, 'Table column not on PDF page'
+            for key in ('table', 'row_label', 'value', 'period', 'unit_locator'):
                 assert table[key] and parties.normal(table[key]) in text, f'Table {key} not on PDF page: {source_id}'
             # Keep a literal row/value span: Labour's two totals share one
             # layout line, so mere page presence or proximity is insufficient.

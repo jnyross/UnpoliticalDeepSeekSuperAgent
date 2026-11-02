@@ -90,7 +90,7 @@ class PartyAuditTests(unittest.TestCase):
         self.assertEqual([m.group() for m in party_audit.financial_matches(text, 'reform')],
                          ['£35m', '£2 trillion', '20 per cent', '4%'])
         self.assertEqual(self.report['occurrences'], 24)
-        self.assertEqual(self.report['occurrences_without_source_table'], 17)
+        self.assertEqual(self.report['occurrences_without_source_table'], 16)
 
     def test_wrong_scale_is_not_matched_to_supplement(self):
         data = copy.deepcopy(self.data)
@@ -152,6 +152,31 @@ class PartyAuditTests(unittest.TestCase):
             path.write_text(json.dumps(native))
             with self.assertRaisesRegex(AssertionError, 'Complete fiscal column sequence'):
                 party_audit.audit(root, self.data)
+
+    def test_libdem_rate_is_in_native_policy_label_not_cash_column(self):
+        f = next(f for f in self.report['figures'] if f['source_id'] == 'libdem')
+        self.assertEqual((f['figure'], f['unit']), ('4%', 'percent'))
+        table = f['supplemental_source_tables'][0]
+        self.assertEqual(table['evidence_source_id'], 'libdem-costings-2024')
+        self.assertEqual(table['value_location'], 'row_label')
+        self.assertIsNone(table['column'])
+        self.assertEqual(table['year'], '2028-29')
+        self.assertIn('no fiscal year', f['period_and_year'])
+
+    def test_row_label_rate_cannot_claim_a_cash_column_or_value(self):
+        for mutate in (lambda t: t.update(column='£m 2028-29'),
+                       lambda t: t.update(unit='GBP million'),
+                       lambda t: t.update(value='5%'),
+                       lambda t: t.update(value_location='invented')):
+            with self.subTest(mutate=mutate), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                shutil.copytree(ROOT / 'sources', root / 'sources')
+                path = root / 'sources/party-figure-locators.json'
+                native = json.loads(path.read_text())
+                mutate(native['libdem'][0])
+                path.write_text(json.dumps(native))
+                with self.assertRaises(AssertionError):
+                    party_audit.audit(root, self.data)
 
     def test_invalid_download_date_fails(self):
         data = copy.deepcopy(self.data)
