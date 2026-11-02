@@ -228,14 +228,17 @@ class PublicationTests(unittest.TestCase):
         raw = (ROOT / 'site/data/income.csv').read_text(encoding='utf-8')
         checker.validate_csv(raw, self.data)
         rows = list(csv.reader(io.StringIO(raw)))
-        for col in range(len(rows[0])):
-            with self.subTest(column=rows[0][col]):
-                changed = copy.deepcopy(rows)
-                changed[1][col] = '99999'
-                stream = io.StringIO()
-                csv.writer(stream).writerows(changed)
-                with self.assertRaises(checker.ValidationError):
-                    checker.validate_csv(stream.getvalue(), self.data)
+        forecast_index = next(i for i, row in enumerate(rows[1:], 1)
+                              if row[rows[0].index('status')] == 'forecast')
+        for row_index in (1, forecast_index):
+            for col in range(len(rows[0])):
+                with self.subTest(row=row_index, column=rows[0][col]):
+                    changed = copy.deepcopy(rows)
+                    changed[row_index][col] = '99999'
+                    stream = io.StringIO()
+                    csv.writer(stream).writerows(changed)
+                    with self.assertRaises(checker.ValidationError):
+                        checker.validate_csv(stream.getvalue(), self.data)
         with self.assertRaises(checker.ValidationError):
             checker.validate_csv(raw + raw.splitlines()[1] + '\n', self.data)
 

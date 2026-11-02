@@ -238,7 +238,9 @@ def validate_csv(raw, data):
     require(len(rows) == len(data['records']) + 1, 'Income CSV missing/extra records')
     for index, (row, record) in enumerate(zip(rows[1:], data['records']), 2):
         require(len(row) == len(CSV_COLUMNS), f'Income CSV row {index}: column count differs')
-        expected = dict(record, cells='; '.join(record['cells']), operands='; '.join(record['operands']))
+        note = data['forecast_source_note'] if record['status'] == 'forecast' else data['notes'][0]
+        expected = dict(record, cells='; '.join(record['cells']), operands='; '.join(record['operands']),
+                        source_status_cell=note['cell'], source_status_note=note['text'])
         expected.update({'source_' + field: data['source'][field]
                          for field in ('publication', 'published', 'url', 'sha256')})
         for field, value in zip(CSV_COLUMNS, row):
