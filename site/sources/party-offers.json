@@ -321,22 +321,30 @@
       "name": "Green Party",
       "seats": 4,
       "source_id": "green",
-      "offer": "Invest in NHS hospital building and repair.",
-      "excerpt": "We would invest £20bn in NHS budgets over the life of the parliament for hospital building and repair.",
-      "scope": "NHS England hospital building and repair; capital spending, not the whole health plan.",
-      "baseline": "Additional capital spending, not total NHS funding. The surrounding passage describes extra capital needs over the next five years.",
-      "year": "Over the life of the next parliament; not an annual amount.",
+      "offer": "End the two-child limit on benefits.",
+      "excerpt": "Abolish the two-child benefit cap",
+      "scope": "Selected two-child policy only. Resolution Foundation models Great Britain, not a full UK or party plan cost; Northern Ireland, the benefit cap and bedroom tax excluded.",
+      "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
+      "year": "RF estimate for 2024-25; cash, not a lifetime total. Research published before the election.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Party claim: hospital capital investment.",
-      "assessment": "Unavailable here: The checked Full Fact manifesto review covers waiting-list figures and insulation claims, not this hospital building and repair cost.",
-      "locator": "PDF page 4",
-      "pdf_page": 4,
+      "costing": "Independent estimate, not a party costing.",
+      "assessment": "one of the most efficient ways to drive down child poverty rates",
+      "locator": "PDF page 12",
+      "pdf_page": 12,
       "evidence": {
         "costing": {
-          "source_id": "green",
-          "quote": "We would invest £20bn in NHS budgets over the life of the parliament for hospital building and repair.",
-          "locator": "PDF page 4",
-          "pdf_page": 4
+          "source_id": "rf-two-child-2024",
+          "quote": "Abolishing the two-child limit would cost the Government £2.5 billion in 2024-25",
+          "locator": "Opening summary; two-child-limit abolition",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        },
+        "assessment": {
+          "source_id": "rf-two-child-2024",
+          "quote": "one of the most efficient ways to drive down child poverty rates",
+          "locator": "Opening summary; child poverty",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
         }
       }
     },

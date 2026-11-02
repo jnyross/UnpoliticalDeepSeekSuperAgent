@@ -141,11 +141,11 @@ class PartyOffersTests(unittest.TestCase):
     def test_independent_sources_have_separate_register(self):
         self.assertEqual(len(self.original['sources']), 13)
         self.assertEqual(len(self.original['evidence_sources']), 4)
-        self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 6)
-        self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 4)
+        self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 7)
+        self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 3)
 
     def test_cost_only_claims_keep_independent_assessment_gap(self):
-        for source_id in ('green', 'reform', 'sdlp', 'uup'):
+        for source_id in ('reform', 'sdlp', 'uup'):
             party = next(p for p in self.original['parties'] if p['source_id'] == source_id)
             with self.subTest(source_id=source_id):
                 self.assertEqual(set(party['evidence']), {'costing'})
@@ -164,13 +164,13 @@ class PartyOffersTests(unittest.TestCase):
         self.fails(fake_assessment)
 
     def test_new_cost_claims_reject_amount_and_page_mutations(self):
-        for source_id in ('green', 'reform', 'sdlp', 'uup'):
+        for source_id in ('reform', 'sdlp', 'uup'):
             with self.subTest(source_id=source_id):
                 self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id)['evidence']['costing'].update(quote='£999 billion'))
                 self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id)['evidence']['costing'].update(pdf_page=1))
 
     def test_independent_cost_estimates_are_labelled_and_scoped(self):
-        for identifier in ('alliance', 'plaid', 'snp'):
+        for identifier in ('alliance', 'green', 'plaid', 'snp'):
             row = next(p for p in self.original['parties'] if p['source_id'] == identifier)
             with self.subTest(party=identifier):
                 self.assertEqual(row['evidence']['costing']['source_id'], 'rf-two-child-2024')

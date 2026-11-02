@@ -1,8 +1,8 @@
 # Wave 5: obtainable devolved-party selected-policy evidence
 
-Checked 2026-11-02 UTC. This audit underpins the wave-five selected-policy updates: **not a completed fiscal-plan audit or Coverage L4 award**. The three matched two-child-limit pledges are now paired with the January RF estimate and quotation; their other policies and Northern Ireland costs are not assessed by that estimate. Ordinary public publisher requests only; no challenge/protection bypass. Publisher content is copyright its respective publisher, not automatically OGL.
+Checked 2026-11-02 UTC. This audit underpins the wave-five selected-policy updates: **not a completed fiscal-plan audit or Coverage L4 award**. The four matched two-child-limit pledges are now paired with the January RF estimate and quotation; their other policies and Northern Ireland costs are not assessed by that estimate. Ordinary public publisher requests only; no challenge/protection bypass. Publisher content is copyright its respective publisher, not automatically OGL.
 
-## Positive result: a matched selected component for SNP, Plaid and Alliance
+## Positive result: a matched selected component for SNP, Plaid, Alliance and Green
 
 **Resolution Foundation, Lalitha Try, _Catastrophic caps_, 31 January 2024.**
 
@@ -13,7 +13,7 @@ Checked 2026-11-02 UTC. This audit underpins the wave-five selected-policy updat
 - Geographic scope: [line 90](<rf-catastrophic-caps-january2024.txt#L90>) explicitly says “families in Great Britain”. Treat the modelled estimate as GB-scoped. No independently verified NI add-on or complete UK fiscal total is claimed.
 - Important uncertainty, [line 202](<rf-catastrophic-caps-january2024.txt#L202>): “A major uncertainty associated with this costing is how many of the families that become newly entitled to UC as a result of abolishing the two-child limit would actually claim UC in practice.”
 - £2.5bn is **RF's estimate**, not a party's own costing or endorsement of its full manifesto. It is a fiscal-year 2024–25 flow, not a multiyear total; the line does not state a real-terms conversion for this initial-year number. Keep the initial-year estimate separate from the explicitly constant-price steady-state estimate.
-- RF also estimates £3bn for abolishing both the two-child limit and benefit cap ([lines 163–166](<rf-catastrophic-caps-january2024.txt#L163-L166>)). Prefer selecting **only two-child-limit abolition** across the three parties: do not accidentally import the combined amount or assess unrelated benefit reforms.
+- RF also estimates £3bn for abolishing both the two-child limit and benefit cap ([lines 163–166](<rf-catastrophic-caps-january2024.txt#L163-L166>)). Prefer selecting **only two-child-limit abolition** across the four parties: do not accidentally import the combined amount or assess unrelated benefit reforms.
 
 ### Exact party commitment match
 
@@ -58,3 +58,7 @@ Search also exposed a same-titled _Initial response to the SNP’s manifesto_ sy
 ## Reproduction/integrity
 
 [Retention script](<retain-ni-policy-evidence.py>) makes ordinary public GET requests and records successful raw HTML and HTMLParser-extracted text with UTC dates and SHA-256. [Metadata](<ni-two-child-metadata.json>) identifies exact body files. Snapshot hashes can be checked offline; no live refetch is required to substantiate the retained quotations. These files are research evidence, not silently consumed application data.
+
+## Final equal-policy check: Green
+
+The same retained Green manifesto explicitly says “Abolish the two-child benefit cap” at PDF page 12 (text line 1740). Apply the same RF estimate and assessment to this selected abolition component, not its separate benefits increases or party child-poverty projection. The initially verified hospital-capital proposal is an unselected cost-only lead, not evidence lost or a claim that no Green assessment exists. The live page uses the matched two-child example for Green as well as Alliance, Plaid and SNP.

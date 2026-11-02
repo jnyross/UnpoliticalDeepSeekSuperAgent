@@ -105,8 +105,8 @@ class SectionDatesTests(unittest.TestCase):
         page = self.render([notice])['parties.html']
         cards = dict(re.findall(r'<article[^>]*data-party-id="([^"]+)"[^>]*>(.*?)</article>', page, re.S))
         data = json.loads((ROOT/'sources/party-offers.json').read_text())
-        expected = {str(p['id']) for p in data['parties'] if p['source_id'] in ('alliance', 'plaid', 'snp')}
-        self.assertEqual(len(expected), 3)
+        expected = {str(p['id']) for p in data['parties'] if p['source_id'] in ('alliance', 'green', 'plaid', 'snp')}
+        self.assertEqual(len(expected), 4)
         for identifier, card in cards.items():
             self.assertEqual('Source revised.' in card, identifier in expected)
             if identifier in expected:
