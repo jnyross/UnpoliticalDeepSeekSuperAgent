@@ -134,6 +134,34 @@ per-request cache timestamps are excluded from release identity. Extend the inve
 coverage test along with the source pipeline. This schedule notices releases and opens
 review tasks; it does not claim a year of timely updates or people-review evidence.
 
+## Public corrections log
+
+Every page links to `/corrections.html`, which works without JavaScript. Its retained
+source is `sources/corrections.json`; the same JSON is published for download. The
+initial log is honestly empty, not invented past events or people-review evidence.
+Routine new features and source refreshes are not corrections.
+
+Append a verified error with `id` (stable lowercase hyphenated name), `date` (ISO date
+the fix was applied), `page` (site-relative HTML path), `error`, `correction`, and
+`source` (this repository's public commit or pull-request URL). Prefer full immutable
+commit URLs. Verify that the change supports the error and fix: URL syntax is not
+proof of a claim. Apply the same evidence standard for every party. Keep date order.
+To correct an entry, append a new one naming its ID; never edit or delete the old one.
+Rebuild with `.venv/bin/python scripts/build.py` and commit source and output.
+
+```sh
+.venv/bin/python scripts/corrections.py --base origin/main
+.venv/bin/python -m unittest discover -s tests -p 'test_corrections.py' -v
+```
+
+CI compares entries against the PR base (or pre-push revision on main), rejecting
+changed, reordered or dropped entries. First introduction is allowed only when the
+verified base commit has no log. Invalid bases fail closed. Synthetic test fixtures
+exercise nonempty logs; they are not published as real events. This Git-history guard
+is not tamper-proof storage: changes to CI or repository history can defeat it.
+Actual opposing political reviewers and published responses remain absent; this
+work does not award Impartiality L4.
+
 ## Reproduce and check without network access
 
 ```sh
