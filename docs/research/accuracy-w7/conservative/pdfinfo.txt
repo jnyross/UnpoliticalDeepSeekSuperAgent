@@ -1,0 +1,24 @@
+Title:           Costings Document.indd
+Creator:         Adobe InDesign 19.4 (Macintosh)
+Producer:        Adobe PDF Library 17.0
+CreationDate:    Tue Jun 11 07:13:42 2024 UTC
+ModDate:         Tue Jun 11 07:13:44 2024 UTC
+Custom Metadata: yes
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           8
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       748262 bytes
+Optimized:       no
+PDF version:     1.3
+PDF subtype:    PDF/X-1:2001
+    Title:         ISO 15930 - Electronic document file format for prepress digital data exchange (PDF/X)
+    Abbreviation:  PDF/X-1:2001
+    Subtitle:      Part 1: Complete exchange using CMYK data (PDF/X-1 and PDF/X-1a)
+    Standard:      ISO 15930-1

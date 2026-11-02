@@ -321,6 +321,42 @@
       "text_sha256": "1ddc53618b81e61a07e4eeeb197eaef2fe0e42f9a9719c6822fc876c97642af2",
       "text_mode": "raw",
       "hosting": "Publisher website; official PDF"
+    },
+    {
+      "id": "conservative-costings-2024",
+      "file": "conservative-costings-2024.pdf",
+      "text_file": "conservative-costings-2024.txt",
+      "url": "https://web.archive.org/web/20240611130512id_/https://public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf",
+      "sha256": "77e183b447bed60d8c1f9efc63fd4b0c256588051e82268b5dc2c3521b2489f7",
+      "text_sha256": "2977a617f6293f6751bd7c0aa65e980c623d6599547137b8990591259bdf20a0",
+      "downloaded": "2026-11-02",
+      "published": "2024",
+      "publication_date_precision": "year",
+      "publication": "Conservative Manifesto 2024: Costings Document",
+      "publisher": "Conservative",
+      "kind": "official",
+      "text_mode": "raw",
+      "hosting": "Internet Archive: native party PDF captured 11 June 2024",
+      "licence": "Party publisher copyright; not Open Government Licence.",
+      "source_original_url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf",
+      "provenance_note": "Live publisher returned 403. Native public archive bytes match the CDX digest; publication day is not inferred from capture time."
+    },
+    {
+      "id": "libdem-costings-2024",
+      "file": "libdem-costings-2024.pdf",
+      "text_file": "libdem-costings-2024.txt",
+      "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/Funding_a_Fair_Deal_-_Liberal_Democrat_Manifesto_Costings_2024.pdf",
+      "sha256": "378f7ccaafcd18eea51a86b422db98462602f22fabd1418d48180a46a5f68ff3",
+      "text_sha256": "5786b36febd710c567356910e76d4ad3ed02946f9b5e0f15f1f1ee9d1f88df20",
+      "downloaded": "2026-11-02",
+      "published": "2024",
+      "publication_date_precision": "year",
+      "publication": "Funding a Fair Deal: Liberal Democrat manifesto costings 2024",
+      "publisher": "Liberal Democrats",
+      "kind": "official",
+      "text_mode": "raw",
+      "hosting": "Party publisher",
+      "licence": "Party publisher copyright; not Open Government Licence."
     }
   ],
   "figures": [
@@ -343,6 +379,7 @@
       "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -364,9 +401,31 @@
       "scope": "Working-age welfare reform; UK manifesto claim.",
       "baseline": "Savings against projected benefit spending, not total welfare spending. The text says spending would otherwise rise.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "supplemental_source_tables": [],
-      "table_row_available": false,
-      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+      "supplemental_source_tables": [
+        {
+          "evidence_source_id": "conservative-costings-2024",
+          "pdf_page": 4,
+          "table": "Table 2: Welfare Reform and Tackling the Tax Gap",
+          "row_label": "Welfare reform",
+          "column": "2029-30",
+          "value": "12,000",
+          "row_value_text": "Welfare reform 1 4,000 8,000 10,000 11,000 12,000",
+          "year": "2029-30",
+          "period": "2029-30",
+          "unit": "GBP million",
+          "unit_locator": "£ million",
+          "column_value_series": {
+            "2025-26": "4,000",
+            "2026-27": "8,000",
+            "2027-28": "10,000",
+            "2028-29": "11,000",
+            "2029-30": "12,000"
+          }
+        }
+      ],
+      "unmatched_supplemental_source_tables": [],
+      "table_row_available": true,
+      "limitation": null
     },
     {
       "party_id": 4,
@@ -386,9 +445,31 @@
       "scope": "Working-age welfare reform; UK manifesto claim.",
       "baseline": "Savings against projected benefit spending, not total welfare spending. The text says spending would otherwise rise.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "supplemental_source_tables": [],
-      "table_row_available": false,
-      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+      "supplemental_source_tables": [
+        {
+          "evidence_source_id": "conservative-costings-2024",
+          "pdf_page": 4,
+          "table": "Table 2: Welfare Reform and Tackling the Tax Gap",
+          "row_label": "Welfare reform",
+          "column": "2029-30",
+          "value": "12,000",
+          "row_value_text": "Welfare reform 1 4,000 8,000 10,000 11,000 12,000",
+          "year": "2029-30",
+          "period": "2029-30",
+          "unit": "GBP million",
+          "unit_locator": "£ million",
+          "column_value_series": {
+            "2025-26": "4,000",
+            "2026-27": "8,000",
+            "2027-28": "10,000",
+            "2028-29": "11,000",
+            "2029-30": "12,000"
+          }
+        }
+      ],
+      "unmatched_supplemental_source_tables": [],
+      "table_row_available": true,
+      "limitation": null
     },
     {
       "party_id": 4,
@@ -409,6 +490,7 @@
       "baseline": "Savings against projected benefit spending, not total welfare spending. The text says spending would otherwise rise.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -431,6 +513,7 @@
       "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -466,6 +549,20 @@
           "unit_locator": "£M"
         }
       ],
+      "unmatched_supplemental_source_tables": [
+        {
+          "pdf_page": 127,
+          "table": "Public Services",
+          "row_label": "Total including Barnett consequentials",
+          "column": "POLICIES FUNDED (2028-29)",
+          "value": "4,835",
+          "row_value_text": "Total including Barnett consequentials 4,835",
+          "year": "2028-29",
+          "period": "2028-29",
+          "unit": "GBP million",
+          "unit_locator": "£M"
+        }
+      ],
       "table_row_available": true,
       "limitation": null
     },
@@ -495,6 +592,20 @@
           "column": "POLICIES FUNDED (2028-29)",
           "value": "4,835",
           "row_value_text": "Total including Barnett consequentials 4,835",
+          "year": "2028-29",
+          "period": "2028-29",
+          "unit": "GBP million",
+          "unit_locator": "£M"
+        }
+      ],
+      "unmatched_supplemental_source_tables": [
+        {
+          "pdf_page": 127,
+          "table": "Public Services",
+          "row_label": "Total",
+          "column": "REVENUE",
+          "value": "7,350",
+          "row_value_text": "Total 7,350",
           "year": "2028-29",
           "period": "2028-29",
           "unit": "GBP million",
@@ -536,6 +647,20 @@
           "unit_locator": "£M"
         }
       ],
+      "unmatched_supplemental_source_tables": [
+        {
+          "pdf_page": 127,
+          "table": "Public Services",
+          "row_label": "Total including Barnett consequentials",
+          "column": "POLICIES FUNDED (2028-29)",
+          "value": "4,835",
+          "row_value_text": "Total including Barnett consequentials 4,835",
+          "year": "2028-29",
+          "period": "2028-29",
+          "unit": "GBP million",
+          "unit_locator": "£M"
+        }
+      ],
       "table_row_available": true,
       "limitation": null
     },
@@ -565,6 +690,20 @@
           "column": "POLICIES FUNDED (2028-29)",
           "value": "4,835",
           "row_value_text": "Total including Barnett consequentials 4,835",
+          "year": "2028-29",
+          "period": "2028-29",
+          "unit": "GBP million",
+          "unit_locator": "£M"
+        }
+      ],
+      "unmatched_supplemental_source_tables": [
+        {
+          "pdf_page": 127,
+          "table": "Public Services",
+          "row_label": "Total",
+          "column": "REVENUE",
+          "value": "7,350",
+          "row_value_text": "Total 7,350",
           "year": "2028-29",
           "period": "2028-29",
           "unit": "GBP million",
@@ -593,6 +732,7 @@
       "baseline": "Party release uses current buyback levels, then allows for firms changing their behaviour. This is a revenue claim, not a spending cost.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -615,6 +755,21 @@
       "baseline": "Party release uses current buyback levels, then allows for firms changing their behaviour. This is a revenue claim, not a spending cost.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [
+        {
+          "evidence_source_id": "libdem-costings-2024",
+          "pdf_page": 6,
+          "table": "REVENUE",
+          "row_label": "18 Introduce a 4% tax on share buybacks",
+          "column": "£m 2028-29",
+          "value": "1,420",
+          "row_value_text": "18 Introduce a 4% tax on share buybacks 1,420",
+          "year": "2028-29",
+          "period": "2028-29",
+          "unit": "GBP million",
+          "unit_locator": "£m"
+        }
+      ],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -637,6 +792,7 @@
       "baseline": "Party release uses current buyback levels, then allows for firms changing their behaviour. This is a revenue claim, not a spending cost.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -659,6 +815,7 @@
       "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -694,6 +851,20 @@
           "unit_locator": "£ billions"
         }
       ],
+      "unmatched_supplemental_source_tables": [
+        {
+          "pdf_page": 25,
+          "table": "SAVINGS PLEDGES",
+          "row_label": "Slash wasteful Government spending",
+          "column": "Annualised Savings Over 5 Year",
+          "value": "£50",
+          "row_value_text": "Slash wasteful Government spending Save £5 in 100 incl govt depts. quangos, £50 commissions",
+          "year": null,
+          "period": "Annualised Savings Over 5 Year",
+          "unit": "GBP billion",
+          "unit_locator": "£ billions"
+        }
+      ],
       "table_row_available": true,
       "limitation": null
     },
@@ -716,6 +887,7 @@
       "baseline": "Cost of the party's package, not the whole NHS budget. It includes tax relief, patient vouchers and staffing changes; IFS gives no replacement total.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -738,6 +910,7 @@
       "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -760,6 +933,7 @@
       "baseline": "Projected additional tax revenue, not total oil and gas tax receipts. The passage gives no tax rate, allowances or detailed baseline.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -782,6 +956,7 @@
       "baseline": "Projected additional tax revenue, not total oil and gas tax receipts. The passage gives no tax rate, allowances or detailed baseline.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -804,6 +979,7 @@
       "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -826,6 +1002,7 @@
       "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -848,6 +1025,7 @@
       "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     },
@@ -870,10 +1048,11 @@
       "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
       "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     }
   ],
   "occurrences": 22,
-  "occurrences_without_source_table": 17
+  "occurrences_without_source_table": 15
 }

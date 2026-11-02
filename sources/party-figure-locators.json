@@ -1,5 +1,26 @@
 {
-  "conservative": [],
+  "conservative": [
+    {
+      "evidence_source_id": "conservative-costings-2024",
+      "pdf_page": 4,
+      "table": "Table 2: Welfare Reform and Tackling the Tax Gap",
+      "row_label": "Welfare reform",
+      "column": "2029-30",
+      "value": "12,000",
+      "row_value_text": "Welfare reform 1 4,000 8,000 10,000 11,000 12,000",
+      "year": "2029-30",
+      "period": "2029-30",
+      "unit": "GBP million",
+      "unit_locator": "£ million",
+      "column_value_series": {
+        "2025-26": "4,000",
+        "2026-27": "8,000",
+        "2027-28": "10,000",
+        "2028-29": "11,000",
+        "2029-30": "12,000"
+      }
+    }
+  ],
   "labour": [
     {
       "pdf_page": 127,
@@ -26,7 +47,21 @@
       "unit_locator": "£M"
     }
   ],
-  "libdem-buyback-2024": [],
+  "libdem-buyback-2024": [
+    {
+      "evidence_source_id": "libdem-costings-2024",
+      "pdf_page": 6,
+      "table": "REVENUE",
+      "row_label": "18 Introduce a 4% tax on share buybacks",
+      "column": "£m 2028-29",
+      "value": "1,420",
+      "row_value_text": "18 Introduce a 4% tax on share buybacks 1,420",
+      "year": "2028-29",
+      "period": "2028-29",
+      "unit": "GBP million",
+      "unit_locator": "£m"
+    }
+  ],
   "reform": [
     {
       "pdf_page": 25,

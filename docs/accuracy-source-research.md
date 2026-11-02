@@ -2,7 +2,17 @@
 
 Research date: 2 November 2026. This is source research, not a change to offers, scopes, baselines or policy years. Read [party offers](../sources/party-offers.json) and [party source index](../sources/party-source-index.json), retained extracts and relevant original PDFs. A PDF page is the one-based physical page, not necessarily its printed folio. A paragraph, section heading or repository-created evidence table is **not a native table/row locator**.
 
-## Verified native tables in retained sources
+## Wave 7 update (2 November 2026)
+
+The findings below describe the original wave-6 selected claims, not every current offer. Since then #63 selected the Reform NHS package, UUP two-child repeal and TUV foreign-worker employer NIC increase (not the earlier Skills Fund/energy offers). See the current [offers](../sources/party-offers.json).
+
+Wave 7 resolved the Conservative native-table access gap using the [public archive research and integrity evidence](research/accuracy-w7/conservative/README.md). The native costings PDF is now retained in the existing source pipeline. **Physical page 4, Table 2: Welfare Reform and Tackling the Tax Gap, Welfare reform row, 2029-30 column, £12,000 million** matches the quoted £12 billion exactly. Footnote 1 explicitly describes £12bn annual welfare savings by the end of Parliament. The five fiscal columns are checked as an ordered series, so £11,000m in 2028-29 cannot be relabelled as the 2029-30 value. The original quote's no-fiscal-year qualification remains unchanged; the supplemental table supplies its own period, not an invented year for the prose. This is party-authored costing, not independent corroboration; the RF assessment is preserved.
+
+The verified Lib Dem supplement is now retained too: **physical page 6, REVENUE table, row 18 Introduce a 4% tax on share buybacks, £m 2028-29 column, 1,420**. This is **not exactly £1.4bn**. The trace exposes it as an unmatched related supplement, never a matching table or rounding-based substitution. Its policy note on physical page 7 confirms FTSE-100 scope. These additions change neither party-page content nor selected amounts. Both new PDF downloads and raw transcripts have URL/date/SHA-256 metadata and retained-URL discovery registration.
+
+The current audit still has 22 financial occurrences: 7 have matching native-table supplements (Labour four repeated occurrences, Conservative two, Reform NHS one), and **15 remain without a matching table**. Five uses of RF’s £2.5bn 2024-25 estimate remain prose-only. The independent Conservative assessment remains attributed to its own prose source, not relabelled as party evidence. No complete Accuracy L2 claim is made. [Additional wave-7 research](research/accuracy-w7/alternatives/README.md) records the other precise gaps.
+
+## Verified native tables in retained sources (wave-6 research)
 
 | Claim | Exact native locator | Units and period | Retained evidence |
 |---|---|---|---|

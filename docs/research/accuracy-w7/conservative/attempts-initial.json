@@ -1,0 +1,78 @@
+[
+  {
+    "name": "official",
+    "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf",
+    "at": "2026-11-02T08:23:17.854913+00:00",
+    "status": 403,
+    "headers": {
+      "Date": "Mon, 02 Nov 2026 08:23:17 GMT",
+      "Content-Type": "text/plain; charset=UTF-8",
+      "Content-Length": "17",
+      "Connection": "close",
+      "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "Referrer-Policy": "same-origin",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Server": "cloudflare",
+      "CF-RAY": "a541bc812d08a287-HEL"
+    },
+    "file": "docs/research/accuracy-w7/conservative/official.response.txt",
+    "bytes": 17,
+    "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c"
+  },
+  {
+    "name": "manifestos-index",
+    "url": "https://www.manifestos.org.uk/manifestos/2024/",
+    "at": "2026-11-02T08:23:17.955405+00:00",
+    "status": 403,
+    "headers": {
+      "Date": "Mon, 02 Nov 2026 08:23:18 GMT",
+      "Content-Type": "text/plain; charset=UTF-8",
+      "Content-Length": "17",
+      "Connection": "close",
+      "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "Referrer-Policy": "same-origin",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CAhV8bHwh4gLFvQBft72eHHMsfNu6%2BkGC%2B0DVi8e6gX5vzEErpMEL9dAwt7zg4eJuxjchnT2Jb3sBwZIxvz4NQ97%2FIvZ3U%2B%2F%2FOSeM8L2g8yRJuu%2FyZFoygy7p2EJ9L4gcoVPI3Ew1B67W%2FfndFx5HbWxKJQ%3D\"}]}",
+      "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "Server": "cloudflare",
+      "CF-RAY": "a541bc81dc77e77f-WAW",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "file": "docs/research/accuracy-w7/conservative/manifestos-index.response.txt",
+    "bytes": 17,
+    "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c"
+  },
+  {
+    "name": "wayback-cdx",
+    "url": "https://web.archive.org/cdx/search/cdx?url=public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=digest",
+    "at": "2026-11-02T08:23:18.075001+00:00",
+    "status": 200,
+    "final_url": "https://web.archive.org/cdx/search/cdx?url=public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=digest",
+    "headers": {
+      "Server": "nginx",
+      "Date": "Mon, 02 Nov 2026 08:23:18 GMT",
+      "Content-Type": "application/json",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "server-timing": "exclusion.robots;dur=0.154426, exclusion.robots.policy;dur=0.142038, esindex;dur=0.008489",
+      "x-app-server": "wwwb-app23-dc6",
+      "x-ts": "200",
+      "x-tr": "310",
+      "set-cookie": "wb-cdx-nomatch-SERVER=wwwb-app23; path=/",
+      "X-location": "cdx",
+      "X-RL": "0",
+      "X-NA": "0",
+      "X-Page-Cache": "BYPASS",
+      "Server-Timing": "exclusion.robots;dur=0.154426, exclusion.robots.policy;dur=0.142038, esindex;dur=0.008489",
+      "Referrer-Policy": "no-referrer-when-downgrade",
+      "Permissions-Policy": "interest-cohort=()",
+      "X-sd": "0",
+      "X-be": "wb_cdx_pygwb_nomatch"
+    },
+    "file": "docs/research/accuracy-w7/conservative/wayback-cdx.response.txt",
+    "bytes": 361,
+    "sha256": "4aaef4e579dd5493cf939b0e0851e15fc8f6e0599c5b1ffa2e138b1ca6f5b7bf"
+  }
+]

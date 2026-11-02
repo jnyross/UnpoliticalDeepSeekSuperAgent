@@ -1,0 +1,17 @@
+{
+  "file": "reform-retained-contract.pdf",
+  "sha256": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+  "provenance": "Copied unchanged from sources/manifesto-2024-reform.pdf; not a successful new download. Original source record in party-offers.json says downloaded 2026-11-01 from publisher URL. New direct download 2026-11-02 returned 403; see reform-contract.pdf.metadata.json and reform-download-denied.response.html.",
+  "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf?1718625371",
+  "locator": {
+    "physical_page": 25,
+    "printed_page": "23",
+    "table": "SAVINGS PLEDGES",
+    "row": "Employer Immigration Tax",
+    "value": "\u00a34",
+    "units": "\u00a3 billions",
+    "period": "Annualised Savings Over 5 Year Electoral Term",
+    "year": null
+  },
+  "not_exact_match": "\u00a34bn annualised is not an exact match to TUV more than \u00a320bn over five years; no multiplication or substitution."
+}
