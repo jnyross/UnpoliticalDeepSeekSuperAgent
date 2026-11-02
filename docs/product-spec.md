@@ -22,6 +22,13 @@ Comprehension 4 and Accessibility 4 cannot be met, and Freshness 4 needs a real 
 of history. **The highest honest score is therefore 28/32.** Do not round, relax a
 criterion, award partial levels, or simulate people evidence to go higher.
 
+A gated score is not a reason to stop useful work. Complete independently useful
+clauses, test verified alternatives, and prepare finite automated prerequisites.
+Record these as workarounds with explicit acceptance evidence and the remaining
+unmet clause; they do not award a partial rubric level. Before saying nothing is
+left, account for all eight dimensions and inspect existing open and completed work.
+The public corrections log is required even while real reviewer evidence is absent.
+
 After each wave of merged work, an independent scorer that does not build the site
 scores the deployed revision against every level, with dated checks and evidence, and
 posts the scorecard on the pinned **Rubric loop** issue. Below target, the next wave of
@@ -83,9 +90,11 @@ earns no point.
 10. **Openness.** Publish methods, definitions, limitations, Open Government Licence
     attribution on every page, downloadable open datasets, raw-source references and a
     reproducible README. The repository stays private until the owner approves making
-    it public. Who runs the site, how it is funded and the public error-reporting route
-    are owner facts: never invent them; until the owner supplies them, those levels
-    stay unmet.
+    it public; check current visibility before treating this as a blocker. Build a
+    working public error-reporting route from this repository's issue tracker and
+    publish verified operator/funding facts only. An unknown funding or operator fact
+    is a precise remaining gap, not a reason to leave the route, methods or disclosure
+    page unbuilt. Never invent these facts or claim the whole level before it is met.
 11. **Freshness.** Provide a documented one-command refresh with validation, a
     reviewable version/diff report and safe retention of the last good data on errors.
     A scheduled GitHub Actions workflow in this repository notices new releases of each

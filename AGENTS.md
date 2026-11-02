@@ -42,12 +42,57 @@ The pinned issue labelled `rubric-loop` is the loop's tracking issue.
     rebuild command. Parallel issues on an empty repository collide.
 - **Building an issue.** One PR per issue, with `Closes #<issue>` in the description and
   the evidence (commands and their results) in the PR. Merge it yourself when it is ready.
-- **Levels agents never file or claim.** Impartiality 4, Comprehension 4 and
-  Accessibility 4 need people; the owner has decided not to run people checks.
-  Freshness 4 needs a real year of history. Openness 3 (who runs the site, how it is
-  funded, a public error-reporting route) and Openness 4 (a public repository) need
-  facts or decisions from the owner: label any such issue `needs-owner` and never
-  invent the facts.
+- **Work around blockers; do not discard a whole level.** Split each unmet check
+  into work that can be completed now and the precise evidence still unavailable.
+  Build the useful parts, find verified alternative sources or methods, and test
+  them. A blocked clause does not block other clauses or other dimensions.
+  Impartiality 4, Comprehension 4 and Accessibility 4 still require real people,
+  and Freshness 4 still requires a real year of history: do not claim those points
+  from automated substitutes. But build useful prerequisites: the public corrections
+  log, automated checks and reproducible testing materials, and timestamped release
+  and deployment measurements. Label these finite issues `workaround` in addition
+  to the dimension/next-level labels, quote the relevant requirement, and state
+  explicitly that completing the issue does not award the gated level.
+- **Owner facts are a clause, not a blanket stop.** For Openness, verify current
+  repository visibility and reuse this public repository's issue tracker as a working
+  error-reporting route. Publish only independently established operator/funding
+  information. Build the methods, contact route and disclosure page even if an exact
+  funding statement remains unavailable; label that residue precisely and do not
+  invent a person, funding source, permission or historical event. File a separate
+  `needs-owner` issue only for the genuinely missing fact after doing the available
+  work. A repository already made public is not still waiting for permission.
+- **Finish a plan, not an acknowledgment.** For every dimension, report the actual
+  next check, verified blocker, alternative tried, useful work completed and remaining
+  work. Never use only "needs people/history/owner facts" as the disposition.
+  Search open AND closed issues and inspect merged evidence before opening anything:
+  do not keep recreating completed workarounds. At most one active buildable issue
+  per dimension per wave. A `needs-owner` issue may coexist as a record of the residue.
+  A workaround's acceptance test is its specific useful result, not a false promise
+  that it passes the entire rubric level.
+
+After filing the wave's issues, include this machine-readable block in your final
+tracking-issue comment (not in the initial acknowledgment). Use the wave and scored
+commit from the request/scorecard, and include ALL eight dimension slugs:
+
+```text
+<!-- rubric-plan
+{"wave": 4, "sha": "FULL_SCORED_COMMIT", "dimensions": {
+  "accuracy": {"current_level": 4, "status": "complete"},
+  "context": {"current_level": 1, "status": "issue", "issue": 31},
+  "impartiality": {"current_level": 3, "status": "workaround", "issue": 33, "evidence": "Corrections log is absent at PATH", "remaining": "Two real reviewers are still required"}
+}}
+-->
+```
+
+The abbreviated example above must be expanded to all eight dimensions; do not copy
+its example IDs or levels. `issue` references a real `rubric`, `dim:SLUG`, `level:N`
+issue. `workaround` also requires its `workaround` label plus nonempty `evidence` and
+`remaining`. Once all useful automated parts of a people/history-gated level are
+complete, use `gated` with `evidence`, `remaining` and `completed_subparts` (a list of
+specific checked results). For an owner residue, use `blocked` with an open
+`needs-owner` issue, `missing_fact`, `evidence` and `completed_subparts`. `complete`
+means the dimension is already at level 4. An empty completed-subparts list must be
+explained by concrete evidence that no useful part can be done; it is not a shortcut.
 - **Never claim, simulate or write up people evidence** (user tests, reviewer reads,
   manual keyboard or screen-reader checks), and never present a simulation as one.
 
