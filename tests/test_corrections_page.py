@@ -9,6 +9,9 @@ METADATA = dict(publication='Test log', date='2026-11-02', date_basis='Test snap
                 evidence_url='https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/pull/1')
 
 
+METADATA.update(publication='UnpoliticalAF corrections log', file='corrections.json')
+
+
 class CorrectionsPageTests(unittest.TestCase):
     def test_empty_is_honest_and_static(self):
         page = render([], '<style>body{color:#20262b}</style>', METADATA)
@@ -17,6 +20,9 @@ class CorrectionsPageTests(unittest.TestCase):
         self.assertIn('sources/corrections.json', page)
         self.assertIn('Open Government Licence', page)
         self.assertNotIn('<script', page)
+        self.assertIn('Source publication:', page)
+        self.assertIn(METADATA['publication'], page)
+        self.assertIn('not a government data release', page)
 
     def test_all_fields_and_html_escaping(self):
         entry = dict(id='test-only', date='2026-11-02', page='index.html',

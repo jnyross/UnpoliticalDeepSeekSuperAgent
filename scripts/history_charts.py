@@ -9,7 +9,13 @@ VIEWS = {
 }
 
 
+TME_NOTE = 'TME excludes the temporary effects of banks being classed as public sector.'
+TME_NOTE_CELLS = {'cash': '4_2!A35', 'real': '4_3!A36', 'gdp': '4_4!A36'}
+
+
 def warning(ident):
+    if ident == 'tme':
+        return TME_NOTE
     if ident == 'education':
         return 'The scope changes in 2011-12. The way student loans are counted changes. Do not compare values across this break as if their scope were the same.'
     if ident in ('transport', 'economic-affairs', 'services-total'):
@@ -66,13 +72,14 @@ def chart_outputs(d):
         sections = []
         for s in d['series']:
             ident = s['id']
+            scope_note = f' {TME_NOTE} Source note: {TME_NOTE_CELLS[view]}.' if ident == 'tme' else ''
             rows = ''.join(f'<tr><th scope="row">{esc(p["year"])}</th><td>{p[field]:,.1f}</td><td>{esc(p["status"])}</td><td>{esc(p["cells"][view])}</td></tr>' if p[field] is not None else f'<tr><th scope="row">{esc(p["year"])}</th><td>Not available</td><td>{esc(p["missing_reason"] or "Source cell is blank; not zero.")}</td><td>{esc(p["cells"].get(view,""))}</td></tr>' for p in s['values'])
             sections.append(f'''<section id="{ident}"><h2>{esc(s['label'])}</h2>
 <p>United Kingdom. Scope: {esc(s['scope'])}. Status: outturn. Source: July 2026.</p>
 <p>{esc(warning(ident))} <a href="history.html#source-notes">All source notes and definition breaks</a>.</p>
 {navigation(view, ident)}<figure><figcaption>{esc(title)} · {esc(unit)} · {esc(s['label'])}</figcaption>{plot(s['values'],field)}</figure>
 <p>Each dot is one fiscal year. All axes include zero. Scales differ by area and view. Missing values break the line. All years show outturn: recorded spending, not forecasts.</p>
-<details><summary>Data table: {esc(s['label'])} — {esc(title)}</summary><table><caption>{esc(s['label'])} · {esc(unit)} · {esc(s['scope'])}</caption><thead><tr><th scope="col">Fiscal year</th><th scope="col">{esc(unit)}</th><th scope="col">Status</th><th scope="col">Source cell</th></tr></thead><tbody>{rows}</tbody></table></details></section>''')
+<details><summary>Data table: {esc(s['label'])} — {esc(title)}</summary><table><caption>{esc(s['label'])} · {esc(unit)} · {esc(s['scope'])}{esc(scope_note)}</caption><thead><tr><th scope="col">Fiscal year</th><th scope="col">{esc(unit)}</th><th scope="col">Status</th><th scope="col">Source cell</th></tr></thead><tbody>{rows}</tbody></table></details></section>''')
         source = d['source']
         page = f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} over time | UnpoliticalAF</title><style>{css}</style></head><body><a class="skip" href="#main">Skip to content</a><header><a href="index.html">UnpoliticalAF · latest spending</a> · <a href="history.html">History tables and methods</a></header><main id="main"><h1>UK spending over time</h1><p>View shown: <strong>{esc(title)}</strong> ({esc(unit)}). This covers 2003-04 to 2025-26. Fiscal years run from April to March. All figures are recorded spending (outturn). They may still change.</p>{navigation(view)}
 <p>Cash is the amount spent at the time. Real spending allows for price changes. It uses 2025-26 prices and ONS GDP deflators released 30 June 2026. Share of the economy means spending as a share of UK GDP. This uses ONS GDP published 30 June 2026. All three views come from the Treasury source. They use the same workbook and years. They cover the same UK area and the same types of spending. We do not work out new values.</p>

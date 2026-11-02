@@ -116,9 +116,11 @@ def load_metadata(path, entries):
     """
     path = Path(path)
     metadata = _decode(path.read_text(encoding='utf-8'))
-    fields = {'publication', 'date', 'sha256', 'date_basis', 'evidence_url'}
+    fields = {'publication', 'file', 'date', 'sha256', 'date_basis', 'evidence_url'}
     if not isinstance(metadata, dict) or set(metadata) != fields:
         raise ValidationError('corrections metadata: unexpected fields')
+    if metadata['file'] != 'corrections.json':
+        raise ValidationError('corrections metadata: invalid source file')
     for key in fields:
         value = metadata[key]
         if (not isinstance(value, str) or not value.strip() or value != value.strip()

@@ -21,7 +21,7 @@ def render(entries, home, metadata):
 <a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/">UnpoliticalAF</a><span>UK public money</span></header>
 <main id="main"><h1>Corrections</h1><nav aria-label="Site pages"><a href="index.html">Spending</a> · <a href="income.html">Taxes, borrowing and debt</a> · <a href="history.html">History</a> · <a href="parties.html">Party offers</a></nav>
 <p class="intro">When we fix an error, we record what was wrong and what changed.</p>
-<p>Source publication: <a href="sources/corrections.json">{esc(metadata['publication'])}</a>. This is our local record, not an official statistics release.</p>
+<p>Source publication: <a href="sources/{esc(metadata['file'], quote=True)}">{esc(metadata['publication'])}</a>. This is this site's own record of fixes, not a government data release. It contains no spending figures.</p>
 <p>Log data as of <time datetime="{esc(metadata['date'])}">{esc(metadata['date'])}</time>. {esc(metadata['date_basis'])} <a href="{esc(metadata['evidence_url'], quote=True)}">Snapshot evidence</a> · <a href="sources/corrections-metadata.json">Source and date details (JSON)</a>. There is no set next release date.</p>
 <section><h2>The log</h2>{log}</section>
 <section><h2>How this log works</h2><p>Each entry gives the date the fix was applied, the page, the error and the fix. It links to the change as evidence. The same source checks apply to all parties.</p>
