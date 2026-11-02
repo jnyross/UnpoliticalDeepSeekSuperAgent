@@ -1,0 +1,13 @@
+{
+  "prepared_date": "2026-11-02",
+  "page_revision": "ce5548ec889aaef824a432e6745033829a8f833a",
+  "input_sha256": {
+    "site/index.html": "af6c7e48c3472b36b7190091f32489f4c95cc317be4cb6ffdb74d368bc891cfa",
+    "site/data/spending.json": "bcb3bf2cb702f8447b0ac31001ee3deb0dcdf87d8fa21ae1baa221b64ec61ba1",
+    "site/data/comparisons.json": "f217c964b2375b2bf2d740cd93e7f4e520075bd612fe26e6e3238e0b0ebf0c61",
+    "sources/manifest.json": "00ef37b2dd095ed13e6e85a8fd191f1951bf54197552ce0757acde1a999ab79b",
+    "sources/trends-manifest.json": "3209a2de9187756e8ba6bed197b6de4e659f6fc0d358934efceb28f62f723413",
+    "sources/spending.xlsx": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+    "sources/trends.xlsx": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c"
+  }
+}
