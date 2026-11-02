@@ -226,8 +226,10 @@ def validate_page(path, manifest, banned):
     require("Open Government Licence" in text, f"{path}: missing OGL attribution")
     require(any("nationalarchives.gov.uk/doc/open-government-licence" in x for x in page.links),
             f"{path}: missing OGL licence link")
-    if manifest is not None:  # The corrections ledger is not an official data release.
-        require(manifest["publication"] in text, f"{path}: missing source publication")
+    require(isinstance(manifest, dict) and bool(manifest.get('publication', '').strip()),
+            f"{path}: missing source publication metadata")
+    require(manifest["publication"] in text, f"{path}: missing source publication")
+    if path.name != 'corrections.html' or 'date' in manifest:
         require(any(form in text for form in date_forms(manifest["date"])),
                 f"{path}: missing source publication/update date")
     for word in banned:
@@ -307,8 +309,15 @@ def validate(root):
     pages = sorted((root / "site").rglob("*.html"))
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
     require((root / 'site/about.html').is_file(), 'Missing project disclosures')
+    corrections_metadata = json.loads((root / 'sources/corrections-metadata.json').read_text())
+    require(corrections_metadata.get('publication') == 'UnpoliticalAF corrections log' and
+            corrections_metadata.get('file') == 'corrections.json',
+            'Corrections metadata must name the local corrections log')
+    require((root / 'site/sources/corrections-metadata.json').read_bytes() ==
+            (root / 'sources/corrections-metadata.json').read_bytes(),
+            'Published corrections metadata differs')
     for path in pages:
-        page_manifest = None if path.name == 'corrections.html' else manifest
+        page_manifest = corrections_metadata if path.name == 'corrections.html' else manifest
         if path.name == 'parties.html':
             page_manifest = json.loads((root / 'sources/party-offers.json').read_text())['roster']
         elif path.name == 'income.html':
@@ -326,7 +335,7 @@ def validate(root):
             (root / 'sources/corrections.json').read_bytes(), 'Published corrections source differs')
     from disclosures import add_project_links
     correction_output = {'corrections.html': corrections_page.render(
-        entries, (root / 'site/index.html').read_text()).encode()}
+        entries, (root / 'site/index.html').read_text(), corrections_metadata).encode()}
     add_project_links(correction_output)
     require((root / 'site/corrections.html').read_bytes() ==
             correction_output['corrections.html'],
