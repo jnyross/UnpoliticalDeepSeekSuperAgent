@@ -6,6 +6,7 @@
 - Baseline overview HTML SHA-256: `516c6dabb9b22edbfb023df55052673aa620f7a19e727d587c057fe59d484a4e` (git blob `eb737cf8cf45af9bb7ad365442a7319928042936`). Captured from immutable git bytes, not reconstructed HTML.
 - After overview HTML SHA-256: `3f8505a495771c5d9fba4b822edeecbefc6253a1b684982e03dd8651556c043f`.
 - Corrected after About HTML SHA-256: `53f6f0b9411479aa0441a93800bdc16d1986a8f2d9de99e3d2c9847b918e5b3f`.
+- Changed source revision, committed by the parent agent during verification: `1c17796351652bc65e604695997b13ef8dd71746`.
 - After evidence identifies working-tree bytes; the baseline commit is not claimed to contain the new implementation.
 
 ## Actual screenshots
@@ -39,4 +40,6 @@ See [commands and methodology](<TOOLING.md>), [footer capture script](<capture-f
 
 `npm ci`: exit 0; five packages installed, six audited, zero vulnerabilities. Playwright 1.56.1 / Chromium 141.0.7390.37.
 
-Full browser-suite results are collected separately under `/tmp/openness-browser`; the final summary is recorded below after the run completes.
+`EVIDENCE_DIR=/tmp/openness-browser npm run test:browser`: **exit 0**, completed **16/16 page/viewport checks** (eight HTML pages × 360×800 and 1280×900), with **24/24 state checks** passed. Final run: `2026-11-02T01:49:35.075Z`–`2026-11-02T01:54:42.928Z`. All checked axe violations arrays are empty; SVG contrast checks completed; no-JavaScript main content matched and document/body widths fit the viewport. Expanded disclosure states were checked on the history pages.
+
+The committed [compact browser summary](<browser-summary.json>) preserves per-page SHA-256 hashes, byte counts, viewport dimensions, no-JavaScript checks, state completion, axe results, and contrast completion. Full temporary runner output and screenshots remain under `/tmp/openness-browser` and are intentionally not duplicated here. The earlier pre-fix run failed the About mobile overflow assertion and was canceled; the complete successful rerun above used the corrected output.

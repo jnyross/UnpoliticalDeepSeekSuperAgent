@@ -12,6 +12,8 @@ node docs/evidence/openness/check-no-js.mjs
 node docs/evidence/openness/check-github-anonymous.mjs
 gh api repos/jnyross/UnpoliticalDeepSeekSuperAgent --jq '{html_url,private,visibility,has_issues}'
 EVIDENCE_DIR=/tmp/openness-browser npm run test:browser
+# After deployment: fail if any public HTML differs from this checkout.
+python3 docs/evidence/openness/check-deployed.py https://unpoliticaldeepseeksuperagent.vercel.app
 ```
 
 Tool versions used: Node v22.23.2; npm 10.9.8; Playwright 1.56.1; Chromium 141.0.7390.37; gh 2.103.3. `npm ci` installed five packages, audited six, and reported zero vulnerabilities.

@@ -1,0 +1,629 @@
+{
+  "command": "EVIDENCE_DIR=/tmp/openness-browser npm run test:browser",
+  "sourceRevision": "1c17796351652bc65e604695997b13ef8dd71746",
+  "contentIdentity": "Exact tested working-tree HTML is identified by per-page SHA-256; sourceRevision was committed by parent during the suite.",
+  "startedAt": "2026-11-02T01:49:35.075Z",
+  "finishedAt": "2026-11-02T01:54:42.928Z",
+  "completed": true,
+  "passed": true,
+  "exitCode": 0,
+  "pageViewportChecks": 16,
+  "results": [
+    {
+      "page": "about.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "53f6f0b9411479aa0441a93800bdc16d1986a8f2d9de99e3d2c9847b918e5b3f",
+      "bytes": 5964,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "53f6f0b9411479aa0441a93800bdc16d1986a8f2d9de99e3d2c9847b918e5b3f",
+      "bytes": 5964,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "history-cash.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "b4255e51678dbcf7141a0b8f7280e1311725859a0bc44e316bcaadf38877e3eb",
+      "bytes": 137543,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "history-cash.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "b4255e51678dbcf7141a0b8f7280e1311725859a0bc44e316bcaadf38877e3eb",
+      "bytes": 137543,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "history-gdp.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "cd16a011aa6735aa8b86d757cc4aabf9671d09726e178af2e72fda3286de3c0c",
+      "bytes": 136759,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "history-gdp.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "cd16a011aa6735aa8b86d757cc4aabf9671d09726e178af2e72fda3286de3c0c",
+      "bytes": 136759,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "history-real.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "4f2cfb6d9f8edc9db755764a2c2179df4f04230452153110aecfface606be266",
+      "bytes": 138698,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "history-real.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "4f2cfb6d9f8edc9db755764a2c2179df4f04230452153110aecfface606be266",
+      "bytes": 138698,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 1,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "history.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "250413bdc844c9c0f5171fefc86ee8034b64e1847461f1f6ff16c542d7634779",
+      "bytes": 135607,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "history.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "250413bdc844c9c0f5171fefc86ee8034b64e1847461f1f6ff16c542d7634779",
+      "bytes": 135607,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        },
+        {
+          "name": "all-details-expanded",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "income.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "765582e44b89da292f5177e10d2dd6555b58895657f321d9999d286f92510768",
+      "bytes": 24021,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "income.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "765582e44b89da292f5177e10d2dd6555b58895657f321d9999d286f92510768",
+      "bytes": 24021,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "3f8505a495771c5d9fba4b822edeecbefc6253a1b684982e03dd8651556c043f",
+      "bytes": 17795,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "3f8505a495771c5d9fba4b822edeecbefc6253a1b684982e03dd8651556c043f",
+      "bytes": 17795,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "page": "parties.html",
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "status": "passed",
+      "sha256": "342e565edab54bbd0458b144c42c827754ded6d29fdfad4c3e25c086d5859268",
+      "bytes": 25944,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        }
+      ]
+    },
+    {
+      "page": "parties.html",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": "passed",
+      "sha256": "342e565edab54bbd0458b144c42c827754ded6d29fdfad4c3e25c086d5859268",
+      "bytes": 25944,
+      "noJavaScriptContentMatches": true,
+      "noJavaScriptDimensions": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280
+      },
+      "states": [
+        {
+          "name": "initial",
+          "completed": true,
+          "axeCompleted": true,
+          "contrastCompleted": true,
+          "violations": [],
+          "incompleteCount": 0,
+          "dimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    }
+  ]
+}
