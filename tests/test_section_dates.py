@@ -49,6 +49,18 @@ class SectionDatesTests(unittest.TestCase):
         for view in ('cash', 'real', 'gdp'):
             self.assertNotIn('Data period: 2003-04 to 2025-26; fixed TME', pages[f'history-{view}.html'])
 
+    def test_party_costing_only_date_stamp_does_not_claim_analysis(self):
+        def cost_only(sources):
+            path = sources/'party-offers.json'
+            data = json.loads(path.read_text())
+            data['parties'][0]['evidence'] = {'costing': {'source_id': data['parties'][0]['source_id']}}
+            path.write_text(json.dumps(data))
+        page = self.render(mutate_sources=cost_only)['parties.html']
+        import re
+        first = re.search(r'<article[^>]*data-party-id="1"[^>]*>(.*?)</article>', page, re.S)[1]
+        self.assertIn('Data period: 2024 election manifesto and costing.', first)
+        self.assertNotIn('manifesto and analysis', first)
+
     def test_income_periods_release_and_as_of_are_local(self):
         import re
         page = self.render()['income.html']
@@ -83,6 +95,22 @@ class SectionDatesTests(unittest.TestCase):
         for name, page in pages.items():
             if name != 'parties.html':
                 self.assertNotIn('Source revised.', page)
+
+    def test_policy_estimate_revision_is_only_on_matching_cards(self):
+        notice = {'source': 'party-evidence-rf-two-child-2024',
+                  'baseline_url': 'https://www.resolutionfoundation.org/publications/catastophic-caps/',
+                  'first_detected_at': '2026-11-02T04:47:54Z',
+                  'evidence': {'release_url': 'https://www.resolutionfoundation.org/publications/catastophic-caps/'}}
+        import re
+        page = self.render([notice])['parties.html']
+        cards = dict(re.findall(r'<article[^>]*data-party-id="([^"]+)"[^>]*>(.*?)</article>', page, re.S))
+        data = json.loads((ROOT/'sources/party-offers.json').read_text())
+        expected = {str(p['id']) for p in data['parties'] if p['source_id'] in ('alliance', 'green', 'plaid', 'snp')}
+        self.assertEqual(len(expected), 4)
+        for identifier, card in cards.items():
+            self.assertEqual('Source revised.' in card, identifier in expected)
+            if identifier in expected:
+                self.assertIn('Published 2024-01-31', card)
 
     def test_income_release_metadata_hash_and_path_are_checked(self):
         def changed(sources):

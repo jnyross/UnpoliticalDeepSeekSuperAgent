@@ -98,7 +98,7 @@ class PartyOffersTests(unittest.TestCase):
             return result
 
         with patch.object(parties.subprocess, 'run', side_effect=missing_quote):
-            with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+            with self.assertRaisesRegex(AssertionError, '(?i)(excerpt not on cited PDF page|cost quote not on PDF page)'):
                 parties.validate(ROOT)
 
     def test_changed_quote_words_or_punctuation_fail(self):
@@ -111,7 +111,7 @@ class PartyOffersTests(unittest.TestCase):
                     Path(command[-1]).write_text(changed + '\n\f')
                     return result
                 with patch.object(parties.subprocess, 'run', side_effect=changed_quote):
-                    with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+                    with self.assertRaisesRegex(AssertionError, '(?i)(excerpt not on cited PDF page|cost quote not on PDF page)'):
                         parties.validate(ROOT)
 
     def test_rehashed_forged_transcript_is_not_pdf_evidence(self):
@@ -132,16 +132,56 @@ class PartyOffersTests(unittest.TestCase):
             forged.write_text('\f'.join(transcript))
             source['text_sha256'] = parties.digest(forged)
             with patch.object(parties, 'load', return_value=d):
-                with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+                with self.assertRaisesRegex(AssertionError, '(?i)(excerpt not on cited PDF page|cost quote not on PDF page)'):
                     parties.validate(root)
 
     def test_unequal_missing_evidence_fails(self):
-        self.fails(lambda d: d['parties'][0].update(costing='Zero'))
+        self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == 'dup').update(costing='Zero'))
 
     def test_independent_sources_have_separate_register(self):
         self.assertEqual(len(self.original['sources']), 13)
-        self.assertEqual(len(self.original['evidence_sources']), 3)
-        self.assertEqual(sum(bool(p.get('evidence')) for p in self.original['parties']), 3)
+        self.assertEqual(len(self.original['evidence_sources']), 4)
+        self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 7)
+        self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 3)
+
+    def test_cost_only_claims_keep_independent_assessment_gap(self):
+        for source_id in ('reform', 'sdlp', 'uup'):
+            party = next(p for p in self.original['parties'] if p['source_id'] == source_id)
+            with self.subTest(source_id=source_id):
+                self.assertEqual(set(party['evidence']), {'costing'})
+                self.assertTrue(party['assessment'].startswith('Unavailable here:'))
+                self.assertEqual(party['evidence']['costing']['source_id'], source_id)
+                self.assertIn('pdf_page', party['evidence']['costing'])
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id).update(assessment='This plan is affordable.'))
+
+    def test_official_cost_cannot_masquerade_as_independent_assessment(self):
+        def fake_assessment(d):
+            party = next(p for p in d['parties'] if p['source_id'] == 'uup')
+            ref = copy.deepcopy(party['evidence']['costing'])
+            ref['attribution'] = 'Ulster Unionist Party'
+            party['assessment'] = ref['quote']
+            party['evidence']['assessment'] = ref
+        self.fails(fake_assessment)
+
+    def test_new_cost_claims_reject_amount_and_page_mutations(self):
+        for source_id in ('reform', 'sdlp', 'uup'):
+            with self.subTest(source_id=source_id):
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id)['evidence']['costing'].update(quote='£999 billion'))
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id)['evidence']['costing'].update(pdf_page=1))
+
+    def test_independent_cost_estimates_are_labelled_and_scoped(self):
+        for identifier in ('alliance', 'green', 'plaid', 'snp'):
+            row = next(p for p in self.original['parties'] if p['source_id'] == identifier)
+            with self.subTest(party=identifier):
+                self.assertEqual(row['evidence']['costing']['source_id'], 'rf-two-child-2024')
+                self.assertIn('not a party costing', row['costing'])
+                self.assertIn('Great Britain', row['scope'])
+                self.assertIn('Northern Ireland', row['scope'])
+                self.assertIn('take-up', row['baseline'])
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == identifier).update(costing='Party claim:'))
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == identifier)['evidence']['costing'].update(attribution='Party source'))
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == identifier)['evidence']['costing'].update(quote='£999 billion'))
+                self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == identifier)['evidence']['assessment'].update(text_line=1))
 
     def test_evidence_hash_quote_locator_and_attribution_fail_closed(self):
         def party(d):
@@ -218,7 +258,7 @@ class PartyOffersTests(unittest.TestCase):
             # The extractor now returns only the requested cited page.
             return 'No supporting text on this page.\n\f'
         with self.with_pdf_text(remove_cited_page):
-            with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+            with self.assertRaisesRegex(AssertionError, '(?i)(excerpt not on cited PDF page|cost quote not on PDF page)'):
                 parties.validate(ROOT)
 
     def test_quote_elsewhere_in_pdf_does_not_support_cited_page(self):
@@ -227,7 +267,7 @@ class PartyOffersTests(unittest.TestCase):
             # not stand in for the requested page's missing evidence.
             return 'No supporting text on the cited page.\n\f' + text
         with self.with_pdf_text(move_cited_page):
-            with self.assertRaisesRegex(AssertionError, 'Excerpt not on cited PDF page'):
+            with self.assertRaisesRegex(AssertionError, '(?i)(excerpt not on cited PDF page|cost quote not on PDF page)'):
                 parties.validate(ROOT)
 
     def test_changed_transcript_hash_fails(self):

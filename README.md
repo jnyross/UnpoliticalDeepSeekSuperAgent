@@ -16,10 +16,13 @@ GDP-share views. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
 The [Coverage L4 evidence audit](docs/research/coverage-l4/ni-devolved-feasibility.md)
-records unresolved costing/assessment gaps. The party page now adds selected historical
-costings and linked independent quotes for Conservative, Labour and Liberal Democrat
-plans; the other ten parties remain explicitly unavailable here. This is partial
-coverage, not a claim to Coverage L4. Unlike plans are not ranked or added together.
+records the initial costing/assessment gaps; [wave-five follow-up](docs/research/coverage-w5/ni-devolved-followup.md)
+records additional checked policy evidence. Conservative, Labour and Liberal Democrat
+claims retain their independent quotations. Alliance, Green, Plaid Cymru and SNP now pair a
+selected two-child-limit pledge with Resolution Foundation's 2024-25 Great Britain
+estimate and assessment, explicitly not a party costing or complete UK total. Reform, SDLP and UUP show checked party cash claims with assessment gaps still explicit.
+The remaining three parties still lack a checked cost for the selected offer. This is
+partial coverage, not a claim to Coverage L4; unlike plans are not ranked or added together.
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
