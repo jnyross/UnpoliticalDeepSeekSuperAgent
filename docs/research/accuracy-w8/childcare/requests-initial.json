@@ -1,0 +1,58 @@
+[
+  {
+    "file": "budget-eqia-2024-25.pdf",
+    "url": "https://www.education-ni.gov.uk/sites/default/files/consultations/education/DE%20Resource%20Budget%202024-25%20-%20Equality%20Impact%20Assessment%20Consultation.pdf",
+    "final_url": "https://www.education-ni.gov.uk/sites/default/files/consultations/education/DE%20Resource%20Budget%202024-25%20-%20Equality%20Impact%20Assessment%20Consultation.pdf",
+    "status": 200,
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "184319",
+      "expires": "Fri, 14 Aug 2026 09:50:00 GMT",
+      "content-type": "application/pdf",
+      "cache-control": "max-age=86400",
+      "last-modified": "Sat, 07 Dec 2024 02:48:57 GMT",
+      "traceresponse": "00-18cb5483571c71e72ca914468013665d-b558a848e0292e2e-01",
+      "etag": "W/\"6753b799-2cfff\"",
+      "Accept-Ranges": "bytes",
+      "Age": "0",
+      "Date": "Mon, 02 Nov 2026 10:22:53 GMT",
+      "X-Cache": "MISS, HIT, MISS",
+      "X-Cache-Hits": "0, 1, 0",
+      "Vary": "Accept-Encoding",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Strict-Transport-Security": "max-age=31557600"
+    },
+    "bytes": 184319,
+    "sha256": "cad6924da413b72285112ab57e3b8c0dc124ff67a4c196042e3928f0fecaa2ae",
+    "retrieved_utc": "2026-11-02T10:22:53.353073+00:00"
+  },
+  {
+    "file": "annual-report-2024-25.pdf",
+    "url": "https://www.education-ni.gov.uk/sites/default/files/2025-11/2024-25%20Annual%20Report%20and%20Accounts%20-%20Department%20of%20Education.pdf",
+    "final_url": "https://www.education-ni.gov.uk/sites/default/files/2025-11/2024-25%20Annual%20Report%20and%20Accounts%20-%20Department%20of%20Education.pdf",
+    "status": 200,
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "2136162",
+      "last-modified": "Wed, 05 Nov 2025 16:54:49 GMT",
+      "content-type": "application/pdf",
+      "expires": "Fri, 30 Oct 2026 20:11:09 GMT",
+      "traceresponse": "00-18e319188c5bbf0b9e4d5205dc640860-c23b3042a9ee40d4-01",
+      "etag": "W/\"690b8159-209862\"",
+      "cache-control": "max-age=86400",
+      "Accept-Ranges": "bytes",
+      "Age": "310304",
+      "Date": "Mon, 02 Nov 2026 10:22:53 GMT",
+      "X-Cache": "MISS, HIT, MISS",
+      "X-Cache-Hits": "0, 1, 0",
+      "Vary": "Accept-Encoding",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Strict-Transport-Security": "max-age=31557600"
+    },
+    "bytes": 2136162,
+    "sha256": "1263bf46dc67206e044544437c19a663c4bb36aa046e1121da7c48c7c0975072",
+    "retrieved_utc": "2026-11-02T10:22:53.461607+00:00"
+  }
+]
