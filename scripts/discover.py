@@ -216,8 +216,49 @@ def discover_obr(source, root, get=None):
     return updates
 
 
+def discover_current_roster(source, root, get=None, as_of=None):
+    """Compare today's official Commons composition with the dated retained roster.
+
+    This is a newer snapshot candidate, NOT a revision of the historical snapshot.
+    The semantic identity deliberately excludes polling dates and API timestamps.
+    """
+    baseline = source_baseline(source, root)
+    snapshot = root / baseline['file']
+    if len(Path(baseline['file']).parts) == 1:
+        snapshot = (root / source['manifest']).parent / baseline['file']
+    retained = snapshot.read_bytes()
+    if digest(retained) != baseline['sha256']:
+        raise ValueError('Retained snapshot does not match manifest hash')
+    as_of = as_of or datetime.now(timezone.utc).date().isoformat()
+    # Validate before interpolating into the fixed official API endpoint.
+    datetime.strptime(as_of, '%Y-%m-%d')
+    url = 'https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/' + as_of
+    raw = (fetch(url, hosts=['members-api.parliament.uk']) if get is None else get(url))
+    semantic_sha = digest(roster_semantics(raw))
+    if semantic_sha == digest(roster_semantics(retained)):
+        return []
+    evidence = dict(source=source['id'], release_url=url, attachment_url=url,
+                    sha256=digest(raw), semantic_sha256=semantic_sha,
+                    discovery_scope='current-roster-comparison', as_of=as_of,
+                    updated=as_of,
+                    refresh_command='python3 scripts/build.py --refresh')
+    key = digest(json.dumps(dict(source=source['id'], semantic_sha256=semantic_sha),
+                            sort_keys=True).encode())
+    return [dict(key=key, evidence=evidence, baseline=baseline)]
+
+
 def discover(source, root=ROOT, get=None):
     """Dispatch explicit discovery scopes, including dynamic official latest-page links."""
+    if source['adapter'] == 'retained-url-and-policy-listing':
+        try:
+            from scripts.plan_discovery import discover_listing
+        except ModuleNotFoundError:  # Direct `python scripts/discover.py` execution.
+            from plan_discovery import discover_listing
+        return discover_snapshot(source, root, get) + discover_listing(
+            source, root, get or (lambda url: fetch(url, hosts=source['allowed_hosts'])))
+    if source['adapter'] == 'parliament-current-roster':
+        # Retain the old snapshot revision check as well as checking today's composition.
+        return discover_snapshot(source, root, get) + discover_current_roster(source, root, get)
     if source['adapter'] == 'retained-url-snapshot':
         return discover_snapshot(source, root, get)
     if source['adapter'] == 'obr-databank-latest':
@@ -271,7 +312,9 @@ def gh(*args):
 
 def open_updates(updates, repo, run=gh):
     # All states, all pages: closing an issue is also a recorded review decision.
-    pages = json.loads(run('api', '--paginate', '--slurp', f'repos/{repo}/issues?state=all&per_page=100'))
+    # Request revalidation after writes; this cannot make the remote list/create atomic.
+    pages = json.loads(run('api', '--paginate', '--slurp', '-H', 'Cache-Control: no-cache',
+                           f'repos/{repo}/issues?state=all&per_page=100'))
     bodies = '\n'.join(issue.get('body') or '' for page in pages for issue in page if 'pull_request' not in issue)
     results = []
     for update in updates:
@@ -287,6 +330,15 @@ def open_updates(updates, repo, run=gh):
                  'Collection links and the retained release were checked for releases and revisions.')
         if e.get('discovery_scope') == 'latest-page-releases-and-revisions':
             scope = 'The official latest databank page and retained workbook were checked for releases and revisions.'
+        if e.get('discovery_scope') == 'official-policy-listing-review':
+            scope = ('The official adopted-policy listing contains a new or retitled link. '
+                     'This is listing evidence only, NOT a revision of the historical manifesto. '
+                     'Review adoption, dates, content, costings and site coverage before any update.')
+        if e.get('discovery_scope') == 'current-roster-comparison':
+            scope = ("Today's official Commons party/seat snapshot differs from the retained historical "
+                     "roster. This is NOT a revision of that historical snapshot. Review party coverage "
+                     "and retain a new dated roster plus matching plan evidence before changing the site. "
+                     "The refresh command alone does not advance the pinned historical roster.")
         command = (e['refresh_command'] if 'refresh_command' in e else
                    f'.venv/bin/python scripts/build.py --refresh --release {slug}')
         body = f'''{NOTICE}
@@ -371,6 +423,11 @@ def reconcile_revision_status(state, inventory, results, root=ROOT, checked_at=N
                 for n in state['notices'] if not incorporated(n) }
     for result in results or []:
         for update in result['updates']:
+            # A later roster does not mean the explicitly historical roster was revised.
+            # Keep the review issue, but never publish a false historical-revision warning.
+            if update['evidence'].get('discovery_scope') in (
+                    'current-roster-comparison', 'official-policy-listing-review'):
+                continue
             baseline = update['baseline']
             notice = dict(source=result['id'], baseline_sha256=baseline['sha256'],
                           baseline_url=baseline.get('release_url', baseline.get('url')),
@@ -404,7 +461,9 @@ def main():
         source_id = source.get('id', 'unknown') if isinstance(source, dict) else 'unknown'
         try:
             updates = discover(source)
-            scope = {'retained-url-snapshot': 'retained-url-revision',
+            scope = {'retained-url-and-policy-listing': 'official-policy-listing-and-retained-revisions',
+                     'parliament-current-roster': 'current-roster-and-retained-revisions',
+                     'retained-url-snapshot': 'retained-url-revision',
                      'obr-databank-latest': 'latest-page-releases-and-revisions'}.get(
                          source['adapter'], 'collection-releases-and-revisions')
             result = dict(id=source_id, discovery_scope=scope, updates=updates, issues=[])

@@ -1,0 +1,42 @@
+{
+  "purpose": "Bounded official listing alternatives; not full source coverage or a Freshness L3 claim",
+  "transport": "Python urllib.request.urlopen; public GET without cookies or protection bypass",
+  "requests": [
+    {
+      "requested_url": "https://www.conservatives.com/news",
+      "started_at": "2026-11-02T06:25:37.293361+00:00",
+      "status": 200,
+      "final_url": "https://www.conservatives.com/news",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 37466,
+      "sha256": "50a121e690fdc4f50cce0b6d72c3efa087ec283174579345bd45ba480786239a",
+      "response_file": "docs/evidence/freshness-w6/alternatives/conservative-news.html.txt",
+      "http_date": "Mon, 02 Nov 2026 06:25:37 GMT",
+      "finished_at": "2026-11-02T06:25:37.429814+00:00"
+    },
+    {
+      "requested_url": "https://www.conservatives.com/news/policies-announced-at-cpc26",
+      "started_at": "2026-11-02T06:25:37.429977+00:00",
+      "status": 200,
+      "final_url": "https://www.conservatives.com/news/policies-announced-at-cpc26",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 38710,
+      "sha256": "e27be715074fe1501d96719de0c12b8eab267c71011148ca00844d531291d74f",
+      "response_file": "docs/evidence/freshness-w6/alternatives/conservative-cpc26.html.txt",
+      "http_date": "Mon, 02 Nov 2026 06:25:37 GMT",
+      "finished_at": "2026-11-02T06:25:37.462078+00:00"
+    },
+    {
+      "requested_url": "https://www.libdems.org.uk/members/make-policy",
+      "started_at": "2026-11-02T06:25:37.462220+00:00",
+      "status": 200,
+      "final_url": "https://www.libdems.org.uk/members/make-policy",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 163891,
+      "sha256": "9065faaa4a9489f57a77715df003b98028eba7aefd5f5acdef258d30ffea5713",
+      "response_file": "docs/evidence/freshness-w6/alternatives/libdem-policy-listing.html.txt",
+      "http_date": "Mon, 02 Nov 2026 06:25:37 GMT",
+      "finished_at": "2026-11-02T06:25:38.028958+00:00"
+    }
+  ]
+}

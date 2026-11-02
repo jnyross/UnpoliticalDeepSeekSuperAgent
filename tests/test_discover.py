@@ -342,7 +342,7 @@ class DiscoveryFixture(unittest.TestCase):
                 ]))
                 self.assertEqual(discover.open_updates([update], 'owner/repo', run=run),
                                  [{'key': update['key'], 'status': 'already reported'}])
-                run.assert_called_once_with('api', '--paginate', '--slurp',
+                run.assert_called_once_with('api', '--paginate', '--slurp', '-H', 'Cache-Control: no-cache',
                                             'repos/owner/repo/issues?state=all&per_page=100')
 
     def test_repeated_discovery_creates_once_and_retains_machine_marker(self):
@@ -605,6 +605,87 @@ class SnapshotTests(unittest.TestCase):
             discover.discover(self.source, root=self.root, get=mock.Mock(side_effect=OSError('offline')))
 
 
+class CurrentRosterTests(unittest.TestCase):
+    row = SnapshotTests.row
+    save_manifest = SnapshotTests.save_manifest
+
+    def setUp(self):
+        SnapshotTests.setUp(self)
+        self.source['adapter'] = 'parliament-current-roster'
+
+    def current(self, raw=None, as_of='2026-11-02'):
+        return discover.discover_current_roster(self.source, self.root,
+                    mock.Mock(return_value=self.raw if raw is None else raw), as_of=as_of)
+
+    def new_roster(self):
+        value = copy.deepcopy(self.roster)
+        value['items'].append(self.row(1115, 'New party fixture', 2))
+        return json.dumps(value).encode()
+
+    def test_current_unchanged_and_metadata_only_have_no_update(self):
+        self.assertEqual(self.current(), [])
+        value = copy.deepcopy(self.roster)
+        value['timestamp'] = 'later'
+        value['items'].reverse()
+        self.assertEqual(self.current(json.dumps(value).encode()), [])
+
+    def test_current_new_snapshot_stable_across_poll_dates_and_timestamps(self):
+        raw = self.new_roster()
+        update, = self.current(raw)
+        value = json.loads(raw)
+        value['timestamp'] = 'later'
+        again, = self.current(json.dumps(value).encode(), as_of='2026-11-03')
+        self.assertEqual(update['key'], again['key'])
+        self.assertNotEqual(update['evidence']['release_url'], again['evidence']['release_url'])
+        self.assertEqual(update['evidence']['discovery_scope'], 'current-roster-comparison')
+        self.assertNotEqual(update['evidence']['sha256'], self.baseline['sha256'])
+
+    def test_current_uses_utc_date_and_also_checks_historical_url(self):
+        get = mock.Mock(side_effect=[self.raw, self.new_roster()])
+        before = (self.root / 'party-offers.json').read_bytes()
+        updates = discover.discover(self.source, self.root, get)
+        self.assertEqual(len(updates), 1)
+        self.assertEqual(get.call_args_list[0], mock.call(self.url))
+        today = discover.datetime.now(discover.timezone.utc).date().isoformat()
+        self.assertEqual(get.call_args_list[1], mock.call(
+            'https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/' + today))
+        self.assertEqual((self.root / 'party-offers.json').read_bytes(), before)
+
+    def test_current_error_invalid_empty_and_bad_retained_hash_fail_closed(self):
+        for raw in (b'not json', b'{"items": []}', b'{}'):
+            with self.subTest(raw=raw), self.assertRaises((ValueError, KeyError)):
+                self.current(raw)
+        with self.assertRaisesRegex(OSError, 'offline'):
+            discover.discover_current_roster(self.source, self.root,
+                                             mock.Mock(side_effect=OSError('offline')))
+        (self.root / 'roster.json').write_bytes(b'tampered')
+        with self.assertRaisesRegex(ValueError, 'manifest hash'):
+            self.current()
+
+    def test_current_snapshot_does_not_create_historical_revision_notice(self):
+        update, = self.current(self.new_roster())
+        state = discover.reconcile_revision_status(dict(schema_version=1, notices=[]),
+            [self.source], [dict(id=self.source['id'], updates=[update])], root=self.root)
+        self.assertEqual(state['notices'], [])
+
+    def test_current_repeated_and_closed_issues_open_exactly_once(self):
+        issues = []
+        def run(*args):
+            if args[0] == 'api':
+                return json.dumps([issues])
+            body = args[args.index('--body') + 1]
+            self.assertIn('NOT a revision', body)
+            self.assertIn('does not advance', body)
+            issues.append(dict(body=body, state='closed'))
+            return 'https://github.com/o/r/issues/1'
+        update, = self.current(self.new_roster())
+        first = discover.open_updates([update, update], 'o/r', run)
+        next_day, = self.current(self.new_roster(), as_of='2026-11-03')
+        second = discover.open_updates([next_day], 'o/r', run)
+        self.assertEqual([r['status'] for r in first], ['opened', 'already reported'])
+        self.assertEqual(second[0]['status'], 'already reported')
+        self.assertEqual(len(issues), 1)
+
 class OBRDatabankTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -748,6 +829,21 @@ class OBRDatabankTests(unittest.TestCase):
 
 
 class InventoryTests(unittest.TestCase):
+    def test_libdem_registered_listing_dispatches_without_historical_notices(self):
+        inventory = json.loads((ROOT / 'config/release-sources.json').read_text())
+        source = next(s for s in inventory if s['id'] == 'party-offers-libdem')
+        with mock.patch.object(discover, 'discover_snapshot', return_value=[]) as retained:
+            raw = (ROOT / 'docs/evidence/freshness-w6/libdem-policy-listing-response.html').read_bytes()
+            get = mock.Mock(return_value=raw)
+            self.assertEqual(discover.discover(source, ROOT, get), [])
+            retained.assert_called_once_with(source, ROOT, get)
+            get.assert_called_once_with(source['listing_url'])
+        # Listing candidates must never be interpreted as a revised historical manifesto.
+        state = discover.reconcile_revision_status(dict(schema_version=1, notices=[]), [source],
+            [dict(id=source['id'], updates=[dict(evidence={
+                'discovery_scope': 'official-policy-listing-review'})])], root=ROOT)
+        self.assertEqual(state['notices'], [])
+
     def test_every_retained_party_source_and_roster_is_registered_once(self):
         inventory = json.loads((ROOT / 'config/release-sources.json').read_text())
         manifest_path = 'sources/party-offers.json'
@@ -762,7 +858,11 @@ class InventoryTests(unittest.TestCase):
         self.assertCountEqual([(s.get('source_collection', 'sources'), s['source_id']) for s in plans], expected)
         self.assertEqual(len(entries), len(expected) + 1)
         for entry in entries:
-            self.assertEqual(entry['adapter'], 'retained-url-snapshot')
+            expected_adapter = ('parliament-current-roster' if entry.get('selector') == 'roster' else
+                                'retained-url-and-policy-listing' if entry.get('source_id') == 'libdem'
+                                and entry.get('source_collection', 'sources') == 'sources' else
+                                'retained-url-snapshot')
+            self.assertEqual(entry['adapter'], expected_adapter)
             baseline = discover.source_baseline(entry, ROOT)
             # Exact inventory hosts are intentionally not a wildcard or all-party allowlist.
             self.assertEqual(entry['allowed_hosts'], [discover.urlsplit(baseline['url']).hostname])
@@ -786,7 +886,8 @@ class InventoryTests(unittest.TestCase):
                                  '^' + entry['download_path_pattern'] + '$')
                 self.assertRegex(manifest['sha256'], r'^[0-9a-f]{64}$')
             else:
-                self.assertEqual(entry['adapter'], 'retained-url-snapshot')
+                self.assertIn(entry['adapter'], ('retained-url-snapshot', 'parliament-current-roster',
+                                                 'retained-url-and-policy-listing'))
                 self.assertTrue(discover.allowed_url(manifest['url'], entry['allowed_hosts']))
                 self.assertRegex(manifest['sha256'], r'^[0-9a-f]{64}$')
             manifests.append(manifest)
