@@ -136,13 +136,43 @@ class PartyOffersTests(unittest.TestCase):
                     parties.validate(root)
 
     def test_unequal_missing_evidence_fails(self):
-        self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == 'dup').update(costing='Zero'))
+        self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == 'sinnfein').update(costing='Zero'))
 
     def test_independent_sources_have_separate_register(self):
         self.assertEqual(len(self.original['sources']), 13)
-        self.assertEqual(len(self.original['evidence_sources']), 7)
+        self.assertEqual(len(self.original['evidence_sources']), 8)
         self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 9)
         self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 2)
+
+    def test_approved_programme_is_not_a_new_election_spending_pledge(self):
+        row = next(p for p in self.original['parties'] if p['source_id'] == 'dup')
+        self.assertEqual(set(row['evidence']), {'costing', 'programme'})
+        self.assertEqual(row['status'], parties.PROGRAMME_STATUS)
+        self.assertIn('already-approved', row['scope'].lower())
+        self.assertIn('remain unpriced', row['baseline'])
+        self.assertIn('2024-25', row['year'])
+        self.assertTrue(row['assessment'].startswith('Unavailable here:'))
+        html = parties.render(self.original)
+        self.assertIn('Programme dates and approval</a>', html)
+
+    def test_programme_year_and_approval_fail_closed(self):
+        def row(d):
+            return next(p for p in d['parties'] if p['source_id'] == 'dup')
+        self.fails(lambda d: row(d).update(status=d['status']))
+        self.fails(lambda d: row(d)['evidence'].pop('programme'))
+        self.fails(lambda d: row(d)['evidence']['programme'].update(text_line=1))
+        self.fails(lambda d: row(d)['evidence']['programme'].update(approval_text_line=1))
+        self.fails(lambda d: row(d)['evidence']['programme'].update(approval_quote='No approval was given.'))
+        self.fails(lambda d: row(d)['evidence']['programme'].update(quote='£999 million in 2029/30'))
+        self.fails(lambda d: row(d)['evidence']['costing'].update(source_id='de-childcare-2024'))
+
+    def test_programme_approval_cannot_become_independent_assessment(self):
+        def fake(d):
+            row = next(p for p in d['parties'] if p['source_id'] == 'dup')
+            ref = row['evidence']['programme']
+            row['assessment'] = ref['approval_quote']
+            row['evidence']['assessment'] = dict(source_id=ref['source_id'], quote=ref['approval_quote'], text_line=ref['approval_text_line'], locator='Approval', attribution='Department of Education (Northern Ireland)')
+        self.fails(fake)
 
     def test_cost_only_claims_keep_independent_assessment_gap(self):
         for source_id in ('sdlp', 'tuv'):

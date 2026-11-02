@@ -25,8 +25,12 @@ estimate and assessment, explicitly not a party costing or complete UK total.
 UK-government repeal commitment and a checked TUV employer-tax projection. Reform's NHS
 package claim is paired with Paul Johnson's direct IFS assessment from an obtainable
 [official PDF](docs/research/coverage-w6/reform/README.md), not an unrelated NHS fact-check.
-SDLP and TUV retain explicit independent-assessment gaps. DUP and Sinn Féin still lack a
-checked cost for the selected offer; all four lack a matched assessment here. This is
+[Wave-seven research](docs/research/coverage-w7/ni/selected-policy-research.md) verifies the
+DUP manifesto's already-approved £25m childcare package for 2024-25 against the official
+23 May announcement. It is not new Westminster funding, does not price the separate
+nursery/grant election promises, and is not an independent assessment. Sinn Féin's selected
+offer still lacks a checked cost. DUP, Sinn Féin, SDLP and TUV retain unmatched independent
+assessment gaps, and the new DUP nursery/grant commitments remain unpriced. This is
 partial coverage, not a claim to Coverage L4; unlike plans are not ranked or added together.
 The deterministic build also publishes a [financial-figure trace](site/data/party-figure-audit.json)
 for every displayed party cash/rate quote occurrence, including duplicates. It joins

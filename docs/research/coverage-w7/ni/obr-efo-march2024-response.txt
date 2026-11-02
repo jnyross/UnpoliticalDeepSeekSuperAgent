@@ -1,0 +1,20 @@
+URL: https://obr.uk/efo/economic-and-fiscal-outlook-march-2024/
+HTTP status: 403
+Headers:
+Date: Mon, 02 Nov 2026 08:48:16 GMT
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 17
+Connection: close
+Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Expires: Thu, 01 Jan 1970 00:00:01 GMT
+Referrer-Policy: same-origin
+X-Frame-Options: SAMEORIGIN
+Vary: accept-encoding
+set-cookie: __cf_bm=NuGt.gIrnOmd1T_Qys3V0yjaF6LJZopoKQVlWh88F8I-1793609296.8337536-1.0.1.1-6SArkmhU0jHfyyspzcKi3pvBDX4lru4XwnifI6hGUkw75zfcUxL2hENX2KruEA5mVvT3fy4luoWsP0gopg4GQpWL_5cbYvSczCBQAZcLxo19KPLqYxOraqjQuJ10XHNR; HttpOnly; SameSite=None; Secure; Path=/; Domain=obr.uk; Expires=Mon, 02 Nov 2026 09:18:16 GMT
+Server: cloudflare
+CF-RAY: a541e1193edf8d75-HEL
+alt-svc: h3=":443"; ma=86400
+
+
+Response body (not validated as article):
+error code: 1010

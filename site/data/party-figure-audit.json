@@ -357,6 +357,23 @@
       "text_mode": "raw",
       "hosting": "Party publisher",
       "licence": "Party publisher copyright; not Open Government Licence."
+    },
+    {
+      "id": "de-childcare-2024",
+      "kind": "official",
+      "publisher": "Department of Education (Northern Ireland)",
+      "file": "de-childcare-2024.raw.html.txt",
+      "text_file": "de-childcare-2024.txt",
+      "text_mode": "html-blocks-v1",
+      "sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+      "text_sha256": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+      "url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+      "publication": "Education Minister announces £25million package of measures for early learning and childcare in Northern Ireland",
+      "published": "2024-05-23",
+      "downloaded": "2026-11-02",
+      "retrieved_at": "2026-11-02T08:49:49.500138+00:00",
+      "hosting": "Official government department website",
+      "licence": "Crown copyright; see publisher terms"
     }
   ],
   "figures": [
@@ -489,6 +506,52 @@
       "scope": "Working-age welfare reform; UK manifesto claim.",
       "baseline": "Savings against projected benefit spending, not total welfare spending. The text says spending would otherwise rise.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
+      "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
+      "table_row_available": false,
+      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+    },
+    {
+      "party_id": 7,
+      "party": "Democratic Unionist Party",
+      "field": "excerpt",
+      "unit": "GBP million",
+      "figure": "£25 million",
+      "quote_offset": 90,
+      "quote": "the DUP Education Minister Paul Givan MLA has announced a fresh package of measures worth £25 million",
+      "source_id": "dup",
+      "file": "manifesto-2024-dup.pdf",
+      "native_locator": {
+        "locator": "PDF page 21; announced childcare package",
+        "pdf_page": 21
+      },
+      "period_and_year": "2024-25 package; not a recurring annual promise. Price basis is not specified.",
+      "scope": "Already-approved Northern Ireland programme highlighted in the manifesto, not the cost of separate new Westminster workplace-nursery or capital-grant pledges.",
+      "baseline": "Previously approved Executive package. No extra spending is attributed to electing MPs; separate nursery and grant promises remain unpriced.",
+      "status": "Highlighted in the 2024 manifesto; already approved before the election, not a new Westminster commitment or a claim of current spending.",
+      "supplemental_source_tables": [],
+      "unmatched_supplemental_source_tables": [],
+      "table_row_available": false,
+      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+    },
+    {
+      "party_id": 7,
+      "party": "Democratic Unionist Party",
+      "field": "costing",
+      "unit": "GBP million",
+      "figure": "£25 million",
+      "quote_offset": 34,
+      "quote": "a fresh package of measures worth £25 million",
+      "source_id": "dup",
+      "file": "manifesto-2024-dup.pdf",
+      "native_locator": {
+        "locator": "PDF page 21; package amount",
+        "pdf_page": 21
+      },
+      "period_and_year": "2024-25 package; not a recurring annual promise. Price basis is not specified.",
+      "scope": "Already-approved Northern Ireland programme highlighted in the manifesto, not the cost of separate new Westminster workplace-nursery or capital-grant pledges.",
+      "baseline": "Previously approved Executive package. No extra spending is attributed to electing MPs; separate nursery and grant promises remain unpriced.",
+      "status": "Highlighted in the 2024 manifesto; already approved before the election, not a new Westminster commitment or a claim of current spending.",
       "supplemental_source_tables": [],
       "unmatched_supplemental_source_tables": [],
       "table_row_available": false,
@@ -1053,6 +1116,6 @@
       "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
     }
   ],
-  "occurrences": 22,
-  "occurrences_without_source_table": 15
+  "occurrences": 24,
+  "occurrences_without_source_table": 17
 }

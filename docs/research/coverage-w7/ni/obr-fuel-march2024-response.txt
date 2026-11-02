@@ -1,0 +1,20 @@
+URL: https://obr.uk/download/march-2024-economic-and-fiscal-outlook-fuel-duty/
+HTTP status: 403
+Headers:
+Date: Mon, 02 Nov 2026 08:48:16 GMT
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 17
+Connection: close
+Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Expires: Thu, 01 Jan 1970 00:00:01 GMT
+Referrer-Policy: same-origin
+X-Frame-Options: SAMEORIGIN
+Vary: accept-encoding
+set-cookie: __cf_bm=VwtSEmsjbS5FlUvOiIegBD9obixS36m4kcRwv0jtDTw-1793609296.8988154-1.0.1.1-PoVUgALrofgYuNvCM6U7vOtsRsILsyZK7LLqfN2FrpUoG6rqrbHFqZIzHcE9LLeNAZXuRm.5skn_2ikW1dm0CYMTMiM66WhhDM4lYJPj_EQGAPoBdZkw.fdl4tT.sjzg; HttpOnly; SameSite=None; Secure; Path=/; Domain=obr.uk; Expires=Mon, 02 Nov 2026 09:18:16 GMT
+Server: cloudflare
+CF-RAY: a541e11999fa3d51-HEL
+alt-svc: h3=":443"; ma=86400
+
+
+Response body (not validated as article):
+error code: 1010
