@@ -1,0 +1,20 @@
+{
+  "before": {
+    "revision": "9b3f2b2d775850cd09b20d361a807a095527ff83",
+    "page": "site/parties.html",
+    "sha256": "b4881520465ee60643f25d5349183d4adbfb8c3baf0a745bc1064a7b5d1b9e8e",
+    "reports": [
+      "parties.html/mobile/before-browser-report.json",
+      "parties.html/desktop/before-browser-report.json"
+    ]
+  },
+  "after": {
+    "revision": "291c630ed2b8f6131533e0a210936a8319e654e1",
+    "page": "site/parties.html",
+    "sha256": "cb3ac58d5c3f89cc485617de6ac8963680685d0f20373ebfe19f1ce4fcb91255",
+    "reports": [
+      "parties.html/mobile/after-browser-report.json",
+      "parties.html/desktop/after-browser-report.json"
+    ]
+  }
+}
