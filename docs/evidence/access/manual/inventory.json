@@ -33,7 +33,7 @@
     },
     {
       "path": "history-cash.html",
-      "sha256": "425b5ed32f401540069b60a5018f76b8d993909345ecc4fbf1b7c7a06cb6b8fd",
+      "sha256": "8666798cf2bb0d4666dec5c79d0eb5737365cd356f885e7bfdf649ffa0b83d68",
       "states": [
         "initial",
         "all-details-expanded"
@@ -1003,7 +1003,7 @@
         {
           "id": "table:22",
           "kind": "table",
-          "label": "Total Managed Expenditure · £ billion, cash · Total Managed Expenditure",
+          "label": "Total Managed Expenditure · £ billion, cash · Total Managed Expenditure TME excludes the temporary effects of banks being classed as public sector. Source note: 4_2!A35.",
           "tasks": [
             "table"
           ]
@@ -1012,7 +1012,7 @@
     },
     {
       "path": "history-gdp.html",
-      "sha256": "83be434f6eb29040c943fa7b61cc6336186a7dd26946e65b86ccd93753a53c32",
+      "sha256": "c1227a0ec65c4992d7e39482765f2818ae2754c5cf2536b2b55f41c8663efa3b",
       "states": [
         "initial",
         "all-details-expanded"
@@ -1982,7 +1982,7 @@
         {
           "id": "table:22",
           "kind": "table",
-          "label": "Total Managed Expenditure · % of UK GDP · Total Managed Expenditure",
+          "label": "Total Managed Expenditure · % of UK GDP · Total Managed Expenditure TME excludes the temporary effects of banks being classed as public sector. Source note: 4_4!A36.",
           "tasks": [
             "table"
           ]
@@ -1991,7 +1991,7 @@
     },
     {
       "path": "history-real.html",
-      "sha256": "cfbf5396ec9435b1402e71a3ee720c3c2a235c22c00ac79a4d137d06cb271a5f",
+      "sha256": "00a7e9854d546499705815fd5f6eb2ed12e10fb923e5e74bc3a9fabc177e1ffb",
       "states": [
         "initial",
         "all-details-expanded"
@@ -2961,7 +2961,7 @@
         {
           "id": "table:22",
           "kind": "table",
-          "label": "Total Managed Expenditure · £ billion, 2025-26 prices · Total Managed Expenditure",
+          "label": "Total Managed Expenditure · £ billion, 2025-26 prices · Total Managed Expenditure TME excludes the temporary effects of banks being classed as public sector. Source note: 4_3!A36.",
           "tasks": [
             "table"
           ]
@@ -2970,7 +2970,7 @@
     },
     {
       "path": "history.html",
-      "sha256": "417d1565ae31bf121a6d6362e5968c4aa3999afdfa920f3b5911fc849d2c0046",
+      "sha256": "c84917c040a873af56ec8748289634fe813b5da3d0e8cfcfe849a8ca85ba8190",
       "states": [
         "initial",
         "all-details-expanded"
@@ -3381,7 +3381,7 @@
         {
           "id": "table:22",
           "kind": "table",
-          "label": "Total Managed Expenditure — annual history",
+          "label": "Total Managed Expenditure — annual history TME excludes the temporary effects of banks being classed as public sector. Source note: 4_2!A35; 4_3!A36; 4_4!A36.",
           "tasks": [
             "table"
           ]
@@ -3602,7 +3602,7 @@
         {
           "id": "table:35",
           "kind": "table",
-          "label": "Total Managed Expenditure — fixed ten-year snapshots",
+          "label": "Total Managed Expenditure — fixed ten-year snapshots TME excludes the temporary effects of banks being classed as public sector. Source note: 4_1!B53.",
           "tasks": [
             "table"
           ]

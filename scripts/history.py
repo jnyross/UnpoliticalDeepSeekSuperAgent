@@ -9,6 +9,7 @@ import re
 from datetime import datetime, timezone
 import urllib.request
 import openpyxl
+from history_charts import TME_NOTE
 
 
 def refresh_history(root):
@@ -159,7 +160,8 @@ def history_render(d):
                 f'<td>{number(point["gdp_percent"])}</td>'
                 + (f'<td>{esc(status)}<br><small>{links}</small></td>' if locator else '') + '</tr>')
     def table(item, fixed=False):
-        return (f'<table><caption>{esc(item["label"])} — '+('fixed ten-year snapshots' if fixed else 'annual history')+'</caption>'
+        scope_note = (f' {TME_NOTE} Source note: ' + ('4_1!B53' if fixed else '4_2!A35; 4_3!A36; 4_4!A36') + '.') if item['id'] == 'tme' else ''
+        return (f'<table><caption>{esc(item["label"])} — '+('fixed ten-year snapshots' if fixed else 'annual history')+esc(scope_note)+'</caption>'
                 '<thead><tr><th scope="col">Fiscal year</th><th scope="col">Cash<br>£bn</th>'
                 '<th scope="col">Real<br>£bn, 2025-26 prices</th><th scope="col">GDP share<br>%</th>'
                 '<th scope="col">Status and source cells</th></tr></thead><tbody>'
