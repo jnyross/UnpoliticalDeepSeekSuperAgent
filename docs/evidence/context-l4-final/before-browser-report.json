@@ -1,0 +1,231 @@
+{
+  "capturedAt": "2026-11-02T00:54:50.375Z",
+  "revision": "4a82258",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T00:54:50.376Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "history-cash.html",
+      "bytes": 121962,
+      "sha256": "995efcc70176e71defea487c8b49b678fcc20ca07edbde6b3fdb2fa72b099303",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/history-cash.html",
+          "screenshot": "before-history-cash-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/history-cash.html",
+          "screenshot": "before-history-cash-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "history-gdp.html",
+      "bytes": 121178,
+      "sha256": "dc10fd93f1f27c5a361df9f08dcdb52d9f1dd8e2591c3a4737c4ee154a356121",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/history-gdp.html",
+          "screenshot": "before-history-gdp-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/history-gdp.html",
+          "screenshot": "before-history-gdp-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "history-real.html",
+      "bytes": 123117,
+      "sha256": "add5e963fa26b0c88d4e79ffa16cc93119c83684c9fda9a64365828cc1ed894d",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/history-real.html",
+          "screenshot": "before-history-real-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/history-real.html",
+          "screenshot": "before-history-real-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "history.html",
+      "bytes": 120767,
+      "sha256": "da0a2ef473e176b93199e62ff8aa46e5a30b8d61993008292fbe71844b6ba438",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/history.html",
+          "screenshot": "before-history-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/history.html",
+          "screenshot": "before-history-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "income.html",
+      "bytes": 17423,
+      "sha256": "5134151d5c91dd94a1b83b755543ad9b1a0c39aa4261f3e20121905b5bef3633",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/income.html",
+          "screenshot": "before-income-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/income.html",
+          "screenshot": "before-income-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "index.html",
+      "bytes": 15398,
+      "sha256": "3091407fadea86231e30a17f53baf182bc40518ff7cd68802d84abc1dd6f39a2",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/index.html",
+          "screenshot": "before-index-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/index.html",
+          "screenshot": "before-index-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    },
+    {
+      "path": "parties.html",
+      "bytes": 22591,
+      "sha256": "fcb6a98cc23500bd0e3fae29f478bed348803258bd3532f43bf9edafd36ff664",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36561/parties.html",
+          "screenshot": "before-parties-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36561/parties.html",
+          "screenshot": "before-parties-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T00:55:21.975Z",
+  "passed": true
+}

@@ -1,0 +1,112 @@
+{
+  "checked_at": "2026-11-01T23:42:45.772295+00:00",
+  "sources": [
+    {
+      "id": "hmt-public-spending",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-spending-trends",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-roster",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-alliance",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-conservative",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-dup",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-green",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-labour",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-libdem",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-plaid",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-reform",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-snp",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-sinnfein",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-sdlp",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-tuv",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "party-offers-uup",
+      "discovery_scope": "retained-url-revision",
+      "updates": [],
+      "issues": []
+    },
+    {
+      "id": "hmt-pesa-functional-history",
+      "discovery_scope": "collection-releases-and-revisions",
+      "updates": [],
+      "issues": []
+    }
+  ],
+  "errors": [],
+  "revision_status": {
+    "schema_version": 1,
+    "notices": []
+  }
+}

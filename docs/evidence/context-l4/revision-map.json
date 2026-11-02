@@ -1,0 +1,6 @@
+{
+  "changed_revision": "bb595a3e851c10e43eee94ddf815a7c5d72fb043",
+  "baseline_revision": "462c62ace62505b8d052f4ed0496e109f7d906e0",
+  "verified_after_report": "after-browser-report.json",
+  "all_six_page_hashes_match_changed_revision": true
+}

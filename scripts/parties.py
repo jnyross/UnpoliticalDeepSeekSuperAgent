@@ -16,7 +16,10 @@ FIELDS = [('offer', 'Selected official offer'), ('excerpt', 'Party source excerp
           ('status', 'Status'), ('costing', 'Costing'), ('assessment', 'Independent assessment')]
 
 def normal(text):
-    return ' '.join(text.replace('\u00ad', '').split())
+    # Only typographic equivalents: never discard punctuation, digits or word boundaries.
+    ligatures = str.maketrans({'ﬀ': 'ff', 'ﬁ': 'fi', 'ﬂ': 'fl', 'ﬃ': 'ffi',
+                              'ﬄ': 'ffl', 'ﬅ': 'st', 'ﬆ': 'st'})
+    return ' '.join(text.translate(ligatures).replace('\u00ad', '').split())
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -56,7 +59,7 @@ def validate(root):
         for key, limit in LIMITS.items():
             assert isinstance(p[key],str) and 0 < len(p[key].split()) <= limit, 'Length limit: ' + key
         source = sources[p['source_id']]
-        pages = (base / source['text_file']).read_text().split('\f')
+        pages = (base / source['text_file']).read_text(encoding='utf-8').split('\f')
         page = p['pdf_page']
         assert type(page) is int and 1 <= page <= len(pages), 'Invalid PDF page: ' + p['name']
         assert normal(p['excerpt']) in normal(pages[page-1]), 'Excerpt not on cited transcript page: ' + p['name']
@@ -68,7 +71,7 @@ def validate(root):
             subprocess.run(['pdftotext', '-f', str(page), '-l', str(page),
                             *(['-raw'] if source.get('text_mode') == 'raw' else []),
                             str(base / source['file']), str(out)], check=True, capture_output=True)
-            assert normal(p['excerpt']) in normal(out.read_text(encoding='utf-8')), 'Excerpt not on cited PDF page: ' + p['name']
+            assert normal(p['excerpt']) in normal(out.read_text(encoding='utf-8').split('\f')[0]), 'Excerpt not on cited PDF page: ' + p['name']
         assert p['status'] == d['status'], 'Status differs'
         assert p['costing'] == d['costing'] and p['assessment'] == d['assessment'], 'Missing-data treatment differs'
     assert all(s['url'].startswith('https://') for s in d['sources'])

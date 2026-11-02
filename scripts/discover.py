@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only release/revision checks; only --open-issues writes (GitHub issues).
+"""Release/revision checks; opt in to issue creation or persistent revision notices.
 
 Collection and latest-page adapters discover new release links. Retained-URL snapshots only detect
 revisions at inventory URLs, including explicitly identified archive-hosted copies;
@@ -319,11 +319,73 @@ Retained-URL checks cannot establish whether a newer publication exists elsewher
     return results
 
 
+def load_revision_status(path):
+    """Missing state starts empty; malformed state must never erase known notices."""
+    if not path.exists():
+        return dict(schema_version=1, notices=[])
+    state = json.loads(path.read_text())
+    if (not isinstance(state, dict) or state.get('schema_version') != 1 or
+            not isinstance(state.get('notices'), list)):
+        raise ValueError('Invalid revision status schema')
+    for notice in state['notices']:
+        if (not isinstance(notice, dict) or
+                not all(k in notice for k in ('source', 'baseline_sha256', 'baseline_url',
+                                               'key', 'first_detected_at', 'evidence')) or
+                not isinstance(notice['evidence'], dict) or
+                not all(k in notice['evidence'] for k in ('sha256', 'release_url'))):
+            raise ValueError('Invalid revision notice')
+    return state
+
+
+def reconcile_revision_status(state, inventory, results, root=ROOT, checked_at=None):
+    """Return durable notices, without modifying state, manifests or source bytes.
+
+    A failed/unchanged lookup is not evidence that a known revision was incorporated.
+    Only the exact observed revision hash at its release URL resolves a notice.
+    Date-only revisions additionally require the recorded publisher update date.
+    Build integration can pass results=[] after refreshing its staged manifests.
+    """
+    checked_at = checked_at or datetime.now(timezone.utc).isoformat()
+    baselines = {}
+    for source in inventory:
+        try:
+            baselines[source['id']] = source_baseline(source, root)
+        except (OSError, ValueError, KeyError, TypeError):
+            # A broken/unavailable manifest cannot prove resolution either.
+            continue
+
+    def incorporated(notice):
+        baseline = baselines.get(notice['source'], {})
+        evidence = notice['evidence']
+        if (baseline.get('sha256') != evidence['sha256'] or
+                baseline.get('release_url', baseline.get('url')) != evidence['release_url']):
+            return False
+        if evidence['sha256'] == notice['baseline_sha256']:
+            return baseline.get('date') == evidence.get('updated')
+        return True
+
+    notices = { (n['source'], n['baseline_sha256'], n['key']): dict(n)
+                for n in state['notices'] if not incorporated(n) }
+    for result in results or []:
+        for update in result['updates']:
+            baseline = update['baseline']
+            notice = dict(source=result['id'], baseline_sha256=baseline['sha256'],
+                          baseline_url=baseline.get('release_url', baseline.get('url')),
+                          key=update['key'], first_detected_at=checked_at,
+                          evidence=dict(update['evidence']))
+            identity = (notice['source'], notice['baseline_sha256'], notice['key'])
+            if not incorporated(notice):
+                notices.setdefault(identity, notice)
+    return dict(schema_version=1, notices=[notices[k] for k in sorted(notices)])
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--open-issues', action='store_true')
     parser.add_argument('--repo', default=os.environ.get('GITHUB_REPOSITORY'))
     parser.add_argument('--report', type=Path, default=Path('discovery-report.json'))
+    parser.add_argument('--write-revision-status', action='store_true',
+                        help='Persist unresolved notices in sources/revision-status.json')
     args = parser.parse_args()
     if args.open_issues and not args.repo:
         parser.error('--repo or GITHUB_REPOSITORY is required')
@@ -348,6 +410,20 @@ def main():
                 result['issues'] = open_updates(updates, args.repo)
         except Exception as exc:
             report['errors'].append(dict(source=source_id, error=str(exc)))
+    try:
+        status_path = ROOT / 'sources/revision-status.json'
+        state = load_revision_status(status_path)
+        report['revision_status'] = reconcile_revision_status(
+            state, inventory, report['sources'], root=ROOT, checked_at=report['checked_at'])
+        if args.write_revision_status:
+            status_path.parent.mkdir(parents=True, exist_ok=True)
+            # Replace only after complete serialization; interrupted writes keep last good state.
+            # Keep temporary bytes outside sources/, which the static build copies verbatim.
+            pending = ROOT / '.revision-status.json.tmp'
+            pending.write_text(json.dumps(report['revision_status'], indent=2) + '\n')
+            pending.replace(status_path)
+    except Exception as exc:
+        report['errors'].append(dict(source='revision-status', error=str(exc)))
     args.report.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
     return 1 if report['errors'] else 0

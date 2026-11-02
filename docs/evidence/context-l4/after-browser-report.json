@@ -1,0 +1,523 @@
+{
+  "capturedAt": "2026-11-01T23:55:32.289Z",
+  "baseRevision": "bb595a3e851c10e43eee94ddf815a7c5d72fb043",
+  "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
+  "mode": "automated-checks",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "path": "history-cash.html",
+      "bytes": 139970,
+      "sha256": "b86da6fee7886d88034b8c326431b30936160cd01ff5bee3a73706452c74f988",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-history-cash-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          },
+          "noJavaScriptViewSwitches": true
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-history-cash-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          },
+          "noJavaScriptViewSwitches": true
+        }
+      ]
+    },
+    {
+      "path": "history-gdp.html",
+      "bytes": 139186,
+      "sha256": "c6463b57e62c20f8e3714439d4e400c89eaa21e00d020d4a25c2bd03b1f7c21a",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-history-gdp-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          },
+          "noJavaScriptViewSwitches": true
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-history-gdp-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          },
+          "noJavaScriptViewSwitches": true
+        }
+      ]
+    },
+    {
+      "path": "history-real.html",
+      "bytes": 141125,
+      "sha256": "1418fb39843c7d50d8d58aa27d444ddd70264f80a619642be5daa297c6b1b536",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-history-real-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          },
+          "noJavaScriptViewSwitches": true
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-history-real-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": [
+                {
+                  "id": "color-contrast",
+                  "impact": "serious",
+                  "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds"
+                }
+              ]
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          },
+          "noJavaScriptViewSwitches": true
+        }
+      ]
+    },
+    {
+      "path": "history.html",
+      "bytes": 137817,
+      "sha256": "51612b402cb2bb679df6edb9d26d942945cc90ba8488b693377b519467ba6a3a",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-history-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": []
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-history-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": []
+            },
+            {
+              "name": "all-details-expanded",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "path": "index.html",
+      "bytes": 17672,
+      "sha256": "4462e38344fbc6c0529073cbaafa1c974747201a4488f9377d7cd53ddcc70b62",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-index-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-index-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    },
+    {
+      "path": "parties.html",
+      "bytes": 26184,
+      "sha256": "df397878413bb8370b2d9cbab15f894f652e5384db63520e8f9447f9efc894cd",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "screenshot": "after-parties-html-mobile.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 360,
+                "document": 360,
+                "body": 360
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 360,
+            "document": 360,
+            "body": 360
+          }
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "screenshot": "after-parties-html-desktop.png",
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "violations": [],
+              "incomplete": []
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

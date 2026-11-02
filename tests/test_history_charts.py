@@ -29,6 +29,10 @@ class ChartTests(unittest.TestCase):
         import openpyxl
         book = openpyxl.load_workbook(ROOT/'sources/history.xlsx', data_only=True)
         outputs = chart_outputs(d)
+        # The pipeline adds section-local vintage/calendar/revision context after rendering.
+        from section_dates import annotate
+        annotate(outputs, ROOT, json.loads((ROOT/'site/data/spending.json').read_text()),
+                 json.loads((ROOT/'site/data/comparisons.json').read_text()))
         for view, (field, title, unit) in VIEWS.items():
             page = outputs[f'history-{view}.html'].decode()
             self.assertLess(len(page.encode()), 500000)
