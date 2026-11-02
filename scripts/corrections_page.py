@@ -3,7 +3,7 @@ import html
 import re
 
 
-def render(entries, home):
+def render(entries, home, metadata):
     esc = html.escape
     style = re.search(r'<style>(.*?)</style>', home, re.S)[1]
     records = []
@@ -21,6 +21,8 @@ def render(entries, home):
 <a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/">UnpoliticalAF</a><span>UK public money</span></header>
 <main id="main"><h1>Corrections</h1><nav aria-label="Site pages"><a href="index.html">Spending</a> · <a href="income.html">Taxes, borrowing and debt</a> · <a href="history.html">History</a> · <a href="parties.html">Party offers</a></nav>
 <p class="intro">When we fix an error, we record what was wrong and what changed.</p>
+<p>Source publication: <a href="sources/corrections.json">{esc(metadata['publication'])}</a>. This is our local record, not an official statistics release.</p>
+<p>Log data as of <time datetime="{esc(metadata['date'])}">{esc(metadata['date'])}</time>. {esc(metadata['date_basis'])} <a href="{esc(metadata['evidence_url'], quote=True)}">Snapshot evidence</a> · <a href="sources/corrections-metadata.json">Source and date details (JSON)</a>. There is no set next release date.</p>
 <section><h2>The log</h2>{log}</section>
 <section><h2>How this log works</h2><p>Each entry gives the date the fix was applied, the page, the error and the fix. It links to the change as evidence. The same source checks apply to all parties.</p>
 <p>We add entries at the end. We do not change or remove old entries. If an entry is wrong, we add a new one that names it and explains the fix. Routine data updates and new features are not corrections.</p>

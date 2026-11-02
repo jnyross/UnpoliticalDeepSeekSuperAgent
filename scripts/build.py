@@ -108,7 +108,8 @@ def outputs(root):
     files.update(history_outputs(root))
     section_dates.annotate(files, root, d, comparison)
     entries = corrections.load(root/'sources/corrections.json', check_pages=False)
-    files['corrections.html'] = corrections_page.render(entries, files['index.html'].decode()).encode()
+    metadata = corrections.load_metadata(root/'sources/corrections-metadata.json', entries)
+    files['corrections.html'] = corrections_page.render(entries, files['index.html'].decode(), metadata).encode()
     disclosures.annotate(files, d['source'])
     for name, raw in list(files.items()):
         if name.endswith('.html') and name != 'corrections.html':

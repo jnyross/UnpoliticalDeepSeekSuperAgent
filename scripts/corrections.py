@@ -9,6 +9,7 @@ An empty ledger is valid: tests use fictional records only in temporary fixtures
 from __future__ import annotations
 
 import argparse
+import hashlib
 from datetime import date
 import json
 from pathlib import Path
@@ -105,6 +106,39 @@ def load(path, *, check_pages=True):
     path = Path(path)
     site = path.parent.parent / 'site' if check_pages else None
     return _validate(_decode(path.read_text(encoding='utf-8')), site)
+
+
+def load_metadata(path, entries):
+    """Validate the retained local snapshot, including an explicitly empty ledger.
+
+    Dates are maintained with source evidence, never taken from the build clock.
+    The byte hash forces a reviewed metadata update when the ledger changes.
+    """
+    path = Path(path)
+    metadata = _decode(path.read_text(encoding='utf-8'))
+    fields = {'publication', 'date', 'sha256', 'date_basis', 'evidence_url'}
+    if not isinstance(metadata, dict) or set(metadata) != fields:
+        raise ValidationError('corrections metadata: unexpected fields')
+    for key in fields:
+        value = metadata[key]
+        if (not isinstance(value, str) or not value.strip() or value != value.strip()
+                or len(value) > 512 or any(ord(c) < 32 for c in value)):
+            raise ValidationError(f'corrections metadata: invalid {key}')
+    try:
+        stamp = date.fromisoformat(metadata['date'])
+        if stamp.isoformat() != metadata['date']:
+            raise ValueError('not canonical')
+    except ValueError as exc:
+        raise ValidationError('corrections metadata: invalid date') from exc
+    _validate(entries)
+    if any(date.fromisoformat(entry['date']) > stamp for entry in entries):
+        raise ValidationError('corrections metadata: snapshot predates an entry')
+    raw = (path.parent / 'corrections.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest() != metadata['sha256']:
+        raise ValidationError('corrections metadata: snapshot hash differs')
+    if not SOURCE_RE.fullmatch(metadata['evidence_url']):
+        raise ValidationError('corrections metadata: invalid snapshot evidence URL')
+    return metadata
 
 
 def assert_append_only(previous, current):
