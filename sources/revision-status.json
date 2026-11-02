@@ -1,4 +1,22 @@
 {
   "schema_version": 1,
-  "notices": []
+  "notices": [
+    {
+      "source": "party-evidence-libdem-buyback-2024",
+      "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+      "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+      "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+      "first_detected_at": "2026-11-02T06:03:43.089472+00:00",
+      "evidence": {
+        "source": "party-evidence-libdem-buyback-2024",
+        "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+        "discovery_scope": "retained-url-revision",
+        "updated": "not supplied by retained URL",
+        "refresh_command": "python3 scripts/build.py --refresh",
+        "hosting": "Publisher website; retained HTML response"
+      }
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "prepared_date": "2026-11-02",
-  "page_revision": "86bb51b462f8da2dcb24d7e291d9de181ea13978",
+  "page_revision": "d9c69d6a40614d04c03d4e2b063105dfc0e780fc",
   "input_sha256": {
-    "site/index.html": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
+    "site/index.html": "602c77d6c03e79f7463e66cf87283f10172a2c1ce2d15c8ce9db8cc00d8a2cd1",
     "site/data/spending.json": "bcb3bf2cb702f8447b0ac31001ee3deb0dcdf87d8fa21ae1baa221b64ec61ba1",
     "site/data/comparisons.json": "f217c964b2375b2bf2d740cd93e7f4e520075bd612fe26e6e3238e0b0ebf0c61",
     "sources/manifest.json": "00ef37b2dd095ed13e6e85a8fd191f1951bf54197552ce0757acde1a999ab79b",

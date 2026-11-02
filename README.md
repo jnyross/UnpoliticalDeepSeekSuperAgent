@@ -161,6 +161,23 @@ and unchanged historical prefix against the base revision. See
 [release timing methods and commands](docs/release-timing.md) for live verification,
 append-only validation, error handling and interpretation limits.
 
+### Reproduce a bounded source/date audit
+
+```sh
+python3 scripts/audit_context.py --output /tmp/context-audit.json \
+  --live-url https://unpoliticaldeepseeksuperagent.vercel.app
+```
+
+This read-only audit reuses discovery and deployment verification, checks every current
+inventory entry, verifies retained source hashes, and compares the retained calendar
+endpoints. It retains request timestamps, byte counts/hashes, per-source errors,
+revision-notice reconciliation and exact deployed-file hashes. It does not refresh
+sources, publish notices, open issues or write timing measurements. Exit 1 means an
+unknown/error or changed calendar needs investigation; source updates are recorded
+separately as findings, not errors. A successful lookup is only point-in-time evidence.
+The [wave-six audit](docs/evidence/context-w6/README.md) records the 22-source result,
+actual revision warning, section coverage and remaining Context L4 limitations.
+
 ### Section dates and official release evidence
 
 Every spending/income section, history chart/table and party offer carries its data period
@@ -313,6 +330,13 @@ a new hash. Adding a new election or roster date is an explicit dataset update.
 Scheduled party discovery detects revisions at these retained URLs only: it does not
 find new manifesto URLs, new elections or changes to today's roster. It must not be
 read as proof of current party-policy coverage or complete release discovery.
+
+The home-page browser checks click all eight answer links at 360×800 and 1280×900,
+with JavaScript enabled and disabled. They check the link's initial position, unique
+native fragment target, substantive answer text and the full answer paragraph's
+landing position within the viewport, rather than just counting links. The home
+navigation includes direct links for debt interest, pensions versus defence and each
+ten-year question, so readers need not pass the spending chart to reach them.
 
 Browser checks can also run against the deployed site, comparing returned HTML hashes
 with local output before no-JavaScript, mobile and axe checks:

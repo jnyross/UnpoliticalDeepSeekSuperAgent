@@ -1,0 +1,1168 @@
+{
+  "started_at": "2026-11-02T06:03:43.089472+00:00",
+  "revision": "693386bc035b0a3489718bee9712922748c181b7",
+  "sources": [
+    {
+      "id": "obr-public-finances-databank",
+      "adapter": "obr-databank-latest",
+      "started_at": "2026-11-02T06:03:43.095698+00:00",
+      "baseline": {
+        "file": "income.xlsx",
+        "url": "https://obr.uk/docs/sodugn2q20l901oy19v1cz5e/PSF_aggregates_databank_Oct_EFO.xlsx",
+        "download_url": "https://obr.uk/download/public-finances-databank-october-2026-efo/",
+        "sha256": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+        "publication": "Public finances databank \u2013 October 2026 EFO",
+        "published": "2026-10-28",
+        "date": "2026-10-28",
+        "downloaded": "2026-11-01",
+        "release_url": "https://obr.uk/data/",
+        "metadata_file": "income-release.txt",
+        "metadata_sha256": "86c0c89c2a930e675c04e05aa76748a6f910b623a9ca5775bbb11b265bbfafe6",
+        "geography": "United Kingdom",
+        "scope": "UK public sector, OBR public finances definitions",
+        "next_release": "No next release date is announced on the retained OBR data page; databanks are normally updated around two working days after the monthly public finance release."
+      },
+      "retained_sha256": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+      "updates": [],
+      "request_indexes": [
+        0,
+        1
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:03:43.702054+00:00"
+    },
+    {
+      "id": "hmt-public-spending",
+      "adapter": "govuk-collection-attachment",
+      "started_at": "2026-11-02T06:03:43.702074+00:00",
+      "baseline": {
+        "file": "spending.xlsx",
+        "url": "https://assets.publishing.service.gov.uk/media/6a574acd2cbe5d1c179a64fd/July_PSS_2026_Chapter_5.xlsx",
+        "sha256": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+        "publication": "Public spending statistics: July 2026",
+        "published": "2026-07-16",
+        "date": "2026-07-29",
+        "downloaded": "2026-11-01",
+        "release_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2026"
+      },
+      "retained_sha256": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+      "updates": [],
+      "request_indexes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:03:44.315625+00:00"
+    },
+    {
+      "id": "hmt-spending-trends",
+      "adapter": "govuk-collection-attachment",
+      "started_at": "2026-11-02T06:03:44.315636+00:00",
+      "baseline": {
+        "file": "trends.xlsx",
+        "url": "https://assets.publishing.service.gov.uk/media/6a574aac822fbe6b8245c955/July_PSS_2026_Chapter_4.xlsx",
+        "sha256": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c",
+        "publication": "Public spending statistics: July 2026",
+        "published": "2026-07-16",
+        "date": "2026-07-29",
+        "downloaded": "2026-11-01",
+        "release_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2026"
+      },
+      "retained_sha256": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c",
+      "updates": [],
+      "request_indexes": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:03:44.711111+00:00"
+    },
+    {
+      "id": "party-roster",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:03:44.711128+00:00",
+      "baseline": {
+        "file": "commons-roster-2024-07-09.json",
+        "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+        "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+        "as_of": "2024-07-09",
+        "date": "2024-07-09",
+        "downloaded": "2026-11-01",
+        "publication": "State of the parties (Commons)",
+        "publisher": "UK Parliament",
+        "scope": "House of Commons; parties with at least one MP, plus independent MPs and Speaker",
+        "locator": "items[].value.party and items[].value.total"
+      },
+      "retained_sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "updates": [],
+      "request_indexes": [
+        12
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:11.951656+00:00"
+    },
+    {
+      "id": "party-offers-alliance",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:11.951676+00:00",
+      "baseline": {
+        "id": "alliance",
+        "file": "manifesto-2024-alliance.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/alliance/manifesto.pdf",
+        "sha256": "dfdbd70aa71316989f8e10657a29a6b2123705721416e271a71c219c9e050693",
+        "text_file": "manifesto-2024-alliance.txt",
+        "text_sha256": "eae387822766a1e63175de53a9619d3caf9245c05e6687568245111f61be5e0e",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (alliance)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/alliance/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "dfdbd70aa71316989f8e10657a29a6b2123705721416e271a71c219c9e050693",
+      "updates": [],
+      "request_indexes": [
+        13
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:12.308297+00:00"
+    },
+    {
+      "id": "party-offers-conservative",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:12.308328+00:00",
+      "baseline": {
+        "id": "conservative",
+        "file": "manifesto-2024-conservative.pdf",
+        "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+        "sha256": "dd077291a0962017a4a1e05c615f211dcfec03391cb26f4850bc5d2a0bdbc4d0",
+        "text_file": "manifesto-2024-conservative.txt",
+        "text_sha256": "74c4ad32f2f3acc6d81e0ef9dabe6299c9a9f7c2a65b8746fbf52b9b0badc29e",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (conservative)",
+        "hosting": "Party publisher",
+        "publication_date_precision": "year",
+        "fetched_url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+        "source_original_url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+        "provenance_note": "Official party-authored PDF downloaded from the publisher or its publishing CDN.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "dd077291a0962017a4a1e05c615f211dcfec03391cb26f4850bc5d2a0bdbc4d0",
+      "updates": [],
+      "request_indexes": [
+        14
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:12.578937+00:00"
+    },
+    {
+      "id": "party-offers-dup",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:12.578983+00:00",
+      "baseline": {
+        "id": "dup",
+        "file": "manifesto-2024-dup.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/dup/manifesto.pdf",
+        "sha256": "2d0439bd6cbdf2b842b4e1e9c0557807444856678e2e249e09f5c115e8f8eefa",
+        "text_file": "manifesto-2024-dup.txt",
+        "text_sha256": "07531b67e2c2b93e3e78151a024ce6c8acb772b9db66d3443e56da536c7a40c0",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (dup)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/dup/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "2d0439bd6cbdf2b842b4e1e9c0557807444856678e2e249e09f5c115e8f8eefa",
+      "updates": [],
+      "request_indexes": [
+        15
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:12.861421+00:00"
+    },
+    {
+      "id": "party-offers-green",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:12.861468+00:00",
+      "baseline": {
+        "id": "green",
+        "file": "manifesto-2024-green.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/green/manifesto.pdf",
+        "sha256": "4cfa29bd877b1b0ed46528684349eb6fb9bdeaaa5451897a5cace43f062f8537",
+        "text_file": "manifesto-2024-green.txt",
+        "text_sha256": "63387951d46642671adc4fdf80ea94475113743cf5e3b900fab6584fe0beff74",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (green)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/green/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "4cfa29bd877b1b0ed46528684349eb6fb9bdeaaa5451897a5cace43f062f8537",
+      "updates": [],
+      "request_indexes": [
+        16
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:13.049675+00:00"
+    },
+    {
+      "id": "party-offers-labour",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:13.049717+00:00",
+      "baseline": {
+        "id": "labour",
+        "file": "manifesto-2024-labour.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/labour/manifesto.pdf",
+        "sha256": "2385a7e51e17b93cd48e7ffb5c86f4c357cbc679f759aa480304ec0f777d5147",
+        "text_file": "manifesto-2024-labour.txt",
+        "text_sha256": "b9d120d4ee5d1d662c37a59d36e50fc2c4fb507485a2d581c6c620db0ebaa2a8",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (labour)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "text_mode": "raw",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/labour/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "2385a7e51e17b93cd48e7ffb5c86f4c357cbc679f759aa480304ec0f777d5147",
+      "updates": [],
+      "request_indexes": [
+        17
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:13.428358+00:00"
+    },
+    {
+      "id": "party-offers-libdem",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:13.428402+00:00",
+      "baseline": {
+        "id": "libdem",
+        "file": "manifesto-2024-libdem.pdf",
+        "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/For_a_Fair_Deal_-_Liberal_Democrat_Manifesto_2024.pdf",
+        "sha256": "a1192e502647dd99a8bc1b13d9a06cf171b60e4084615c1c809ea6d73bb7b714",
+        "text_file": "manifesto-2024-libdem.txt",
+        "text_sha256": "aa9cd4e0b912196db371f9b521224a1ee8f8f318bf71c4822c3861bd771c382f",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (libdem)",
+        "hosting": "Party publisher",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/For_a_Fair_Deal_-_Liberal_Democrat_Manifesto_2024.pdf",
+        "source_original_url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/For_a_Fair_Deal_-_Liberal_Democrat_Manifesto_2024.pdf",
+        "provenance_note": "Official party-authored PDF downloaded from the publisher or its publishing CDN.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "a1192e502647dd99a8bc1b13d9a06cf171b60e4084615c1c809ea6d73bb7b714",
+      "updates": [],
+      "request_indexes": [
+        18
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:14.241960+00:00"
+    },
+    {
+      "id": "party-offers-plaid",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:14.242001+00:00",
+      "baseline": {
+        "id": "plaid",
+        "file": "manifesto-2024-plaid.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/plaid/manifesto.pdf",
+        "sha256": "e00bf848cef0fcf655f4741598bce812a3e73d4b0a317f0f1c4da338c4e52fed",
+        "text_file": "manifesto-2024-plaid.txt",
+        "text_sha256": "7824027b7e020cbd5bf3965027165ad0adc481db58cb8e050354a0f9e4135c62",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (plaid)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/plaid/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "e00bf848cef0fcf655f4741598bce812a3e73d4b0a317f0f1c4da338c4e52fed",
+      "updates": [],
+      "request_indexes": [
+        19
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:14.510054+00:00"
+    },
+    {
+      "id": "party-offers-reform",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:14.510086+00:00",
+      "baseline": {
+        "id": "reform",
+        "file": "manifesto-2024-reform.pdf",
+        "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf?1718625371",
+        "sha256": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+        "text_file": "manifesto-2024-reform.txt",
+        "text_sha256": "8841f98b66fd69b019c0151a2ea72c463c52dad503a29a63eacc62e85e489c3b",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (reform)",
+        "hosting": "Party publisher",
+        "publication_date_precision": "year",
+        "fetched_url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf?1718625371",
+        "source_original_url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf?1718625371",
+        "provenance_note": "Official party-authored PDF downloaded from the publisher or its publishing CDN.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+      "updates": [],
+      "request_indexes": [
+        20
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:15.136925+00:00"
+    },
+    {
+      "id": "party-offers-snp",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:15.136957+00:00",
+      "baseline": {
+        "id": "snp",
+        "file": "manifesto-2024-snp.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/snp/manifesto.pdf",
+        "sha256": "82a5b60680c2e7eb6f304c78555b5d8019100ee6b58115dcdd67d7133ca82715",
+        "text_file": "manifesto-2024-snp.txt",
+        "text_sha256": "1a1592f77eb97f25e8dffa6892fdefba66cc0d0002fbbf35026ad8f9e24fa2ac",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (snp)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/snp/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "82a5b60680c2e7eb6f304c78555b5d8019100ee6b58115dcdd67d7133ca82715",
+      "updates": [],
+      "request_indexes": [
+        21
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:15.429799+00:00"
+    },
+    {
+      "id": "party-offers-sinnfein",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:15.429839+00:00",
+      "baseline": {
+        "id": "sinnfein",
+        "file": "manifesto-2024-sinnfein.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/sinnfein/manifesto.pdf",
+        "sha256": "507df8544f8a1a265af521c0bf93e445ea52eb6488cb785350a1cd5f5c08ece0",
+        "text_file": "manifesto-2024-sinnfein.txt",
+        "text_sha256": "2e1782d1708f0fa7a47bf546af5f3264661547b7204a31e02ea2cc236151b2a1",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (sinnfein)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/sinnfein/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "507df8544f8a1a265af521c0bf93e445ea52eb6488cb785350a1cd5f5c08ece0",
+      "updates": [],
+      "request_indexes": [
+        22
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:15.704400+00:00"
+    },
+    {
+      "id": "party-offers-sdlp",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:15.704437+00:00",
+      "baseline": {
+        "id": "sdlp",
+        "file": "manifesto-2024-sdlp.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/sdlp/manifesto.pdf",
+        "sha256": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+        "text_file": "manifesto-2024-sdlp.txt",
+        "text_sha256": "5e6743092c9fd27e6888932b89b6241a670f217fce2118a6e5eeb88bf8f3b4e2",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (sdlp)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/sdlp/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+      "updates": [],
+      "request_indexes": [
+        23
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:15.942063+00:00"
+    },
+    {
+      "id": "party-offers-tuv",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:15.942097+00:00",
+      "baseline": {
+        "id": "tuv",
+        "file": "manifesto-2024-tuv.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/tuv/manifesto.pdf",
+        "sha256": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+        "text_file": "manifesto-2024-tuv.txt",
+        "text_sha256": "af09db3af88c54ace13d8b9026f516e929fe3abc0b8f44eb0beffcf404ffbb16",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (tuv)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/tuv/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+      "updates": [],
+      "request_indexes": [
+        24
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:16.220432+00:00"
+    },
+    {
+      "id": "party-offers-uup",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:16.220474+00:00",
+      "baseline": {
+        "id": "uup",
+        "file": "manifesto-2024-uup.pdf",
+        "url": "https://www.manifestos.org.uk/manifestos/2024/uup/manifesto.pdf",
+        "sha256": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+        "text_file": "manifesto-2024-uup.txt",
+        "text_sha256": "71f13ab89b68e13bb0f3440a54856cd68908117e1757a066838de64797841c26",
+        "downloaded": "2026-11-01",
+        "published": "2024",
+        "publication": "2024 general election manifesto (uup)",
+        "hosting": "British Manifesto Archive: archived party-issued PDF",
+        "publication_date_precision": "year",
+        "fetched_url": "https://www.manifestos.org.uk/manifestos/2024/uup/manifesto.pdf",
+        "source_original_url": null,
+        "provenance_note": "Official party-authored document. Original publisher download URL not verified; archive copy used.",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+      "updates": [],
+      "request_indexes": [
+        25
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:16.517641+00:00"
+    },
+    {
+      "id": "hmt-pesa-functional-history",
+      "adapter": "govuk-collection-attachment",
+      "started_at": "2026-11-02T06:04:16.517677+00:00",
+      "baseline": {
+        "file": "history.xlsx",
+        "url": "https://assets.publishing.service.gov.uk/media/6a5772e09e63154454413700/PESA_2026_CP_Chapter_4_tables.xlsx",
+        "sha256": "50ae80d95c4e542c34a17dfa8bc302858ca6508b6753e27bb31920cec9bb75c4",
+        "publication": "Public Expenditure Statistical Analyses 2026, Chapter 4",
+        "published": "2026-07-16",
+        "date": "2026-07-16",
+        "workbook_vintage": "2026-07-16",
+        "downloaded": "2026-11-01",
+        "release_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2026",
+        "metadata_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+        "metadata_file": "history-release.json",
+        "metadata_sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+        "workbook_modified": "2026-07-08T10:55:39Z",
+        "sheets": {
+          "cash": "4_2",
+          "real": "4_3",
+          "gdp": "4_4"
+        },
+        "geography": "United Kingdom",
+        "scope": "Public sector expenditure on services",
+        "status": "outturn",
+        "years": "2003-04 to 2025-26",
+        "real_base_year": "2025-26",
+        "deflator": "ONS GDP deflators released 30 June 2026",
+        "gdp_source": "ONS GDP published 30 June 2026",
+        "next_release": "No next release date is announced in the retained release metadata."
+      },
+      "retained_sha256": "50ae80d95c4e542c34a17dfa8bc302858ca6508b6753e27bb31920cec9bb75c4",
+      "updates": [],
+      "request_indexes": [
+        26,
+        27,
+        28
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:16.743858+00:00"
+    },
+    {
+      "id": "party-evidence-rf-economic-battle-lines",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:16.743872+00:00",
+      "baseline": {
+        "id": "rf-economic-battle-lines",
+        "file": "rf-economic-battle-lines.raw.html.txt",
+        "url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+        "sha256": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+        "downloaded": "2026-11-02",
+        "retrieved_at": "2026-11-02T01:35:50.023717+00:00",
+        "published": "2024-06-14",
+        "publication": "The economic battle lines in the manifestos",
+        "publisher": "Resolution Foundation",
+        "kind": "independent",
+        "licence": "Publisher copyright; not Open Government Licence.",
+        "text_file": "rf-economic-battle-lines.txt",
+        "text_sha256": "94d3c0486213cf9bb5d45d37293d1356725e16405bc7058ddeb75d74e42e2551",
+        "text_mode": "html-blocks-v1",
+        "hosting": "Publisher website; retained HTML response"
+      },
+      "retained_sha256": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+      "updates": [],
+      "request_indexes": [
+        29
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:17.204923+00:00"
+    },
+    {
+      "id": "party-evidence-fullfact-buybacks",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:17.204943+00:00",
+      "baseline": {
+        "id": "fullfact-buybacks",
+        "file": "fullfact-buybacks.raw.html.txt",
+        "url": "https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/",
+        "sha256": "2a22079120bb14156c0fd6e87fc8840bb6bab59048da4e36d276f343d2ef3174",
+        "downloaded": "2026-11-02",
+        "retrieved_at": "2026-11-02T01:37:49.089008+00:00",
+        "published": "2024-06-06",
+        "publication": "Would the Lib Dems\u2019 plan to tax share buybacks raise \u00a31.4 billion a year?",
+        "publisher": "Full Fact",
+        "kind": "independent",
+        "licence": "Publisher copyright; not Open Government Licence.",
+        "text_file": "fullfact-buybacks.txt",
+        "text_sha256": "98658d079ff37c2a48ba4c5bedd133817deddac16dbbc1c2121b36b80c890412",
+        "text_mode": "html-blocks-v1",
+        "hosting": "Publisher website; retained HTML response"
+      },
+      "retained_sha256": "2a22079120bb14156c0fd6e87fc8840bb6bab59048da4e36d276f343d2ef3174",
+      "updates": [],
+      "request_indexes": [
+        30
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:17.737772+00:00"
+    },
+    {
+      "id": "party-evidence-libdem-buyback-2024",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:17.737790+00:00",
+      "baseline": {
+        "id": "libdem-buyback-2024",
+        "file": "libdem-buyback-2024.raw.html.txt",
+        "url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "downloaded": "2026-11-02",
+        "published": "2024-05-31",
+        "publication": "Share Buyback Tax scheme",
+        "publisher": "Liberal Democrats",
+        "kind": "official",
+        "licence": "Party publisher copyright; not Open Government Licence.",
+        "sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "text_file": "libdem-buyback-2024.txt",
+        "text_sha256": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+        "text_mode": "html-blocks-v1",
+        "hosting": "Publisher website; retained HTML response"
+      },
+      "retained_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+      "updates": [
+        {
+          "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+          "evidence": {
+            "source": "party-evidence-libdem-buyback-2024",
+            "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+            "discovery_scope": "retained-url-revision",
+            "updated": "not supplied by retained URL",
+            "refresh_command": "python3 scripts/build.py --refresh",
+            "hosting": "Publisher website; retained HTML response"
+          },
+          "baseline": {
+            "id": "libdem-buyback-2024",
+            "file": "libdem-buyback-2024.raw.html.txt",
+            "url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+            "downloaded": "2026-11-02",
+            "published": "2024-05-31",
+            "publication": "Share Buyback Tax scheme",
+            "publisher": "Liberal Democrats",
+            "kind": "official",
+            "licence": "Party publisher copyright; not Open Government Licence.",
+            "sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+            "text_file": "libdem-buyback-2024.txt",
+            "text_sha256": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+            "text_mode": "html-blocks-v1",
+            "hosting": "Publisher website; retained HTML response"
+          }
+        }
+      ],
+      "request_indexes": [
+        31
+      ],
+      "status": "updates",
+      "finished_at": "2026-11-02T06:04:18.304682+00:00"
+    },
+    {
+      "id": "party-evidence-rf-two-child-2024",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T06:04:18.304696+00:00",
+      "baseline": {
+        "id": "rf-two-child-2024",
+        "file": "rf-two-child-2024.raw.html.txt",
+        "url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+        "sha256": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+        "downloaded": "2026-11-02",
+        "retrieved_at": "2026-11-02T04:47:54.747306+00:00",
+        "published": "2024-01-31",
+        "publication": "Catastrophic caps: An analysis of the impact of the two-child limit and the benefit cap",
+        "publisher": "Resolution Foundation",
+        "kind": "independent",
+        "licence": "Publisher copyright; not Open Government Licence.",
+        "text_file": "rf-two-child-2024.txt",
+        "text_sha256": "dd2b3cd1773f8e13d73cdfaeea0dfe50395138b82ad22018818670e415fac326",
+        "text_mode": "html-blocks-v1",
+        "hosting": "Publisher website; retained HTML response"
+      },
+      "retained_sha256": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+      "updates": [],
+      "request_indexes": [
+        32
+      ],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T06:04:18.654962+00:00"
+    }
+  ],
+  "calendars": [
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+      "retained_sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026",
+      "retained_sha256": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-july-2026",
+      "retained_sha256": "8452602720730f76ad078f9d1327256b2af9aba6ef2c7ed84b835c2dda6dc3d4",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "8452602720730f76ad078f9d1327256b2af9aba6ef2c7ed84b835c2dda6dc3d4",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-guidance",
+      "retained_sha256": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&filter_organisations=hm-treasury&count=1000",
+      "retained_sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&q=public%20spending&count=1000",
+      "retained_sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+      "retained_sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+      "retained_sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&q=public%20expenditure%20statistical%20analyses&count=1000",
+      "retained_sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "status": "unchanged"
+    },
+    {
+      "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+      "retained_sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "retained_retrieved": "2026-11-01",
+      "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "status": "unchanged"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://obr.uk/data/",
+      "started_at": "2026-11-02T06:03:43.098572+00:00",
+      "sha256": "010b5205cd1bf7a7bbfe292ed2cfa019832bab9de5046381be8a1f6e15f72163",
+      "bytes": 106129,
+      "finished_at": "2026-11-02T06:03:43.267046+00:00"
+    },
+    {
+      "url": "https://obr.uk/download/public-finances-databank-october-2026-efo/",
+      "started_at": "2026-11-02T06:03:43.315452+00:00",
+      "sha256": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+      "bytes": 395258,
+      "finished_at": "2026-11-02T06:03:43.700700+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+      "started_at": "2026-11-02T06:03:43.702961+00:00",
+      "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "bytes": 55956,
+      "finished_at": "2026-11-02T06:03:43.801491+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2024",
+      "started_at": "2026-11-02T06:03:43.815034+00:00",
+      "sha256": "1d18752b472eeba814015f9731391a58f33bea831da3c207b4e26e0eaf289292",
+      "bytes": 21888,
+      "finished_at": "2026-11-02T06:03:43.904334+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2025",
+      "started_at": "2026-11-02T06:03:43.904875+00:00",
+      "sha256": "af247ff1d4fb3308f8625588fd22172058bd2a1fa628eba86bb56413d6d29af3",
+      "bytes": 22558,
+      "finished_at": "2026-11-02T06:03:43.990863+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026",
+      "started_at": "2026-11-02T06:03:43.991741+00:00",
+      "sha256": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "bytes": 21324,
+      "finished_at": "2026-11-02T06:03:44.088768+00:00"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/6a574acd2cbe5d1c179a64fd/July_PSS_2026_Chapter_5.xlsx",
+      "started_at": "2026-11-02T06:03:44.089846+00:00",
+      "sha256": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+      "bytes": 72007,
+      "finished_at": "2026-11-02T06:03:44.315151+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+      "started_at": "2026-11-02T06:03:44.316269+00:00",
+      "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "bytes": 55956,
+      "finished_at": "2026-11-02T06:03:44.364972+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2024",
+      "started_at": "2026-11-02T06:03:44.366065+00:00",
+      "sha256": "1d18752b472eeba814015f9731391a58f33bea831da3c207b4e26e0eaf289292",
+      "bytes": 21888,
+      "finished_at": "2026-11-02T06:03:44.412400+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2025",
+      "started_at": "2026-11-02T06:03:44.412807+00:00",
+      "sha256": "af247ff1d4fb3308f8625588fd22172058bd2a1fa628eba86bb56413d6d29af3",
+      "bytes": 22558,
+      "finished_at": "2026-11-02T06:03:44.457888+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026",
+      "started_at": "2026-11-02T06:03:44.458565+00:00",
+      "sha256": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "bytes": 21324,
+      "finished_at": "2026-11-02T06:03:44.509244+00:00"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/6a574aac822fbe6b8245c955/July_PSS_2026_Chapter_4.xlsx",
+      "started_at": "2026-11-02T06:03:44.510142+00:00",
+      "sha256": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c",
+      "bytes": 68552,
+      "finished_at": "2026-11-02T06:03:44.710446+00:00"
+    },
+    {
+      "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+      "started_at": "2026-11-02T06:03:44.714009+00:00",
+      "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "bytes": 4522,
+      "finished_at": "2026-11-02T06:04:11.950446+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/alliance/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:11.984904+00:00",
+      "sha256": "dfdbd70aa71316989f8e10657a29a6b2123705721416e271a71c219c9e050693",
+      "bytes": 5650809,
+      "finished_at": "2026-11-02T06:04:12.289671+00:00"
+    },
+    {
+      "url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Manifesto-GE2024.pdf",
+      "started_at": "2026-11-02T06:04:12.316022+00:00",
+      "sha256": "dd077291a0962017a4a1e05c615f211dcfec03391cb26f4850bc5d2a0bdbc4d0",
+      "bytes": 1663725,
+      "finished_at": "2026-11-02T06:04:12.571810+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/dup/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:12.595430+00:00",
+      "sha256": "2d0439bd6cbdf2b842b4e1e9c0557807444856678e2e249e09f5c115e8f8eefa",
+      "bytes": 3822442,
+      "finished_at": "2026-11-02T06:04:12.846625+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/green/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:12.866022+00:00",
+      "sha256": "4cfa29bd877b1b0ed46528684349eb6fb9bdeaaa5451897a5cace43f062f8537",
+      "bytes": 561016,
+      "finished_at": "2026-11-02T06:04:13.046819+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/labour/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:13.098839+00:00",
+      "sha256": "2385a7e51e17b93cd48e7ffb5c86f4c357cbc679f759aa480304ec0f777d5147",
+      "bytes": 8128701,
+      "finished_at": "2026-11-02T06:04:13.394059+00:00"
+    },
+    {
+      "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/For_a_Fair_Deal_-_Liberal_Democrat_Manifesto_2024.pdf",
+      "started_at": "2026-11-02T06:04:13.460071+00:00",
+      "sha256": "a1192e502647dd99a8bc1b13d9a06cf171b60e4084615c1c809ea6d73bb7b714",
+      "bytes": 6100137,
+      "finished_at": "2026-11-02T06:04:14.206843+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/plaid/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:14.260574+00:00",
+      "sha256": "e00bf848cef0fcf655f4741598bce812a3e73d4b0a317f0f1c4da338c4e52fed",
+      "bytes": 2557031,
+      "finished_at": "2026-11-02T06:04:14.499260+00:00"
+    },
+    {
+      "url": "https://assets.nationbuilder.com/reformuk/pages/253/attachments/original/1718625371/Reform_UK_Our_Contract_with_You.pdf?1718625371",
+      "started_at": "2026-11-02T06:04:14.534994+00:00",
+      "sha256": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+      "bytes": 6683218,
+      "finished_at": "2026-11-02T06:04:15.115409+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/snp/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:15.153411+00:00",
+      "sha256": "82a5b60680c2e7eb6f304c78555b5d8019100ee6b58115dcdd67d7133ca82715",
+      "bytes": 3559498,
+      "finished_at": "2026-11-02T06:04:15.408958+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/sinnfein/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:15.444488+00:00",
+      "sha256": "507df8544f8a1a265af521c0bf93e445ea52eb6488cb785350a1cd5f5c08ece0",
+      "bytes": 2849683,
+      "finished_at": "2026-11-02T06:04:15.695273+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/sdlp/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:15.714150+00:00",
+      "sha256": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+      "bytes": 1979594,
+      "finished_at": "2026-11-02T06:04:15.934143+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/tuv/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:15.956821+00:00",
+      "sha256": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+      "bytes": 3298126,
+      "finished_at": "2026-11-02T06:04:16.203593+00:00"
+    },
+    {
+      "url": "https://www.manifestos.org.uk/manifestos/2024/uup/manifesto.pdf",
+      "started_at": "2026-11-02T06:04:16.244946+00:00",
+      "sha256": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+      "bytes": 4032516,
+      "finished_at": "2026-11-02T06:04:16.498281+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+      "started_at": "2026-11-02T06:04:16.518419+00:00",
+      "sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "bytes": 21934,
+      "finished_at": "2026-11-02T06:04:16.598713+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+      "started_at": "2026-11-02T06:04:16.599736+00:00",
+      "sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "bytes": 19262,
+      "finished_at": "2026-11-02T06:04:16.691367+00:00"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/6a5772e09e63154454413700/PESA_2026_CP_Chapter_4_tables.xlsx",
+      "started_at": "2026-11-02T06:04:16.692086+00:00",
+      "sha256": "50ae80d95c4e542c34a17dfa8bc302858ca6508b6753e27bb31920cec9bb75c4",
+      "bytes": 69092,
+      "finished_at": "2026-11-02T06:04:16.743405+00:00"
+    },
+    {
+      "url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+      "started_at": "2026-11-02T06:04:16.746215+00:00",
+      "sha256": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+      "bytes": 147819,
+      "finished_at": "2026-11-02T06:04:17.204125+00:00"
+    },
+    {
+      "url": "https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/",
+      "started_at": "2026-11-02T06:04:17.207056+00:00",
+      "sha256": "2a22079120bb14156c0fd6e87fc8840bb6bab59048da4e36d276f343d2ef3174",
+      "bytes": 54187,
+      "finished_at": "2026-11-02T06:04:17.737430+00:00"
+    },
+    {
+      "url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+      "started_at": "2026-11-02T06:04:17.740216+00:00",
+      "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+      "bytes": 82942,
+      "finished_at": "2026-11-02T06:04:18.304131+00:00"
+    },
+    {
+      "url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+      "started_at": "2026-11-02T06:04:18.309617+00:00",
+      "sha256": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+      "bytes": 149851,
+      "finished_at": "2026-11-02T06:04:18.654126+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+      "started_at": "2026-11-02T06:04:18.655782+00:00",
+      "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "bytes": 55956,
+      "finished_at": "2026-11-02T06:04:18.708739+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026",
+      "started_at": "2026-11-02T06:04:18.709160+00:00",
+      "sha256": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "bytes": 21324,
+      "finished_at": "2026-11-02T06:04:18.750632+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-july-2026",
+      "started_at": "2026-11-02T06:04:18.750840+00:00",
+      "sha256": "8452602720730f76ad078f9d1327256b2af9aba6ef2c7ed84b835c2dda6dc3d4",
+      "bytes": 54186,
+      "finished_at": "2026-11-02T06:04:18.842401+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-spending-statistics-release-july-2026/public-spending-statistics-guidance",
+      "started_at": "2026-11-02T06:04:18.842911+00:00",
+      "sha256": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+      "bytes": 106729,
+      "finished_at": "2026-11-02T06:04:19.048380+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&filter_organisations=hm-treasury&count=1000",
+      "started_at": "2026-11-02T06:04:19.049056+00:00",
+      "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "bytes": 118,
+      "finished_at": "2026-11-02T06:04:19.153651+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&q=public%20spending&count=1000",
+      "started_at": "2026-11-02T06:04:19.153819+00:00",
+      "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "bytes": 118,
+      "finished_at": "2026-11-02T06:04:19.298884+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+      "started_at": "2026-11-02T06:04:19.298990+00:00",
+      "sha256": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "bytes": 19262,
+      "finished_at": "2026-11-02T06:04:19.344591+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+      "started_at": "2026-11-02T06:04:19.344773+00:00",
+      "sha256": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "bytes": 21934,
+      "finished_at": "2026-11-02T06:04:19.390117+00:00"
+    },
+    {
+      "url": "https://www.gov.uk/api/search.json?filter_content_store_document_type=upcoming_statistics&q=public%20expenditure%20statistical%20analyses&count=1000",
+      "started_at": "2026-11-02T06:04:19.390286+00:00",
+      "sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "bytes": 118,
+      "finished_at": "2026-11-02T06:04:19.527770+00:00"
+    },
+    {
+      "url": "https://members-api.parliament.uk/api/Parties/StateOfTheParties/1/2024-07-09",
+      "started_at": "2026-11-02T06:04:19.527850+00:00",
+      "sha256": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "bytes": 4522,
+      "finished_at": "2026-11-02T06:04:19.592579+00:00"
+    }
+  ],
+  "errors": [],
+  "retained_revision_status": {
+    "schema_version": 1,
+    "notices": []
+  },
+  "reconciled_revision_status": {
+    "schema_version": 1,
+    "notices": [
+      {
+        "source": "party-evidence-libdem-buyback-2024",
+        "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+        "first_detected_at": "2026-11-02T06:03:43.089472+00:00",
+        "evidence": {
+          "source": "party-evidence-libdem-buyback-2024",
+          "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      }
+    ]
+  },
+  "deployment": {
+    "url": "https://unpoliticaldeepseeksuperagent.vercel.app",
+    "started_at": "2026-11-02T06:04:19.606639+00:00",
+    "files": {
+      "about.html": "e99b3253340aaffb8e02393c9de36f1f6a688160875d36c720637c09ec5d2076",
+      "banned-words.txt": "590ee1ad0d2205e268aa7b3eb9b634779e6d77b38e3e19124371a3b18a77d01e",
+      "corrections.html": "9dca7de9cb55a88de3f0fc0ba8992207017d1aab9e50987739b1a09c0543dc81",
+      "data/comparisons.csv": "263fc9c33319fa21868f90d9e9159cb70dbc3e8908efa770b23eba995c23e2c8",
+      "data/comparisons.json": "f217c964b2375b2bf2d740cd93e7f4e520075bd612fe26e6e3238e0b0ebf0c61",
+      "data/history.csv": "c68b4f9fa296e06b3a646fce6ce951835d428800304c1a81121de9b3935f2ffd",
+      "data/history.json": "f90ce5be2ec60a1dd34aa47c24b38848bc02b67c0b9c6717cb50f6f6e2b3c959",
+      "data/income.csv": "b976d90d5fe28491f43296b46e1d447bfe2766ddef6e9e5b5aee899c04c72975",
+      "data/income.json": "058ce8b6d3d823393166921f62189f80789c00bfd1f2260a8b96db4b7adf48a6",
+      "data/party-offers.json": "e7fdb244de23b9dc84a4f95cbff017808898bda9aacc2dd2373357c0257ac579",
+      "data/spending.csv": "2e26ebecfe2159684af183d01e8f085aede25de8f477690c6102e15d17d86c2b",
+      "data/spending.json": "bcb3bf2cb702f8447b0ac31001ee3deb0dcdf87d8fa21ae1baa221b64ec61ba1",
+      "history-cash.html": "8666798cf2bb0d4666dec5c79d0eb5737365cd356f885e7bfdf649ffa0b83d68",
+      "history-gdp.html": "c1227a0ec65c4992d7e39482765f2818ae2754c5cf2536b2b55f41c8663efa3b",
+      "history-real.html": "00a7e9854d546499705815fd5f6eb2ed12e10fb923e5e74bc3a9fabc177e1ffb",
+      "history.html": "c84917c040a873af56ec8748289634fe813b5da3d0e8cfcfe849a8ca85ba8190",
+      "income.html": "c998064cd63f3fa9b9f74c218c7074147e2a7c6e81847ef9696c194792d8c767",
+      "index.html": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
+      "parties.html": "9f1ee00fe01e45e10699330451806d1e1211c8744ed0bdc55c3a7f2739258e8c",
+      "sources/calendar-hmt-pesa-collection.json": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "sources/calendar-hmt-pesa-release.json": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "sources/calendar-hmt-spending-bulletin.json": "8452602720730f76ad078f9d1327256b2af9aba6ef2c7ed84b835c2dda6dc3d4",
+      "sources/calendar-hmt-spending-collection.json": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "sources/calendar-hmt-spending-guidance.json": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+      "sources/calendar-hmt-spending-release.json": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "sources/calendar-hmt-upcoming.json": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "sources/calendar-pesa-upcoming.json": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "sources/calendar-spending-upcoming.json": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "sources/commons-roster-2024-07-09.json": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "sources/commons-roster-metadata.json": "e9aed878c39578b3468edfac2a32c7a0803003ac5918a291179cd63a709ce211",
+      "sources/corrections-metadata.json": "1fa5885ccd2010b0551f7be6eedd4af8d1256b5f7c5ce89fee1cfe89f2194ff6",
+      "sources/corrections.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "sources/fullfact-buybacks.raw.html.txt": "2a22079120bb14156c0fd6e87fc8840bb6bab59048da4e36d276f343d2ef3174",
+      "sources/fullfact-buybacks.txt": "98658d079ff37c2a48ba4c5bedd133817deddac16dbbc1c2121b36b80c890412",
+      "sources/history-manifest.json": "60c7a39de732f275fb8353d982d6370b0f5698998dc074fc840766d87c76d201",
+      "sources/history-release.json": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "sources/history.xlsx": "50ae80d95c4e542c34a17dfa8bc302858ca6508b6753e27bb31920cec9bb75c4",
+      "sources/income-manifest.json": "32d575d02d2197c3be2eb241a7d8da09d664b46496b8020e9e45fc9509ffcba7",
+      "sources/income-release.txt": "86c0c89c2a930e675c04e05aa76748a6f910b623a9ca5775bbb11b265bbfafe6",
+      "sources/income.xlsx": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+      "sources/libdem-buyback-2024.raw.html.txt": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+      "sources/libdem-buyback-2024.txt": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+      "sources/manifest.json": "00ef37b2dd095ed13e6e85a8fd191f1951bf54197552ce0757acde1a999ab79b",
+      "sources/manifesto-2024-alliance.pdf": "dfdbd70aa71316989f8e10657a29a6b2123705721416e271a71c219c9e050693",
+      "sources/manifesto-2024-alliance.txt": "eae387822766a1e63175de53a9619d3caf9245c05e6687568245111f61be5e0e",
+      "sources/manifesto-2024-conservative.pdf": "dd077291a0962017a4a1e05c615f211dcfec03391cb26f4850bc5d2a0bdbc4d0",
+      "sources/manifesto-2024-conservative.txt": "74c4ad32f2f3acc6d81e0ef9dabe6299c9a9f7c2a65b8746fbf52b9b0badc29e",
+      "sources/manifesto-2024-dup.pdf": "2d0439bd6cbdf2b842b4e1e9c0557807444856678e2e249e09f5c115e8f8eefa",
+      "sources/manifesto-2024-dup.txt": "07531b67e2c2b93e3e78151a024ce6c8acb772b9db66d3443e56da536c7a40c0",
+      "sources/manifesto-2024-green.pdf": "4cfa29bd877b1b0ed46528684349eb6fb9bdeaaa5451897a5cace43f062f8537",
+      "sources/manifesto-2024-green.txt": "63387951d46642671adc4fdf80ea94475113743cf5e3b900fab6584fe0beff74",
+      "sources/manifesto-2024-labour.pdf": "2385a7e51e17b93cd48e7ffb5c86f4c357cbc679f759aa480304ec0f777d5147",
+      "sources/manifesto-2024-labour.txt": "b9d120d4ee5d1d662c37a59d36e50fc2c4fb507485a2d581c6c620db0ebaa2a8",
+      "sources/manifesto-2024-libdem.pdf": "a1192e502647dd99a8bc1b13d9a06cf171b60e4084615c1c809ea6d73bb7b714",
+      "sources/manifesto-2024-libdem.txt": "aa9cd4e0b912196db371f9b521224a1ee8f8f318bf71c4822c3861bd771c382f",
+      "sources/manifesto-2024-plaid.pdf": "e00bf848cef0fcf655f4741598bce812a3e73d4b0a317f0f1c4da338c4e52fed",
+      "sources/manifesto-2024-plaid.txt": "7824027b7e020cbd5bf3965027165ad0adc481db58cb8e050354a0f9e4135c62",
+      "sources/manifesto-2024-reform.pdf": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+      "sources/manifesto-2024-reform.txt": "8841f98b66fd69b019c0151a2ea72c463c52dad503a29a63eacc62e85e489c3b",
+      "sources/manifesto-2024-sdlp.pdf": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+      "sources/manifesto-2024-sdlp.txt": "5e6743092c9fd27e6888932b89b6241a670f217fce2118a6e5eeb88bf8f3b4e2",
+      "sources/manifesto-2024-sinnfein.pdf": "507df8544f8a1a265af521c0bf93e445ea52eb6488cb785350a1cd5f5c08ece0",
+      "sources/manifesto-2024-sinnfein.txt": "2e1782d1708f0fa7a47bf546af5f3264661547b7204a31e02ea2cc236151b2a1",
+      "sources/manifesto-2024-snp.pdf": "82a5b60680c2e7eb6f304c78555b5d8019100ee6b58115dcdd67d7133ca82715",
+      "sources/manifesto-2024-snp.txt": "1a1592f77eb97f25e8dffa6892fdefba66cc0d0002fbbf35026ad8f9e24fa2ac",
+      "sources/manifesto-2024-tuv.pdf": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+      "sources/manifesto-2024-tuv.txt": "af09db3af88c54ace13d8b9026f516e929fe3abc0b8f44eb0beffcf404ffbb16",
+      "sources/manifesto-2024-uup.pdf": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+      "sources/manifesto-2024-uup.txt": "71f13ab89b68e13bb0f3440a54856cd68908117e1757a066838de64797841c26",
+      "sources/party-offers.json": "e7fdb244de23b9dc84a4f95cbff017808898bda9aacc2dd2373357c0257ac579",
+      "sources/party-source-index.json": "6af8fe65ea6e502d3419c665d3be7c7cf2b9a0a03951bf6636dea722725d6ff6",
+      "sources/release-calendar.json": "376a2c61750e55054080997764ed299edb1889e7cede7e084ae9714e843522b1",
+      "sources/release.json": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "sources/revision-status.json": "68636fa05b15c47a969c5a4fae484c69e795f665a6a149840a00ce51ed020b84",
+      "sources/rf-economic-battle-lines.raw.html.txt": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+      "sources/rf-economic-battle-lines.txt": "94d3c0486213cf9bb5d45d37293d1356725e16405bc7058ddeb75d74e42e2551",
+      "sources/rf-two-child-2024.raw.html.txt": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+      "sources/rf-two-child-2024.txt": "dd2b3cd1773f8e13d73cdfaeea0dfe50395138b82ad22018818670e415fac326",
+      "sources/spending.xlsx": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+      "sources/trends-manifest.json": "3209a2de9187756e8ba6bed197b6de4e659f6fc0d358934efceb28f62f723413",
+      "sources/trends.xlsx": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c"
+    },
+    "status": "exact-byte-match",
+    "finished_at": "2026-11-02T06:04:40.547824+00:00"
+  },
+  "finished_at": "2026-11-02T06:04:40.547863+00:00"
+}

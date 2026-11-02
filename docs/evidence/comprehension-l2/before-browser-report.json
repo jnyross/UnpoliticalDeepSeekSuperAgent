@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-11-02T06:03:25.239Z",
+  "revision": "693386bc035b0a3489718bee9712922748c181b7",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T06:03:25.240Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 17864,
+      "sha256": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:36949/index.html",
+          "screenshot": "before-index-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:36949/index.html",
+          "screenshot": "before-index-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T06:03:28.873Z",
+  "passed": true
+}
