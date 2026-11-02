@@ -84,7 +84,23 @@ export async function checkAnswerNavigation({ page, baseURL, javaScriptEnabled }
     for (const expected of answer.expected) assert.match(text, expected, `${description}: actual answer text`);
     const answerBox = await rect(paragraph);
     withinViewport(answerBox, viewport, `${description}: answer after native landing`);
-    report.answers.push({ name: answer.name, href: answer.href, linkText: (await link.innerText()).trim(), navigation: navBox, initialLink, initialScroll, clickableLink, target: targetBox, answer: answerBox, text, landingURL: page.url(), scrollY: await page.evaluate(() => scrollY) });
+    const metrics = { name: answer.name, href: answer.href, linkText: (await link.innerText()).trim(), navigation: navBox, initialLink, initialScroll, clickableLink, target: targetBox, answer: answerBox, text, landingURL: page.url(), scrollY: await page.evaluate(() => scrollY) };
+    if (answer.name === 'debt-interest') {
+      // A second native click checks the particular figure, not only a generic
+      // publication link: its retained source row must name the exact cell.
+      const figure = paragraph.locator('a');
+      const sourceHref = await figure.getAttribute('href');
+      assert.match(sourceHref, /^#[A-Z]+\d+$/);
+      await figure.click();
+      await page.waitForURL(url => url.hash === sourceHref);
+      const sourceRow = page.locator(sourceHref);
+      assert.equal(await sourceRow.count(), 1);
+      assert.match(await sourceRow.innerText(), new RegExp(`5_2!${sourceHref.slice(1)}`));
+      const sourceBox = await rect(sourceRow);
+      withinViewport(sourceBox, viewport, `${description}: exact source row after second click`);
+      metrics.sourceCheck = { clicks: 2, landingURL: page.url(), sourceRow: sourceBox };
+    }
+    report.answers.push(metrics);
   }
   report.completed = true;
   // Leave the existing accessibility/state checks on a fresh, initial page.
