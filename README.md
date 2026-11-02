@@ -28,6 +28,17 @@ package claim is paired with Paul Johnson's direct IFS assessment from an obtain
 SDLP and TUV retain explicit independent-assessment gaps. DUP and Sinn Féin still lack a
 checked cost for the selected offer; all four lack a matched assessment here. This is
 partial coverage, not a claim to Coverage L4; unlike plans are not ranked or added together.
+The deterministic build also publishes a [financial-figure trace](site/data/party-figure-audit.json)
+for every displayed party cash/rate quote occurrence, including duplicates. It joins
+native page/text-block locators to a complete consumed-source URL/date/SHA-256 manifest,
+with scope, baseline, year and status retained. Verified supplemental publisher tables
+are checked against the raw PDF, not treated as replacements for the quotes. The
+[curated native table locators](sources/party-figure-locators.json) and
+[source research](docs/accuracy-source-research.md) distinguish genuine table rows
+from prose-only evidence. This trace does **not** claim Accuracy L2: several sources
+lack a verified matching table/row, and annual claims do not establish a fiscal year.
+No displayed claims or party-page layout were changed to evade those gaps.
+
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
