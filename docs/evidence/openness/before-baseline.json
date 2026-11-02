@@ -1,0 +1,28 @@
+{
+  "capturedAt": "2026-11-02T01:45:07.297Z",
+  "baselineSha": "791d8772fa5dcb12524d699f7fea4bc691c30a67",
+  "htmlSha256": "516c6dabb9b22edbfb023df55052673aa620f7a19e727d587c057fe59d484a4e",
+  "source": "git show baselineSha:site/index.html; immutable original HTML served locally",
+  "javaScriptEnabled": false,
+  "browserVersion": "141.0.7390.37",
+  "screenshots": [
+    {
+      "viewport": {
+        "name": "mobile",
+        "width": 360,
+        "height": 800
+      },
+      "screenshot": "docs/evidence/openness/before-mobile.png",
+      "footerText": "Contains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "docs/evidence/openness/before-desktop.png",
+      "footerText": "Contains public sector information licensed under the Open Government Licence v3.0. Source: HM Treasury."
+    }
+  ]
+}

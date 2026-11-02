@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-02T01:49:31.784Z",
+  "javaScriptEnabled": false,
+  "viewport": {
+    "width": 360,
+    "height": 800
+  },
+  "pages": [
+    {
+      "page": "about.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "history-cash.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "history-gdp.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "history-real.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "history.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "income.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "index.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    },
+    {
+      "page": "parties.html",
+      "aboutHref": "about.html",
+      "reportHref": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+      "aboutNavigationPassed": true
+    }
+  ],
+  "passed": true
+}

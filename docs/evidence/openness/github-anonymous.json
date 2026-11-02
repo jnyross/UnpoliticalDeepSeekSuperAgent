@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-02T01:45:32.775Z",
+  "tool": "Playwright Chromium",
+  "anonymous": true,
+  "initialCookies": [],
+  "note": "Browser navigations explicitly allowed for anonymous verification; no credentials or storage state supplied. Separate gh api metadata lookup confirms public visibility and issues enabled.",
+  "results": [
+    {
+      "route": "issues/new",
+      "status": 200,
+      "finalUrl": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fjnyross%2FUnpoliticalDeepSeekSuperAgent%2Fissues%2Fnew",
+      "title": "Sign in to GitHub · GitHub",
+      "navigationResponses": [
+        {
+          "url": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new",
+          "status": 302,
+          "location": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fjnyross%2FUnpoliticalDeepSeekSuperAgent%2Fissues%2Fnew"
+        },
+        {
+          "url": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fjnyross%2FUnpoliticalDeepSeekSuperAgent%2Fissues%2Fnew",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "bodyText": "Skip to content\nSign in to GitHub\nUsername or email address\nPassword\nForgot password?\n\nNew to GitHub? Create an account\n\nTerms\nPrivacy\nDocs\nContact GitHub Support\nManage cookies\nDo not share my personal information"
+    },
+    {
+      "route": "issues",
+      "status": 200,
+      "finalUrl": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues",
+      "title": "Issues · jnyross/UnpoliticalDeepSeekSuperAgent · GitHub",
+      "navigationResponses": [
+        {
+          "url": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "bodyText": "Skip to content\nNavigation Menu\nProducts\nDevelopers\nBusinesses\nResources\nPricing\nSearch\n/\nSign in\nSign up\njnyross\nUnpoliticalDeepSeekSuperAgent\nRepository navigation\nCode\nIssues\n7\n (7)\nPull requests\n1\n (1)\nActions\nProjects\nSecurity and quality\nInsights\nIssues\nAssigned to me\nCreated by me\nMentioned\nRecent activity\nViews\nProjects\nMilestones\nLabels\nFeedback\nPreview\nCollapse sidebar\nIssues\nNew issue\nRubric loop\n#8 · jnyross opened \n20\nSearch issues\nis:issue\n \nstate:open\nIssues\nOpen\n7\n (7)\nClosed\n[Freshness L4 workaround] Retain truthful release-to-deployment timing measurements\ndim:freshness\nlevel:4\nrubric\nworkaround\njnyross/UnpoliticalDeepSeekSuperAgent#38\n· \nFilter by author\njnyross-agent opened \n2\n[Access L4 workaround] Prepare reproducible manual accessibility check materials\ndim:access\nlevel:4\nrubric\nworkaround\njnyross/UnpoliticalDeepSeekSuperAgent#37\n· \nFilter by author\njnyross-agent opened \n2\n[Comprehension L4 workaround] Prepare reproducible eight-question testing materials\ndim:comprehension\nlevel:4\nrubric\nworkaround\njnyross/UnpoliticalDeepSeekSuperAgent#36\n· \nFilter by author\njnyross-agent opened \n2\n[Impartiality L4 workaround] Publish a factual append-only corrections log\ndim:impartiality\nlevel:4\nrubric\nworkaround\njnyross/UnpoliticalDeepSeekSuperAgent#35\n· \nFilter by author\njnyross opened \n2\n[Openness L3 workaround] Ship public error reporting and honest project disclosures\ndim:openness\nlevel:3\nrubric\nworkaround\njnyross/UnpoliticalDeepSeekSuperAgent#34\n· \nFilter by author\njnyross opened \n2\n[Coverage L4] Add costed party plans and linked independent assessments\ndim:coverage\nlevel:4\nrubric\njnyross/UnpoliticalDeepSeekSuperAgent#32\n· \nFilter by author\njnyross-agent opened \n2\nRubric loop\nrubric-loop\njnyross/UnpoliticalDeepSeekSuperAgent#8\n· \nFilter by author\njnyross opened \n20\nFooter\n© 2026 GitHub, Inc.\nFooter navigation\nTerms\nPrivacy\nSecurity\nStatus\nCommunity\nDocs\nContact\nManage cookies\nDo not share my personal information"
+    }
+  ]
+}

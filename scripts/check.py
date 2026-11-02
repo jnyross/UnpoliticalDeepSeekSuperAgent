@@ -235,6 +235,13 @@ def validate_page(path, manifest, banned):
     return page
 
 
+def validate_project_links(page, context):
+    require('about.html' in page.links, f'{context}: missing project link')
+    require('https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/new' in page.links,
+            f'{context}: missing public error-report route')
+    require('sign-in needed to submit' in page.text, f'{context}: missing sign-in notice')
+
+
 def validate_hash(raw, expected):
     require(hashlib.sha256(raw).hexdigest() == expected,
             "Retained source SHA-256 differs from manifest")
@@ -298,6 +305,7 @@ def validate(root):
             "Banned-word list omits rubric examples")
     pages = sorted((root / "site").rglob("*.html"))
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
+    require((root / 'site/about.html').is_file(), 'Missing project disclosures')
     for path in pages:
         page_manifest = manifest
         if path.name == 'parties.html':
@@ -307,6 +315,7 @@ def validate(root):
         elif path.name in ('history.html', 'history-cash.html', 'history-real.html', 'history-gdp.html'):
             page_manifest = json.loads((root / 'sources/history-manifest.json').read_text())
         page = validate_page(path, page_manifest, banned)
+        validate_project_links(page, path)
         if path == root / "site/index.html":
             validate_published_data(page, data)
     from check_comparisons import validate as validate_comparisons
