@@ -536,6 +536,20 @@ class SnapshotTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'exactly one source'):
                 self.check()
 
+    def test_independent_evidence_collection_reuses_snapshot_safety(self):
+        self.source.pop('selector')
+        self.source.pop('normalization')
+        self.source.update(source_id='analysis', source_collection='evidence_sources')
+        (self.root / 'party-offers.json').write_text(json.dumps({
+            'sources': [], 'evidence_sources': [dict(self.baseline, id='analysis')]}))
+        self.assertEqual(self.check(), [])
+        update, = self.check(b'revised independent HTML')
+        self.assertEqual(update['evidence']['sha256'], discover.digest(b'revised independent HTML'))
+        self.assertEqual(self.check(b'revised independent HTML'), [update])
+        self.source['source_collection'] = 'unknown'
+        with self.assertRaisesRegex(ValueError, 'Unknown source collection'):
+            self.check()
+
     def test_snapshot_source_hosts_are_exact_https_and_checked_before_fetch(self):
         for url in ('https://members-api.parliament.uk.evil.example/data',
                     'https://example.org/data', 'http://members-api.parliament.uk/data',
@@ -743,8 +757,10 @@ class InventoryTests(unittest.TestCase):
         self.assertEqual(len(rosters), 1)
         self.assertEqual(rosters[0]['normalization'], 'parliament-party-roster')
         plans = [s for s in entries if 'source_id' in s]
-        self.assertCountEqual([s['source_id'] for s in plans], [s['id'] for s in retained['sources']])
-        self.assertEqual(len(entries), len(retained['sources']) + 1)
+        expected = [(collection, s['id']) for collection in ('sources', 'evidence_sources')
+                    for s in retained.get(collection, [])]
+        self.assertCountEqual([(s.get('source_collection', 'sources'), s['source_id']) for s in plans], expected)
+        self.assertEqual(len(entries), len(expected) + 1)
         for entry in entries:
             self.assertEqual(entry['adapter'], 'retained-url-snapshot')
             baseline = discover.source_baseline(entry, ROOT)

@@ -1,0 +1,110 @@
+[
+  {
+    "file": "fullfact-manifestos.html",
+    "requested_url": "https://fullfact.org/manifestos/?type=analysis",
+    "final_url": "https://fullfact.org/manifestos/?type=analysis",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:33:50.136486+00:00",
+    "sha256": "5e57fa558deaf43e0af38e3347084612da01df8cd35ea203ad14e9afe714d456",
+    "bytes": 51596,
+    "text_file": "fullfact-manifestos.txt",
+    "text_sha256": "48e83f0a42ee4a7658192048c23aaea63112a98250a6a875bda971491b548e27",
+    "text_source_html": "fullfact-manifestos.html"
+  },
+  {
+    "file": "fullfact-plaid.html",
+    "requested_url": "https://fullfact.org/election-2024/plaidcymru-manifesto/",
+    "final_url": "https://fullfact.org/election-2024/plaidcymru-manifesto/",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:33:50.467773+00:00",
+    "sha256": "8476dd6d26407a9bfb1c6be647a709479b5d3bf6bcfc8ea54d6ae99747e34da3",
+    "bytes": 60212,
+    "text_file": "fullfact-plaid.txt",
+    "text_sha256": "5060caa71ecf6e4c73c481d570483a8dd66c668f39c42423ed62381e029b7473",
+    "text_source_html": "fullfact-plaid.html"
+  },
+  {
+    "file": "fullfact-snp.html",
+    "requested_url": "https://fullfact.org/election-2024/snp-manifesto/",
+    "final_url": "https://fullfact.org/election-2024/snp-manifesto/",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:33:50.707414+00:00",
+    "sha256": "ce300ad5c857bd0642e0492cf8a3d9c774b90793858cde0f6a78d5140d26dda0",
+    "bytes": 68424,
+    "text_file": "fullfact-snp.txt",
+    "text_sha256": "909c6e957ba907f0aa72ff964b944f613d3397af64a11d85ee193e879b2e87f4",
+    "text_source_html": "fullfact-snp.html"
+  },
+  {
+    "requested_url": "https://ifs.org.uk/articles/initial-response-snps-manifesto",
+    "final_url": "https://ifs.org.uk/articles/initial-response-snps-manifesto",
+    "status": 403,
+    "retrieved_at": "2026-11-02T01:33:50.816473+00:00"
+  },
+  {
+    "requested_url": "https://ifs.org.uk/microsite/election-2024",
+    "final_url": "https://ifs.org.uk/microsite/election-2024",
+    "status": 403,
+    "retrieved_at": "2026-11-02T01:33:50.917045+00:00"
+  },
+  {
+    "file": "obr-faq.html",
+    "requested_url": "https://obr.uk/faqs/",
+    "final_url": "https://obr.uk/faqs/",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:33:50.970694+00:00",
+    "sha256": "f12cdc42a81983e4516985af531e83e9c86d3d3e1214ee25a55b00e4ac15d6d0",
+    "bytes": 138460,
+    "text_file": "obr-faq.txt",
+    "text_sha256": "9db08f068057a4be9a230e14ea4a928757dfc3499e3d80a7671c918e86b1c307",
+    "text_source_html": "obr-faq.html"
+  },
+  {
+    "requested_url": "https://www.nao.org.uk/about-us/what-we-do/",
+    "final_url": "https://www.nao.org.uk/about-us/what-we-do/",
+    "status": 404,
+    "retrieved_at": "2026-11-02T01:33:51.449702+00:00"
+  },
+  {
+    "file": "rf-economic-battle-lines.html",
+    "requested_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+    "final_url": "https://www.resolutionfoundation.org/comment/economic-battle-lines/",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:35:50.023717+00:00",
+    "sha256": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+    "bytes": 147819,
+    "text_file": "rf-economic-battle-lines.txt",
+    "text_sha256": "0246f1d4d3aff985582e192d7dcb0f57cec4d979a4ece92d379430bc48735fe4",
+    "text_source_html": "rf-economic-battle-lines.html"
+  },
+  {
+    "requested_url": "https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/",
+    "final_url": "https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:37:49.089008+00:00",
+    "file": "fullfact-buybacks.html",
+    "sha256": "2a22079120bb14156c0fd6e87fc8840bb6bab59048da4e36d276f343d2ef3174",
+    "bytes": 54187,
+    "text_file": "fullfact-buybacks.txt",
+    "text_sha256": "12d089faccc6f6dcb17187a7cce93c6e0cf4281a3ac8790626f5a7aa9d9621da",
+    "text_source_html": "fullfact-buybacks.html"
+  },
+  {
+    "requested_url": "https://fullfact.org/election-2024/reformuk-manifesto/",
+    "final_url": "https://fullfact.org/election-2024/reformuk-manifesto/",
+    "status": 200,
+    "retrieved_at": "2026-11-02T01:37:49.296453+00:00",
+    "file": "fullfact-reform.html",
+    "sha256": "b30a164d38aa2c84cb51d810f5bc94f94e804645477089d3e498e179cc30db79",
+    "bytes": 58336,
+    "text_file": "fullfact-reform.txt",
+    "text_sha256": "b44d48880af025d38ee13c2be418d86641e904a54b27b9c3b74fabd4f2cc20e6",
+    "text_source_html": "fullfact-reform.html"
+  },
+  {
+    "requested_url": "https://ifs.org.uk/articles/plaid-cymru-manifesto-response",
+    "final_url": "https://ifs.org.uk/articles/plaid-cymru-manifesto-response",
+    "status": 403,
+    "retrieved_at": "2026-11-02T01:37:49.527473+00:00"
+  }
+]

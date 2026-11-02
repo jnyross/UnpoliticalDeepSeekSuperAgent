@@ -1,0 +1,22 @@
+{
+  "before": {
+    "revision": "32595b84443fce9f6e0070e896170784f53d92aa",
+    "party_html_sha256": "82ad325209ddc507645e7c964d08beacc9b66061ffd4ba09e69d52f975642d9a",
+    "viewports": [
+      "360x800",
+      "1280x900"
+    ],
+    "theme": "light",
+    "javascript": false
+  },
+  "after": {
+    "revision": "942bb250c4828c4091564b5c6dcb8a483dcfc715",
+    "party_html_sha256": "ab836357a9692168e295d47274591b0db0d16b4c2530c1bf19352e99c4325868",
+    "viewports": [
+      "360x800",
+      "1280x900"
+    ],
+    "theme": "light",
+    "javascript": false
+  }
+}
