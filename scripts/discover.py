@@ -20,6 +20,7 @@ from urllib.parse import urlsplit, urljoin, urlunsplit, parse_qsl, urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTICE = 'This is by an automated agent, not a human.'
+DEFAULT_RECEIPTS = ROOT / '.discovery-issue-receipts.json'
 
 
 DEFAULT_HOSTS = ('www.gov.uk', 'assets.publishing.service.gov.uk')
@@ -310,7 +311,16 @@ def gh(*args):
     return subprocess.check_output(['gh', *args], text=True).strip()
 
 
-def open_updates(updates, repo, run=gh):
+def open_updates(updates, repo, run=gh, receipt_path=None):
+    try:
+        from scripts.issue_delivery import IssueReceipts
+    except ModuleNotFoundError:
+        from issue_delivery import IssueReceipts
+    with IssueReceipts(receipt_path or DEFAULT_RECEIPTS, repo) as receipts:
+        return _open_updates(updates, repo, run, receipts)
+
+
+def _open_updates(updates, repo, run, receipts):
     # All states, all pages: closing an issue is also a recorded review decision.
     # Request revalidation after writes; this cannot make the remote list/create atomic.
     pages = json.loads(run('api', '--paginate', '--slurp', '-H', 'Cache-Control: no-cache',
@@ -320,8 +330,17 @@ def open_updates(updates, repo, run=gh):
     for update in updates:
         marker = '<!-- source-release:' + update['key'] + ' -->'
         if marker in bodies:
+            receipts.reported(update['key'])
             results.append(dict(key=update['key'], status='already reported'))
             continue
+        receipt = receipts.entries.get(update['key'])
+        if receipt:
+            if receipt['status'] in ('created', 'reported'):
+                results.append(dict(key=update['key'], status='already reported'))
+                continue
+            raise RuntimeError('Issue delivery uncertain for ' + update['key'] +
+                               '; refusing another create until its remote marker is visible or '
+                               'the failed attempt is verified not to have created an issue')
         e = update['evidence']; b = update['baseline']
         slug = e.get('download_url', e['release_url']).rstrip('/').rsplit('/', 1)[-1]
         retained = e.get('discovery_scope') == 'retained-url-revision'
@@ -366,9 +385,13 @@ Retained-URL checks cannot establish whether a newer publication exists elsewher
 
 {marker}
 '''
+        receipts.reserve(update['key'])
         url = run('issue', 'create', '--repo', repo, '--title',
                   f"[Source update] {e['source']}: {slug} ({e['updated']}, {e['sha256'][:12]})",
                   '--body', body)
+        if not re.fullmatch(r'https://github\.com/' + re.escape(repo) + r'/issues/[1-9][0-9]*', url, flags=re.IGNORECASE):
+            raise ValueError('Unexpected issue creation response; pending delivery receipt retained')
+        receipts.created(update['key'], url)
         bodies += '\n' + marker
         results.append(dict(key=update['key'], status='opened', url=url))
     return results

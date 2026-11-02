@@ -25,6 +25,9 @@ class DiscoveryFixture(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
+        receipts = mock.patch.object(discover, 'DEFAULT_RECEIPTS', self.root / 'receipts.json')
+        receipts.start()
+        self.addCleanup(receipts.stop)
         self.source = {
             'id': 'fixture-spending',
             'adapter': 'govuk-collection-attachment',
@@ -448,6 +451,9 @@ class SnapshotTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
+        receipts = mock.patch.object(discover, 'DEFAULT_RECEIPTS', self.root / 'receipts.json')
+        receipts.start()
+        self.addCleanup(receipts.stop)
         self.source = dict(id='party-roster', adapter='retained-url-snapshot',
                            manifest='party-offers.json', selector='roster',
                            allowed_hosts=['members-api.parliament.uk'],
@@ -691,6 +697,9 @@ class OBRDatabankTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
+        receipts = mock.patch.object(discover, 'DEFAULT_RECEIPTS', self.root / 'receipts.json')
+        receipts.start()
+        self.addCleanup(receipts.stop)
         self.source = dict(id='obr-databank', adapter='obr-databank-latest',
                            manifest='income.json', page_url='https://obr.uk/data/',
                            download_path_pattern=r'/download/public-finances-databank-[a-z0-9-]+/')

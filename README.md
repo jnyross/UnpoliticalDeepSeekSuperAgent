@@ -128,9 +128,24 @@ are candidates; superseded older releases are not update tasks for this latest-y
 Each new release/revision opens an issue containing official links, dates, attachment
 hash, retained baseline and the refresh/review command. Stable evidence markers are
 checked against **all pages of open and closed issues**; closing an issue records a
-review decision and does not cause it to reopen. A serialized workflow prevents
-concurrent runs from creating duplicates. Run local issue-writing discovery only when
-no workflow is active. The inventory baseline advances only with an explicitly reviewed
+review decision and does not cause it to reopen. Issue delivery also uses a local
+write-ahead receipt file, `.discovery-issue-receipts.json`, locked across processes.
+It records a pending attempt **before** creating an issue and records the returned URL
+on success. An immediate repeat with a stale remote list cannot blindly create it again.
+A timeout/crash leaves an uncertain receipt: subsequent delivery waits for the remote
+marker instead of retrying creation. Malformed/unwritable receipts fail closed.
+Production discovery runs only on the triggering `main` ref (including manual dispatch),
+so a branch dispatch cannot split its receipts into another cache namespace. Actions
+restores/saves the journal through main-branch-scoped cache entries before/after
+delivery, including failed attempts; this needs no source-data or measurement PR write.
+Caches can be evicted, so the discovery artifact also retains receipts (including
+failed-run pending attempts). Keep that file when retrying a workspace, or restore it
+from the prior run artifact if the cache is unavailable. Do not
+delete a pending entry to retry unless the previous attempt is independently verified
+not to have created an issue. The journal is ignored by Git and never copied to the site.
+It is not a cross-workspace distributed lock or an atomic GitHub idempotency primitive.
+A serialized workflow and all-state remote markers remain necessary on fresh runners.
+Run local issue-writing discovery only when no workflow is active. The inventory baseline advances only with an explicitly reviewed
 refresh commit, never when discovery notices a release.
 
 Default discovery is read-only. `--write-revision-status` retains notices in

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-02T08:28:07.910422+00:00",
+  "release_key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+  "canonical_issue": 59,
+  "known_duplicate_issue": 60,
+  "outcomes": [
+    [
+      {
+        "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+        "status": "already reported"
+      }
+    ],
+    [
+      {
+        "key": "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5",
+        "status": "already reported"
+      }
+    ]
+  ],
+  "receipts": {
+    "repositories": {
+      "jnyross/UnpoliticalDeepSeekSuperAgent": {
+        "dbf2f8670557ea2c0c0854672dc669a1ba8e6f32bd2109896311f77626f15ff5": {
+          "status": "reported"
+        }
+      }
+    },
+    "schema_version": 1
+  },
+  "writes_permitted": false,
+  "note": "Live existing-marker verification only; the write-path evidence is the isolated stale-transport fixture, not another production issue"
+}
