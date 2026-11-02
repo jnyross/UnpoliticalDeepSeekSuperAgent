@@ -1,0 +1,9 @@
+checked_utc	method	url	status	retained_file	classification
+2026-11-02	web_fetch	https://www.sdlp.ie/hanna_backs_removal_of_two_child_welfare_cap	403	raw/sdlp-hanna-web-fetch.txt	tool-response transcription; body/date unavailable; no retry
+2026-11-02	web_fetch	https://www.sdlp.ie/sdlp_opposition_brings_forward_proposals_to_fight_poverty_including_ending_two_child_limit	403	raw/sdlp-opposition-web-fetch.txt	tool-response transcription; body/date unavailable; no retry
+2026-11-02	web_fetch	https://sinnfein.ie/news/autumn-budget-missed-opportunity-to-help-those-who-most-need-it-dolan/	200	-	title/navigation only; truncated before article; not party-plan evidence
+2026-11-02	urllib ordinary GET	https://sinnfein.ie/news/autumn-budget-missed-opportunity-to-help-those-who-most-need-it-dolan/	403	raw/sf-dolan-autumn-budget.html	actual HTTP error bytes; no retry after denial
+2026-11-02	web_fetch	https://data.niassembly.gov.uk/HansardXml/plenary-21-10-2024.pdf	406	raw/assembly-october21-web-fetch.txt	tool-response transcription; no official report text obtained; no retry
+2026-11-02	web_fetch	https://aims.niassembly.gov.uk/plenary/details.aspx?&ses=0&pn=0&sid=vd&doc=397292	200	-	title-only/truncated
+2026-11-02	urllib ordinary GET	https://aims.niassembly.gov.uk/plenary/details.aspx?&ses=0&pn=0&sid=vd&doc=397292	200	raw/assembly-two-child-amendment.html	obtained official primary amendment; NI mitigation not UK repeal; extracted to text/assembly-two-child-amendment.txt
+2026-11-02	web_fetch	https://hansard.parliament.uk/commons/2024-07-23/debates/5D832D66-A0BF-42F3-9F79-993CB4060382/ImmigrationAndHomeAffairs	403	raw/rejected-unverified-commons-web-fetch.txt	REJECTED speculative UUID not verified by source link; audit only, not research evidence

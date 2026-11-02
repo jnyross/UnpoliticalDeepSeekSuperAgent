@@ -1,0 +1,3 @@
+id	requested_utc	url	status	content_type	bytes	sha256	stored_body
+rf-revenue-reform	2026-11-02T10:08:57.770856+00:00	https://www.resolutionfoundation.org/app/uploads/2024/09/Revenue-and-Reform-updated.pdf	200	application/pdf	828209	57c3ac247620bc104ffbb2f009ede068096e2bca45af477b5f20dd016a4ef2bc	rf-revenue-reform.pdf
+ifs-tax-locks	2026-11-02T10:08:58.389665+00:00	https://ifs.org.uk/sites/default/files/2024-06/Tax%20Locks%201.pdf	403	text/plain; charset=UTF-8	17	2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c	ifs-tax-locks.response
