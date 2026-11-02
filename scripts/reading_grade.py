@@ -46,7 +46,8 @@ class CopyParser(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         if tag in ('script', 'style') or (self.prose_only and tag in ('table', 'svg')):
-            self.boundary()
+            if tag in ('table', 'svg'):
+                self.boundary()
             self.excluded.append(tag)
         if self.excluded:
             return
@@ -191,11 +192,12 @@ def validate(root, *, report_only=False):
     for path, result in results.items():
         worst = max(result.grade, result.verbal_grade, result.prose_grade if result.prose_grade is not None else -float('inf'))
         status = 'PASS' if worst <= MAX_GRADE else 'FAIL'
+        prose_display = f'{result.prose_grade:.4f}' if result.prose_grade is not None else 'n/a'
         print(f'{status}: {path.relative_to(root)}: FK {result.grade:.4f}; '
               f'{result.words} words / {result.sentences} sentences / '
               f'{result.syllables} syllables; words-only FK {result.verbal_grade:.4f} '
               f'({result.verbal_words} words / {result.verbal_syllables} syllables); '
-              f'non-table words-only FK {result.prose_grade if result.prose_grade is not None else "n/a"}; '
+              f'prose words-only FK {prose_display}; '
               f'{len(result.unknown)} dictionary misses')
         if result.unknown:
             print('  Estimated words: ' + ', '.join(result.unknown))

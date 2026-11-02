@@ -77,6 +77,7 @@ class ReadingGradeTests(unittest.TestCase):
         for expected in ['Title', 'Hidden text', 'Template text', 'No script text', 'Chart label', 'Still text']:
             self.assertIn(expected, text)
         self.assertNotIn('institutionalisation', text)
+        self.assertEqual(copy_blocks('<p>We <script>code</script>pay tax.</p>'), ['We pay tax.'])
 
     def test_numeric_padding_cannot_mask_difficult_copy(self):
         result = measure('<p>' + HARD + '</p><table>' +
