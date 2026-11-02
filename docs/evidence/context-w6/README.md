@@ -99,9 +99,15 @@ usability, manual keyboard or screen-reader evidence.
 - Data/reading-grade checker self-tests: **25 passed**; history self-tests: **29 passed**.
 - Offline rebuild validates independent source hashes/values, output copies, periods,
   reading grade, OGL, no active HTML, size and banned words. No source figures changed.
-- Final changed-site browser and CI results are recorded in the PR. Browser checks
-  cover all nine pages, both viewports, initial/expanded states, no-JavaScript content,
-  overflow, axe and supplemental SVG contrast. These are automated checks only.
+- Full final changed-site browser suite: **18/18 page/viewport checks passed** across
+  all nine pages, both viewports, initial/expanded states, no-JavaScript content,
+  overflow, axe and supplemental SVG contrast. Four Node runner/contrast regressions
+  passed. These are automated checks only; head CI is recorded in the PR.
+- Initial CI correctly caught the manual-preparation inventory's old party-page hash.
+  Reviewed the added static notice/link: no inventoried controls, task semantics or
+  states changed. Refreshed only the party-page hash with
+  `.venv/bin/python scripts/manual_access.py --write`; no manual results were created.
+  The full Python suite and final deterministic build were rerun after this refresh.
 
 Coordination with [#49](https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/issues/49):
 this bounded 22-source comparison is the reusable source evidence, not another
