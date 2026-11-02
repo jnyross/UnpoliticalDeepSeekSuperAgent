@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: official-release-discovery
+  group: release-evidence-persistence
   cancel-in-progress: false
 
 jobs:
@@ -35,6 +35,15 @@ jobs:
         run: python scripts/discover.py --open-issues --write-revision-status --report discovery-report.json
         env:
           GH_TOKEN: ${{ github.token }}
+      - name: Record retained baselines and discovery outcomes, including errors
+        id: timing
+        continue-on-error: true
+        if: ${{ !cancelled() && (steps.discovery.outcome == 'success' || steps.discovery.outcome == 'failure') }}
+        env:
+          EVIDENCE_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python scripts/release_timing.py observe --ledger measurements/release-timing.jsonl --discovery discovery-report.json --revision "$(git rev-parse HEAD)" --evidence-url "$EVIDENCE_URL"
+          python scripts/release_timing.py report --ledger measurements/release-timing.jsonl > release-timing-report.json
       # Known notices must reach the site even if another source or GitHub issue lookup failed.
       # Build only retained data: never --refresh in the discovery workflow.
       - name: Install validation dependencies
@@ -49,6 +58,7 @@ jobs:
           python scripts/build.py
           python scripts/build.py --check
           python -m unittest discover -s tests -p 'test_*.py' -v
+          python scripts/release_timing.py report --ledger measurements/release-timing.jsonl > release-timing-report.json
           python scripts/check.py --self-test
           python scripts/check_history.py --self-test
           python scripts/check.py
@@ -68,7 +78,7 @@ jobs:
           EVIDENCE_URL: ${{ steps.evidence.outputs.artifact-url }}
         run: |
           set -euo pipefail
-          git add -- sources/revision-status.json site
+          git add -- sources/revision-status.json site measurements/release-timing.jsonl
           if git diff --cached --quiet; then
             echo 'No revision-notice changes to publish.'
             exit 0
@@ -85,7 +95,7 @@ jobs:
             --title 'Publish source revision notices' \
             --body 'This is by an automated agent, not a human.
 
-          Publishes persistent discovery evidence and rebuilt static notices only; retained source data are unchanged. Discovery errors do not dismiss existing notices. Validated offline rebuild, deterministic output, discovery/unit fixtures, source/site checks, and browser checks in this workflow. GitHub-token PRs do not trigger another CI run, so these checks run before PR creation. Merges without bypassing branch protection.')
+          Publishes persistent discovery evidence, append-only release timing measurements and rebuilt static notices only; retained source data are unchanged. Measurements are prerequisites, not a Freshness L4 claim. Discovery errors are recorded and do not dismiss existing notices. Validated offline rebuild, deterministic output, discovery/unit fixtures, source/site checks, and browser checks in this workflow. GitHub-token PRs do not trigger another CI run, so these checks run before PR creation. Merges without bypassing branch protection.')
           gh pr edit "$pr" --body "$(gh pr view "$pr" --json body --jq .body)
 
           Before: $EVIDENCE_URL (before-* screenshots at baseline $baseline).
@@ -121,7 +131,9 @@ jobs:
           path: |
             discovery-report.json
             sources/revision-status.json
+            measurements/release-timing.jsonl
+            release-timing-report.json
           if-no-files-found: warn
-      - name: Surface discovery failures after preserving known notices
-        if: always() && steps.discovery.outcome == 'failure'
+      - name: Surface discovery or timing failures after preserving known notices
+        if: always() && (steps.discovery.outcome == 'failure' || steps.timing.outcome == 'failure')
         run: exit 1

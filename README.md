@@ -107,6 +107,37 @@ known notices have been preserved; other families can still be checked. Daily po
 can only show revisions after detection and deployment, not at the instant a publisher
 changes bytes. Never claim continuous real-time revision coverage.
 
+### Prospective release and deployment timing
+
+The append-only [measurement ledger](measurements/release-timing.jsonl) records
+retained source baselines, newly discovered versions, discovery errors and verified
+live snapshots. Discovery includes it in its existing validated PR and evidence
+artifact, even when another source reports an error. A separate
+[deployment-only workflow](.github/workflows/deployment-timing.yml) runs on main
+pushes, manual dispatch or completion of trusted main-branch release discovery
+(including token-driven notice merges), fetches **every local site file** from production and
+requires exact byte equality before recording live success. It performs no source
+refresh or discovery. Bounded retries allow deployment propagation; failure is not
+silently treated as success. Validated changes go through a measurement-only PR
+by `jnyross-agent`, without bypassing failed checks or branch protection.
+Source-version/site-fingerprint deduplication makes ledger-only merges a no-op
+rather than an endless series of measurement PRs.
+
+```sh
+python scripts/release_timing.py report --ledger measurements/release-timing.jsonl
+# Observe a completed discovery run (use its real public Actions run URL):
+python scripts/release_timing.py observe --ledger measurements/release-timing.jsonl \
+  --discovery discovery-report.json --revision "$(git rev-parse HEAD)" \
+  --evidence-url https://github.com/OWNER/REPO/actions/runs/RUN_ID
+```
+
+This is forward-looking evidence, **not a Freshness L4 claim**. Historical first-live
+times remain unknown; date-only publications yield uncertainty bounds, not invented
+midnight publication times or exact delays. CI validates the ledger's hash chain
+and unchanged historical prefix against the base revision. See
+[release timing methods and commands](docs/release-timing.md) for live verification,
+append-only validation, error handling and interpretation limits.
+
 ### Section dates and official release evidence
 
 Every spending/income section, history chart/table and party offer carries its data period
