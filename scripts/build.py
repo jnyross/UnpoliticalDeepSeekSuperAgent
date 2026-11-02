@@ -19,6 +19,8 @@ import comparisons
 import parties
 import section_dates
 import income
+import corrections
+import corrections_page
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT = 'public-spending-statistics-release-july-2026'
@@ -104,6 +106,11 @@ def outputs(root):
     files.update(income.outputs(root))
     files.update(history_outputs(root))
     section_dates.annotate(files, root, d, comparison)
+    entries = corrections.load(root/'sources/corrections.json', check_pages=False)
+    files['corrections.html'] = corrections_page.render(entries, files['index.html'].decode()).encode()
+    for name, raw in list(files.items()):
+        if name.endswith('.html') and name != 'corrections.html':
+            files[name] = raw.replace(b'<footer>', b'<footer><p><a href="corrections.html">Corrections and report an error</a></p>')
     for p in (root/'sources').iterdir(): files['sources/'+p.name]=p.read_bytes()
     return files
 

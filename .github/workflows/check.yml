@@ -17,6 +17,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Guard append-only corrections history
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != "0000000000000000000000000000000000000000" ]; then
+            python3 scripts/corrections.py --base "$BASE_SHA"
+          else
+            python3 scripts/corrections.py
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

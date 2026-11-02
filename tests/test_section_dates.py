@@ -35,6 +35,10 @@ class SectionDatesTests(unittest.TestCase):
         import re
         pages = self.render()
         for name, page in pages.items():
+            if name == 'corrections.html':
+                # Ledger policy is not a fiscal data release: do not invent a vintage.
+                self.assertNotIn('class="section-dates"', page)
+                continue
             headers = re.findall(r'<(?:section|article)\b[^>]*>\s*<h2\b[^>]*>.*?</h2>', page, re.S)
             for header in headers:
                 self.assertIn(header+'<div class="section-dates">', page, name)
