@@ -6,6 +6,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
+import { checkSVGContrast } from './svg-contrast.mjs';
 
 const root = path.resolve(process.env.SITE_DIR || 'site');
 const label = process.env.EVIDENCE_LABEL || 'after';
@@ -20,7 +21,11 @@ async function htmlFiles(dir) {
     : entry.name.endsWith('.html') ? [path.join(dir, entry.name)] : []));
   return files.flat().sort();
 }
-const files = await htmlFiles(root);
+const allFiles = await htmlFiles(root);
+const files = process.env.CHECK_PAGE ? allFiles.filter(file => path.relative(root, file) === process.env.CHECK_PAGE) : allFiles;
+const viewports = [{ name: 'mobile', width: 360, height: 800 }, { name: 'desktop', width: 1280, height: 900 }]
+  .filter(viewport => !process.env.CHECK_VIEWPORT || viewport.name === process.env.CHECK_VIEWPORT);
+assert.ok(viewports.length, 'Unknown CHECK_VIEWPORT');
 assert.ok(files.length, 'No HTML pages found');
 const server = createServer(async (request, response) => {
   try {
@@ -45,6 +50,9 @@ const report = {
     : { baseRevision: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), contentIdentity: 'Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.' }),
   mode: captureOnly ? 'baseline-capture-only' : 'automated-checks',
   browser: 'Chromium',
+  target: process.env.LIVE_URL || 'local-generated-output',
+  startedAt: new Date().toISOString(),
+  completed: false,
   pages: [],
 };
 let browser;
@@ -57,7 +65,7 @@ try {
     const pageReport = { path: relative, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), viewports: [] };
     report.pages.push(pageReport);
     if (!captureOnly) assert.ok(bytes.length < 500000, `${relative} must be below 500 KB`);
-    for (const viewport of [{ name: 'mobile', width: 360, height: 800 }, { name: 'desktop', width: 1280, height: 900 }]) {
+    for (const viewport of viewports) {
       const context = await browser.newContext({ viewport: { width: viewport.width, height: viewport.height }, reducedMotion: 'reduce' });
       const page = await context.newPage();
       const errors = [];
@@ -68,7 +76,7 @@ try {
       const screenshot = `${label}-${relative.replace(/[^a-z0-9-]/gi, '-')}-${viewport.name}.png`;
       await page.screenshot({ path: path.join(output, screenshot), fullPage: true });
       await page.screenshot({ path: path.join(output, screenshot.replace('.png', '-viewport.png')), fullPage: false });
-      const result = { viewport, screenshot, states: [] };
+      const result = { viewport, url: page.url(), screenshot, completed: false, expectedStates: [], states: [] };
       pageReport.viewports.push(result);
       const content = await page.locator('main').textContent();
       if (!captureOnly) {
@@ -111,7 +119,7 @@ try {
           const current = relative.match(/^history-(cash|real|gdp)/)[1];
           for (const view of ['cash', 'real', 'gdp'].filter(view => view !== current)) {
             await plain.locator(`#health a[href="history-${view}.html#health"]`).click();
-            assert.ok(plain.url().endsWith(`history-${view}.html#health`));
+            await plain.waitForURL(url => (url.pathname.endsWith(`/history-${view}.html`) || url.pathname.endsWith(`/history-${view}`)) && url.hash === '#health');
             assert.ok(await plain.locator('#health h2').isVisible());
             assert.ok(await plain.locator('#health figcaption').isVisible());
             await plain.locator('#health summary').click();
@@ -124,25 +132,47 @@ try {
         const checkState = async name => {
           const dimensions = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth, body: document.body.scrollWidth }));
           assert.ok(dimensions.document <= dimensions.viewport && dimensions.body <= dimensions.viewport, `${relative} ${viewport.name} ${name}: horizontal overflow ${JSON.stringify(dimensions)}`);
+          const state = { name, dimensions, startedAt: new Date().toISOString(), completed: false };
+          result.states.push(state);
+          await writeFile(path.join(output, `${label}-browser-report.json`), JSON.stringify(report, null, 2) + '\n');
+          console.log(`Checking ${relative} ${viewport.name} ${name}`);
+          const start = performance.now();
           const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
-          result.states.push({ name, dimensions, violations: axe.violations, incomplete: axe.incomplete.map(({ id, impact, description }) => ({ id, impact, description })) });
+          Object.assign(state, {
+            axeCompleted: true, finishedAt: new Date().toISOString(), durationMs: Math.round(performance.now() - start),
+            runner: axe.testEngine, environment: axe.testEnvironment, options: axe.toolOptions,
+            passedRules: axe.passes.map(({ id }) => id), inapplicableRules: axe.inapplicable.map(({ id }) => id),
+            violations: axe.violations, incomplete: axe.incomplete,
+          });
+          assert.ok([...axe.passes, ...axe.inapplicable, ...axe.incomplete, ...axe.violations].some(rule => rule.id === 'color-contrast'), 'Contrast rule must run');
           assert.deepEqual(axe.violations, [], `${relative} ${viewport.name} ${name}: WCAG violations`);
+          state.svgContrast = await checkSVGContrast(page, axe.incomplete);
+          state.contrastCompleted = true;
+          state.completed = true;
         };
+        result.expectedStates.push('initial');
         await checkState('initial');
         if (await page.locator('details').count()) {
+          result.expectedStates.push('all-details-expanded');
           await page.locator('details').evaluateAll(nodes => nodes.forEach(node => { node.open = true; }));
           await checkState('all-details-expanded');
         }
         const expandable = await page.locator('button[aria-expanded="false"]').elementHandles();
         for (const [index, button] of expandable.entries()) {
-          if (await button.isVisible()) { await button.click(); await checkState(`expanded-control-${index + 1}`); }
+          if (await button.isVisible()) {
+            result.expectedStates.push(`expanded-control-${index + 1}`);
+            await button.click(); await checkState(`expanded-control-${index + 1}`);
+          }
         }
       }
+      result.completed = true;
       await context.close();
     }
   }
+  report.completed = true;
+  report.finishedAt = new Date().toISOString();
   report.passed = true;
-  console.log(`${captureOnly ? 'Captured baseline' : 'Passed browser checks'}: ${files.length} pages at 360×800 and 1280×900.`);
+  console.log(`${captureOnly ? 'Captured baseline' : 'Passed browser checks'}: ${files.length} pages at ${viewports.map(viewport => `${viewport.width}×${viewport.height}`).join(', ')}.`);
 } catch (error) {
   report.passed = false;
   report.error = error.stack;

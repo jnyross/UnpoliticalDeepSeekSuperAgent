@@ -11,6 +11,8 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-24.04
+    outputs:
+      pages: ${{ steps.pages.outputs.pages }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,16 +36,36 @@ jobs:
         run: python scripts/build.py --check
       - name: Check source data and site
         run: python scripts/check.py --self-test && python scripts/check_history.py --self-test && python -m unittest discover -s tests -p 'test_*.py' && python scripts/check.py
+      - name: Discover every generated HTML page
+        id: pages
+        run: python -c 'import json, pathlib, os; pages = sorted(str(p.relative_to("site")) for p in pathlib.Path("site").rglob("*.html")); assert pages; print("pages=" + json.dumps(pages), file=open(os.environ["GITHUB_OUTPUT"], "a"))'
+  browser:
+    needs: check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        page: ${{ fromJSON(needs.check.outputs.pages) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - name: Test browser runner failure handling and SVG contrast
+        run: node --test tests/*.test.mjs
       - name: Browser, no-JavaScript, size, overflow and WCAG checks
         run: npm run test:browser
         env:
           EVIDENCE_DIR: test-results/browser
+          CHECK_PAGE: ${{ matrix.page }}
       - name: Retain browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: browser-evidence
+          name: browser-evidence-${{ strategy.job-index }}
           path: test-results/browser
           if-no-files-found: warn
