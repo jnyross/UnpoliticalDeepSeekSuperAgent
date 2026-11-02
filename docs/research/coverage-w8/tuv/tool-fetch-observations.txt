@@ -1,0 +1,17 @@
+Wave 8 TUV — new discovery fetch observations, 2026-11-02 UTC
+
+These are transcribed tool-returned decoded text, NOT retained raw HTTP response bytes. No raw-body hash is asserted for these observations. The exact exposed decoded body for each request was `Just a moment...`. Each URL was fetched once through web_fetch and was not subsequently retried by another client.
+
+1. https://ifs.org.uk/taxlab/taxlab-type-tax/income-taxes?page=1
+   web_fetch HTTP 403; exposed decoded body: Just a moment...
+   New TaxLab income-tax index lead. No substantive model or judgement exposed.
+
+2. https://ifs.org.uk/articles/we-need-better-informed-debates-about-tax-starting-how-we-tax-incomes
+   web_fetch HTTP 403; exposed decoded body: Just a moment...
+   New original IFS research/explainer lead discovered by search. Article body, author/date, model baseline and exact 20k/70k design not verified.
+
+3. https://www.austaxpolicy.com/news/new-tax-resource-uk-institute-for-fiscal-studies-taxlab-website/
+   web_fetch HTTP 403; exposed decoded body: Just a moment...
+   Discovery-only external announcement of TaxLab, not an approved assessment institution. No judgement attributed and no retry.
+
+Searches for IFS TaxLab personal-allowance options, a 2017 model, both £20,000/£70,000 in 2024, and Full Fact/Resolution Foundation Reform tax analysis produced no verified exact-component new body. Search results are discovery only. No search snippet is treated as an assessment or model output. The 2017-model suggestion remains unverified, not rejected on an invented baseline or accepted as 2024 evidence.
