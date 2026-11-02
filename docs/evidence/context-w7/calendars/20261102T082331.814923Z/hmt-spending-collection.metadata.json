@@ -1,0 +1,133 @@
+{
+  "id": "hmt-spending-collection",
+  "requested_url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+  "started_at": "2026-11-02T08:23:31.822073+00:00",
+  "method": "GET",
+  "redirects": [],
+  "status": 200,
+  "body_file": "hmt-spending-collection.body",
+  "sha256": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+  "error": null,
+  "request_headers": {
+    "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+    "Accept-encoding": "identity"
+  },
+  "final_url": "https://www.gov.uk/api/content/government/collections/national-statistics-release",
+  "response_headers": [
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "Content-Length",
+      "55956"
+    ],
+    [
+      "Content-Type",
+      "application/json; charset=utf-8"
+    ],
+    [
+      "Server",
+      "nginx"
+    ],
+    [
+      "Access-Control-Allow-Origin",
+      "*"
+    ],
+    [
+      "Cache-Control",
+      "max-age=300, public"
+    ],
+    [
+      "Etag",
+      "W/\"3dccf60170db1f2133028f7137c081fd\""
+    ],
+    [
+      "Permissions-Policy",
+      "interest-cohort=()"
+    ],
+    [
+      "Referrer-Policy",
+      "strict-origin-when-cross-origin"
+    ],
+    [
+      "Via",
+      "1.1 router, 1.1 varnish"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "X-Frame-Options",
+      "SAMEORIGIN"
+    ],
+    [
+      "X-Permitted-Cross-Domain-Policies",
+      "none"
+    ],
+    [
+      "X-Request-Id",
+      "b65a4ae7-6b9d-432c-a9a8-c6d88dbc877d"
+    ],
+    [
+      "X-Runtime",
+      "0.009095"
+    ],
+    [
+      "X-Xss-Protection",
+      "0"
+    ],
+    [
+      "Fastly-Backend-Name",
+      "origin"
+    ],
+    [
+      "Accept-Ranges",
+      "bytes"
+    ],
+    [
+      "Age",
+      "0"
+    ],
+    [
+      "Date",
+      "Mon, 02 Nov 2026 08:23:31 GMT"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000; preload"
+    ],
+    [
+      "Server-Timing",
+      "cacheHit"
+    ],
+    [
+      "X-Served-By",
+      "cache-bma-essb1270034-BMA"
+    ],
+    [
+      "X-Cache",
+      "HIT"
+    ],
+    [
+      "X-Cache-Hits",
+      "0"
+    ],
+    [
+      "X-Timer",
+      "S1793607812.893551,VS0,VE48"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding"
+    ],
+    [
+      "alt-svc",
+      "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+    ]
+  ],
+  "truncated": false,
+  "bytes": 55956,
+  "finished_at": "2026-11-02T08:23:31.951793+00:00"
+}

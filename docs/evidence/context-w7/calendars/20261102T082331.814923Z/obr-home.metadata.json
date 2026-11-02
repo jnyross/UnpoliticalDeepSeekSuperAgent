@@ -1,0 +1,125 @@
+{
+  "id": "obr-home",
+  "requested_url": "https://obr.uk/",
+  "started_at": "2026-11-02T08:23:32.046611+00:00",
+  "method": "GET",
+  "redirects": [],
+  "status": 200,
+  "body_file": "obr-home.body",
+  "sha256": "7510d326b0ed7c371c1cfa5960f6a72232a2c13698f21cde23cf55995359031b",
+  "error": null,
+  "request_headers": {
+    "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+    "Accept-encoding": "identity"
+  },
+  "final_url": "https://obr.uk/",
+  "response_headers": [
+    [
+      "Date",
+      "Mon, 02 Nov 2026 08:23:32 GMT"
+    ],
+    [
+      "Content-Type",
+      "text/html; charset=UTF-8"
+    ],
+    [
+      "Transfer-Encoding",
+      "chunked"
+    ],
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "Server",
+      "cloudflare"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding"
+    ],
+    [
+      "Vary",
+      "Accept-Encoding,Cookie"
+    ],
+    [
+      "Last-Modified",
+      "Wed, 28 Oct 2026 17:34:53 GMT"
+    ],
+    [
+      "Link",
+      "<https://obr.uk/wp-json/>; rel=\"https://api.w.org/\""
+    ],
+    [
+      "Link",
+      "<https://obr.uk/wp-json/wp/v2/pages/17045>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\""
+    ],
+    [
+      "Link",
+      "<https://obr.uk/>; rel=shortlink"
+    ],
+    [
+      "X-Dlm-No-Waypoints",
+      "true"
+    ],
+    [
+      "X-Powered-By",
+      "WP Engine"
+    ],
+    [
+      "X-Cacheable",
+      "SHORT"
+    ],
+    [
+      "cache-control",
+      "max-age=600, must-revalidate"
+    ],
+    [
+      "X-Cache",
+      "MISS"
+    ],
+    [
+      "X-Cache-Group",
+      "normal"
+    ],
+    [
+      "Age",
+      "355"
+    ],
+    [
+      "cf-cache-status",
+      "HIT"
+    ],
+    [
+      "set-cookie",
+      "__cf_bm=VabCDPZompwsfWah3kwN3xMgtkONPFJx19Emn5eLHfk-1793607812.1767771-1.0.1.1-9wL9yadxut_Fl2d1QNpLv4P1vT1n.7M8am_SBxBIWV91936qvkdQlNSIWRM9lBJy59MOTRp5mxLjvQBzv1idYNrLkteD2dxLCUkjhr_qgdT9HToh5Q46AkvhKKY_K9dC; HttpOnly; SameSite=None; Secure; Path=/; Domain=obr.uk; Expires=Mon, 02 Nov 2026 08:53:32 GMT"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000; includeSubDomains; preload"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "X-Frame-Options",
+      "DENY"
+    ],
+    [
+      "X-XSS-Protection",
+      "1; mode=block"
+    ],
+    [
+      "CF-RAY",
+      "a541bcda1e372fc6-HEL"
+    ],
+    [
+      "alt-svc",
+      "h3=\":443\"; ma=86400"
+    ]
+  ],
+  "truncated": false,
+  "bytes": 153878,
+  "finished_at": "2026-11-02T08:23:32.234674+00:00"
+}

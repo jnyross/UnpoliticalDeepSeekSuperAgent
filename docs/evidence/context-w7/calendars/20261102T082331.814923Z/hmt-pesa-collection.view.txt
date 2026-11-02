@@ -1,0 +1,591 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/collections/public-expenditure-statistical-analyses-pesa",
+  "content_id": "5eb7e1ad-7631-11e4-a3cb-005056011aef",
+  "description": "This series brings together all documents relating to HM Treasury (HMT) Public Expenditure Statistical Analyses (PESA)",
+  "details": {
+    "body": "<div class=\"govspeak\"><p>Public Expenditure Statistical Analyses (PESA) is the yearly publication of information on government spending. It brings together recent outturn data, estimates for the latest year, and spending plans for the rest of the current spending review period.</p>\n</div>",
+    "change_history": [
+      {
+        "note": "Public Expenditure Statistical Analyses 2026 added.",
+        "public_timestamp": "2026-07-16T09:34:51Z"
+      },
+      {
+        "note": "Public Expenditure Statistical Analyses 2025 added.",
+        "public_timestamp": "2025-07-23T13:03:02Z"
+      },
+      {
+        "note": "Public Expenditure Statistical Analyses 2024 added",
+        "public_timestamp": "2024-07-30T12:52:48Z"
+      },
+      {
+        "note": "Public Expenditure Statistical Analyses 2023 added",
+        "public_timestamp": "2023-07-19T14:20:54Z"
+      },
+      {
+        "note": "Public Expenditure Statistical Analyses 2022 added",
+        "public_timestamp": "2022-07-20T12:39:49Z"
+      },
+      {
+        "note": "Public Expenditure Statistical Analyses 2021 added",
+        "public_timestamp": "2021-07-20T12:49:48Z"
+      },
+      {
+        "note": "Added: Public Expenditure Statistical Analyses 2020.",
+        "public_timestamp": "2020-07-17T13:30:03Z"
+      },
+      {
+        "note": "Public Expenditure Statistical Analyses 2019 published.",
+        "public_timestamp": "2019-07-18T15:34:37Z"
+      },
+      {
+        "note": "Updated with Public Expenditure Statistical Analyses 2018",
+        "public_timestamp": "2018-07-19T14:14:33Z"
+      },
+      {
+        "note": "Updated with Public Expenditure Statistical Analyses 2017",
+        "public_timestamp": "2017-07-19T13:48:10Z"
+      },
+      {
+        "note": "Updated with:  Public Expenditure Statistical Analyses 2016",
+        "public_timestamp": "2016-07-21T13:13:59Z"
+      },
+      {
+        "note": "PESA for 2015 added",
+        "public_timestamp": "2015-07-20T15:07:38Z"
+      },
+      {
+        "note": "Updated to include PESA 2014",
+        "public_timestamp": "2014-07-17T13:53:46Z"
+      },
+      {
+        "note": "added Public Expenditure Statistical Analyses 2013: update for 2015-16",
+        "public_timestamp": "2013-10-24T08:52:02Z"
+      },
+      {
+        "note": "First published.",
+        "public_timestamp": "2013-07-16T23:00:00Z"
+      }
+    ],
+    "collection_groups": [
+      {
+        "body": "<div class=\"govspeak\">\n</div>",
+        "documents": [
+          "9aeb2eae-f64a-436b-a025-17dfbdde70d9",
+          "ac7d1f31-d2c6-4bb8-ac5e-d502b1a297f4",
+          "0c521998-9018-459d-884d-2ac56549a00b",
+          "3bf8e19e-d988-4641-86c6-ca8deb2cfad6",
+          "d056cec0-4549-4a45-bd4d-e2ab91d9b12e",
+          "7997eb55-3322-4add-8a21-22e654247de4",
+          "3558861a-8ff8-4e80-b600-65d73a26a621",
+          "20308521-1de2-4804-8c7d-539844b9653d",
+          "6a01e0be-196c-4b81-bfd7-32c0531d6cd8",
+          "305c3a64-19e0-439a-8b88-f9d5baea74f7",
+          "935b1ca0-6589-4836-a9d1-d4b461c5261c",
+          "d2bb19b7-3ac7-44f2-bf82-596e3e855736",
+          "5fa9dcaf-7631-11e4-a3cb-005056011aef",
+          "5eba21ed-7631-11e4-a3cb-005056011aef",
+          "5e5a8dee-7631-11e4-a3cb-005056011aef",
+          "5dffdf5b-7631-11e4-a3cb-005056011aef",
+          "5dffdf13-7631-11e4-a3cb-005056011aef",
+          "5dffdec8-7631-11e4-a3cb-005056011aef"
+        ],
+        "title": "Documents"
+      }
+    ],
+    "emphasised_organisations": [
+      "1994e0e4-bd19-4966-bbd7-f293d6e90a6b"
+    ],
+    "first_public_at": "2013-07-17T00:00:00.000+01:00",
+    "political": false
+  },
+  "document_type": "document_collection",
+  "first_published_at": "2013-07-17T00:00:00+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+        "api_url": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
+        "base_path": "/government/collections/public-expenditure-statistical-analyses-pesa",
+        "content_id": "5eb7e1ad-7631-11e4-a3cb-005056011aef",
+        "document_type": "document_collection",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-16T09:34:51Z",
+        "schema_name": "document_collection",
+        "title": "HMT Public Expenditure Statistical Analyses (PESA)",
+        "web_url": "https://www.gov.uk/government/collections/public-expenditure-statistical-analyses-pesa",
+        "withdrawn": false
+      }
+    ],
+    "documents": [
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2026",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2026",
+        "content_id": "9aeb2eae-f64a-436b-a025-17dfbdde70d9",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-16T09:34:00Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2026",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2026",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2025",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2025",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2025",
+        "content_id": "ac7d1f31-d2c6-4bb8-ac5e-d502b1a297f4",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-12-18T09:30:09Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2025",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2025",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2024",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2024",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2024",
+        "content_id": "0c521998-9018-459d-884d-2ac56549a00b",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2024-07-30T12:49:42Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2024",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2024",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2023",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2023",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2023",
+        "content_id": "3bf8e19e-d988-4641-86c6-ca8deb2cfad6",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2023-07-19T14:19:48Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2023",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2023",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2022",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2022",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2022",
+        "content_id": "d056cec0-4549-4a45-bd4d-e2ab91d9b12e",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2022-07-20T12:39:25Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2022",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2022",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2021",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2021",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2021",
+        "content_id": "7997eb55-3322-4add-8a21-22e654247de4",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2021-07-20T12:49:44Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2021",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2021",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2020",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2020",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2020",
+        "content_id": "3558861a-8ff8-4e80-b600-65d73a26a621",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2020-07-17T13:30:03Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2020",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2020",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2019",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2019",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2019",
+        "content_id": "20308521-1de2-4804-8c7d-539844b9653d",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-08-02T15:52:45Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2019",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2019",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2018",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2018",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2018",
+        "content_id": "6a01e0be-196c-4b81-bfd7-32c0531d6cd8",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2019-02-08T09:30:04Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2018",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2018",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2017",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2017",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2017",
+        "content_id": "305c3a64-19e0-439a-8b88-f9d5baea74f7",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2017-07-20T12:09:50Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2017",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2017",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2016",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2016",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2016",
+        "content_id": "935b1ca0-6589-4836-a9d1-d4b461c5261c",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2016-09-14T09:30:01Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2016",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2016",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2015",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2015",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2015",
+        "content_id": "d2bb19b7-3ac7-44f2-bf82-596e3e855736",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2015-08-21T08:38:22Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2015",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2015",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2014",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2014",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2014",
+        "content_id": "5fa9dcaf-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2014-08-01T08:31:19Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2014",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2014",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2013-update-for-2015-16",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2013-update-for-2015-16",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2013-update-for-2015-16",
+        "content_id": "5eba21ed-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-10-24T08:51:57Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2013: update for 2015-16",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2013-update-for-2015-16",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2013",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2013",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2013",
+        "content_id": "5e5a8dee-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2013-07-17T09:28:41Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2013",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2013",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2012",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2012",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2012",
+        "content_id": "5dffdf5b-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2012-07-13T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2012",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2012",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2011",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2011",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2011",
+        "content_id": "5dffdf13-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2011-07-13T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2011",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2011",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/statistics/public-expenditure-statistical-analyses-2010",
+        "api_url": "https://www.gov.uk/api/content/government/statistics/public-expenditure-statistical-analyses-2010",
+        "base_path": "/government/statistics/public-expenditure-statistical-analyses-2010",
+        "content_id": "5dffdec8-7631-11e4-a3cb-005056011aef",
+        "document_type": "national_statistics",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2010-07-01T00:00:00Z",
+        "schema_name": "publication",
+        "title": "Public Expenditure Statistical Analyses 2010",
+        "web_url": "https://www.gov.uk/government/statistics/public-expenditure-statistical-analyses-2010",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+        "api_url": "https://www.gov.uk/api/content/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+        "base_path": "/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government",
+        "content_id": "591c83aa-3b74-437d-a342-612bddd97572",
+        "details": {
+          "current": false,
+          "ended_on": "2015-05-08T00:00:00+00:00",
+          "started_on": "2010-05-12T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2010 to 2015 Conservative and Liberal Democrat coalition government",
+        "web_url": "https://www.gov.uk/government/2010-to-2015-conservative-and-liberal-democrat-coalition-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "D15",
+        "api_path": "/api/content/government/organisations/hm-treasury",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
+        "base_path": "/government/organisations/hm-treasury",
+        "content_id": "1994e0e4-bd19-4966-bbd7-f293d6e90a6b",
+        "details": {
+          "acronym": "HMT",
+          "brand": "hm-treasury",
+          "default_news_image": {
+            "high_resolution_url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a7908e352b4/s960_HMT_buiding_plaque.jpg",
+            "url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a79051c9235/s300_HMT_buiding_plaque.jpg"
+          },
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "HM Treasury",
+        "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
+        "withdrawn": false
+      }
+    ],
+    "original_primary_publishing_organisation": [
+      {
+        "analytics_identifier": "D15",
+        "api_path": "/api/content/government/organisations/hm-treasury",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
+        "base_path": "/government/organisations/hm-treasury",
+        "content_id": "1994e0e4-bd19-4966-bbd7-f293d6e90a6b",
+        "details": {
+          "acronym": "HMT",
+          "brand": "hm-treasury",
+          "default_news_image": {
+            "high_resolution_url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a7908e352b4/s960_HMT_buiding_plaque.jpg",
+            "url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a79051c9235/s300_HMT_buiding_plaque.jpg"
+          },
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "HM Treasury",
+        "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "D15",
+        "api_path": "/api/content/government/organisations/hm-treasury",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/hm-treasury",
+        "base_path": "/government/organisations/hm-treasury",
+        "content_id": "1994e0e4-bd19-4966-bbd7-f293d6e90a6b",
+        "details": {
+          "acronym": "HMT",
+          "brand": "hm-treasury",
+          "default_news_image": {
+            "high_resolution_url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a7908e352b4/s960_HMT_buiding_plaque.jpg",
+            "url": "https://assets.publishing.service.gov.uk/media/5a37db09e5274a79051c9235/s300_HMT_buiding_plaque.jpg"
+          },
+          "logo": {
+            "crest": "single-identity",
+            "formatted_title": "HM Treasury"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "HM Treasury",
+        "web_url": "https://www.gov.uk/government/organisations/hm-treasury",
+        "withdrawn": false
+      }
+    ],
+    "taxons": [
+      {
+        "api_path": "/api/content/government/government-spending",
+        "api_url": "https://www.gov.uk/api/content/government/government-spending",
+        "base_path": "/government/government-spending",
+        "content_id": "f3caf326-fe33-410f-b7f4-553f4011c81e",
+        "details": {
+          "internal_name": "Government spending (level 2)",
+          "notes_for_editors": "",
+          "visible_to_departmental_editors": false
+        },
+        "document_type": "taxon",
+        "links": {
+          "parent_taxons": [
+            {
+              "api_path": "/api/content/government/government-efficiency-transparency-and-accountability",
+              "api_url": "https://www.gov.uk/api/content/government/government-efficiency-transparency-and-accountability",
+              "base_path": "/government/government-efficiency-transparency-and-accountability",
+              "content_id": "f3f4b5d3-49c4-487b-bd5b-be75f11ec8c5",
+              "details": {
+                "internal_name": "Government efficiency, transparency and accountability [PA] (level 2)",
+                "notes_for_editors": "",
+                "visible_to_departmental_editors": false
+              },
+              "document_type": "taxon",
+              "links": {
+                "parent_taxons": [
+                  {
+                    "api_path": "/api/content/government/all",
+                    "api_url": "https://www.gov.uk/api/content/government/all",
+                    "base_path": "/government/all",
+                    "content_id": "e48ab80a-de80-4e83-bf59-26316856a5f9",
+                    "description": "",
+                    "details": {
+                      "internal_name": "Government",
+                      "notes_for_editors": "",
+                      "visible_to_departmental_editors": true
+                    },
+                    "document_type": "taxon",
+                    "links": {
+                      "root_taxon": [
+                        {
+                          "api_path": "/api/content/",
+                          "api_url": "https://www.gov.uk/api/content/",
+                          "base_path": "/",
+                          "content_id": "f3bbdec2-0e62-4520-a7fd-6ffd5d36e03a",
+                          "document_type": "homepage",
+                          "links": {},
+                          "locale": "en",
+                          "public_updated_at": "2026-02-18T13:00:23Z",
+                          "schema_name": "homepage",
+                          "title": "GOV.UK homepage",
+                          "web_url": "https://www.gov.uk/",
+                          "withdrawn": false
+                        }
+                      ]
+                    },
+                    "locale": "en",
+                    "phase": "live",
+                    "public_updated_at": "2018-09-16T20:29:39Z",
+                    "schema_name": "taxon",
+                    "title": "Government",
+                    "web_url": "https://www.gov.uk/government/all",
+                    "withdrawn": false
+                  }
+                ]
+              },
+              "locale": "en",
+              "phase": "live",
+              "public_updated_at": "2018-08-17T15:32:41Z",
+              "schema_name": "taxon",
+              "title": "Government efficiency, transparency and accountability",
+              "web_url": "https://www.gov.uk/government/government-efficiency-transparency-and-accountability",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "phase": "live",
+        "public_updated_at": "2018-08-17T15:32:41Z",
+        "schema_name": "taxon",
+        "title": "Government spending",
+        "web_url": "https://www.gov.uk/government/government-spending",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-07-16T10:34:51+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1784194491.747-10.13.21.168-2657",
+  "publishing_scheduled_at": "2020-07-17T14:30:00+01:00",
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": 4,
+  "schema_name": "document_collection",
+  "title": "HMT Public Expenditure Statistical Analyses (PESA)",
+  "updated_at": "2026-09-02T16:51:11+01:00",
+  "withdrawn_notice": {}
+}

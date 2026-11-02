@@ -1,0 +1,81 @@
+{
+  "id": "ons-psf-calendar",
+  "requested_url": "https://www.ons.gov.uk/releasecalendar?query=public%20sector%20finances&release-type=type-upcoming",
+  "started_at": "2026-11-02T08:23:32.235313+00:00",
+  "method": "GET",
+  "redirects": [],
+  "status": 200,
+  "body_file": "ons-psf-calendar.body",
+  "sha256": "d3af87d2eb251c657c603aff0fc4417d783505ec612cb95540605ebb5b80fd0a",
+  "error": null,
+  "request_headers": {
+    "User-agent": "UnpoliticalAF-bounded-calendar-evidence/1.0",
+    "Accept-encoding": "identity"
+  },
+  "final_url": "https://www.ons.gov.uk/releasecalendar?query=public%20sector%20finances&release-type=type-upcoming",
+  "response_headers": [
+    [
+      "Date",
+      "Mon, 02 Nov 2026 08:23:32 GMT"
+    ],
+    [
+      "Content-Type",
+      "text/html; charset=UTF-8"
+    ],
+    [
+      "Transfer-Encoding",
+      "chunked"
+    ],
+    [
+      "Connection",
+      "close"
+    ],
+    [
+      "x-frame-options",
+      "SAMEORIGIN"
+    ],
+    [
+      "allow",
+      "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+    ],
+    [
+      "strict-transport-security",
+      "max-age=31536000; includeSubDomains"
+    ],
+    [
+      "x-xss-protection",
+      "1"
+    ],
+    [
+      "last-modified",
+      "Mon, 02 Nov 2026 08:23:32 GMT"
+    ],
+    [
+      "cf-cache-status",
+      "MISS"
+    ],
+    [
+      "set-cookie",
+      "__cf_bm=qY0Gg1w.vWC0s3z.gFVhmVsnabR2ZpQQmZW_R7b5C.8-1793607812.2732038-1.0.1.1-LAaC7qPLzJa.fH22L8Ez2nM6LgjereMWLGp1RyA58rWm4grrBLqdYUx0DIUai_ypi7V8YPNKUhgvZqpK8Y0M5Yi1MSuaQCOb4znWndx0zo9lyYfh4mBrJYGdltpu.vFS; HttpOnly; SameSite=None; Secure; Path=/; Domain=ons.gov.uk; Expires=Mon, 02 Nov 2026 08:53:32 GMT"
+    ],
+    [
+      "set-cookie",
+      "_cfuvid=Ul4l9B60bNgVihs1WzRXJGVUB2UO7ec2HYPPkl_Te1Q-1793607812.2732038-1.0.1.1-oa4DaKuZPf_WqNKnidbx5H0IoH6xGw3gZ3PsgsVE3Qg; HttpOnly; SameSite=None; Secure; Path=/; Domain=ons.gov.uk"
+    ],
+    [
+      "Vary",
+      "accept-encoding"
+    ],
+    [
+      "Server",
+      "cloudflare"
+    ],
+    [
+      "CF-RAY",
+      "a541bcdabe4c7e5e-HEL"
+    ]
+  ],
+  "truncated": false,
+  "bytes": 62425,
+  "finished_at": "2026-11-02T08:23:32.417056+00:00"
+}

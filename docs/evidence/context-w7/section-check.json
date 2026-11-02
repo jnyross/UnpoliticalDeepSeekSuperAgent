@@ -1,0 +1,23 @@
+{
+  "page": "site/parties.html",
+  "sections": [
+    {
+      "party_id": "17",
+      "heading": "Liberal Democrat",
+      "date_blocks": [
+        "Data period: 2024 election manifesto and analysis. Published 2024. Source updated not supplied. Published 2024-05-31. Source updated not supplied. Published 2024-06-06. Source updated not supplied.This is a fixed past snapshot. No next release date is announced.Source revised. These figures still use the saved data, not the changed source. Found 2026-11-02. Check the changed source."
+      ],
+      "notice_count": 1
+    },
+    {
+      "party_id": "1036",
+      "heading": "Reform UK",
+      "date_blocks": [
+        "Data period: 2024 election manifesto and analysis. Published 2024. Source updated not supplied. Published 2024-06-24. Source updated not supplied.This is a fixed past snapshot. No next release date is announced."
+      ],
+      "notice_count": 0
+    }
+  ],
+  "ifs_date_present": true,
+  "total_notices": 1
+}
