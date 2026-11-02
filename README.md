@@ -18,6 +18,10 @@ dated 9 July 2024; it is not a current roster or a record of implemented policy.
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
+Manual accessibility testing prerequisites (not performed results):
+[protocols, page/state inventory and blank records](docs/evidence/access/manual/README.md).
+Completing these materials does not award Accessibility L4.
+
 ## Setup
 
 Python 3.11+, Node.js 22+ and Poppler's `pdftotext` are required for the complete checks

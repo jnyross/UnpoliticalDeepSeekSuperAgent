@@ -60,6 +60,8 @@ jobs:
         run: python scripts/build.py --check
       - name: Check source data and site
         run: python scripts/check.py --self-test && python scripts/check_history.py --self-test && python -m unittest discover -s tests -p 'test_*.py' && python scripts/check.py
+      - name: Validate manual accessibility material coverage (not people checks)
+        run: python scripts/manual_access.py
       - name: Discover every generated HTML page
         id: pages
         run: python -c 'import json, pathlib, os; pages = sorted(str(p.relative_to("site")) for p in pathlib.Path("site").rglob("*.html")); assert pages; print("pages=" + json.dumps(pages), file=open(os.environ["GITHUB_OUTPUT"], "a"))'
