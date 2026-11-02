@@ -10,6 +10,8 @@ borrowing and the debt stock from the OBR public finances databank, with the sou
 own period and forecast labels. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
+The incomplete [Coverage L4 evidence audit](docs/research/coverage-l4/ni-devolved-feasibility.md)
+records unresolved costing/assessment gaps; it does not claim that level or change the site.
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
