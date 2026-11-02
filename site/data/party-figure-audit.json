@@ -794,10 +794,25 @@
       "scope": "Tax on FTSE-100 firms buying back their own shares. IFS economist quoted by Full Fact assesses this plan.",
       "baseline": "Party release uses current buyback levels, then allows for firms changing their behaviour. This is a revenue claim, not a spending cost.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "supplemental_source_tables": [],
+      "supplemental_source_tables": [
+        {
+          "evidence_source_id": "libdem-costings-2024",
+          "pdf_page": 6,
+          "table": "REVENUE",
+          "row_label": "18 Introduce a 4% tax on share buybacks",
+          "column": null,
+          "value_location": "row_label",
+          "value": "4%",
+          "row_value_text": "18 Introduce a 4% tax on share buybacks 1,420",
+          "year": "2028-29",
+          "period": "2028-29",
+          "unit": "percent",
+          "unit_locator": "4%"
+        }
+      ],
       "unmatched_supplemental_source_tables": [],
-      "table_row_available": false,
-      "limitation": "The cited native evidence is prose, not a publisher table/row. No matching table is verified here."
+      "table_row_available": true,
+      "limitation": null
     },
     {
       "party_id": 17,
@@ -1117,5 +1132,5 @@
     }
   ],
   "occurrences": 24,
-  "occurrences_without_source_table": 17
+  "occurrences_without_source_table": 16
 }

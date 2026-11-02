@@ -47,7 +47,14 @@ The original prose year qualification and independent assessment stay unchanged.
 [Other alternatives](docs/research/accuracy-w7/alternatives/README.md) include the
 retained Lib Dem £1,420m 2028-29 row: it remains an explicitly **unmatched** related
 supplement to the £1.4bn release, never rounded into an exact match. The trace now
-has 22 financial occurrences, 15 still without matching table evidence. Cross-source
+has 24 financial occurrences, 16 still without matching table evidence. Wave eight
+adds the exact 4% rate in the Lib Dem costings table's policy label, explicitly not
+in its £m cash column; the table's 2028-29 costing period is not an inferred policy
+start year. [Childcare research](docs/research/accuracy-w8/childcare/README.md) retains
+a genuine £25m native table footnote, not a standalone programme row: it does not
+upgrade the DUP cash occurrences or substitute the £98.2m DE aggregate cell.
+[Other wave-eight alternatives](docs/research/accuracy-w8/alternatives/README.md)
+record the remaining exact scope/year limits. Cross-source
 supplements name the actual retained evidence source; currency conversions use exact
 decimal equality and fiscal columns are checked in order. No displayed claims or
 party-page layout were changed to evade those gaps.

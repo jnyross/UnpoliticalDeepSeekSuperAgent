@@ -1,0 +1,28 @@
+{
+  "file": "june-monitoring-2024-25.pdf",
+  "url": "https://www.finance-ni.gov.uk/sites/default/files/publications/dfp/June%20Monitoring%202024-25%20-%20Financing%20and%20Spending%20Tables_0.pdf",
+  "final_url": "https://www.finance-ni.gov.uk/sites/default/files/publications/dfp/June%20Monitoring%202024-25%20-%20Financing%20and%20Spending%20Tables_0.pdf",
+  "status": 200,
+  "headers": {
+    "Connection": "close",
+    "Content-Length": "180477",
+    "expires": "Thu, 15 Oct 2026 13:05:39 GMT",
+    "etag": "W/\"669882e7-2c0fd\"",
+    "content-type": "application/pdf",
+    "cache-control": "max-age=86400",
+    "traceresponse": "00-18de672bdbcc9e14625c0d95abcf42d6-794a58d25568c67a-01",
+    "last-modified": "Thu, 18 Jul 2024 02:50:15 GMT",
+    "Accept-Ranges": "bytes",
+    "Age": "482060",
+    "Date": "Mon, 02 Nov 2026 10:24:10 GMT",
+    "X-Cache": "MISS, HIT, MISS",
+    "X-Cache-Hits": "0, 2, 0",
+    "Vary": "Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=31557600"
+  },
+  "bytes": 180477,
+  "sha256": "c30179d86e0f086ca968b5a4faaf3b37b5a8d3eec69f764be2e38e8b133b2eae",
+  "retrieved_utc": "2026-11-02T10:24:10.034191+00:00"
+}

@@ -47,6 +47,22 @@
       "unit_locator": "£M"
     }
   ],
+  "libdem": [
+    {
+      "evidence_source_id": "libdem-costings-2024",
+      "pdf_page": 6,
+      "table": "REVENUE",
+      "row_label": "18 Introduce a 4% tax on share buybacks",
+      "column": null,
+      "value_location": "row_label",
+      "value": "4%",
+      "row_value_text": "18 Introduce a 4% tax on share buybacks 1,420",
+      "year": "2028-29",
+      "period": "2028-29",
+      "unit": "percent",
+      "unit_locator": "4%"
+    }
+  ],
   "libdem-buyback-2024": [
     {
       "evidence_source_id": "libdem-costings-2024",
