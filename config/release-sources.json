@@ -156,5 +156,35 @@
     "collection_api": "https://www.gov.uk/api/content/government/collections/public-expenditure-statistical-analyses-pesa",
     "release_path_pattern": "/government/statistics/public-expenditure-statistical-analyses-[0-9]{4}",
     "attachment_title_pattern": "PESA [0-9]{4} Chapter 4 Tables"
+  },
+  {
+    "id": "party-evidence-rf-economic-battle-lines",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "rf-economic-battle-lines",
+    "allowed_hosts": [
+      "www.resolutionfoundation.org"
+    ]
+  },
+  {
+    "id": "party-evidence-fullfact-buybacks",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "fullfact-buybacks",
+    "allowed_hosts": [
+      "fullfact.org"
+    ]
+  },
+  {
+    "id": "party-evidence-libdem-buyback-2024",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "libdem-buyback-2024",
+    "allowed_hosts": [
+      "www.libdems.org.uk"
+    ]
   }
 ]

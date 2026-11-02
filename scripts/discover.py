@@ -65,7 +65,10 @@ def source_baseline(source, root):
     if source.get('selector') == 'roster':
         return manifest['roster']
     if 'source_id' in source:
-        matches = [s for s in manifest['sources'] if s['id'] == source['source_id']]
+        collection = source.get('source_collection', 'sources')
+        if collection not in ('sources', 'evidence_sources'):
+            raise ValueError('Unknown source collection: ' + collection)
+        matches = [s for s in manifest[collection] if s['id'] == source['source_id']]
         if len(matches) != 1:
             raise ValueError('Expected exactly one source matching ' + source['source_id'])
         return matches[0]

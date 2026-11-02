@@ -1,0 +1,272 @@
+{
+  "startedAt": "2026-11-02T02:09:47.557Z",
+  "target": "local-generated-output",
+  "timeoutMs": 300000,
+  "discoveredPages": [
+    "corrections.html",
+    "history-cash.html",
+    "history-gdp.html",
+    "history-real.html",
+    "history.html",
+    "income.html",
+    "index.html",
+    "parties.html"
+  ],
+  "selectedPages": [
+    "corrections.html",
+    "history-cash.html",
+    "history-gdp.html",
+    "history-real.html",
+    "history.html",
+    "income.html",
+    "index.html",
+    "parties.html"
+  ],
+  "completed": true,
+  "passed": true,
+  "expected": [
+    {
+      "page": "corrections.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "corrections.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "history-cash.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "history-cash.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "history-gdp.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "history-gdp.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "history-real.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "history-real.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "history.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "history.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "income.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "income.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "index.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "index.html",
+      "viewport": "desktop"
+    },
+    {
+      "page": "parties.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "parties.html",
+      "viewport": "desktop"
+    }
+  ],
+  "results": [
+    {
+      "page": "corrections.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:09:47.560Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:09:51.170Z",
+      "evidence": "corrections.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "corrections.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:09:51.176Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:09:54.963Z",
+      "evidence": "corrections.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "history-cash.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:09:54.965Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:10:28.235Z",
+      "evidence": "history-cash.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "history-cash.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:10:28.250Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:11:01.674Z",
+      "evidence": "history-cash.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "history-gdp.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:11:01.691Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:11:35.801Z",
+      "evidence": "history-gdp.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "history-gdp.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:11:35.817Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:12:11.432Z",
+      "evidence": "history-gdp.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "history-real.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:12:11.448Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:12:43.412Z",
+      "evidence": "history-real.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "history-real.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:12:43.430Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:13:17.104Z",
+      "evidence": "history-real.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "history.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:13:17.128Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:13:48.886Z",
+      "evidence": "history.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "history.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:13:48.890Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:14:22.134Z",
+      "evidence": "history.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "income.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:14:22.137Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:14:28.598Z",
+      "evidence": "income.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "income.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:14:28.601Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:14:35.607Z",
+      "evidence": "income.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "index.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:14:35.610Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:14:40.882Z",
+      "evidence": "index.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "index.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:14:40.885Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:14:46.583Z",
+      "evidence": "index.html/desktop/after-browser-report.json"
+    },
+    {
+      "page": "parties.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T02:14:46.585Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:14:54.100Z",
+      "evidence": "parties.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "parties.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T02:14:54.103Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T02:15:02.679Z",
+      "evidence": "parties.html/desktop/after-browser-report.json"
+    }
+  ],
+  "finishedAt": "2026-11-02T02:15:02.681Z"
+}
