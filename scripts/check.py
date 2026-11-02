@@ -253,6 +253,10 @@ def validate_published_data(page, data):
 
 
 def validate(root):
+    # Independent copy parser includes details, source labels, tables and quotes.
+    # Run first so all per-page grades are reported even when other checks fail.
+    from reading_grade import validate as validate_reading_grade
+    validate_reading_grade(root)
     manifest = json.loads((root / "sources/manifest.json").read_text(encoding="utf-8"))
     require(isinstance(manifest, dict), "Source manifest must be an object")
     for key in ("file", "sha256", "url", "publication", "date", "published", "downloaded", "release_url"):
@@ -423,7 +427,11 @@ def main():
     parser.add_argument("--self-test", action="store_true", help="run isolated mutation tests")
     args = parser.parse_args()
     if args.self_test:
-        result = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(MutationTests))
+        suite = unittest.TestSuite([
+            unittest.defaultTestLoader.loadTestsFromTestCase(MutationTests),
+            unittest.defaultTestLoader.loadTestsFromName('test_reading_grade'),
+        ])
+        result = unittest.TextTestRunner(verbosity=2).run(suite)
         return 0 if result.wasSuccessful() else 1
     try:
         validate(args.root.resolve())

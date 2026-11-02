@@ -122,7 +122,10 @@ regenerates all bytes in a temporary directory and fails if the committed site d
 The independent checker reopens the workbook, verifies its hash, checks every exported
 value and its cell, reconciles functional totals within source rounding, and compares
 compatible totals with Table 5.3. It checks status, year, derived health share, attribution,
-page size, prohibited words and static HTML. Browser checks use JavaScript disabled
+page size, prohibited words, static HTML and Flesch–Kincaid reading grade (at most 7
+on every HTML page, including expanded content). See [reading-grade rules and
+standalone report command](docs/reading-grade.md). This check also runs in the staged
+rebuild, so harder copy cannot replace the last good site. Browser checks use JavaScript disabled
 for content and layout, plus axe WCAG 2.2 AA at phone and desktop sizes; these are not
 manual keyboard, screen-reader or user-test evidence. CI runs these checks on every PR.
 
