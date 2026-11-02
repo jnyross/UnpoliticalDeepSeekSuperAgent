@@ -75,9 +75,15 @@ class PartyOffersTests(unittest.TestCase):
 
         with patch.object(parties.subprocess, 'run', side_effect=reflow):
             self.assertEqual(parties.validate(ROOT), self.original)
-        self.assertEqual(len(calls), len(self.original['parties']))
+        evidence_calls = sum('pdf_page' in ref for p in self.original['parties'] for ref in p.get('evidence', {}).values())
+        self.assertEqual(len(calls), len(self.original['parties']) + evidence_calls)
         sources = {s['id']: s for s in self.original['sources']}
-        for command, party in zip(calls, self.original['parties']):
+        main_calls = []
+        index = 0
+        for party in self.original['parties']:
+            index += sum('pdf_page' in ref for ref in party.get('evidence', {}).values())
+            main_calls.append(calls[index]); index += 1
+        for command, party in zip(main_calls, self.original['parties']):
             self.assertEqual(command[1:5], ['-f', str(party['pdf_page']), '-l', str(party['pdf_page'])])
             source = sources[party['source_id']]
             self.assertEqual(Path(command[-2]).name, source['file'])
@@ -131,6 +137,46 @@ class PartyOffersTests(unittest.TestCase):
 
     def test_unequal_missing_evidence_fails(self):
         self.fails(lambda d: d['parties'][0].update(costing='Zero'))
+
+    def test_independent_sources_have_separate_register(self):
+        self.assertEqual(len(self.original['sources']), 13)
+        self.assertEqual(len(self.original['evidence_sources']), 3)
+        self.assertEqual(sum(bool(p.get('evidence')) for p in self.original['parties']), 3)
+
+    def test_evidence_hash_quote_locator_and_attribution_fail_closed(self):
+        def party(d):
+            return next(p for p in d['parties'] if p['source_id'] == 'libdem')
+        self.fails(lambda d: d['evidence_sources'][0].update(sha256='0' * 64))
+        self.fails(lambda d: d['evidence_sources'][0].update(text_sha256='0' * 64))
+        self.fails(lambda d: party(d)['evidence']['costing'].update(quote='£9 billion a year'))
+        self.fails(lambda d: party(d)['evidence']['assessment'].update(text_line=1))
+        self.fails(lambda d: party(d)['evidence']['assessment'].update(text_line=True))
+        self.fails(lambda d: party(d)['evidence']['assessment'].update(attribution='word ' * 31))
+        self.fails(lambda d: party(d).update(assessment='An unsupported judgement.'))
+        self.fails(lambda d: party(d)['evidence']['costing'].update(source_id='fullfact-buybacks'))
+
+    def test_evidence_cost_pdf_is_reopened(self):
+        self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == 'labour')['evidence']['costing'].update(pdf_page=1))
+
+    def test_forged_html_transcript_is_not_raw_evidence(self):
+        # Hash-consistent extracted text cannot replace the retained raw response.
+        d = copy.deepcopy(self.original)
+        p = next(p for p in d['parties'] if p['source_id'] == 'libdem')
+        ref = p['evidence']['assessment']
+        source = next(s for s in d['evidence_sources'] if s['id'] == ref['source_id'])
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); base = root / 'sources'; base.mkdir()
+            for path in (ROOT / 'sources').iterdir():
+                if path.is_file() and path.name != source['text_file']:
+                    (base / path.name).symlink_to(path)
+            lines = (ROOT / 'sources' / source['text_file']).read_text().splitlines()
+            ref['quote'] = p['assessment'] = 'This new tax would raise no money.'
+            lines[ref['text_line'] - 1] = ref['quote']
+            forged = base / source['text_file']; forged.write_text('\n'.join(lines))
+            source['text_sha256'] = parties.digest(forged)
+            with patch.object(parties, 'load', return_value=d):
+                with self.assertRaisesRegex(AssertionError, 'raw HTML locator'):
+                    parties.validate(root)
 
     def test_extra_field_fails(self):
         self.fails(lambda d: d['parties'][0].update(rating='a score'))

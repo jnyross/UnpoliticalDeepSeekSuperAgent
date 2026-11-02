@@ -61,6 +61,23 @@ class SectionDatesTests(unittest.TestCase):
             self.assertEqual('debt at end-March 2026' in stamp,
                              section in ('borrowing-debt', 'sources'))
 
+    def test_independent_party_evidence_dates_and_revision_notices_are_local(self):
+        notice = {'source': 'party-evidence-rf-economic-battle-lines',
+                  'baseline_url': 'https://www.resolutionfoundation.org/comment/economic-battle-lines/',
+                  'first_detected_at': '2026-11-02T00:00:00Z',
+                  'evidence': {'release_url': 'https://www.resolutionfoundation.org/comment/economic-battle-lines/'}}
+        pages = self.render([notice])
+        import re
+        cards = dict(re.findall(r'<article[^>]*data-party-id="([^"]+)"[^>]*>(.*?)</article>',
+                                pages['parties.html'], re.S))
+        for identifier, card in cards.items():
+            self.assertEqual('Source revised.' in card, identifier in ('4', '15'))
+            if identifier in ('4', '15'):
+                self.assertIn('Published 2024-06-14', card)
+        for name, page in pages.items():
+            if name != 'parties.html':
+                self.assertNotIn('Source revised.', page)
+
     def test_income_release_metadata_hash_and_path_are_checked(self):
         def changed(sources):
             with (sources/'income-release.txt').open('ab') as stream:

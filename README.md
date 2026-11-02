@@ -10,8 +10,11 @@ borrowing and the debt stock from the OBR public finances databank, with the sou
 own period and forecast labels. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
-The incomplete [Coverage L4 evidence audit](docs/research/coverage-l4/ni-devolved-feasibility.md)
-records unresolved costing/assessment gaps; it does not claim that level or change the site.
+The [Coverage L4 evidence audit](docs/research/coverage-l4/ni-devolved-feasibility.md)
+records unresolved costing/assessment gaps. The party page now adds selected historical
+costings and linked independent quotes for Conservative, Labour and Liberal Democrat
+plans; the other ten parties remain explicitly unavailable here. This is partial
+coverage, not a claim to Coverage L4. Unlike plans are not ranked or added together.
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
 
@@ -76,7 +79,9 @@ then publishes changed revision notices through a validated PR without refreshin
 The default Actions token is used; branch protection is not bypassed.
 The checked-in [inventory](config/release-sources.json) covers HMT Public Spending
 Statistics, PESA functional history, the OBR public finances databank, the historical Commons roster and all retained
-party manifestos (see the limited party-discovery scope below). PESA's year-dependent
+party manifestos and the consumed historical costing/assessment pages (see the limited
+party-discovery scope below). HTML evidence is watched for raw-byte changes at its saved
+URL; this can also flag presentation-only changes, and does not discover new analyses. PESA's year-dependent
 attachment title uses an anchored `attachment_title_pattern`; exact-title sources
 retain `attachment_title` matching. The official GOV.UK collection discovers
 new publication slugs, not just changes to the retained URL. The retained release is

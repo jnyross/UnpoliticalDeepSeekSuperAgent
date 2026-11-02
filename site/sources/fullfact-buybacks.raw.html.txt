@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+  <head  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Would the Lib Dems\u2019 plan to tax share buybacks raise \u00a31.4 billion a year?", "image": "https://fullfact.org/media/images/portrait_1.6b1e7d78.fill-1200x630.jpg", "datePublished": "2024-06-06T16:02:54+00:00"}</script>
+
+    
+<meta name="description" content="After the debate between Rishi Sunak and Keir Starmer on Tuesday, ITV’s Anushka Asthana challenged Liberal Democrat leader Sir Ed Davey on whether his party’s proposed share buyback scheme would …"><meta property="og:title" content="Would the Lib Dems’ plan to tax share buybacks raise £1.4 billion a year? – Full Fact"><meta property="og:url" content="https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/"><meta property="og:description" content="After the debate between Rishi Sunak and Keir Starmer on Tuesday, ITV’s Anushka Asthana challenged Liberal Democrat leader Sir Ed Davey on whether his party’s proposed share buyback scheme would …"><meta property="og:image" content="https://fullfact.org/media/images/portrait_1.6b1e7d78.fill-1200x630.jpg"><meta property="og:image:secure_url" content="https://fullfact.org/media/images/portrait_1.6b1e7d78.fill-1200x630.jpg"><meta property="og:type" content="Article"><meta property="article:published_time" content="2024-06-06 16:02:54+00:00"><meta property="og:locale" content="en_GB"><meta name="twitter:domain" content="fullfact.org"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Would the Lib Dems’ plan to tax share buybacks raise £1.4 billion a year? – Full Fact"><meta name="twitter:url" content="https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/"><meta name="twitter:description" content="After the debate between Rishi Sunak and Keir Starmer on Tuesday, ITV’s Anushka Asthana challenged Liberal Democrat leader Sir Ed Davey on whether his party’s proposed share buyback scheme would …"><meta name="twitter:image" content="https://fullfact.org/media/images/portrait_1.6b1e7d78.fill-1200x630.jpg"><meta name="twitter:site" content="@FullFact"><meta itemprop="name" content="Would the Lib Dems’ plan to tax share buybacks raise £1.4 billion a year? – Full Fact"><meta itemprop="datePublished" content="2024-06-06 16:02:54+00:00"><meta itemprop="url" content="https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/"><meta itemprop="description" content="After the debate between Rishi Sunak and Keir Starmer on Tuesday, ITV’s Anushka Asthana challenged Liberal Democrat leader Sir Ed Davey on whether his party’s proposed share buyback scheme would …"><meta itemprop="image" content="https://fullfact.org/media/images/portrait_1.6b1e7d78.fill-1200x630.jpg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://fullfact.org","potentialAction":{"@type":"SearchAction","target":"https://fullfact.org/search/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Full Fact Search">
+    <title>Would the Lib Dems’ plan to tax share buybacks raise £1.4 billion a year? – Full Fact</title>
+
+    <link rel="canonical" href="https://fullfact.org/politics/would-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year/" />
+
+    
+    <link rel="alternate" href="/feed/" title="Full Fact RSS Feed" type="application/rss+xml">
+    
+    <link rel="stylesheet" href="/static/css/style.acd52c5a5d6f.css?4">
+    <link rel="stylesheet" href="/static/css/custom.e33d5b15d564.css">
+    <link rel="stylesheet" media="print" href="/static/css/print.6f35ec5612fa.css">
+
+    <meta name="theme-color" content="#1E1E1E">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.6ad83666ef68.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/img/apple-touch-icon-120x120.2cd0fe7b2bdb.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon-152x152.043f34bab672.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.48faf787ac0a.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.88896e2d3f48.png">
+    <link rel="manifest" href="/static/img/site.0492afb72c18.webmanifest" crossorigin="use-credentials">
+
+    
+  <link rel="stylesheet"
+        href="/static/prototypes/refresh/prototype.4f401fe82f1f.css">
+
+
+
+  <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({'article_design': 'new'});</script>
+
+
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9NTMVD');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/4e4c5a6a441f72299683193db/4fcd8fe4ff46a70a2bbe2cd1e.js");</script>
+
+
+  </head>
+
+  <body data-type="livepost" >
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9NTMVD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+    
+      
+
+<header class="page-header sticky-top bg-brand-neutral-black">
+    <nav class="navbar navbar-expand-xl bg-brand-neutral-black">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ff-navbar" aria-controls="ff-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span> <span class="navbar-toggler-text">Menu</span>
+            </button>
+            <a class="order-xl-1" href="/" aria-label="Full Fact homepage">
+                <img src="/static/img/ff-logo.a3c246edc83d.png" class="logo-img" alt="Return to Full Fact homepage" loading="lazy">
+            </a>
+            <div class="order-xl-3">
+                <a class="btn btn-brand-accent-yellow order-xl-3 ga-navbar-donate navbar-donate" href="/donate-fullfact/?utm_medium=nav-analysis">Donate</a>
+            </div>
+            <div class="collapse navbar-collapse order-xl-2" id="ff-navbar">
+                <ul class="navbar-nav ga-navbar-nav">
+                    
+                      
+                      <li class="nav-item menu-large">
+                          <a href="/latest/" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              Articles
+                          </a>
+                          <div class="dropdown-menu" role="menu">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-xl-3 d-none d-xl-block py-1">
+                                          <h2><a href="/latest/" class="stretched-link">Articles</a></h2>
+                                          <p class="mb-0">Everything we publish, from fact checks, investigations and in-depth analysis to comment blogs and our Government Tracker.</p>
+                                      </div>
+                                      <div class="col-12 col-xl-9 px-0 px-xl-2">
+                                          <ul class="row row-cols-1 row-cols-xl-3 unpad-list">
+                                              
+                                                
+                                                <li class="col "><a href="/latest/">
+                                                    Latest
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/fact-checks/">
+                                                    Fact checks
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/analysis/">
+                                                    Analysis
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/comment/">
+                                                    Comment
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/government-tracker/">
+                                                    Government Tracker
+                                                </a></li>
+                                                
+                                              
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                    
+                      
+                      <li class="nav-item menu-large">
+                          <a href="/latest/" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              Topics
+                          </a>
+                          <div class="dropdown-menu" role="menu">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-xl-3 d-none d-xl-block py-1">
+                                          <h2><a href="/latest/" class="stretched-link">Topics</a></h2>
+                                          <p class="mb-0">Browse our fact checks, explainers and analysis by topic.</p>
+                                      </div>
+                                      <div class="col-12 col-xl-9 px-0 px-xl-2">
+                                          <ul class="row row-cols-1 row-cols-xl-3 unpad-list">
+                                              
+                                                
+                                                <li class="col "><a href="/politics/">
+                                                    Politics
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/health/">
+                                                    Health
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/immigration/">
+                                                    Immigration
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/budget-2026/">
+                                                    Budget 2026
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/economy/">
+                                                    Economy, Business &amp; Finance
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/culture-and-society/">
+                                                    Culture &amp; Society
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/technology/">
+                                                    Science &amp; Technology
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/environment/">
+                                                    Environment
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/crime/">
+                                                    Crime
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/education/">
+                                                    Education
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/conflict/">
+                                                    Conflict
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/hoaxes/">
+                                                    Hoaxes
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/us/">
+                                                    US
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/europe/">
+                                                    Europe
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/world/">
+                                                    World
+                                                </a></li>
+                                                
+                                              
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                    
+                      
+                      <li class="nav-item menu-large">
+                          <a href="/training/" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              Learn
+                          </a>
+                          <div class="dropdown-menu" role="menu">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-xl-3 d-none d-xl-block py-1">
+                                          <h2><a href="/training/" class="stretched-link">Learn</a></h2>
+                                          <p class="mb-0">Build the skills to spot bad information with practical guides, trainer-led workshops or self-paced courses you can start today.</p>
+                                      </div>
+                                      <div class="col-12 col-xl-9 px-0 px-xl-2">
+                                          <ul class="row row-cols-1 row-cols-xl-3 unpad-list">
+                                              
+                                                
+                                                <li class="col "><a href="/toolkit/">
+                                                    Misinformation Toolkit
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/training/">
+                                                    Courses and workshops
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/training/self-paced-fact-checking-training/">
+                                                    Self paced e-learning
+                                                </a></li>
+                                                
+                                              
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                    
+                      
+                      <li class="nav-item menu-large">
+                          <a href="/policy/" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              Our work
+                          </a>
+                          <div class="dropdown-menu" role="menu">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-xl-3 d-none d-xl-block py-1">
+                                          <h2><a href="/policy/" class="stretched-link">Our work</a></h2>
+                                          <p class="mb-0">The impact our work can make on the information environment. From proposals for changes in law and regulation to our use of AI technology and how we&#x27;ve been reported in the media.</p>
+                                      </div>
+                                      <div class="col-12 col-xl-9 px-0 px-xl-2">
+                                          <ul class="row row-cols-1 row-cols-xl-3 unpad-list">
+                                              
+                                                
+                                                <li class="col "><a href="/policy/">
+                                                    Policy &amp; Impact
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/policy/reports/">
+                                                    Reports and resources
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/ai/">
+                                                    Full Fact AI tools
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/how-we-fact-check/">
+                                                    How we fact check
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/interventions/">
+                                                    After we fact check
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/press/">
+                                                    Full Fact in the press
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/ai-benchmark/">
+                                                    AI fact checking
+                                                </a></li>
+                                                
+                                              
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                    
+                      
+                      <li class="nav-item menu-large">
+                          <a href="/about/" class="nav-link dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                              About
+                          </a>
+                          <div class="dropdown-menu" role="menu">
+                              <div class="container">
+                                  <div class="row">
+                                      <div class="col-xl-3 d-none d-xl-block py-1">
+                                          <h2><a href="/about/" class="stretched-link">About</a></h2>
+                                          <p class="mb-0">Full Fact is the UK&#x27;s independent fact checking charity. We put reliable evidence at the heart of public debate so you can make sense of what matters.</p>
+                                      </div>
+                                      <div class="col-12 col-xl-9 px-0 px-xl-2">
+                                          <ul class="row row-cols-1 row-cols-xl-3 unpad-list">
+                                              
+                                                
+                                                <li class="col "><a href="/about/">
+                                                    Who we are
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/our-team/">
+                                                    Our team
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/careers/">
+                                                    Careers
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/funding/">
+                                                    Funding
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/independence/">
+                                                    Independence
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/impartiality/">
+                                                    Impartiality
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/feedback/">
+                                                    Feedback &amp; corrections
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/international-networks/">
+                                                    International networks
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/frequently-asked-questions/">
+                                                    FAQs
+                                                </a></li>
+                                                
+                                              
+                                                
+                                                <li class="col "><a href="/about/contact/">
+                                                    Contact us
+                                                </a></li>
+                                                
+                                              
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                    
+                    <li class="nav-item menu-large">
+                        <a href="/search/" class="nav-link " role="button">
+                            <i class="fa fa-search search" aria-hidden="true"></i>
+                            Search
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    <main class="fact-check factCheck-js">
+    
+  
+  <div class="container py-3 py-md-8">
+    <div class="fact-check-grid" style="--category-accent: var(--brand-accent-yellow, #ffff00);">
+      
+      <aside class="fact-check-grid__col fact-check-grid__col--byline byline">
+        
+
+
+    
+        <a href="/analysis/" class="fact-check-badge fact-check-badge--analysis">Analysis</a>
+    
+
+
+
+        
+        <div class="byline__section byline__authors">
+          
+            
+              <div class="byline__author">
+                <div>
+                  <p class="byline__name"><cite>Full Fact Team</cite></p>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        <dl class="byline__meta">
+          
+          <div class="byline__section">
+            <dt class="meta-label">Published</dt>
+            <dd class="byline__meta-value">6 June 2024</dd>
+            
+          </div>
+          
+          <div class="byline__section">
+            <dt class="meta-label">Reading time</dt>
+            <dd class="byline__meta-value">3 mins</dd>
+          </div>
+          
+            <div class="byline__section">
+              <dt class="meta-label">Topic</dt>
+              <dd class="byline__meta-value"><a href="/politics/" class="btn topic topic--primary">Politics</a></dd>
+            </div>
+          
+          
+          <div class="byline__section byline__section--share">
+            <dt class="meta-label">Share</dt>
+            <dd>
+              
+<ul class="share-list">
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"
+           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on X"
+           href="https://twitter.com/intent/tweet?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F&url=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F&via=FullFact">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky"
+           href="https://bsky.app/intent/compose?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F%20https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-bluesky" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"
+           href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp"
+           href="https://api.whatsapp.com/send?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F%20https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>
+
+            </dd>
+          </div>
+        </dl>
+      </aside>
+      
+      <article class="fact-check-grid__col fact-check-grid__col--article">
+        
+          
+<nav class="breadcrumbs d-none d-lg-block" aria-label="breadcrumbs">
+    <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        
+            <li class="breadcrumbs__item"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem">
+                <a href="/latest/" itemprop="item" class="breadcrumbs__link"><span itemprop="name">Articles</span></a>
+                <span class="breadcrumbs__separator">/</span>
+                <meta itemprop="position" content="1" />
+            </li>
+        
+            <li class="breadcrumbs__item"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem">
+                <a href="/politics/" itemprop="item" class="breadcrumbs__link"><span itemprop="name">Politics</span></a>
+                <span class="breadcrumbs__separator">/</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        
+        <li class="breadcrumbs__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem">
+            
+                
+                    <a href="/analysis/" itemprop="item" class="breadcrumbs__link"><span itemprop="name">Analysis</span></a>
+                
+            
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+</nav>
+
+        
+        
+        <div class="article-mobile-meta d-lg-none">
+          <span class="article-mobile-meta__date">
+            6 June 2024
+          </span>
+          
+
+
+    
+        <a href="/analysis/" class="fact-check-badge mb-0 fact-check-badge--analysis">Analysis</a>
+    
+
+
+
+        </div>
+        <h1 class="article-title mb-3">Would the Lib Dems’ plan to tax share buybacks raise £1.4 billion a year?</h1>
+        
+        <div class="article-mobile-byline d-lg-none">
+          <span class="article-mobile-byline__text">By <cite>Full Fact Team</cite> &bull; Politics &bull; 3 mins</span>
+        </div>
+        
+        
+        
+          
+        
+        
+        <div class="article-mobile-share d-lg-none">
+          
+<ul class="share-list">
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"
+           href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on X"
+           href="https://twitter.com/intent/tweet?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F&url=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F&via=FullFact">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky"
+           href="https://bsky.app/intent/compose?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F%20https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-bluesky" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"
+           href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+    </li>
+    <li class="share-list__item">
+        <a class="share-list__link" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp"
+           href="https://api.whatsapp.com/send?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F%20https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>
+
+        </div>
+        <div class="cms-content">
+          
+            
+              <p>After the debate between Rishi Sunak and Keir Starmer on Tuesday, ITV’s Anushka Asthana <a href="https://www.youtube.com/live/heP8-evLKvA?si=SKZsoeHHOJgOb9Zc&amp;t=6376">challenged</a> Liberal Democrat leader Sir Ed Davey on whether his party’s proposed share buyback scheme would raise £1.4 billion a year, saying the Institute for Fiscal Studies (IFS) believed that because of the way people will change their behaviour, it will raise “next to nothing”.</p>
+<p>A share buyback is a <a href="https://uk.practicallaw.thomsonreuters.com/7-107-7250?transitionType=Default&amp;contextData=(sc.Default)">purchase by a company of its own shares</a>. The Liberal Democrat <a href="https://www.libdems.org.uk/news/article/share-buyback-tax-scheme">policy</a> proposes a 4% share buyback tax, paid by the 100 biggest corporations on the stock exchange, which the party claims “could raise around £1.4 billion a year” to pay for extending free school meals to an additional 900,000 children.</p>
+<p>Mr Davey <a href="https://www.youtube.com/watch?v=heP8-evLKvA">suggested</a> he disagreed with the IFS analysis and claimed “last year if we had this share buyback scheme we would have raised £2.3 billion”. He also claimed the Liberal Democrat calculations “allowed for behavioural change”. </p>
+<p>In a <a href="https://www.libdems.org.uk/news/article/share-buyback-tax-scheme#:~:text=Based%20on%20current%20buyback%20levels%2C%20a%204%25%20tax%20would%20raise%20around%20%C2%A32.2bn%20a%20year.%20We%20have%20taken%20a%20cautious%20approach%20to%20account%20for%20potential%20changes%20in%20company%20behaviour%2C%20estimating%20it%20would%20raise%20around%20%C2%A31.4bn%20a%20year.">press release</a> the Lib Dems claimed that, based on current buyback levels, “a 4% tax would raise around £2.2bn a year”. It noted: “We have taken a cautious approach to account for potential changes in company behaviour, estimating it would raise around £1.4bn a year.”</p>
+<p>Mr Davey <a href="https://www.youtube.com/watch?v=heP8-evLKvA">also pointed</a> to the success of a similar scheme in the US, saying “they raised a huge amount of money” through this approach.</p>
+<p>Stuart Adam, a senior economist at the IFS, told Full Fact that he’d be “surprised if a 4% tax on share buybacks in the UK raised much revenue”. He added: “To a large extent I would expect companies simply to stop using share buybacks, and to pay dividends instead if they wanted to return money to shareholders. More importantly, however, there is no clear justification for the policy: it seems a particularly distortionary form of tax rise.”</p>
+<p>The Liberal Democrats pointed Full Fact to their <a href="https://www.libdems.org.uk/news/article/share-buyback-tax-scheme">blog post</a> on the policy and highlighted the think tank Institute for Public Policy Research’s (IPPR)  <a href="https://x.com/IPPR/status/1797157197992050956">tweet</a> welcoming the policy. </p>
+<p>The IPPR called for a share buyback tax in <a href="https://www.ippr.org/articles/buy-back-better-the-case-for-raising-taxes-on-dividends-and-buybacks">2022</a> “to ensure that companies are not channelling profits to their shareholders at a time of national economic crisis”. </p>
+<p>However, they called for a 1% tax instead of 4%, and warned “levying a higher tax on buybacks is likely to discourage companies from repurchasing their own stock” so it is “fair to assume that the revenues raised from a buyback tax will change in line with the level at which they are taxed”. </p>
+<p>Separately, the Lib Dems have also promised to make personal care for the elderly and the disabled <a href="https://www.bbc.co.uk/news/articles/cjmmww3ne8wo#:~:text=The%20Lib%20Dems%20would%20introduce,disabled%20people%20with%20high%20needs.">free</a>, and raise care workers’ pay, which they estimate will cost £2.7 billion, funding it by “reversing tax cuts given to big banks” which they calculate will raise <a href="https://www.youtube.com/watch?v=heP8-evLKvA">£4.3 billion</a> a year. </p>
+<p>However, independent experts warn the policy is going to cost more than £2.7 billion. </p>
+<p>The King’s Fund welcomed the plan but cautioned “the true cost of reform will be much more than stated”. The <a href="https://www.health.org.uk/news-and-comment/news/the-health-foundation-responds-to-liberal-democrats-proposals-for-social-care#:~:text=Introducing%20a%20Scottish%2Dstyle%20model%20of%20%E2%80%98free%20personal%20care%E2%80%99%20in%20England%2C%20could%20cost%20around%20%C2%A36bn%20extra%20in%202026/27%2C%20rising%20to%20%C2%A37bn%20by%202035/36">Health Foundation</a> estimated that introducing a Scottish-style model of ‘free personal care’ in England, similar to what the Liberal Democrats have suggested, could cost around £6 billion extra in 2026/27, rising to £7 billion by 2035/36.</p>
+<p>When questioned about the policy yesterday on <a href="https://www.bbc.co.uk/iplayer/episode/m001zyzc/newsnight-the-election-campaign-gets-dirty">Newsnight</a> [25:27] Sarah Olney, the Lib Dem treasury and business and industrial strategy spokesperson, said: “We are, I think, the only party that is really coming forward with a serious plan for social care”, adding: “We will be bringing forward our manifesto, obviously, in due course, it will be a fully costed manifesto.” </p>
+<p><em>Image courtesy of <a href="https://members.parliament.uk/member/188/portrait">members.parliament.uk</a> </em></p>
+            
+          
+        </div>
+        
+<div class="quote-share">
+    <a class="quote-share__link" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+    </a>
+    <a class="quote-share__link" target="_blank" rel="noopener noreferrer" aria-label="Share on X"
+       href="https://twitter.com/intent/tweet?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F&url=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F&via=FullFact">
+        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+    </a>
+    <a class="quote-share__link" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky"
+       href="https://bsky.app/intent/compose?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F%20https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+        <i class="fab fa-bluesky" aria-hidden="true"></i>
+    </a>
+    <a class="quote-share__link" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"
+       href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+    </a>
+    <a class="quote-share__link" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp"
+       href="https://api.whatsapp.com/send?text=Would%20the%20Lib%20Dems%E2%80%99%20plan%20to%20tax%20share%20buybacks%20raise%20%C2%A31.4%20billion%20a%20year%3F%20https%3A%2F%2Ffullfact.org%2Fpolitics%2Fwould-the-lib-dems-plan-to-tax-share-buybacks-raise-14-billion-a-year%2F">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+</div>
+
+        
+<a name="update-notes" class="nav-offset-anchor"></a>
+
+
+
+        
+        
+        
+          <div class="mx-n2 mx-sm-0">
+            <section id="ga-inline-donate" class="jumbotron jumbotron-fluid bg-brand-accent-yellow donate">
+    <div class="container">
+      <div class="jumbotron-content text-center text-md-left">
+          <h2 class="title-emphasis">Was this helpful?</h2>
+
+          <p>Full Fact fights for good, reliable information in the media, online, and in politics.</p>
+
+          <div class="donate-buttons text-center">
+              <a id="ga-inline-donate-link" href="/donate-fullfact/?utm_medium=fact-check" class="btn btn-brand-neutral-black">Support Full Fact today</a>
+          </div>
+      </div>
+    </div>
+</section>
+
+            
+            <aside class="most-viewed--footer sidebar" aria-label="Related articles">
+              
+<h2 class="sidebar__title">Related</h2>
+<ul class="sidebar__list">
+    
+    <li class="sidebar__item"><a href="/politics/war-register-claims-no-evidence/" class="sidebar__item-link" rel="bookmark">No evidence the PM is setting up an ‘Emergency Register’ of civilians fit to fight in a war</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/andy-burnham-pm-conference-speech-2026/" class="sidebar__item-link" rel="bookmark">Andy Burnham&#x27;s first Labour Party conference speech as PM: fact checked</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/video-march-palestine-fake/" class="sidebar__item-link" rel="bookmark">Video of huge pro-Palestine rally in the UK is AI-generated</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/old-video-sheffield-protest-2024-shared-recent/" class="sidebar__item-link" rel="bookmark">Old video of crowd running through streets of Sheffield shared as if recent</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/claims-josh-simons-head-no-10-policy-unit-false/" class="sidebar__item-link" rel="bookmark">Facebook posts wrong to claim former Makerfield MP is new head of No 10 policy unit</a></li>
+    
+</ul>
+
+
+            </aside>
+          </div>
+        
+      </article>
+      
+      <aside class="fact-check-grid__col fact-check-grid__col--sidebar sidebar"
+             aria-label="Related articles">
+        
+<h2 class="sidebar__title">Related</h2>
+<ul class="sidebar__list">
+    
+    <li class="sidebar__item"><a href="/politics/war-register-claims-no-evidence/" class="sidebar__item-link" rel="bookmark">No evidence the PM is setting up an ‘Emergency Register’ of civilians fit to fight in a war</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/andy-burnham-pm-conference-speech-2026/" class="sidebar__item-link" rel="bookmark">Andy Burnham&#x27;s first Labour Party conference speech as PM: fact checked</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/video-march-palestine-fake/" class="sidebar__item-link" rel="bookmark">Video of huge pro-Palestine rally in the UK is AI-generated</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/old-video-sheffield-protest-2024-shared-recent/" class="sidebar__item-link" rel="bookmark">Old video of crowd running through streets of Sheffield shared as if recent</a></li>
+    
+    <li class="sidebar__item"><a href="/politics/claims-josh-simons-head-no-10-policy-unit-false/" class="sidebar__item-link" rel="bookmark">Facebook posts wrong to claim former Makerfield MP is new head of No 10 policy unit</a></li>
+    
+</ul>
+
+
+      </aside>
+    </div>
+  </div>
+  
+  
+  
+
+    </main>
+
+    <footer class="footer">
+        
+          <nav class="navbar">
+    <div class="footer-links">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="/about/" class="nav-link">Who we are</a></li>
+            <li class="list-inline-item"><a href="/about/funding/" class="nav-link">Funding and independence</a></li>
+            <li class="list-inline-item"><a href="/about/impartiality/" class="nav-link">Our impartiality</a></li>
+            <li class="list-inline-item"><a href="/about/feedback/" class="nav-link">Feedback and corrections</a></li>
+            <li class="list-inline-item"><a href="/about/contact/" class="nav-link">Media enquiries</a></li>
+        </ul>
+    </div>
+</nav>
+
+        
+        
+        
+          <div class="social-links">
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="https://www.facebook.com/FullFact.org/" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="facebook" aria-label="Facebook page" name="Facebook page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-facebook-f"></i>  <span class="sr-only">Facebook</span></a></li>
+        <li class="list-inline-item"><a href="https://x.com/FullFact" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="x-twitter" aria-label="X page" name="X page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-x-twitter"></i> <span class="sr-only">X</span></a></li>
+        <li class="list-inline-item"><a href="https://bsky.app/profile/fullfact.org" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="bluesky" aria-label="Bluesky page" name="Bluesky page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-bluesky"></i> <span class="sr-only">Bluesky</span></a></li>
+        <li class="list-inline-item"><a href="https://uk.linkedin.com/company/fullfact" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="linkedin" aria-label="LinkedIn page" name="LinkedIn page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-linkedin-in"></i> <span class="sr-only">LinkedIn</span></a></li>
+        <li class="list-inline-item"><a href="https://instagram.com/fullfactorg" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="instagram" aria-label="Instagram page" name="Instagram page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-instagram"></i> <span class="sr-only">Instagram</span></a></li>
+        <li class="list-inline-item"><a href="https://www.tiktok.com/@fullfactorg" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="tiktok" aria-label="TikTok page" name="TikTok page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-tiktok"></i> <span class="sr-only">TikTok</span></a></li>
+        <li class="list-inline-item"><a href="https://youtube.com/@fullfactuk" title="Link opens in a new window" target="_blank" rel="noopener noreferrer" data-icon="youtube" aria-label="YouTube page" name="YouTube page" class="btn btn-brand-neutral-black social-icon"><i class="fab fa-youtube"></i> <span class="sr-only">YouTube</span></a></li>
+    </ul>
+</div>
+
+        
+        <div class="brand-legal">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-md-2">
+                        <a class="brand-logo" href="/" aria-label="Full Fact homepage">
+                        <img src="/static/img/ff-logo.a3c246edc83d.png" class="logo-img" alt="Return to Fullfact.org homepage" loading="lazy">
+                    </a>
+                    </div>
+                    <div class="col col-12 col-md-10">
+                        <p>Full Fact is a registered charity (no. <a href="https://register-of-charities.charitycommission.gov.uk/charity-details/?regId=1158683&subId=0">1158683</a>) and a non-profit company (no. <a href="https://find-and-update.company-information.service.gov.uk/company/06975984">06975984</a>) limited by guarantee and registered in England and Wales. © Copyright 2010-2026 Full Fact. Thanks to Hosting UK for donating our web hosting.
+                        
+                        <a href="/terms-and-conditions/">Privacy, terms and conditions.</a></p>
+
+                        <p>Image courtesy of
+                          
+                            <a href="https://members.parliament.uk/member/188/portrait">members.parliament.uk Attribution 3.0 Unported (CC BY 3.0)</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script defer type="text/javascript" src="/static/js/script.8a583c67393c.js"></script>
+
+    
+  <script src="/static/prototypes/refresh/script.98165331c04b.js"></script>
+
+
+  </body>
+</html>

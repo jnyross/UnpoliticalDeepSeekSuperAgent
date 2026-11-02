@@ -1,6 +1,6 @@
 # Issue #32: bounded costed-plan feasibility audit
 
-Research checked 2026-11-02 UTC. **Incomplete research draft, not Coverage L4 evidence or a completed 13-party comparison.** No application/UI changes. This audit concentrates on the six Northern Ireland parties and Plaid Cymru/SNP; the five other rows below are leads, not an assertion that their complete evidence packages have been assembled.
+Research checked 2026-11-02 UTC. **Initial research audit, not Coverage L4 evidence or a completed 13-party comparison.** The owner subsequently directed partial implementation on issue #32: publish the verified Conservative/Labour/Lib Dem evidence and keep other gaps explicit, without claiming L4 or closing the issue. This audit preserves the research findings before that implementation. It concentrates on the six Northern Ireland parties and Plaid Cymru/SNP; the five other rows below are leads, not an assertion that their complete evidence packages have been assembled.
 
 ## Conclusion
 
@@ -71,4 +71,4 @@ Run `python3 docs/research/coverage-l4/check_evidence.py` from the repository ro
 
 ## Next defensible action
 
-Keep this as an explicitly incomplete research dossier; do not claim #32/L4 completion or ship empty/unsupported judgement rows. Pursue exact scoped candidates above and obtain successful publisher evidence (or a clearly documented verifiable author-issued copy) for discovered IFS responses. If remaining prerequisites stay unresolved, report the specific party/policy/evidence gap instead of declaring that independent assessment cannot exist. No owner can be asked to manufacture an independent assessment or approve invented costings.
+Keep this research dossier as a record of incomplete coverage. Under the owner's subsequent partial-delivery decision, ship supported rows and explicitly unavailable fields for the rest; do not claim #32/L4 completion or ship unsupported judgements. Pursue exact scoped candidates above and obtain successful publisher evidence (or a clearly documented verifiable author-issued copy) for discovered IFS responses. If remaining prerequisites stay unresolved, report the specific party/policy/evidence gap instead of declaring that independent assessment cannot exist. No owner can be asked to manufacture an independent assessment or approve invented costings.

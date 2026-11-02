@@ -100,7 +100,16 @@ def annotate(files, root, spending, comparison):
             page = re.sub(r'(<section\b[^>]*>\s*<h2\b[^>]*>.*?</h2>)', lambda m: m[0]+roster, page, flags=re.S)
             for p in party['parties']:
                 source = next(s for s in party['sources'] if s['id'] == p['source_id'])
-                stamp = note(['party-offers-' + source['id']], '2024 election manifesto', [source])
+                source_ids = ['party-offers-' + source['id']]
+                dated_sources = [source]
+                for reference in p.get('evidence', {}).values():
+                    extra = next((s for s in party.get('evidence_sources', [])
+                                  if s['id'] == reference['source_id']), None)
+                    if extra and extra not in dated_sources:
+                        dated_sources.append(extra)
+                        source_ids.append('party-evidence-' + extra['id'])
+                period = '2024 election manifesto and analysis' if p.get('evidence') else '2024 election manifesto'
+                stamp = note(source_ids, period, dated_sources)
                 pattern = r'(<article\b[^>]*data-party-id="' + re.escape(str(p['id'])) + r'"[^>]*>\s*<h2\b[^>]*>.*?</h2>)'
                 page = re.sub(pattern, lambda m: m[0]+stamp, page, flags=re.S)
         files[name] = page.encode()
