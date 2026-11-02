@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-11-02T06:06:19.321Z",
+  "startedAt": "2026-11-02T06:31:12.669Z",
   "target": "local-generated-output",
   "timeoutMs": 300000,
   "discoveredPages": [
@@ -32,25 +32,25 @@
     {
       "page": "parties.html",
       "viewport": "mobile",
-      "startedAt": "2026-11-02T06:06:19.325Z",
+      "startedAt": "2026-11-02T06:31:12.671Z",
       "status": "passed",
       "code": 0,
       "signal": null,
       "timedOut": false,
-      "finishedAt": "2026-11-02T06:06:22.975Z",
+      "finishedAt": "2026-11-02T06:31:16.814Z",
       "evidence": "parties.html/mobile/before-browser-report.json"
     },
     {
       "page": "parties.html",
       "viewport": "desktop",
-      "startedAt": "2026-11-02T06:06:22.979Z",
+      "startedAt": "2026-11-02T06:31:16.827Z",
       "status": "passed",
       "code": 0,
       "signal": null,
       "timedOut": false,
-      "finishedAt": "2026-11-02T06:06:27.521Z",
+      "finishedAt": "2026-11-02T06:31:21.453Z",
       "evidence": "parties.html/desktop/before-browser-report.json"
     }
   ],
-  "finishedAt": "2026-11-02T06:06:27.523Z"
+  "finishedAt": "2026-11-02T06:31:21.456Z"
 }

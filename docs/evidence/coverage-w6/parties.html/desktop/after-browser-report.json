@@ -1,17 +1,17 @@
 {
-  "capturedAt": "2026-11-02T06:22:28.024Z",
-  "baseRevision": "693386bc035b0a3489718bee9712922748c181b7",
+  "capturedAt": "2026-11-02T06:32:24.861Z",
+  "baseRevision": "dc4e48f569e4cff815f094d3bb86147adb84c0f4",
   "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
   "mode": "automated-checks",
   "browser": "Chromium",
   "target": "local-generated-output",
-  "startedAt": "2026-11-02T06:22:28.036Z",
+  "startedAt": "2026-11-02T06:32:24.872Z",
   "completed": true,
   "pages": [
     {
       "path": "parties.html",
-      "bytes": 37003,
-      "sha256": "1d22501b759f45259eb4b5b7e6d7282d2014cf9985488563952788a437bea395",
+      "bytes": 37253,
+      "sha256": "7c104332efc286b0ad9e406fca6ee15635c69f5501eb0478d3668e5289e813c7",
       "viewports": [
         {
           "viewport": {
@@ -19,7 +19,7 @@
             "width": 1280,
             "height": 900
           },
-          "url": "http://127.0.0.1:46549/parties.html",
+          "url": "http://127.0.0.1:42729/parties.html",
           "screenshot": "after-parties-html-desktop.png",
           "completed": true,
           "expectedStates": [
@@ -33,11 +33,11 @@
                 "document": 1280,
                 "body": 1280
               },
-              "startedAt": "2026-11-02T06:22:32.441Z",
+              "startedAt": "2026-11-02T06:32:28.774Z",
               "completed": true,
               "axeCompleted": true,
-              "finishedAt": "2026-11-02T06:22:36.750Z",
-              "durationMs": 4307,
+              "finishedAt": "2026-11-02T06:32:32.933Z",
+              "durationMs": 4158,
               "runner": {
                 "name": "axe-core",
                 "version": "4.11.4"
@@ -145,6 +145,6 @@
     }
   ],
   "browserVersion": "141.0.7390.37",
-  "finishedAt": "2026-11-02T06:22:36.801Z",
+  "finishedAt": "2026-11-02T06:32:32.976Z",
   "passed": true
 }

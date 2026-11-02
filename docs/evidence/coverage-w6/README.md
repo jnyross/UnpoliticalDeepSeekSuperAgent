@@ -2,8 +2,8 @@
 
 ## Actual Before / After
 
-- **Before:** `693386bc035b0a3489718bee9712922748c181b7`, party HTML SHA-256 `9f1ee00fe01e45e10699330451806d1e1211c8744ed0bdc55c3a7f2739258e8c`.
-- **After:** `50d3012355134307f235ba80401ce571b3cca5b7`, party HTML SHA-256 `1d22501b759f45259eb4b5b7e6d7282d2014cf9985488563952788a437bea395`.
+- **Before:** `5928df7222106ff80ba9e5fcfd2d5bcb54fe9342`, party HTML SHA-256 `3824303c0c1761b3df7c68be7178bde84cdc75ba4e95a38e16256325b195e1b7`.
+- **After:** `dc4e48f569e4cff815f094d3bb86147adb84c0f4`, party HTML SHA-256 `7c104332efc286b0ad9e406fca6ee15635c69f5501eb0478d3668e5289e813c7`.
 - Same real static application, Chromium, light theme, JavaScript disabled, initial party-card state. Mobile **360×800** and desktop **1280×900**.
 - [Revision map](revision-map.json) verifies each report's tested HTML hash against its named immutable git revision. Browser reports were captured before the working tree's implementation commit; their `baseRevision` is not the tested-content identity. `pages[].sha256` is.
 
@@ -32,10 +32,12 @@ There are now **nine selected examples with independent quotations, two cost-onl
 # All nine pages pass provenance/raw values/reconciliation/source/size/banned-word/grade gates.
 # No changed generated output after rebuild. Manual inventory changes only party HTML hash.
 .venv/bin/python -m unittest discover -s tests -p 'test_*.py'
-# 206 tests PASS.
+# 211 integrated tests PASS (206 before integration).
 CHECK_PAGE=parties.html EVIDENCE_LABEL=after EVIDENCE_DIR=docs/evidence/coverage-w6 npm run test:browser
 # Both mobile/desktop tasks PASS: no-JS, layout/overflow/size, zero axe violations and contrast checks.
 node docs/evidence/coverage-w6/capture-cards.mjs
 ```
 
-Party grades: **5.7672** complete text, **6.2456** words-only, **6.2742** prose words-only. Added regression coverage rejects wrong independent PDF page, wrong publisher attribution, incompatible source/locator formats and a forged, hash-consistent transcript that is absent from the actual cited PDF page. Existing HTML/PDF provenance, amounts, equal template and scoped date/revision tests remain in force. No manual keyboard/screen-reader result or other people evidence was created.
+Party grades: **5.7354** complete text, **6.2130** words-only, **6.2362** prose words-only. Added regression coverage rejects wrong independent PDF page, wrong publisher attribution, incompatible source/locator formats and a forged, hash-consistent transcript that is absent from the actual cited PDF page. Existing HTML/PDF provenance, amounts, equal template and scoped date/revision tests remain in force. No manual keyboard/screen-reader result or other people evidence was created.
+
+Concurrent main5928df7 added answer navigation and a real publisher-revision notice. It was integrated; only the generated party hash conflicted in the manual inventory, resolved by rebuilding and regenerating the inventory without claiming performed checks. Fresh actual Before/After captures include the same revision notice on both sides.
