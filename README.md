@@ -126,6 +126,31 @@ page size, prohibited words and static HTML. Browser checks use JavaScript disab
 for content and layout, plus axe WCAG 2.2 AA at phone and desktop sizes; these are not
 manual keyboard, screen-reader or user-test evidence. CI runs these checks on every PR.
 
+The browser runner discovers every generated HTML page and checks both 360×800 and
+1280×900 viewports, initial and all-details-expanded states and any expandable
+buttons. It runs each page/viewport in a fresh Chromium process group with a five-minute
+hard deadline; a timeout, worker failure or missing/partial report fails the suite.
+CI discovers the same pages dynamically and runs one job per page, without cancelling
+other pages on failure. The suite manifest lists every expected page/viewport and its
+completion; per-worker JSON records the URL, HTML hash, states, timings, axe/browser
+versions, rule results (including colour contrast), full violations and incomplete
+results. Axe cannot infer the background behind SVG axis text (`imgNode`). Those
+raw incomplete results are retained, and a supplemental automated WCAG luminance
+calculation checks every SVG label at 4.5:1 and data line/point at 3:1 against its
+computed solid background. Unsupported paint, overlapping graphics behind text and
+any other incomplete result fail closed. This is not human review. A pass means
+every expected state finished with zero violations and completed contrast checks,
+not proof of complete WCAG conformance.
+
+```sh
+EVIDENCE_DIR=test-results/browser npm run test:browser
+# Run a single CI shard for diagnosis (not complete site evidence):
+CHECK_PAGE=history-gdp.html EVIDENCE_DIR=/tmp/gdp-check npm run test:browser
+```
+
+`BROWSER_TIMEOUT_MS` overrides the per-page/viewport deadline for diagnosis; it never
+turns a timeout into success. Evidence is retained on CI failures as well as successes.
+
 Serve `site/` with any static HTTP server (for example `python3 -m http.server 8000
 --directory site`). There is no client-side JavaScript. Vercel serves the committed
 `site/` directory unchanged, with no build step; see [configuration](vercel.json).
@@ -146,7 +171,12 @@ download date and hash. Some party-issued documents are retained from the Britis
 Manifesto Archive where party hosting was unavailable; hosting is labelled per source.
 Party documents retain their own copyright and are not claimed to be OGL licensed.
 The retained PDF is reopened with `pdftotext` during validation rather than trusting
-only an editable transcript.
+only an editable transcript. Both PDF and transcript byte hashes must match the
+manifest, and every excerpt must occur on its cited page in both retained text and
+fresh PDF extraction. Full extracted layouts are not compared byte-for-byte:
+Poppler versions differ in whitespace and overlapping-text order. Changed raw
+PDF/transcript bytes or missing/moved quotes still fail; validation never rewrites
+provenance to accommodate a tool version.
 
 The same refresh command above checks all retained party/roster URLs. A changed
 manifesto stops the staged build for evidence review rather than silently updating a
