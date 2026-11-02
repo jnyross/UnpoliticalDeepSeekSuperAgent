@@ -8281,6 +8281,6 @@
     "downloaded": "2026-11-01",
     "release_url": "https://www.gov.uk/government/statistics/public-spending-statistics-release-july-2026"
   },
-  "vintage_note": "This is the July 2026 PESA Chapter 4 history. The latest overview uses the separate July 2026 spending-statistics Chapter 5 workbook, whose source page was later updated. We keep both source manifests and do not splice values across workbooks. Published precision differs: this history is rounded to £0.1 billion, the overview to £ million.",
-  "limitations": "This retained functional series starts in 2003-04. For TME only, Table 4.1 also supplies the 1985-86 and 1995-96 snapshots. Other earlier fixed-decade entries are unavailable here; this is not a claim that no other official historical data exists. Subcategories are included within their parent area: do not add them again. Figures are published rounded to one decimal place; differences in sums may reflect rounding."
+  "vintage_note": "This history is from PESA Chapter 4, July 2026. The latest overview uses a separate workbook: Chapter 5 of the July 2026 spending statistics. Its source page was updated later. We keep a source record for each workbook. We do not mix their values. The sources round to different units. This history uses £0.1 billion. The overview uses £ million.",
+  "limitations": "This source shows spending by area from 2003-04. Table 4.1 also gives TME for 1985-86 and 1995-96. Those two years cover TME only. The other earlier ten-year entries are not held here. Other official sources may hold older data. Each subcategory is part of its parent area. Do not add it again. The source rounds figures to one decimal place. This may cause small gaps in sums."
 }
