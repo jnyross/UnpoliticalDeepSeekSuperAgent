@@ -1,0 +1,150 @@
+{
+  "capturedAt": "2026-11-02T02:14:41.844Z",
+  "baseRevision": "fdd417aa6acffa61f89b1b7dda80561b239f3d78",
+  "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
+  "mode": "automated-checks",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T02:14:41.856Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 17598,
+      "sha256": "af6c7e48c3472b36b7190091f32489f4c95cc317be4cb6ffdb74d368bc891cfa",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:44327/index.html",
+          "screenshot": "after-index-html-desktop.png",
+          "completed": true,
+          "expectedStates": [
+            "initial"
+          ],
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "startedAt": "2026-11-02T02:14:44.290Z",
+              "completed": true,
+              "axeCompleted": true,
+              "finishedAt": "2026-11-02T02:14:46.461Z",
+              "durationMs": 2170,
+              "runner": {
+                "name": "axe-core",
+                "version": "4.11.4"
+              },
+              "environment": {
+                "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36",
+                "windowWidth": 1280,
+                "windowHeight": 900,
+                "orientationAngle": 0,
+                "orientationType": "landscape-primary"
+              },
+              "options": {
+                "runOnly": {
+                  "type": "tag",
+                  "values": [
+                    "wcag2a",
+                    "wcag2aa",
+                    "wcag21a",
+                    "wcag21aa",
+                    "wcag22aa"
+                  ]
+                },
+                "reporter": "v1"
+              },
+              "passedRules": [
+                "aria-allowed-attr",
+                "aria-conditional-attr",
+                "aria-hidden-body",
+                "aria-hidden-focus",
+                "aria-prohibited-attr",
+                "aria-valid-attr-value",
+                "aria-valid-attr",
+                "bypass",
+                "color-contrast",
+                "document-title",
+                "duplicate-id-aria",
+                "html-has-lang",
+                "html-lang-valid",
+                "link-in-text-block",
+                "link-name",
+                "meta-viewport",
+                "target-size",
+                "td-headers-attr",
+                "th-has-data-cells"
+              ],
+              "inapplicableRules": [
+                "area-alt",
+                "aria-braille-equivalent",
+                "aria-command-name",
+                "aria-deprecated-role",
+                "aria-input-field-name",
+                "aria-meter-name",
+                "aria-progressbar-name",
+                "aria-required-attr",
+                "aria-required-children",
+                "aria-required-parent",
+                "aria-roles",
+                "aria-toggle-field-name",
+                "aria-tooltip-name",
+                "autocomplete-valid",
+                "avoid-inline-spacing",
+                "blink",
+                "button-name",
+                "definition-list",
+                "dlitem",
+                "form-field-multiple-labels",
+                "frame-focusable-content",
+                "frame-title-unique",
+                "frame-title",
+                "html-xml-lang-mismatch",
+                "image-alt",
+                "input-button-name",
+                "input-image-alt",
+                "label",
+                "list",
+                "listitem",
+                "marquee",
+                "meta-refresh",
+                "nested-interactive",
+                "object-alt",
+                "role-img-alt",
+                "scrollable-region-focusable",
+                "select-name",
+                "server-side-image-map",
+                "summary-name",
+                "svg-img-alt",
+                "valid-lang",
+                "video-caption",
+                "no-autoplay-audio"
+              ],
+              "violations": [],
+              "incomplete": [],
+              "svgContrast": [],
+              "contrastCompleted": true
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          }
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T02:14:46.508Z",
+  "passed": true
+}
