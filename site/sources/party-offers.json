@@ -242,16 +242,32 @@
       "name": "Alliance",
       "seats": 1,
       "source_id": "alliance",
-      "offer": "Keep the State Pension triple lock.",
-      "excerpt": "Alliance is committed to protecting UK State Pensions, including keeping the Triple Lock.",
-      "scope": "UK State Pension.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "End the two-child limit on benefits.",
+      "excerpt": "A wealth of evidence has demonstrated the link between the two-child limit in Universal Credit and higher poverty rates among larger families, with a harsh impact on children. Scrapping the policy would be one of the most efficient ways of reducing child poverty across the UK.",
+      "scope": "Selected two-child policy only. Resolution Foundation models Great Britain, not a full UK or party plan cost; Northern Ireland, the benefit cap and bedroom tax excluded.",
+      "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
+      "year": "RF estimate for 2024-25; cash, not a lifetime total. Research published before the election.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched review of this pension pledge is retained. The buyback review is of a different party and plan.",
+      "costing": "Independent estimate, not a party costing.",
+      "assessment": "one of the most efficient ways to drive down child poverty rates",
       "locator": "PDF page 17",
-      "pdf_page": 17
+      "pdf_page": 17,
+      "evidence": {
+        "costing": {
+          "source_id": "rf-two-child-2024",
+          "quote": "Abolishing the two-child limit would cost the Government £2.5 billion in 2024-25",
+          "locator": "Opening summary; two-child-limit abolition",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        },
+        "assessment": {
+          "source_id": "rf-two-child-2024",
+          "quote": "one of the most efficient ways to drive down child poverty rates",
+          "locator": "Opening summary; child poverty",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        }
+      }
     },
     {
       "id": 4,
@@ -305,16 +321,24 @@
       "name": "Green Party",
       "seats": 4,
       "source_id": "green",
-      "offer": "End the bedroom tax.",
-      "excerpt": "Scrap the bedroom tax.",
-      "scope": "Housing benefit rules; UK election offer.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "Invest in NHS hospital building and repair.",
+      "excerpt": "We would invest £20bn in NHS budgets over the life of the parliament for hospital building and repair.",
+      "scope": "NHS England hospital building and repair; capital spending, not the whole health plan.",
+      "baseline": "Additional capital spending, not total NHS funding. The surrounding passage describes extra capital needs over the next five years.",
+      "year": "Over the life of the next parliament; not an annual amount.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched cost review of ending the bedroom tax is retained. A manifesto fact-check is not a costing.",
-      "locator": "PDF page 12",
-      "pdf_page": 12
+      "costing": "Party claim: hospital capital investment.",
+      "assessment": "Unavailable here: The checked Full Fact manifesto review covers waiting-list figures and insulation claims, not this hospital building and repair cost.",
+      "locator": "PDF page 4",
+      "pdf_page": 4,
+      "evidence": {
+        "costing": {
+          "source_id": "green",
+          "quote": "We would invest £20bn in NHS budgets over the life of the parliament for hospital building and repair.",
+          "locator": "PDF page 4",
+          "pdf_page": 4
+        }
+      }
     },
     {
       "id": 15,
@@ -383,48 +407,88 @@
       "name": "Plaid Cymru",
       "seats": 4,
       "source_id": "plaid",
-      "offer": "End the two-child limit on Universal Credit.",
-      "excerpt": "We will scrap the Conservative policy of the ‘two-child’ limit on universal credit payments",
-      "scope": "Universal Credit and benefit cap; Wales manifesto.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "End the two-child limit on benefits.",
+      "excerpt": "We will scrap the Conservative policy of the ‘two-child’ limit on universal credit payments,",
+      "scope": "Selected two-child policy only. Resolution Foundation models Great Britain, not a full UK or party plan cost; Northern Ireland, the benefit cap and bedroom tax excluded.",
+      "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
+      "year": "RF estimate for 2024-25; cash, not a lifetime total. Research published before the election.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched review of this benefit pledge is retained. The checked Full Fact article covers other claims.",
+      "costing": "Independent estimate, not a party costing.",
+      "assessment": "one of the most efficient ways to drive down child poverty rates",
       "locator": "PDF page 39",
-      "pdf_page": 39
+      "pdf_page": 39,
+      "evidence": {
+        "costing": {
+          "source_id": "rf-two-child-2024",
+          "quote": "Abolishing the two-child limit would cost the Government £2.5 billion in 2024-25",
+          "locator": "Opening summary; two-child-limit abolition",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        },
+        "assessment": {
+          "source_id": "rf-two-child-2024",
+          "quote": "one of the most efficient ways to drive down child poverty rates",
+          "locator": "Opening summary; child poverty",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        }
+      }
     },
     {
       "id": 1036,
       "name": "Reform UK",
       "seats": 5,
       "source_id": "reform",
-      "offer": "Remove VAT from energy bills.",
-      "excerpt": "Scrap VAT on energy bills.",
-      "scope": "Tax on energy bills.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "Cut departmental costs without cutting frontline services.",
+      "excerpt": "This will save £50 billion per year,",
+      "scope": "UK government departments; efficiency and procurement savings claim, not the whole fiscal plan.",
+      "baseline": "Savings from departmental spending, not total spending. The pledge calls for cuts to waste, bureaucracy and procurement costs while protecting frontline services.",
+      "year": "Annual saving; no fiscal year is stated in this passage.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched cost review of this energy VAT pledge is retained. The checked Full Fact article covers other claims.",
-      "locator": "PDF page 7",
-      "pdf_page": 7
+      "costing": "Party claim: annual departmental savings.",
+      "assessment": "Unavailable here: The checked Full Fact pieces do not assess these departmental savings. The identified IFS manifesto reaction could not be retrieved from its publisher.",
+      "locator": "PDF page 6",
+      "pdf_page": 6,
+      "evidence": {
+        "costing": {
+          "source_id": "reform",
+          "quote": "This will save £50 billion per year,",
+          "locator": "PDF page 6",
+          "pdf_page": 6
+        }
+      }
     },
     {
       "id": 29,
       "name": "Scottish National Party",
       "seats": 9,
       "source_id": "snp",
-      "offer": "End the VAT exemption for private schools, with full VAT powers.",
-      "excerpt": "with full powers over VAT we would go further and end the exemption for private schools.",
-      "scope": "Private schools; conditional on full VAT powers for Scotland.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "End the two-child limit on benefits.",
+      "excerpt": "Scrap the two child benefit cap and associated rape clause",
+      "scope": "Selected two-child policy only. Resolution Foundation models Great Britain, not a full UK or party plan cost; Northern Ireland, the benefit cap and bedroom tax excluded.",
+      "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
+      "year": "RF estimate for 2024-25; cash, not a lifetime total. Research published before the election.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched review of this VAT pledge is retained. The checked Full Fact article covers other claims.",
-      "locator": "PDF page 12",
-      "pdf_page": 12
+      "costing": "Independent estimate, not a party costing.",
+      "assessment": "one of the most efficient ways to drive down child poverty rates",
+      "locator": "PDF page 26",
+      "pdf_page": 26,
+      "evidence": {
+        "costing": {
+          "source_id": "rf-two-child-2024",
+          "quote": "Abolishing the two-child limit would cost the Government £2.5 billion in 2024-25",
+          "locator": "Opening summary; two-child-limit abolition",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        },
+        "assessment": {
+          "source_id": "rf-two-child-2024",
+          "quote": "one of the most efficient ways to drive down child poverty rates",
+          "locator": "Opening summary; child poverty",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        }
+      }
     },
     {
       "id": 30,
@@ -447,16 +511,24 @@
       "name": "Social Democratic & Labour Party",
       "seats": 2,
       "source_id": "sdlp",
-      "offer": "Set an Essentials Guarantee within Universal Credit.",
-      "excerpt": "The next UK government must also ensure an Essentials Guarantee within Universal Credit, ensuring that the basic rate at least covers life’s essentials and that support can never be pulled below that level.",
-      "scope": "Universal Credit basic rate; UK government request.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "Support a new windfall tax on oil and gas profits.",
+      "excerpt": "SDLP MPs will support a new government’s plan to levy a new windfall tax on oil and gas giants with projected annual average income of £1.2bn.",
+      "scope": "UK oil and gas windfall tax; party support for a new government’s plan.",
+      "baseline": "Projected additional tax revenue, not total oil and gas tax receipts. The passage gives no tax rate, allowances or detailed baseline.",
+      "year": "Annual average revenue; the averaging period and fiscal years are not stated here.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched review of this benefit guarantee is retained. Another party’s tax estimate would not cost it.",
-      "locator": "PDF page 21",
-      "pdf_page": 21
+      "costing": "Party claim: average annual tax revenue.",
+      "assessment": "Unavailable here: No matched assessment is retained. The tax rate, allowances and timing must be checked before applying another party’s windfall tax review.",
+      "locator": "PDF page 15",
+      "pdf_page": 15,
+      "evidence": {
+        "costing": {
+          "source_id": "sdlp",
+          "quote": "with projected annual average income of £1.2bn.",
+          "locator": "PDF page 15",
+          "pdf_page": 15
+        }
+      }
     },
     {
       "id": 158,
@@ -479,16 +551,24 @@
       "name": "Ulster Unionist Party",
       "seats": 1,
       "source_id": "uup",
-      "offer": "Seek a lower VAT rate for leisure and hospitality in Northern Ireland.",
-      "excerpt": "seek commitment to lower Leisure and Hospitality VAT in Northern Ireland to match the Republic of Ireland,",
-      "scope": "Northern Ireland leisure and hospitality VAT.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "Set up a Northern Ireland Job Skills Fund.",
+      "excerpt": "We also pledge to invest in skills development through the establishment of a Northern Ireland Job Skills Fund,",
+      "scope": "Northern Ireland Job Skills Fund; training with government, business, trade unions and educational institutions.",
+      "baseline": "Funding equivalent to the UK Apprenticeship Levy paid by Northern Ireland firms, with an annual minimum. This is a proposed fund, not current spending.",
+      "year": "Annual investment; no start or end fiscal year is stated in this passage.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched review of this VAT pledge is retained. Skills fund figures do not cost this tax change.",
-      "locator": "PDF page 8",
-      "pdf_page": 8
+      "costing": "Party claim: minimum annual Skills Fund investment.",
+      "assessment": "Unavailable here: No matching assessment of this Skills Fund’s cost or funding is retained. A general corporation tax review would not assess this fund.",
+      "locator": "PDF page 9",
+      "pdf_page": 9,
+      "evidence": {
+        "costing": {
+          "source_id": "uup",
+          "quote": "ensuring a minimum annual investment of no less than £35 million into the Skills Fund.",
+          "locator": "PDF page 9",
+          "pdf_page": 9
+        }
+      }
     }
   ],
   "status": "2024 election proposal; not current spending or a claim of policy now in force.",
@@ -502,7 +582,7 @@
     "name": "Speaker",
     "seats": 1
   },
-  "selection_rule": "One tax, benefit or public funding offer per party. Add a party cash claim and a linked outside quote where checked evidence matches. Else state the gap. These are examples, not full plans.",
+  "selection_rule": "One direct tax, benefit or public funding pledge per party, with an exact excerpt. Add verified official claims or clearly attributed independent policy estimates; retain unmatched assessment gaps. Selected policies are not full manifesto reviews or directly comparable totals.",
   "evidence_sources": [
     {
       "id": "rf-economic-battle-lines",
@@ -551,6 +631,23 @@
       "sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
       "text_file": "libdem-buyback-2024.txt",
       "text_sha256": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+      "text_mode": "html-blocks-v1",
+      "hosting": "Publisher website; retained HTML response"
+    },
+    {
+      "id": "rf-two-child-2024",
+      "file": "rf-two-child-2024.raw.html.txt",
+      "url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+      "sha256": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+      "downloaded": "2026-11-02",
+      "retrieved_at": "2026-11-02T04:47:54.747306+00:00",
+      "published": "2024-01-31",
+      "publication": "Catastrophic caps: An analysis of the impact of the two-child limit and the benefit cap",
+      "publisher": "Resolution Foundation",
+      "kind": "independent",
+      "licence": "Publisher copyright; not Open Government Licence.",
+      "text_file": "rf-two-child-2024.txt",
+      "text_sha256": "dd2b3cd1773f8e13d73cdfaeea0dfe50395138b82ad22018818670e415fac326",
       "text_mode": "html-blocks-v1",
       "hosting": "Publisher website; retained HTML response"
     }

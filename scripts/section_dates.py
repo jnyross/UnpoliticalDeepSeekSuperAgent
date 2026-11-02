@@ -110,7 +110,12 @@ def annotate(files, root, spending, comparison):
                     if extra and extra not in dated_sources:
                         dated_sources.append(extra)
                         source_ids.append('party-evidence-' + extra['id'])
-                period = '2024 election manifesto and analysis' if p.get('evidence') else '2024 election manifesto'
+                evidence = p.get('evidence', {})
+                period = '2024 election manifesto'
+                if 'assessment' in evidence:
+                    period += ' and analysis'
+                elif 'costing' in evidence:
+                    period += ' and costing'
                 stamp = note(source_ids, period, dated_sources)
                 pattern = r'(<article\b[^>]*data-party-id="' + re.escape(str(p['id'])) + r'"[^>]*>\s*<h2\b[^>]*>.*?</h2>)'
                 page = re.sub(pattern, lambda m: m[0]+stamp, page, flags=re.S)

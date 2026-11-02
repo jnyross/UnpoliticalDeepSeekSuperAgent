@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rf-catastrophic-caps-january2024",
+    "url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+    "retrieved": "2026-11-02T04:47:54.747306+00:00",
+    "status": 200,
+    "final_url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+    "bytes": 149851,
+    "sha256": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+    "text_sha256": "b5989de53b65f27dfa3b0bca5427dd20dd51aa637b5455c03c80561183386e77"
+  },
+  {
+    "id": "rf-two-child-july2024",
+    "url": "https://www.resolutionfoundation.org/press-releases/almost-two-in-five-large-families-are-now-affected-by-the-two-child-limit-and-the-majority-are-set-to-fall-into-poverty-when-the-policy-is-fully-rolled-out/",
+    "retrieved": "2026-11-02T04:47:55.193735+00:00",
+    "status": 200,
+    "final_url": "https://www.resolutionfoundation.org/press-releases/almost-two-in-five-large-families-are-now-affected-by-the-two-child-limit-and-the-majority-are-set-to-fall-into-poverty-when-the-policy-is-fully-rolled-out/",
+    "bytes": 115793,
+    "sha256": "d35099ebd5cadb72b950db1d0e1dbc453a9a3e1ff6a3fee48ff0bfbbc15a538b",
+    "text_sha256": "a7d106a9334aad5d276ed12baf0ebe2cb297c21a37e373e922106af09d69071d"
+  },
+  {
+    "id": "snp-manifesto-launch-june2024",
+    "url": "https://www.snp.org/snp-leader-john-swinneys-2024-manifesto-speech/",
+    "retrieved": "2026-11-02T04:47:55.589261+00:00",
+    "status": 200,
+    "final_url": "https://www.snp.org/snp-leader-john-swinneys-2024-manifesto-speech/",
+    "bytes": 119556,
+    "sha256": "8c39439ed8f720f248ade979c62499b9c99e4335371267da0987139112435fa8",
+    "text_sha256": "f658122a9cb1da14c93cefa5a81389e105009d99c89c498783e580059b8fd4d8"
+  }
+]

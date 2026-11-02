@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ni-fullfact-windfall-jobs",
+    "url": "https://fullfact.org/election-2024/labour-energy-plans-100000-scottish-jobs/",
+    "retrieved": "2026-11-02T04:44:35.969125+00:00",
+    "status": 200,
+    "final_url": "https://fullfact.org/election-2024/labour-energy-plans-100000-scottish-jobs/",
+    "bytes": 62192,
+    "sha256": "d6dabfd850ace9b9f063c23ac7502bdf56171d35b5975306c15ac47b31cb1839",
+    "text_sha256": "b430f8c56c0c894f0b5223c62524ea14421054d3cd1bfd99cc1be5533fec69da"
+  },
+  {
+    "id": "plaid-wiredgov-press",
+    "url": "https://www.wired-gov.net/wg/news.nsf/articles/IFS+Plaid+Cymru+manifesto+a+response+13062024142000?open",
+    "retrieved": "2026-11-02T04:44:36.286292+00:00",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "id": "plaid-wiredgov-print",
+    "url": "https://wired-gov.net/wg/news.nsf/print/IFS+Plaid+Cymru+manifesto+a+response+13062024142000",
+    "retrieved": "2026-11-02T04:45:16.333024+00:00",
+    "error": "<urlopen error timed out>"
+  }
+]
