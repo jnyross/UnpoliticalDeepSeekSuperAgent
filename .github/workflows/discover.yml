@@ -16,6 +16,9 @@ concurrency:
 
 jobs:
   discover:
+    # checkout(ref: main) alone does not put a branch dispatch in main's cache scope.
+    # All production issue writers must share the same journal cache namespace.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -31,12 +34,26 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      # Main-branch caches survive fresh runners without requiring a content/PR write.
+      # Restore only this small public key/status/URL journal, never sources or figures.
+      - name: Restore issue delivery receipts
+        uses: actions/cache/restore@v4
+        with:
+          path: .discovery-issue-receipts.json
+          key: issue-delivery-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: issue-delivery-
       - name: Discover and persist deduplicated revision notices
         id: discovery
         continue-on-error: true
         run: python scripts/discover.py --open-issues --write-revision-status --report discovery-report.json
         env:
           GH_TOKEN: ${{ github.token }}
+      - name: Preserve successful or uncertain issue deliveries
+        if: always() && hashFiles('.discovery-issue-receipts.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .discovery-issue-receipts.json
+          key: issue-delivery-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Record retained baselines and discovery outcomes, including errors
         id: timing
         continue-on-error: true
@@ -130,7 +147,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: release-discovery
+          include-hidden-files: true
           path: |
+            .discovery-issue-receipts.json
             discovery-report.json
             sources/revision-status.json
             measurements/release-timing.jsonl
