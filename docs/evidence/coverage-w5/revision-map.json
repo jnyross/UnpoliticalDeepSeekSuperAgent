@@ -9,9 +9,9 @@
     ]
   },
   "after": {
-    "revision": "291c630ed2b8f6131533e0a210936a8319e654e1",
+    "revision": "dddfd4ee47e277b807a844f3f72a52041a8ea942",
     "page": "site/parties.html",
-    "sha256": "cb3ac58d5c3f89cc485617de6ac8963680685d0f20373ebfe19f1ce4fcb91255",
+    "sha256": "9f1ee00fe01e45e10699330451806d1e1211c8744ed0bdc55c3a7f2739258e8c",
     "reports": [
       "parties.html/mobile/after-browser-report.json",
       "parties.html/desktop/after-browser-report.json"

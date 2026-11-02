@@ -5,7 +5,7 @@ No Coverage L4 claim. Issue 32 remains open: the examples are selected policies,
 ## Revisions and scenario
 
 - **Before:** `9b3f2b2d775850cd09b20d361a807a095527ff83` (merged main before this wave).
-- **After:** `291c630ed2b8f6131533e0a210936a8319e654e1` (implemented data, validation and generated page).
+- **After:** `dddfd4ee47e277b807a844f3f72a52041a8ea942` (implemented data, validation and generated page).
 - Same real static application, Chromium, light theme, JavaScript disabled, initial state, mobile **360×800** and desktop **1280×900**.
 - Captures use the actual generated HTML, not mockups. All baseline party cards were saved before editing source data; the seven changed cards were captured after rebuilding. Full-page and viewport screenshots and machine reports are also retained.
 - [Revision map](revision-map.json) verifies each browser report's HTML hash against the actual page in its named git revision. Reports were captured from the working tree before its implementation commit, so their `baseRevision` alone is not the tested content identity; `pages[].sha256` is.
@@ -32,12 +32,12 @@ node docs/evidence/coverage-w5/capture-cards.mjs
 # Real changed-card captures at both widths.
 ```
 
-Party page reading grades: **5.6780** complete text, **6.1114** words-only, **6.1288** prose words-only; all below 7. Manual accessibility inventory changes only the party page's hash: no human keyboard/screen-reader evidence was created. Before capture-only reports document visual identity, not a new claim to have rerun baseline automated checks.
+Party page reading grades: **5.6660** complete text, **6.1199** words-only, **6.1265** prose words-only; all below 7. Manual accessibility inventory changes only the party page's hash: no human keyboard/screen-reader evidence was created. Before capture-only reports document visual identity, not a new claim to have rerun baseline automated checks.
 
 ## Evidence decisions and remaining gaps
 
-Resolution Foundation's pre-election January 2024 analysis supplies an exact selected-policy estimate and attributed judgement for Alliance, Plaid Cymru and SNP commitments to remove the two-child limit. The estimate is **Great Britain, 2024-25**, not a party costing or full UK total. Northern Ireland, other welfare measures and complete manifesto costs are excluded; benefit take-up uncertainty is stated beside the estimate.
+Resolution Foundation's pre-election January 2024 analysis supplies an exact selected-policy estimate and attributed judgement for Alliance, Green, Plaid Cymru and SNP commitments to remove the two-child limit. The estimate is **Great Britain, 2024-25**, not a party costing or full UK total. Northern Ireland, other welfare measures and complete manifesto costs are excluded; benefit take-up uncertainty is stated beside the estimate.
 
-Four additional party-provided cash claims (Green hospital capital, Reform departmental savings, SDLP windfall tax and UUP Skills Fund) are checked against the actual cited PDF pages. Their independent assessment fields remain unavailable: related fact-checks are not transferred to unlike policies. Existing Conservative, Labour and Liberal Democrat examples remain unchanged.
+Three additional party-provided cash claims (Reform departmental savings, SDLP windfall tax and UUP Skills Fund) are checked against the actual cited PDF pages. Their independent assessment fields remain unavailable: related fact-checks are not transferred to unlike policies. Existing Conservative, Labour and Liberal Democrat examples remain unchanged.
 
-There are now six selected examples with independent quotations, four cost-only examples and three examples without a checked cost. This is not complete coverage of every party's costed plans. The research notes retain the unselected Alliance buyback, Plaid CGT and SNP NHS leads, related-but-unmatched reviews, access failures and precise gaps rather than inventing assessments.
+There are now seven selected examples with independent quotations, three cost-only examples and three examples without a checked cost. This is not complete coverage of every party's costed plans. The research notes retain the unselected Alliance buyback, Plaid CGT and SNP NHS leads, related-but-unmatched reviews, access failures and precise gaps rather than inventing assessments.
