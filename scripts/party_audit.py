@@ -13,12 +13,12 @@ from datetime import date
 import parties
 
 # Dates and seat counts are not financial claims. Labour's table uses bare £m values.
-FIGURE = re.compile(r'£\d[\d,]*(?:\.\d+)?(?:\s*(?:trillion|billion|million|bn|m)\b)?|\b\d+(?:\.\d+)?(?:%|\s+per cent\b)|\b\d{1,3}(?:,\d{3})+\b')
+FIGURE = re.compile(r'£\d[\d,]*(?:\.\d+)?(?:\s*(?:trillion|billion|million|bn|m)\b)?|\b\d+(?:\.\d+)?(?:%|\s+per cent\b)|\b\d{1,3}(?:,\d{3})+\b', re.IGNORECASE)
 
 
 def financial_matches(text, source_id):
     # Only the selected Labour £m table prints unprefixed cash values.
-    return [m for m in FIGURE.finditer(text) if m.group().startswith('£') or '%' in m.group() or 'per cent' in m.group() or source_id == 'labour']
+    return [m for m in FIGURE.finditer(text) if m.group().startswith('£') or '%' in m.group() or 'per cent' in m.group().casefold() or source_id == 'labour']
 
 
 def audit(root, data):
@@ -76,9 +76,10 @@ def audit(root, data):
             locator = {key: (ref or party)[key] for key in ('locator', 'pdf_page', 'text_line') if key in (ref or party)}
             for match in matches:
                 amount = match.group().strip()
-                unit = ('percent' if '%' in amount or 'per cent' in amount else 'GBP trillion' if 'trillion' in amount
-                        else 'GBP billion' if re.search(r'billion|bn', amount)
-                        else 'GBP million' if re.search(r'million|m$', amount) or source_id == 'labour' else 'GBP')
+                lower_amount = amount.casefold()
+                unit = ('percent' if '%' in amount or 'per cent' in lower_amount else 'GBP trillion' if 'trillion' in lower_amount
+                        else 'GBP billion' if re.search(r'billion|bn', lower_amount)
+                        else 'GBP million' if re.search(r'million|m$', lower_amount) or source_id == 'labour' else 'GBP')
                 def same_value(table):
                     # Currency scale is stated in the native column/period. Do not
                     # attach a cash-total row to a rate or a different amount.

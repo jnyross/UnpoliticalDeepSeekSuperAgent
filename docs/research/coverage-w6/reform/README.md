@@ -1,6 +1,12 @@
 # Wave 6 Reform: verified exact selected-package pair
 
-Research retrieved 2026-11-02 UTC. Research files only; no application data or scripts changed. This is **not** a whole-manifesto audit or a Coverage L4 claim.
+Research retrieved 2026-11-02 UTC. This retained evidence underpins the wave-six Reform selected-package update. This is **not** a whole-manifesto audit or a Coverage L4 claim.
+
+## Genuine supplemental cost table
+
+Subsequent main integration adds the financial-figure audit from PR #61. Direct `pdftotext -layout -f 26 -l 26` extraction of the same primary manifesto verifies **PDF page 26 / printed page 24**, **COST PLEDGES**, row **NHS Pledges**, **£17**, column **Annualised Cost Over 5 Year**, unit **£ billions**. The next physical header line says **Electoral Term**; the extraction interposes `Policy Area` between header lines, so the machine-verified literal period is only the contiguous first line, not an invented joined quote. [Actual page extraction](nhs-cost-table-pdf26.txt#L6-L16). This supports describing the claim as an annualised cost over a five-year electoral term, not £17bn over five years. No fiscal start year or price basis is supplied. The separately retained £50bn savings table is not attached to this £17bn NHS claim.
+
+The audit now recognises uppercase currency scales such as the original **£17 BILLION** as billions, not £17. Regression coverage checks the original literal figure, correct unit and genuine NHS row. The IFS quote's £17bn is still a cited amount in an assessment, not an independently supplied replacement cost or a publisher table.
 
 ## Positive result: switch selected policy to NHS waiting-list-elimination package
 
