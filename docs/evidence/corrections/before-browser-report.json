@@ -1,0 +1,46 @@
+{
+  "capturedAt": "2026-11-02T01:43:28.568Z",
+  "baseRevision": "791d8772fa5dcb12524d699f7fea4bc691c30a67",
+  "contentIdentity": "Exact tested working-tree HTML is identified by pages[].sha256, not by baseRevision.",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T01:43:28.578Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 17529,
+      "sha256": "516c6dabb9b22edbfb023df55052673aa620f7a19e727d587c057fe59d484a4e",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:42671/index.html",
+          "screenshot": "before-index-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:42671/index.html",
+          "screenshot": "before-index-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T01:43:32.114Z",
+  "passed": true
+}
