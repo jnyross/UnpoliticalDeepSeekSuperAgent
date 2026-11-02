@@ -1,0 +1,56 @@
+{
+  "startedAt": "2026-11-02T09:09:43.516Z",
+  "target": "local-generated-output",
+  "timeoutMs": 300000,
+  "discoveredPages": [
+    "about.html",
+    "corrections.html",
+    "history-cash.html",
+    "history-gdp.html",
+    "history-real.html",
+    "history.html",
+    "income.html",
+    "index.html",
+    "parties.html"
+  ],
+  "selectedPages": [
+    "parties.html"
+  ],
+  "completed": true,
+  "passed": true,
+  "expected": [
+    {
+      "page": "parties.html",
+      "viewport": "mobile"
+    },
+    {
+      "page": "parties.html",
+      "viewport": "desktop"
+    }
+  ],
+  "results": [
+    {
+      "page": "parties.html",
+      "viewport": "mobile",
+      "startedAt": "2026-11-02T09:09:43.519Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T09:09:52.632Z",
+      "evidence": "parties.html/mobile/after-browser-report.json"
+    },
+    {
+      "page": "parties.html",
+      "viewport": "desktop",
+      "startedAt": "2026-11-02T09:09:52.637Z",
+      "status": "passed",
+      "code": 0,
+      "signal": null,
+      "timedOut": false,
+      "finishedAt": "2026-11-02T09:10:02.553Z",
+      "evidence": "parties.html/desktop/after-browser-report.json"
+    }
+  ],
+  "finishedAt": "2026-11-02T09:10:02.556Z"
+}
