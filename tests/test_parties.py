@@ -140,12 +140,12 @@ class PartyOffersTests(unittest.TestCase):
 
     def test_independent_sources_have_separate_register(self):
         self.assertEqual(len(self.original['sources']), 13)
-        self.assertEqual(len(self.original['evidence_sources']), 4)
-        self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 7)
-        self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 3)
+        self.assertEqual(len(self.original['evidence_sources']), 5)
+        self.assertEqual(sum('assessment' in p.get('evidence', {}) for p in self.original['parties']), 9)
+        self.assertEqual(sum(set(p.get('evidence', {})) == {'costing'} for p in self.original['parties']), 2)
 
     def test_cost_only_claims_keep_independent_assessment_gap(self):
-        for source_id in ('reform', 'sdlp', 'uup'):
+        for source_id in ('sdlp', 'tuv'):
             party = next(p for p in self.original['parties'] if p['source_id'] == source_id)
             with self.subTest(source_id=source_id):
                 self.assertEqual(set(party['evidence']), {'costing'})
@@ -156,21 +156,21 @@ class PartyOffersTests(unittest.TestCase):
 
     def test_official_cost_cannot_masquerade_as_independent_assessment(self):
         def fake_assessment(d):
-            party = next(p for p in d['parties'] if p['source_id'] == 'uup')
+            party = next(p for p in d['parties'] if p['source_id'] == 'sdlp')
             ref = copy.deepcopy(party['evidence']['costing'])
-            ref['attribution'] = 'Ulster Unionist Party'
+            ref['attribution'] = 'SDLP'
             party['assessment'] = ref['quote']
             party['evidence']['assessment'] = ref
         self.fails(fake_assessment)
 
     def test_new_cost_claims_reject_amount_and_page_mutations(self):
-        for source_id in ('reform', 'sdlp', 'uup'):
+        for source_id in ('reform', 'sdlp', 'tuv'):
             with self.subTest(source_id=source_id):
                 self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id)['evidence']['costing'].update(quote='£999 billion'))
                 self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == source_id)['evidence']['costing'].update(pdf_page=1))
 
     def test_independent_cost_estimates_are_labelled_and_scoped(self):
-        for identifier in ('alliance', 'green', 'plaid', 'snp'):
+        for identifier in ('alliance', 'green', 'plaid', 'snp', 'uup'):
             row = next(p for p in self.original['parties'] if p['source_id'] == identifier)
             with self.subTest(party=identifier):
                 self.assertEqual(row['evidence']['costing']['source_id'], 'rf-two-child-2024')
@@ -194,6 +194,33 @@ class PartyOffersTests(unittest.TestCase):
         self.fails(lambda d: party(d)['evidence']['assessment'].update(attribution='word ' * 31))
         self.fails(lambda d: party(d).update(assessment='An unsupported judgement.'))
         self.fails(lambda d: party(d)['evidence']['costing'].update(source_id='fullfact-buybacks'))
+
+    def test_independent_pdf_assessment_page_format_and_attribution(self):
+        def row(d):
+            return next(p for p in d['parties'] if p['source_id'] == 'reform')
+        self.fails(lambda d: row(d)['evidence']['assessment'].update(pdf_page=1))
+        self.fails(lambda d: row(d)['evidence']['assessment'].update(attribution='Another body'))
+        self.fails(lambda d: next(s for s in d['evidence_sources'] if s['id'] == 'ifs-june2024-opening-remarks').update(text_mode='html-blocks-v1'))
+        self.fails(lambda d: d['evidence_sources'][0].update(text_mode='raw'))
+
+    def test_forged_independent_pdf_transcript_is_not_raw_evidence(self):
+        d = copy.deepcopy(self.original)
+        p = next(p for p in d['parties'] if p['source_id'] == 'reform')
+        ref = p['evidence']['assessment']
+        source = next(s for s in d['evidence_sources'] if s['id'] == ref['source_id'])
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); base = root/'sources'; base.mkdir()
+            for path in (ROOT/'sources').iterdir():
+                if path.is_file() and path.name != source['text_file']:
+                    (base/path.name).symlink_to(path)
+            pages = (ROOT/'sources'/source['text_file']).read_text().split('\f')
+            ref['quote'] = p['assessment'] = 'This estimate is invented.'
+            pages[ref['pdf_page']-1] += '\n' + ref['quote']
+            forged = base/source['text_file']; forged.write_text('\f'.join(pages))
+            source['text_sha256'] = parties.digest(forged)
+            with patch.object(parties, 'load', return_value=d):
+                with self.assertRaisesRegex(AssertionError, 'not on PDF page'):
+                    parties.validate(root)
 
     def test_evidence_cost_pdf_is_reopened(self):
         self.fails(lambda d: next(p for p in d['parties'] if p['source_id'] == 'labour')['evidence']['costing'].update(pdf_page=1))

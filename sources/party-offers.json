@@ -447,22 +447,29 @@
       "name": "Reform UK",
       "seats": 5,
       "source_id": "reform",
-      "offer": "Cut departmental costs without cutting frontline services.",
-      "excerpt": "This will save £50 billion per year,",
-      "scope": "UK government departments; efficiency and procurement savings claim, not the whole fiscal plan.",
-      "baseline": "Savings from departmental spending, not total spending. The pledge calls for cuts to waste, bureaucracy and procurement costs while protecting frontline services.",
-      "year": "Annual saving; no fiscal year is stated in this passage.",
+      "offer": "Eliminate NHS waiting lists with an annual funding package.",
+      "excerpt": "our healthcare needs major reforms to improve results and enjoy zero waiting lists.",
+      "scope": "NHS package and waiting-list target; no geographic split given. IFS disputes the outcome at that cost, not a single staffing measure.",
+      "baseline": "Cost of the party's package, not the whole NHS budget. It includes tax relief, patient vouchers and staffing changes; IFS gives no replacement total.",
+      "year": "Annual cost claim; no fiscal year or price basis is specified in the cited package summary.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Party claim: annual departmental savings.",
-      "assessment": "Unavailable here: The checked Full Fact pieces do not assess these departmental savings. The identified IFS manifesto reaction could not be retrieved from its publisher.",
-      "locator": "PDF page 6",
-      "pdf_page": 6,
+      "costing": "Party claim: annual NHS package cost.",
+      "assessment": "the claim that they could eliminate NHS waiting lists at a cost of £17 billion a year is demonstrably wrong",
+      "locator": "PDF page 9; NHS package",
+      "pdf_page": 9,
       "evidence": {
         "costing": {
           "source_id": "reform",
-          "quote": "This will save £50 billion per year,",
-          "locator": "PDF page 6",
-          "pdf_page": 6
+          "quote": "NHS PLEDGES COSTS = £17 BILLION PA",
+          "locator": "PDF page 9; NHS package cost",
+          "pdf_page": 9
+        },
+        "assessment": {
+          "source_id": "ifs-june2024-opening-remarks",
+          "quote": "the claim that they could eliminate NHS waiting lists at a cost of £17 billion a year is demonstrably wrong",
+          "locator": "PDF page 6; Reform NHS claim",
+          "pdf_page": 6,
+          "attribution": "Paul Johnson, IFS"
         }
       }
     },
@@ -543,38 +550,54 @@
       "name": "Traditional Unionist Voice",
       "seats": 1,
       "source_id": "tuv",
-      "offer": "Remove VAT from energy bills.",
-      "excerpt": "Scrap VAT on energy bills.",
-      "scope": "Tax on energy bills.",
-      "baseline": "No quantified baseline is stated in this selected passage.",
-      "year": "2024 election; no start or end fiscal year is stated in this selected passage.",
+      "offer": "Raise employer National Insurance on foreign workers.",
+      "excerpt": "The National Insurance rate will be raised to 20% for foreign workers. This would incentivise businesses to employ British citizens whose National Insurance rate would stay at 13.8%. Essential foreign health and care workers would be exempt from the tax, as would businesses who employ 5 staff members and under.",
+      "scope": "Reform UK proposal quoted in TUV's manifesto; not a Northern Ireland-only revenue total. Health and care staff and small firms are exempt.",
+      "baseline": "Extra employer tax compared with the manifesto's standard-rate policy; no take-up or hiring-response model is supplied.",
+      "year": "Five-year projected revenue; no fiscal start year or price basis is stated.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Unavailable here: no costing is supplied for this selected qualitative offer.",
-      "assessment": "Unavailable here: No matched review of this energy VAT pledge is retained. The checked Reform fact-check covers other claims.",
-      "locator": "PDF page 15",
-      "pdf_page": 15
+      "costing": "Reform projection quoted by TUV.",
+      "assessment": "Unavailable here: No matched allowed-body assessment of this employer tax's design and exemptions was obtained. A review of Reform's full tax cuts is not that assessment.",
+      "locator": "PDF page 14; employer immigration tax",
+      "pdf_page": 14,
+      "evidence": {
+        "costing": {
+          "source_id": "tuv",
+          "quote": "could raise more than £20 billion over five years",
+          "locator": "PDF page 14; projected revenue",
+          "pdf_page": 14
+        }
+      }
     },
     {
       "id": 38,
       "name": "Ulster Unionist Party",
       "seats": 1,
       "source_id": "uup",
-      "offer": "Set up a Northern Ireland Job Skills Fund.",
-      "excerpt": "We also pledge to invest in skills development through the establishment of a Northern Ireland Job Skills Fund,",
-      "scope": "Northern Ireland Job Skills Fund; training with government, business, trade unions and educational institutions.",
-      "baseline": "Funding equivalent to the UK Apprenticeship Levy paid by Northern Ireland firms, with an annual minimum. This is a proposed fund, not current spending.",
-      "year": "Annual investment; no start or end fiscal year is stated in this passage.",
+      "offer": "End the two-child limit on benefits.",
+      "excerpt": "Ulster Unionist Party MPs will press the next UK government to prioritise addressing poverty and its devastating effects in their policymaking. This must include the abolition of the Universal Credit twochild limit.",
+      "scope": "Selected two-child policy only. Resolution Foundation models Great Britain, not a full UK or party plan cost; Northern Ireland, the benefit cap and bedroom tax excluded.",
+      "baseline": "RF compares abolition with keeping the limit. Benefit take-up may differ in practice. Other benefit changes are excluded.",
+      "year": "RF estimate for 2024-25; cash, not a lifetime total. Research published before the election.",
       "status": "2024 election proposal; not current spending or a claim of policy now in force.",
-      "costing": "Party claim: minimum annual Skills Fund investment.",
-      "assessment": "Unavailable here: No matching assessment of this Skills Fund’s cost or funding is retained. A general corporation tax review would not assess this fund.",
-      "locator": "PDF page 9",
-      "pdf_page": 9,
+      "costing": "Independent estimate, not a party costing.",
+      "assessment": "one of the most efficient ways to drive down child poverty rates",
+      "locator": "PDF page 15; welfare",
+      "pdf_page": 15,
       "evidence": {
         "costing": {
-          "source_id": "uup",
-          "quote": "ensuring a minimum annual investment of no less than £35 million into the Skills Fund.",
-          "locator": "PDF page 9",
-          "pdf_page": 9
+          "source_id": "rf-two-child-2024",
+          "quote": "Abolishing the two-child limit would cost the Government £2.5 billion in 2024-25",
+          "locator": "Opening summary; two-child-limit abolition",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
+        },
+        "assessment": {
+          "source_id": "rf-two-child-2024",
+          "quote": "one of the most efficient ways to drive down child poverty rates",
+          "locator": "Opening summary; child poverty",
+          "text_line": 66,
+          "attribution": "Resolution Foundation"
         }
       }
     }
@@ -658,6 +681,23 @@
       "text_sha256": "dd2b3cd1773f8e13d73cdfaeea0dfe50395138b82ad22018818670e415fac326",
       "text_mode": "html-blocks-v1",
       "hosting": "Publisher website; retained HTML response"
+    },
+    {
+      "id": "ifs-june2024-opening-remarks",
+      "file": "ifs-june2024-opening-remarks.pdf",
+      "url": "https://ifs.org.uk/sites/default/files/2024-06/Paul%20Johnson%27s%20Opening%20Remarks.pdf",
+      "sha256": "4b1e23d31441a1a073206345451bb2fc81073369cd72ad97496dd112fb56103c",
+      "downloaded": "2026-11-02",
+      "retrieved_at": "2026-11-02T06:05:32.134606+00:00",
+      "published": "2024-06-24",
+      "publication": "General election 2024 manifesto analysis: Opening remarks by Paul Johnson, Director, Institute for Fiscal Studies",
+      "publisher": "IFS",
+      "kind": "independent",
+      "licence": "Publisher copyright; not Open Government Licence.",
+      "text_file": "ifs-june2024-opening-remarks.txt",
+      "text_sha256": "1ddc53618b81e61a07e4eeeb197eaef2fe0e42f9a9719c6822fc876c97642af2",
+      "text_mode": "raw",
+      "hosting": "Publisher website; official PDF"
     }
   ]
 }

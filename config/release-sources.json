@@ -196,5 +196,15 @@
     "allowed_hosts": [
       "www.resolutionfoundation.org"
     ]
+  },
+  {
+    "id": "party-evidence-ifs-june2024-opening-remarks",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "ifs-june2024-opening-remarks",
+    "allowed_hosts": [
+      "ifs.org.uk"
+    ]
   }
 ]

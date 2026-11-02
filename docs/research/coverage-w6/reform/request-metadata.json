@@ -1,0 +1,46 @@
+[
+  {
+    "name": "ifs-opening-remarks",
+    "url": "https://ifs.org.uk/sites/default/files/2024-06/Paul%20Johnson%27s%20Opening%20Remarks.pdf",
+    "final_url": "https://ifs.org.uk/sites/default/files/2024-06/Paul%20Johnson%27s%20Opening%20Remarks.pdf",
+    "status": 200,
+    "headers": {
+      "Date": "Mon, 02 Nov 2026 06:05:32 GMT",
+      "Content-Type": "application/pdf",
+      "Content-Length": "96037",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "last-modified": "Mon, 24 Jun 2024 09:01:01 GMT",
+      "etag": "\"667935cd-17725\"",
+      "Cache-Control": "public, max-age=31536000",
+      "Accept-Ranges": "bytes",
+      "cf-cache-status": "HIT",
+      "CF-RAY": "a540f2b35c12a467-WAW"
+    },
+    "retrieved": "2026-11-02T06:05:32.134606+00:00",
+    "sha256": "4b1e23d31441a1a073206345451bb2fc81073369cd72ad97496dd112fb56103c",
+    "file": "docs/research/coverage-w6/reform/ifs-opening-remarks.pdf"
+  },
+  {
+    "name": "ifs-public-finances",
+    "url": "https://ifs.org.uk/sites/default/files/2024-06/The%20public%20finances%20in%20the%20coming%20Parliament.pdf",
+    "final_url": "https://ifs.org.uk/sites/default/files/2024-06/The%20public%20finances%20in%20the%20coming%20Parliament.pdf",
+    "status": 200,
+    "headers": {
+      "Date": "Mon, 02 Nov 2026 06:05:32 GMT",
+      "Content-Type": "application/pdf",
+      "Content-Length": "302585",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "last-modified": "Mon, 24 Jun 2024 09:06:22 GMT",
+      "etag": "\"6679370e-49df9\"",
+      "Cache-Control": "public, max-age=31536000",
+      "Accept-Ranges": "bytes",
+      "cf-cache-status": "HIT",
+      "CF-RAY": "a540f2b4dabab615-WAW"
+    },
+    "retrieved": "2026-11-02T06:05:32.395746+00:00",
+    "sha256": "1a3f864f3d7e7d8fb5788fc78b04d9c102078a29a1432c6daea46126f9c561d4",
+    "file": "docs/research/coverage-w6/reform/ifs-public-finances.pdf"
+  }
+]

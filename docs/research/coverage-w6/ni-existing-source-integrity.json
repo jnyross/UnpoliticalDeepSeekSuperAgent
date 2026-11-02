@@ -1,0 +1,28 @@
+[
+  {
+    "file": "ni-rf-catastrophic-caps-january2024.html",
+    "source_retained_file": "docs/research/coverage-w5/rf-catastrophic-caps-january2024.html",
+    "publisher_url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+    "sha256": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+    "note": "Existing verified publisher body retained from wave5; not a new live request."
+  },
+  {
+    "file": "ni-rf-catastrophic-caps-january2024.txt",
+    "source_retained_file": "docs/research/coverage-w5/rf-catastrophic-caps-january2024.txt",
+    "publisher_url": "https://www.resolutionfoundation.org/publications/catastophic-caps/",
+    "sha256": "b5989de53b65f27dfa3b0bca5427dd20dd51aa637b5455c03c80561183386e77",
+    "note": "Existing verified publisher body retained from wave5; not a new live request."
+  },
+  {
+    "source_pdf": "sources/manifesto-2024-uup.pdf",
+    "sha256": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+    "official_party_authored": true,
+    "hosting": "British Manifesto Archive; archived party-issued PDF"
+  },
+  {
+    "source_pdf": "sources/manifesto-2024-tuv.pdf",
+    "sha256": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+    "official_party_authored": true,
+    "hosting": "British Manifesto Archive; archived party-issued PDF"
+  }
+]

@@ -18,10 +18,15 @@ dated 9 July 2024; it is not a current roster or a record of implemented policy.
 The [Coverage L4 evidence audit](docs/research/coverage-l4/ni-devolved-feasibility.md)
 records the initial costing/assessment gaps; [wave-five follow-up](docs/research/coverage-w5/ni-devolved-followup.md)
 records additional checked policy evidence. Conservative, Labour and Liberal Democrat
-claims retain their independent quotations. Alliance, Green, Plaid Cymru and SNP now pair a
+claims retain their independent quotations. Alliance, Green, Plaid Cymru, SNP and UUP pair a
 selected two-child-limit pledge with Resolution Foundation's 2024-25 Great Britain
-estimate and assessment, explicitly not a party costing or complete UK total. Reform, SDLP and UUP show checked party cash claims with assessment gaps still explicit.
-The remaining three parties still lack a checked cost for the selected offer. This is
+estimate and assessment, explicitly not a party costing or complete UK total.
+[Wave-six research](docs/research/coverage-w6/ni-selected-policy-followup.md) adds UUP's exact
+UK-government repeal commitment and a checked TUV employer-tax projection. Reform's NHS
+package claim is paired with Paul Johnson's direct IFS assessment from an obtainable
+[official PDF](docs/research/coverage-w6/reform/README.md), not an unrelated NHS fact-check.
+SDLP and TUV retain explicit independent-assessment gaps. DUP and Sinn Féin still lack a
+checked cost for the selected offer; all four lack a matched assessment here. This is
 partial coverage, not a claim to Coverage L4; unlike plans are not ranked or added together.
 See [product specification](docs/product-spec.md),
 [rubric](docs/rubric.md) and [repository instructions](AGENTS.md).
