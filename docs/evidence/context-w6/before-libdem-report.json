@@ -1,0 +1,32 @@
+{
+  "stage": "before",
+  "capturedAt": "2026-11-02T06:06:47.719Z",
+  "browserVersion": "141.0.7390.37",
+  "htmlSha256": "9f1ee00fe01e45e10699330451806d1e1211c8744ed0bdc55c3a7f2739258e8c",
+  "target": "local-generated-output",
+  "state": "LibDem heading scrolled to top; JavaScript disabled; light; reduced motion",
+  "captures": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "screenshot": "before-libdem-mobile.png",
+      "cardScreenshot": "before-libdem-card-mobile.png",
+      "noticeCount": 0,
+      "text": "Liberal Democrat\n\nData period: 2024 election manifesto and analysis. Published 2024. Source updated not supplied. Published 2024-05-31. Source updated not supplied. Published 2024-06-06. Source updated not supplied.\n\nThis is a fixed past snapshot. No next release date is announced.\n\nSelected official offer\nTax share buybacks by FTSE-100 firms.\nParty source excerpt\nIntroducing a 4% tax on the share buyback schemes of FTSE-100 listed companies,\nScope\nTax on FTSE-100 firms buying back their own shares. IFS economist quoted by Full Fact assesses this plan.\nBaseline\nParty release uses current buyback levels, then allows for firms changing their behaviour. This is a revenue claim, not a spending cost.\nYear\nAnnual revenue; the release gives no fiscal year.\nStatus\n2024 election proposal; not current spending or a claim of policy now in force.\nCosting\nParty claim: annual tax revenue after changes in firms’ behaviour. Party source: estimating it would raise around £1.4bn a year.\nIndependent assessment\nIFS: Stuart Adam, via Full Fact: surprised if a 4% tax on share buybacks in the UK raised much revenue\nSource and dates\nParty source: PDF page 14. Published 2024. Copy saved 2026-11-01. Party publisher. Saved PDF · Plain text. Costing: Why could this raise £1.4 billion?. Published 2024-05-31. Copy saved 2026-11-02. Saved source · Plain text. Assessment: Stuart Adam response. Published 2024-06-06. Copy saved 2026-11-02. Saved source · Plain text.",
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "screenshot": "before-libdem-desktop.png",
+      "cardScreenshot": "before-libdem-card-desktop.png",
+      "noticeCount": 0,
+      "text": "Liberal Democrat\n\nData period: 2024 election manifesto and analysis. Published 2024. Source updated not supplied. Published 2024-05-31. Source updated not supplied. Published 2024-06-06. Source updated not supplied.\n\nThis is a fixed past snapshot. No next release date is announced.\n\nSelected official offer\nTax share buybacks by FTSE-100 firms.\nParty source excerpt\nIntroducing a 4% tax on the share buyback schemes of FTSE-100 listed companies,\nScope\nTax on FTSE-100 firms buying back their own shares. IFS economist quoted by Full Fact assesses this plan.\nBaseline\nParty release uses current buyback levels, then allows for firms changing their behaviour. This is a revenue claim, not a spending cost.\nYear\nAnnual revenue; the release gives no fiscal year.\nStatus\n2024 election proposal; not current spending or a claim of policy now in force.\nCosting\nParty claim: annual tax revenue after changes in firms’ behaviour. Party source: estimating it would raise around £1.4bn a year.\nIndependent assessment\nIFS: Stuart Adam, via Full Fact: surprised if a 4% tax on share buybacks in the UK raised much revenue\nSource and dates\nParty source: PDF page 14. Published 2024. Copy saved 2026-11-01. Party publisher. Saved PDF · Plain text. Costing: Why could this raise £1.4 billion?. Published 2024-05-31. Copy saved 2026-11-02. Saved source · Plain text. Assessment: Stuart Adam response. Published 2024-06-06. Copy saved 2026-11-02. Saved source · Plain text.",
+      "horizontalOverflow": false
+    }
+  ]
+}
