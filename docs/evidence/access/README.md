@@ -1,5 +1,8 @@
 # Access issue #26: automated evidence
 
+For the separate issue #37 prerequisite, see the [versioned manual check materials](manual/README.md).
+These protocols and blank records contain no performed people checks and do not award Access L4.
+
 Runner revision: `158326d2a6960c60020ee99fedf5963d714092d8`.
 No generated HTML, source data or UI changed from integrated baseline `7dcfa18`
 (the concurrent income-page work in PR #28 is included).
