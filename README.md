@@ -156,6 +156,23 @@ and unchanged historical prefix against the base revision. See
 [release timing methods and commands](docs/release-timing.md) for live verification,
 append-only validation, error handling and interpretation limits.
 
+### Reproduce a bounded source/date audit
+
+```sh
+python3 scripts/audit_context.py --output /tmp/context-audit.json \
+  --live-url https://unpoliticaldeepseeksuperagent.vercel.app
+```
+
+This read-only audit reuses discovery and deployment verification, checks every current
+inventory entry, verifies retained source hashes, and compares the retained calendar
+endpoints. It retains request timestamps, byte counts/hashes, per-source errors,
+revision-notice reconciliation and exact deployed-file hashes. It does not refresh
+sources, publish notices, open issues or write timing measurements. Exit 1 means an
+unknown/error or changed calendar needs investigation; source updates are recorded
+separately as findings, not errors. A successful lookup is only point-in-time evidence.
+The [wave-six audit](docs/evidence/context-w6/README.md) records the 22-source result,
+actual revision warning, section coverage and remaining Context L4 limitations.
+
 ### Section dates and official release evidence
 
 Every spending/income section, history chart/table and party offer carries its data period

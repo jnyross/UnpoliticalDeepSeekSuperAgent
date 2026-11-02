@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-11-02T06:07:41.484462+00:00",
+  "finished_at": "2026-11-02T06:07:42.215390+00:00",
+  "url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+  "final_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+  "http_status": 200,
+  "retained_baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+  "independent_response_sha256": "aa449d4c06b7663e7ee33d67e357ac352eec64a0aca1bf3a5779f1eeaa329dda",
+  "normalized_visible_text_equal": true,
+  "consumed_costing_context": "Based on current buyback levels, a 4% tax would raise around \u00a32.2bn a year. We have taken a cautious approach to account for potential changes in company behaviour, estimating it would raise around \u00a31.4bn a year.",
+  "context_in_retained": true,
+  "context_in_fresh": true,
+  "normalized_word_diff": []
+}
