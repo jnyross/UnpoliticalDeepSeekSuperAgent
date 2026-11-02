@@ -112,6 +112,20 @@ class SectionDatesTests(unittest.TestCase):
             if identifier in expected:
                 self.assertIn('Published 2024-01-31', card)
 
+    def test_programme_context_date_and_revision_notice_are_only_on_dup(self):
+        notice = {'source': 'party-evidence-de-childcare-2024',
+                  'baseline_url': 'https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland',
+                  'first_detected_at': '2026-11-02T09:00:00Z',
+                  'evidence': {'release_url': 'https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland'}}
+        import re
+        page = self.render([notice])['parties.html']
+        cards = dict(re.findall(r'<article[^>]*data-party-id="([^"]+)"[^>]*>(.*?)</article>', page, re.S))
+        for identifier, card in cards.items():
+            self.assertEqual('Source revised.' in card, identifier == '7')
+            self.assertEqual('Published 2024-05-23' in card, identifier == '7')
+        self.assertIn('2024 election manifesto and costing', cards['7'])
+        self.assertNotIn('manifesto and analysis', cards['7'])
+
     def test_income_release_metadata_hash_and_path_are_checked(self):
         def changed(sources):
             with (sources/'income-release.txt').open('ab') as stream:

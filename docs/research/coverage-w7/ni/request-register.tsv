@@ -1,0 +1,7 @@
+checked_utc	label	url	status	bytes	sha256	response_file
+2026-11-02(date-only)	sf-gildernew-two-child-python3	https://sinnfein.ie/news/removal-of-two-child-limit-long-overdue-gildernew/	403	not-retained	not-retained	none; urllib HTTPError before write
+2026-11-02(date-only)	sf-gildernew-two-child-web_fetch	https://sinnfein.ie/news/removal-of-two-child-limit-long-overdue-gildernew/	200-truncated	not-retained	not-retained	none; navigation only returned
+2026-11-02T08:48:16.684129+00:00	sdlp-two-child	https://www.sdlp.ie/sdlp_mps_call_for_end_to_two_child_benefit_cap	403	5550	d15a49905835cebfa03e308f10260562604b58b3194bdb0073ed664a9e35616f	sdlp-two-child-response.txt
+2026-11-02T08:48:16.814552+00:00	dup-motorists	https://mydup.com/news/fair-deal-for-motorists-must-be-priority-for-new-government-girvan	403	5666	4de3218bb5e0bcbe9517b5f945cec7daafbdf4795f9405efee0bfceadd2ac87a	dup-motorists-response.txt
+2026-11-02T08:48:16.844917+00:00	obr-efo-march2024	https://obr.uk/efo/economic-and-fiscal-outlook-march-2024/	403	17	2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c	obr-efo-march2024-response.txt
+2026-11-02T08:48:16.913650+00:00	obr-fuel-march2024	https://obr.uk/download/march-2024-economic-and-fiscal-outlook-fuel-duty/	403	17	2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c	obr-fuel-march2024-response.txt

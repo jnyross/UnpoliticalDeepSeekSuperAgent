@@ -1,0 +1,20 @@
+{
+  "url": "https://ifs.org.uk/sites/default/files/2024-06/Personal%20tax%20and%20welfare.pdf",
+  "final_url": "https://ifs.org.uk/sites/default/files/2024-06/Personal%20tax%20and%20welfare.pdf",
+  "retrieved_at": "2026-11-02T08:46:00.426288+00:00",
+  "status": 403,
+  "headers": {
+    "Date": "Mon, 02 Nov 2026 08:46:00 GMT",
+    "Content-Type": "text/plain; charset=UTF-8",
+    "Content-Length": "17",
+    "Connection": "close",
+    "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+    "Referrer-Policy": "same-origin",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Server": "cloudflare",
+    "CF-RAY": "a541ddc48806c3e0-WAW"
+  },
+  "bytes": 17,
+  "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c"
+}

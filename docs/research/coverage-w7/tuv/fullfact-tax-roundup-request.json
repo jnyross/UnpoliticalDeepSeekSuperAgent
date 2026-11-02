@@ -1,0 +1,27 @@
+{
+  "url": "https://fullfact.org/election-2024/tax-claims-roundup/",
+  "final_url": "https://fullfact.org/election-2024/tax-claims-roundup/",
+  "status": 200,
+  "retrieved_at": "2026-11-02T08:48:20.641853+00:00",
+  "headers": {
+    "Server": "nginx/1.29.1",
+    "Date": "Mon, 02 Nov 2026 08:48:20 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "66373",
+    "Connection": "close",
+    "X-Frame-Options": "DENY",
+    "Vary": "Cookie",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "same-origin",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "X-Varnish": "282493298 276304791",
+    "Age": "11",
+    "Via": "1.1 varnish (Varnish/7.1)",
+    "Accept-Ranges": "bytes",
+    "Expires": "Mon, 02 Nov 2026 08:51:20 GMT",
+    "Cache-Control": "max-age=180",
+    "X-Clacks-Overhead": "GNU Terry Pratchett | The Truth Shall Make Ye Fret."
+  },
+  "sha256": "c9feb20e209b58fdfa3c33c10ad9ccb89451790ab343672e46d1709d3e8652fc",
+  "bytes": 66373
+}

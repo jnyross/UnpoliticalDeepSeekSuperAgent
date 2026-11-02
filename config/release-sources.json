@@ -234,5 +234,13 @@
     "allowed_hosts": [
       "www.libdems.org.uk"
     ]
+  },
+  {
+    "id": "party-evidence-de-childcare-2024",
+    "adapter": "retained-url-snapshot",
+    "manifest": "sources/party-offers.json",
+    "source_collection": "evidence_sources",
+    "source_id": "de-childcare-2024",
+    "allowed_hosts": ["www.education-ni.gov.uk"]
   }
 ]

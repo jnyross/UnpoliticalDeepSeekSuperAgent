@@ -89,8 +89,8 @@ class PartyAuditTests(unittest.TestCase):
         text = '£35m, £2 trillion, 20 per cent, 4%, 7,350 nurses'
         self.assertEqual([m.group() for m in party_audit.financial_matches(text, 'reform')],
                          ['£35m', '£2 trillion', '20 per cent', '4%'])
-        self.assertEqual(self.report['occurrences'], 22)
-        self.assertEqual(self.report['occurrences_without_source_table'], 15)
+        self.assertEqual(self.report['occurrences'], 24)
+        self.assertEqual(self.report['occurrences_without_source_table'], 17)
 
     def test_wrong_scale_is_not_matched_to_supplement(self):
         data = copy.deepcopy(self.data)

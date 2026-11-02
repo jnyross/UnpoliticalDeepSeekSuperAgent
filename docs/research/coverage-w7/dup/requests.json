@@ -1,0 +1,60 @@
+[
+  {
+    "name": "de-childcare-2024",
+    "url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+    "final_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+    "status": 200,
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "36982",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "content-language": "en",
+      "content-type": "text/html; charset=UTF-8",
+      "last-modified": "Mon, 02 Nov 2026 08:48:49 GMT",
+      "traceresponse": "00-18e42e3c9a3f9ce1ea85f9f8b2c4ff0b-eeaaf27fd0c64218-01",
+      "etag": "\"1793609329\"",
+      "content-security-policy-report-only": "default-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.googletagmanager.com; font-src 'self' https://themes.googleusercontent.com fonts.gstatic.com https://cdn.jsdelivr.net data:; frame-src 'self' https://www.youtube.com https://www.vimeo.com; img-src 'self' https://translate.google.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://i.ytimg.com https://www.gstatic.com https://maps.gstatic.com https://maps.googleapis.com https://*.google-analytics.com https://*.googletagmanager.com data:; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net https://*.googletagmanager.com cdn.jsdelivr.net cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com maps.googleapis.com unpkg.com; script-src-attr 'self'; script-src-elem 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net cdn.jsdelivr.net cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com maps.googleapis.com unpkg.com; style-src 'self' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com unpkg.com; style-src-attr 'self' 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com unpkg.com; block-all-mixed-content",
+      "cache-control": "max-age=60, must-revalidate, public, stale-if-error=180, stale-while-revalidate=180",
+      "Accept-Ranges": "bytes",
+      "Age": "0",
+      "Date": "Mon, 02 Nov 2026 08:49:49 GMT",
+      "X-Cache": "MISS, MISS, MISS",
+      "X-Cache-Hits": "0, 0, 0",
+      "Vary": "Cookie, Accept-Encoding",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Strict-Transport-Security": "max-age=31557600"
+    },
+    "retrieved": "2026-11-02T08:49:49.500138+00:00",
+    "sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb"
+  },
+  {
+    "name": "nie-childcare-2024",
+    "url": "https://www.northernireland.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern",
+    "final_url": "https://www.northernireland.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+    "status": 404,
+    "headers": {
+      "Connection": "close",
+      "Content-Length": "914",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "content-language": "en",
+      "content-type": "text/html; charset=UTF-8",
+      "last-modified": "Mon, 02 Nov 2026 08:49:49 GMT",
+      "traceresponse": "00-18e42e3cb8713108fffb49a4f08aab56-2dbed85f68b8fb7a-01",
+      "etag": "\"1793609389\"",
+      "content-security-policy-report-only": "default-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.googletagmanager.com; font-src 'self' https://themes.googleusercontent.com fonts.gstatic.com https://cdn.jsdelivr.net data:; frame-src 'self' https://www.youtube.com https://www.vimeo.com; img-src 'self' https://translate.google.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://i.ytimg.com https://www.gstatic.com https://maps.gstatic.com https://maps.googleapis.com https://*.google-analytics.com https://*.googletagmanager.com data:; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net https://*.googletagmanager.com cdn.jsdelivr.net cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com maps.googleapis.com unpkg.com; script-src-attr 'self'; script-src-elem 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net cdn.jsdelivr.net cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com maps.googleapis.com unpkg.com; style-src 'self' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com unpkg.com; style-src-attr 'self' 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com unpkg.com; block-all-mixed-content",
+      "cache-control": "max-age=60, public",
+      "Accept-Ranges": "bytes",
+      "Date": "Mon, 02 Nov 2026 08:49:50 GMT",
+      "Age": "0",
+      "X-Cache": "MISS, MISS, MISS",
+      "X-Cache-Hits": "0, 0, 0",
+      "Vary": "Cookie, Accept-Encoding",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "Strict-Transport-Security": "max-age=31557600"
+    },
+    "retrieved": "2026-11-02T08:49:50.053894+00:00",
+    "sha256": "7e7d8b217940624038343ad542effba6dd95193dcde21eaf398df95533aa165e"
+  }
+]
