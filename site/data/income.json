@@ -733,6 +733,312 @@
       "unit": "GBP billion, cash",
       "geography": "United Kingdom",
       "ons_code": null
+    },
+    {
+      "id": "forecast-receipts-2026-27",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1315.971161319688,
+      "cells": [
+        "Receipts (£bn)!AG34"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2026-27",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "forecast-borrowing-2026-27",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 133.196005072188,
+      "cells": [
+        "Aggregates (£bn)!O88"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2026-27",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "forecast-debt-2026-27",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 3082.346500415536,
+      "cells": [
+        "Aggregates (£bn)!X88"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2027",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
+    },
+    {
+      "id": "forecast-receipts-2027-28",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1392.02476751509,
+      "cells": [
+        "Receipts (£bn)!AG35"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2027-28",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "forecast-borrowing-2027-28",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 111.980470792235,
+      "cells": [
+        "Aggregates (£bn)!O89"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2027-28",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "forecast-debt-2027-28",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 3239.104012067898,
+      "cells": [
+        "Aggregates (£bn)!X89"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2028",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
+    },
+    {
+      "id": "forecast-receipts-2028-29",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1448.986104128285,
+      "cells": [
+        "Receipts (£bn)!AG36"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2028-29",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "forecast-borrowing-2028-29",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 99.536126541006,
+      "cells": [
+        "Aggregates (£bn)!O90"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2028-29",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "forecast-debt-2028-29",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 3383.953475780646,
+      "cells": [
+        "Aggregates (£bn)!X90"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2029",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
+    },
+    {
+      "id": "forecast-receipts-2029-30",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1513.184541411054,
+      "cells": [
+        "Receipts (£bn)!AG37"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2029-30",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "forecast-borrowing-2029-30",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 73.780461048018,
+      "cells": [
+        "Aggregates (£bn)!O91"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2029-30",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "forecast-debt-2029-30",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 3487.197681805125,
+      "cells": [
+        "Aggregates (£bn)!X91"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2030",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
+    },
+    {
+      "id": "forecast-receipts-2030-31",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1571.492599458554,
+      "cells": [
+        "Receipts (£bn)!AG38"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2030-31",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "forecast-borrowing-2030-31",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 66.900107285849,
+      "cells": [
+        "Aggregates (£bn)!O92"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2030-31",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "forecast-debt-2030-31",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 3583.212709459136,
+      "cells": [
+        "Aggregates (£bn)!X92"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2031",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
+    },
+    {
+      "id": "forecast-receipts-2031-32",
+      "label": "Public sector current receipts",
+      "kind": "total",
+      "value_gbp_billion": 1629.319995140292,
+      "cells": [
+        "Receipts (£bn)!AG39"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2031-32",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "JW2O"
+    },
+    {
+      "id": "forecast-borrowing-2031-32",
+      "label": "Public sector net borrowing",
+      "kind": "borrowing",
+      "value_gbp_billion": 68.339158888272,
+      "cells": [
+        "Aggregates (£bn)!O93"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "2031-32",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "-J5II"
+    },
+    {
+      "id": "forecast-debt-2031-32",
+      "label": "Public sector net debt",
+      "kind": "stock",
+      "value_gbp_billion": 3694.552601957343,
+      "cells": [
+        "Aggregates (£bn)!X93"
+      ],
+      "formula": null,
+      "operands": [],
+      "scope": "UK public sector, OBR public finances definitions",
+      "period": "end-March 2032",
+      "status": "forecast",
+      "unit": "GBP billion, cash",
+      "geography": "United Kingdom",
+      "ons_code": "HF6W"
     }
   ],
   "checks": [
@@ -807,6 +1113,18 @@
       "text": "A measure of the amount of cash which is needed to make up the difference betweeen spending and revenues. This is different from net borrowing as it also includes financial transactions, which will affect the cash position but are not included in net borrowing. Public sector net debt is driven by changes in the public sector net cash requirement."
     }
   ],
+  "forecast_years": [
+    "2026-27",
+    "2027-28",
+    "2028-29",
+    "2029-30",
+    "2030-31",
+    "2031-32"
+  ],
+  "forecast_source_note": {
+    "cell": "Receipts (£bn)!C41",
+    "text": "Forecast years from 2026-27 are consistent with the OBR Economic and fiscal outlook forecast published October 2026."
+  },
   "rounding": "Raw values are retained to 12 decimal places in GBP billion; HTML rounds to 0.1 billion. Source actuals are recorded to 0.001 billion. Reconciliations use unrounded data with 0.000001 billion numeric tolerance, not independently rounded display amounts.",
   "selection": "Latest complete outturn before the first forecast year stated in Receipts (£bn)!C41.",
   "reconciliation": "All identities use one OBR workbook vintage and public sector accounting basis. Tax rows C:AC plus the derived other-tax residual equal national accounts taxes. AF is a mixed tax/non-tax line, not a tax type. It is split by residual against the published tax total; the residuals do not identify further individual taxes. The VAT refund row belongs in the published national accounts tax basis: do not subtract it again or treat it as non-tax. Negative tax entries are net receipts or repayments, not missing data. TME less current receipts equals net borrowing on this accrued basis. Debt is not added to annual receipts or borrowing; changes in debt also reflect financial transactions and cash/accrual differences. This workbook is not reconciled to a separate Treasury workbook vintage."

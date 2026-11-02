@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-11-02T01:32:37.265Z",
+  "revision": "a2a09439bf25027b1f81ef797f4f4324df95e88b",
+  "mode": "baseline-capture-only",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T01:32:37.266Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "income.html",
+      "bytes": 19107,
+      "sha256": "d53c1bf5e44cd17f3fe54b35280e99a7616758ec5cd113d527e4d04283b7b612",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "url": "http://127.0.0.1:41763/income.html",
+          "screenshot": "before-income-html-mobile.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        },
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:41763/income.html",
+          "screenshot": "before-income-html-desktop.png",
+          "completed": true,
+          "expectedStates": [],
+          "states": []
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T01:32:41.185Z",
+  "passed": true
+}
