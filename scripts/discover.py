@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Release/revision checks; opt in to issue creation or persistent revision notices.
 
-Collection adapters discover new release links. Retained-URL snapshots only detect
+Collection and latest-page adapters discover new release links. Retained-URL snapshots only detect
 revisions at inventory URLs, including explicitly identified archive-hosted copies;
 they cannot discover new manifesto URLs or advance a historical roster's date.
 """
 import argparse
 from datetime import datetime, timezone
 import hashlib
+from html.parser import HTMLParser
 import json
 import os
 from pathlib import Path
@@ -15,7 +16,7 @@ import re
 import subprocess
 import sys
 import urllib.request
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin, urlunsplit, parse_qsl, urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTICE = 'This is by an automated agent, not a human.'
@@ -45,7 +46,10 @@ def fetch(url, hosts=DEFAULT_HOSTS):
     if not allowed_url(url, hosts):
         raise ValueError('Not an allowed official URL: ' + url)
     # Publisher/archive CDNs reject urllib's default user agent, even for public PDFs.
-    request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0', 'Accept': '*/*'})
+    request = urllib.request.Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-GB,en;q=0.9'})
     with urllib.request.build_opener(OfficialRedirect(hosts)).open(request, timeout=60) as response:
         if not allowed_url(response.url, hosts):
             raise ValueError('Redirected outside official hosts')
@@ -132,10 +136,89 @@ def discover_snapshot(source, root, get=None):
     return [dict(key=key, evidence=evidence, baseline=baseline)]
 
 
+class DatabankPage(HTMLParser):
+    """Extract download links and readable text without depending on WP CSS classes."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links = []
+        self.text = ''
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'a':
+            href = dict(attrs).get('href')
+            if href:
+                self.links.append((href, len(self.text)))
+        self.text += ' '
+
+    def handle_data(self, data):
+        self.text += data
+
+
+def canonical_download(url):
+    # OBR adds a per-request cache-busting timestamp, not a release identifier.
+    parts = urlsplit(url)
+    query = urlencode([(k, v) for k, v in parse_qsl(parts.query) if k != 'tmstv'])
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, query, ''))
+
+
+def discover_obr(source, root, get=None):
+    """Follow the latest databank link, and also check the retained workbook for edits."""
+    baseline = source_baseline(source, root)
+    hosts = ('obr.uk', 'www.obr.uk')
+
+    def checked_get(url):
+        if not allowed_url(url, hosts):
+            raise ValueError('Not an allowed official URL: ' + url)
+        return fetch(url, hosts=hosts) if get is None else get(url)
+
+    page_url = source['page_url']
+    page = DatabankPage()
+    page.feed(checked_get(page_url).decode('utf-8'))
+    matches = {}
+    for href, offset in page.links:
+        url = canonical_download(urljoin(page_url, href))
+        if re.fullmatch(source['download_path_pattern'], urlsplit(url).path):
+            if not allowed_url(url, hosts):
+                raise ValueError('Not an allowed official URL: ' + url)
+            matches.setdefault(url, []).append(offset)
+    if len(matches) != 1:
+        raise ValueError('Expected exactly one latest OBR databank download')
+    latest, offsets = next(iter(matches.items()))
+    # The publisher displays the release date after the duplicated icon/title links.
+    start = max(offsets)
+    end = min((offset for _, offset in page.links if offset > start), default=len(page.text))
+    text = ' '.join(page.text[start:end].split())
+    date_match = re.search(r'\b([0-9]{1,2} [A-Za-z]+ [0-9]{4})\b', text[:600])
+    if not date_match:
+        raise ValueError('Missing OBR databank publication date')
+    published = datetime.strptime(date_match[1], '%d %B %Y').date().isoformat()
+    retained_download = canonical_download(baseline['download_url'])
+    candidates = [(latest, latest, published)]
+    if latest != retained_download:
+        # The latest-page pointer can move while an earlier retained release is revised.
+        candidates.append((retained_download, baseline['url'], baseline['date']))
+    updates = []
+    for download, attachment, updated in candidates:
+        sha = digest(checked_get(attachment))
+        if (download, updated, sha) == (retained_download, baseline['date'], baseline['sha256']):
+            continue
+        evidence = dict(source=source['id'], release_url=page_url,
+                        published=published if download == latest else baseline['published'],
+                        updated=updated, attachment_url=attachment, download_url=download,
+                        sha256=sha, metadata_url=page_url,
+                        discovery_scope='latest-page-releases-and-revisions',
+                        refresh_command='python3 scripts/build.py --refresh')
+        key = digest(json.dumps(evidence, sort_keys=True).encode())
+        updates.append(dict(key=key, evidence=evidence, baseline=baseline))
+    return updates
+
+
 def discover(source, root=ROOT, get=None):
-    """Dispatch explicit discovery scopes; only collection adapters find new releases."""
+    """Dispatch explicit discovery scopes, including dynamic official latest-page links."""
     if source['adapter'] == 'retained-url-snapshot':
         return discover_snapshot(source, root, get)
+    if source['adapter'] == 'obr-databank-latest':
+        return discover_obr(source, root, get)
     if source['adapter'] != 'govuk-collection-attachment':
         raise ValueError('Unknown adapter: ' + source['adapter'])
     get = get or fetch
@@ -194,12 +277,14 @@ def open_updates(updates, repo, run=gh):
             results.append(dict(key=update['key'], status='already reported'))
             continue
         e = update['evidence']; b = update['baseline']
-        slug = e['release_url'].rsplit('/', 1)[-1]
+        slug = e.get('download_url', e['release_url']).rstrip('/').rsplit('/', 1)[-1]
         retained = e.get('discovery_scope') == 'retained-url-revision'
         scope = ('Only the retained URL was checked for a revision. This does not discover new '
                  'publication URLs, newly published plans, or a later roster date.' if retained else
                  'Collection links and the retained release were checked for releases and revisions.')
-        command = (e['refresh_command'] if retained else
+        if e.get('discovery_scope') == 'latest-page-releases-and-revisions':
+            scope = 'The official latest databank page and retained workbook were checked for releases and revisions.'
+        command = (e['refresh_command'] if 'refresh_command' in e else
                    f'.venv/bin/python scripts/build.py --refresh --release {slug}')
         body = f'''{NOTICE}
 
@@ -316,8 +401,9 @@ def main():
         source_id = source.get('id', 'unknown') if isinstance(source, dict) else 'unknown'
         try:
             updates = discover(source)
-            scope = ('retained-url-revision' if source['adapter'] == 'retained-url-snapshot'
-                     else 'collection-releases-and-revisions')
+            scope = {'retained-url-snapshot': 'retained-url-revision',
+                     'obr-databank-latest': 'latest-page-releases-and-revisions'}.get(
+                         source['adapter'], 'collection-releases-and-revisions')
             result = dict(id=source_id, discovery_scope=scope, updates=updates, issues=[])
             report['sources'].append(result)
             if args.open_issues and updates:

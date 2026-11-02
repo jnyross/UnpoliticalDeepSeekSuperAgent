@@ -11,13 +11,13 @@ VIEWS = {
 
 def warning(ident):
     if ident == 'education':
-        return 'Definition break in 2011-12: student loan treatment changes. Values across the break are not directly comparable.'
+        return 'The scope changes in 2011-12. The way student loans are counted changes. Do not compare values across this break as if their scope were the same.'
     if ident in ('transport', 'economic-affairs', 'services-total'):
-        return 'Definition breaks: TfL subsidiaries enter transport in 2011-12; Network Rail enters spending on services in 2015-16, but is in TME throughout.'
+        return 'The scope changes twice. From 2011-12, transport includes TfL subsidiaries. From 2015-16, spending on services includes Network Rail. TME includes Network Rail in all years shown.'
     if ident == 'defence':
-        return 'This is UN COFOG defence, not NATO qualifying spending. Pensions sit in social protection.'
+        return 'This is UN COFOG defence. It is not NATO qualifying spending. Pensions are in social protection.'
     if ident == 'eu-transactions':
-        return 'Definition break in 2010-11: VAT-based payments are no longer deducted. Negative values are net receipts.'
+        return 'The scope changes in 2010-11. VAT-based payments are no longer taken off the total. Negative values mean net receipts.'
     return ''
 
 
@@ -68,15 +68,15 @@ def chart_outputs(d):
             ident = s['id']
             rows = ''.join(f'<tr><th scope="row">{esc(p["year"])}</th><td>{p[field]:,.1f}</td><td>{esc(p["status"])}</td><td>{esc(p["cells"][view])}</td></tr>' if p[field] is not None else f'<tr><th scope="row">{esc(p["year"])}</th><td>Not available</td><td>{esc(p["missing_reason"] or "Source cell is blank; not zero.")}</td><td>{esc(p["cells"].get(view,""))}</td></tr>' for p in s['values'])
             sections.append(f'''<section id="{ident}"><h2>{esc(s['label'])}</h2>
-<p>United Kingdom · {esc(s['scope'])} · outturn · July 2026 vintage.</p>
+<p>United Kingdom. Scope: {esc(s['scope'])}. Status: outturn. Source: July 2026.</p>
 <p>{esc(warning(ident))} <a href="history.html#source-notes">All source notes and definition breaks</a>.</p>
 {navigation(view, ident)}<figure><figcaption>{esc(title)} · {esc(unit)} · {esc(s['label'])}</figcaption>{plot(s['values'],field)}</figure>
-<p>Each dot is one fiscal year. Axes include zero; scales differ by area and view. Missing values break the line. All plotted years are outturn, not forecasts.</p>
+<p>Each dot is one fiscal year. All axes include zero. Scales differ by area and view. Missing values break the line. All years show outturn: recorded spending, not forecasts.</p>
 <details><summary>Data table: {esc(s['label'])} — {esc(title)}</summary><table><caption>{esc(s['label'])} · {esc(unit)} · {esc(s['scope'])}</caption><thead><tr><th scope="col">Fiscal year</th><th scope="col">{esc(unit)}</th><th scope="col">Status</th><th scope="col">Source cell</th></tr></thead><tbody>{rows}</tbody></table></details></section>''')
         source = d['source']
-        page = f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} over time | UnpoliticalAF</title><style>{css}</style></head><body><a class="skip" href="#main">Skip to content</a><header><a href="index.html">UnpoliticalAF · latest spending</a> · <a href="history.html">History tables and methods</a></header><main id="main"><h1>UK spending over time</h1><p>View shown: <strong>{esc(title)}</strong> ({esc(unit)}). 2003-04 to 2025-26, fiscal years April to March. All figures are recorded spending (outturn), which can still be revised.</p>{navigation(view)}
-<p>Cash is the amount spent at the time. Inflation-adjusted (real) spending uses 2025-26 prices and ONS GDP deflators released 30 June 2026. Share of the economy is spending as a percentage of UK GDP, using ONS GDP published 30 June 2026. These are Treasury’s published views from the same workbook, years, UK geography and accounting scope, not new calculations.</p>
+        page = f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} over time | UnpoliticalAF</title><style>{css}</style></head><body><a class="skip" href="#main">Skip to content</a><header><a href="index.html">UnpoliticalAF · latest spending</a> · <a href="history.html">History tables and methods</a></header><main id="main"><h1>UK spending over time</h1><p>View shown: <strong>{esc(title)}</strong> ({esc(unit)}). This covers 2003-04 to 2025-26. Fiscal years run from April to March. All figures are recorded spending (outturn). They may still change.</p>{navigation(view)}
+<p>Cash is the amount spent at the time. Real spending allows for price changes. It uses 2025-26 prices and ONS GDP deflators released 30 June 2026. Share of the economy means spending as a share of UK GDP. This uses ONS GDP published 30 June 2026. All three views come from the Treasury source. They use the same workbook and years. They cover the same UK area and the same types of spending. We do not work out new values.</p>
 <p>Source: <a href="{source['release_url']}">{esc(source['publication'])}</a>, HM Treasury. Published {source['published']}; source page updated {source['date']}. {esc(source['next_release'])} Cash: table 4.2; real: 4.3; GDP share: 4.4. <a href="sources/history-manifest.json">Source URL, dates and SHA-256</a> · <a href="sources/history.xlsx">Official workbook</a> · <a href="data/history.csv">Download data CSV</a>.</p>
-<p>{esc(d['vintage_note'])} Subcategories are already in their parent area; do not add them twice. Spending on services and Total Managed Expenditure (TME) are different totals. All values are rounded to one decimal place in the source.</p><p>Jump to an area: {' · '.join(f'<a href="#{s["id"]}">{esc(s["label"])}</a>' for s in d['series'])}</p>{''.join(sections)}</main><footer>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Source: HM Treasury.</footer></body></html>\n'''
+<p>{esc(d['vintage_note'])} Each subcategory is part of its parent area. Do not add it twice. Spending on services and Total Managed Expenditure (TME) are different totals. The source rounds all values to one decimal place.</p><p>Jump to an area: {' · '.join(f'<a href="#{s["id"]}">{esc(s["label"])}</a>' for s in d['series'])}</p>{''.join(sections)}</main><footer>Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Source: HM Treasury.</footer></body></html>\n'''
         files[f'history-{view}.html'] = page.encode()
     return files

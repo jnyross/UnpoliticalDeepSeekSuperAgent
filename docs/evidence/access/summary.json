@@ -1,0 +1,1247 @@
+{
+  "runnerRevision": "158326d2a6960c60020ee99fedf5963d714092d8",
+  "runs": [
+    {
+      "kind": "generated",
+      "target": "local-generated-output",
+      "startedAt": "2026-11-01T23:55:47.881Z",
+      "finishedAt": "2026-11-02T00:00:30.403Z",
+      "expected": 14,
+      "completed": 14,
+      "passed": true,
+      "states": [
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "http://127.0.0.1:44425/history-cash.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4301,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "http://127.0.0.1:44425/history-cash.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 15122,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "http://127.0.0.1:46387/history-cash.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4330,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "http://127.0.0.1:46387/history-cash.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14254,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "http://127.0.0.1:46869/history-gdp.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4482,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "http://127.0.0.1:46869/history-gdp.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14527,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "http://127.0.0.1:33771/history-gdp.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4202,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "http://127.0.0.1:33771/history-gdp.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 13986,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "http://127.0.0.1:43275/history-real.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4785,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "http://127.0.0.1:43275/history-real.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14678,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "http://127.0.0.1:42491/history-real.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4073,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "http://127.0.0.1:42491/history-real.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14110,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "http://127.0.0.1:36027/history.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3940,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "http://127.0.0.1:36027/history.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 23629,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "http://127.0.0.1:37155/history.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3925,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "http://127.0.0.1:37155/history.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 22485,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "income.html",
+          "sha256": "c63ade2f7b541c863bff1e09b6e5cddd2cf3507c40e187b22ff379f4ecba3b45",
+          "bytes": 17342,
+          "url": "http://127.0.0.1:38307/income.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2384,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "income.html",
+          "sha256": "c63ade2f7b541c863bff1e09b6e5cddd2cf3507c40e187b22ff379f4ecba3b45",
+          "bytes": 17342,
+          "url": "http://127.0.0.1:36197/income.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2934,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "index.html",
+          "sha256": "5ff81a2c21b7644d389d46de5947ca974f13740a459735de9fe87a8ce734c9f1",
+          "bytes": 15349,
+          "url": "http://127.0.0.1:33061/index.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2588,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "index.html",
+          "sha256": "5ff81a2c21b7644d389d46de5947ca974f13740a459735de9fe87a8ce734c9f1",
+          "bytes": 15349,
+          "url": "http://127.0.0.1:39965/index.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2304,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "parties.html",
+          "sha256": "a36d1e327b60052dc42aa9fa3eedb356a0cc2e66b92be923e02a2bb913d5a013",
+          "bytes": 22356,
+          "url": "http://127.0.0.1:42069/parties.html",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3192,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "parties.html",
+          "sha256": "a36d1e327b60052dc42aa9fa3eedb356a0cc2e66b92be923e02a2bb913d5a013",
+          "bytes": 22356,
+          "url": "http://127.0.0.1:34727/parties.html",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3016,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        }
+      ]
+    },
+    {
+      "kind": "production",
+      "target": "https://unpoliticaldeepseeksuperagent.vercel.app",
+      "startedAt": "2026-11-01T23:54:47.831Z",
+      "finishedAt": "2026-11-01T23:59:32.565Z",
+      "expected": 14,
+      "completed": 14,
+      "passed": true,
+      "states": [
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-cash",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4443,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-cash",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14982,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-cash",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4135,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-cash.html",
+          "sha256": "4990e553385b7241ea95bab069a3c2fb825f9e87a76b832afc727e663a56b3e1",
+          "bytes": 121182,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-cash",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14222,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-gdp",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4320,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-gdp",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14710,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-gdp",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4186,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-gdp.html",
+          "sha256": "f40d359519c9158998da649a64173be77424e956da0f786f1b602f2aba4b6bcd",
+          "bytes": 120398,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-gdp",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14002,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-real",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4192,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-real",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14516,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-real",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4049,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history-real.html",
+          "sha256": "6aa0aa75e1202c3398c557d4cd41272468b415379d18a4649afc3fc647d23c01",
+          "bytes": 122337,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history-real",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 14077,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 132
+            }
+          ],
+          "supplementalSVGMeasurements": 660,
+          "minimumSVGContrast": 8.692982333334392,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 4411,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 24067,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3901,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "history.html",
+          "sha256": "e161fcb32421c3315ed74d7951bebec7dce2bacedb7a932591d86e4924ae2ef7",
+          "bytes": 120316,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/history",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "all-details-expanded",
+          "completed": true,
+          "durationMs": 22454,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "income.html",
+          "sha256": "c63ade2f7b541c863bff1e09b6e5cddd2cf3507c40e187b22ff379f4ecba3b45",
+          "bytes": 17342,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/income",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2293,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "income.html",
+          "sha256": "c63ade2f7b541c863bff1e09b6e5cddd2cf3507c40e187b22ff379f4ecba3b45",
+          "bytes": 17342,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/income",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2561,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "index.html",
+          "sha256": "5ff81a2c21b7644d389d46de5947ca974f13740a459735de9fe87a8ce734c9f1",
+          "bytes": 15349,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2053,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "index.html",
+          "sha256": "5ff81a2c21b7644d389d46de5947ca974f13740a459735de9fe87a8ce734c9f1",
+          "bytes": 15349,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 2140,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "parties.html",
+          "sha256": "a36d1e327b60052dc42aa9fa3eedb356a0cc2e66b92be923e02a2bb913d5a013",
+          "bytes": 22356,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/parties",
+          "viewport": {
+            "name": "mobile",
+            "width": 360,
+            "height": 800
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3172,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        },
+        {
+          "page": "parties.html",
+          "sha256": "a36d1e327b60052dc42aa9fa3eedb356a0cc2e66b92be923e02a2bb913d5a013",
+          "bytes": 22356,
+          "url": "https://unpoliticaldeepseeksuperagent.vercel.app/parties",
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "name": "initial",
+          "completed": true,
+          "durationMs": 3325,
+          "axe": {
+            "name": "axe-core",
+            "version": "4.11.4"
+          },
+          "browser": "141.0.7390.37",
+          "violations": 0,
+          "axeIncomplete": [],
+          "supplementalSVGMeasurements": 0,
+          "minimumSVGContrast": null,
+          "contrastCompleted": true,
+          "noJavaScriptContentMatches": true
+        }
+      ]
+    }
+  ]
+}

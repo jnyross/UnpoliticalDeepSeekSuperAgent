@@ -1,5 +1,12 @@
 [
   {
+    "id": "obr-public-finances-databank",
+    "adapter": "obr-databank-latest",
+    "manifest": "sources/income-manifest.json",
+    "page_url": "https://obr.uk/data/",
+    "download_path_pattern": "/download/public-finances-databank-[a-z0-9-]+/"
+  },
+  {
     "id": "hmt-public-spending",
     "adapter": "govuk-collection-attachment",
     "manifest": "sources/manifest.json",

@@ -5,7 +5,9 @@ real health spending and Total Managed Expenditure as a share of GDP. It uses 20
 full year in HM Treasury's **Public spending statistics: July 2026**. The table labels
 this year **outturn**, not forecast. This foundation is not the full product and does
 not claim rubric levels. A separate history page shows spending overall and by area
-from the retained PESA historical tables. Tax, borrowing and debt stocks remain future work.
+from the retained PESA historical tables. The income page shows tax types, other receipts,
+borrowing and the debt stock from the OBR public finances databank, with the source's
+own period and forecast labels. Debt is not debt interest; borrowing is not tax.
 The party page adds a historical 2024 election-offer snapshot, using the Commons roster
 dated 9 July 2024; it is not a current roster or a record of implemented policy.
 See [product specification](docs/product-spec.md),
@@ -32,7 +34,9 @@ npx playwright install --with-deps chromium
 
 This downloads the official release metadata and spending-statistics Chapter 4 and 5
 workbooks, and refreshes the separately versioned PESA Chapter 4 history workbook
-and metadata. It retains their
+and metadata. It also downloads the latest public finances databank linked on the
+OBR data page. Income data keep their own vintage: they are not forced to match
+the PESA spending tables. It retains their
 URLs, publication/update/download dates and SHA-256, parses the latest fiscal column,
 validates it independently, then replaces the committed generated files. Failed
 network requests, missing cells, changed formats or failed validation leave the last
@@ -69,7 +73,7 @@ Do not paste a token into shell history; Actions supplies `github.token`. The jo
 then publishes changed revision notices through a validated PR without refreshing figures.
 The default Actions token is used; branch protection is not bypassed.
 The checked-in [inventory](config/release-sources.json) covers HMT Public Spending
-Statistics, PESA functional history, the historical Commons roster and all retained
+Statistics, PESA functional history, the OBR public finances databank, the historical Commons roster and all retained
 party manifestos (see the limited party-discovery scope below). PESA's year-dependent
 attachment title uses an anchored `attachment_title_pattern`; exact-title sources
 retain `attachment_title` matching. The official GOV.UK collection discovers
@@ -100,14 +104,15 @@ changes bytes. Never claim continuous real-time revision coverage.
 
 ### Section dates and official release evidence
 
-Every spending section, history chart/table and party offer carries its data period
+Every spending/income section, history chart/table and party offer carries its data period
 and source publication/update dates. `sources/release-calendar.json` links retained,
 hash-checked official GOV.UK publication, guidance, collection and upcoming-statistics
 responses. As checked on 1 November 2026, no exact next HMT spending/PESA release date
 was announced there. Treasury gives November/February/April cadence for spending
 updates and annual PESA publication, not an exact next date. Fixed 2024 party/roster
 snapshots have no scheduled next release. The UI says so rather than inventing dates.
-This is a remaining Context level 4 limitation, not evidence that its quoted check passes.
+The owner decision on issue #24 (2 November 2026) accepts this explicit fallback
+under product-spec requirement 4; the independent scorer judges the rubric level.
 Release dates, data years, source updates and monitoring times are distinct.
 A source refresh verifies calendar evidence too; changed evidence stops for a new
 reviewed interpretation instead of silently carrying forward a stale schedule.
@@ -117,7 +122,10 @@ source family** with its retained manifest, official discovery endpoint, adapter
 refresh instructions. Families sharing a publication can share one entry; distinct
 publishers need their own adapter plus unchanged/new/repeated/error fixtures. The
 current adapter supports GOV.UK collections with one named workbook attachment; do
-not pretend ONS, OBR, Parliament or party sites use that schema. Extend the inventory
+not pretend ONS, Parliament or party sites use that schema. The OBR adapter reads
+the latest databank link and publication date on its data page, then checks the
+workbook hash. It also checks the retained workbook when the latest link moves;
+per-request cache timestamps are excluded from release identity. Extend the inventory
 coverage test along with the source pipeline. This schedule notices releases and opens
 review tasks; it does not claim a year of timely updates or people-review evidence.
 
@@ -135,9 +143,37 @@ regenerates all bytes in a temporary directory and fails if the committed site d
 The independent checker reopens the workbook, verifies its hash, checks every exported
 value and its cell, reconciles functional totals within source rounding, and compares
 compatible totals with Table 5.3. It checks status, year, derived health share, attribution,
-page size, prohibited words and static HTML. Browser checks use JavaScript disabled
+page size, prohibited words, static HTML and Flesch–Kincaid reading grade (at most 7
+on every HTML page, including expanded content). See [reading-grade rules and
+standalone report command](docs/reading-grade.md). This check also runs in the staged
+rebuild, so harder copy cannot replace the last good site. Browser checks use JavaScript disabled
 for content and layout, plus axe WCAG 2.2 AA at phone and desktop sizes; these are not
 manual keyboard, screen-reader or user-test evidence. CI runs these checks on every PR.
+
+The browser runner discovers every generated HTML page and checks both 360×800 and
+1280×900 viewports, initial and all-details-expanded states and any expandable
+buttons. It runs each page/viewport in a fresh Chromium process group with a five-minute
+hard deadline; a timeout, worker failure or missing/partial report fails the suite.
+CI discovers the same pages dynamically and runs one job per page, without cancelling
+other pages on failure. The suite manifest lists every expected page/viewport and its
+completion; per-worker JSON records the URL, HTML hash, states, timings, axe/browser
+versions, rule results (including colour contrast), full violations and incomplete
+results. Axe cannot infer the background behind SVG axis text (`imgNode`). Those
+raw incomplete results are retained, and a supplemental automated WCAG luminance
+calculation checks every SVG label at 4.5:1 and data line/point at 3:1 against its
+computed solid background. Unsupported paint, overlapping graphics behind text and
+any other incomplete result fail closed. This is not human review. A pass means
+every expected state finished with zero violations and completed contrast checks,
+not proof of complete WCAG conformance.
+
+```sh
+EVIDENCE_DIR=test-results/browser npm run test:browser
+# Run a single CI shard for diagnosis (not complete site evidence):
+CHECK_PAGE=history-gdp.html EVIDENCE_DIR=/tmp/gdp-check npm run test:browser
+```
+
+`BROWSER_TIMEOUT_MS` overrides the per-page/viewport deadline for diagnosis; it never
+turns a timeout into success. Evidence is retained on CI failures as well as successes.
 
 Serve `site/` with any static HTTP server (for example `python3 -m http.server 8000
 --directory site`). There is no client-side JavaScript. Vercel serves the committed
@@ -159,7 +195,12 @@ download date and hash. Some party-issued documents are retained from the Britis
 Manifesto Archive where party hosting was unavailable; hosting is labelled per source.
 Party documents retain their own copyright and are not claimed to be OGL licensed.
 The retained PDF is reopened with `pdftotext` during validation rather than trusting
-only an editable transcript.
+only an editable transcript. Both PDF and transcript byte hashes must match the
+manifest, and every excerpt must occur on its cited page in both retained text and
+fresh PDF extraction. Full extracted layouts are not compared byte-for-byte:
+Poppler versions differ in whitespace and overlapping-text order. Changed raw
+PDF/transcript bytes or missing/moved quotes still fail; validation never rewrites
+provenance to accommodate a tool version.
 
 The same refresh command above checks all retained party/roster URLs. A changed
 manifesto stops the staged build for evidence review rather than silently updating a

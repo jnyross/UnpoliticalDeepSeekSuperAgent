@@ -1,4 +1,9 @@
-# Context level 4 — incomplete acceptance evidence
+# Context level 4 — archived initial draft evidence
+
+Superseded by the owner's 2 November 2026 decision accepting the explicit
+no-announcement fallback. Current implementation and refreshed seven-page
+comparison are in [final evidence](../context-l4-final/README.md). The limitation
+notes below describe the initial stopped draft, not the final delivery status.
 
 Actual Chromium application captures at 360×800 and 1280×900, same default light theme,
 initial page state and reduced motion. Before captures use committed baseline
