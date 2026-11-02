@@ -132,7 +132,11 @@ refresh or discovery. Bounded retries allow deployment propagation; failure is n
 silently treated as success. Validated changes go through a measurement-only PR
 by `jnyross-agent`, without bypassing failed checks or branch protection.
 Source-version/site-fingerprint deduplication makes ledger-only merges a no-op
-rather than an endless series of measurement PRs.
+rather than an endless series of measurement PRs. Both scheduled workflows check out
+`main` with full Git history (`fetch-depth: 0`): the validation suite reads the
+comprehension kit's pinned application revision, which need not be the current
+commit or its parent. A shallow checkout cannot run those checks and must not
+skip them or persist unvalidated measurements.
 
 ```sh
 python scripts/release_timing.py report --ledger measurements/release-timing.jsonl
