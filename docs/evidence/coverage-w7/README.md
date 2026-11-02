@@ -30,7 +30,8 @@ Full-page and viewport images also capture the short shared-method clarification
 # PASS all nine pages: provenance/raw values/reconciliation, source names,
 # byte limits, banned words and three reading-grade gates. Generated drift: none.
 .venv/bin/python -m unittest discover -s tests -p 'test_*.py'
-# 252 tests PASS, including new programme role/status/approval/year and revision-locality regressions.
+# 263 integrated tests PASS (252 before main3ea965d), including new programme
+# role/status/approval/year and revision-locality regressions. Main integration changes no party HTML.
 CHECK_PAGE=parties.html EVIDENCE_LABEL=after EVIDENCE_DIR=docs/evidence/coverage-w7 npm run test:browser
 # Both viewports PASS: actual no-JS content, layout/overflow/size,
 # zero axe violations and supplemental contrast checks.
