@@ -326,6 +326,13 @@ Scheduled party discovery detects revisions at these retained URLs only: it does
 find new manifesto URLs, new elections or changes to today's roster. It must not be
 read as proof of current party-policy coverage or complete release discovery.
 
+The home-page browser checks click all eight answer links at 360×800 and 1280×900,
+with JavaScript enabled and disabled. They check the link's initial position, unique
+native fragment target, substantive answer text and the full answer paragraph's
+landing position within the viewport, rather than just counting links. The home
+navigation includes direct links for debt interest, pensions versus defence and each
+ten-year question, so readers need not pass the spending chart to reach them.
+
 Browser checks can also run against the deployed site, comparing returned HTML hashes
 with local output before no-JavaScript, mobile and axe checks:
 

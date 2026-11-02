@@ -1,0 +1,979 @@
+{
+  "capturedAt": "2026-11-02T06:12:33.081Z",
+  "revision": "d9c69d6a40614d04c03d4e2b063105dfc0e780fc",
+  "mode": "automated-checks",
+  "browser": "Chromium",
+  "target": "local-generated-output",
+  "startedAt": "2026-11-02T06:12:33.082Z",
+  "completed": true,
+  "pages": [
+    {
+      "path": "index.html",
+      "bytes": 18392,
+      "sha256": "602c77d6c03e79f7463e66cf87283f10172a2c1ce2d15c8ce9db8cc00d8a2cd1",
+      "viewports": [
+        {
+          "viewport": {
+            "name": "desktop",
+            "width": 1280,
+            "height": 900
+          },
+          "url": "http://127.0.0.1:45935/index.html",
+          "screenshot": "after-index-html-desktop.png",
+          "completed": true,
+          "expectedStates": [
+            "initial"
+          ],
+          "states": [
+            {
+              "name": "initial",
+              "dimensions": {
+                "viewport": 1280,
+                "document": 1280,
+                "body": 1280
+              },
+              "startedAt": "2026-11-02T06:12:49.953Z",
+              "completed": true,
+              "axeCompleted": true,
+              "finishedAt": "2026-11-02T06:12:52.218Z",
+              "durationMs": 2262,
+              "runner": {
+                "name": "axe-core",
+                "version": "4.11.4"
+              },
+              "environment": {
+                "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36",
+                "windowWidth": 1280,
+                "windowHeight": 900,
+                "orientationAngle": 0,
+                "orientationType": "landscape-primary"
+              },
+              "options": {
+                "runOnly": {
+                  "type": "tag",
+                  "values": [
+                    "wcag2a",
+                    "wcag2aa",
+                    "wcag21a",
+                    "wcag21aa",
+                    "wcag22aa"
+                  ]
+                },
+                "reporter": "v1"
+              },
+              "passedRules": [
+                "aria-allowed-attr",
+                "aria-conditional-attr",
+                "aria-hidden-body",
+                "aria-hidden-focus",
+                "aria-prohibited-attr",
+                "aria-valid-attr-value",
+                "aria-valid-attr",
+                "bypass",
+                "color-contrast",
+                "document-title",
+                "duplicate-id-aria",
+                "html-has-lang",
+                "html-lang-valid",
+                "link-in-text-block",
+                "link-name",
+                "meta-viewport",
+                "target-size",
+                "td-headers-attr",
+                "th-has-data-cells"
+              ],
+              "inapplicableRules": [
+                "area-alt",
+                "aria-braille-equivalent",
+                "aria-command-name",
+                "aria-deprecated-role",
+                "aria-input-field-name",
+                "aria-meter-name",
+                "aria-progressbar-name",
+                "aria-required-attr",
+                "aria-required-children",
+                "aria-required-parent",
+                "aria-roles",
+                "aria-toggle-field-name",
+                "aria-tooltip-name",
+                "autocomplete-valid",
+                "avoid-inline-spacing",
+                "blink",
+                "button-name",
+                "definition-list",
+                "dlitem",
+                "form-field-multiple-labels",
+                "frame-focusable-content",
+                "frame-title-unique",
+                "frame-title",
+                "html-xml-lang-mismatch",
+                "image-alt",
+                "input-button-name",
+                "input-image-alt",
+                "label",
+                "list",
+                "listitem",
+                "marquee",
+                "meta-refresh",
+                "nested-interactive",
+                "object-alt",
+                "role-img-alt",
+                "scrollable-region-focusable",
+                "select-name",
+                "server-side-image-map",
+                "summary-name",
+                "svg-img-alt",
+                "valid-lang",
+                "video-caption",
+                "no-autoplay-audio"
+              ],
+              "violations": [],
+              "incomplete": [],
+              "svgContrast": [],
+              "contrastCompleted": true
+            }
+          ],
+          "noJavaScriptContentMatches": true,
+          "noJavaScriptDimensions": {
+            "viewport": 1280,
+            "document": 1280,
+            "body": 1280
+          },
+          "answerNavigation": [
+            {
+              "javaScriptEnabled": true,
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "completed": true,
+              "answers": [
+                {
+                  "name": "largest-area",
+                  "href": "#largest-area",
+                  "linkText": "Largest spending area",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 718.171875,
+                    "bottom": 267.734375,
+                    "left": 528.140625,
+                    "width": 190.03125,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 718.171875,
+                    "bottom": 267.734375,
+                    "left": 528.140625,
+                    "width": 190.03125,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": -0.109375,
+                    "right": 824,
+                    "bottom": 68.984375,
+                    "left": 174,
+                    "width": 650,
+                    "height": 69.09375
+                  },
+                  "answer": {
+                    "top": -0.109375,
+                    "right": 824,
+                    "bottom": 68.984375,
+                    "left": 174,
+                    "width": 650,
+                    "height": 69.09375
+                  },
+                  "text": "Social protection is the largest area of spending. It includes pensions, benefits and care.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#largest-area",
+                  "scrollY": 348
+                },
+                {
+                  "name": "health-share",
+                  "href": "#health-share",
+                  "linkText": "Health per £100",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 872.53125,
+                    "bottom": 267.734375,
+                    "left": 734.390625,
+                    "width": 138.140625,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 872.53125,
+                    "bottom": 267.734375,
+                    "left": 734.390625,
+                    "width": 138.140625,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": 0.28125,
+                    "right": 1106,
+                    "bottom": 54.65625,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "answer": {
+                    "top": 0.28125,
+                    "right": 1106,
+                    "bottom": 54.65625,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "Of each £100 spent on services, £20.98 goes on health. This is health spending divided by total spending on services, times 100.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#health-share",
+                  "scrollY": 806
+                },
+                {
+                  "name": "debt-interest",
+                  "href": "#debt-interest",
+                  "linkText": "Debt interest",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 1000.390625,
+                    "bottom": 267.734375,
+                    "left": 888.75,
+                    "width": 111.640625,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 1000.390625,
+                    "bottom": 267.734375,
+                    "left": 888.75,
+                    "width": 111.640625,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": 0.25,
+                    "right": 1106,
+                    "bottom": 109,
+                    "left": 174,
+                    "width": 932,
+                    "height": 108.75
+                  },
+                  "answer": {
+                    "top": 0.25,
+                    "right": 1106,
+                    "bottom": 109,
+                    "left": 174,
+                    "width": 932,
+                    "height": 108.75
+                  },
+                  "text": "In 2025-26, central government debt interest was £96.9 billion (outturn, not a forecast). This is gross interest: the full sum paid to firms, people and bodies outside the UK state. It includes sums paid abroad. It is part of general public services, not an extra amount to add to the chart. The source row called public debt transactions includes other items too. It is not the same measure.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#debt-interest",
+                  "scrollY": 2373,
+                  "sourceCheck": {
+                    "clicks": 2,
+                    "landingURL": "http://127.0.0.1:45935/index.html#G15",
+                    "sourceRow": {
+                      "top": 22.421875,
+                      "right": 1106,
+                      "bottom": 70.46875,
+                      "left": 174,
+                      "width": 932,
+                      "height": 48.046875
+                    }
+                  }
+                },
+                {
+                  "name": "pensions-defence",
+                  "href": "#pensions-defence",
+                  "linkText": "Pensions and defence",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 1091.109375,
+                    "bottom": 294.921875,
+                    "left": 174,
+                    "width": 917.109375,
+                    "height": 47.1875
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 1091.109375,
+                    "bottom": 294.921875,
+                    "left": 174,
+                    "width": 917.109375,
+                    "height": 47.1875
+                  },
+                  "target": {
+                    "top": -0.3125,
+                    "right": 1106,
+                    "bottom": 81.25,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "answer": {
+                    "top": -0.3125,
+                    "right": 1106,
+                    "bottom": 81.25,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "text": "Old-age pensions were £154.9 billion. These form part of social protection, not the whole of it. Defence was £65.4 billion. This uses the UN rules, not NATO's measure. NATO includes some costs, such as pensions, elsewhere in this table.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#pensions-defence",
+                  "scrollY": 2275
+                },
+                {
+                  "name": "health-ten-years",
+                  "href": "#health-ten-years",
+                  "linkText": "Health after inflation",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 274.921875,
+                    "right": 894.8125,
+                    "bottom": 294.921875,
+                    "left": 718.765625,
+                    "width": 176.046875,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 274.921875,
+                    "right": 894.8125,
+                    "bottom": 294.921875,
+                    "left": 718.765625,
+                    "width": 176.046875,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": -0.296875,
+                    "right": 1106,
+                    "bottom": 30.421875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 30.71875
+                  },
+                  "answer": {
+                    "top": 49.609375,
+                    "right": 1106,
+                    "bottom": 103.984375,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "Health spending went up by 34.0% from 2015-16 to 2025-26. It went from £192.1 billion to £257.5 billion, a change of £65.4 billion in 2025-26 prices.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#health-ten-years",
+                  "scrollY": 2825
+                },
+                {
+                  "name": "gdp-ten-years",
+                  "href": "#gdp-ten-years",
+                  "linkText": "Spending share of the economy",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 274.921875,
+                    "right": 1098.546875,
+                    "bottom": 322.109375,
+                    "left": 174,
+                    "width": 924.546875,
+                    "height": 47.1875
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 274.921875,
+                    "right": 1098.546875,
+                    "bottom": 322.109375,
+                    "left": 174,
+                    "width": 924.546875,
+                    "height": 47.1875
+                  },
+                  "target": {
+                    "top": -0.265625,
+                    "right": 1106,
+                    "bottom": 30.453125,
+                    "left": 174,
+                    "width": 932,
+                    "height": 30.71875
+                  },
+                  "answer": {
+                    "top": 49.640625,
+                    "right": 1106,
+                    "bottom": 104.015625,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "Total spending was a bigger share of the economy: 44.3% of GDP in 2025-26, compared with 40.8% in 2015-16. That is a change of 3.5 percentage points.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#gdp-ten-years",
+                  "scrollY": 3047
+                },
+                {
+                  "name": "forecast-status",
+                  "href": "#forecast-status",
+                  "linkText": "Which figures are forecasts?",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 274.921875,
+                    "right": 536.859375,
+                    "bottom": 294.921875,
+                    "left": 295.890625,
+                    "width": 240.96875,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 274.921875,
+                    "right": 536.859375,
+                    "bottom": 294.921875,
+                    "left": 295.890625,
+                    "width": 240.96875,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": -0.421875,
+                    "right": 1106,
+                    "bottom": 53.953125,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "answer": {
+                    "top": -0.421875,
+                    "right": 1106,
+                    "bottom": 53.953125,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "These are UK-wide figures for 2025-26, the latest full year in this release. They are outturn: recorded spending, not a forecast. None of the numbers on this page are forecasts. They can still be revised.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#forecast-status",
+                  "scrollY": 439
+                },
+                {
+                  "name": "check-source",
+                  "href": "#check-source",
+                  "linkText": "Check a number",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 302.109375,
+                    "right": 408.109375,
+                    "bottom": 322.109375,
+                    "left": 268.234375,
+                    "width": 139.875,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 302.109375,
+                    "right": 408.109375,
+                    "bottom": 322.109375,
+                    "left": 268.234375,
+                    "width": 139.875,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": 0.0625,
+                    "right": 1106,
+                    "bottom": 32.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 32.234375
+                  },
+                  "answer": {
+                    "top": 168.4375,
+                    "right": 1106,
+                    "bottom": 277.1875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 108.75
+                  },
+                  "text": "Source: Public spending statistics: July 2026, HM Treasury. First published 2026-07-16; source page updated 2026-07-29. Downloaded 2026-11-01. The main spending table covers 2025-26; the comparison covers 2015-16 to 2025-26. None of the numbers on this page are forecasts: all are labelled outturn in this release. The saved release notes give no next release date.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#check-source",
+                  "scrollY": 4030
+                }
+              ]
+            },
+            {
+              "javaScriptEnabled": false,
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "completed": true,
+              "answers": [
+                {
+                  "name": "largest-area",
+                  "href": "#largest-area",
+                  "linkText": "Largest spending area",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 718.171875,
+                    "bottom": 267.734375,
+                    "left": 528.140625,
+                    "width": 190.03125,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 718.171875,
+                    "bottom": 267.734375,
+                    "left": 528.140625,
+                    "width": 190.03125,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": -0.109375,
+                    "right": 824,
+                    "bottom": 68.984375,
+                    "left": 174,
+                    "width": 650,
+                    "height": 69.09375
+                  },
+                  "answer": {
+                    "top": -0.109375,
+                    "right": 824,
+                    "bottom": 68.984375,
+                    "left": 174,
+                    "width": 650,
+                    "height": 69.09375
+                  },
+                  "text": "Social protection is the largest area of spending. It includes pensions, benefits and care.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#largest-area",
+                  "scrollY": 348
+                },
+                {
+                  "name": "health-share",
+                  "href": "#health-share",
+                  "linkText": "Health per £100",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 872.53125,
+                    "bottom": 267.734375,
+                    "left": 734.390625,
+                    "width": 138.140625,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 872.53125,
+                    "bottom": 267.734375,
+                    "left": 734.390625,
+                    "width": 138.140625,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": 0.28125,
+                    "right": 1106,
+                    "bottom": 54.65625,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "answer": {
+                    "top": 0.28125,
+                    "right": 1106,
+                    "bottom": 54.65625,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "Of each £100 spent on services, £20.98 goes on health. This is health spending divided by total spending on services, times 100.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#health-share",
+                  "scrollY": 806
+                },
+                {
+                  "name": "debt-interest",
+                  "href": "#debt-interest",
+                  "linkText": "Debt interest",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 1000.390625,
+                    "bottom": 267.734375,
+                    "left": 888.75,
+                    "width": 111.640625,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 1000.390625,
+                    "bottom": 267.734375,
+                    "left": 888.75,
+                    "width": 111.640625,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": 0.25,
+                    "right": 1106,
+                    "bottom": 109,
+                    "left": 174,
+                    "width": 932,
+                    "height": 108.75
+                  },
+                  "answer": {
+                    "top": 0.25,
+                    "right": 1106,
+                    "bottom": 109,
+                    "left": 174,
+                    "width": 932,
+                    "height": 108.75
+                  },
+                  "text": "In 2025-26, central government debt interest was £96.9 billion (outturn, not a forecast). This is gross interest: the full sum paid to firms, people and bodies outside the UK state. It includes sums paid abroad. It is part of general public services, not an extra amount to add to the chart. The source row called public debt transactions includes other items too. It is not the same measure.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#debt-interest",
+                  "scrollY": 2373,
+                  "sourceCheck": {
+                    "clicks": 2,
+                    "landingURL": "http://127.0.0.1:45935/index.html#G15",
+                    "sourceRow": {
+                      "top": 23.421875,
+                      "right": 1106,
+                      "bottom": 71.46875,
+                      "left": 174,
+                      "width": 932,
+                      "height": 48.046875
+                    }
+                  }
+                },
+                {
+                  "name": "pensions-defence",
+                  "href": "#pensions-defence",
+                  "linkText": "Pensions and defence",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 247.734375,
+                    "right": 1091.109375,
+                    "bottom": 294.921875,
+                    "left": 174,
+                    "width": 917.109375,
+                    "height": 47.1875
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 247.734375,
+                    "right": 1091.109375,
+                    "bottom": 294.921875,
+                    "left": 174,
+                    "width": 917.109375,
+                    "height": 47.1875
+                  },
+                  "target": {
+                    "top": -0.3125,
+                    "right": 1106,
+                    "bottom": 81.25,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "answer": {
+                    "top": -0.3125,
+                    "right": 1106,
+                    "bottom": 81.25,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "text": "Old-age pensions were £154.9 billion. These form part of social protection, not the whole of it. Defence was £65.4 billion. This uses the UN rules, not NATO's measure. NATO includes some costs, such as pensions, elsewhere in this table.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#pensions-defence",
+                  "scrollY": 2275
+                },
+                {
+                  "name": "health-ten-years",
+                  "href": "#health-ten-years",
+                  "linkText": "Health after inflation",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 274.921875,
+                    "right": 894.8125,
+                    "bottom": 294.921875,
+                    "left": 718.765625,
+                    "width": 176.046875,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 274.921875,
+                    "right": 894.8125,
+                    "bottom": 294.921875,
+                    "left": 718.765625,
+                    "width": 176.046875,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": -0.296875,
+                    "right": 1106,
+                    "bottom": 30.421875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 30.71875
+                  },
+                  "answer": {
+                    "top": 49.609375,
+                    "right": 1106,
+                    "bottom": 103.984375,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "Health spending went up by 34.0% from 2015-16 to 2025-26. It went from £192.1 billion to £257.5 billion, a change of £65.4 billion in 2025-26 prices.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#health-ten-years",
+                  "scrollY": 2825
+                },
+                {
+                  "name": "gdp-ten-years",
+                  "href": "#gdp-ten-years",
+                  "linkText": "Spending share of the economy",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 274.921875,
+                    "right": 1098.546875,
+                    "bottom": 322.109375,
+                    "left": 174,
+                    "width": 924.546875,
+                    "height": 47.1875
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 274.921875,
+                    "right": 1098.546875,
+                    "bottom": 322.109375,
+                    "left": 174,
+                    "width": 924.546875,
+                    "height": 47.1875
+                  },
+                  "target": {
+                    "top": -0.265625,
+                    "right": 1106,
+                    "bottom": 30.453125,
+                    "left": 174,
+                    "width": 932,
+                    "height": 30.71875
+                  },
+                  "answer": {
+                    "top": 49.640625,
+                    "right": 1106,
+                    "bottom": 104.015625,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "Total spending was a bigger share of the economy: 44.3% of GDP in 2025-26, compared with 40.8% in 2015-16. That is a change of 3.5 percentage points.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#gdp-ten-years",
+                  "scrollY": 3047
+                },
+                {
+                  "name": "forecast-status",
+                  "href": "#forecast-status",
+                  "linkText": "Which figures are forecasts?",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 274.921875,
+                    "right": 536.859375,
+                    "bottom": 294.921875,
+                    "left": 295.890625,
+                    "width": 240.96875,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 274.921875,
+                    "right": 536.859375,
+                    "bottom": 294.921875,
+                    "left": 295.890625,
+                    "width": 240.96875,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": -0.421875,
+                    "right": 1106,
+                    "bottom": 53.953125,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "answer": {
+                    "top": -0.421875,
+                    "right": 1106,
+                    "bottom": 53.953125,
+                    "left": 174,
+                    "width": 932,
+                    "height": 54.375
+                  },
+                  "text": "These are UK-wide figures for 2025-26, the latest full year in this release. They are outturn: recorded spending, not a forecast. None of the numbers on this page are forecasts. They can still be revised.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#forecast-status",
+                  "scrollY": 439
+                },
+                {
+                  "name": "check-source",
+                  "href": "#check-source",
+                  "linkText": "Check a number",
+                  "navigation": {
+                    "top": 244.734375,
+                    "right": 1106,
+                    "bottom": 326.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 81.5625
+                  },
+                  "initialLink": {
+                    "top": 302.109375,
+                    "right": 408.109375,
+                    "bottom": 322.109375,
+                    "left": 268.234375,
+                    "width": 139.875,
+                    "height": 20
+                  },
+                  "initialScroll": 0,
+                  "clickableLink": {
+                    "top": 302.109375,
+                    "right": 408.109375,
+                    "bottom": 322.109375,
+                    "left": 268.234375,
+                    "width": 139.875,
+                    "height": 20
+                  },
+                  "target": {
+                    "top": 0.0625,
+                    "right": 1106,
+                    "bottom": 32.296875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 32.234375
+                  },
+                  "answer": {
+                    "top": 168.4375,
+                    "right": 1106,
+                    "bottom": 277.1875,
+                    "left": 174,
+                    "width": 932,
+                    "height": 108.75
+                  },
+                  "text": "Source: Public spending statistics: July 2026, HM Treasury. First published 2026-07-16; source page updated 2026-07-29. Downloaded 2026-11-01. The main spending table covers 2025-26; the comparison covers 2015-16 to 2025-26. None of the numbers on this page are forecasts: all are labelled outturn in this release. The saved release notes give no next release date.",
+                  "landingURL": "http://127.0.0.1:45935/index.html#check-source",
+                  "scrollY": 4028
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "browserVersion": "141.0.7390.37",
+  "finishedAt": "2026-11-02T06:12:52.305Z",
+  "passed": true
+}
