@@ -3,7 +3,7 @@
 ## Actual Before / After
 
 - **Before:** `5928df7222106ff80ba9e5fcfd2d5bcb54fe9342`, party HTML SHA-256 `3824303c0c1761b3df7c68be7178bde84cdc75ba4e95a38e16256325b195e1b7`.
-- **After:** `dc4e48f569e4cff815f094d3bb86147adb84c0f4`, party HTML SHA-256 `7c104332efc286b0ad9e406fca6ee15635c69f5501eb0478d3668e5289e813c7`.
+- **After:** `ebc3bdd680118fce768465ec15336b5337ee1187`, party HTML SHA-256 `b0fe96d15378b300fe15ade21d0a2cb77fe8cc05467f2aadd3123075177c175b`.
 - Same real static application, Chromium, light theme, JavaScript disabled, initial party-card state. Mobile **360×800** and desktop **1280×900**.
 - [Revision map](revision-map.json) verifies each report's tested HTML hash against its named immutable git revision. Browser reports were captured before the working tree's implementation commit; their `baseRevision` is not the tested-content identity. `pages[].sha256` is.
 
@@ -32,12 +32,14 @@ There are now **nine selected examples with independent quotations, two cost-onl
 # All nine pages pass provenance/raw values/reconciliation/source/size/banned-word/grade gates.
 # No changed generated output after rebuild. Manual inventory changes only party HTML hash.
 .venv/bin/python -m unittest discover -s tests -p 'test_*.py'
-# 211 integrated tests PASS (206 before integration).
+# 223 integrated tests PASS (206 before integration).
 CHECK_PAGE=parties.html EVIDENCE_LABEL=after EVIDENCE_DIR=docs/evidence/coverage-w6 npm run test:browser
 # Both mobile/desktop tasks PASS: no-JS, layout/overflow/size, zero axe violations and contrast checks.
 node docs/evidence/coverage-w6/capture-cards.mjs
 ```
 
-Party grades: **5.7354** complete text, **6.2130** words-only, **6.2362** prose words-only. Added regression coverage rejects wrong independent PDF page, wrong publisher attribution, incompatible source/locator formats and a forged, hash-consistent transcript that is absent from the actual cited PDF page. Existing HTML/PDF provenance, amounts, equal template and scoped date/revision tests remain in force. No manual keyboard/screen-reader result or other people evidence was created.
+Party grades: **5.7324** complete text, **6.2097** words-only, **6.2326** prose words-only. Added regression coverage rejects wrong independent PDF page, wrong publisher attribution, incompatible source/locator formats and a forged, hash-consistent transcript that is absent from the actual cited PDF page. Existing HTML/PDF provenance, amounts, equal template and scoped date/revision tests remain in force. No manual keyboard/screen-reader result or other people evidence was created.
 
 Concurrent main5928df7 added answer navigation and a real publisher-revision notice. It was integrated; only the generated party hash conflicted in the manual inventory, resolved by rebuilding and regenerating the inventory without claiming performed checks. Fresh actual Before/After captures include the same revision notice on both sides.
+
+Also integrated main23e7f97 (PR61 financial audit), regenerated its full source/figure trace, and added the actual NHS COST PLEDGES table at PDF26, NHS Pledges row, £17 in £billions, annualised over the five-year electoral term. No fiscal year is inferred. Uppercase currency scales remain billions in the audit rather than £17. The refreshed trace has22 financial occurrences,17 without a verified matching table; no Accuracy L2 claim. Full final suite223PASS. Final After captures were refreshed for the annualised-period clarification; party HTML identity remains pinned above.
