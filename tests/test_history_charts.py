@@ -36,7 +36,9 @@ class ChartTests(unittest.TestCase):
         from disclosures import add_project_links
         add_project_links(outputs)
         for view, (field, title, unit) in VIEWS.items():
-            page = outputs[f'history-{view}.html'].decode()
+            # Global footer navigation is added after the chart renderer/annotations.
+            page = outputs[f'history-{view}.html'].decode().replace(
+                '<footer>', '<footer><p><a href="corrections.html">Corrections and report an error</a></p>')
             self.assertLess(len(page.encode()), 500000)
             self.assertNotIn('<script', page)
             for s in d['series']:

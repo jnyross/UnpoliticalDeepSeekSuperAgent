@@ -1,0 +1,3710 @@
+{
+  "protocol_version": 1,
+  "viewports": [
+    "360x800",
+    "1280x900"
+  ],
+  "pages": [
+    {
+      "path": "about.html",
+      "sha256": "e99b3253340aaffb8e02393c9de36f1f6a688160875d36c720637c09ec5d2076",
+      "states": [
+        "initial"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": []
+    },
+    {
+      "path": "corrections.html",
+      "sha256": "5b7ed661a8b92e285a80b66354e0887b87ff44ff0f43ddfa250a9b9f263c1d76",
+      "states": [
+        "initial"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": []
+    },
+    {
+      "path": "history-cash.html",
+      "sha256": "425b5ed32f401540069b60a5018f76b8d993909345ecc4fbf1b7c7a06cb6b8fd",
+      "states": [
+        "initial",
+        "all-details-expanded"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": [
+        {
+          "id": "a:1",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html"
+        },
+        {
+          "id": "a:2",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html"
+        },
+        {
+          "id": "a:3",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#general-public-services"
+        },
+        {
+          "id": "a:4",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#general-public-services"
+        },
+        {
+          "id": "svg:1",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 1. General public services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:1",
+          "kind": "disclosure",
+          "label": "Data table: 1. General public services — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:1",
+          "kind": "table",
+          "label": "1. General public services · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:5",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#public-and-common-services"
+        },
+        {
+          "id": "a:6",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#public-and-common-services"
+        },
+        {
+          "id": "svg:2",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: public and common services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:2",
+          "kind": "disclosure",
+          "label": "Data table: of which: public and common services — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:2",
+          "kind": "table",
+          "label": "of which: public and common services · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:7",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#international-services"
+        },
+        {
+          "id": "a:8",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#international-services"
+        },
+        {
+          "id": "svg:3",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: international services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:3",
+          "kind": "disclosure",
+          "label": "Data table: of which: international services — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:3",
+          "kind": "table",
+          "label": "of which: international services · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:9",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#public-sector-debt-interest"
+        },
+        {
+          "id": "a:10",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#public-sector-debt-interest"
+        },
+        {
+          "id": "svg:4",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: public sector debt interest",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:4",
+          "kind": "disclosure",
+          "label": "Data table: of which: public sector debt interest — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:4",
+          "kind": "table",
+          "label": "of which: public sector debt interest · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:11",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#defence"
+        },
+        {
+          "id": "a:12",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#defence"
+        },
+        {
+          "id": "svg:5",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 2. Defence",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:5",
+          "kind": "disclosure",
+          "label": "Data table: 2. Defence — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:5",
+          "kind": "table",
+          "label": "2. Defence · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:13",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#public-order-and-safety"
+        },
+        {
+          "id": "a:14",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#public-order-and-safety"
+        },
+        {
+          "id": "svg:6",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 3. Public order and safety",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:6",
+          "kind": "disclosure",
+          "label": "Data table: 3. Public order and safety — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:6",
+          "kind": "table",
+          "label": "3. Public order and safety · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:15",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#economic-affairs"
+        },
+        {
+          "id": "a:16",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#economic-affairs"
+        },
+        {
+          "id": "svg:7",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 4. Economic affairs",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:7",
+          "kind": "disclosure",
+          "label": "Data table: 4. Economic affairs — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:7",
+          "kind": "table",
+          "label": "4. Economic affairs · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:17",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#enterprise-and-economic-development"
+        },
+        {
+          "id": "a:18",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#enterprise-and-economic-development"
+        },
+        {
+          "id": "svg:8",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: enterprise and economic development",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:8",
+          "kind": "disclosure",
+          "label": "Data table: of which: enterprise and economic development — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:8",
+          "kind": "table",
+          "label": "of which: enterprise and economic development · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:19",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#science-and-technology"
+        },
+        {
+          "id": "a:20",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#science-and-technology"
+        },
+        {
+          "id": "svg:9",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: science and technology",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:9",
+          "kind": "disclosure",
+          "label": "Data table: of which: science and technology — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:9",
+          "kind": "table",
+          "label": "of which: science and technology · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:21",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#employment-policies"
+        },
+        {
+          "id": "a:22",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#employment-policies"
+        },
+        {
+          "id": "svg:10",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: employment policies",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:10",
+          "kind": "disclosure",
+          "label": "Data table: of which: employment policies — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:10",
+          "kind": "table",
+          "label": "of which: employment policies · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:23",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#agriculture-fisheries-and-forestry"
+        },
+        {
+          "id": "a:24",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#agriculture-fisheries-and-forestry"
+        },
+        {
+          "id": "svg:11",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: agriculture, fisheries and forestry",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:11",
+          "kind": "disclosure",
+          "label": "Data table: of which: agriculture, fisheries and forestry — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:11",
+          "kind": "table",
+          "label": "of which: agriculture, fisheries and forestry · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:25",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#transport"
+        },
+        {
+          "id": "a:26",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#transport"
+        },
+        {
+          "id": "svg:12",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · of which: transport",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:12",
+          "kind": "disclosure",
+          "label": "Data table: of which: transport — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:12",
+          "kind": "table",
+          "label": "of which: transport · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:27",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#environment-protection"
+        },
+        {
+          "id": "a:28",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#environment-protection"
+        },
+        {
+          "id": "svg:13",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 5. Environment protection",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:13",
+          "kind": "disclosure",
+          "label": "Data table: 5. Environment protection — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:13",
+          "kind": "table",
+          "label": "5. Environment protection · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:29",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#housing-and-community-amenities"
+        },
+        {
+          "id": "a:30",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#housing-and-community-amenities"
+        },
+        {
+          "id": "svg:14",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 6. Housing and community amenities",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:14",
+          "kind": "disclosure",
+          "label": "Data table: 6. Housing and community amenities — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:14",
+          "kind": "table",
+          "label": "6. Housing and community amenities · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:31",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#health"
+        },
+        {
+          "id": "a:32",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#health"
+        },
+        {
+          "id": "svg:15",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 7. Health",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:15",
+          "kind": "disclosure",
+          "label": "Data table: 7. Health — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:15",
+          "kind": "table",
+          "label": "7. Health · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:33",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#recreation-culture-and-religion"
+        },
+        {
+          "id": "a:34",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#recreation-culture-and-religion"
+        },
+        {
+          "id": "svg:16",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 8. Recreation, culture and religion",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:16",
+          "kind": "disclosure",
+          "label": "Data table: 8. Recreation, culture and religion — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:16",
+          "kind": "table",
+          "label": "8. Recreation, culture and religion · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:35",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#education"
+        },
+        {
+          "id": "a:36",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#education"
+        },
+        {
+          "id": "svg:17",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 9. Education",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:17",
+          "kind": "disclosure",
+          "label": "Data table: 9. Education — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:17",
+          "kind": "table",
+          "label": "9. Education · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:37",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#social-protection"
+        },
+        {
+          "id": "a:38",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#social-protection"
+        },
+        {
+          "id": "svg:18",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · 10. Social protection",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:18",
+          "kind": "disclosure",
+          "label": "Data table: 10. Social protection — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:18",
+          "kind": "table",
+          "label": "10. Social protection · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:39",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#eu-transactions"
+        },
+        {
+          "id": "a:40",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#eu-transactions"
+        },
+        {
+          "id": "svg:19",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · EU transactions",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:19",
+          "kind": "disclosure",
+          "label": "Data table: EU transactions — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:19",
+          "kind": "table",
+          "label": "EU transactions · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:41",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#services-total"
+        },
+        {
+          "id": "a:42",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#services-total"
+        },
+        {
+          "id": "svg:20",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:20",
+          "kind": "disclosure",
+          "label": "Data table: Public sector expenditure on services — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:20",
+          "kind": "table",
+          "label": "Public sector expenditure on services · £ billion, cash · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:43",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#accounting-adjustments"
+        },
+        {
+          "id": "a:44",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#accounting-adjustments"
+        },
+        {
+          "id": "svg:21",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · Accounting adjustments",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:21",
+          "kind": "disclosure",
+          "label": "Data table: Accounting adjustments — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:21",
+          "kind": "table",
+          "label": "Accounting adjustments · £ billion, cash · Accounting adjustments between TES and TME",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:45",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#tme"
+        },
+        {
+          "id": "a:46",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#tme"
+        },
+        {
+          "id": "svg:22",
+          "kind": "chart",
+          "label": "Cash spending · £ billion, cash · Total Managed Expenditure",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:22",
+          "kind": "disclosure",
+          "label": "Data table: Total Managed Expenditure — Cash spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:22",
+          "kind": "table",
+          "label": "Total Managed Expenditure · £ billion, cash · Total Managed Expenditure",
+          "tasks": [
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "history-gdp.html",
+      "sha256": "83be434f6eb29040c943fa7b61cc6336186a7dd26946e65b86ccd93753a53c32",
+      "states": [
+        "initial",
+        "all-details-expanded"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": [
+        {
+          "id": "a:1",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html"
+        },
+        {
+          "id": "a:2",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html"
+        },
+        {
+          "id": "a:3",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#general-public-services"
+        },
+        {
+          "id": "a:4",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#general-public-services"
+        },
+        {
+          "id": "svg:1",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 1. General public services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:1",
+          "kind": "disclosure",
+          "label": "Data table: 1. General public services — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:1",
+          "kind": "table",
+          "label": "1. General public services · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:5",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#public-and-common-services"
+        },
+        {
+          "id": "a:6",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#public-and-common-services"
+        },
+        {
+          "id": "svg:2",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: public and common services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:2",
+          "kind": "disclosure",
+          "label": "Data table: of which: public and common services — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:2",
+          "kind": "table",
+          "label": "of which: public and common services · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:7",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#international-services"
+        },
+        {
+          "id": "a:8",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#international-services"
+        },
+        {
+          "id": "svg:3",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: international services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:3",
+          "kind": "disclosure",
+          "label": "Data table: of which: international services — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:3",
+          "kind": "table",
+          "label": "of which: international services · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:9",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#public-sector-debt-interest"
+        },
+        {
+          "id": "a:10",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#public-sector-debt-interest"
+        },
+        {
+          "id": "svg:4",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: public sector debt interest",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:4",
+          "kind": "disclosure",
+          "label": "Data table: of which: public sector debt interest — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:4",
+          "kind": "table",
+          "label": "of which: public sector debt interest · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:11",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#defence"
+        },
+        {
+          "id": "a:12",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#defence"
+        },
+        {
+          "id": "svg:5",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 2. Defence",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:5",
+          "kind": "disclosure",
+          "label": "Data table: 2. Defence — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:5",
+          "kind": "table",
+          "label": "2. Defence · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:13",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#public-order-and-safety"
+        },
+        {
+          "id": "a:14",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#public-order-and-safety"
+        },
+        {
+          "id": "svg:6",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 3. Public order and safety",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:6",
+          "kind": "disclosure",
+          "label": "Data table: 3. Public order and safety — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:6",
+          "kind": "table",
+          "label": "3. Public order and safety · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:15",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#economic-affairs"
+        },
+        {
+          "id": "a:16",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#economic-affairs"
+        },
+        {
+          "id": "svg:7",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 4. Economic affairs",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:7",
+          "kind": "disclosure",
+          "label": "Data table: 4. Economic affairs — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:7",
+          "kind": "table",
+          "label": "4. Economic affairs · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:17",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#enterprise-and-economic-development"
+        },
+        {
+          "id": "a:18",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#enterprise-and-economic-development"
+        },
+        {
+          "id": "svg:8",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: enterprise and economic development",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:8",
+          "kind": "disclosure",
+          "label": "Data table: of which: enterprise and economic development — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:8",
+          "kind": "table",
+          "label": "of which: enterprise and economic development · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:19",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#science-and-technology"
+        },
+        {
+          "id": "a:20",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#science-and-technology"
+        },
+        {
+          "id": "svg:9",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: science and technology",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:9",
+          "kind": "disclosure",
+          "label": "Data table: of which: science and technology — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:9",
+          "kind": "table",
+          "label": "of which: science and technology · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:21",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#employment-policies"
+        },
+        {
+          "id": "a:22",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#employment-policies"
+        },
+        {
+          "id": "svg:10",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: employment policies",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:10",
+          "kind": "disclosure",
+          "label": "Data table: of which: employment policies — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:10",
+          "kind": "table",
+          "label": "of which: employment policies · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:23",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#agriculture-fisheries-and-forestry"
+        },
+        {
+          "id": "a:24",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#agriculture-fisheries-and-forestry"
+        },
+        {
+          "id": "svg:11",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: agriculture, fisheries and forestry",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:11",
+          "kind": "disclosure",
+          "label": "Data table: of which: agriculture, fisheries and forestry — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:11",
+          "kind": "table",
+          "label": "of which: agriculture, fisheries and forestry · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:25",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#transport"
+        },
+        {
+          "id": "a:26",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#transport"
+        },
+        {
+          "id": "svg:12",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · of which: transport",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:12",
+          "kind": "disclosure",
+          "label": "Data table: of which: transport — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:12",
+          "kind": "table",
+          "label": "of which: transport · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:27",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#environment-protection"
+        },
+        {
+          "id": "a:28",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#environment-protection"
+        },
+        {
+          "id": "svg:13",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 5. Environment protection",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:13",
+          "kind": "disclosure",
+          "label": "Data table: 5. Environment protection — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:13",
+          "kind": "table",
+          "label": "5. Environment protection · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:29",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#housing-and-community-amenities"
+        },
+        {
+          "id": "a:30",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#housing-and-community-amenities"
+        },
+        {
+          "id": "svg:14",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 6. Housing and community amenities",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:14",
+          "kind": "disclosure",
+          "label": "Data table: 6. Housing and community amenities — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:14",
+          "kind": "table",
+          "label": "6. Housing and community amenities · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:31",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#health"
+        },
+        {
+          "id": "a:32",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#health"
+        },
+        {
+          "id": "svg:15",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 7. Health",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:15",
+          "kind": "disclosure",
+          "label": "Data table: 7. Health — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:15",
+          "kind": "table",
+          "label": "7. Health · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:33",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#recreation-culture-and-religion"
+        },
+        {
+          "id": "a:34",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#recreation-culture-and-religion"
+        },
+        {
+          "id": "svg:16",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 8. Recreation, culture and religion",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:16",
+          "kind": "disclosure",
+          "label": "Data table: 8. Recreation, culture and religion — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:16",
+          "kind": "table",
+          "label": "8. Recreation, culture and religion · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:35",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#education"
+        },
+        {
+          "id": "a:36",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#education"
+        },
+        {
+          "id": "svg:17",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 9. Education",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:17",
+          "kind": "disclosure",
+          "label": "Data table: 9. Education — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:17",
+          "kind": "table",
+          "label": "9. Education · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:37",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#social-protection"
+        },
+        {
+          "id": "a:38",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#social-protection"
+        },
+        {
+          "id": "svg:18",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · 10. Social protection",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:18",
+          "kind": "disclosure",
+          "label": "Data table: 10. Social protection — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:18",
+          "kind": "table",
+          "label": "10. Social protection · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:39",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#eu-transactions"
+        },
+        {
+          "id": "a:40",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#eu-transactions"
+        },
+        {
+          "id": "svg:19",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · EU transactions",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:19",
+          "kind": "disclosure",
+          "label": "Data table: EU transactions — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:19",
+          "kind": "table",
+          "label": "EU transactions · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:41",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#services-total"
+        },
+        {
+          "id": "a:42",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#services-total"
+        },
+        {
+          "id": "svg:20",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:20",
+          "kind": "disclosure",
+          "label": "Data table: Public sector expenditure on services — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:20",
+          "kind": "table",
+          "label": "Public sector expenditure on services · % of UK GDP · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:43",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#accounting-adjustments"
+        },
+        {
+          "id": "a:44",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#accounting-adjustments"
+        },
+        {
+          "id": "svg:21",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · Accounting adjustments",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:21",
+          "kind": "disclosure",
+          "label": "Data table: Accounting adjustments — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:21",
+          "kind": "table",
+          "label": "Accounting adjustments · % of UK GDP · Accounting adjustments between TES and TME",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:45",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#tme"
+        },
+        {
+          "id": "a:46",
+          "kind": "view-link",
+          "label": "Inflation-adjusted spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-real.html#tme"
+        },
+        {
+          "id": "svg:22",
+          "kind": "chart",
+          "label": "Share of the economy · % of UK GDP · Total Managed Expenditure",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:22",
+          "kind": "disclosure",
+          "label": "Data table: Total Managed Expenditure — Share of the economy",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:22",
+          "kind": "table",
+          "label": "Total Managed Expenditure · % of UK GDP · Total Managed Expenditure",
+          "tasks": [
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "history-real.html",
+      "sha256": "cfbf5396ec9435b1402e71a3ee720c3c2a235c22c00ac79a4d137d06cb271a5f",
+      "states": [
+        "initial",
+        "all-details-expanded"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": [
+        {
+          "id": "a:1",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html"
+        },
+        {
+          "id": "a:2",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html"
+        },
+        {
+          "id": "a:3",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#general-public-services"
+        },
+        {
+          "id": "a:4",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#general-public-services"
+        },
+        {
+          "id": "svg:1",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 1. General public services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:1",
+          "kind": "disclosure",
+          "label": "Data table: 1. General public services — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:1",
+          "kind": "table",
+          "label": "1. General public services · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:5",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#public-and-common-services"
+        },
+        {
+          "id": "a:6",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#public-and-common-services"
+        },
+        {
+          "id": "svg:2",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: public and common services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:2",
+          "kind": "disclosure",
+          "label": "Data table: of which: public and common services — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:2",
+          "kind": "table",
+          "label": "of which: public and common services · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:7",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#international-services"
+        },
+        {
+          "id": "a:8",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#international-services"
+        },
+        {
+          "id": "svg:3",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: international services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:3",
+          "kind": "disclosure",
+          "label": "Data table: of which: international services — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:3",
+          "kind": "table",
+          "label": "of which: international services · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:9",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#public-sector-debt-interest"
+        },
+        {
+          "id": "a:10",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#public-sector-debt-interest"
+        },
+        {
+          "id": "svg:4",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: public sector debt interest",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:4",
+          "kind": "disclosure",
+          "label": "Data table: of which: public sector debt interest — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:4",
+          "kind": "table",
+          "label": "of which: public sector debt interest · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:11",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#defence"
+        },
+        {
+          "id": "a:12",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#defence"
+        },
+        {
+          "id": "svg:5",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 2. Defence",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:5",
+          "kind": "disclosure",
+          "label": "Data table: 2. Defence — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:5",
+          "kind": "table",
+          "label": "2. Defence · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:13",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#public-order-and-safety"
+        },
+        {
+          "id": "a:14",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#public-order-and-safety"
+        },
+        {
+          "id": "svg:6",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 3. Public order and safety",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:6",
+          "kind": "disclosure",
+          "label": "Data table: 3. Public order and safety — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:6",
+          "kind": "table",
+          "label": "3. Public order and safety · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:15",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#economic-affairs"
+        },
+        {
+          "id": "a:16",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#economic-affairs"
+        },
+        {
+          "id": "svg:7",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 4. Economic affairs",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:7",
+          "kind": "disclosure",
+          "label": "Data table: 4. Economic affairs — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:7",
+          "kind": "table",
+          "label": "4. Economic affairs · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:17",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#enterprise-and-economic-development"
+        },
+        {
+          "id": "a:18",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#enterprise-and-economic-development"
+        },
+        {
+          "id": "svg:8",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: enterprise and economic development",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:8",
+          "kind": "disclosure",
+          "label": "Data table: of which: enterprise and economic development — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:8",
+          "kind": "table",
+          "label": "of which: enterprise and economic development · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:19",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#science-and-technology"
+        },
+        {
+          "id": "a:20",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#science-and-technology"
+        },
+        {
+          "id": "svg:9",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: science and technology",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:9",
+          "kind": "disclosure",
+          "label": "Data table: of which: science and technology — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:9",
+          "kind": "table",
+          "label": "of which: science and technology · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:21",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#employment-policies"
+        },
+        {
+          "id": "a:22",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#employment-policies"
+        },
+        {
+          "id": "svg:10",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: employment policies",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:10",
+          "kind": "disclosure",
+          "label": "Data table: of which: employment policies — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:10",
+          "kind": "table",
+          "label": "of which: employment policies · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:23",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#agriculture-fisheries-and-forestry"
+        },
+        {
+          "id": "a:24",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#agriculture-fisheries-and-forestry"
+        },
+        {
+          "id": "svg:11",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: agriculture, fisheries and forestry",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:11",
+          "kind": "disclosure",
+          "label": "Data table: of which: agriculture, fisheries and forestry — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:11",
+          "kind": "table",
+          "label": "of which: agriculture, fisheries and forestry · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:25",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#transport"
+        },
+        {
+          "id": "a:26",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#transport"
+        },
+        {
+          "id": "svg:12",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · of which: transport",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:12",
+          "kind": "disclosure",
+          "label": "Data table: of which: transport — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:12",
+          "kind": "table",
+          "label": "of which: transport · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:27",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#environment-protection"
+        },
+        {
+          "id": "a:28",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#environment-protection"
+        },
+        {
+          "id": "svg:13",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 5. Environment protection",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:13",
+          "kind": "disclosure",
+          "label": "Data table: 5. Environment protection — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:13",
+          "kind": "table",
+          "label": "5. Environment protection · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:29",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#housing-and-community-amenities"
+        },
+        {
+          "id": "a:30",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#housing-and-community-amenities"
+        },
+        {
+          "id": "svg:14",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 6. Housing and community amenities",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:14",
+          "kind": "disclosure",
+          "label": "Data table: 6. Housing and community amenities — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:14",
+          "kind": "table",
+          "label": "6. Housing and community amenities · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:31",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#health"
+        },
+        {
+          "id": "a:32",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#health"
+        },
+        {
+          "id": "svg:15",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 7. Health",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:15",
+          "kind": "disclosure",
+          "label": "Data table: 7. Health — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:15",
+          "kind": "table",
+          "label": "7. Health · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:33",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#recreation-culture-and-religion"
+        },
+        {
+          "id": "a:34",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#recreation-culture-and-religion"
+        },
+        {
+          "id": "svg:16",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 8. Recreation, culture and religion",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:16",
+          "kind": "disclosure",
+          "label": "Data table: 8. Recreation, culture and religion — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:16",
+          "kind": "table",
+          "label": "8. Recreation, culture and religion · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:35",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#education"
+        },
+        {
+          "id": "a:36",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#education"
+        },
+        {
+          "id": "svg:17",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 9. Education",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:17",
+          "kind": "disclosure",
+          "label": "Data table: 9. Education — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:17",
+          "kind": "table",
+          "label": "9. Education · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:37",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#social-protection"
+        },
+        {
+          "id": "a:38",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#social-protection"
+        },
+        {
+          "id": "svg:18",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · 10. Social protection",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:18",
+          "kind": "disclosure",
+          "label": "Data table: 10. Social protection — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:18",
+          "kind": "table",
+          "label": "10. Social protection · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:39",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#eu-transactions"
+        },
+        {
+          "id": "a:40",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#eu-transactions"
+        },
+        {
+          "id": "svg:19",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · EU transactions",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:19",
+          "kind": "disclosure",
+          "label": "Data table: EU transactions — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:19",
+          "kind": "table",
+          "label": "EU transactions · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:41",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#services-total"
+        },
+        {
+          "id": "a:42",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#services-total"
+        },
+        {
+          "id": "svg:20",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:20",
+          "kind": "disclosure",
+          "label": "Data table: Public sector expenditure on services — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:20",
+          "kind": "table",
+          "label": "Public sector expenditure on services · £ billion, 2025-26 prices · Public sector expenditure on services",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:43",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#accounting-adjustments"
+        },
+        {
+          "id": "a:44",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#accounting-adjustments"
+        },
+        {
+          "id": "svg:21",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · Accounting adjustments",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:21",
+          "kind": "disclosure",
+          "label": "Data table: Accounting adjustments — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:21",
+          "kind": "table",
+          "label": "Accounting adjustments · £ billion, 2025-26 prices · Accounting adjustments between TES and TME",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "a:45",
+          "kind": "view-link",
+          "label": "Cash spending",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#tme"
+        },
+        {
+          "id": "a:46",
+          "kind": "view-link",
+          "label": "Share of the economy",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-gdp.html#tme"
+        },
+        {
+          "id": "svg:22",
+          "kind": "chart",
+          "label": "Inflation-adjusted spending · £ billion, 2025-26 prices · Total Managed Expenditure",
+          "tasks": [
+            "chart"
+          ]
+        },
+        {
+          "id": "details:22",
+          "kind": "disclosure",
+          "label": "Data table: Total Managed Expenditure — Inflation-adjusted spending",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:22",
+          "kind": "table",
+          "label": "Total Managed Expenditure · £ billion, 2025-26 prices · Total Managed Expenditure",
+          "tasks": [
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "history.html",
+      "sha256": "417d1565ae31bf121a6d6362e5968c4aa3999afdfa920f3b5911fc849d2c0046",
+      "states": [
+        "initial",
+        "all-details-expanded"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": [
+        {
+          "id": "a:1",
+          "kind": "view-link",
+          "label": "See charts for cash, real spending and GDP share",
+          "tasks": [
+            "view-link"
+          ],
+          "href": "history-cash.html#services-total"
+        },
+        {
+          "id": "details:1",
+          "kind": "disclosure",
+          "label": "1. General public services",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "general-public-services",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:1",
+          "kind": "table",
+          "label": "1. General public services — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:2",
+          "kind": "disclosure",
+          "label": "of which: public and common services",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "public-and-common-services",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:2",
+          "kind": "table",
+          "label": "of which: public and common services — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:3",
+          "kind": "disclosure",
+          "label": "of which: international services",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "international-services",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:3",
+          "kind": "table",
+          "label": "of which: international services — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:4",
+          "kind": "disclosure",
+          "label": "of which: public sector debt interest",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "public-sector-debt-interest",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:4",
+          "kind": "table",
+          "label": "of which: public sector debt interest — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:5",
+          "kind": "disclosure",
+          "label": "2. Defence",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "defence",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:5",
+          "kind": "table",
+          "label": "2. Defence — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:6",
+          "kind": "disclosure",
+          "label": "3. Public order and safety",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "public-order-and-safety",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:6",
+          "kind": "table",
+          "label": "3. Public order and safety — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:7",
+          "kind": "disclosure",
+          "label": "4. Economic affairs",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "economic-affairs",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:7",
+          "kind": "table",
+          "label": "4. Economic affairs — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:8",
+          "kind": "disclosure",
+          "label": "of which: enterprise and economic development",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "enterprise-and-economic-development",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:8",
+          "kind": "table",
+          "label": "of which: enterprise and economic development — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:9",
+          "kind": "disclosure",
+          "label": "of which: science and technology",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "science-and-technology",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:9",
+          "kind": "table",
+          "label": "of which: science and technology — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:10",
+          "kind": "disclosure",
+          "label": "of which: employment policies",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "employment-policies",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:10",
+          "kind": "table",
+          "label": "of which: employment policies — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:11",
+          "kind": "disclosure",
+          "label": "of which: agriculture, fisheries and forestry",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "agriculture-fisheries-and-forestry",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:11",
+          "kind": "table",
+          "label": "of which: agriculture, fisheries and forestry — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:12",
+          "kind": "disclosure",
+          "label": "of which: transport",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "transport",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:12",
+          "kind": "table",
+          "label": "of which: transport — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:13",
+          "kind": "disclosure",
+          "label": "5. Environment protection",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "environment-protection",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:13",
+          "kind": "table",
+          "label": "5. Environment protection — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:14",
+          "kind": "disclosure",
+          "label": "6. Housing and community amenities",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "housing-and-community-amenities",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:14",
+          "kind": "table",
+          "label": "6. Housing and community amenities — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:15",
+          "kind": "disclosure",
+          "label": "7. Health",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "health",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:15",
+          "kind": "table",
+          "label": "7. Health — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:16",
+          "kind": "disclosure",
+          "label": "8. Recreation, culture and religion",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "recreation-culture-and-religion",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:16",
+          "kind": "table",
+          "label": "8. Recreation, culture and religion — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:17",
+          "kind": "disclosure",
+          "label": "9. Education",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "education",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:17",
+          "kind": "table",
+          "label": "9. Education — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:18",
+          "kind": "disclosure",
+          "label": "10. Social protection",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "social-protection",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:18",
+          "kind": "table",
+          "label": "10. Social protection — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:19",
+          "kind": "disclosure",
+          "label": "EU transactions",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "eu-transactions",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:19",
+          "kind": "table",
+          "label": "EU transactions — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:20",
+          "kind": "disclosure",
+          "label": "Public sector expenditure on services",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "services-total",
+          "initial": "expanded"
+        },
+        {
+          "id": "table:20",
+          "kind": "table",
+          "label": "Public sector expenditure on services — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:21",
+          "kind": "disclosure",
+          "label": "Accounting adjustments",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "accounting-adjustments",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:21",
+          "kind": "table",
+          "label": "Accounting adjustments — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:22",
+          "kind": "disclosure",
+          "label": "Total Managed Expenditure",
+          "tasks": [
+            "disclosure"
+          ],
+          "anchor": "tme",
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:22",
+          "kind": "table",
+          "label": "Total Managed Expenditure — annual history",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:23",
+          "kind": "disclosure",
+          "label": "1. General public services",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:23",
+          "kind": "table",
+          "label": "1. General public services — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:24",
+          "kind": "disclosure",
+          "label": "2. Defence",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:24",
+          "kind": "table",
+          "label": "2. Defence — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:25",
+          "kind": "disclosure",
+          "label": "3. Public order and safety",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:25",
+          "kind": "table",
+          "label": "3. Public order and safety — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:26",
+          "kind": "disclosure",
+          "label": "4. Economic affairs",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:26",
+          "kind": "table",
+          "label": "4. Economic affairs — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:27",
+          "kind": "disclosure",
+          "label": "5. Environment protection",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:27",
+          "kind": "table",
+          "label": "5. Environment protection — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:28",
+          "kind": "disclosure",
+          "label": "6. Housing and community amenities",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:28",
+          "kind": "table",
+          "label": "6. Housing and community amenities — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:29",
+          "kind": "disclosure",
+          "label": "7. Health",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:29",
+          "kind": "table",
+          "label": "7. Health — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:30",
+          "kind": "disclosure",
+          "label": "8. Recreation, culture and religion",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:30",
+          "kind": "table",
+          "label": "8. Recreation, culture and religion — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:31",
+          "kind": "disclosure",
+          "label": "9. Education",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:31",
+          "kind": "table",
+          "label": "9. Education — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:32",
+          "kind": "disclosure",
+          "label": "10. Social protection",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:32",
+          "kind": "table",
+          "label": "10. Social protection — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:33",
+          "kind": "disclosure",
+          "label": "EU transactions",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:33",
+          "kind": "table",
+          "label": "EU transactions — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:34",
+          "kind": "disclosure",
+          "label": "Public sector expenditure on services",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:34",
+          "kind": "table",
+          "label": "Public sector expenditure on services — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "details:35",
+          "kind": "disclosure",
+          "label": "Total Managed Expenditure",
+          "tasks": [
+            "disclosure"
+          ],
+          "initial": "collapsed"
+        },
+        {
+          "id": "table:35",
+          "kind": "table",
+          "label": "Total Managed Expenditure — fixed ten-year snapshots",
+          "tasks": [
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "income.html",
+      "sha256": "c998064cd63f3fa9b9f74c218c7074147e2a7c6e81847ef9696c194792d8c767",
+      "states": [
+        "initial"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": [
+        {
+          "id": "table:1",
+          "kind": "table",
+          "label": "Latest outturn and OBR forecasts · United Kingdom · cash £ billion",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "table:2",
+          "kind": "table",
+          "label": "Tax types in 2025-26 · United Kingdom · cash £ billion",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "table:3",
+          "kind": "table",
+          "label": "Non-tax receipts in 2025-26 · United Kingdom · cash £ billion",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "table:4",
+          "kind": "table",
+          "label": "Annual flows and the year-end debt stock · United Kingdom · cash £ billion",
+          "tasks": [
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "index.html",
+      "sha256": "a793f9db346c922c65435e95c7e2353d38687e42a5ef80f51302409cdba3f8df",
+      "states": [
+        "initial"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": [
+        {
+          "id": "table:1",
+          "kind": "table",
+          "label": "UK spending on services by area, 2025-26 (outturn). Rounded to £0.1 billion.",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "table:2",
+          "kind": "table",
+          "label": "Ten-year comparison: UK outturn. Health in 2025-26 prices; TME as a share of GDP.",
+          "tasks": [
+            "table"
+          ]
+        },
+        {
+          "id": "table:3",
+          "kind": "table",
+          "label": "Exact source values and workbook cells · 2025-26 · outturn",
+          "tasks": [
+            "table"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "parties.html",
+      "sha256": "fc01eea975bed4b1ec857780c50b5d66f5d73cc61fa7d06a0f1d1dae8d1a2d8d",
+      "states": [
+        "initial"
+      ],
+      "tasks": [
+        "navigation",
+        "structure",
+        "focus"
+      ],
+      "targets": []
+    }
+  ]
+}

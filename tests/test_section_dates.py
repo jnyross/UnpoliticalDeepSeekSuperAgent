@@ -35,8 +35,9 @@ class SectionDatesTests(unittest.TestCase):
         import re
         pages = self.render()
         for name, page in pages.items():
-            # Project disclosures have no time-series/data sections to stamp.
-            if name == 'about.html':
+            # Project disclosures and ledger policy have no fiscal data vintage.
+            if name in ('about.html', 'corrections.html'):
+                self.assertNotIn('class="section-dates"', page)
                 continue
             headers = re.findall(r'<(?:section|article)\b[^>]*>\s*<h2\b[^>]*>.*?</h2>', page, re.S)
             for header in headers:

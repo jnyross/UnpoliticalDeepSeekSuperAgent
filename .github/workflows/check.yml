@@ -15,6 +15,17 @@ jobs:
       pages: ${{ steps.pages.outputs.pages }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Guard append-only corrections history
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != "0000000000000000000000000000000000000000" ]; then
+            python3 scripts/corrections.py --base "$BASE_SHA"
+          else
+            python3 scripts/corrections.py
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -28,6 +39,19 @@ jobs:
           sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Test release discovery fixtures
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validate append-only release timing ledger and JSON report
+        env:
+          BASE_REVISION: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          set -euo pipefail
+          : > /tmp/release-timing-previous.jsonl
+          if [ -n "$BASE_REVISION" ] && [[ ! "$BASE_REVISION" =~ ^0+$ ]]; then
+            git cat-file -e "$BASE_REVISION^{commit}"
+            if git cat-file -e "$BASE_REVISION:measurements/release-timing.jsonl" 2>/dev/null; then
+              git show "$BASE_REVISION:measurements/release-timing.jsonl" > /tmp/release-timing-previous.jsonl
+            fi
+          fi
+          python scripts/release_timing.py report --ledger measurements/release-timing.jsonl --previous-ledger /tmp/release-timing-previous.jsonl
       - name: Validate workflow configuration
         run: |
           go install github.com/rhysd/actionlint/cmd/actionlint@v1.7.7
@@ -36,6 +60,8 @@ jobs:
         run: python scripts/build.py --check
       - name: Check source data and site
         run: python scripts/check.py --self-test && python scripts/check_history.py --self-test && python -m unittest discover -s tests -p 'test_*.py' && python scripts/check.py
+      - name: Validate manual accessibility material coverage (not people checks)
+        run: python scripts/manual_access.py
       - name: Discover every generated HTML page
         id: pages
         run: python -c 'import json, pathlib, os; pages = sorted(str(p.relative_to("site")) for p in pathlib.Path("site").rglob("*.html")); assert pages; print("pages=" + json.dumps(pages), file=open(os.environ["GITHUB_OUTPUT"], "a"))'

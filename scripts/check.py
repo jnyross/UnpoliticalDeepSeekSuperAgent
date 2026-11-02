@@ -226,9 +226,10 @@ def validate_page(path, manifest, banned):
     require("Open Government Licence" in text, f"{path}: missing OGL attribution")
     require(any("nationalarchives.gov.uk/doc/open-government-licence" in x for x in page.links),
             f"{path}: missing OGL licence link")
-    require(manifest["publication"] in text, f"{path}: missing source publication")
-    require(any(form in text for form in date_forms(manifest["date"])),
-            f"{path}: missing source publication/update date")
+    if manifest is not None:  # The corrections ledger is not an official data release.
+        require(manifest["publication"] in text, f"{path}: missing source publication")
+        require(any(form in text for form in date_forms(manifest["date"])),
+                f"{path}: missing source publication/update date")
     for word in banned:
         require(not re.search(r"(?<!\w)" + re.escape(word) + r"(?!\w)", text, re.I),
                 f"{path}: banned evaluative wording: {word}")
@@ -307,7 +308,7 @@ def validate(root):
     require(bool(pages) and (root / "site/index.html") in pages, "Missing static home page")
     require((root / 'site/about.html').is_file(), 'Missing project disclosures')
     for path in pages:
-        page_manifest = manifest
+        page_manifest = None if path.name == 'corrections.html' else manifest
         if path.name == 'parties.html':
             page_manifest = json.loads((root / 'sources/party-offers.json').read_text())['roster']
         elif path.name == 'income.html':
@@ -318,6 +319,21 @@ def validate(root):
         validate_project_links(page, path)
         if path == root / "site/index.html":
             validate_published_data(page, data)
+    import corrections
+    import corrections_page
+    entries = corrections.load(root / 'sources/corrections.json')
+    require((root / 'site/sources/corrections.json').read_bytes() ==
+            (root / 'sources/corrections.json').read_bytes(), 'Published corrections source differs')
+    from disclosures import add_project_links
+    correction_output = {'corrections.html': corrections_page.render(
+        entries, (root / 'site/index.html').read_text()).encode()}
+    add_project_links(correction_output)
+    require((root / 'site/corrections.html').read_bytes() ==
+            correction_output['corrections.html'],
+            'Corrections page differs from retained log')
+    for path in pages:
+        if path.name != 'corrections.html':
+            require('href="corrections.html"' in path.read_text(), f'{path}: missing corrections link')
     from check_comparisons import validate as validate_comparisons
     validate_comparisons(root)
     from check_income import validate as validate_income
