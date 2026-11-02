@@ -100,6 +100,10 @@ try {
             const borders = await forecasts.locator(`tr.${status} > :first-child`).evaluateAll(nodes => nodes.map(node => getComputedStyle(node).borderTopStyle));
             assert.ok(borders.every(border => border === (status === 'forecast' ? 'dashed' : 'solid')), `${status}: non-colour visual distinction`);
           }
+          if (viewport.name === 'mobile') {
+            const numbers = await forecasts.locator('tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nth-child(4)').evaluateAll(nodes => nodes.map(node => ({ whiteSpace: getComputedStyle(node).whiteSpace, fits: node.scrollWidth <= node.clientWidth })));
+            assert.ok(numbers.every(cell => cell.whiteSpace === 'nowrap' && cell.fits), 'Mobile amounts remain intact and fit their cells');
+          }
           assert.match(await forecasts.innerText(), /Office for Budget Responsibility/);
           assert.match(await forecasts.innerText(), new RegExp(data.source.published));
           await forecasts.screenshot({ path: path.join(output, `${label}-forecasts-${viewport.name}.png`) });
