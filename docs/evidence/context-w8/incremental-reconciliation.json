@@ -1,0 +1,322 @@
+{
+  "started_at": "2026-11-02T10:06:50.376820+00:00",
+  "revision": "9864a10c5a5beb5d49f10a9eb19bcbd00d5d155b",
+  "previous_audit_revision": "278cc11526ea50a612c4644e2dd521c479bfe5db",
+  "inventory": {
+    "previous_count": 23,
+    "current_count": 26,
+    "added": [
+      "party-evidence-conservative-costings-2024",
+      "party-evidence-de-childcare-2024",
+      "party-evidence-libdem-costings-2024"
+    ],
+    "removed": []
+  },
+  "sources": [
+    {
+      "id": "party-evidence-conservative-costings-2024",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T10:06:50.380633+00:00",
+      "requests": [
+        {
+          "url": "https://web.archive.org/web/20240611130512id_/https://public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf",
+          "started_at": "2026-11-02T10:06:50.386828+00:00",
+          "error": "HTTP Error 429: Too Many Requests",
+          "finished_at": "2026-11-02T10:06:51.921834+00:00"
+        }
+      ],
+      "baseline": {
+        "id": "conservative-costings-2024",
+        "file": "conservative-costings-2024.pdf",
+        "text_file": "conservative-costings-2024.txt",
+        "url": "https://web.archive.org/web/20240611130512id_/https://public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf",
+        "sha256": "77e183b447bed60d8c1f9efc63fd4b0c256588051e82268b5dc2c3521b2489f7",
+        "text_sha256": "2977a617f6293f6751bd7c0aa65e980c623d6599547137b8990591259bdf20a0",
+        "downloaded": "2026-11-02",
+        "published": "2024",
+        "publication_date_precision": "year",
+        "publication": "Conservative Manifesto 2024: Costings Document",
+        "publisher": "Conservative",
+        "kind": "official",
+        "text_mode": "raw",
+        "hosting": "Internet Archive: native party PDF captured 11 June 2024",
+        "licence": "Party publisher copyright; not Open Government Licence.",
+        "source_original_url": "https://public.conservatives.com/static/documents/GE2024/Conservative-Costings-Document-GE2024.pdf",
+        "provenance_note": "Live publisher returned 403. Native public archive bytes match the CDX digest; publication day is not inferred from capture time."
+      },
+      "retained_sha256": "77e183b447bed60d8c1f9efc63fd4b0c256588051e82268b5dc2c3521b2489f7",
+      "status": "unknown",
+      "error": "HTTP Error 429: Too Many Requests",
+      "finished_at": "2026-11-02T10:06:51.922208+00:00"
+    },
+    {
+      "id": "party-evidence-libdem-costings-2024",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T10:06:51.922225+00:00",
+      "requests": [
+        {
+          "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/Funding_a_Fair_Deal_-_Liberal_Democrat_Manifesto_Costings_2024.pdf",
+          "started_at": "2026-11-02T10:06:51.939616+00:00",
+          "sha256": "378f7ccaafcd18eea51a86b422db98462602f22fabd1418d48180a46a5f68ff3",
+          "bytes": 3303719,
+          "finished_at": "2026-11-02T10:06:52.576104+00:00"
+        }
+      ],
+      "baseline": {
+        "id": "libdem-costings-2024",
+        "file": "libdem-costings-2024.pdf",
+        "text_file": "libdem-costings-2024.txt",
+        "url": "https://www.libdems.org.uk/fileadmin/groups/2_Federal_Party/Documents/PolicyPapers/Manifesto_2024/Funding_a_Fair_Deal_-_Liberal_Democrat_Manifesto_Costings_2024.pdf",
+        "sha256": "378f7ccaafcd18eea51a86b422db98462602f22fabd1418d48180a46a5f68ff3",
+        "text_sha256": "5786b36febd710c567356910e76d4ad3ed02946f9b5e0f15f1f1ee9d1f88df20",
+        "downloaded": "2026-11-02",
+        "published": "2024",
+        "publication_date_precision": "year",
+        "publication": "Funding a Fair Deal: Liberal Democrat manifesto costings 2024",
+        "publisher": "Liberal Democrats",
+        "kind": "official",
+        "text_mode": "raw",
+        "hosting": "Party publisher",
+        "licence": "Party publisher copyright; not Open Government Licence."
+      },
+      "retained_sha256": "378f7ccaafcd18eea51a86b422db98462602f22fabd1418d48180a46a5f68ff3",
+      "updates": [],
+      "status": "unchanged",
+      "finished_at": "2026-11-02T10:06:52.592771+00:00"
+    },
+    {
+      "id": "party-evidence-de-childcare-2024",
+      "adapter": "retained-url-snapshot",
+      "started_at": "2026-11-02T10:06:52.592805+00:00",
+      "requests": [
+        {
+          "url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+          "started_at": "2026-11-02T10:06:52.595438+00:00",
+          "sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+          "bytes": 36982,
+          "finished_at": "2026-11-02T10:06:53.298267+00:00"
+        }
+      ],
+      "baseline": {
+        "id": "de-childcare-2024",
+        "kind": "official",
+        "publisher": "Department of Education (Northern Ireland)",
+        "file": "de-childcare-2024.raw.html.txt",
+        "text_file": "de-childcare-2024.txt",
+        "text_mode": "html-blocks-v1",
+        "sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+        "text_sha256": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+        "url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+        "publication": "Education Minister announces \u00a325million package of measures for early learning and childcare in Northern Ireland",
+        "published": "2024-05-23",
+        "downloaded": "2026-11-02",
+        "retrieved_at": "2026-11-02T08:49:49.500138+00:00",
+        "hosting": "Official government department website",
+        "licence": "Crown copyright; see publisher terms"
+      },
+      "retained_sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+      "updates": [
+        {
+          "key": "77583ceaaff77882b4571a42ff56cbcfe5c743be4da37736df5be9b5142ce9e6",
+          "evidence": {
+            "source": "party-evidence-de-childcare-2024",
+            "release_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+            "attachment_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+            "sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+            "discovery_scope": "retained-url-revision",
+            "updated": "not supplied by retained URL",
+            "refresh_command": "python3 scripts/build.py --refresh",
+            "hosting": "Official government department website"
+          },
+          "baseline": {
+            "id": "de-childcare-2024",
+            "kind": "official",
+            "publisher": "Department of Education (Northern Ireland)",
+            "file": "de-childcare-2024.raw.html.txt",
+            "text_file": "de-childcare-2024.txt",
+            "text_mode": "html-blocks-v1",
+            "sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+            "text_sha256": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+            "url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+            "publication": "Education Minister announces \u00a325million package of measures for early learning and childcare in Northern Ireland",
+            "published": "2024-05-23",
+            "downloaded": "2026-11-02",
+            "retrieved_at": "2026-11-02T08:49:49.500138+00:00",
+            "hosting": "Official government department website",
+            "licence": "Crown copyright; see publisher terms"
+          }
+        }
+      ],
+      "status": "updates",
+      "finished_at": "2026-11-02T10:06:53.298630+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "source": "party-evidence-conservative-costings-2024",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ],
+  "retained_notices": {
+    "schema_version": 1,
+    "notices": [
+      {
+        "source": "party-evidence-libdem-buyback-2024",
+        "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+        "first_detected_at": "2026-11-02T06:03:43.089472+00:00",
+        "evidence": {
+          "source": "party-evidence-libdem-buyback-2024",
+          "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      }
+    ]
+  },
+  "reconciled_notices": {
+    "schema_version": 1,
+    "notices": [
+      {
+        "source": "party-evidence-de-childcare-2024",
+        "baseline_sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+        "baseline_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+        "key": "77583ceaaff77882b4571a42ff56cbcfe5c743be4da37736df5be9b5142ce9e6",
+        "first_detected_at": "2026-11-02T10:06:53.298917+00:00",
+        "evidence": {
+          "source": "party-evidence-de-childcare-2024",
+          "release_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+          "attachment_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+          "sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Official government department website"
+        }
+      },
+      {
+        "source": "party-evidence-libdem-buyback-2024",
+        "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+        "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+        "key": "89bb262df88d11272c4099286e8c3f2b5729acdbcb64349801ad4734cc92d6c8",
+        "first_detected_at": "2026-11-02T06:03:43.089472+00:00",
+        "evidence": {
+          "source": "party-evidence-libdem-buyback-2024",
+          "release_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "attachment_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",
+          "sha256": "201dfea3b1da99aeea3ea6d646aeb44bb30eb2bec8cb3f39c0484578392acb60",
+          "discovery_scope": "retained-url-revision",
+          "updated": "not supplied by retained URL",
+          "refresh_command": "python3 scripts/build.py --refresh",
+          "hosting": "Publisher website; retained HTML response"
+        }
+      }
+    ]
+  },
+  "notice_state_unchanged": false,
+  "deployment": {
+    "url": "https://unpoliticaldeepseeksuperagent.vercel.app",
+    "started_at": "2026-11-02T10:06:53.314647+00:00",
+    "files": {
+      "about.html": "e99b3253340aaffb8e02393c9de36f1f6a688160875d36c720637c09ec5d2076",
+      "banned-words.txt": "590ee1ad0d2205e268aa7b3eb9b634779e6d77b38e3e19124371a3b18a77d01e",
+      "corrections.html": "9dca7de9cb55a88de3f0fc0ba8992207017d1aab9e50987739b1a09c0543dc81",
+      "data/comparisons.csv": "263fc9c33319fa21868f90d9e9159cb70dbc3e8908efa770b23eba995c23e2c8",
+      "data/comparisons.json": "f217c964b2375b2bf2d740cd93e7f4e520075bd612fe26e6e3238e0b0ebf0c61",
+      "data/history.csv": "c68b4f9fa296e06b3a646fce6ce951835d428800304c1a81121de9b3935f2ffd",
+      "data/history.json": "f90ce5be2ec60a1dd34aa47c24b38848bc02b67c0b9c6717cb50f6f6e2b3c959",
+      "data/income.csv": "b976d90d5fe28491f43296b46e1d447bfe2766ddef6e9e5b5aee899c04c72975",
+      "data/income.json": "058ce8b6d3d823393166921f62189f80789c00bfd1f2260a8b96db4b7adf48a6",
+      "data/party-figure-audit.json": "a08ef094d9d42f783ded9e7811a47b2016b828d5550a1a658961d6d9c68f1672",
+      "data/party-offers.json": "7fef6f590f88ca4b44486476bd937cc6400fc081acbd41f38c0713fffdd708c3",
+      "data/spending.csv": "2e26ebecfe2159684af183d01e8f085aede25de8f477690c6102e15d17d86c2b",
+      "data/spending.json": "bcb3bf2cb702f8447b0ac31001ee3deb0dcdf87d8fa21ae1baa221b64ec61ba1",
+      "history-cash.html": "8666798cf2bb0d4666dec5c79d0eb5737365cd356f885e7bfdf649ffa0b83d68",
+      "history-gdp.html": "c1227a0ec65c4992d7e39482765f2818ae2754c5cf2536b2b55f41c8663efa3b",
+      "history-real.html": "00a7e9854d546499705815fd5f6eb2ed12e10fb923e5e74bc3a9fabc177e1ffb",
+      "history.html": "c84917c040a873af56ec8748289634fe813b5da3d0e8cfcfe849a8ca85ba8190",
+      "income.html": "c998064cd63f3fa9b9f74c218c7074147e2a7c6e81847ef9696c194792d8c767",
+      "index.html": "602c77d6c03e79f7463e66cf87283f10172a2c1ce2d15c8ce9db8cc00d8a2cd1",
+      "parties.html": "9c5c28e820ec939fd4933d949d15c9027f4d9635ee0142e8e25947a01612de83",
+      "sources/calendar-hmt-pesa-collection.json": "bab32764830a7a7e53d3faaf621f7494ce94b9be4f5e9b0737cf06dca8ad8dbd",
+      "sources/calendar-hmt-pesa-release.json": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "sources/calendar-hmt-spending-bulletin.json": "8452602720730f76ad078f9d1327256b2af9aba6ef2c7ed84b835c2dda6dc3d4",
+      "sources/calendar-hmt-spending-collection.json": "3dccf60170db1f2133028f7137c081fd858bb23d59588db397a1caab9d6aa299",
+      "sources/calendar-hmt-spending-guidance.json": "c38322936f7dde98a81312186e1c8073d220a87f1cb305b5ca1213aae624662a",
+      "sources/calendar-hmt-spending-release.json": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "sources/calendar-hmt-upcoming.json": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "sources/calendar-pesa-upcoming.json": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "sources/calendar-spending-upcoming.json": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee",
+      "sources/commons-roster-2024-07-09.json": "0801b0ce9d9f1fccbd53fdb6343e9b96083cba802ade562132a46b26cc87efbe",
+      "sources/commons-roster-metadata.json": "e9aed878c39578b3468edfac2a32c7a0803003ac5918a291179cd63a709ce211",
+      "sources/conservative-costings-2024.pdf": "77e183b447bed60d8c1f9efc63fd4b0c256588051e82268b5dc2c3521b2489f7",
+      "sources/conservative-costings-2024.txt": "2977a617f6293f6751bd7c0aa65e980c623d6599547137b8990591259bdf20a0",
+      "sources/corrections-metadata.json": "1fa5885ccd2010b0551f7be6eedd4af8d1256b5f7c5ce89fee1cfe89f2194ff6",
+      "sources/corrections.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "sources/de-childcare-2024.raw.html.txt": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+      "sources/de-childcare-2024.txt": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+      "sources/fullfact-buybacks.raw.html.txt": "2a22079120bb14156c0fd6e87fc8840bb6bab59048da4e36d276f343d2ef3174",
+      "sources/fullfact-buybacks.txt": "98658d079ff37c2a48ba4c5bedd133817deddac16dbbc1c2121b36b80c890412",
+      "sources/history-manifest.json": "60c7a39de732f275fb8353d982d6370b0f5698998dc074fc840766d87c76d201",
+      "sources/history-release.json": "d7191c95aae043b3b13bf66f17a6b8dbec74c9c12cff3bdb9550cc69ac8794bf",
+      "sources/history.xlsx": "50ae80d95c4e542c34a17dfa8bc302858ca6508b6753e27bb31920cec9bb75c4",
+      "sources/ifs-june2024-opening-remarks.pdf": "4b1e23d31441a1a073206345451bb2fc81073369cd72ad97496dd112fb56103c",
+      "sources/ifs-june2024-opening-remarks.txt": "1ddc53618b81e61a07e4eeeb197eaef2fe0e42f9a9719c6822fc876c97642af2",
+      "sources/income-manifest.json": "32d575d02d2197c3be2eb241a7d8da09d664b46496b8020e9e45fc9509ffcba7",
+      "sources/income-release.txt": "86c0c89c2a930e675c04e05aa76748a6f910b623a9ca5775bbb11b265bbfafe6",
+      "sources/income.xlsx": "16a4bf46d8692e18790e87add342c6c44aa909cebb19f68ae857126a36d36459",
+      "sources/libdem-buyback-2024.raw.html.txt": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
+      "sources/libdem-buyback-2024.txt": "05e8be3667b3159ce15c929035f7091814572951c460f35cdb5b248282007d8a",
+      "sources/libdem-costings-2024.pdf": "378f7ccaafcd18eea51a86b422db98462602f22fabd1418d48180a46a5f68ff3",
+      "sources/libdem-costings-2024.txt": "5786b36febd710c567356910e76d4ad3ed02946f9b5e0f15f1f1ee9d1f88df20",
+      "sources/manifest.json": "00ef37b2dd095ed13e6e85a8fd191f1951bf54197552ce0757acde1a999ab79b",
+      "sources/manifesto-2024-alliance.pdf": "dfdbd70aa71316989f8e10657a29a6b2123705721416e271a71c219c9e050693",
+      "sources/manifesto-2024-alliance.txt": "eae387822766a1e63175de53a9619d3caf9245c05e6687568245111f61be5e0e",
+      "sources/manifesto-2024-conservative.pdf": "dd077291a0962017a4a1e05c615f211dcfec03391cb26f4850bc5d2a0bdbc4d0",
+      "sources/manifesto-2024-conservative.txt": "74c4ad32f2f3acc6d81e0ef9dabe6299c9a9f7c2a65b8746fbf52b9b0badc29e",
+      "sources/manifesto-2024-dup.pdf": "2d0439bd6cbdf2b842b4e1e9c0557807444856678e2e249e09f5c115e8f8eefa",
+      "sources/manifesto-2024-dup.txt": "07531b67e2c2b93e3e78151a024ce6c8acb772b9db66d3443e56da536c7a40c0",
+      "sources/manifesto-2024-green.pdf": "4cfa29bd877b1b0ed46528684349eb6fb9bdeaaa5451897a5cace43f062f8537",
+      "sources/manifesto-2024-green.txt": "63387951d46642671adc4fdf80ea94475113743cf5e3b900fab6584fe0beff74",
+      "sources/manifesto-2024-labour.pdf": "2385a7e51e17b93cd48e7ffb5c86f4c357cbc679f759aa480304ec0f777d5147",
+      "sources/manifesto-2024-labour.txt": "b9d120d4ee5d1d662c37a59d36e50fc2c4fb507485a2d581c6c620db0ebaa2a8",
+      "sources/manifesto-2024-libdem.pdf": "a1192e502647dd99a8bc1b13d9a06cf171b60e4084615c1c809ea6d73bb7b714",
+      "sources/manifesto-2024-libdem.txt": "aa9cd4e0b912196db371f9b521224a1ee8f8f318bf71c4822c3861bd771c382f",
+      "sources/manifesto-2024-plaid.pdf": "e00bf848cef0fcf655f4741598bce812a3e73d4b0a317f0f1c4da338c4e52fed",
+      "sources/manifesto-2024-plaid.txt": "7824027b7e020cbd5bf3965027165ad0adc481db58cb8e050354a0f9e4135c62",
+      "sources/manifesto-2024-reform.pdf": "500dca6b808f47e271394c803dc36ca4b5681fffb1bae41276385f224ba03eb3",
+      "sources/manifesto-2024-reform.txt": "8841f98b66fd69b019c0151a2ea72c463c52dad503a29a63eacc62e85e489c3b",
+      "sources/manifesto-2024-sdlp.pdf": "7ef5e87c28794db273b37a9734983a4b89af387542fefb02017e3ed19e573442",
+      "sources/manifesto-2024-sdlp.txt": "5e6743092c9fd27e6888932b89b6241a670f217fce2118a6e5eeb88bf8f3b4e2",
+      "sources/manifesto-2024-sinnfein.pdf": "507df8544f8a1a265af521c0bf93e445ea52eb6488cb785350a1cd5f5c08ece0",
+      "sources/manifesto-2024-sinnfein.txt": "2e1782d1708f0fa7a47bf546af5f3264661547b7204a31e02ea2cc236151b2a1",
+      "sources/manifesto-2024-snp.pdf": "82a5b60680c2e7eb6f304c78555b5d8019100ee6b58115dcdd67d7133ca82715",
+      "sources/manifesto-2024-snp.txt": "1a1592f77eb97f25e8dffa6892fdefba66cc0d0002fbbf35026ad8f9e24fa2ac",
+      "sources/manifesto-2024-tuv.pdf": "34348b03685b68d00724c786b2615f9849b5fba14b3af7413b78337529c51753",
+      "sources/manifesto-2024-tuv.txt": "af09db3af88c54ace13d8b9026f516e929fe3abc0b8f44eb0beffcf404ffbb16",
+      "sources/manifesto-2024-uup.pdf": "130e71cef7ba64ccc9ebccfb0ca079c9b0d517242da3107cb5e2a4b731d5fba8",
+      "sources/manifesto-2024-uup.txt": "71f13ab89b68e13bb0f3440a54856cd68908117e1757a066838de64797841c26",
+      "sources/party-figure-locators.json": "187e43db9c5c51c5f218d593ac0de8cf6af08c0d288673eec1d93ec36d4d262d",
+      "sources/party-offers.json": "7fef6f590f88ca4b44486476bd937cc6400fc081acbd41f38c0713fffdd708c3",
+      "sources/party-source-index.json": "6af8fe65ea6e502d3419c665d3be7c7cf2b9a0a03951bf6636dea722725d6ff6",
+      "sources/release-calendar.json": "376a2c61750e55054080997764ed299edb1889e7cede7e084ae9714e843522b1",
+      "sources/release.json": "e6a0a43cf38260ddfa491aed5be02660b3fe2a2833b4dd5af652546bf5e080f5",
+      "sources/revision-status.json": "b0f6a63ad1cccca4d4a67583d7c1dc03952ba7489657950b37af8035fd39dd71",
+      "sources/rf-economic-battle-lines.raw.html.txt": "a18abba91247a2eb31715ed7cbf23ceb37fb9b43eb2661ea1de43970268e4efb",
+      "sources/rf-economic-battle-lines.txt": "94d3c0486213cf9bb5d45d37293d1356725e16405bc7058ddeb75d74e42e2551",
+      "sources/rf-two-child-2024.raw.html.txt": "e0d8fe6e00127623d0f71d1d85ef27dc78ff4dc245f84d46782ac27efd621bcd",
+      "sources/rf-two-child-2024.txt": "dd2b3cd1773f8e13d73cdfaeea0dfe50395138b82ad22018818670e415fac326",
+      "sources/spending.xlsx": "d61db8cad4f4333b192022e63979237d24dbdace7b354a846af2f4ac18b37436",
+      "sources/trends-manifest.json": "3209a2de9187756e8ba6bed197b6de4e659f6fc0d358934efceb28f62f723413",
+      "sources/trends.xlsx": "573625f73c0e311ff68c5635691801be955fd466cd9b5b4a0e00b8173852195c"
+    },
+    "status": "exact-byte-match",
+    "finished_at": "2026-11-02T10:07:07.995483+00:00"
+  },
+  "finished_at": "2026-11-02T10:07:07.995544+00:00"
+}

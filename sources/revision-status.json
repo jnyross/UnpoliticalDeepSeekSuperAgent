@@ -2,6 +2,23 @@
   "schema_version": 1,
   "notices": [
     {
+      "source": "party-evidence-de-childcare-2024",
+      "baseline_sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+      "baseline_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+      "key": "77583ceaaff77882b4571a42ff56cbcfe5c743be4da37736df5be9b5142ce9e6",
+      "first_detected_at": "2026-11-02T10:06:53.298917+00:00",
+      "evidence": {
+        "source": "party-evidence-de-childcare-2024",
+        "release_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+        "attachment_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+        "sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+        "discovery_scope": "retained-url-revision",
+        "updated": "not supplied by retained URL",
+        "refresh_command": "python3 scripts/build.py --refresh",
+        "hosting": "Official government department website"
+      }
+    },
+    {
       "source": "party-evidence-libdem-buyback-2024",
       "baseline_sha256": "f56adb3a292de86e66ace5bbab6b81fd09004166e0922bc910e97e4f396c2f7c",
       "baseline_url": "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme",

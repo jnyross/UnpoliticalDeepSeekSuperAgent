@@ -1,0 +1,62 @@
+[
+  {
+    "stage": "after",
+    "root": "/home/superagent/.dsh/state/superagent/work/context-level-4-audit-0dcaa3ddb81a/site",
+    "width": 360,
+    "height": 800,
+    "party_id": 7,
+    "section_dates": "Data period: 2024 election manifesto and costing. Published 2024. Source updated not supplied. Published 2024-05-23. Source updated not supplied.\n\nThis is a fixed past snapshot. No next release date is announced.\n\nSource revised. These figures still use the saved data, not the changed source. Found 2026-11-02. Check the changed source.",
+    "revision_notices": 1,
+    "notice_cards": [
+      {
+        "party_id": "7",
+        "links": [
+          "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland"
+        ]
+      },
+      {
+        "party_id": "17",
+        "links": [
+          "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme"
+        ]
+      }
+    ],
+    "document_overflow": false,
+    "card_bounds": {
+      "x": 20,
+      "y": 0.203125,
+      "width": 320,
+      "height": 2175.34375
+    }
+  },
+  {
+    "stage": "after",
+    "root": "/home/superagent/.dsh/state/superagent/work/context-level-4-audit-0dcaa3ddb81a/site",
+    "width": 1280,
+    "height": 900,
+    "party_id": 7,
+    "section_dates": "Data period: 2024 election manifesto and costing. Published 2024. Source updated not supplied. Published 2024-05-23. Source updated not supplied.\n\nThis is a fixed past snapshot. No next release date is announced.\n\nSource revised. These figures still use the saved data, not the changed source. Found 2026-11-02. Check the changed source.",
+    "revision_notices": 1,
+    "notice_cards": [
+      {
+        "party_id": "7",
+        "links": [
+          "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland"
+        ]
+      },
+      {
+        "party_id": "17",
+        "links": [
+          "https://www.libdems.org.uk/news/article/share-buyback-tax-scheme"
+        ]
+      }
+    ],
+    "document_overflow": false,
+    "card_bounds": {
+      "x": 174,
+      "y": 0.484375,
+      "width": 932,
+      "height": 1163.453125
+    }
+  }
+]

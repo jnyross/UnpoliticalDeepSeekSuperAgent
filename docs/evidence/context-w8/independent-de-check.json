@@ -1,0 +1,55 @@
+{
+  "requested_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+  "final_url": "https://www.education-ni.gov.uk/news/education-minister-announces-ps25million-package-measures-early-learning-and-childcare-northern-ireland",
+  "http_status": 200,
+  "headers": {
+    "Connection": "close",
+    "Content-Length": "36982",
+    "traceresponse": "00-18e4327114eb3a57e35d96b295fffea3-631fb1d8f87d72f3-01",
+    "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+    "content-language": "en",
+    "cache-control": "max-age=60, must-revalidate, public, stale-if-error=180, stale-while-revalidate=180",
+    "etag": "\"1793614012\"",
+    "content-security-policy-report-only": "default-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.googletagmanager.com; font-src 'self' https://themes.googleusercontent.com fonts.gstatic.com https://cdn.jsdelivr.net data:; frame-src 'self' https://www.youtube.com https://www.vimeo.com; img-src 'self' https://translate.google.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://i.ytimg.com https://www.gstatic.com https://maps.gstatic.com https://maps.googleapis.com https://*.google-analytics.com https://*.googletagmanager.com data:; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net https://*.googletagmanager.com cdn.jsdelivr.net cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com maps.googleapis.com unpkg.com; script-src-attr 'self'; script-src-elem 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.newrelic.com https://*.nr-data.net cdn.jsdelivr.net cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com maps.googleapis.com unpkg.com; style-src 'self' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com unpkg.com; style-src-attr 'self' 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline' cdn.jsdelivr.net cdnjs.cloudflare.com fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com unpkg.com; block-all-mixed-content",
+    "last-modified": "Mon, 02 Nov 2026 10:06:52 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "Accept-Ranges": "bytes",
+    "Age": "193",
+    "Date": "Mon, 02 Nov 2026 10:10:06 GMT",
+    "X-Cache": "MISS, MISS, HIT",
+    "X-Cache-Hits": "0, 0, 0",
+    "Vary": "Cookie, Accept-Encoding",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "Strict-Transport-Security": "max-age=31557600"
+  },
+  "started_at": "2026-11-02T10:10:05.984310+00:00",
+  "completed_at": "2026-11-02T10:10:06.093627+00:00",
+  "baseline_sha256": "23c4be542a61206e7dafc01b05a2ff7fffde8374c8a824641662275a12e645cb",
+  "observed_sha256": "26f83f3cdfaa7887b7e0372ff923e813a18e2b0065f9ad2c9be5c26f3efda421",
+  "raw_equal": false,
+  "baseline_visible_sha256": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+  "observed_visible_sha256": "44f9a22e36c841667ab90dc73f7670c4cfd3d36dc391d72e207ad57732703c1b",
+  "normalized_visible_equal": true,
+  "consumed_reference_checks": [
+    {
+      "field": "programme",
+      "quote": "Education Minister Paul Givan has today announced a \u00a325million package of measures to support children, parents and providers with early learning and childcare in 2024/25.",
+      "in_baseline": true,
+      "in_observed": true
+    },
+    {
+      "field": "approval",
+      "quote": "Speaking after Executive approval of the support measures",
+      "in_baseline": true,
+      "in_observed": true
+    },
+    {
+      "field": "publication_date",
+      "quote": "Date published: 23 May 2024",
+      "in_baseline": true,
+      "in_observed": true
+    }
+  ],
+  "scope": "One fresh DE fetch; no source refresh, archive requests, or baseline edits. Visible extraction uses repository html-blocks-v1; not a browser/human check."
+}
