@@ -339,8 +339,11 @@ def validate_html(raw, data):
                 locators = ' · '.join(p['cells'][v] for v in SHEETS if v in p['cells'])
                 rows.append([p['year'], *['Not available' if p[f] is None else f'{p[f]:,.1f}'
                                          for f in FIELDS.values()], compact(status + ' ' + locators)])
-            expected.append({'caption': s['label'] + (' — fixed ten-year snapshots' if fixed else ' — annual history'),
-                             'rows': rows})
+            caption = s['label'] + (' — fixed ten-year snapshots' if fixed else ' — annual history')
+            if s['id'] == 'tme':
+                caption += ' TME excludes the temporary effects of banks being classed as public sector. Source note: '
+                caption += ('4_1!B53' if fixed else '4_2!A35; 4_3!A36; 4_4!A36') + '.'
+            expected.append({'caption': caption, 'rows': rows})
     require(len(parser.tables) == len(expected), 'History HTML missing/extra tables')
     for actual, wanted in zip(parser.tables, expected):
         require(actual == wanted, f'History HTML displayed values/units/status/locators differ: {wanted["caption"]}')
