@@ -51,10 +51,10 @@ def render(d):
     old,new = d['points']; src=d['source']; esc=html.escape
     rows=''.join(f'<tr><th scope="row">{p["year"]} (outturn)</th><td>£{p["health_real"]["value"]:.1f}bn<br><code>4_3!{p["health_real"]["cell"]}</code></td><td>{p["tme_gdp"]["value"]:.1f}%<br><code>4_4!{p["tme_gdp"]["cell"]}</code></td></tr>' for p in d['points'])
     return f'''<section id="ten-years"><h2>What changed over ten years?</h2>
-<h3>Has health spending gone up or down after inflation?</h3>
+<h3 id="health-ten-years">Has health spending gone up or down after inflation?</h3>
 <p><strong>Health spending went {'up' if d['health_change'] >= 0 else 'down'} by {abs(d['health_percent']):.1f}%</strong> from {old['year']} to {new['year']}. It went from £{old['health_real']['value']:.1f} billion to £{new['health_real']['value']:.1f} billion, a change of £{d['health_change']:.1f} billion in {new['year']} prices.</p>
 <p>This is UK public sector spending on health services, including day-to-day costs and investment. It is not just the NHS England budget. Treasury adjusts for inflation with ONS GDP deflators released 30 June 2026. This is a whole-economy price measure, not a measure of NHS costs.</p>
-<h3>Is total spending a bigger or smaller share of the economy?</h3>
+<h3 id="gdp-ten-years">Is total spending a bigger or smaller share of the economy?</h3>
 <p><strong>Total spending was a {'bigger' if d['gdp_change'] >= 0 else 'smaller'} share of the economy</strong>: {new['tme_gdp']['value']:.1f}% of GDP in {new['year']}, compared with {old['tme_gdp']['value']:.1f}% in {old['year']}. That is a change of {d['gdp_change']:.1f} percentage points.</p>
 <p>Here total spending means Total Managed Expenditure (TME), not spending on services alone. It includes accounting adjustments and excludes the temporary effects of banks being classed as public sector. GDP measures the size of the economy; this uses the ONS figures published 30 June 2026.</p>
 <table class="comparison"><caption>Ten-year comparison: UK outturn. Health in {new['year']} prices; TME as a share of GDP.</caption><thead><tr><th scope="col">Year</th><th scope="col">Real health spending</th><th scope="col">TME / GDP</th></tr></thead><tbody>{rows}</tbody></table>
