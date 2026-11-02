@@ -30,6 +30,43 @@ class PartyOffersTests(unittest.TestCase):
         self.assertEqual(sum(p['seats'] for p in self.original['parties']) +
                          self.original['independents']['seats'] + self.original['speaker']['seats'], 650)
 
+    def test_alliance_party_excerpt_is_factual_commitment_not_evaluation(self):
+        row = next(p for p in self.original['parties'] if p['source_id'] == 'alliance')
+        # Exact contiguous sentence on retained PDF page 17. Keep the publisher's
+        # benefit name, even though its next paragraph calls it Universal Credit.
+        # Do not rewrite a quotation to silently repair the party's terminology.
+        self.assertEqual(row['excerpt'], 'We support ending the Benefits Cap, Bedroom Tax and two-child limit on Child Benefit on a UK-wide basis.')
+        self.assertEqual(row['pdf_page'], 17)
+        card = parties.render(self.original).split('data-party-id="1"', 1)[1].split('</article>', 1)[0]
+        self.assertNotIn('harsh impact', card)
+        self.assertNotIn('one of the most efficient ways of reducing child poverty', card)
+        self.assertIn('<q>' + row['excerpt'] + '</q>', card)
+
+    def test_other_party_evaluations_replaced_by_exact_commitments(self):
+        rows = {p['source_id']: p for p in self.original['parties']}
+        self.assertEqual(rows['uup']['excerpt'], 'This must include the abolition of the Universal Credit twochild limit.')
+        self.assertEqual(rows['uup']['pdf_page'], 15)
+        self.assertEqual(rows['reform']['excerpt'], 'NHS Patients will receive a voucher for private treatment if they can’t see a GP within 3 days. For a consultant it would be 3 weeks. For an operation, 9 weeks. Services will always be free at the point of use.')
+        self.assertEqual(rows['reform']['pdf_page'], 9)
+        self.assertIn('demonstrably wrong', rows['reform']['assessment'])
+        self.assertEqual(rows['reform']['evidence']['assessment']['attribution'], 'Paul Johnson, IFS')
+        for row in rows.values():
+            self.assertNotIn('devastating effects', row['excerpt'])
+            self.assertNotIn('major reforms to improve results', row['excerpt'])
+
+    def test_independent_judgement_stays_linked_and_attributed(self):
+        # Same evidence standard for all five matching policy assessments, not a
+        # global ban on evaluative language in permitted independent quotations.
+        rendered = parties.render(self.original)
+        for source_id in ('alliance', 'green', 'plaid', 'snp', 'uup'):
+            row = next(p for p in self.original['parties'] if p['source_id'] == source_id)
+            ref = row['evidence']['assessment']
+            self.assertEqual(ref['attribution'], 'Resolution Foundation')
+            self.assertEqual(row['assessment'], 'one of the most efficient ways to drive down child poverty rates')
+            source = next(s for s in self.original['evidence_sources'] if s['id'] == ref['source_id'])
+            card = rendered.split('data-party-id="' + str(row['id']) + '"', 1)[1].split('</article>', 1)[0]
+            self.assertIn('<a href="' + source['url'] + '">Resolution Foundation</a>: <q>' + ref['quote'] + '</q>', card)
+
     def test_omitted_party_fails(self):
         self.fails(lambda d: d['parties'].pop())
 

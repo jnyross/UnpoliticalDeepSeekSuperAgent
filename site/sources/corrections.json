@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "party-excerpt-evaluations",
+    "date": "2026-11-02",
+    "page": "parties.html",
+    "error": "Alliance, Reform UK and UUP source quotes included party views on policy effects, rather than just the selected pledge.",
+    "correction": "Use exact pledge text from the same saved PDF pages. Keep named outside assessments, costs and scope notes unchanged.",
+    "source": "https://github.com/jnyross/UnpoliticalDeepSeekSuperAgent/commit/b64fb94f0a8265ca35ba7c07a45a97eea99ad5fa"
+  }
+]
